@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAACX///+8\u003d",
+        "filename": "Documentation/android.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2009-02-02T22:23:02Z",
+      "side": 1,
+      "message": "This shoud be ANDROID_RAM_CONSOLE not ANDROID_RAM_CONSOLES\r\n\r\nAlsom it should probably be moved to the recommended section.",
+      "revId": "91f2bf524e0485509f1c0baf4bb756bc5cbfe6b5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAACX///+4\u003d",
+        "filename": "Documentation/android.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2009-02-02T22:23:02Z",
+      "side": 1,
+      "message": "We also need USER_WAKELOCK and EARLYSUSPEND",
+      "revId": "91f2bf524e0485509f1c0baf4bb756bc5cbfe6b5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
