@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAACn///8M\u003d",
+        "filename": "Documentation/android.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2009-02-06T22:49:23Z",
+      "side": 1,
+      "message": "it\u0027s kind of backwards. this is the configuration required to run the Android framework on top of the Linux kernel, not the other way around.",
+      "revId": "699d2bd840ae76f5b440e73c88c42f793c7185a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAACn///8I\u003d",
+        "filename": "Documentation/android.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2009-02-06T22:49:23Z",
+      "side": 1,
+      "message": "Not required, MSM specific.",
+      "revId": "699d2bd840ae76f5b440e73c88c42f793c7185a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAACn///8E\u003d",
+        "filename": "Documentation/android.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2009-02-06T22:49:23Z",
+      "side": 1,
+      "message": "MSM specific.",
+      "revId": "699d2bd840ae76f5b440e73c88c42f793c7185a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAACn///8A\u003d",
+        "filename": "Documentation/android.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2009-02-06T22:49:23Z",
+      "side": 1,
+      "message": "Add a section for potentially useful drivers like pmem?",
+      "revId": "699d2bd840ae76f5b440e73c88c42f793c7185a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
