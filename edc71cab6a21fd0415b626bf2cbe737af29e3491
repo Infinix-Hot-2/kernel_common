@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcX///4I\u003d",
+        "filename": "drivers/input/touchscreen/synaptics_i2c_rmi.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2009-07-25T04:47:13Z",
+      "side": 1,
+      "message": "is this just simulating a release or something?",
+      "revId": "edc71cab6a21fd0415b626bf2cbe737af29e3491",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
