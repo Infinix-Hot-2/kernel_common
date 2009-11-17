@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAo3///Pk\u003d",
+        "filename": "fs/yaffs2/yaffs_fs.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 385,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2009-11-17T00:33:37Z",
+      "side": 1,
+      "message": "similar?",
+      "revId": "a4735e42732f03a396ced7275e33facdc4f1beac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAo3///Pg\u003d",
+        "filename": "fs/yaffs2/yaffs_fs.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 389,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2009-11-17T00:33:37Z",
+      "side": 1,
+      "message": "fixes",
+      "revId": "a4735e42732f03a396ced7275e33facdc4f1beac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAo3///Pc\u003d",
+        "filename": "fs/yaffs2/yaffs_fs.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1263,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2009-11-17T00:33:37Z",
+      "side": 1,
+      "message": "locked",
+      "revId": "a4735e42732f03a396ced7275e33facdc4f1beac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
