@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAr3///6U\u003d",
+        "filename": "include/linux/cpufreq.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-01-13T01:04:09Z",
+      "side": 1,
+      "message": "get rid of the ; at the end",
+      "revId": "3d71f1475cee6cd8db06d99af77aa7c550cf6737",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
