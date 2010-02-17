@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAr3//+UA\u003d",
+        "filename": "kernel/power/wakelock.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2010-02-17T01:21:11Z",
+      "side": 1,
+      "message": "Why did you change this?",
+      "revId": "6121ff22beccbe0ccaacd86c15f273e767f61a9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAr3//+T8\u003d",
+        "filename": "kernel/power/wakelock.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2010-02-17T01:21:11Z",
+      "side": 1,
+      "message": "Check ret first.",
+      "revId": "6121ff22beccbe0ccaacd86c15f273e767f61a9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
