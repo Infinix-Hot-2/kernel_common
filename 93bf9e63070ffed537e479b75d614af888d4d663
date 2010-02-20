@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAr3//+FY\u003d",
+        "filename": "kernel/power/wakelock.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2010-02-20T00:28:57Z",
+      "side": 1,
+      "message": "() around expr \u0026 expr",
+      "revId": "93bf9e63070ffed537e479b75d614af888d4d663",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
