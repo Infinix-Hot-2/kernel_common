@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "AAAAtX///8c\u003d",
+        "filename": "net/bluetooth/hci_conn.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1001002
+      },
+      "writtenOn": "2010-02-24T22:38:36Z",
+      "side": 1,
+      "message": "no. the case statement is a fall-through",
+      "revId": "881cf8da28441740faf009185ed6af713ec5beb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAtX///80\u003d",
         "filename": "net/bluetooth/sco.c",
         "patchSetId": 2
@@ -36,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAtX///8Y\u003d",
+        "filename": "net/bluetooth/sco.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 507,
+      "author": {
+        "id": 1001002
+      },
+      "writtenOn": "2010-02-24T22:38:36Z",
+      "side": 1,
+      "message": "userspace can pass a NULL sockaddr, im not sure if this fixes a real bug or if it already gets checked elsewhere and this is just defense programming. Marcel actually added this code.",
+      "parentUuid": "AAAAtX///80\u003d",
+      "revId": "881cf8da28441740faf009185ed6af713ec5beb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAtX///8s\u003d",
         "filename": "net/bluetooth/sco.c",
         "patchSetId": 2
@@ -47,6 +82,24 @@
       "writtenOn": "2010-02-24T22:17:14Z",
       "side": 1,
       "message": "u can take this line out of the if ... else",
+      "revId": "881cf8da28441740faf009185ed6af713ec5beb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAtX///8U\u003d",
+        "filename": "net/bluetooth/sco.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 632,
+      "author": {
+        "id": 1001002
+      },
+      "writtenOn": "2010-02-24T22:38:36Z",
+      "side": 1,
+      "message": "will do and upload in a sec....",
+      "parentUuid": "AAAAtX///8s\u003d",
       "revId": "881cf8da28441740faf009185ed6af713ec5beb4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
