@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAtX///84\u003d",
+        "filename": "net/bluetooth/hci_conn.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1000635
+      },
+      "writtenOn": "2010-02-24T22:17:14Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be conn-\u003epkt_type ?",
+      "revId": "881cf8da28441740faf009185ed6af713ec5beb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAtX///80\u003d",
+        "filename": "net/bluetooth/sco.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 507,
+      "author": {
+        "id": 1000635
+      },
+      "writtenOn": "2010-02-24T22:17:14Z",
+      "side": 1,
+      "message": "Can addr be Null now ?",
+      "revId": "881cf8da28441740faf009185ed6af713ec5beb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAtX///8s\u003d",
+        "filename": "net/bluetooth/sco.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 632,
+      "author": {
+        "id": 1000635
+      },
+      "writtenOn": "2010-02-24T22:17:14Z",
+      "side": 1,
+      "message": "u can take this line out of the if ... else",
+      "revId": "881cf8da28441740faf009185ed6af713ec5beb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
