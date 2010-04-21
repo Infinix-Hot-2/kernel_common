@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAw3////8\u003d",
+        "filename": "drivers/md/dm-crypt.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1205,
+      "author": {
+        "id": 1002975
+      },
+      "writtenOn": "2010-04-21T16:03:10Z",
+      "side": 1,
+      "message": "You could probably move the end of the #endif block here since it\u0027s only jumped to in line 1186 above.",
+      "revId": "cc172f069066fed1c54fe46325d4acf9608e82de",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
