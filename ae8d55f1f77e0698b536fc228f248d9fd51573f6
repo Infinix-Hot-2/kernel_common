@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAyX///4U\u003d",
+        "filename": "drivers/staging/android/lowmemorykiller.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1003778
+      },
+      "writtenOn": "2010-05-05T21:00:53Z",
+      "side": 1,
+      "message": "I don\u0027t understand this.   If this driver is ever going to make its way out of staging, you\u0027ll need to do it the \u0027right\u0027 way anyway, no?\n\nMaybe explicitly depend on CONFIG_PROFILING if you really want to keep this here?",
+      "parentUuid": "AAAAyX///7A\u003d",
+      "revId": "ae8d55f1f77e0698b536fc228f248d9fd51573f6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAyX///7Y\u003d",
         "filename": "drivers/staging/android/lowmemorykiller.c",
         "patchSetId": 1
