@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA0n//+yE\u003d",
+        "filename": "include/linux/cpuacct.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-07-03T01:01:47Z",
+      "side": 1,
+      "message": "remove the ifdef here.",
+      "revId": "c1bdacd6b07d88453ddc251da52efcab602f14f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA0n//+yI\u003d",
+        "filename": "include/linux/cpuacct.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-07-03T01:01:47Z",
+      "side": 1,
+      "message": "surround the structure members with the\n#ifdef CONFIG_CGROUP_CPUACCT",
+      "revId": "c1bdacd6b07d88453ddc251da52efcab602f14f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA0n//+yA\u003d",
+        "filename": "include/linux/cpuacct.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-07-03T01:01:47Z",
+      "side": 1,
+      "message": "#ifdef CONFIG_CGROUP_CPUACCT\n...\n#else\nstatic inline int \u003cblah\u003e\n#endif",
+      "revId": "c1bdacd6b07d88453ddc251da52efcab602f14f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
