@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA1H///kI\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 794,
+      "author": {
+        "id": 1001286
+      },
+      "writtenOn": "2010-07-15T09:31:10Z",
+      "side": 1,
+      "message": "Maybe a mutex around this whole block of code to avoid any issues should two userspace threads call the ioctl() at the same time?  As is, they could trip over each other...",
+      "revId": "eed75ee9862bdae06c2ebb19cb4e983e559a8c5c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA1H///kM\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 810,
+      "author": {
+        "id": 1001286
+      },
+      "writtenOn": "2010-07-15T09:31:10Z",
+      "side": 1,
+      "message": "This function is only called from the ioctl which is called from thread context, so no need for ATOMIC.  How about GFP_KERNEL?",
+      "revId": "eed75ee9862bdae06c2ebb19cb4e983e559a8c5c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
