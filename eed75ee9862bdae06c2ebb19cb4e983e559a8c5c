@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA1H///gg\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 794,
+      "author": {
+        "id": 1000830
+      },
+      "writtenOn": "2010-07-15T15:20:27Z",
+      "side": 1,
+      "message": "Good idea - I\u0027ll add a mutex here.",
+      "parentUuid": "AAAA1H///kI\u003d",
+      "revId": "eed75ee9862bdae06c2ebb19cb4e983e559a8c5c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA1H///kM\u003d",
         "filename": "drivers/usb/gadget/f_mtp.c",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2010-07-15T09:31:10Z",
       "side": 1,
       "message": "This function is only called from the ioctl which is called from thread context, so no need for ATOMIC.  How about GFP_KERNEL?",
+      "revId": "eed75ee9862bdae06c2ebb19cb4e983e559a8c5c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA1H///gc\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 810,
+      "author": {
+        "id": 1000830
+      },
+      "writtenOn": "2010-07-15T15:20:27Z",
+      "side": 1,
+      "message": "Actually we can use GFP_KERNEL for all the bulk transfers too since that also happens in thread context.  We only need GFP_ATOMIC for replying to requests on endpoint zero.",
+      "parentUuid": "AAAA1H///kM\u003d",
       "revId": "eed75ee9862bdae06c2ebb19cb4e983e559a8c5c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
