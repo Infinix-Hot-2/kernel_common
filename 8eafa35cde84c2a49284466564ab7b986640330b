@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA33///cY\u003d",
+        "filename": "drivers/net/wireless/bcm4329/wl_iw.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1000,
+      "author": {
+        "id": 1001002
+      },
+      "writtenOn": "2010-08-03T22:11:21Z",
+      "side": 1,
+      "message": "this error path does not unlock",
+      "revId": "8eafa35cde84c2a49284466564ab7b986640330b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
