@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA7H///V4\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2010-09-03T21:13:07Z",
+      "side": 1,
+      "message": "Suggest \"\u003cbdev\u003e\" or \"\u003cblockdev\u003e\" instead of \"\u003cblock\u003e\" for clarity.",
+      "revId": "0d83faa2f1e19cfec4b90dc34ebb99a740004c09",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
