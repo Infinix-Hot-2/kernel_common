@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA7n///Ao\u003d",
+        "filename": "arch/arm/common/Kconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2010-09-27T23:09:49Z",
+      "side": 1,
+      "message": "these don\u0027t work without a string",
+      "revId": "bb536c88f0dbaf4766d0599296907e35e42cbfd6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
