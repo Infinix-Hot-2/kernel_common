@@ -53,6 +53,23 @@
     },
     {
       "key": {
+        "uuid": "AAAA7n//+/U\u003d",
+        "filename": "arch/arm/common/fiq_debugger.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 562,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2010-09-27T23:41:55Z",
+      "side": 1,
+      "message": "this may crash is wakeup_irq is not valid",
+      "revId": "bb536c88f0dbaf4766d0599296907e35e42cbfd6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA7n///Ag\u003d",
         "filename": "arch/arm/include/asm/hardware/fiq_debugger.h",
         "patchSetId": 1
