@@ -16,6 +16,57 @@
       "revId": "bb536c88f0dbaf4766d0599296907e35e42cbfd6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA7n///Ac\u003d",
+        "filename": "arch/arm/common/fiq_debugger.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2010-09-27T23:20:51Z",
+      "side": 1,
+      "message": "Why do you need this header. It is not available on all platforms.",
+      "revId": "bb536c88f0dbaf4766d0599296907e35e42cbfd6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA7n///AY\u003d",
+        "filename": "arch/arm/common/fiq_debugger.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2010-09-27T23:20:51Z",
+      "side": 1,
+      "message": "why does this start at 1?",
+      "revId": "bb536c88f0dbaf4766d0599296907e35e42cbfd6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA7n///Ag\u003d",
+        "filename": "arch/arm/include/asm/hardware/fiq_debugger.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2010-09-27T23:20:51Z",
+      "side": 1,
+      "message": "fiq_ack would be useful",
+      "revId": "bb536c88f0dbaf4766d0599296907e35e42cbfd6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
