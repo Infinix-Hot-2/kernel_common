@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA73///+8\u003d",
+        "filename": "arch/arm/common/fiq_debugger.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-10-01T22:32:43Z",
+      "side": 1,
+      "message": "bool",
+      "revId": "adbb5218ed61d756659475361786f5a15e83e14f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA73///+4\u003d",
+        "filename": "arch/arm/common/fiq_debugger.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-10-01T22:32:43Z",
+      "side": 1,
+      "message": "bool",
+      "revId": "adbb5218ed61d756659475361786f5a15e83e14f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA73///+0\u003d",
+        "filename": "arch/arm/common/fiq_debugger.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-10-01T22:32:43Z",
+      "side": 1,
+      "message": "bool",
+      "revId": "adbb5218ed61d756659475361786f5a15e83e14f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA73///+s\u003d",
+        "filename": "arch/arm/common/fiq_debugger.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 607,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-10-01T22:32:43Z",
+      "side": 1,
+      "message": "if you fail this, don\u0027t you want to abort?",
+      "revId": "adbb5218ed61d756659475361786f5a15e83e14f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA73///+o\u003d",
+        "filename": "arch/arm/common/fiq_debugger.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 634,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-10-01T22:32:43Z",
+      "side": 1,
+      "message": "this code is currently unreachable. If you address the comment on line 607, you may need to jump here though :)",
+      "revId": "adbb5218ed61d756659475361786f5a15e83e14f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
