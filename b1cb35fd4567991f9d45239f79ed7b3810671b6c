@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA73////Q\u003d",
+        "filename": "arch/arm/common/fiq_glue_setup.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000866
+      },
+      "writtenOn": "2010-10-01T22:11:09Z",
+      "side": 1,
+      "message": "You can kfree() a NULL pointer.",
+      "parentUuid": "AAAA73////o\u003d",
+      "revId": "b1cb35fd4567991f9d45239f79ed7b3810671b6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA73////c\u003d",
         "filename": "arch/arm/common/fiq_glue_setup.c",
         "patchSetId": 2
