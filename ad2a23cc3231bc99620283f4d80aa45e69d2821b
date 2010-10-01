@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA7n//+kE\u003d",
+        "filename": "arch/arm/common/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2010-10-01T05:40:37Z",
+      "side": 1,
+      "message": "Whitespace",
+      "revId": "ad2a23cc3231bc99620283f4d80aa45e69d2821b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA7n//+kA\u003d",
+        "filename": "arch/arm/common/fiq_glue_setup.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2010-10-01T05:40:37Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "ad2a23cc3231bc99620283f4d80aa45e69d2821b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
