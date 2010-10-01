@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA73////w\u003d",
+        "filename": "arch/arm/common/fiq_glue.S",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-10-01T22:02:48Z",
+      "side": 1,
+      "message": "arch/arm/common",
+      "revId": "b1cb35fd4567991f9d45239f79ed7b3810671b6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA73////k\u003d",
+        "filename": "arch/arm/common/fiq_glue_setup.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-10-01T22:02:48Z",
+      "side": 1,
+      "message": "is there anything you need to undo for this if line 51 fails?",
+      "revId": "b1cb35fd4567991f9d45239f79ed7b3810671b6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA73////o\u003d",
+        "filename": "arch/arm/common/fiq_glue_setup.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-10-01T22:02:48Z",
+      "side": 1,
+      "message": "must check for NULL before kfree\u0027ing since you can jump here from line 46",
+      "revId": "b1cb35fd4567991f9d45239f79ed7b3810671b6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA73////c\u003d",
+        "filename": "arch/arm/common/fiq_glue_setup.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-10-01T22:02:48Z",
+      "side": 1,
+      "message": "why are you not taking your mutex here?",
+      "revId": "b1cb35fd4567991f9d45239f79ed7b3810671b6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
