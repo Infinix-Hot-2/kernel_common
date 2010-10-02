@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA73///9E\u003d",
+        "filename": "arch/arm/common/fiq_glue_setup.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2010-10-02T20:32:59Z",
+      "side": 1,
+      "message": "Each cpu needs its own fiq_stack",
+      "revId": "29b51c268c6a954b15df47da55dd75f178cc918c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA73///9A\u003d",
+        "filename": "arch/arm/common/fiq_glue_setup.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2010-10-02T20:32:59Z",
+      "side": 1,
+      "message": "This needs to use the per-cpu fiq_stack as well",
+      "revId": "29b51c268c6a954b15df47da55dd75f178cc918c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
