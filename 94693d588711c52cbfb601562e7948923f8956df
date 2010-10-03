@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA73///8Y\u003d",
+        "filename": "arch/arm/common/fiq_debugger.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 562,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2010-10-03T04:40:54Z",
+      "side": 1,
+      "message": "This isn\u0027t going to work in UP, hard_smp_processor_id is not defined",
+      "revId": "94693d588711c52cbfb601562e7948923f8956df",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
