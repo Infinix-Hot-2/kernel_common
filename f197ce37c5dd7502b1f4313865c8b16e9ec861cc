@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA73///8o\u003d",
+        "filename": "arch/arm/common/fiq_glue_setup.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2010-10-03T00:20:46Z",
+      "side": 1,
+      "message": "can\u0027t you use __percpu_alloc so we can easily check for failure?",
+      "revId": "f197ce37c5dd7502b1f4313865c8b16e9ec861cc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
