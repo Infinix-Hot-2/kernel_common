@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA73///4g\u003d",
+        "filename": "arch/arm/common/fiq_debugger.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 637,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-10-04T18:26:59Z",
+      "side": 1,
+      "message": "if you failed to request the irq, you need to at least set state-\u003ewakeup_irq to -1. I assume you wanted to try to continue if it failed though?",
+      "revId": "a4d10a61e7cbbb54a9410a4afe8d6ee0325d27f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
