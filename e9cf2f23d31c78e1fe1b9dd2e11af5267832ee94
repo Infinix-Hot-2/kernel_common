@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA73//+xw\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000319
+      },
+      "writtenOn": "2010-10-12T18:25:47Z",
+      "side": 1,
+      "message": "Remove internal reference id",
+      "revId": "e9cf2f23d31c78e1fe1b9dd2e11af5267832ee94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA73//+x0\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000319
+      },
+      "writtenOn": "2010-10-12T18:25:47Z",
+      "side": 1,
+      "message": "Add second Signed-off-by",
+      "revId": "e9cf2f23d31c78e1fe1b9dd2e11af5267832ee94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
