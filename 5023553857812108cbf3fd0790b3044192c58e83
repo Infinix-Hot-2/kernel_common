@@ -156,6 +156,24 @@
       "revId": "5023553857812108cbf3fd0790b3044192c58e83",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA8n///yk\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 853,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2010-11-09T23:12:13Z",
+      "side": 1,
+      "message": "Recommend adding a comment about the SMP ordering purpose of the locks so somebody doesn\u0027t later take them out.\n\nAn smp_rmb() prior to reads to ensure up-to-date info is read, and an smp_wmb() after writes to ensure the values are visible before continuing, might also fix whichever problems have been previously seen with SMP correctness.",
+      "parentUuid": "AAAA8n///0c\u003d",
+      "revId": "5023553857812108cbf3fd0790b3044192c58e83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
