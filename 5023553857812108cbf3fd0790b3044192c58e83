@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA8n///20\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 632,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2010-11-09T22:02:50Z",
+      "side": 1,
+      "message": "Still not sure why locking would be required here, have already ensured a single send_file/receive_file request is sent at a time, and there doesn\u0027t seem to be any other potential concurrent lock holder.",
+      "revId": "5023553857812108cbf3fd0790b3044192c58e83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA8n///2s\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 679,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2010-11-09T22:02:50Z",
+      "side": 1,
+      "message": "Unclear why this single read needs mutual exclusion... if there were optimizer code motion issues maybe a barrier() instead?",
+      "revId": "5023553857812108cbf3fd0790b3044192c58e83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA8n///2k\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 798,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2010-11-09T22:02:50Z",
+      "side": 1,
+      "message": "Sounds like there\u0027s never supposed to be concurrent ioctl requests, could WARN_ON() here if there\u0027s potential bugs to be caught?",
+      "revId": "5023553857812108cbf3fd0790b3044192c58e83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA8n///2E\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 848,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2010-11-09T22:02:50Z",
+      "side": 1,
+      "message": "Didn\u0027t understand why this is necessary.  ioctl code is running in kernel context, doesn\u0027t seem like there should be address space issues?",
+      "revId": "5023553857812108cbf3fd0790b3044192c58e83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA8n///1k\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 853,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2010-11-09T22:02:50Z",
+      "side": 1,
+      "message": "It seems like dev-\u003exfer_result must be consistent with the request that was just processed (since the ioctl exclusion lock is held), needed?",
+      "revId": "5023553857812108cbf3fd0790b3044192c58e83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
