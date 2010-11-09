@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA8n///0o\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 679,
+      "author": {
+        "id": 1000830
+      },
+      "writtenOn": "2010-11-09T22:23:09Z",
+      "side": 1,
+      "message": "I\u0027m doing this to avoid problems with SMP.  There could be a lighter weight way to do that, but this shouldn\u0027t hurt.",
+      "parentUuid": "AAAA8n///2s\u003d",
+      "revId": "5023553857812108cbf3fd0790b3044192c58e83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA8n///2k\u003d",
         "filename": "drivers/usb/gadget/f_mtp.c",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2010-11-09T22:02:50Z",
       "side": 1,
       "message": "Sounds like there\u0027s never supposed to be concurrent ioctl requests, could WARN_ON() here if there\u0027s potential bugs to be caught?",
+      "revId": "5023553857812108cbf3fd0790b3044192c58e83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA8n///0k\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 798,
+      "author": {
+        "id": 1000830
+      },
+      "writtenOn": "2010-11-09T22:23:09Z",
+      "side": 1,
+      "message": "If there are concurrent ioctls, that would be a bug in userspace which should catch and report the EBUSY, so I don\u0027t think we need to output a warning to the kernel log.",
+      "parentUuid": "AAAA8n///2k\u003d",
       "revId": "5023553857812108cbf3fd0790b3044192c58e83",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -70,6 +106,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA8n///0g\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 848,
+      "author": {
+        "id": 1000830
+      },
+      "writtenOn": "2010-11-09T22:23:09Z",
+      "side": 1,
+      "message": "If we call vfs_read and vfs_write from the ioctl caller\u0027s thread, they will attempt to use the userspace address space for its buffers instead of the kernel buffers.  Moving the file transfer to a real kernel thread solves that problem.",
+      "parentUuid": "AAAA8n///2E\u003d",
+      "revId": "5023553857812108cbf3fd0790b3044192c58e83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA8n///1k\u003d",
         "filename": "drivers/usb/gadget/f_mtp.c",
         "patchSetId": 2
@@ -81,6 +135,24 @@
       "writtenOn": "2010-11-09T22:02:50Z",
       "side": 1,
       "message": "It seems like dev-\u003exfer_result must be consistent with the request that was just processed (since the ioctl exclusion lock is held), needed?",
+      "revId": "5023553857812108cbf3fd0790b3044192c58e83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA8n///0c\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 853,
+      "author": {
+        "id": 1000830
+      },
+      "writtenOn": "2010-11-09T22:23:09Z",
+      "side": 1,
+      "message": "Right.  The only reason we need this is to make sure we don\u0027t have SMP related memory read/write problems.  If you know a better way to handle this that would be great.",
+      "parentUuid": "AAAA8n///1k\u003d",
       "revId": "5023553857812108cbf3fd0790b3044192c58e83",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
