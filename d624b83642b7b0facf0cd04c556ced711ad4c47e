@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA9n///9A\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 758,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2010-11-16T23:33:36Z",
+      "side": 1,
+      "message": "Happened to note line 731 not affected by this patch:\n\n     count -\u003d ret;\n\nret is the return of usb_ep_queue() that should return zero for no error, so the above is not needed and at first glance seems to be modifying a variable that in some cases needs to be a specific value.",
+      "revId": "d624b83642b7b0facf0cd04c556ced711ad4c47e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
