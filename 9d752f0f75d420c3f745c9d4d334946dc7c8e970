@@ -34,6 +34,24 @@
       "revId": "9d752f0f75d420c3f745c9d4d334946dc7c8e970",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA9n///1Y\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2010-11-17T19:32:56Z",
+      "side": 1,
+      "message": "Got it, thanks.",
+      "parentUuid": "AAAA9n///1o\u003d",
+      "revId": "9d752f0f75d420c3f745c9d4d334946dc7c8e970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
