@@ -16,6 +16,24 @@
       "revId": "d624b83642b7b0facf0cd04c556ced711ad4c47e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA9n///48\u003d",
+        "filename": "drivers/usb/gadget/f_mtp.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 758,
+      "author": {
+        "id": 1000830
+      },
+      "writtenOn": "2010-11-17T14:28:07Z",
+      "side": 1,
+      "message": "Yes that line is unnecessary.  I\u0027ll remove it before committing.",
+      "parentUuid": "AAAA9n///9A\u003d",
+      "revId": "d624b83642b7b0facf0cd04c556ced711ad4c47e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
