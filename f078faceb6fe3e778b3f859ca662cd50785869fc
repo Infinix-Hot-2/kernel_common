@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA9n//95I\u003d",
+        "filename": "drivers/usb/gadget/f_acm.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 885,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-12-02T03:03:10Z",
+      "side": 1,
+      "message": "you are right, I see now.",
+      "parentUuid": "AAAA9n//95c\u003d",
+      "revId": "f078faceb6fe3e778b3f859ca662cd50785869fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA9n//97w\u003d",
         "filename": "drivers/usb/gadget/u_ldisc.c",
         "patchSetId": 2
@@ -258,6 +276,24 @@
       "side": 1,
       "message": "no this just changes the DSR / DCD flags in line_state",
       "parentUuid": "AAAA9n//95s\u003d",
+      "revId": "f078faceb6fe3e778b3f859ca662cd50785869fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA9n//95Q\u003d",
+        "filename": "drivers/usb/gadget/u_ldisc.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-12-02T03:03:10Z",
+      "side": 1,
+      "message": "doh, sorry. my bad, i\u0027m blind. The names are a bit confusing.",
+      "parentUuid": "AAAA9n//95g\u003d",
       "revId": "f078faceb6fe3e778b3f859ca662cd50785869fc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
