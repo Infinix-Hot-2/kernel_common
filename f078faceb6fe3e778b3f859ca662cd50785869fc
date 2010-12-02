@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA9n//95o\u003d",
+        "filename": "drivers/usb/gadget/f_acm.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 885,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-12-02T02:28:54Z",
+      "side": 1,
+      "message": "but the line discpline\u0027s open/close can be called in parallel to this. So, can\u0027t the ldisc code see a connect set but disconnect not set?",
+      "parentUuid": "AAAA9n//960\u003d",
+      "revId": "f078faceb6fe3e778b3f859ca662cd50785869fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA9n//97w\u003d",
         "filename": "drivers/usb/gadget/u_ldisc.c",
         "patchSetId": 2
@@ -186,6 +204,24 @@
       "side": 1,
       "message": "this doesn\u0027t clear the connected flag, just notify of the line state",
       "parentUuid": "AAAA9n//97g\u003d",
+      "revId": "f078faceb6fe3e778b3f859ca662cd50785869fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA9n//95s\u003d",
+        "filename": "drivers/usb/gadget/u_ldisc.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-12-02T02:28:54Z",
+      "side": 1,
+      "message": "well, the disconnect callback will end up calling gldisc_disconnect, which will clear the connected flag, no?",
+      "parentUuid": "AAAA9n//96U\u003d",
       "revId": "f078faceb6fe3e778b3f859ca662cd50785869fc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
