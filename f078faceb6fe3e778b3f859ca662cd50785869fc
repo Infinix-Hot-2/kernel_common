@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA9n//960\u003d",
+        "filename": "drivers/usb/gadget/f_acm.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 885,
+      "author": {
+        "id": 1003977
+      },
+      "writtenOn": "2010-12-02T02:22:11Z",
+      "side": 1,
+      "message": "These callbacks are only called when we are connected and the connected flag is set when gadget call set_alt, so it can only happen after bind_config has returned",
+      "parentUuid": "AAAA9n//97c\u003d",
+      "revId": "f078faceb6fe3e778b3f859ca662cd50785869fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA9n//97w\u003d",
         "filename": "drivers/usb/gadget/u_ldisc.c",
         "patchSetId": 2
@@ -87,6 +105,23 @@
     },
     {
       "key": {
+        "uuid": "AAAA9n//96o\u003d",
+        "filename": "drivers/usb/gadget/u_ldisc.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 1003977
+      },
+      "writtenOn": "2010-12-02T02:22:11Z",
+      "side": 1,
+      "message": "This calls acm_connect that just notify to the host of the line state. The name is badly chosen in f_acm, they should have a set_line_state callback instead",
+      "revId": "f078faceb6fe3e778b3f859ca662cd50785869fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA9n//97k\u003d",
         "filename": "drivers/usb/gadget/u_ldisc.c",
         "patchSetId": 2
@@ -104,6 +139,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA9n//96Y\u003d",
+        "filename": "drivers/usb/gadget/u_ldisc.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 1003977
+      },
+      "writtenOn": "2010-12-02T02:22:11Z",
+      "side": 1,
+      "message": "This can\u0027t be called twice, we won\u0027t call start_io twice. But I should do if(gld-\u003etty) in gldisc_connect instead of if(gld-\u003eopened) to avoid a possible race.",
+      "parentUuid": "AAAA9n//97k\u003d",
+      "revId": "f078faceb6fe3e778b3f859ca662cd50785869fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA9n//97g\u003d",
         "filename": "drivers/usb/gadget/u_ldisc.c",
         "patchSetId": 2
@@ -115,6 +168,24 @@
       "writtenOn": "2010-12-02T01:31:13Z",
       "side": 1,
       "message": "if connected but !gld-\u003edisconnect, how would the connected flag get cleared? Do you require both connect and disconnect call backs?",
+      "revId": "f078faceb6fe3e778b3f859ca662cd50785869fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA9n//96U\u003d",
+        "filename": "drivers/usb/gadget/u_ldisc.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1003977
+      },
+      "writtenOn": "2010-12-02T02:22:11Z",
+      "side": 1,
+      "message": "this doesn\u0027t clear the connected flag, just notify of the line state",
+      "parentUuid": "AAAA9n//97g\u003d",
       "revId": "f078faceb6fe3e778b3f859ca662cd50785869fc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
