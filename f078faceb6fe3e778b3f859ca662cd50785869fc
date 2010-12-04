@@ -108,6 +108,23 @@
     },
     {
       "key": {
+        "uuid": "AAAA9n//9m8\u003d",
+        "filename": "drivers/usb/gadget/f_acm.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 925,
+      "author": {
+        "id": 1005146
+      },
+      "writtenOn": "2010-12-04T01:57:47Z",
+      "side": 1,
+      "message": "This is going to cause a problem with my patch you just merged into android.c for product id matching (https://review.source.android.com/#change,19321).  That patch changed the product_has_function() so that only the root of a name is searched when matching names between usb_function.name and android_usb_product.functions.  Now that there\u0027s is a new function you\u0027re introducing which has a substring that matches another function, you can get into trouble.\n\nI was actually going to propose an update to the android.c patch to check for a numeral after recognizing the root of two names match.  That should prevent any issues as long as nobody comes along and names a function as \"acm12345\" or something similar.",
+      "revId": "f078faceb6fe3e778b3f859ca662cd50785869fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA9n//97w\u003d",
         "filename": "drivers/usb/gadget/u_ldisc.c",
         "patchSetId": 2
