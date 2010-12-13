@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA+X///8A\u003d",
+        "filename": "drivers/usb/gadget/composite.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 886,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-12-13T20:35:28Z",
+      "side": 1,
+      "message": "does this need to be the irqsave version? can composite_disconnect be called from at softirq?",
+      "revId": "5048cba4d99121ea9fc57fe334690a1d5af0518d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+X///78\u003d",
+        "filename": "drivers/usb/gadget/composite.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1211,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-12-13T20:35:28Z",
+      "side": 1,
+      "message": "you need to hold your spinlock here",
+      "revId": "5048cba4d99121ea9fc57fe334690a1d5af0518d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+X///70\u003d",
+        "filename": "include/linux/usb/composite.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-12-13T20:35:28Z",
+      "side": 1,
+      "message": "inconsistent spacing. add some tabse before sw_connected and sw_config.",
+      "revId": "5048cba4d99121ea9fc57fe334690a1d5af0518d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
