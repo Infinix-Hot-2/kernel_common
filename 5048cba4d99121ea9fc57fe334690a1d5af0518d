@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+X///7g\u003d",
+        "filename": "drivers/usb/gadget/composite.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 886,
+      "author": {
+        "id": 1000830
+      },
+      "writtenOn": "2010-12-13T20:53:12Z",
+      "side": 1,
+      "message": "Yes, composite_setup is called from irq, so this should be using the irqsave/irqrestore versions of spin_lock.  I will also fix the spinlock in the USB_REQ_SET_CONFIGURATION case below",
+      "parentUuid": "AAAA+X///8A\u003d",
+      "revId": "5048cba4d99121ea9fc57fe334690a1d5af0518d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+X///78\u003d",
         "filename": "drivers/usb/gadget/composite.c",
         "patchSetId": 2
