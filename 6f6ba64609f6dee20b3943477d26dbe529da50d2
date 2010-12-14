@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+n///58\u003d",
+        "filename": "drivers/usb/gadget/composite.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1213,
+      "author": {
+        "id": 1000830
+      },
+      "writtenOn": "2010-12-14T17:27:44Z",
+      "side": 1,
+      "message": "Oops, right.",
+      "parentUuid": "AAAA+n///+w\u003d",
+      "revId": "6f6ba64609f6dee20b3943477d26dbe529da50d2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+n///+k\u003d",
         "filename": "drivers/usb/gadget/composite.c",
         "patchSetId": 3
@@ -47,6 +65,24 @@
       "writtenOn": "2010-12-14T08:25:12Z",
       "side": 1,
       "message": "i guess switch_set_state can sleep?",
+      "revId": "6f6ba64609f6dee20b3943477d26dbe529da50d2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+n///6A\u003d",
+        "filename": "drivers/usb/gadget/composite.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1217,
+      "author": {
+        "id": 1000830
+      },
+      "writtenOn": "2010-12-14T17:27:44Z",
+      "side": 1,
+      "message": "Yes, which is why we had to move this to a work queue in the first place.",
+      "parentUuid": "AAAA+n///+k\u003d",
       "revId": "6f6ba64609f6dee20b3943477d26dbe529da50d2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
