@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+n///+s\u003d",
+        "filename": "drivers/usb/gadget/composite.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 886,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-12-14T08:24:35Z",
+      "side": 1,
+      "message": "well, if composite_setup is only ever called from irq context and can only be called from the usb irq (i.e. you can\u0027t be in this function more than once), making this be the irq save/restore versions technically won\u0027t make a difference, so the conversion under the USB_xxx is a not necessary.",
+      "parentUuid": "AAAA+X///7g\u003d",
+      "revId": "5048cba4d99121ea9fc57fe334690a1d5af0518d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+X///78\u003d",
         "filename": "drivers/usb/gadget/composite.c",
         "patchSetId": 2
