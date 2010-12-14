@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA+X///4o\u003d",
+        "filename": "drivers/usb/gadget/f_acm.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 963,
+      "author": {
+        "id": 1005146
+      },
+      "writtenOn": "2010-12-14T00:24:48Z",
+      "side": 1,
+      "message": "Can this be made dynamic just like acm_function_bind_config(), so that it supports multiple instances?",
+      "revId": "a479a51f9e0a79a2ca182181918490a21a0cb1fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
