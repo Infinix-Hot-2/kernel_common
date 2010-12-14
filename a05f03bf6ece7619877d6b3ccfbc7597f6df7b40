@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA+n///2w\u003d",
+        "filename": "drivers/usb/gadget/composite.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 1214,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2010-12-14T23:30:05Z",
+      "side": 1,
+      "message": "come to think of it, you may not actually need the lock here, since you\u0027ll drop the lock anyway prior to calling set_state. you could just add a write barrier whenever you set cdev-\u003econnected prior to scheduling work. It\u0027s up to you. The code you have now will work fine.",
+      "revId": "a05f03bf6ece7619877d6b3ccfbc7597f6df7b40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
