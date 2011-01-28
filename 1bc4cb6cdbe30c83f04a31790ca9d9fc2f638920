@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA+3//7Tg\u003d",
+        "filename": "net/ipv4/udp.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 1128,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2011-01-28T00:51:14Z",
+      "side": 1,
+      "message": "I would initialize err to 0, because later you can jump to \"out\"",
+      "revId": "1bc4cb6cdbe30c83f04a31790ca9d9fc2f638920",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//7Tc\u003d",
+        "filename": "net/ipv4/udp.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 1145,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2011-01-28T00:51:14Z",
+      "side": 1,
+      "message": "Here err can be not initialized or initialized to -error code",
+      "revId": "1bc4cb6cdbe30c83f04a31790ca9d9fc2f638920",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
