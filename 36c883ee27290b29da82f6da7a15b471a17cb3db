@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA+3//5Zk\u003d",
+        "filename": "include/linux/usb/android_composite.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-02-09T17:55:17Z",
+      "side": 1,
+      "message": "iz -\u003e is",
+      "revId": "36c883ee27290b29da82f6da7a15b471a17cb3db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
