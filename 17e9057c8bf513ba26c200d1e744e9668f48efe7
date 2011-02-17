@@ -1,0 +1,225 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA+3//4cA\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "in.h has macro for this.",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4bw\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "Maybe ULL or some more explicit 64bit type.\nARM9, 32bits, too small?",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4bM\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "Based on for_ifa(in_dev):\n\nfor (ifa \u003d in_dev-\u003eifa_list; ifa; ifa \u003d ifa-\u003eifa_next)\n   ...\n?",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4bI\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "ifa_local is correct. See if_addr.h\n\nif (!ifa) return 0;\n\nThen maybe you wont need the hacky !(addr) in IS_LOOPBACK.",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4bQ\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "pr_err(blabla)?",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4b0\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "hmmm.\nSome games require ~1GB of download.\n4 games will be easy to max out.",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4b4\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "Why do you need this hack?\n\ntx_bytes is unsigned long (ARM9 32bit), starts at 0 all the way to ULONG_MAX (4G).",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4bU\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "How often will an individual stat be looked up without the need for the others?\n\nMaybe output all values on one line that would look like what /proc/net/dev outputs?",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4bY\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "Maybe add a\n   /* FIXME: support more than 4GB on ARM or flag overflow. */",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4bA\u003d",
+        "filename": "include/linux/iface_stat.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "include/linux/net/iface_stat.h\nfeels like a more natural place for it.",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4cE\u003d",
+        "filename": "include/linux/iface_stat.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "upcase",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4cI\u003d",
+        "filename": "include/linux/iface_stat.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "No \u0027;\u0027 at end. It will mess up things like\n  if(create_iface_stat(d)) ...",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4bE\u003d",
+        "filename": "include/linux/iface_stat.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-17T06:08:13Z",
+      "side": 1,
+      "message": "#endif /* __LINUX_IFACE_STAT_H */",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
