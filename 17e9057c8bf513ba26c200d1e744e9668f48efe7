@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+3//4YE\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "Instead of including that file, I just picked this specific #def from it. I can use the .h instead.",
+      "parentUuid": "AAAA+3//4cA\u003d",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+3//4bw\u003d",
         "filename": "drivers/misc/iface_stat.c",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2011-02-17T06:08:13Z",
       "side": 1,
       "message": "Maybe ULL or some more explicit 64bit type.\nARM9, 32bits, too small?",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4YM\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "This is going in the \"common\" repo. Taking explicit architecture specific assumptions such as 64 bit capability might not be appropriate. Interface stats also use unsigned long (uid_stats uses atomic_t). I agree that overflow will have to be handled in most cases, but its better done in the framework code that uses these counters.",
+      "parentUuid": "AAAA+3//4bw\u003d",
       "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+3//4Us\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAA+3//4bM\u003d",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+3//4bI\u003d",
         "filename": "drivers/misc/iface_stat.c",
         "patchSetId": 4
@@ -64,6 +118,24 @@
       "writtenOn": "2011-02-17T06:08:13Z",
       "side": 1,
       "message": "ifa_local is correct. See if_addr.h\n\nif (!ifa) return 0;\n\nThen maybe you wont need the hacky !(addr) in IS_LOOPBACK.",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4Uo\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAA+3//4bI\u003d",
       "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+3//4Uk\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "Looked at a few other places in the kernel. I guess we would have more things to worry about when kmalloc fails. Tell me if you feel strongly about this.",
+      "parentUuid": "AAAA+3//4bQ\u003d",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+3//4b0\u003d",
         "filename": "drivers/misc/iface_stat.c",
         "patchSetId": 4
@@ -98,6 +188,24 @@
       "writtenOn": "2011-02-17T06:08:13Z",
       "side": 1,
       "message": "hmmm.\nSome games require ~1GB of download.\n4 games will be easy to max out.",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4YA\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "Before a per app usage exceeds 4G, the overall usage of an interface would have overflowed (which also use the same unsigned long counters). We will need to figure out a way to deal with overflows in general (may be in the framework?).",
+      "parentUuid": "AAAA+3//4b0\u003d",
       "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+3//4X8\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "AAAA+3//4b4\u003d",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+3//4bU\u003d",
         "filename": "drivers/misc/iface_stat.c",
         "patchSetId": 4
@@ -132,6 +258,24 @@
       "writtenOn": "2011-02-17T06:08:13Z",
       "side": 1,
       "message": "How often will an individual stat be looked up without the need for the others?\n\nMaybe output all values on one line that would look like what /proc/net/dev outputs?",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4X4\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "I wanted to have the exact same representation as presented in /sys/class/net/\u003cdevice\u003e/statistics/tx_bytes   and the rest. This will avoid an extra step of parsing when comparing a uid\u0027s contribution to the total transmission/reception.",
+      "parentUuid": "AAAA+3//4bU\u003d",
       "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -155,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+3//4X0\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "AAAA+3//4bY\u003d",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+3//4bA\u003d",
         "filename": "include/linux/iface_stat.h",
         "patchSetId": 4
@@ -172,6 +334,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+3//4Wc\u003d",
+        "filename": "include/linux/iface_stat.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "There is no such existing directory, so I am a bit hesitant to create my own for just one file.",
+      "parentUuid": "AAAA+3//4bA\u003d",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+3//4cE\u003d",
         "filename": "include/linux/iface_stat.h",
         "patchSetId": 4
@@ -183,6 +363,24 @@
       "writtenOn": "2011-02-17T06:08:13Z",
       "side": 1,
       "message": "upcase",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4Wg\u003d",
+        "filename": "include/linux/iface_stat.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAA+3//4cE\u003d",
       "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -224,6 +422,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+3//4Wo\u003d",
+        "filename": "include/linux/iface_stat.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "This is being called in core/net/dev.c I am not sure I can make it inline. Am I missing something?",
+      "parentUuid": "AAAA+3//4cI\u003d",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+3//4bE\u003d",
         "filename": "include/linux/iface_stat.h",
         "patchSetId": 4
@@ -235,6 +451,24 @@
       "writtenOn": "2011-02-17T06:08:13Z",
       "side": 1,
       "message": "#endif /* __LINUX_IFACE_STAT_H */",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4Wk\u003d",
+        "filename": "include/linux/iface_stat.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T01:38:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAA+3//4bE\u003d",
       "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
