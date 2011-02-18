@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA+3//4VI\u003d",
+        "filename": "drivers/video/goldfishfb.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-02-18T00:45:20Z",
+      "side": 1,
+      "message": "What does the old emulator return? This does not look backward compatible.",
+      "revId": "923c63810dbd45b549c79d20f3647e0b8a53f6d4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
