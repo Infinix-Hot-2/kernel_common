@@ -494,6 +494,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+3//4TI\u003d",
+        "filename": "include/linux/iface_stat.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-02-18T02:20:40Z",
+      "side": 1,
+      "message": "I followed the style used in uid_stats and a couple of other places in the kernel too.",
+      "parentUuid": "AAAA+3//4Wo\u003d",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+3//4bE\u003d",
         "filename": "include/linux/iface_stat.h",
         "patchSetId": 4
