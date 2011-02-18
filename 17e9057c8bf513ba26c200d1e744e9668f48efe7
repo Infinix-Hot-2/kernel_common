@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+3//4To\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-18T02:04:47Z",
+      "side": 1,
+      "message": "It should fix itself at some point ... :)\n\nhttp://git.kernel.org/?p\u003dlinux/kernel/git/torvalds/linux-2.6.git;a\u003dcommitdiff;h\u003dbe1f3c2c027cc5ad735df6a45a542ed1db7ec48b\n\nnntr",
+      "parentUuid": "AAAA+3//4YM\u003d",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+3//4bM\u003d",
         "filename": "drivers/misc/iface_stat.c",
         "patchSetId": 4
@@ -212,6 +230,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA+3//4Tk\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-18T02:04:47Z",
+      "side": 1,
+      "message": "June 2010... 64bit.\nhttp://git.kernel.org/?p\u003dlinux/kernel/git/torvalds/linux-2.6.git;a\u003dcommitdiff;h\u003dbe1f3c2c027cc5ad735df6a45a542ed1db7ec48b\n\n:)\nBut you have a fixme already :)\nnntr.",
+      "parentUuid": "AAAA+3//4YA\u003d",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA+3//4b4\u003d",
         "filename": "drivers/misc/iface_stat.c",
         "patchSetId": 4
@@ -346,6 +382,24 @@
       "side": 1,
       "message": "There is no such existing directory, so I am a bit hesitant to create my own for just one file.",
       "parentUuid": "AAAA+3//4bA\u003d",
+      "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA+3//4Tw\u003d",
+        "filename": "include/linux/iface_stat.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-02-18T02:04:47Z",
+      "side": 1,
+      "message": "I meant include/net/...\nnntr.",
+      "parentUuid": "AAAA+3//4Wc\u003d",
       "revId": "17e9057c8bf513ba26c200d1e744e9668f48efe7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
