@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA+3//32Y\u003d",
+        "filename": "drivers/misc/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-02-22T23:48:28Z",
+      "side": 1,
+      "message": "Adding entries to the end of a makefile usually creates merge conflicts. Sorted entries work better.",
+      "revId": "62c3ff922557686f6af35dd450d234a63a1b4c39",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
