@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA+3//32o\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-02-22T23:35:10Z",
+      "side": 1,
+      "message": "don\u0027t add code that is commented out, use pr_debug instead.",
+      "revId": "7522cc8f895d4e2a67008681e34dbd12215fb628",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
