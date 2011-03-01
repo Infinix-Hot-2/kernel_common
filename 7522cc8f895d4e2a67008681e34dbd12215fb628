@@ -16,6 +16,24 @@
       "revId": "7522cc8f895d4e2a67008681e34dbd12215fb628",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/H///zM\u003d",
+        "filename": "drivers/misc/iface_stat.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1005412
+      },
+      "writtenOn": "2011-03-01T23:05:00Z",
+      "side": 1,
+      "message": "I have uncommented the comments and refrained from using pr_debug, as these messages are fairly infrequent and useful as regular dmesg messages too, instead of especially enabling the pr_debug messages. Please let me know if you strongly prefer pr_debug instead of KERN_DEBUG.",
+      "parentUuid": "AAAA+3//32o\u003d",
+      "revId": "7522cc8f895d4e2a67008681e34dbd12215fb628",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
