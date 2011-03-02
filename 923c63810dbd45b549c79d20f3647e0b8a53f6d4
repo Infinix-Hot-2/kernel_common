@@ -16,6 +16,24 @@
       "revId": "923c63810dbd45b549c79d20f3647e0b8a53f6d4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/H///oY\u003d",
+        "filename": "drivers/video/goldfishfb.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 1000411
+      },
+      "writtenOn": "2011-03-02T14:40:46Z",
+      "side": 1,
+      "message": "The old emulator doesn\u0027t return anything, it aborts() when the FB_GET_FORMAT read happens because it\u0027s an unsupported i/o address.\n\nThe current emulator returns the appropriate constants.",
+      "parentUuid": "AAAA+3//4VI\u003d",
+      "revId": "923c63810dbd45b549c79d20f3647e0b8a53f6d4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
