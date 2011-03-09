@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA/H//+7Q\u003d",
+        "filename": "drivers/misc/goldfish_audio.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2011-03-09T21:43:04Z",
+      "side": 1,
+      "message": "another thought is, can you provide an arch_ioremap for x86 goldfish mach to also do mtrr_add? So that we don;t have to have this kind of ifdef/elif in every goldfish driver?",
+      "parentUuid": "AAAA/H//+7g\u003d",
+      "revId": "282361f8773c71f6b1fe5054ce122b30a2e592e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA/H//+7c\u003d",
         "filename": "drivers/misc/goldfish_audio.c",
         "patchSetId": 1
