@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA/H//+7k\u003d",
+        "filename": "drivers/misc/goldfish_audio.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2011-03-09T21:34:15Z",
+      "side": 1,
+      "message": "remove trailing whitespace, also\nreg_base should be a void* not a char*",
+      "revId": "282361f8773c71f6b1fe5054ce122b30a2e592e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/H//+7g\u003d",
+        "filename": "drivers/misc/goldfish_audio.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2011-03-09T21:34:15Z",
+      "side": 1,
+      "message": "please move the mapping and allocing of the reg base and buffers into a separate helper function (same with unmapping+freeing). This way you don\u0027t have to litter the code with config_x86/config_arm tests all over the place and contain all that ugliness.\n\n\nAlso, it seems that the goldfish machine arm code should be exporting an ioremap interface that will hide the IO_ADDRESS stuff behind it. This will allow us to remove this ifdef/elif stuff with x86 since we really should be using ioremap on both.",
+      "revId": "282361f8773c71f6b1fe5054ce122b30a2e592e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/H//+7c\u003d",
+        "filename": "drivers/misc/goldfish_audio.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2011-03-09T21:34:15Z",
+      "side": 1,
+      "message": "shouldn\u0027t this be r-\u003eend - r-\u003estart?",
+      "revId": "282361f8773c71f6b1fe5054ce122b30a2e592e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
