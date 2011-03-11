@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAA/H//+kw\u003d",
+        "filename": "net/ipv4/tcp_ipv4.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2024,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2011-03-11T18:32:22Z",
+      "side": 1,
+      "message": "I thought the compiler did that for us?",
+      "parentUuid": "AAAA/H//+qE\u003d",
+      "revId": "30170bc43175b3ae4b5e996450f296427b2b0ae5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA/H//+p4\u003d",
         "filename": "net/ipv4/tcp_ipv4.c",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2011-03-11T07:33:27Z",
       "side": 1,
       "message": "Will this still work if IPV6 is not configured?",
+      "revId": "30170bc43175b3ae4b5e996450f296427b2b0ae5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/H//+k0\u003d",
+        "filename": "net/ipv4/tcp_ipv4.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2028,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2011-03-11T18:32:22Z",
+      "side": 1,
+      "message": "No, it will fail to compile. Should I wrap this and other relevant places with ifdefs like so?\n\n#if defined(CONFIG_IPV6) || defined(CONFIG_IPV6_MODULE",
+      "parentUuid": "AAAA/H//+p4\u003d",
       "revId": "30170bc43175b3ae4b5e996450f296427b2b0ae5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
