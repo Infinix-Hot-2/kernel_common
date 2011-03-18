@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA/X///W8\u003d",
+        "filename": "drivers/input/input.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1713,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-03-18T22:20:26Z",
+      "side": 1,
+      "message": "Is there a reason behind limiting this to 20?",
+      "revId": "ccf2b725740a935caac144b4f6f6324bd145fa41",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/X///Ww\u003d",
+        "filename": "drivers/input/input.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1721,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-03-18T22:20:26Z",
+      "side": 1,
+      "message": "Why 10, is that the largest number of events per finger?",
+      "revId": "ccf2b725740a935caac144b4f6f6324bd145fa41",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
