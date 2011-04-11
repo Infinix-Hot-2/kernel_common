@@ -2,6 +2,142 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAA/n//++E\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "pointer",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+90\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "static?  also, comments on locking the rb tree would be usefull",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+70\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "static?  and more lock comments here - create has the lock taken already, destroy takes the lock itself?",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+7w\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "it\u0027s a little weird that create calls allocate, and destroy calls free",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+6A\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "kernel style requires /* and */ on their own lines",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+7I\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "Is there any reason you might want to handle an error differently than null?",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+7U\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "it would be simpler to have ion_handle_create take the reference to the buffer.  in this case, you would have to drop the reference implicitly created by ion_buffer_create",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+64\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "ion_free seems a little misleading, since this will undo ion_alloc or ion_import, but I don\u0027t like ion_put either.",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA/n///C8\u003d",
         "filename": "drivers/gpu/ion/ion.c",
         "patchSetId": 4
@@ -19,6 +155,91 @@
     },
     {
       "key": {
+        "uuid": "AAAA/n//+6M\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "warn on map_cnt\u003d\u003d0",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+7M\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "it would be simpler to have ion_handle_create take the reference to the buffer.",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+50\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 367,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "ion_handle_create can fail",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+54\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 474,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "Does this work if you mix kernel and non-kernel threads in a client?",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+5w\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 674,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "ion_import can fail",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA/n///Cg\u003d",
         "filename": "drivers/gpu/ion/ion_heap.c",
         "patchSetId": 4
@@ -30,6 +251,40 @@
       "writtenOn": "2011-04-11T14:44:30Z",
       "side": 1,
       "message": "ion_kmalloc_heap_create?",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+5s\u003d",
+        "filename": "drivers/gpu/ion/ion_system_heap.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "maybe rename these sysmem and sysmem_contig?",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+5o\u003d",
+        "filename": "drivers/gpu/ion/ion_system_mapper.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-04-11T19:53:51Z",
+      "side": 1,
+      "message": "static",
       "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
