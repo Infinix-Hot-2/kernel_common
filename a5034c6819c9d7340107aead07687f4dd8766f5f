@@ -305,6 +305,23 @@
       "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+40\u003d",
+        "filename": "include/linux/ion.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001861
+      },
+      "writtenOn": "2011-04-11T21:38:17Z",
+      "side": 1,
+      "message": "Since these get used as bitmask, do you want to initialise it as: (1\u003c\u003c0), (1\u003c\u003c1), (1\u003c\u003c2)?",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
