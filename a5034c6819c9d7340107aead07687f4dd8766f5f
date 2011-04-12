@@ -257,6 +257,23 @@
     },
     {
       "key": {
+        "uuid": "AAAA/n//+vs\u003d",
+        "filename": "drivers/gpu/ion/ion_heap.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1006181
+      },
+      "writtenOn": "2011-04-12T18:24:48Z",
+      "side": 1,
+      "message": "What is the approach to support other memory allocations?  For example hw which requires contiguous memory, or otherwise special kinds of memory..",
+      "revId": "a5034c6819c9d7340107aead07687f4dd8766f5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA/n//+5s\u003d",
         "filename": "drivers/gpu/ion/ion_system_heap.c",
         "patchSetId": 4
