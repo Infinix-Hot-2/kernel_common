@@ -16,6 +16,24 @@
       "revId": "13080162e1fc0f1c36bb28d3507bd87c7e10308b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+L4\u003d",
+        "filename": "drivers/net/pppopns.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1001923
+      },
+      "writtenOn": "2011-04-19T02:13:37Z",
+      "side": 1,
+      "message": "This logic is used to determine which packet should go before the other. PPTP uses 32-bit sequences, so sequences will wrap around UINT32_MAX. As a result, we know that 2 should go before 3 and 0xffffffff should go before 0.\n\nYour examples shows two sequences on the opposite sides of 32-bit space. It will not happen due to the check in line 102. Even it happens, there is no way to tell which one should go first.",
+      "parentUuid": "AAAA/n//+MA\u003d",
+      "revId": "13080162e1fc0f1c36bb28d3507bd87c7e10308b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
