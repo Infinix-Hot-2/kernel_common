@@ -34,6 +34,24 @@
       "revId": "13080162e1fc0f1c36bb28d3507bd87c7e10308b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/n//+Lg\u003d",
+        "filename": "drivers/net/pppopns.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-04-19T03:57:51Z",
+      "side": 1,
+      "message": "\u003e It will not happen due to the check in line 102. \n\nWhich is also affected.\n\nMaybe just add a comment on 102 saying that it works because in normal operation we\u0027ll never see sequence numbers separated by as much as 2^31 within 1sec. Except at 10Mb/s with tons of small  empty packets :)\n\nIn the other file the wrap around happens at 5Mb/s in 1sec.\n\nA comment is ok, as after 1sec the mishandled packet will be considered lost.",
+      "parentUuid": "AAAA/n//+L4\u003d",
+      "revId": "13080162e1fc0f1c36bb28d3507bd87c7e10308b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
