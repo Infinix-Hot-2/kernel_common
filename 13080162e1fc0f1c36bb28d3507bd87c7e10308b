@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA/n//+MA\u003d",
+        "filename": "drivers/net/pppopns.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-04-19T01:02:26Z",
+      "side": 1,
+      "message": "The sequence is _u32.\nThis diff seems iffy around INT32_MAX. E.g.\n  meta-\u003esequence \u003d 0xffffffff;\n  meta1-\u003esequence \u003d 0x7fffffff;\nvs\n  meta-\u003esequence \u003d 0x7fffffff;\n  meta1-\u003esequence \u003d 0xffffffff;",
+      "revId": "13080162e1fc0f1c36bb28d3507bd87c7e10308b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
