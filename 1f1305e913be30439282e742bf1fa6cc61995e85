@@ -19,6 +19,91 @@
     },
     {
       "key": {
+        "uuid": "AAAA/3///vY\u003d",
+        "filename": "drivers/gpu/ion/ion_priv.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1006279
+      },
+      "writtenOn": "2011-04-27T15:00:17Z",
+      "side": 1,
+      "message": "Do you mean kernel-space virtual address?",
+      "revId": "1f1305e913be30439282e742bf1fa6cc61995e85",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/3///vU\u003d",
+        "filename": "include/linux/ion.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1006279
+      },
+      "writtenOn": "2011-04-27T15:00:17Z",
+      "side": 1,
+      "message": "Same question as below for ion_allocation_data.",
+      "revId": "1f1305e913be30439282e742bf1fa6cc61995e85",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/3///vg\u003d",
+        "filename": "include/linux/ion.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1006279
+      },
+      "writtenOn": "2011-04-27T15:00:17Z",
+      "side": 1,
+      "message": "Do you mean kernel-space virtual address?  If you really mean physical, return address should be an unsigned integer.",
+      "revId": "1f1305e913be30439282e742bf1fa6cc61995e85",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/3///vs\u003d",
+        "filename": "include/linux/ion.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1006279
+      },
+      "writtenOn": "2011-04-27T15:00:17Z",
+      "side": 1,
+      "message": "This is fine for a linear (1D) allocation.  Will the same API be used for other (e.g. 2D) allocation for architectures that have 2-dimensional memory layout?  If yes, how will the other dimensions be specified?",
+      "revId": "1f1305e913be30439282e742bf1fa6cc61995e85",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/3///vQ\u003d",
+        "filename": "include/linux/ion.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1006279
+      },
+      "writtenOn": "2011-04-27T15:00:17Z",
+      "side": 1,
+      "message": "If you need to allocate multiple co-aligned buffers, will this be expected to be done in one alloc call?  E.g. on some 2D architectures NV12/NV21/etc buffers need to be coaligned if they are mapped contiguously (as 1 buffer) to user space.  Other option is to require user space to always handle each sub-buffer individually.",
+      "revId": "1f1305e913be30439282e742bf1fa6cc61995e85",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA/n//+nk\u003d",
         "filename": "include/linux/ion.h",
         "patchSetId": 5
