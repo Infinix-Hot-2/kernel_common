@@ -1,0 +1,225 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABB3///hw\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "this is not needed",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABB3///hs\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "either define it or not",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABB3///ho\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "what is this used for?",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABB3///hk\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "what happens of you have more than one host?",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABB3///hg\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "why are you dumping more than 1023 character to the kernel log?",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABB3///g8\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "what does this comment mean? That 1 means group 2? If so make an enum and pass the name here",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABB3///g0\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "can you use msleep_interruptible?",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABB3///gk\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "use a goto here",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABB3///gc\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "what does this comment mean?",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABB3///gM\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "if buf came from user-space it should be tagged with __user.",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABB3///gI\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "msleep?",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABB3///gE\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 478,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "...",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABB3///f8\u003d",
+        "filename": "drivers/mmc/core/assd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 550,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2011-06-04T01:21:11Z",
+      "side": 1,
+      "message": "did you define thise ioctl numbers? If so put them in a header file and use the _IO macros",
+      "revId": "5c46a95f5aa405d936fb55d5d04f82957b4016ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
