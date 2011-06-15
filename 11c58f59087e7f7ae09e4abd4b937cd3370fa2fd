@@ -121,6 +121,23 @@
     },
     {
       "key": {
+        "uuid": "AAABCX///wU\u003d",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2011-06-15T22:47:45Z",
+      "side": 1,
+      "message": "newline before this line.",
+      "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABCX///wk\u003d",
         "filename": "net/netfilter/xt_socket.c",
         "patchSetId": 1
