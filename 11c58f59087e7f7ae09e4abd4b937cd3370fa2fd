@@ -314,6 +314,24 @@
       "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABCX///tI\u003d",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2011-06-15T23:30:48Z",
+      "side": 1,
+      "message": "no, it makes the function names \"symmetrical\". You can also get rid of this function and change line 378 to point to yours, but I don\u0027t see the point.",
+      "parentUuid": "AAABCX///vg\u003d",
+      "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
