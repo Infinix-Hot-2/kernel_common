@@ -332,6 +332,24 @@
       "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABCX///sw\u003d",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-06-15T23:56:33Z",
+      "side": 1,
+      "message": "Done\n\nNot only the names, but also the call graph.\n\niptables calls\n  socket_mt*_v() which calls\n     socket_match*()\n\nThen looking at socket_match4() and then seeing socket_match6() one can quickly see \"same name\" + \"similar layout\" probably \"same functionality\"\n\nBut with the optim, one has to look into socket_mt6_v1() to determine that it is actually very similar to the socket_match() of ipv4.",
+      "parentUuid": "AAABCX///tI\u003d",
+      "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
