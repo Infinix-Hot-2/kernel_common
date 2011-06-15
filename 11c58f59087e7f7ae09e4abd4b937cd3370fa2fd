@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAABCX///wM\u003d",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-06-15T23:11:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABCX///w8\u003d",
+      "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABCX///xA\u003d",
         "filename": "net/netfilter/xt_socket.c",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2011-06-15T22:41:15Z",
       "side": 1,
       "message": "return NULL",
+      "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABCX///wE\u003d",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-06-15T23:11:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABCX///xA\u003d",
       "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAABCX///wA\u003d",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-06-15T23:11:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABCX///w4\u003d",
+      "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABCX///w0\u003d",
         "filename": "net/netfilter/xt_socket.c",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2011-06-15T22:41:15Z",
       "side": 1,
       "message": "missing a newline before this line.",
+      "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABCX///v4\u003d",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-06-15T23:11:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABCX///w0\u003d",
       "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "AAABCX///vw\u003d",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-06-15T23:11:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABCX///ww\u003d",
+      "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABCX///ws\u003d",
         "filename": "net/netfilter/xt_socket.c",
         "patchSetId": 1
@@ -98,6 +188,24 @@
       "writtenOn": "2011-06-15T22:41:15Z",
       "side": 1,
       "message": "NULL",
+      "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABCX///vs\u003d",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-06-15T23:11:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABCX///ws\u003d",
       "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "AAABCX///vk\u003d",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-06-15T23:11:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABCX///wo\u003d",
+      "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABCX///wU\u003d",
         "filename": "net/netfilter/xt_socket.c",
         "patchSetId": 1
@@ -138,6 +264,24 @@
     },
     {
       "key": {
+        "uuid": "AAABCX///vA\u003d",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-06-15T23:11:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABCX///wU\u003d",
+      "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABCX///wk\u003d",
         "filename": "net/netfilter/xt_socket.c",
         "patchSetId": 1
@@ -149,6 +293,24 @@
       "writtenOn": "2011-06-15T22:41:15Z",
       "side": 1,
       "message": "why do you need the extra function here? why can\u0027t you just call the above function socket_mt6_v1 and remove this one?",
+      "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABCX///vg\u003d",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-06-15T23:11:40Z",
+      "side": 1,
+      "message": "It makes ipv4 and ipv6 handling more symmetrical.",
+      "parentUuid": "AAABCX///wk\u003d",
       "revId": "11c58f59087e7f7ae09e4abd4b937cd3370fa2fd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
