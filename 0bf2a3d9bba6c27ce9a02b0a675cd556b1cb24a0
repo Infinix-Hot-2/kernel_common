@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABDX//+aQ\u003d",
+        "filename": "arch/arm/kernel/leds.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2011-06-24T22:16:38Z",
+      "side": 1,
+      "message": "no need to check ret again, just combine this with the block above",
+      "revId": "0bf2a3d9bba6c27ce9a02b0a675cd556b1cb24a0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
