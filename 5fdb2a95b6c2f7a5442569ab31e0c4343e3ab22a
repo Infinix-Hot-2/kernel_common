@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAABEX///GY\u003d",
+        "filename": "net/netfilter/xt_quota2.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-07-01T07:15:26Z",
+      "side": 1,
+      "message": "I thought the _bh stuff was just old.\n\nAnd then wasn\u0027t sure if it was sufficient ... the netfilter Oopses I have where with asm_do_IRQ().\nBut now that you mention BH-love I checked again and the asm_do_IRQ are all followed by soft_IRQ. So  *_bh would work in these cases.\n\nI\u0027ll put them back.",
+      "parentUuid": "AAABEX///HI\u003d",
+      "revId": "5fdb2a95b6c2f7a5442569ab31e0c4343e3ab22a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABEX///G4\u003d",
         "filename": "net/netfilter/xt_quota2.c",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "AAABEX///Gc\u003d",
+        "filename": "net/netfilter/xt_quota2.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-07-01T07:15:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABEX///G4\u003d",
+      "revId": "5fdb2a95b6c2f7a5442569ab31e0c4343e3ab22a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABEX///Gs\u003d",
         "filename": "net/netfilter/xt_quota2.c",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2011-07-01T06:11:25Z",
       "side": 1,
       "message": "why did you remove q-\u003equota \u003d e-\u003equota?",
+      "revId": "5fdb2a95b6c2f7a5442569ab31e0c4343e3ab22a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABEX///Gg\u003d",
+        "filename": "net/netfilter/xt_quota2.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2011-07-01T07:15:26Z",
+      "side": 1,
+      "message": "Copying of current quota back to the iptable\u0027s\nstruct matchinfo is useless:\n  - those are per CPU: they will change randomly based on which\n    cpu gets to update the value.\n  - they prevent matching a rule: e.g.\n      -A chain -m quota2 --name q1 --quota 123\n     can\u0027t be followed by\n      -D chain -m quota2 --name q1 --quota 123\n    as the 123 will be compared to the struct matchinfo\u0027s quota member.",
+      "parentUuid": "AAABEX///Gs\u003d",
       "revId": "5fdb2a95b6c2f7a5442569ab31e0c4343e3ab22a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
