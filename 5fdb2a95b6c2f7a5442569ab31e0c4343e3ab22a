@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABEX///HI\u003d",
+        "filename": "net/netfilter/xt_quota2.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2011-07-01T06:11:25Z",
+      "side": 1,
+      "message": "is the conversion to irq disabling ones really necessary? I thought the network stack was full of BH love?",
+      "revId": "5fdb2a95b6c2f7a5442569ab31e0c4343e3ab22a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABEX///G4\u003d",
+        "filename": "net/netfilter/xt_quota2.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2011-07-01T06:11:25Z",
+      "side": 1,
+      "message": "IS_ERR_OR_NULL()",
+      "revId": "5fdb2a95b6c2f7a5442569ab31e0c4343e3ab22a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABEX///Gs\u003d",
+        "filename": "net/netfilter/xt_quota2.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2011-07-01T06:11:25Z",
+      "side": 1,
+      "message": "why did you remove q-\u003equota \u003d e-\u003equota?",
+      "revId": "5fdb2a95b6c2f7a5442569ab31e0c4343e3ab22a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
