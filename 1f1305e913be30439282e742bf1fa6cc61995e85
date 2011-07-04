@@ -121,6 +121,23 @@
     },
     {
       "key": {
+        "uuid": "AAABEX//+xA\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 697,
+      "author": {
+        "id": 1006840
+      },
+      "writtenOn": "2011-07-04T13:57:44Z",
+      "side": 1,
+      "message": "Why are we getting a kernel address for this buffer?",
+      "revId": "1f1305e913be30439282e742bf1fa6cc61995e85",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA/3///oQ\u003d",
         "filename": "drivers/gpu/ion/ion.c",
         "patchSetId": 5
@@ -172,6 +189,40 @@
     },
     {
       "key": {
+        "uuid": "AAABEX//+xM\u003d",
+        "filename": "drivers/gpu/ion/ion_heap.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006840
+      },
+      "writtenOn": "2011-07-04T13:57:44Z",
+      "side": 1,
+      "message": "Is the intention to stick with switch cases for the different heap types? It would be cleaner if each heap registered a structure of callbacks. This would also allow heaps to come and go which might be required in the future.",
+      "revId": "1f1305e913be30439282e742bf1fa6cc61995e85",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABEX//+xE\u003d",
+        "filename": "drivers/gpu/ion/ion_mapper.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1006840
+      },
+      "writtenOn": "2011-07-04T13:57:44Z",
+      "side": 1,
+      "message": "Is the intention to stick with switch cases for the different mappers? It would be cleaner if each mapper registered a structure of callbacks. This would also allow mappers to come and go which might be required in the future.",
+      "revId": "1f1305e913be30439282e742bf1fa6cc61995e85",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAA/3///vY\u003d",
         "filename": "drivers/gpu/ion/ion_priv.h",
         "patchSetId": 5
@@ -183,6 +234,23 @@
       "writtenOn": "2011-04-27T15:00:17Z",
       "side": 1,
       "message": "Do you mean kernel-space virtual address?",
+      "revId": "1f1305e913be30439282e742bf1fa6cc61995e85",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABEX//+xI\u003d",
+        "filename": "drivers/gpu/ion/tegra/tegra_ion.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1006840
+      },
+      "writtenOn": "2011-07-04T13:57:44Z",
+      "side": 1,
+      "message": "I wonder if some of this init could be done at subsystem init time. It would save having the same code duplicated for each system.\n\nI\u0027m also wondering who\u0027s job it is to do this init? It\u0027s easier for SoC\u0027s as you can define a common point to do this, but in the x86 environment it\u0027s harder as you might have multiple ION devices (e.g. an “ion” GPU and an “ion” camera driver) which are being hot-plugged.",
       "revId": "1f1305e913be30439282e742bf1fa6cc61995e85",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
