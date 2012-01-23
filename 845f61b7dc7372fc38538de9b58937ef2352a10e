@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAACTX////8\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-01-23T22:18:41Z",
+      "side": 1,
+      "message": "This could use a prefix, e.g. \"rtc: alarm: \"",
+      "revId": "845f61b7dc7372fc38538de9b58937ef2352a10e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
