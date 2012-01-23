@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAACSH////4\u003d",
+        "filename": "drivers/rtc/alarm-dev.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1010184
+      },
+      "writtenOn": "2012-01-23T18:31:10Z",
+      "side": 1,
+      "message": "We discussed that with Ed. It seems that no other architecture other than ARM has this \"asm/mach/time.h\" file (at least we didn\u0027t find) - that\u0027s why we decided to use #ifdef __arm__ (ok that should be CONFIG_ARM) instead of #ifndef CONFIG_X86",
+      "parentUuid": "AAACRn///+w\u003d",
+      "revId": "e8a5005dfa49c739fb79c485ac8b15c459a21faf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAACP3///+k\u003d",
         "filename": "drivers/rtc/alarm-dev.c",
         "patchSetId": 1
