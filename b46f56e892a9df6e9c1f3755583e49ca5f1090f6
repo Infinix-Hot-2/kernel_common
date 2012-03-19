@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAECn///9I\u003d",
+        "filename": "drivers/base/sw_sync.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2012-03-19T07:03:12Z",
+      "side": 1,
+      "message": "space after ,",
+      "revId": "b46f56e892a9df6e9c1f3755583e49ca5f1090f6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
