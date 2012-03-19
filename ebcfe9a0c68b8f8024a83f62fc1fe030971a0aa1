@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAECn///9U\u003d",
+        "filename": "include/linux/sync.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2012-03-19T07:02:35Z",
+      "side": 1,
+      "message": "remove space between * and print_obj",
+      "revId": "ebcfe9a0c68b8f8024a83f62fc1fe030971a0aa1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAECn///9Q\u003d",
+        "filename": "include/linux/sync.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2012-03-19T07:02:35Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "ebcfe9a0c68b8f8024a83f62fc1fe030971a0aa1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
