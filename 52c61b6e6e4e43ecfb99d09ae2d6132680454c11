@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAE1n///8c\u003d",
+        "filename": "drivers/base/sync.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 473,
+      "author": {
+        "id": 1001891
+      },
+      "writtenOn": "2012-04-18T20:57:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAEK3////Y\u003d",
+      "revId": "52c61b6e6e4e43ecfb99d09ae2d6132680454c11",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAEK3////U\u003d",
         "filename": "drivers/base/sync.c",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2012-03-22T07:33:10Z",
       "side": 1,
       "message": "need to copy data, not fd.",
+      "revId": "52c61b6e6e4e43ecfb99d09ae2d6132680454c11",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAE1n///8Y\u003d",
+        "filename": "drivers/base/sync.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 490,
+      "author": {
+        "id": 1001891
+      },
+      "writtenOn": "2012-04-18T20:57:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAEK3////U\u003d",
       "revId": "52c61b6e6e4e43ecfb99d09ae2d6132680454c11",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
