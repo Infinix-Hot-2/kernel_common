@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAH/X///Jc\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2012-08-03T00:40:52Z",
+      "side": 1,
+      "message": "destroyed",
+      "revId": "07619ca4190e80385a8efdbbc66dbdca55b56880",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAH/X///Jg\u003d",
+        "filename": "drivers/base/sync.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2012-08-03T00:40:52Z",
+      "side": 1,
+      "message": "their",
+      "revId": "07619ca4190e80385a8efdbbc66dbdca55b56880",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAH/H///HU\u003d",
+        "filename": "include/linux/sync.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2012-08-03T00:40:52Z",
+      "side": 1,
+      "message": "reference",
+      "revId": "07619ca4190e80385a8efdbbc66dbdca55b56880",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
