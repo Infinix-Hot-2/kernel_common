@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAIC3///gk\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-08-06T22:04:20Z",
+      "side": 1,
+      "message": "android_battery?",
+      "revId": "6bed4d6c2c66d662a2bd039865c81834fead53e6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
