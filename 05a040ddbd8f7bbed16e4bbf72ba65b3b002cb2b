@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAIEX//+u8\u003d",
+        "filename": "kernel/time/alarmtimer.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-08-08T21:20:55Z",
+      "side": 1,
+      "message": "This is not a second if CONFIG_KTIME_SCALAR is not set on a 32 bit system.",
+      "revId": "05a040ddbd8f7bbed16e4bbf72ba65b3b002cb2b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAIEX//+u4\u003d",
+        "filename": "kernel/time/alarmtimer.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-08-08T21:20:55Z",
+      "side": 1,
+      "message": "What happens if the rtc ticks here?",
+      "revId": "05a040ddbd8f7bbed16e4bbf72ba65b3b002cb2b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
