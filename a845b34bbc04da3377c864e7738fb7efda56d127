@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAIEX//+Yg\u003d",
+        "filename": "kernel/time/alarmtimer.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-08-09T02:36:46Z",
+      "side": 1,
+      "message": "This return -ETIME if you try to set an alarm that is not in the future, but it does not check in a safe way.",
+      "revId": "a845b34bbc04da3377c864e7738fb7efda56d127",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
