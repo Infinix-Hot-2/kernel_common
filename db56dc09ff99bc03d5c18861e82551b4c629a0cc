@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAIEX//+W0\u003d",
+        "filename": "kernel/time/alarmtimer.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-08-09T03:11:08Z",
+      "side": 1,
+      "message": "This will trigger on other failures as well. Do we want to reject suspend if it fails for other reasons?",
+      "revId": "db56dc09ff99bc03d5c18861e82551b4c629a0cc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
