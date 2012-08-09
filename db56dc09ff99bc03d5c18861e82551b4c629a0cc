@@ -16,6 +16,24 @@
       "revId": "db56dc09ff99bc03d5c18861e82551b4c629a0cc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAIEX//+Ws\u003d",
+        "filename": "kernel/time/alarmtimer.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-08-09T03:14:33Z",
+      "side": 1,
+      "message": "It seems safest to not suspend if there\u0027s a chance we won\u0027t resume to service the next alarm (because it wasn\u0027t properly set).  But maybe there\u0027s an error we can get on every attempt and it would be better to suspend anyway.  I figured we\u0027d tackle that case later if it crops up.",
+      "parentUuid": "AAAIEX//+W0\u003d",
+      "revId": "db56dc09ff99bc03d5c18861e82551b4c629a0cc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
