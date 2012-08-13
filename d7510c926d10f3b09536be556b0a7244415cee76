@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAIR3///og\u003d",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 5579,
+      "author": {
+        "id": 1014961
+      },
+      "writtenOn": "2012-08-13T19:34:05Z",
+      "side": 1,
+      "message": "time_util.h defines\nunsigned long long timespec_to_microsec(struct timespec *time_spec)\nif you like.",
+      "revId": "d7510c926d10f3b09536be556b0a7244415cee76",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
