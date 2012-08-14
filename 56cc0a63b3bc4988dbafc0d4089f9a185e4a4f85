@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAIXH///uA\u003d",
+        "filename": "kernel/power/qos.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 546,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2012-08-14T18:06:12Z",
+      "side": 1,
+      "message": "surround this (546-586) with #ifdef CONFIG_DEBUG_FS",
+      "revId": "56cc0a63b3bc4988dbafc0d4089f9a185e4a4f85",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAIW3///sw\u003d",
+        "filename": "kernel/power/qos.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 604,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2012-08-14T18:06:12Z",
+      "side": 1,
+      "message": "#ifdef CONFIG_DEBUG_FS",
+      "revId": "56cc0a63b3bc4988dbafc0d4089f9a185e4a4f85",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
