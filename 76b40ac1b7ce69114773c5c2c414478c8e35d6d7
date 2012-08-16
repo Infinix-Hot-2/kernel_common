@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAIgH////o\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1004957
+      },
+      "writtenOn": "2012-08-16T03:43:22Z",
+      "side": 1,
+      "message": "I\u0027m not sure what you mean here.  I didn\u0027t think we used gerrit change IDs in the kernel.",
+      "parentUuid": "AAAIfH///+s\u003d",
+      "revId": "76b40ac1b7ce69114773c5c2c414478c8e35d6d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAIfH///+w\u003d",
         "filename": "drivers/usb/gadget/f_audio_source.c",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "AAAIfn////k\u003d",
+        "filename": "drivers/usb/gadget/f_audio_source.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 626,
+      "author": {
+        "id": 1004957
+      },
+      "writtenOn": "2012-08-16T03:43:22Z",
+      "side": 1,
+      "message": "The while loop above that calls audio_req_get() will empty this list.",
+      "parentUuid": "AAAIfH///+w\u003d",
+      "revId": "76b40ac1b7ce69114773c5c2c414478c8e35d6d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAIfH///+o\u003d",
         "filename": "drivers/usb/gadget/f_audio_source.c",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2012-08-16T03:28:19Z",
       "side": 1,
       "message": "Need check for already in use, or impossible?",
+      "revId": "76b40ac1b7ce69114773c5c2c414478c8e35d6d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAIgH////s\u003d",
+        "filename": "drivers/usb/gadget/f_audio_source.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 764,
+      "author": {
+        "id": 1004957
+      },
+      "writtenOn": "2012-08-16T03:43:22Z",
+      "side": 1,
+      "message": "Not a problem - this will not get called twice without audio_source_unbind being called inbetween.",
+      "parentUuid": "AAAIfH///+o\u003d",
       "revId": "76b40ac1b7ce69114773c5c2c414478c8e35d6d7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
