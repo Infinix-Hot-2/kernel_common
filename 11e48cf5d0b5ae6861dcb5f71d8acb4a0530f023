@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAIfH///+M\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-08-16T03:57:02Z",
+      "side": 1,
+      "message": "Gerrit matched this up with the previous change assigned ID I76b40ac1b7ce69114773c5c2c414478c8e35d6d7, so it\u0027s more complicated than I knew",
+      "revId": "11e48cf5d0b5ae6861dcb5f71d8acb4a0530f023",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAIfH///+Q\u003d",
+        "filename": "drivers/usb/gadget/f_audio_source.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 827,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-08-16T03:57:02Z",
+      "side": 1,
+      "message": "assuming this runs before audio_source_bind_config could be first called",
+      "revId": "11e48cf5d0b5ae6861dcb5f71d8acb4a0530f023",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
