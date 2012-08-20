@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAIrn///Vw\u003d",
+        "filename": "include/linux/pm_qos.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-08-20T22:01:39Z",
+      "side": 1,
+      "message": "Are these class ids visible to user-space?",
+      "revId": "e2b8a84d24242b1f47d952cd17dc2c2dcbe72dc9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
