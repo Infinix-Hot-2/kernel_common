@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAIxn////E\u003d",
+        "filename": "kernel/power/qos.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 563,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2012-08-21T05:09:57Z",
+      "side": 1,
+      "message": "extra newline",
+      "revId": "314965a89e5bb566a25595c9ed0da2604243f7bb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
