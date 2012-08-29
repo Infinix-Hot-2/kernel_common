@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAI6X//97I\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2012-08-29T18:14:42Z",
+      "side": 1,
+      "message": "Follow coding style guidelines for multi-line comments.\n\n/*\n * stuff\n * here\n */",
+      "revId": "ed3e9b3c70457e21a2c141ad4d44aaab8febeb5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAI63//96A\u003d",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2012-08-29T18:14:42Z",
+      "side": 1,
+      "message": "remove from handle before doing the buffer_put, otherwise can\u0027t buffer be freed here?",
+      "revId": "ed3e9b3c70457e21a2c141ad4d44aaab8febeb5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
