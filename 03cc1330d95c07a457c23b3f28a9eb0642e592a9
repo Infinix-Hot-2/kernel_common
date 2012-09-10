@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAI+n///pw\u003d",
+        "filename": "sound/soc/soc-dapm.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2125,
+      "author": {
+        "id": 1004565
+      },
+      "writtenOn": "2012-09-10T20:44:53Z",
+      "side": 1,
+      "message": "Missing mutex_unlock() here.",
+      "revId": "03cc1330d95c07a457c23b3f28a9eb0642e592a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAI+n///ps\u003d",
+        "filename": "sound/soc/soc-dapm.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2844,
+      "author": {
+        "id": 1004565
+      },
+      "writtenOn": "2012-09-10T20:44:53Z",
+      "side": 1,
+      "message": "Also here",
+      "revId": "03cc1330d95c07a457c23b3f28a9eb0642e592a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
