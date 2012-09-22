@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAJUX//+0o\u003d",
+        "filename": "drivers/usb/gadget/f_fs.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1522,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2012-09-22T21:32:31Z",
+      "side": 1,
+      "message": "could you put add a var for this like desc_idx \u003d \u003cblah\u003e\nso it\u0027s easier to read? Otherwise, looks ok.",
+      "revId": "6d6d4981baaf2a01222b353c0796e7a54e0c9917",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
