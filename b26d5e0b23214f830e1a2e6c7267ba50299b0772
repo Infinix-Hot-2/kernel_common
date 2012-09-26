@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAJaX//94A\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-09-26T21:19:45Z",
+      "side": 1,
+      "message": "Suggest:\nChange-Id: Ib26d5e0b23214f830e1a2e6c7267ba50299b0772",
+      "revId": "b26d5e0b23214f830e1a2e6c7267ba50299b0772",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
