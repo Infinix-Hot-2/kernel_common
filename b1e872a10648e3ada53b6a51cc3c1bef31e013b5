@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAJ9H///d4\u003d",
+        "filename": "mm/vmscan.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1001891
+      },
+      "writtenOn": "2012-10-05T21:10:57Z",
+      "side": 1,
+      "message": "why not just do the %pf in seq_printf?",
+      "revId": "b1e872a10648e3ada53b6a51cc3c1bef31e013b5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAJ9H///d0\u003d",
+        "filename": "mm/vmscan.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 1001891
+      },
+      "writtenOn": "2012-10-05T21:10:57Z",
+      "side": 1,
+      "message": "white space only change",
+      "revId": "b1e872a10648e3ada53b6a51cc3c1bef31e013b5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
