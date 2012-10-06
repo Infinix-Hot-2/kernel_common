@@ -16,6 +16,24 @@
       "revId": "01ceb9f89c6bb1d2e4256c96172132e6eeb10747",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAJ7H///Jo\u003d",
+        "filename": "drivers/power/android_battery.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-10-06T06:15:48Z",
+      "side": 1,
+      "message": "The mutex here just makes sure the printk reports the same state as the call to android_bat_charge_source_changed passed.  The wakelock ensures the charger worker can update charger state prior to suspending again.  Grabbing the wakelock didn\u0027t seem to be a part of the state to be kept consistent under the mutex.  But tell me more if I\u0027m missing something.",
+      "parentUuid": "AAAJ63///GE\u003d",
+      "revId": "01ceb9f89c6bb1d2e4256c96172132e6eeb10747",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
