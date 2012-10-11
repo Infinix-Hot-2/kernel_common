@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAKEX///+s\u003d",
+        "filename": "drivers/base/sync.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 460,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2012-10-11T21:01:23Z",
+      "side": 1,
+      "message": "unnecessary",
+      "revId": "27a0eab0394bd8c535f2016bf278c1c96ed05b23",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAKEX///+w\u003d",
+        "filename": "drivers/base/sync.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 763,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2012-10-11T21:01:23Z",
+      "side": 1,
+      "message": "unneccessary",
+      "revId": "27a0eab0394bd8c535f2016bf278c1c96ed05b23",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
