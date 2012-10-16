@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAKcn///kQ\u003d",
+        "filename": "drivers/base/sync.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 853,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2012-10-16T23:45:55Z",
+      "side": 1,
+      "message": "snprintf used by pt_value_str won\u0027t guarantee that value is null terminated, should probably do value[63] \u003d 0 here;",
+      "revId": "fe9ab3c17fdcf7e17d6100d3fee9158c3a6aed13",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAKcn///kk\u003d",
         "filename": "include/linux/sync.h",
         "patchSetId": 2
