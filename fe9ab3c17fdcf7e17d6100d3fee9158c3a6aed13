@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAKcn///jY\u003d",
+        "filename": "drivers/base/sync.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 853,
+      "author": {
+        "id": 1001891
+      },
+      "writtenOn": "2012-10-16T23:51:11Z",
+      "side": 1,
+      "message": "you\u0027re thinking of strncpy.  I\u0027m pretty sure snprintf guarantees null termination.",
+      "parentUuid": "AAAKcn///kQ\u003d",
+      "revId": "fe9ab3c17fdcf7e17d6100d3fee9158c3a6aed13",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAKcn///kk\u003d",
         "filename": "include/linux/sync.h",
         "patchSetId": 2
