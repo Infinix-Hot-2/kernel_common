@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAKcn///kk\u003d",
+        "filename": "include/linux/sync.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2012-10-16T23:43:46Z",
+      "side": 1,
+      "message": "deprecated",
+      "revId": "fe9ab3c17fdcf7e17d6100d3fee9158c3a6aed13",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
