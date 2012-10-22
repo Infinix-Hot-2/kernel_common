@@ -16,6 +16,24 @@
       "revId": "61c6b1791cb4110fa1c22206906a095035277146",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAKnn///ik\u003d",
+        "filename": "drivers/net/wireless/bcmdhd/dhd.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 635,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2012-10-22T21:38:42Z",
+      "side": 1,
+      "message": "Yes, it was a dead code",
+      "parentUuid": "AAAKnX///2g\u003d",
+      "revId": "61c6b1791cb4110fa1c22206906a095035277146",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
