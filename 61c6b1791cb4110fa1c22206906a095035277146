@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAKnX///2g\u003d",
+        "filename": "drivers/net/wireless/bcmdhd/dhd.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 635,
+      "author": {
+        "id": 1014961
+      },
+      "writtenOn": "2012-10-22T21:31:48Z",
+      "side": 1,
+      "message": "Is KEEP_ALIVE_PACKET_PERIOD_30_SEC gone from the code?",
+      "revId": "61c6b1791cb4110fa1c22206906a095035277146",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
