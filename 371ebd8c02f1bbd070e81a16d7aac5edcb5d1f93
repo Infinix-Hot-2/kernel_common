@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAKoH///f0\u003d",
+        "filename": "drivers/staging/android/logger.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 671,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2012-10-23T20:38:15Z",
+      "side": 1,
+      "message": "EPERM is probably a better return value here.",
+      "revId": "371ebd8c02f1bbd070e81a16d7aac5edcb5d1f93",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
