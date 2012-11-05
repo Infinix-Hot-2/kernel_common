@@ -2073,6 +2073,23 @@ static void binder_transaction(struct binder_proc *proc,
 			fp = to_flat_binder_object(hdr);
 			ret = binder_translate_binder(fp, t, thread);
 			if (ret < 0) {
+				node = binder_new_node(proc, fp->binder, fp->cookie);
+				if (node == NULL) {
+					return_error = BR_FAILED_REPLY;
+					goto err_binder_new_node_failed;
+				}
+				node->min_priority = fp->flags & FLAT_BINDER_FLAG_PRIORITY_MASK;
+				node->accept_fds = !!(fp->flags & FLAT_BINDER_FLAG_ACCEPTS_FDS);
+			}
+			if (fp->cookie != node->cookie) {
+				binder_user_error("%d:%d sending u%016llx node %d, cookie mismatch %016llx != %016llx\n",
+					proc->pid, thread->pid,
+					(u64)fp->binder, node->debug_id,
+					(u64)fp->cookie, (u64)node->cookie);
+				return_error = BR_FAILED_REPLY;
+				goto err_binder_get_ref_for_node_failed;
+			}
+			if (security_binder_transfer_binder(proc->tsk, target_proc->tsk)) {
 				return_error = BR_FAILED_REPLY;
 				goto err_translate_failed;
 			}
@@ -3211,6 +3228,9 @@ static int binder_ioctl_set_ctx_mgr(struct file *filp)
 		ret = -EBUSY;
 		goto out;
 	}
+	ret = security_binder_set_context_mgr(proc->tsk);
+	if (ret < 0)
+		goto out;
 	if (uid_valid(context->binder_context_mgr_uid)) {
 		if (!uid_eq(context->binder_context_mgr_uid, curr_euid)) {
 			pr_err("BINDER_SET_CONTEXT_MGR bad uid %d != %d\n",
@@ -3275,9 +3295,6 @@ static long binder_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 	case BINDER_SET_CONTEXT_MGR:
 		ret = binder_ioctl_set_ctx_mgr(filp);
 		if (ret)
-			goto err;
-		ret = security_binder_set_context_mgr(proc->tsk);
-		if (ret < 0)
 			goto err;
 		break;
 	case BINDER_THREAD_EXIT:
