@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAALRn///Mo\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-06T05:06:45Z",
+      "side": 1,
+      "message": "Don\u0027t you want this writeable?",
+      "revId": "1261228fb66e523c20e51b0ec2d57a191c484fb7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALRn///MY\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-06T05:06:45Z",
+      "side": 1,
+      "message": "why does governidle affect this?",
+      "revId": "1261228fb66e523c20e51b0ec2d57a191c484fb7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALRn///Mg\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-06T05:06:45Z",
+      "side": 1,
+      "message": "why did this change?",
+      "revId": "1261228fb66e523c20e51b0ec2d57a191c484fb7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
