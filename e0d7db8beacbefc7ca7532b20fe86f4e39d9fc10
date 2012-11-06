@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAALRX//+qI\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-06T23:25:43Z",
+      "side": 1,
+      "message": "I still prefer the S_... macros, just or in S_IWUSR to to what you had.",
+      "revId": "e0d7db8beacbefc7ca7532b20fe86f4e39d9fc10",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
