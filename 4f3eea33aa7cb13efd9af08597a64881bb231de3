@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAALRn///W4\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-06T00:41:52Z",
+      "side": 1,
+      "message": "Describe what you are trying to accomplish in more detail.",
+      "revId": "4f3eea33aa7cb13efd9af08597a64881bb231de3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
