@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAALR3//+1Y\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-07T01:23:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAALRX//+kU\u003d",
+      "revId": "157dad78aa516002f0563e29e3edb768dff6debc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAALRX//+kM\u003d",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2012-11-07T00:13:28Z",
       "side": 1,
       "message": "is this code still reachable?",
+      "revId": "157dad78aa516002f0563e29e3edb768dff6debc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALR3//+0o\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-07T01:23:14Z",
+      "side": 1,
+      "message": "Yes, if managing speed in idle and speed is max.",
+      "parentUuid": "AAALRX//+kM\u003d",
       "revId": "157dad78aa516002f0563e29e3edb768dff6debc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
