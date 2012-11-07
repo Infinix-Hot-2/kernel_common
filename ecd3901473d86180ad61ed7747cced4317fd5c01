@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAALR3//+nY\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-07T04:39:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAALRX//+ZM\u003d",
+      "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAALRX//+ZI\u003d",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2012-11-07T03:40:45Z",
       "side": 1,
       "message": "cpu?",
+      "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALR3//+nc\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-07T04:39:47Z",
+      "side": 1,
+      "message": "Will keep this and get rid of cpu param.",
+      "parentUuid": "AAALRX//+ZI\u003d",
       "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAALR3//+n0\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-07T04:39:47Z",
+      "side": 1,
+      "message": "Should do (just in case) for pcpu-\u003egovernor_enabled",
+      "parentUuid": "AAALRX//+ZE\u003d",
+      "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAALRX//+ZA\u003d",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 3
@@ -64,6 +118,24 @@
       "writtenOn": "2012-11-07T03:40:45Z",
       "side": 1,
       "message": "why not pass pcpu in?",
+      "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALR3//+no\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-07T04:39:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAALRX//+ZA\u003d",
       "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "AAALR3//+nw\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-07T04:39:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAALRX//+Y8\u003d",
+      "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAALRX//+Y0\u003d",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 3
@@ -98,6 +188,24 @@
       "writtenOn": "2012-11-07T03:40:45Z",
       "side": 1,
       "message": "... which means \"timer_pending(\u0026pcpu-\u003ecpu_timer)\" is not needed here",
+      "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALR3//+ns\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-07T04:39:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAALRX//+Y0\u003d",
       "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
