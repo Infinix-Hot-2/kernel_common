@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAALRX//+ZM\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-07T03:40:45Z",
+      "side": 1,
+      "message": "why not pass pcpu in?",
+      "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALRX//+ZI\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-07T03:40:45Z",
+      "side": 1,
+      "message": "cpu?",
+      "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALRX//+ZE\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-07T03:40:45Z",
+      "side": 1,
+      "message": "is this still needed?",
+      "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALRX//+ZA\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-07T03:40:45Z",
+      "side": 1,
+      "message": "why not pass pcpu in?",
+      "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALRX//+Y8\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-07T03:40:45Z",
+      "side": 1,
+      "message": "\" \u003d\u003d 0 \u0026\u0026 pcpu-\u003egovernor_enabled\" is not needed ...",
+      "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALRX//+Y0\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-07T03:40:45Z",
+      "side": 1,
+      "message": "... which means \"timer_pending(\u0026pcpu-\u003ecpu_timer)\" is not needed here",
+      "revId": "ecd3901473d86180ad61ed7747cced4317fd5c01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
