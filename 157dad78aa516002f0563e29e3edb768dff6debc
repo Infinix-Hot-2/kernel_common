@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAALRX//+kU\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-07T00:13:28Z",
+      "side": 1,
+      "message": "do you need this, or can you just check directly if the timer has expired.",
+      "revId": "157dad78aa516002f0563e29e3edb768dff6debc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALRX//+kM\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-07T00:13:28Z",
+      "side": 1,
+      "message": "is this code still reachable?",
+      "revId": "157dad78aa516002f0563e29e3edb768dff6debc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
