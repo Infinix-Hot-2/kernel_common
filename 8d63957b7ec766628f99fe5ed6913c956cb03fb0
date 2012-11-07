@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAALRX//+ZY\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-07T03:33:01Z",
+      "side": 1,
+      "message": "while this file does not currently follow this convention, I prefer to have all the global variables in this file use the same common prefix as the functions in this file so you can immediately see that they are not locals where they are used.",
+      "revId": "8d63957b7ec766628f99fe5ed6913c956cb03fb0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALRX//+Zc\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-07T03:33:01Z",
+      "side": 1,
+      "message": "lower the speed or reduce speed?",
+      "revId": "8d63957b7ec766628f99fe5ed6913c956cb03fb0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALRX//+ZU\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-07T03:33:01Z",
+      "side": 1,
+      "message": "This slows down the ramp down after running at max speed. Is that OK?",
+      "revId": "8d63957b7ec766628f99fe5ed6913c956cb03fb0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
