@@ -16,6 +16,24 @@
       "revId": "430d3d4539a0d441679ca32cc7c3876f97a07da6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALR3//9fk\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-08T22:31:36Z",
+      "side": 1,
+      "message": "I\u0027ll put it on the cleanup list, thanks.",
+      "parentUuid": "AAALRX//88Y\u003d",
+      "revId": "430d3d4539a0d441679ca32cc7c3876f97a07da6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
