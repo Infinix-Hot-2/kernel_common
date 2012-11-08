@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAALRX//9mQ\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-08T05:27:32Z",
+      "side": 1,
+      "message": "This also seems to be unused now.",
+      "revId": "0fdce3726eb24bba0133b0017c0fa33527fe4c9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
