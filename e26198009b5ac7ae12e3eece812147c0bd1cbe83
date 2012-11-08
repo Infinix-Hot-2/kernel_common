@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAALR3//9zE\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-08T06:51:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAALRX//9mI\u003d",
+      "revId": "e26198009b5ac7ae12e3eece812147c0bd1cbe83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAALRX//9mE\u003d",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2012-11-08T05:37:26Z",
       "side": 1,
       "message": "Do you need a function for this?",
+      "revId": "e26198009b5ac7ae12e3eece812147c0bd1cbe83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALR3//9zA\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-08T06:51:49Z",
+      "side": 1,
+      "message": "Naah, will move it inline to its one caller.",
+      "parentUuid": "AAALRX//9mE\u003d",
       "revId": "e26198009b5ac7ae12e3eece812147c0bd1cbe83",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
