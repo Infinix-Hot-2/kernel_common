@@ -33,6 +33,24 @@
       "revId": "b0dcb85864986085119a4a8ca927a1cfd7a98c16",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALu3//+jo\u003d",
+        "filename": "net/ipv4/route.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2755,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2012-11-26T21:33:01Z",
+      "side": 1,
+      "message": "You are right, but in this function they originally used dev_out \u003d\u003d NULL, so I didn\u0027t change their style.",
+      "parentUuid": "AAALu3//+k0\u003d",
+      "revId": "b0dcb85864986085119a4a8ca927a1cfd7a98c16",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
