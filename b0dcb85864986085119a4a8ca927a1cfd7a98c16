@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAALu3//+kU\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-26T21:24:06Z",
+      "side": 1,
+      "message": "Normally should have more text explaining what is fixed.",
+      "revId": "b0dcb85864986085119a4a8ca927a1cfd7a98c16",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAALu3//+k0\u003d",
         "filename": "net/ipv4/route.c",
         "patchSetId": 1
