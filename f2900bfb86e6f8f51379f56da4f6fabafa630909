@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAALw3///X4\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2012-11-27T01:19:39Z",
+      "side": 1,
+      "message": "say what the option is",
+      "revId": "f2900bfb86e6f8f51379f56da4f6fabafa630909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALw3///X0\u003d",
+        "filename": "kernel/trace/trace_functions_graph.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2012-11-27T01:19:39Z",
+      "side": 1,
+      "message": "does this need to be documented somewhere?",
+      "revId": "f2900bfb86e6f8f51379f56da4f6fabafa630909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAALw3///aA\u003d",
+        "filename": "kernel/trace/trace_functions_graph.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 458,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2012-11-27T01:19:39Z",
+      "side": 1,
+      "message": "avoid unnecessary whitespace changes",
+      "revId": "f2900bfb86e6f8f51379f56da4f6fabafa630909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
