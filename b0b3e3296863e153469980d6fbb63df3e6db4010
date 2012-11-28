@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAL/X//+y4\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-28T23:01:46Z",
+      "side": 1,
+      "message": "The actual speed is useful without this change so you could add this in a separate change.",
+      "revId": "b0b3e3296863e153469980d6fbb63df3e6db4010",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAL/X//+1I\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-28T23:01:46Z",
+      "side": 1,
+      "message": "Why is this not initialized here?",
+      "revId": "b0b3e3296863e153469980d6fbb63df3e6db4010",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAL/X//+0Y\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-28T23:01:46Z",
+      "side": 1,
+      "message": "Why divide by 100 and then multiply by 100? Are you trying to truncate something? Also, this calculation is not correct when frequency just changed.",
+      "revId": "b0b3e3296863e153469980d6fbb63df3e6db4010",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAL/X//+zY\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 448,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-28T23:01:46Z",
+      "side": 1,
+      "message": "Use the macros from linux/stat.h to specify the permissions.",
+      "revId": "b0b3e3296863e153469980d6fbb63df3e6db4010",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
