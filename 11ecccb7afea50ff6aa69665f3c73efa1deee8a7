@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "MIELLkqA",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-29T04:43:27Z",
+      "side": 1,
+      "message": "A TODO comment would be useful here. pcpu-\u003epolicy-\u003ecur * cpu_load is not correct if the frequency recently changed.",
+      "revId": "11ecccb7afea50ff6aa69665f3c73efa1deee8a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
