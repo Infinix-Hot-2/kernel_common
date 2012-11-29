@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "MIMJVYsI",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-11-29T04:58:50Z",
+      "side": 1,
+      "message": "Can this be made more generic?",
+      "revId": "dc1077628ae101eda7b32702abc9f2c98c55553e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
