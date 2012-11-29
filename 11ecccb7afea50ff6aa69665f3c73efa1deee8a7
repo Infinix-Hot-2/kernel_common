@@ -16,6 +16,24 @@
       "revId": "11ecccb7afea50ff6aa69665f3c73efa1deee8a7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAMDX///uU\u003d",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-11-29T04:45:47Z",
+      "side": 1,
+      "message": "OK, but I\u0027ll fix this next anyhow.",
+      "parentUuid": "MIELLkqA",
+      "revId": "11ecccb7afea50ff6aa69665f3c73efa1deee8a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
