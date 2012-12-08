@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "M1KLEZvE",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-12-08T01:46:36Z",
+      "side": 1,
+      "message": "ARRAY_SIZE?",
+      "revId": "709bfc1cd4a731282d179d314e086dc8e2dd9841",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "M1IKuii8",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 551,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-12-08T01:46:36Z",
+      "side": 1,
+      "message": "cp+1? Why are you looking for newlines? They are not allowed sysfs separators.",
+      "revId": "709bfc1cd4a731282d179d314e086dc8e2dd9841",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
