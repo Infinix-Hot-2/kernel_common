@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "M1CLX1hQ",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-12-08T01:25:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "M1OJgLpk",
+      "revId": "849add15e7b11793c7314dc40084f26373f56976",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "M1OLK7ps",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2012-12-08T00:01:10Z",
       "side": 1,
       "message": "_target_load? tl looks the same a t1 in some fonts.",
+      "revId": "849add15e7b11793c7314dc40084f26373f56976",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "M1ILUyg4",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-12-08T01:25:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "M1OLK7ps",
       "revId": "849add15e7b11793c7314dc40084f26373f56976",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "M1MKsEqk",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-12-08T01:25:08Z",
+      "side": 1,
+      "message": "Removed.",
+      "parentUuid": "M1ELAIno",
+      "revId": "849add15e7b11793c7314dc40084f26373f56976",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "M1AJFehM",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 3
@@ -64,6 +118,24 @@
       "writtenOn": "2012-12-08T00:01:10Z",
       "side": 1,
       "message": "UINT_MAX",
+      "revId": "849add15e7b11793c7314dc40084f26373f56976",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "M1KKxBgE",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-12-08T01:25:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "M1AJFehM",
       "revId": "849add15e7b11793c7314dc40084f26373f56976",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "M1AK3OvM",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 504,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-12-08T01:25:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "M1IJwSmc",
+      "revId": "849add15e7b11793c7314dc40084f26373f56976",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "M1CJzVnU",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 3
@@ -98,6 +188,24 @@
       "writtenOn": "2012-12-08T00:01:10Z",
       "side": 1,
       "message": "\"{\" is not needed",
+      "revId": "849add15e7b11793c7314dc40084f26373f56976",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "M1OK7Dt0",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-12-08T01:25:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "M1CJzVnU",
       "revId": "849add15e7b11793c7314dc40084f26373f56976",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "M1EKhQqk",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 533,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-12-08T01:25:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "M1AITuhs",
+      "revId": "849add15e7b11793c7314dc40084f26373f56976",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "M1OIXjgM",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 3
@@ -132,6 +258,24 @@
       "writtenOn": "2012-12-08T00:01:10Z",
       "side": 1,
       "message": "this loop can be much simpler",
+      "revId": "849add15e7b11793c7314dc40084f26373f56976",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "M1CKetnA",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-12-08T01:25:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "M1OIXjgM",
       "revId": "849add15e7b11793c7314dc40084f26373f56976",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
