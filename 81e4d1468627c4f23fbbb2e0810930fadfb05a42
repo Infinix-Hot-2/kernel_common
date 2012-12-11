@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "M1Bp5Wr8",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-12-11T03:50:05Z",
+      "side": 1,
+      "message": "If you want to support lower target loads at higher frequencies (it is not clear if this would ever be useful) you can do this by starting at the lowest frequency and bumping it up by one until you find a speed that is fast enough.",
+      "revId": "81e4d1468627c4f23fbbb2e0810930fadfb05a42",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
