@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "M1Lmr3No",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 481,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2012-12-14T22:43:16Z",
+      "side": 1,
+      "message": "Is this using the same timer as get_cpu_idle_time_us?",
+      "revId": "29f10ea7fd02a721935c701e96a0e0fb024d75e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
