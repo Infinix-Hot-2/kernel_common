@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "M-kRKDqs",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-12-19T04:34:01Z",
+      "side": 1,
+      "message": "OK, using 80ms which is 4 times the default timer rate.",
+      "parentUuid": "M-6PVeug",
+      "revId": "5a04fb5cc6fe57d3983f4ab409bd227ec78f2d3b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "M-4NbHoU",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2012-12-19T04:20:07Z",
       "side": 1,
       "message": "is this still needed?",
+      "revId": "5a04fb5cc6fe57d3983f4ab409bd227ec78f2d3b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "M-kTpLng",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-12-19T04:34:01Z",
+      "side": 1,
+      "message": "I believe this code is still useful to catch idle wakeups that do not run the timer list.  The timer slack would eventually kick in, on systems that use it anyway, but so long as we\u0027re exiting idle and we have an expired timer, might as well service it.",
+      "parentUuid": "M-4NbHoU",
       "revId": "5a04fb5cc6fe57d3983f4ab409bd227ec78f2d3b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
