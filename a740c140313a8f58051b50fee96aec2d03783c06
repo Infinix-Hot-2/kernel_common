@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "NFRsGPig",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 922,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2012-12-21T00:07:17Z",
+      "side": 1,
+      "message": "del_timer_sync seems unnecessary, the CPUFREQ_GOV_START and CPUFREQ_GOV_STOP should already be sequenced such that the timer is never started here.",
+      "revId": "a740c140313a8f58051b50fee96aec2d03783c06",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
