@@ -16,6 +16,24 @@
       "revId": "a740c140313a8f58051b50fee96aec2d03783c06",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "NGP-aQzs",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 922,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2012-12-21T01:46:24Z",
+      "side": 1,
+      "message": "Done.  I got paranoid about the race with idle exit, but it should be covered by the semaphore now.",
+      "parentUuid": "NFRsGPig",
+      "revId": "a740c140313a8f58051b50fee96aec2d03783c06",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
