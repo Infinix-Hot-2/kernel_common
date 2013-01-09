@@ -16,6 +16,24 @@
       "revId": "2ba2165031eabe138c3dc48d772df219b69ed4b5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "OA4Wopn0",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1837,
+      "author": {
+        "id": 1013433
+      },
+      "writtenOn": "2013-01-09T21:11:12Z",
+      "side": 1,
+      "message": "Lets one UID impersonate another UID over binder. It is currently not used in the policy.",
+      "parentUuid": "N8V3vPt0",
+      "revId": "2ba2165031eabe138c3dc48d772df219b69ed4b5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
