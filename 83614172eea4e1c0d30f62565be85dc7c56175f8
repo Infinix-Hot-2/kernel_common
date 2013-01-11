@@ -16,6 +16,24 @@
       "revId": "83614172eea4e1c0d30f62565be85dc7c56175f8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "N-.x9mto",
+        "filename": "kernel/cgroup.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 4019,
+      "author": {
+        "id": 1018677
+      },
+      "writtenOn": "2013-01-11T08:46:38Z",
+      "side": 1,
+      "message": "Ah yes, good one, or better simply move the locking into cgroup_css_sets_empty(), since we\u0027re now adding locking around the only 2 callers of it.",
+      "parentUuid": "N8fP3OlI",
+      "revId": "83614172eea4e1c0d30f62565be85dc7c56175f8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
