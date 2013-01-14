@@ -16,6 +16,24 @@
       "revId": "262b7c369d58a13a0301168da79eb4bdfda9e8c4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "OI.EQnWA",
+        "filename": "kernel/cgroup.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 3916,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-01-14T21:52:01Z",
+      "side": 1,
+      "message": "It\u0027s only ever incremented under cgroup_mutex, which is held here.",
+      "parentUuid": "OI4E-Uds",
+      "revId": "262b7c369d58a13a0301168da79eb4bdfda9e8c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
