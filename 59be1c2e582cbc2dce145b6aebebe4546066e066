@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "OcDLJUHw",
+        "filename": "drivers/cpuidle/coupled.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 568,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2013-01-17T03:28:32Z",
+      "side": 1,
+      "message": "Is this barrier needed?",
+      "revId": "59be1c2e582cbc2dce145b6aebebe4546066e066",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
