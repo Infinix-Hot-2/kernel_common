@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "QOei-Bkw",
+        "filename": "include/trace/events/gpu.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001891
+      },
+      "writtenOn": "2013-02-25T21:34:29Z",
+      "side": 1,
+      "message": "never mind I see how this is supposed to be used.  you only want correct rounding to the usec.",
+      "parentUuid": "QOZ1-s3M",
+      "revId": "0607b9c776acf61cb796b8572cf8cfb8b2dc1377",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "QOV3ZO3c",
         "filename": "include/trace/events/gpu.h",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "QOUj98iw",
+        "filename": "include/trace/events/gpu.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001891
+      },
+      "writtenOn": "2013-02-25T21:34:29Z",
+      "side": 1,
+      "message": "actually, I suppose that should be NSEC_PER_USEC/2 (which happens to be 500)",
+      "parentUuid": "QOV3ZO3c",
+      "revId": "0607b9c776acf61cb796b8572cf8cfb8b2dc1377",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "QOd2z6yY",
         "filename": "include/trace/events/gpu.h",
         "patchSetId": 1
@@ -47,6 +83,40 @@
       "writtenOn": "2013-02-23T01:38:45Z",
       "side": 1,
       "message": "the prev fields here seem like they are just repeats of the data from the previous event",
+      "revId": "0607b9c776acf61cb796b8572cf8cfb8b2dc1377",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "QOQjoWnA",
+        "filename": "include/trace/events/gpu.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1001891
+      },
+      "writtenOn": "2013-02-25T21:34:29Z",
+      "side": 1,
+      "message": "\"work\" is probably a bad name here as it has specific meaning in the linux kernel.  maybe \"job\"?",
+      "revId": "0607b9c776acf61cb796b8572cf8cfb8b2dc1377",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "QOaj0rk4",
+        "filename": "include/trace/events/gpu.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1001891
+      },
+      "writtenOn": "2013-02-25T21:34:29Z",
+      "side": 1,
+      "message": "see above comment about work name",
       "revId": "0607b9c776acf61cb796b8572cf8cfb8b2dc1377",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
