@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "QV44mO8Q",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1161,
+      "author": {
+        "id": 1012391
+      },
+      "writtenOn": "2013-02-26T21:29:42Z",
+      "side": 1,
+      "message": "tab",
+      "revId": "86774603e346502590cbe28cdf8f1fd8436fcbdf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "QV.4jf7I",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1174,
+      "author": {
+        "id": 1012391
+      },
+      "writtenOn": "2013-02-26T21:29:42Z",
+      "side": 1,
+      "message": "tab",
+      "revId": "86774603e346502590cbe28cdf8f1fd8436fcbdf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "QV84gQ6k",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1176,
+      "author": {
+        "id": 1012391
+      },
+      "writtenOn": "2013-02-26T21:29:42Z",
+      "side": 1,
+      "message": "extra newline",
+      "revId": "86774603e346502590cbe28cdf8f1fd8436fcbdf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "QVy6Lx2g",
+        "filename": "kernel/trace/trace_output.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 641,
+      "author": {
+        "id": 1012391
+      },
+      "writtenOn": "2013-02-26T21:29:42Z",
+      "side": 1,
+      "message": "Declare variables at the top of the function\n\n(maybe the kernel vets know better than me whether to make an exception)",
+      "revId": "86774603e346502590cbe28cdf8f1fd8436fcbdf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
