@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "SGT1sZ0I",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-03-20T22:30:56Z",
+      "side": 1,
+      "message": "I had thought it should work out to be about the same, but you\u0027re right, it would be better to do this.",
+      "parentUuid": "SGX0WX8g",
+      "revId": "e43dde3b6cec1e1d36a477713bcfb1dda070bef2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "SGR0fY8o",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2013-03-20T22:11:10Z",
       "side": 1,
       "message": "This will crash",
+      "revId": "e43dde3b6cec1e1d36a477713bcfb1dda070bef2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "SGb2IV9c",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 649,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-03-20T22:30:56Z",
+      "side": 1,
+      "message": "Right, I will push a patch to fix this.",
+      "parentUuid": "SGR0fY8o",
       "revId": "e43dde3b6cec1e1d36a477713bcfb1dda070bef2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
