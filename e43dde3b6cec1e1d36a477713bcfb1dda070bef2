@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "SGf3X7.Q",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2013-03-20T22:11:10Z",
+      "side": 1,
+      "message": "Did this pass checkpatch?",
+      "revId": "e43dde3b6cec1e1d36a477713bcfb1dda070bef2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "SGX0WX8g",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2013-03-20T22:11:10Z",
+      "side": 1,
+      "message": "why is this not using pcpu-\u003etarget_freq?",
+      "revId": "e43dde3b6cec1e1d36a477713bcfb1dda070bef2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "SGR0fY8o",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 649,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2013-03-20T22:11:10Z",
+      "side": 1,
+      "message": "This will crash",
+      "revId": "e43dde3b6cec1e1d36a477713bcfb1dda070bef2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
