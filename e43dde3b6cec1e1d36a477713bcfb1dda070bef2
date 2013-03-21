@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "SFm-CLX4",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1014816
+      },
+      "writtenOn": "2013-03-21T16:15:48Z",
+      "side": 1,
+      "message": "In most case, pcpu-\u003epolicy-\u003ecur is greater than or equal to pcpu-\u003etarget_freq and it is same in all cores. So I chose pcpu-\u003epolicy-\u003ecur because I had focused on delaying an increase of frequency,\nbut I agree with you. pcpu-\u003etarget_freq would be better to maintain consistency.",
+      "parentUuid": "SGT1sZ0I",
+      "revId": "e43dde3b6cec1e1d36a477713bcfb1dda070bef2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "SGR0fY8o",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 1
@@ -83,6 +101,24 @@
       "side": 1,
       "message": "Right, I will push a patch to fix this.",
       "parentUuid": "SGR0fY8o",
+      "revId": "e43dde3b6cec1e1d36a477713bcfb1dda070bef2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "SFk-gkR4",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 649,
+      "author": {
+        "id": 1014816
+      },
+      "writtenOn": "2013-03-21T16:15:48Z",
+      "side": 1,
+      "message": "I\u0027m sorry. My bad.",
+      "parentUuid": "SGb2IV9c",
       "revId": "e43dde3b6cec1e1d36a477713bcfb1dda070bef2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
