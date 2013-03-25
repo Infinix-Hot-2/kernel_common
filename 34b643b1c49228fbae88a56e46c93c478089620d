@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Sk8.XXTg",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-03-25T22:10:39Z",
+      "side": 1,
+      "message": "allows",
+      "revId": "34b643b1c49228fbae88a56e46c93c478089620d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Sk0.EjQI",
+        "filename": "arch/arm/Kconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 1920,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-03-25T22:10:39Z",
+      "side": 1,
+      "message": "should be BUILD_ARM_APPENDED_DTB_IMAGE to match ARM_APPENDED_DTB.",
+      "revId": "34b643b1c49228fbae88a56e46c93c478089620d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Sk4.hVZs",
+        "filename": "arch/arm/Kconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 1925,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-03-25T22:10:39Z",
+      "side": 1,
+      "message": "Might want to mention what the output filename will be",
+      "revId": "34b643b1c49228fbae88a56e46c93c478089620d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
