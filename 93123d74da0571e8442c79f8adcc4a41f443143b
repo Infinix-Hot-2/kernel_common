@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "TBQDiSMU",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 588,
+      "author": {
+        "id": 1001118
+      },
+      "writtenOn": "2013-04-04T23:01:31Z",
+      "side": 1,
+      "message": "you have an extra %s at the end of this string that causes garbage to be printed.",
+      "revId": "93123d74da0571e8442c79f8adcc4a41f443143b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "TBeDePPk",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 1001118
+      },
+      "writtenOn": "2013-04-04T23:01:31Z",
+      "side": 1,
+      "message": "any particular reason to print the address of the buffer?",
+      "revId": "93123d74da0571e8442c79f8adcc4a41f443143b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "TBaDoNKE",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 608,
+      "author": {
+        "id": 1001118
+      },
+      "writtenOn": "2013-04-04T23:01:31Z",
+      "side": 1,
+      "message": "same here -- it makes more sense to me to print the physaddrs at the heap level.  I\u0027m not sure how it would be helpful to see what physical addresses a particular client would be using.",
+      "revId": "93123d74da0571e8442c79f8adcc4a41f443143b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
