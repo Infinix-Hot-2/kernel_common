@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "TBQCaSP4",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 588,
+      "author": {
+        "id": 1010468
+      },
+      "writtenOn": "2013-04-05T01:06:36Z",
+      "side": 1,
+      "message": "Whoops",
+      "parentUuid": "TBQDiSMU",
+      "revId": "93123d74da0571e8442c79f8adcc4a41f443143b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "TBeDePPk",
         "filename": "drivers/gpu/ion/ion.c",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "TBeCWPNo",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 1010468
+      },
+      "writtenOn": "2013-04-05T01:06:36Z",
+      "side": 1,
+      "message": "It\u0027s useful to be able to see which handles have which buffers. If multiple handles are pointing to the same buffer it\u0027s easier to track it.",
+      "parentUuid": "TBeDePPk",
+      "revId": "93123d74da0571e8442c79f8adcc4a41f443143b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "TBaDoNKE",
         "filename": "drivers/gpu/ion/ion.c",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2013-04-04T23:01:31Z",
       "side": 1,
       "message": "same here -- it makes more sense to me to print the physaddrs at the heap level.  I\u0027m not sure how it would be helpful to see what physical addresses a particular client would be using.",
+      "revId": "93123d74da0571e8442c79f8adcc4a41f443143b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "TBcC8YFY",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 608,
+      "author": {
+        "id": 1010468
+      },
+      "writtenOn": "2013-04-05T01:06:36Z",
+      "side": 1,
+      "message": "As you\u0027ve seen, we seem to have quite a bit of redundant debugfs code. I think this was added before we added the ability of the heaps to dump the full memory maps. If the heaps can dump their full map, we probably don\u0027t need this.",
+      "parentUuid": "TBaDoNKE",
       "revId": "93123d74da0571e8442c79f8adcc4a41f443143b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
