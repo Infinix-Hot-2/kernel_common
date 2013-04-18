@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "TeHNHUtM",
+        "filename": "arch/arm/boot/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-04-18T03:02:50Z",
+      "side": 1,
+      "message": "add a variable called DTB_OBJS here\n\nDTB_OBJS :\u003d $(addprefix $(obj)/,$(DTB_LIST))\n\nThen you can just reference it everywhere, instead of copying/pasting the addsuffix call all over the place.",
+      "revId": "d69337d727a949096124025920ab950e8705b26f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
