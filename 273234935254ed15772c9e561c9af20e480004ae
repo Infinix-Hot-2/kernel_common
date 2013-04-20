@@ -52,6 +52,24 @@
       "revId": "273234935254ed15772c9e561c9af20e480004ae",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "TvcVvGg8",
+        "filename": "include/trace/events/gpu.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1003793
+      },
+      "writtenOn": "2013-04-20T03:08:00Z",
+      "side": 1,
+      "message": "It turns out to be a bit annoying to make these static inline because this file gets included multiple times to make the trace macro magic work.",
+      "parentUuid": "TvQVhskY",
+      "revId": "273234935254ed15772c9e561c9af20e480004ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
