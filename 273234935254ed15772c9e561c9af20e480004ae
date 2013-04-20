@@ -16,6 +16,24 @@
       "revId": "273234935254ed15772c9e561c9af20e480004ae",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "TvaVxvhk",
+        "filename": "include/trace/events/gpu.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1003793
+      },
+      "writtenOn": "2013-04-20T01:03:46Z",
+      "side": 1,
+      "message": "The goal is to compute the remainder of the division in units of usecs.  The first division converts \u0027t\u0027 to units of usecs, while the second computes the portion of \u0027t\u0027 that is a fractional part of a second.\n\nIf I did do_div(t, NSEC_PER_SEC) the returned remainder would be in units of nsecs, not usecs.  I could then do another division to convert to usecs, but that\u0027s effectively the same thing as what\u0027s there now.\n\nMaybe I should put the \u0027rem\u0027 back in to make it clear that it\u0027s the remainder that\u0027s the interesting part?",
+      "parentUuid": "TvSWFzr0",
+      "revId": "273234935254ed15772c9e561c9af20e480004ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
