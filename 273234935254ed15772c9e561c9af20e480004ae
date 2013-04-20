@@ -34,6 +34,24 @@
       "revId": "273234935254ed15772c9e561c9af20e480004ae",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "TvQVhskY",
+        "filename": "include/trace/events/gpu.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-04-20T01:05:10Z",
+      "side": 1,
+      "message": "that would be a little clearer.\n\nwhy is this a macro instead of a static inline?  then you would avoid the implicit return value confusion.",
+      "parentUuid": "TvaVxvhk",
+      "revId": "273234935254ed15772c9e561c9af20e480004ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
