@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "TvSWFzr0",
+        "filename": "include/trace/events/gpu.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-04-20T00:55:54Z",
+      "side": 1,
+      "message": "why not do_div(t, NSEC_PER_SEC)?",
+      "revId": "273234935254ed15772c9e561c9af20e480004ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
