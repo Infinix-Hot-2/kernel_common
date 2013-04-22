@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "TvU6Ep5Q",
+        "filename": "drivers/mmc/core/host.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2013-04-22T23:00:01Z",
+      "side": 1,
+      "message": "It would make more sense to call this right after wake_lock_destroy",
+      "revId": "9802b22dad53815663aa6496f8074e7e2416e50b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
