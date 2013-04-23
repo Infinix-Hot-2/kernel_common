@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "TvVlvk3Q",
+        "filename": "drivers/of/fdt.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 705,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-04-23T01:08:42Z",
+      "side": 1,
+      "message": "i can\u0027t find any way that data could be anything other than an empty string here, unless there were two chosen and chosen@0 nodes, which is going to produce pretty undefined behavior anyways.  the atags are only parsed for a command line if this fails, and that is the only other writer to boot_command_line.",
+      "revId": "589bf61ca1bcd7ed27c48d8e2ca0b92745f98999",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "TvRlpG24",
+        "filename": "drivers/of/fdt.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 709,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-04-23T01:08:42Z",
+      "side": 1,
+      "message": "arve pointed out read_dt_cmdline is always !overwrite_incoming_cmdline",
+      "revId": "589bf61ca1bcd7ed27c48d8e2ca0b92745f98999",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "TvXlsz34",
+        "filename": "drivers/of/fdt.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 716,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-04-23T01:08:42Z",
+      "side": 1,
+      "message": "arve pointed out assuming cmdline is empty here, this can all be replaced with snprintf",
+      "revId": "589bf61ca1bcd7ed27c48d8e2ca0b92745f98999",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
