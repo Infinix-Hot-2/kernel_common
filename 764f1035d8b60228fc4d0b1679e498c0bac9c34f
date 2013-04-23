@@ -16,6 +16,24 @@
       "revId": "764f1035d8b60228fc4d0b1679e498c0bac9c34f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "TvZm.a58",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-04-23T01:11:00Z",
+      "side": 1,
+      "message": "I can always go with \"no change on error, always return pcpu-\u003epolicy-\u003ecur\", which is the only other frequency I know is valid (and may be identical).\n\nIt shouldn\u0027t matter.  The CPU in question has just been hotplugged out or shutdown for reboot, and the interactive governor\u0027s timer is racing with that.",
+      "parentUuid": "Tvfmgv4k",
+      "revId": "764f1035d8b60228fc4d0b1679e498c0bac9c34f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
