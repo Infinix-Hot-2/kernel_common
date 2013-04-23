@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Tvfmgv4k",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2013-04-23T00:58:12Z",
+      "side": 1,
+      "message": "I don\u0027t think returning a frequency that you know is too low is the best choice here.",
+      "revId": "764f1035d8b60228fc4d0b1679e498c0bac9c34f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
