@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "UEBLHTO0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-04-25T23:50:44Z",
+      "side": 1,
+      "message": "options-\u003eoption",
+      "revId": "49409ad043b8570952b46ccd21726dbfdf5e1c61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UEPKKiKI",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-04-25T23:50:44Z",
+      "side": 1,
+      "message": "nitpick: the code executed in ktime_get() is nearly identical to sched_clock(), so slower might not be accurate.  the only difference is it will spin if update_wall_time is running concurrently.",
+      "revId": "49409ad043b8570952b46ccd21726dbfdf5e1c61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UEBKGLKA",
+        "filename": "kernel/trace/trace_clock.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-04-25T23:50:44Z",
+      "side": 1,
+      "message": "I think this will deadlock if you ftrace update_wall_time, because update_wall_time will take a write lock on the timekeeping lock and ktime_get will try to take a read lock.",
+      "revId": "49409ad043b8570952b46ccd21726dbfdf5e1c61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
