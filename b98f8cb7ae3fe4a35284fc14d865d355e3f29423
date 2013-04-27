@@ -16,6 +16,24 @@
       "revId": "b98f8cb7ae3fe4a35284fc14d865d355e3f29423",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ULNYsRJ0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1014816
+      },
+      "writtenOn": "2013-04-27T14:48:33Z",
+      "side": 1,
+      "message": "There are two cases.\n\n1. \"delta_idle - delta_time\" could be \"1\" because get_cpu_idle_time_us() returns the value that converted by ktime_to_us(). ktime_to_us() rounds down nanoseconds to  the nearest microseconds.\n\ne.g.\n\nIdle time: 100,600 nanoseconds Wall time: 150,200 nanoseconds\n\nAfter 5,500 nanoseconds\n\nIdle time: 106,100 nanoseconds Wall time: 155,700 nanoseconds\n\ndelta_idle: 6 microseconds          delta_time: 5 microseconds\n\n\n2. When io_is_busy is false,  idle time and wall time deltas were same but idle time delta becomes greater than wall time delta after calling get_cpu_iowait_time_us(). I observed this during a CPU is in idle for a long time on quad core SMP system.",
+      "parentUuid": "UEBv6x-o",
+      "revId": "b98f8cb7ae3fe4a35284fc14d865d355e3f29423",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
