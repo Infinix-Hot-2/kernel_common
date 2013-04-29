@@ -34,6 +34,24 @@
       "revId": "b98f8cb7ae3fe4a35284fc14d865d355e3f29423",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UQMUsrJ0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-04-29T20:06:55Z",
+      "side": 1,
+      "message": "OK, I\u0027d like to touch up the commit message to describe the rounding errors rather than the \"changed by other CPUs\" text.  Please do upload updated text if you want to, else I\u0027ll touch this up myself soon, thanks.",
+      "parentUuid": "ULNYsRJ0",
+      "revId": "b98f8cb7ae3fe4a35284fc14d865d355e3f29423",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
