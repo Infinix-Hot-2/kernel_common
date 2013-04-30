@@ -52,6 +52,24 @@
       "revId": "b98f8cb7ae3fe4a35284fc14d865d355e3f29423",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ULBmfT1k",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1014816
+      },
+      "writtenOn": "2013-04-30T02:31:22Z",
+      "side": 1,
+      "message": "Please touch up the commit message. :)\n\nThanks.",
+      "parentUuid": "UQMUsrJ0",
+      "revId": "b98f8cb7ae3fe4a35284fc14d865d355e3f29423",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
