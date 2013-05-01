@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "UQEniciI",
+        "filename": "drivers/staging/android/lowmemorykiller.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-05-01T23:41:04Z",
+      "side": 1,
+      "message": "i\u0027m sure the compiler will do that for me, and this is closer to what i actually mean",
+      "parentUuid": "UQNc43vo",
+      "revId": "1b036ec213dbc7e5447cef875c342b63ee1343c2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "UQPc-4tw",
         "filename": "drivers/staging/android/lowmemorykiller.c",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "UQInsehU",
+        "filename": "drivers/staging/android/lowmemorykiller.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-05-01T23:41:04Z",
+      "side": 1,
+      "message": "I had it that way, and i moved it here to de-emphasize the free memory, since the cache memory is the real reason lowmemorykiller is running",
+      "parentUuid": "UQPc-4tw",
+      "revId": "1b036ec213dbc7e5447cef875c342b63ee1343c2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "UQJcmVtM",
         "filename": "drivers/staging/android/lowmemorykiller.c",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2013-05-01T22:36:36Z",
       "side": 1,
       "message": "why are you using int? It can overflow on a 64 bit system.",
+      "revId": "1b036ec213dbc7e5447cef875c342b63ee1343c2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UQMnN4rM",
+        "filename": "drivers/staging/android/lowmemorykiller.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-05-01T23:41:04Z",
+      "side": 1,
+      "message": "the int is to undo the unsigned long in PAGE_SIZE converting the negative free size into an unsigned, but i\u0027ll convert to long long.",
+      "parentUuid": "UQJcmVtM",
       "revId": "1b036ec213dbc7e5447cef875c342b63ee1343c2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
