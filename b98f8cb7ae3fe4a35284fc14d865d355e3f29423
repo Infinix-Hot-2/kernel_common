@@ -88,6 +88,24 @@
       "revId": "b98f8cb7ae3fe4a35284fc14d865d355e3f29423",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ULLyRadY",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1014816
+      },
+      "writtenOn": "2013-05-01T15:22:09Z",
+      "side": 1,
+      "message": "I think I should explain more details for the second case.\nWhen there is no io wait for the currently idled CPU, If *delta A* was greater than *delta B*, the idle time delta would be greater than the wall time delta.\n\n\nThe currently idled CPU\n\nidle time\twall time\n\t|\t|\n\t|\t|\n\t|\t|\n\t|\t|\tupdate_load()\na\t-\t-\tget_cpu_idle_time_us()\n\t|\t|\t *delta A*: the time spent between two functions\nb\t|\t-\tget_cpu_iowait_time_us()\n\t|\t|\n\t|\t|\n\t|\t|\n\t|\t|\n\t|\t|\n\t|\t|\tupdate_load()\nc\t-\t-\tget_cpu_idle_time_us()\n\t|\t|\t *delta B*: the time spent between two functions\nd\t|\t-\tget_cpu_iowait_time_us()\n\t|\t|\ndelta_idle \u003d c - a\ndelta_time \u003d d - b",
+      "parentUuid": "ULLmPOyA",
+      "revId": "b98f8cb7ae3fe4a35284fc14d865d355e3f29423",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
