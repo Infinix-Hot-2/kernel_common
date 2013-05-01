@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "UQNc43vo",
+        "filename": "drivers/staging/android/lowmemorykiller.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2013-05-01T22:36:36Z",
+      "side": 1,
+      "message": "why not move this up one level and use it in the if statement as well",
+      "revId": "1b036ec213dbc7e5447cef875c342b63ee1343c2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UQPc-4tw",
+        "filename": "drivers/staging/android/lowmemorykiller.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2013-05-01T22:36:36Z",
+      "side": 1,
+      "message": "I would move \"and free...\" before \"is below...\"",
+      "revId": "1b036ec213dbc7e5447cef875c342b63ee1343c2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UQJcmVtM",
+        "filename": "drivers/staging/android/lowmemorykiller.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2013-05-01T22:36:36Z",
+      "side": 1,
+      "message": "why are you using int? It can overflow on a 64 bit system.",
+      "revId": "1b036ec213dbc7e5447cef875c342b63ee1343c2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
