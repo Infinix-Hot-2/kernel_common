@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "UaY2q8V4",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-05-10T02:07:48Z",
+      "side": 1,
+      "message": "Need to hold this lock across the entire cpufreq_interactive_timer call?  Or just after the !timer_pending or time_after_eq and del_timer calls?",
+      "revId": "e1da2acf2d96d991a34a55df3d46edbec0f04336",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Uaa2u1XE",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1034,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-05-10T02:07:48Z",
+      "side": 1,
+      "message": "Could just check for a CPUFREQ_GOV_LIMITS issued while no timer is pending, and schedule a timer if so?  (Thereby avoiding the policy notifier and keeping track of max_freq.)",
+      "revId": "e1da2acf2d96d991a34a55df3d46edbec0f04336",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
