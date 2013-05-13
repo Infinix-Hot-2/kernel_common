@@ -33,6 +33,24 @@
       "revId": "e1da2acf2d96d991a34a55df3d46edbec0f04336",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UouAXwgY",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1034,
+      "author": {
+        "id": 1017041
+      },
+      "writtenOn": "2013-05-13T06:23:06Z",
+      "side": 1,
+      "message": "Yes, it maybe good to check it in GOV_LIMITS. I do it in policy notifier because the notifier is always called no matter the cpufreq driver implement the setpolicy function or not. if cpufreq_driver-\u003esetpolicy is implement in cpu driver, then CPUFREQ_GOV_LIMITS will be not called.\n\nI have the patch to implement it in GOV_LIMITS, and will push it soon for your review.",
+      "parentUuid": "Uaa2u1XE",
+      "revId": "e1da2acf2d96d991a34a55df3d46edbec0f04336",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
