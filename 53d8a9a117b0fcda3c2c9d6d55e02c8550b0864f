@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "UuHDTiAA",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-05-16T20:44:17Z",
+      "side": 1,
+      "message": "When the policy max_freq is raised, and",
+      "revId": "53d8a9a117b0fcda3c2c9d6d55e02c8550b0864f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuBCTLFA",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1117,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-05-16T20:44:17Z",
+      "side": 1,
+      "message": "This mutex protects one-time init operations like notifier registration and sysfs attribute creation.  It doesn\u0027t need to be held for target load and speed adjustments (pcpu-\u003eenable_sem does need to be held).",
+      "revId": "53d8a9a117b0fcda3c2c9d6d55e02c8550b0864f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuFBwxE8",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1136,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-05-16T20:44:17Z",
+      "side": 1,
+      "message": "I don\u0027t think this is necessary.  It\u0027s OK for target_freq to be out of sync briefly so long as we fix things up at the next load-\u003efreq evaluation.  I\u0027d like to keep the number of additional places in the code that modify target_freq, apart from the load-\u003efreq calculation, to a minimum.",
+      "revId": "53d8a9a117b0fcda3c2c9d6d55e02c8550b0864f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuHBtyHQ",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1149,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-05-16T20:44:17Z",
+      "side": 1,
+      "message": "How about we just always do this (check for no timer active and start one if not) whenever the limits change?  That is, always do this without trying to keep extra state around to tell if the reason there\u0027s no timer active is because it was targeted at the previous max freq?  There might not be a timer active because the CPU is idle, but limits normally change infrequently.",
+      "revId": "53d8a9a117b0fcda3c2c9d6d55e02c8550b0864f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuBBqTF4",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1150,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-05-16T20:44:17Z",
+      "side": 1,
+      "message": "Not needed.",
+      "revId": "53d8a9a117b0fcda3c2c9d6d55e02c8550b0864f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuHCs6Hk",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1151,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-05-16T20:44:17Z",
+      "side": 1,
+      "message": "Use cpufreq_interactive_timer_resched().  (The CPUFREQ_GOV_START code this was based on is a little special, it could probably use some cleanup as well, in some other patch.)  I think this should be enough:\n\nif (!timer_pending(\u0026pcpu-\u003ecpu_timer))\n    cpufreq_interactive_timer_resched(pcpu);",
+      "revId": "53d8a9a117b0fcda3c2c9d6d55e02c8550b0864f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
