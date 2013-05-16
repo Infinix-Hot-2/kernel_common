@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "UuG1bsQk",
+        "filename": "drivers/gpu/ion/ion_page_pool.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-05-16T03:42:24Z",
+      "side": 1,
+      "message": "this is ugly, but i can\u0027t think of a better way right now.  maybe rebecca will.",
+      "revId": "9427433685792cfe2cb75d59e1595971d3dac465",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuC1VudA",
+        "filename": "drivers/gpu/ion/ion_page_pool.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-05-16T03:42:24Z",
+      "side": 1,
+      "message": "might want an accessor here instead of directly reading the atomic.",
+      "revId": "9427433685792cfe2cb75d59e1595971d3dac465",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuA1Y9Qk",
+        "filename": "drivers/gpu/ion/ion_page_pool.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-05-16T03:42:24Z",
+      "side": 1,
+      "message": "might as well subtract drained from nr_to_scan",
+      "revId": "9427433685792cfe2cb75d59e1595971d3dac465",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuM3wnc4",
+        "filename": "drivers/gpu/ion/ion_priv.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-05-16T03:42:24Z",
+      "side": 1,
+      "message": "if you converted this to size in pages you could use an atomic_t and it would line up better with the shrinker that works in pages.",
+      "revId": "9427433685792cfe2cb75d59e1595971d3dac465",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
