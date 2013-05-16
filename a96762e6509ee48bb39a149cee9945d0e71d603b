@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "UuHBRSBY",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1004285
+      },
+      "writtenOn": "2013-05-16T18:19:12Z",
+      "side": 1,
+      "message": "Ya, I thought about putting it in the mmc dir, but since it wasn\u0027t arch specific, nor a module, I figured trace/events/mmc.h was best.",
+      "parentUuid": "UuC2QWUA",
+      "revId": "a96762e6509ee48bb39a149cee9945d0e71d603b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "UuM17vTg",
         "filename": "drivers/mmc/card/block.c",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-05-16T06:02:06Z",
       "side": 1,
       "message": "this code is hard to follow.  can mmc_active ever be null here?  maybe the if (areq) below should be here?",
+      "revId": "a96762e6509ee48bb39a149cee9945d0e71d603b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuJC93PQ",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1307,
+      "author": {
+        "id": 1004285
+      },
+      "writtenOn": "2013-05-16T18:19:12Z",
+      "side": 1,
+      "message": "No, the call to mmc_blk_rw_rq_prep() will set the mmc_active field.  The if (areq) below needs to be where it is.  Yes, this code is hard to follow.  Read the check-in comment after running \"git  show ee8a43a51\" and it will help explain what is going on here.",
+      "parentUuid": "UuM17vTg",
       "revId": "a96762e6509ee48bb39a149cee9945d0e71d603b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "UuBCEjEo",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1316,
+      "author": {
+        "id": 1004285
+      },
+      "writtenOn": "2013-05-16T18:19:12Z",
+      "side": 1,
+      "message": "There are many mmc requests that can be made to an mmc chips, but I\u0027m only interested in read, write and the various erase/trim methods.  Even erase is tricky, as it involves 3 (or 4 in the case of secure trim) emmc commands to complete.  Putting the tracing at this level, includes a small amount of overhead that I would not get if I traced inside mmc_start_req() and also mmc_request_done(), but I do get traces that show what I want, and no more.",
+      "parentUuid": "UuI11xUM",
+      "revId": "a96762e6509ee48bb39a149cee9945d0e71d603b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "UuG2GUQ8",
         "filename": "include/trace/events/mmc.h",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2013-05-16T06:02:06Z",
       "side": 1,
       "message": "there are a lot of different formats used in include/trace/events, but the most canonical ones (sched.h, timer.h, vmscan.h) use \"cmd\u003d%d addr\u003d%08x size\u003d%08x\"",
+      "revId": "a96762e6509ee48bb39a149cee9945d0e71d603b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuBA3rOc",
+        "filename": "include/trace/events/mmc.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1004285
+      },
+      "writtenOn": "2013-05-16T18:19:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "UuG2GUQ8",
       "revId": "a96762e6509ee48bb39a149cee9945d0e71d603b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
