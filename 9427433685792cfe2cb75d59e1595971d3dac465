@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "UuFAmhMM",
+        "filename": "drivers/gpu/ion/ion_page_pool.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2013-05-16T17:53:33Z",
+      "side": 1,
+      "message": "Done. And for other atomic64_bla().",
+      "parentUuid": "UuC1VudA",
+      "revId": "9427433685792cfe2cb75d59e1595971d3dac465",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "UuA1Y9Qk",
         "filename": "drivers/gpu/ion/ion_page_pool.c",
         "patchSetId": 1
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "UuLAQIF4",
+        "filename": "drivers/gpu/ion/ion_page_pool.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2013-05-16T17:53:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "UuA1Y9Qk",
+      "revId": "9427433685792cfe2cb75d59e1595971d3dac465",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "UuM3wnc4",
         "filename": "drivers/gpu/ion/ion_priv.h",
         "patchSetId": 1
@@ -64,6 +100,24 @@
       "writtenOn": "2013-05-16T03:42:24Z",
       "side": 1,
       "message": "if you converted this to size in pages you could use an atomic_t and it would line up better with the shrinker that works in pages.",
+      "revId": "9427433685792cfe2cb75d59e1595971d3dac465",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuI0lxck",
+        "filename": "drivers/gpu/ion/ion_priv.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2013-05-16T17:53:33Z",
+      "side": 1,
+      "message": "I thought about it but buffers are in bytes. That would require rounding up to a page size and converting each time a buffer is added or removed.\nThis way round the conversion only happens on shrink.",
+      "parentUuid": "UuM3wnc4",
       "revId": "9427433685792cfe2cb75d59e1595971d3dac465",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
