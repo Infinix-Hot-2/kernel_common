@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "UuNman1k",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 861,
+      "author": {
+        "id": 1004285
+      },
+      "writtenOn": "2013-05-17T22:02:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "UuHnYU0Q",
+      "revId": "024c85c797c54d6f81381447e608b8d1b97d942d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "UuJnQpx8",
         "filename": "include/trace/events/mmc.h",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-05-17T21:22:51Z",
       "side": 1,
       "message": "I would drop the extra spaces here and use TRACE_EVENT_CLASS",
+      "revId": "024c85c797c54d6f81381447e608b8d1b97d942d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuPmfY0Y",
+        "filename": "include/trace/events/mmc.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1004285
+      },
+      "writtenOn": "2013-05-17T22:02:14Z",
+      "side": 1,
+      "message": "done and done.",
+      "parentUuid": "UuJnQpx8",
       "revId": "024c85c797c54d6f81381447e608b8d1b97d942d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
