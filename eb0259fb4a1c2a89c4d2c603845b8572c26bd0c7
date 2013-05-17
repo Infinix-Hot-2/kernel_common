@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "UrmnbjUI",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1149,
+      "author": {
+        "id": 1019659
+      },
+      "writtenOn": "2013-05-17T18:02:52Z",
+      "side": 1,
+      "message": "Isn\u0027t it \npcpu-\u003ecpu_slack_timer.expires \u003d exp \ninstead of \npcpu-\u003ecpu_slack_timer.expires \u003d expires ?",
+      "revId": "eb0259fb4a1c2a89c4d2c603845b8572c26bd0c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
