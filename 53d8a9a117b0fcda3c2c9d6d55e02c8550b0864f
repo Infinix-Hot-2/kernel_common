@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "UuD7uQXk",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1117,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-05-17T19:50:01Z",
+      "side": 1,
+      "message": "pcpu-\u003eenable_sem protects the per-CPU load and frequency data structures, and is used by the other code that needs a consistent view of these.  It shouldn\u0027t be necessary for the entire LIMITS update to be a critical section -- what is the race?  All we need to do is kick a timer if one isn\u0027t pending for a CPU, and enable_sem protects that for each CPU.",
+      "parentUuid": "UwWSB5Do",
+      "revId": "53d8a9a117b0fcda3c2c9d6d55e02c8550b0864f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "UuFBwxE8",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 2
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "The target freq shall be updated too. E.g.\n1. target_freq \u003d max_freq(HI)\n2. max_freq changed from HI to LO, now if we don\u0027t update the target freq, then target_freq is equal to max_freq(HI) and cur_freq is equal to max_freq(LO). \n3. max_freq changed from LO to HI, but the timer is not rearmed in GOV_LIMITS because the cpu has a chance to hit IDLE and the timer is rearmed in idle callback. Now the cur_freq is max_freq(LO), policy-\u003emax is max_freq(HI) and target_freq is max_freq(HI).\n4. In timer callback, load is still HIGN(e.g. 99%) and the new_freq is policy-\u003emax(max_freq(HI). So the old target_freq is equal to new_freq and goto rearm_if_notmax. Now the target_freq is max so the timer is not rearmed, cur_freq stuck at max_freq(LO) until new_freq is not calculated as policy-\u003emax under a low load condition.",
       "parentUuid": "UuFBwxE8",
+      "revId": "53d8a9a117b0fcda3c2c9d6d55e02c8550b0864f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuNk4X98",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1136,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-05-17T19:50:01Z",
+      "side": 1,
+      "message": "OK.",
+      "parentUuid": "UwQTnODE",
       "revId": "53d8a9a117b0fcda3c2c9d6d55e02c8550b0864f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -206,6 +242,24 @@
       "side": 1,
       "message": "The cpufreq_interactive_timer_resched can be called in timer callback and idle callback because it always pinned the timer on the same CPU. But we can not call it here because current thread maybe run at another CPU and pinned the timer at wrong CPU. So we have to call add_timer_on to pinned it on the target cpu.\n\nIf we don\u0027t care about whether it is pinned on the target cpu or not here, since it will pin the timer on the correct cpu in idle callback, then I\u0027m ok to call cpufreq_interactive_timer_resched.",
       "parentUuid": "UuHCs6Hk",
+      "revId": "53d8a9a117b0fcda3c2c9d6d55e02c8550b0864f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UuDkd.3E",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1151,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-05-17T19:50:01Z",
+      "side": 1,
+      "message": "Ah, you\u0027re right, and we do need to run the timer on its CPU.  Should add a _timer_start() helper that does approximately the same thing as _timer_resched, but using add_timer_on() instead, and call this from here and the GOV_START case as well.  As it is, the time_in_idle, cputime_speedadj, and cputime_speedadj_timestamp fields aren\u0027t being updated, which will lead to a bad load calculation.  I didn\u0027t worry about it too much for the first sample after governor startup, but it will be more important here, and should get this cleaned up.",
+      "parentUuid": "UwYTbSG8",
       "revId": "53d8a9a117b0fcda3c2c9d6d55e02c8550b0864f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
