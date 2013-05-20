@@ -16,6 +16,24 @@
       "revId": "5a656d9d357156ffcd62970694a05834e73136ae",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "UyX9sxwg",
+        "filename": "drivers/gpu/ion/ion_page_pool.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2013-05-20T23:26:56Z",
+      "side": 1,
+      "message": "Only in my debug version which logs without draining: it would log the same amount for each pool. But in this case, it won\u0027t matter as it always drains and the 2nd call will have nothing to drain if it was the same heap.",
+      "parentUuid": "UyVmvY7Q",
+      "revId": "5a656d9d357156ffcd62970694a05834e73136ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
