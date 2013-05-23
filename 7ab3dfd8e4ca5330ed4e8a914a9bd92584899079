@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "VAx8QY8w",
+        "filename": "drivers/staging/android/lowmemorykiller.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-05-23T23:28:53Z",
+      "side": 1,
+      "message": "delete the debugfs files",
+      "revId": "7ab3dfd8e4ca5330ed4e8a914a9bd92584899079",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
