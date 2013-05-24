@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "VA4UZxj0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2013-05-24T23:15:14Z",
+      "side": 1,
+      "message": "What is the use case for this? Would adding tracepoints be more useful?",
+      "revId": "7ab3dfd8e4ca5330ed4e8a914a9bd92584899079",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "VA2UewiU",
+        "filename": "drivers/staging/android/lowmemorykiller.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2013-05-24T23:15:14Z",
+      "side": 1,
+      "message": "\u003d 0 here is not kernel code style",
+      "revId": "7ab3dfd8e4ca5330ed4e8a914a9bd92584899079",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "VAx8QY8w",
         "filename": "drivers/staging/android/lowmemorykiller.c",
         "patchSetId": 1
