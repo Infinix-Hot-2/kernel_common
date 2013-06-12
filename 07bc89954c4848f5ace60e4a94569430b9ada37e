@@ -16,6 +16,24 @@
       "revId": "07bc89954c4848f5ace60e4a94569430b9ada37e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bd1bf126_aab3b7f7",
+        "filename": "Documentation/vm/pagemap.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-06-12T02:52:40Z",
+      "side": 1,
+      "message": "To make it clear its not a map count",
+      "parentUuid": "bd1bf126_8a07dbd0",
+      "revId": "07bc89954c4848f5ace60e4a94569430b9ada37e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
