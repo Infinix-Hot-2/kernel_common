@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bd1bf126_ead48f13",
+        "filename": "include/linux/kernel-page-flags.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2013-06-12T02:35:08Z",
+      "side": 1,
+      "message": "This has moved to include/uapi/linux/kernel-page-flags.h in recent kernels.",
+      "revId": "973bc3604e94c9d6e054993862995748f3915adc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
