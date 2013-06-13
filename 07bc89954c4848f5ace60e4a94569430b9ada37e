@@ -52,6 +52,24 @@
       "revId": "07bc89954c4848f5ace60e4a94569430b9ada37e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cafa992f_5eb155eb",
+        "filename": "Documentation/vm/pagemap.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-06-13T18:33:39Z",
+      "side": 1,
+      "message": "Buddy head pages have mapcount -128, so all the top bits get set.",
+      "parentUuid": "bd1bf126_aa98d76f",
+      "revId": "07bc89954c4848f5ace60e4a94569430b9ada37e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
