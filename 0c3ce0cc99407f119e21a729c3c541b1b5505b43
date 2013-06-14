@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0a583140_abb6d5c6",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-06-14T20:16:46Z",
+      "side": 1,
+      "message": "is it guaranteed that each entry in an sglist is a single allocation?  two sequential allocations won\u0027t ever be combined?",
+      "revId": "0c3ce0cc99407f119e21a729c3c541b1b5505b43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
