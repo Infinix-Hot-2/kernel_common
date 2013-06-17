@@ -34,6 +34,24 @@
       "revId": "0c3ce0cc99407f119e21a729c3c541b1b5505b43",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0a583140_fc50118b",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-06-17T20:26:15Z",
+      "side": 1,
+      "message": "I suggest a BUG_ON(PAGE_SIZE \u003c\u003c get_order(sg_dma_len(sg)) !\u003d sg_dma_len(sg)) or similar",
+      "parentUuid": "0a583140_3c2b4959",
+      "revId": "0c3ce0cc99407f119e21a729c3c541b1b5505b43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
