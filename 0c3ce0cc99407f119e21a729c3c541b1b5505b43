@@ -16,6 +16,24 @@
       "revId": "0c3ce0cc99407f119e21a729c3c541b1b5505b43",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0a583140_3c2b4959",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1001118
+      },
+      "writtenOn": "2013-06-17T18:09:29Z",
+      "side": 1,
+      "message": "Theoretically you could combine two sequential allocations I guess, but it practice I don\u0027t see why you would.",
+      "parentUuid": "0a583140_abb6d5c6",
+      "revId": "0c3ce0cc99407f119e21a729c3c541b1b5505b43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
