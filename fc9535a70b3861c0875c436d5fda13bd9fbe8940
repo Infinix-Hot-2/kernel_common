@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ad591ff_14034456",
+        "filename": "drivers/md/dm-uevent.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-06-19T23:49:22Z",
+      "side": 1,
+      "message": "\u003e 80 columns.",
+      "revId": "fc9535a70b3861c0875c436d5fda13bd9fbe8940",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ad591ff_b40b7870",
+        "filename": "drivers/md/dm-verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-06-19T23:49:22Z",
+      "side": 1,
+      "message": "are your tabs 8 spaces? this looks wrong.",
+      "revId": "fc9535a70b3861c0875c436d5fda13bd9fbe8940",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
