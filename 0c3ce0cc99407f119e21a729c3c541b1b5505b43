@@ -52,6 +52,24 @@
       "revId": "0c3ce0cc99407f119e21a729c3c541b1b5505b43",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ad591ff_66706a10",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1001118
+      },
+      "writtenOn": "2013-06-19T20:25:45Z",
+      "side": 1,
+      "message": "I keep going back and forth on this, but I think I\u0027ve convinced myself that the heaps should do the splitting of pages since they are going to have to do the freeing correctly and at the top level we should just test that it\u0027s done...",
+      "parentUuid": "0a583140_fc50118b",
+      "revId": "0c3ce0cc99407f119e21a729c3c541b1b5505b43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
