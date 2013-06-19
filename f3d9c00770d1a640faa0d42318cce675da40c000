@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ad591ff_2962b5ec",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-06-19T21:33:21Z",
+      "side": 1,
+      "message": "dm: verity: \u003cblah\u003e",
+      "revId": "f3d9c00770d1a640faa0d42318cce675da40c000",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ad591ff_2647428a",
+        "filename": "drivers/md/Kconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-06-19T21:33:21Z",
+      "side": 1,
+      "message": "the name no longer makes sense. maybe something like...\n\nconfig DM_VERITY_ERROR_NOTIFY",
+      "revId": "f3d9c00770d1a640faa0d42318cce675da40c000",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ad591ff_464c46ac",
+        "filename": "drivers/md/Kconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-06-19T21:33:21Z",
+      "side": 1,
+      "message": "same.\n\"Notify userspace of verity errors through uevents\"",
+      "revId": "f3d9c00770d1a640faa0d42318cce675da40c000",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ad591ff_a63a72ed",
+        "filename": "drivers/md/dm-uevent.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-06-19T21:33:21Z",
+      "side": 1,
+      "message": "tab over so that it\u0027s at or past (",
+      "revId": "f3d9c00770d1a640faa0d42318cce675da40c000",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ad591ff_690afd30",
+        "filename": "drivers/md/dm-uevent.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-06-19T21:33:21Z",
+      "side": 1,
+      "message": "why do you need to expose it here in dm-uevent.h? Why can\u0027t you add your functions to dm-verity.c and just use dm_send_uevents using the kobj. This way all you would be adding in this file is the uevent_type.",
+      "revId": "f3d9c00770d1a640faa0d42318cce675da40c000",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ad591ff_2910f55c",
+        "filename": "drivers/md/dm-uevent.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-06-19T21:33:21Z",
+      "side": 1,
+      "message": "remove, unused.",
+      "revId": "f3d9c00770d1a640faa0d42318cce675da40c000",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ad591ff_e938cdd6",
+        "filename": "drivers/md/dm-verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-06-19T21:33:21Z",
+      "side": 1,
+      "message": "need an else clause that defines these as static incline to {} so that you don\u0027t have to use #ifdef at the call sites.",
+      "revId": "f3d9c00770d1a640faa0d42318cce675da40c000",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
