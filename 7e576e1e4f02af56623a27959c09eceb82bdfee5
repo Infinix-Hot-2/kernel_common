@@ -34,6 +34,24 @@
       "revId": "7e576e1e4f02af56623a27959c09eceb82bdfee5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8a96e156_2ce4932e",
+        "filename": "drivers/md/dm-uevent.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2013-06-20T17:31:02Z",
+      "side": 1,
+      "message": "Yeah - I had to go back and edit my response once I saw what mpath did!\n\nFor CrOS -- our kernel handler is blazingly dull.  It gets notified via a blocking notifier chain, uses a stored UUID of the kernel partition to find and write one sector to the front of the partition (DMVERROR) then reboots.  This causes verification to fail and sends the user to the other kernel partition. (If that one is invalid, they go to recovery mode).\n\nOur handler: http://git.chromium.org/gitweb/?p\u003dchromiumos/third_party/kernel.git;a\u003dblob;f\u003ddrivers/md/dm-verity-chromeos.c;h\u003d501be96aa9d273023a2b022604b2190751241e8f;hb\u003drefs/heads/chromeos-3.4\n\nA view into the 3.4 code:\n  http://git.chromium.org/gitweb/?p\u003dchromiumos/third_party/kernel.git;a\u003dblob;f\u003ddrivers/md/dm-verity.c;h\u003da4f186d669183e387f2e787fe36353b9366da94c;hb\u003drefs/heads/chromeos-3.4#l116\n\n(We\u0027re in the process of a 3.8 roll)\n\nI suspect that as long as -EIO is returned for every request, notifying userspace will be better I suspect.  It does make it easier for a root-level attacker to keep the system from rebooting, but I wouldn\u0027t expect the first move to be modifying the root partition while verity is actively running in enforcement mode either :)",
+      "parentUuid": "0ad591ff_6f991d30",
+      "revId": "7e576e1e4f02af56623a27959c09eceb82bdfee5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
