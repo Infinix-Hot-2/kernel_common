@@ -16,6 +16,24 @@
       "revId": "8c781d0b084d872302a895063f0cd928f89fa71f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ca753907_e62e1efa",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1017041
+      },
+      "writtenOn": "2013-06-20T08:38:44Z",
+      "side": 1,
+      "message": "Since not all caller need to delete the timer,  I will remove del_timer here and let the caller to make sure both timers are deactivated.",
+      "parentUuid": "0ad591ff_ef07edd0",
+      "revId": "8c781d0b084d872302a895063f0cd928f89fa71f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
