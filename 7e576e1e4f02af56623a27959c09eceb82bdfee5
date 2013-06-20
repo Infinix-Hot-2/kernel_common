@@ -16,6 +16,24 @@
       "revId": "7e576e1e4f02af56623a27959c09eceb82bdfee5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ad591ff_6f991d30",
+        "filename": "drivers/md/dm-uevent.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-06-20T16:57:02Z",
+      "side": 1,
+      "message": "I had the same initial reaction that we should not pollute dm-uevent.c with a verity-specific sender, put that stuff into dm-verity.c, and make some sort of helper here. But, like you, I let it slide because it\u0027s no worse than the mpath stuff already here and this change is pretty small :)\n\nRe kernel notifications, I\u0027m not sure what you can do from the kernel that you couldn\u0027t do from userspace. If you really, really  wanted to, you can add a blocking notifier chain (is that what you guys already do?) and have one of the calls do the uevent sending, but that seems like overkill from my perspective. Our preferred handling is to just throw the event to userspace and let it figure out the right thing to do.\n\nWhat do you guys do in CrOs in the kernel on these events?",
+      "parentUuid": "8a96e156_6c73fbab",
+      "revId": "7e576e1e4f02af56623a27959c09eceb82bdfee5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
