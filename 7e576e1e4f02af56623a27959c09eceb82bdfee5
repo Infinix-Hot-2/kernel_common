@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8a96e156_6c73fbab",
+        "filename": "drivers/md/dm-uevent.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2013-06-20T15:35:41Z",
+      "side": 1,
+      "message": "Hrm. This makes a lot of sense given that multipath leaks into this file.  For my taste, it\u0027d be ideal if a new helper was exposed that let the targets add the env vars they wanted then sent it.\n\nAs is, this seems sane to try upstream and see what they say.  I wouldn\u0027t be surprised if they decide that 1 is okay but 2\u0027s a crowd and ask for a generalized helper.  If not, then you\u0027re golden :)\n\nFrom the verity perspective, I\u0027m wondering if there\u0027s a good way to have this also do kernel notification rather than relying on udev to hear and respond. I\u0027m guessing the worst case is lots of -EIOs, so maybe it\u0027s sane to delegate it userland for the error case.  For CrOS, we used a kernel notifier, but it got stripped out of the rewrite that landed upstream.  If this goes upstream, then we\u0027ll migrate over to uevent and drop out out of tree handler.",
+      "revId": "7e576e1e4f02af56623a27959c09eceb82bdfee5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
