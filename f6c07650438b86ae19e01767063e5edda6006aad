@@ -16,6 +16,24 @@
       "revId": "f6c07650438b86ae19e01767063e5edda6006aad",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ca753907_49a625b8",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1017041
+      },
+      "writtenOn": "2013-06-21T02:36:07Z",
+      "side": 1,
+      "message": "Right. It\u0027s a typo. it should be cpu.",
+      "parentUuid": "0ad591ff_7a78f938",
+      "revId": "f6c07650438b86ae19e01767063e5edda6006aad",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
