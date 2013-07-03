@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2771b0c7_f8ba88f5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-07-03T23:47:23Z",
+      "side": 1,
+      "message": "Suppose I should update the commit text with the new param info.",
+      "revId": "204318095ffed8ef61672e681895bb841b8c1107",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
