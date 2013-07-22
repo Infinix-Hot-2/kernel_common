@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f3c75f62_765bb02e",
+        "filename": "net/ipv4/fib_semantics.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 573,
+      "author": {
+        "id": 1002609
+      },
+      "writtenOn": "2013-07-22T23:55:01Z",
+      "side": 1,
+      "message": "might this return 0?  Code in devinet.c does:\ntable \u003d fib_get_table(net, RT_TABLE_LOCAL);\nif (local \u0026\u0026 !fib_table_lookup(local, ....) {",
+      "revId": "e7630f2c6f32380db52389feffe7d394bf32e8b9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
