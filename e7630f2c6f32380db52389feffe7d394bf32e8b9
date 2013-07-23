@@ -16,6 +16,24 @@
       "revId": "e7630f2c6f32380db52389feffe7d394bf32e8b9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f3c75f62_b6c1c872",
+        "filename": "net/ipv4/fib_semantics.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 573,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2013-07-23T00:21:01Z",
+      "side": 1,
+      "message": "Will do.\nThe code I grabbed this from didn\u0027t check either but only because the tables were pre-created.",
+      "parentUuid": "f3c75f62_765bb02e",
+      "revId": "e7630f2c6f32380db52389feffe7d394bf32e8b9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
