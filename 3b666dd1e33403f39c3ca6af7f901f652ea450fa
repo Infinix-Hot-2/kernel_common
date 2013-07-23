@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f3c75f62_760c9004",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-07-23T00:48:44Z",
+      "side": 1,
+      "message": "does not contain rules for all non-built-in tables?",
+      "revId": "3b666dd1e33403f39c3ca6af7f901f652ea450fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f3c75f62_560794e0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-07-23T00:48:44Z",
+      "side": 1,
+      "message": "fib_lookup()",
+      "revId": "3b666dd1e33403f39c3ca6af7f901f652ea450fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
