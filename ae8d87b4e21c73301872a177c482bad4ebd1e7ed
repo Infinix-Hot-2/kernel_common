@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0d25b0ee_e798c26e",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1041,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2013-08-21T12:38:06Z",
+      "side": 1,
+      "message": "Couldn\u0027t the dma_buf associated with fd still be NULL even though there is no error executing dma_buf_get?",
+      "revId": "ae8d87b4e21c73301872a177c482bad4ebd1e7ed",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
