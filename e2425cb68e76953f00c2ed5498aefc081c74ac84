@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0d25b0ee_2d18f9e9",
+        "filename": "drivers/gpu/ion/ion.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 504,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-08-21T20:23:16Z",
+      "side": 1,
+      "message": "hold the lock until after this block.",
+      "revId": "e2425cb68e76953f00c2ed5498aefc081c74ac84",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
