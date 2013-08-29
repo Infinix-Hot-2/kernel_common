@@ -16,6 +16,24 @@
       "revId": "133dbc9561e7a35c2bec282a52037872122c9f37",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "72d1ade1_b2e0a0b2",
+        "filename": "drivers/staging/android/ashmem.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-08-29T20:24:14Z",
+      "side": 1,
+      "message": "No, ashmem_pin and ashmem_unpin both need to hold ashmem_lru_list_lock around this because they are modifying the range structs.  ashmem_lru_list_lock protects the list as well as the contents of the range structs in the list (other than the unpinned_list field).",
+      "parentUuid": "72d1ade1_32a91089",
+      "revId": "133dbc9561e7a35c2bec282a52037872122c9f37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
