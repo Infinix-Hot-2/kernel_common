@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7299ad82_95dbc631",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 744,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2013-09-03T20:21:35Z",
+      "side": 1,
+      "message": "I guess if target_loads syntax is not correctly followed then ntarget_loads will not be zero, since get_tokenized_data would return an error without updating the ntarget_loads/num_tokens param.",
+      "revId": "3cbb1bc89799c9d2b2ab937909e50d88e3e934f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
