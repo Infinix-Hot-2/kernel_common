@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a7aa05ea_7e820f4c",
+        "filename": "drivers/gpu/ion/ion_heap.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-09-16T21:10:21Z",
+      "side": 1,
+      "message": "find a different name for this than skip_cache.  The word cache is already heavily used within ion to refer to cpu caches, so this gets confusing.  Maybe \"pools\"?",
+      "revId": "9c2dbbb8059366066cf2c53ac940c79aaa88746e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a7aa05ea_be7c7773",
+        "filename": "drivers/gpu/ion/ion_heap.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-09-16T21:10:21Z",
+      "side": 1,
+      "message": "same here, avoid using the word CACHE",
+      "revId": "9c2dbbb8059366066cf2c53ac940c79aaa88746e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a7aa05ea_3e3b67e1",
+        "filename": "include/linux/ion.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-09-16T21:10:21Z",
+      "side": 1,
+      "message": "match the formatting of the flags above",
+      "revId": "9c2dbbb8059366066cf2c53ac940c79aaa88746e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
