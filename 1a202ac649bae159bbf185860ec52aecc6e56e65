@@ -16,6 +16,24 @@
       "revId": "1a202ac649bae159bbf185860ec52aecc6e56e65",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "24db7307_9099d477",
+        "filename": "kernel/sched/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 7729,
+      "author": {
+        "id": 1025028
+      },
+      "writtenOn": "2013-09-20T19:11:29Z",
+      "side": 1,
+      "message": "that makes sense. I\u0027ll fix it.",
+      "parentUuid": "a4a76389_c4231eb2",
+      "revId": "1a202ac649bae159bbf185860ec52aecc6e56e65",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
