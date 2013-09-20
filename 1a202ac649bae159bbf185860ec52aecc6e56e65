@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a4a76389_c4231eb2",
+        "filename": "kernel/sched/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 7729,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-09-20T18:45:54Z",
+      "side": 1,
+      "message": "looks reasonable, but one minor nit. Can you put the \u0026\u0026 on the previous line to match the rest of the file?",
+      "revId": "1a202ac649bae159bbf185860ec52aecc6e56e65",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
