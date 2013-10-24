@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "def26816_73c0823a",
+        "filename": "drivers/gpu/ion/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2013-10-24T22:16:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "def26816_33143a05",
+      "revId": "f964415bf9ecbe439856acb0b6b636f8cdbac6dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9efc70ee_0b5589fc",
         "filename": "drivers/gpu/ion/compat_ion.c",
         "patchSetId": 1
@@ -54,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "9efc70ee_abd0d516",
+        "filename": "drivers/gpu/ion/compat_ion.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2013-10-24T22:16:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9efc70ee_0b5589fc",
+      "revId": "f964415bf9ecbe439856acb0b6b636f8cdbac6dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "def26816_93170e59",
         "filename": "drivers/gpu/ion/compat_ion.c",
         "patchSetId": 1
@@ -65,6 +101,24 @@
       "writtenOn": "2013-10-24T20:43:11Z",
       "side": 1,
       "message": "maybe move this into another switch statement after the unlocked_ioctl call below, so that all the ioctls take the same path?",
+      "revId": "f964415bf9ecbe439856acb0b6b636f8cdbac6dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1eb7a04d_302608c6",
+        "filename": "drivers/gpu/ion/compat_ion.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2013-10-24T22:16:55Z",
+      "side": 1,
+      "message": "Not very pretty either since the data and data32 pointers have different types based on the cmd.\nUsing a return at the end of each case statement instead.",
+      "parentUuid": "def26816_93170e59",
       "revId": "f964415bf9ecbe439856acb0b6b636f8cdbac6dd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
