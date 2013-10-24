@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "def26816_33143a05",
+        "filename": "drivers/gpu/ion/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1025091
+      },
+      "writtenOn": "2013-10-24T21:03:37Z",
+      "side": 1,
+      "message": "+1 for getting rid of CONFIG_COMPAT_ION (seems redundant)\n\nI\u0027d rather leave the compat code in a separate file though...",
+      "parentUuid": "9efc70ee_302ef003",
+      "revId": "f964415bf9ecbe439856acb0b6b636f8cdbac6dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9efc70ee_0b5589fc",
         "filename": "drivers/gpu/ion/compat_ion.c",
         "patchSetId": 1
