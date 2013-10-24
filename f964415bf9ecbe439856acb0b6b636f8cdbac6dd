@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9efc70ee_302ef003",
+        "filename": "drivers/gpu/ion/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-10-24T20:43:11Z",
+      "side": 1,
+      "message": "obj-$(CONFIG_COMPAT_ION) +\u003d compat_ion.o\n\nor get rid of CONFIG_COMPAT_ION, and use ifdef CONFIG_COMPAT around this line\n\nor get rid of compat_ion.c completely, and put a single #ifdef CONFIG_COMPAT around compat_ion_ioctl inside ion.c",
+      "revId": "f964415bf9ecbe439856acb0b6b636f8cdbac6dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9efc70ee_0b5589fc",
+        "filename": "drivers/gpu/ion/compat_ion.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-10-24T20:43:11Z",
+      "side": 1,
+      "message": "is this macro necessary?  why can\u0027t you just use compat_alloc_user_space directly?  the access_ok seems unnecessary, since get_user will fail later anyways",
+      "revId": "f964415bf9ecbe439856acb0b6b636f8cdbac6dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "def26816_93170e59",
+        "filename": "drivers/gpu/ion/compat_ion.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-10-24T20:43:11Z",
+      "side": 1,
+      "message": "maybe move this into another switch statement after the unlocked_ioctl call below, so that all the ioctls take the same path?",
+      "revId": "f964415bf9ecbe439856acb0b6b636f8cdbac6dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
