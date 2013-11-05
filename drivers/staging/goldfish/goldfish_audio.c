@@ -27,6 +27,7 @@
 #include <linux/dma-mapping.h>
 #include <linux/uaccess.h>
 #include <linux/goldfish.h>
+#include <linux/slab.h>
 #include <linux/acpi.h>
 
 MODULE_AUTHOR("Google, Inc.");
