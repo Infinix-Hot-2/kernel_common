@@ -16,6 +16,23 @@
       "revId": "0b20f84a6b83a2b79967058955905df833275d92",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3e570543_39eae2ce",
+        "filename": "drivers/staging/android/ion/ion_priv.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 367,
+      "author": {
+        "id": 1010110
+      },
+      "writtenOn": "2013-11-08T20:51:25Z",
+      "side": 1,
+      "message": "Use of struct device needs an #include \u003clinux/device.h\u003e\n\nOtherwise it generates compiler warnings.",
+      "revId": "0b20f84a6b83a2b79967058955905df833275d92",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
