@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "de65092b_3e0be63f",
+        "filename": "drivers/staging/android/ion/ion.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 876,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-11-08T06:31:48Z",
+      "side": 1,
+      "message": "pretty sure i commented in an earlier verison. You are not passing through the direction for the sync. your ion_pages_sync_for_device should take the dir passed into this function\n\nthis would cause a problem if someone called the dma_buf ops to map and passed a direction other than BIDIRECTIONAL",
+      "revId": "0b20f84a6b83a2b79967058955905df833275d92",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
