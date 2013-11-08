@@ -16,6 +16,23 @@
       "revId": "97e5331519a044ceb7c8da3acea8df4be3470503",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "de65092b_54fde157",
+        "filename": "drivers/staging/android/ion/ion_system_heap.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1010110
+      },
+      "writtenOn": "2013-11-08T20:49:19Z",
+      "side": 1,
+      "message": "This causes unused variable compiler warnings.",
+      "revId": "97e5331519a044ceb7c8da3acea8df4be3470503",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
