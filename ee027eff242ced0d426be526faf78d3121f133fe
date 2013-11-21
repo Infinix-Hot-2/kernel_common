@@ -50,6 +50,23 @@
       "revId": "ee027eff242ced0d426be526faf78d3121f133fe",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ed03988_ebff6dd5",
+        "filename": "drivers/staging/android/ion/ion_test.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1010110
+      },
+      "writtenOn": "2013-11-21T00:03:34Z",
+      "side": 1,
+      "message": "Having a compat_ioctl entry might be good here as well, to help validate the compat logic.",
+      "revId": "ee027eff242ced0d426be526faf78d3121f133fe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
