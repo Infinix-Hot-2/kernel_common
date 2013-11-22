@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "5ed03988_7726bae5",
+        "filename": "drivers/staging/android/ion/ion_test.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1010110
+      },
+      "writtenOn": "2013-11-22T03:26:10Z",
+      "side": 1,
+      "message": "Not totally sure on this, but I\u0027ve been seeing some issues here w/ my dummy ion driver using the chunk heap. The buffer sglist is 1Meg in size, and if we only mean to read 4k, we end up copying the entire 1M out to userland corrupting its address space.\n\nSo a simple:\n\nsize-\u003d to_copy;\nif (size\u003c\u003d0)\n   break;\n\nat the end of the for loop seems to avoid the issue.",
+      "revId": "ee027eff242ced0d426be526faf78d3121f133fe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "be7bf535_cb2c15b5",
         "filename": "drivers/staging/android/ion/ion_test.c",
         "patchSetId": 1
