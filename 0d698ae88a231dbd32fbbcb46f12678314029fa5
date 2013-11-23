@@ -52,6 +52,24 @@
       "revId": "0d698ae88a231dbd32fbbcb46f12678314029fa5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "deaa69eb_9e3ffbc9",
+        "filename": "drivers/staging/android/ion/ion_dummy_driver.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1010110
+      },
+      "writtenOn": "2013-11-23T05:34:31Z",
+      "side": 1,
+      "message": "Personally, I suspect it would be just as good to stick with new creation ioctls to the /dev/ion device. Keeps the clutter in /dev/ down, and I don\u0027t really see a compelling reason to create a configfs style interface for heap creation. Other upstream folks may disagree with me, but it seems more compact to just add ioctls to /dev/ion.",
+      "parentUuid": "deaa69eb_3e4ec785",
+      "revId": "0d698ae88a231dbd32fbbcb46f12678314029fa5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
