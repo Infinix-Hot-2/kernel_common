@@ -16,6 +16,24 @@
       "revId": "3b1a22d4ba5e6e6f4c2b6de3419c2741aaf1f1de",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "03abca57_8514425c",
+        "filename": "drivers/staging/android/ion/compat_ion_test.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-11-27T05:44:10Z",
+      "side": 1,
+      "message": "Fixed, compile tested now on x86_64",
+      "parentUuid": "63dba606_6ac8fb91",
+      "revId": "3b1a22d4ba5e6e6f4c2b6de3419c2741aaf1f1de",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
