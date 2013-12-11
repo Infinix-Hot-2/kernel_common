@@ -34,6 +34,24 @@
       "revId": "c5b5d2ea9114795134fe1dda4afb5b83d6d97972",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "48f6bf4a_425df45f",
+        "filename": "drivers/staging/android/ion/ion_heap.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1000413
+      },
+      "writtenOn": "2013-12-11T21:00:32Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "a8e73b93_e2a2c6c2",
+      "revId": "c5b5d2ea9114795134fe1dda4afb5b83d6d97972",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
