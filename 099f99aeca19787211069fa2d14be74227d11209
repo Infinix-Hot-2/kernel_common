@@ -45,6 +45,30 @@
       "revId": "099f99aeca19787211069fa2d14be74227d11209",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "28aeeb65_4d698a80",
+        "filename": "drivers/staging/android/ion/ion_system_heap.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-12-13T00:56:56Z",
+      "side": 1,
+      "message": "Actually, leave it in bytes, everything else in the freelist works with bytes for now.\n\nI realized that by expanding the use of DEFER_FREE I need to add a bunch more shrinkers, so I\u0027m going to refactor the way shrinking is handled to be done in ion_heap.c instead of each heap.  The impact on this patch should be minimal, this hunk will move into ion_heap_shrink in ion_heap.c",
+      "parentUuid": "28aeeb65_cde1faed",
+      "range": {
+        "startLine": 258,
+        "startChar": 2,
+        "endLine": 258,
+        "endChar": 6
+      },
+      "revId": "099f99aeca19787211069fa2d14be74227d11209",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
