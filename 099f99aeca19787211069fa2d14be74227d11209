@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "08abe757_9ae499ff",
+        "filename": "drivers/staging/android/ion/ion_priv.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-12-13T00:43:39Z",
+      "side": 1,
+      "message": "put this extra documentation at the end with the return values",
+      "range": {
+        "startLine": 90,
+        "startChar": 22,
+        "endLine": 94,
+        "endChar": 40
+      },
+      "revId": "099f99aeca19787211069fa2d14be74227d11209",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "28aeeb65_cde1faed",
+        "filename": "drivers/staging/android/ion/ion_system_heap.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-12-13T00:43:39Z",
+      "side": 1,
+      "message": "All this switching between pages and bytes seems unnecessary.  The only other caller to ion_heap_freelist_drain uses 0 as its size.  Can you switch ion_heap_freelist_drain and ion_heap_freelist_drain_from_shrinker to take pages?\n\nAlso, linewrapping would be easier here if you replace ion_heap_freelist_drain_from_shrinker with ion_heap_freelist_shrink",
+      "range": {
+        "startLine": 258,
+        "startChar": 2,
+        "endLine": 258,
+        "endChar": 6
+      },
+      "revId": "099f99aeca19787211069fa2d14be74227d11209",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
