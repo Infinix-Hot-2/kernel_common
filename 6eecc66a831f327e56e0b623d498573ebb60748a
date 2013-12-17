@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "08abe757_9f756be2",
+        "filename": "drivers/staging/android/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 722,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-12-17T01:43:11Z",
+      "side": 1,
+      "message": "min is unnecessary here, you already know l2 \u003c\u003d l1",
+      "revId": "6eecc66a831f327e56e0b623d498573ebb60748a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "08abe757_ba9cf580",
+        "filename": "drivers/staging/android/ion/ion.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 737,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-12-17T01:43:11Z",
+      "side": 1,
+      "message": "This is going to result in some odd numbering if one client\u0027s name is a prefix of another\u0027s.\n\nHow about adding a new field to ion_client, display_name, and storing the name+id there.  Also add display_id while you\u0027re at it to avoid having to parse it out of display_name.",
+      "revId": "6eecc66a831f327e56e0b623d498573ebb60748a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
