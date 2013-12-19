@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "088cc7b8_06c640e5",
+        "filename": "drivers/staging/android/uapi/ion.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-12-19T22:30:23Z",
+      "side": 1,
+      "message": "This isn\u0027t part of the userspace API, it should go in drivers/staging/android/ion/ion_priv.h.  Update the comment above that the lowest 8 bits are used by ion userspace interface, the next 8 bits are used internally by ion.\n\nOr create a new flags variable for this bit to avoid the conflicts.",
+      "revId": "b2576bb4718b7db6125c3e241ca6ce1d142c8768",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
