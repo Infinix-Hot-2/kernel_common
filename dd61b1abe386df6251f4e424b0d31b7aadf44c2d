@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a8649bc8_2047ae91",
+        "filename": "drivers/staging/android/ion/ion.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2013-12-19T22:27:17Z",
+      "side": 1,
+      "message": "just make this an int and you won\u0027t have to deal with all the casts below.  2^31 serial numbers is plenty.",
+      "revId": "dd61b1abe386df6251f4e424b0d31b7aadf44c2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
