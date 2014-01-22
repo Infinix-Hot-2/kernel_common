@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "127dda9f_9847d938",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-01-22T03:09:55Z",
+      "side": 1,
+      "message": "typo: CPUFREQ_GOV_POLICY_INIT\n\nI can fix that up if you want.",
+      "range": {
+        "startLine": 10,
+        "startChar": 25,
+        "endLine": 10,
+        "endChar": 47
+      },
+      "revId": "f26fe43b6ad90e131828eede762c5eff5d3b73a1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "32801ec4_1933cf0f",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1205,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-01-22T03:09:55Z",
+      "side": 1,
+      "message": "This should actually be conditional:\n\n if (!have_governor_per_policy())\n     common_tunables \u003d NULL;\n\nI can fix that up if you want.",
+      "range": {
+        "startLine": 1205,
+        "startChar": 3,
+        "endLine": 1205,
+        "endChar": 25
+      },
+      "revId": "f26fe43b6ad90e131828eede762c5eff5d3b73a1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
