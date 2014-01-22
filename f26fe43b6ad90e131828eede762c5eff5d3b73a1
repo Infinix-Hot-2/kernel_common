@@ -25,6 +25,24 @@
     },
     {
       "key": {
+        "uuid": "9271cac9_7f550716",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1014816
+      },
+      "writtenOn": "2014-01-22T03:46:10Z",
+      "side": 1,
+      "message": "I will fix it. thanks.",
+      "parentUuid": "127dda9f_9847d938",
+      "revId": "f26fe43b6ad90e131828eede762c5eff5d3b73a1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "32801ec4_1933cf0f",
         "filename": "drivers/cpufreq/cpufreq_interactive.c",
         "patchSetId": 2
@@ -42,6 +60,24 @@
         "endLine": 1205,
         "endChar": 25
       },
+      "revId": "f26fe43b6ad90e131828eede762c5eff5d3b73a1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d248a27a_a9f5b99f",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1205,
+      "author": {
+        "id": 1014816
+      },
+      "writtenOn": "2014-01-22T03:46:10Z",
+      "side": 1,
+      "message": "I will fix it. thanks.",
+      "parentUuid": "32801ec4_1933cf0f",
       "revId": "f26fe43b6ad90e131828eede762c5eff5d3b73a1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
