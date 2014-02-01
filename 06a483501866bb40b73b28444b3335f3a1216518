@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d2dfc254_d45372aa",
+        "filename": "drivers/net/wireless/bcmdhd/include/typedefs.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2014-02-01T00:59:27Z",
+      "side": 1,
+      "message": "You should probably test for #if defined(__LP64__) instead of those 2... This will avoid issues with MIPS64 too",
+      "range": {
+        "startLine": 68,
+        "startChar": 24,
+        "endLine": 68,
+        "endChar": 26
+      },
+      "revId": "06a483501866bb40b73b28444b3335f3a1216518",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
