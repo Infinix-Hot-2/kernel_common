@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cf62b923_b34e1855",
+        "filename": "drivers/net/wireless/bcmdhd/wl_android.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-02-12T01:33:56Z",
+      "side": 1,
+      "message": "why not just #ifdef CONFIG_64BIT here?",
+      "revId": "34a9aa87fdbf2e9e63d1d842284b1b56407cfa33",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
