@@ -22,6 +22,30 @@
       "revId": "f88ea8965963addd3001f04365b22d241e9a3927",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cff9d9ff_8aca3387",
+        "filename": "net/ipv4/tcp_input.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 355,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-02-19T23:22:00Z",
+      "side": 0,
+      "message": "Sure. I\u0027ll upload a new patch.\n\nI was just trying to make it look more like the other branches.",
+      "parentUuid": "8f21a133_ff075734",
+      "range": {
+        "startLine": 355,
+        "startChar": 9,
+        "endLine": 355,
+        "endChar": 18
+      },
+      "revId": "f88ea8965963addd3001f04365b22d241e9a3927",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
