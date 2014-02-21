@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2f78b56e_e58f80a2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-02-21T03:55:31Z",
+      "side": 1,
+      "message": "Need a single-line summary first, suggest:\n\npower: fix compile warnings in log_wakeup_reason\n\nChange I81addaf420f1338255c5d0638b0d244a99d777d1 introduced compile warnings, fix these.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 18
+      },
+      "revId": "fabb695f748da9d7bccb64bdd53682a34e683349",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
