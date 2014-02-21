@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0f75b176_8ff509f8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-02-21T04:09:59Z",
+      "side": 1,
+      "message": "need a blank line between 1-line summary and full description",
+      "revId": "3d2b8411dd151b33ceb13c93bb8ecd61699f5cb9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
