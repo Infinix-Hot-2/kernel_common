@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ef469d41_f2f0204c",
+        "filename": "drivers/staging/android/ashmem.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-02-21T22:52:29Z",
+      "side": 1,
+      "message": "Your actual locking seem to be that lru and purged is protected by ashmem_lru_list_lock, unpinned is protected by ashmem_area.lock, and everything else is protected by both locks while it is on _either_ list.",
+      "parentUuid": "0f75b176_c9070135",
+      "revId": "a12d825e45a565cd1a24e1aa6c53a9cdbf754373",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "32649599_88a377ab",
         "filename": "drivers/staging/android/ashmem.c",
         "patchSetId": 4
