@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0f75b176_c9070135",
+        "filename": "drivers/staging/android/ashmem.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-02-21T00:47:34Z",
+      "side": 1,
+      "message": "Where?\n\nI think what I was trying to say here is that none of the fields can be modified if the area is on the lru list unless the lock is held.  There are places where I take the lock without yet knowing whether the node is on the lru list or not.",
+      "parentUuid": "32649599_a8af5b94",
+      "revId": "a12d825e45a565cd1a24e1aa6c53a9cdbf754373",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "32649599_88a377ab",
         "filename": "drivers/staging/android/ashmem.c",
         "patchSetId": 4
