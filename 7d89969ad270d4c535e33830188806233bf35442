@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3cfb9535_db5b2ce4",
+        "filename": "net/netfilter/xt_qtaguid.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1491,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-02-25T18:29:36Z",
+      "side": 1,
+      "message": "fmt is an int. Doesn\u0027t this complain that the ptr can\u0027t fit in the final int?",
+      "range": {
+        "startLine": 1491,
+        "startChar": 4,
+        "endLine": 1491,
+        "endChar": 7
+      },
+      "revId": "7d89969ad270d4c535e33830188806233bf35442",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
