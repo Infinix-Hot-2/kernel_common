@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7c526d52_01de90f5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:29:32Z",
+      "side": 1,
+      "message": "suggest \"maximum\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 31,
+        "endLine": 7,
+        "endChar": 39
+      },
+      "revId": "d95b5e2f53a1c747a78d4cacb1e559e4057540c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c526d52_c1ee589d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:29:32Z",
+      "side": 1,
+      "message": "Add a one-sentence description here, like \"Ensure the array of wakeup reason IRQs does not overflow.\"",
+      "revId": "d95b5e2f53a1c747a78d4cacb1e559e4057540c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc4c9db4_03a7ad9e",
+        "filename": "kernel/power/wakeup_reason.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:29:32Z",
+      "side": 1,
+      "message": "suggest \"IRQs\"",
+      "range": {
+        "startLine": 83,
+        "startChar": 53,
+        "endLine": 83,
+        "endChar": 57
+      },
+      "revId": "d95b5e2f53a1c747a78d4cacb1e559e4057540c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
