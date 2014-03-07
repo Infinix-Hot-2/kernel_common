@@ -1,0 +1,222 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7c526d52_410a48f2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:10:48Z",
+      "side": 1,
+      "message": "The patch seems to do more than add timestamps, is also checking for stale messages, rescheduling work, add more description?",
+      "revId": "9bc381f6169c05ca5eb450c1486499a17ada7e43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc586570_eec38723",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:10:48Z",
+      "side": 1,
+      "message": "Also add a short paragraph describing a little more about what is added and why.",
+      "revId": "9bc381f6169c05ca5eb450c1486499a17ada7e43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc586570_ae950fb3",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:10:48Z",
+      "side": 1,
+      "message": "maybe send nsecs in the event, and avoid the 64-bit divide in kernel?",
+      "range": {
+        "startLine": 125,
+        "startChar": 11,
+        "endLine": 125,
+        "endChar": 55
+      },
+      "revId": "9bc381f6169c05ca5eb450c1486499a17ada7e43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c526d52_a1d36424",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:10:48Z",
+      "side": 1,
+      "message": "minor: maybe drop the timestamp_msg but still send the event in this case?",
+      "range": {
+        "startLine": 129,
+        "startChar": 2,
+        "endLine": 129,
+        "endChar": 9
+      },
+      "revId": "9bc381f6169c05ca5eb450c1486499a17ada7e43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc4c9db4_2372a9b4",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:10:48Z",
+      "side": 1,
+      "message": "Only available if CONFIG_RTC_LIB\u003dy, since only used for debug message suggest drop this.",
+      "range": {
+        "startLine": 132,
+        "startChar": 1,
+        "endLine": 132,
+        "endChar": 16
+      },
+      "revId": "9bc381f6169c05ca5eb450c1486499a17ada7e43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc586570_ee1267ae",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:10:48Z",
+      "side": 1,
+      "message": "why schedule twice?",
+      "range": {
+        "startLine": 201,
+        "startChar": 1,
+        "endLine": 201,
+        "endChar": 29
+      },
+      "revId": "9bc381f6169c05ca5eb450c1486499a17ada7e43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc4c9db4_63cf91a2",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:10:48Z",
+      "side": 1,
+      "message": "should this be addressed now?",
+      "range": {
+        "startLine": 317,
+        "startChar": 1,
+        "endLine": 317,
+        "endChar": 50
+      },
+      "revId": "9bc381f6169c05ca5eb450c1486499a17ada7e43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc4c9db4_23f749fe",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:10:48Z",
+      "side": 1,
+      "message": "does the check for work_pending() need to happen as part of the critical section, with timestamp_lock held?  What happens if work goes pending/non-pending just after work_pending() returns?",
+      "range": {
+        "startLine": 323,
+        "startChar": 3,
+        "endLine": 323,
+        "endChar": 30
+      },
+      "revId": "9bc381f6169c05ca5eb450c1486499a17ada7e43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc4c9db4_4305352e",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:10:48Z",
+      "side": 1,
+      "message": "add curly brace here since \"then\" clause needs it, for kernel coding style guidelines.",
+      "range": {
+        "startLine": 342,
+        "startChar": 2,
+        "endLine": 342,
+        "endChar": 8
+      },
+      "revId": "9bc381f6169c05ca5eb450c1486499a17ada7e43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc586570_6ec2d7d6",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 387,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-07T21:10:48Z",
+      "side": 1,
+      "message": "similar to above, does lock need to be held prior?",
+      "range": {
+        "startLine": 387,
+        "startChar": 7,
+        "endLine": 387,
+        "endChar": 35
+      },
+      "revId": "9bc381f6169c05ca5eb450c1486499a17ada7e43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
