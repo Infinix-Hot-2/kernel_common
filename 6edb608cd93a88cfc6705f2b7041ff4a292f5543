@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bc586570_e1455565",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 8
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-03-08T00:30:31Z",
+      "side": 1,
+      "message": "f()",
+      "range": {
+        "startLine": 327,
+        "startChar": 1,
+        "endLine": 347,
+        "endChar": 49
+      },
+      "revId": "6edb608cd93a88cfc6705f2b7041ff4a292f5543",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c526d52_f299a81c",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 8
+      },
+      "lineNbr": 402,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-03-08T00:30:31Z",
+      "side": 1,
+      "message": "f()",
+      "range": {
+        "startLine": 381,
+        "startChar": 2,
+        "endLine": 402,
+        "endChar": 50
+      },
+      "revId": "6edb608cd93a88cfc6705f2b7041ff4a292f5543",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
