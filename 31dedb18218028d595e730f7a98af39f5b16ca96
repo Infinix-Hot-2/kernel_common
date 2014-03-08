@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9c2ba1c2_c90af139",
+        "filename": "kernel/power/wakeup_reason.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-08T02:14:28Z",
+      "side": 1,
+      "message": "Need to check this with the spinlock held.  Grab spinlock, check, drop spinlock if no room and then print message (or you can drop the message, there\u0027s not much we can do about it).",
+      "range": {
+        "startLine": 81,
+        "startChar": 1,
+        "endLine": 81,
+        "endChar": 42
+      },
+      "revId": "31dedb18218028d595e730f7a98af39f5b16ca96",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
