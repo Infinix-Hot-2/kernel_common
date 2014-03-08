@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "7c526d52_92a94c31",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 8
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-08T00:33:52Z",
+      "side": 1,
+      "message": "Should add braces around else block since if block needs them, per kernel coding style.",
+      "range": {
+        "startLine": 105,
+        "startChar": 1,
+        "endLine": 105,
+        "endChar": 7
+      },
+      "revId": "6edb608cd93a88cfc6705f2b7041ff4a292f5543",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bc586570_e1455565",
         "filename": "net/netfilter/xt_IDLETIMER.c",
         "patchSetId": 8
