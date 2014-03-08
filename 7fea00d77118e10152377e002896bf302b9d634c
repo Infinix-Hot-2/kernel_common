@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9c2ba1c2_09a1a98e",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-08T03:12:02Z",
+      "side": 1,
+      "message": "As discussed, move this under the lock.",
+      "range": {
+        "startLine": 321,
+        "startChar": 6,
+        "endLine": 321,
+        "endChar": 22
+      },
+      "revId": "7fea00d77118e10152377e002896bf302b9d634c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
