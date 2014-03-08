@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9c2ba1c2_a9ecdd35",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-08T02:12:14Z",
+      "side": 1,
+      "message": "unrelated whitespace change after merge with concurrent changes",
+      "range": {
+        "startLine": 152,
+        "startChar": 0,
+        "endLine": 152,
+        "endChar": 1
+      },
+      "revId": "b4c2cc21f822205588a9c3adf59d7a72e5db4ef8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dcf7d997_4b8c4572",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-08T02:12:14Z",
+      "side": 1,
+      "message": "still want to verify: if work goes pending/not-pending after the return from work_pending() but before the spinlock is grabbed, is there a problem?",
+      "range": {
+        "startLine": 321,
+        "startChar": 0,
+        "endLine": 322,
+        "endChar": 33
+      },
+      "revId": "b4c2cc21f822205588a9c3adf59d7a72e5db4ef8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
