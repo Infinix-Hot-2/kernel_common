@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "9c2ba1c2_895e39d5",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-03-08T03:36:04Z",
+      "side": 1,
+      "message": "static DEFINE_SPINLOCK(timestamp_lock);",
+      "revId": "7fea00d77118e10152377e002896bf302b9d634c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9c2ba1c2_09a1a98e",
         "filename": "net/netfilter/xt_IDLETIMER.c",
         "patchSetId": 10
@@ -19,6 +36,23 @@
         "endLine": 321,
         "endChar": 22
       },
+      "revId": "7fea00d77118e10152377e002896bf302b9d634c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9c2ba1c2_c95831ea",
+        "filename": "net/netfilter/xt_IDLETIMER.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 462,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-03-08T03:36:04Z",
+      "side": 1,
+      "message": "with DEFINE_SPINLOCK this is unnecessary",
       "revId": "7fea00d77118e10152377e002896bf302b9d634c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
