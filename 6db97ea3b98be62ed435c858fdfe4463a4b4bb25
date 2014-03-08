@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bc586570_41e6c198",
+        "filename": "kernel/power/wakeup_reason.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2014-03-08T01:06:57Z",
+      "side": 1,
+      "message": "Should move the printk after the spin_unlock, although this is expected to never be hit or be rare.",
+      "range": {
+        "startLine": 83,
+        "startChar": 2,
+        "endLine": 83,
+        "endChar": 8
+      },
+      "revId": "6db97ea3b98be62ed435c858fdfe4463a4b4bb25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
