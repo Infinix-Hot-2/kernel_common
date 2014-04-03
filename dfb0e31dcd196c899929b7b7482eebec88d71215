@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "59b3fbf9_5705ccdd",
+        "filename": "android/configs/android-base.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-04-03T22:24:54Z",
+      "side": 1,
+      "message": "Are the netfilter changes required?\n\nIn the past, some netfilters conntrack helpers were broken and would lead to dropped packets. E.g. SIP can\u0027t handle ipv6 fragments and tells conntrack to NF_DROP.\nHave these setting been tested on a device?",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 38
+      },
+      "revId": "dfb0e31dcd196c899929b7b7482eebec88d71215",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
