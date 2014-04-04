@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "198a632f_ad5cfdb5",
+        "filename": "android/configs/android-base.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2014-04-04T19:07:31Z",
+      "side": 1,
+      "message": "Seems to produce a warning even with the fixed defconfig because the final .config defines it to the default value in security/Kconfig, based on architecture.\n\nValue requested for CONFIG_LSM_MMAP_MIN_ADDR not in final .config\n\nRequested value:  # CONFIG_LSM_MMAP_MIN_ADDR is not set\n\nActual value:     CONFIG_LSM_MMAP_MIN_ADDR\u003d32768",
+      "parentUuid": "19c5035d_fecb108c",
+      "revId": "dfb0e31dcd196c899929b7b7482eebec88d71215",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "59b3fbf9_5705ccdd",
         "filename": "android/configs/android-base.cfg",
         "patchSetId": 1
