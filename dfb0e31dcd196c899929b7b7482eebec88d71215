@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "19c5035d_fecb108c",
+        "filename": "android/configs/android-base.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-04-04T18:56:22Z",
+      "side": 1,
+      "message": "Add\n   # CONFIG_LSM_MMAP_MIN_ADDR is not set\n\nso that any other kernels that we don\u0027t control will see a warning when the merge the android-base.cfg.",
+      "revId": "dfb0e31dcd196c899929b7b7482eebec88d71215",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "59b3fbf9_5705ccdd",
         "filename": "android/configs/android-base.cfg",
         "patchSetId": 1
