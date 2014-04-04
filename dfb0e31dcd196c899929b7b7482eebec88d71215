@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "999e536b_14e0ba7b",
+        "filename": "android/configs/android-base.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-04-04T20:01:01Z",
+      "side": 1,
+      "message": "I see your point about the warning showing up when everything should be ok.\nmerge_config.sh should handle something like:\n SED_CONFIG_THAT_SHOULD_BE_DEFAULT_IN_BASE_FILE_EXP\u003d\"s/^\\(# \\)\\{0,1\\}\\(CONFIG_[a-zA-Z0-9_]*\\)!.*should be non-existant in base.*/\\2/p\"\n\n\n* With the \"# ... is not set\"\n\n priv_manta $ scripts/kconfig/merge_config.sh arch/arm/configs/manta_defconfig android/configs/android-base.cfg android/configs/android-recommended.cfg\n   Using arch/arm/configs/manta_defconfig as base\n   Merging android/configs/android-base.cfg\n   Value of CONFIG_LSM_MMAP_MIN_ADDR is redefined by fragment android/configs/android-base.cfg:\n   Previous value: CONFIG_LSM_MMAP_MIN_ADDR\u003d4096\n   New value: # CONFIG_LSM_MMAP_MIN_ADDR is not set\n\n   Merging android/configs/android-recommended.cfg\n   scripts/kconfig/conf --alldefconfig Kconfig\n   #\n   # configuration written to .config\n   #\n   Value requested for CONFIG_LSM_MMAP_MIN_ADDR not in final .config\n   Requested value:  # CONFIG_LSM_MMAP_MIN_ADDR is not set\n   Actual value:     CONFIG_LSM_MMAP_MIN_ADDR\u003d32768\n\n $ make savedefconfig\n   scripts/kconfig/conf --savedefconfig\u003ddefconfig Kconfig\n $ grep CONFIG_LSM_MMAP_MIN_ADDR .config defconfig\n   .config:CONFIG_LSM_MMAP_MIN_ADDR\u003d32768  \u003c\u003c\u003c happiness.\n\n \n* And without the \"# ... is not set\"\n\n $ scripts/kconfig/merge_config.sh arch/arm/configs/manta_defconfig android/configs/android-base.cfg android/configs/android-recommended.cfg\n   Using arch/arm/configs/manta_defconfig as base\n   Merging android/configs/android-base.cfg\n   Merging android/configs/android-recommended.cfg\n   scripts/kconfig/conf --alldefconfig Kconfig\n   #\n   # configuration written to .config\n   #\n\n $ make savedefconfig\n   scripts/kconfig/conf --savedefconfig\u003ddefconfig Kconfig\n $ grep CONFIG_LSM_MMAP_MIN_ADDR .config defconfig\n   .config:CONFIG_LSM_MMAP_MIN_ADDR\u003d4096  \u003c\u003c\u003c meh-ness.\n   defconfig:CONFIG_LSM_MMAP_MIN_ADDR\u003d4096  \u003c\u003c\u003c meh-ness.\n\n \n* better merge_config?\n  diff --git a/scripts/kconfig/merge_config.sh b/scripts/kconfig/merge_config.sh\nindex 974d5cb..70a000d 100755\n--- a/scripts/kconfig/merge_config.sh\n+++ b/scripts/kconfig/merge_config.sh\n@@ -72,0 +73 @@ SED_CONFIG_EXP\u003d\"s/^\\(# \\)\\{0,1\\}\\(CONFIG_[a-zA-Z0-9_]*\\)[\u003d ].*/\\2/p\"\n+SED_CONFIG_WANTED_DEFAULT_IN_BASE_EXP\u003d\"s/^# \\(CONFIG_[a-zA-Z0-9_]*\\) .*should be default.*//p\"\n@@ -118 +119 @@ make KCONFIG_ALLCONFIG\u003d$TMP_FILE $ALLTARGET\n-for CFG in $(sed -n \"$SED_CONFIG_EXP\" $TMP_FILE); do\n+for CFG in $(sed \"$SED_CONFIG_WANTED_DEFAULT_IN_BASE_EXP\" $TMP_FILE | sed -n \"$SED_CONFIG_EXP\"); do",
+      "parentUuid": "198a632f_ad5cfdb5",
+      "revId": "dfb0e31dcd196c899929b7b7482eebec88d71215",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "59b3fbf9_5705ccdd",
         "filename": "android/configs/android-base.cfg",
         "patchSetId": 1
