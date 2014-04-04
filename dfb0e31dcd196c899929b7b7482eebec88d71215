@@ -40,6 +40,24 @@
       "revId": "dfb0e31dcd196c899929b7b7482eebec88d71215",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f9966f57_cc0eaf4e",
+        "filename": "android/configs/android-base.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2014-04-04T12:20:18Z",
+      "side": 1,
+      "message": "In addition to hammerhead, the options are also already enabled in manta_defconfig, flo_defconfig, mako_defconfig and tegra3_android_defconfig, so these have been enabled in actual devices for a while (even back in -jb-mr2 branches in addition to the kitkat branches).  Not enabled in goldfish_armv7_defconfig presently, should likely make that one consistent.\nIf you\u0027d prefer them moved to -recommended, I can do that; it just seemed out of place to have all the NETFILTER options except for those here in -base.",
+      "parentUuid": "79d51fff_a3798453",
+      "revId": "dfb0e31dcd196c899929b7b7482eebec88d71215",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
