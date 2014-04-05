@@ -22,6 +22,30 @@
       "revId": "eaa5d5dc80a1617e4915ef311cc59812f8125fe5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f96f4f39_e73d3ccc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-04-05T05:26:45Z",
+      "side": 1,
+      "message": "when it does have something like FIQ_GLUE I expect it to be completely different, CONFIG_TRUSTZONE_NMI or something.  I\u0027m going to move CONFIG_FIQ_GLUE into fiq_debugger_arm.c",
+      "parentUuid": "39764713_756492f6",
+      "range": {
+        "startLine": 9,
+        "startChar": 27,
+        "endLine": 9,
+        "endChar": 28
+      },
+      "revId": "eaa5d5dc80a1617e4915ef311cc59812f8125fe5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
