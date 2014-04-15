@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "99e49352_3efb60e6",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger_arm64.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-04-15T22:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b964f7c8_1a477d6e",
+      "range": {
+        "startLine": 29,
+        "startChar": 34,
+        "endLine": 29,
+        "endChar": 36
+      },
+      "revId": "7c6f7cdf74a4051430ecc9c21fd74234f0d4892f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "198c23b9_91f52c66",
         "filename": "drivers/staging/android/fiq_debugger/fiq_debugger_arm64.c",
         "patchSetId": 2
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "b97b175f_7c1159dc",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger_arm64.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-04-15T22:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "198c23b9_91f52c66",
+      "revId": "7c6f7cdf74a4051430ecc9c21fd74234f0d4892f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9980137b_ca6e1288",
         "filename": "drivers/staging/android/fiq_debugger/fiq_debugger_arm64.c",
         "patchSetId": 2
@@ -53,6 +95,30 @@
       "writtenOn": "2014-04-15T02:50:28Z",
       "side": 1,
       "message": "?",
+      "range": {
+        "startLine": 167,
+        "startChar": 8,
+        "endLine": 167,
+        "endChar": 9
+      },
+      "revId": "7c6f7cdf74a4051430ecc9c21fd74234f0d4892f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b97b175f_7c6a3948",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger_arm64.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-04-15T22:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9980137b_ca6e1288",
       "range": {
         "startLine": 167,
         "startChar": 8,
