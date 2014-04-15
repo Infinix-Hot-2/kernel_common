@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "198c23b9_91dc4cfc",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger_priv.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-04-15T02:43:27Z",
+      "side": 1,
+      "message": "A more generic command dispatcher may be a better solution. We could add any architecture specific commands instead of four hardcoded commands.",
+      "revId": "e7c2658e65955c275b91e55cb246243e47bcb736",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
