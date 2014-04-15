@@ -52,6 +52,24 @@
       "revId": "47afe534be82cfc2ef9c51ac989a9d6175faed09",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99e49352_fe00d822",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 464,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-04-15T22:35:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b964f7c8_294a399d",
+      "revId": "47afe534be82cfc2ef9c51ac989a9d6175faed09",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
