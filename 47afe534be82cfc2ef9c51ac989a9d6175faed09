@@ -16,6 +16,24 @@
       "revId": "47afe534be82cfc2ef9c51ac989a9d6175faed09",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99e49352_005b9bc0",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 464,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-04-15T18:40:58Z",
+      "side": 1,
+      "message": "consistency, and it seemed unnecessary.  why would you care if the pointer itself is const?",
+      "parentUuid": "9980137b_2ac3fe4b",
+      "revId": "47afe534be82cfc2ef9c51ac989a9d6175faed09",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
