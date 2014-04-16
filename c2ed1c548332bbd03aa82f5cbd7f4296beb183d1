@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "993733c3_9d4b73f4",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger_arm64.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-04-16T19:31:56Z",
+      "side": 1,
+      "message": "Why is this at the end? You print the sp registers in the opposite order.",
+      "revId": "c2ed1c548332bbd03aa82f5cbd7f4296beb183d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "85e7c793_ab081944",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger_arm64.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-04-16T19:31:56Z",
+      "side": 1,
+      "message": "Do we want to also dump user-mode stack traces?",
+      "revId": "c2ed1c548332bbd03aa82f5cbd7f4296beb183d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
