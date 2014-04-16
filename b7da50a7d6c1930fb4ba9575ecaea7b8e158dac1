@@ -16,6 +16,24 @@
       "revId": "b7da50a7d6c1930fb4ba9575ecaea7b8e158dac1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "993733c3_3dae077c",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-04-16T19:15:04Z",
+      "side": 1,
+      "message": "See the commit message. It\u0027s not in the irq registers, so I took it out.  I updated allregs below to use cpsr to highlight the active mode, so its easy to pick out spsr from there.",
+      "parentUuid": "85e7c793_28fe4f1b",
+      "revId": "b7da50a7d6c1930fb4ba9575ecaea7b8e158dac1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
