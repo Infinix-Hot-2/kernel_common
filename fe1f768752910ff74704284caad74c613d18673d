@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "19750377_b8fe954b",
+        "filename": "net/netfilter/xt_qtaguid.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 2003,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-04-16T02:09:07Z",
+      "side": 1,
+      "message": "make_kuid(\u0026init_user_ns, uid_int)?\n\nand then instead of from_kuid(\u0026init_user_ns, uid) just use uid_int.",
+      "range": {
+        "startLine": 2003,
+        "startChar": 7,
+        "endLine": 2003,
+        "endChar": 17
+      },
+      "revId": "fe1f768752910ff74704284caad74c613d18673d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "994e5355_71cfd869",
+        "filename": "net/netfilter/xt_qtaguid.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 2038,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-04-16T02:09:07Z",
+      "side": 1,
+      "message": "Because the \u0026init_user_ns does not change, whenever this func said uid, just use uid_int.",
+      "range": {
+        "startLine": 2038,
+        "startChar": 6,
+        "endLine": 2038,
+        "endChar": 54
+      },
+      "revId": "fe1f768752910ff74704284caad74c613d18673d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19750377_585d81d6",
+        "filename": "net/netfilter/xt_qtaguid.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 2210,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-04-16T02:09:07Z",
+      "side": 1,
+      "message": "Was 0 so that CT_DEBUG() didn\u0027t spew out random stuff in case of scan failure.",
+      "range": {
+        "startLine": 2210,
+        "startChar": 14,
+        "endLine": 2210,
+        "endChar": 21
+      },
+      "revId": "fe1f768752910ff74704284caad74c613d18673d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19750377_98347960",
+        "filename": "net/netfilter/xt_qtaguid.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 2222,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-04-16T02:09:07Z",
+      "side": 1,
+      "message": "make_kuid(\u0026init_user_ns, uid_int) and then use uid_int instead of from_kuid(..., uid)?",
+      "range": {
+        "startLine": 2222,
+        "startChar": 7,
+        "endLine": 2222,
+        "endChar": 17
+      },
+      "revId": "fe1f768752910ff74704284caad74c613d18673d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19750377_385d25b1",
+        "filename": "net/netfilter/xt_qtaguid.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 2267,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-04-16T02:09:07Z",
+      "side": 1,
+      "message": "Could use uid_int here if uid \u003d make_kuid(\u0026init_user_ns, uid_int)",
+      "range": {
+        "startLine": 2267,
+        "startChar": 44,
+        "endLine": 2267,
+        "endChar": 72
+      },
+      "revId": "fe1f768752910ff74704284caad74c613d18673d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "994e5355_51df34f0",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-04-16T02:09:07Z",
+      "side": 1,
+      "message": "pr_debug() should stay at the end of the socket_match().\nIt was previously shown after socket_match() had processed the info flags which could have affected what was displayed.",
+      "range": {
+        "startLine": 192,
+        "startChar": 1,
+        "endLine": 195,
+        "endChar": 46
+      },
+      "revId": "fe1f768752910ff74704284caad74c613d18673d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
