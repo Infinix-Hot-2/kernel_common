@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "853507d4_32c5b040",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger_arm64.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-04-17T00:39:07Z",
+      "side": 1,
+      "message": "All the useful information here gets repeated in walk_stackframe, and lr, is not always part of the stack trace  so it is probably not useful to print here.",
+      "revId": "b80e42da4ce6d57e3335e4ecc8acd2eb2509cfa6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
