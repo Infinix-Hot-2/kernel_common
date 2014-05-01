@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ea205093_1b03e3a5",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 458,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-05-01T02:27:26Z",
+      "side": 1,
+      "message": "Isn\u0027t this the same as\n  if (result \u0026\u0026 denied) {\n    log(ab, \" permissive\");\n  }\nbased on avc_has_perm_noaudit() returning 0 for granted?",
+      "range": {
+        "startLine": 458,
+        "startChar": 35,
+        "endLine": 458,
+        "endChar": 41
+      },
+      "revId": "f12ecc7dad6f46a4fbe1637cae284d3bc485bc7e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
