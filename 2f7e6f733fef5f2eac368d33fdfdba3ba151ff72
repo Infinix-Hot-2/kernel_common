@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aacbb83b_b1d418f3",
+        "filename": "drivers/staging/android/fiq_debugger/Kconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-05-03T04:41:06Z",
+      "side": 1,
+      "message": "select the pstore ram backend too?",
+      "revId": "2f7e6f733fef5f2eac368d33fdfdba3ba151ff72",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
