@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aa4d7811_ba5478ff",
+        "filename": "Documentation/networking/ip-sysctl.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-05-12T23:46:31Z",
+      "side": 1,
+      "message": "FALSE?",
+      "range": {
+        "startLine": 30,
+        "startChar": 10,
+        "endLine": 30,
+        "endChar": 11
+      },
+      "revId": "3356997e1e1b2aa9959f046203e6d0b193bbd7f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa7bb835_25970269",
+        "filename": "Documentation/networking/ip-sysctl.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 1062,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-05-12T23:46:31Z",
+      "side": 1,
+      "message": "FALSE?",
+      "range": {
+        "startLine": 1062,
+        "startChar": 10,
+        "endLine": 1062,
+        "endChar": 11
+      },
+      "revId": "3356997e1e1b2aa9959f046203e6d0b193bbd7f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa7bb835_051a0644",
+        "filename": "net/ipv4/icmp.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-05-12T23:46:31Z",
+      "side": 1,
+      "message": "The pattern seems to be to have the same order between arguments and struct member.",
+      "range": {
+        "startLine": 393,
+        "startChar": 1,
+        "endLine": 398,
+        "endChar": 27
+      },
+      "revId": "3356997e1e1b2aa9959f046203e6d0b193bbd7f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
