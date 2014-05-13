@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2a698874_0a0d3b53",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-05-13T01:18:03Z",
+      "side": 1,
+      "message": "/dev/ is under control of userspace, if this is really necessary (and I don\u0027t think it is) it should be implemented in ueventd, which is what creates the /dev/ nodes.",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "f08d1bc70593f8c18c9b8da238ad207855f17967",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4a64fc99_ab967534",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-05-13T01:18:03Z",
+      "side": 1,
+      "message": "that is often not true, we support many of these devices over USB as well as the built in one.",
+      "range": {
+        "startLine": 18,
+        "startChar": 33,
+        "endLine": 18,
+        "endChar": 53
+      },
+      "revId": "f08d1bc70593f8c18c9b8da238ad207855f17967",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a698874_6732f22e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-05-13T01:18:03Z",
+      "side": 1,
+      "message": "Who do you mean by developer?  Application developers should not be opening devices directly.",
+      "range": {
+        "startLine": 32,
+        "startChar": 14,
+        "endLine": 32,
+        "endChar": 23
+      },
+      "revId": "f08d1bc70593f8c18c9b8da238ad207855f17967",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8a6a7464_33643a5b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-05-13T01:18:03Z",
+      "side": 1,
+      "message": "The scan is more flexible and not very difficult, I don\u0027t think this is a justification for adding shortcut device nodes.",
+      "range": {
+        "startLine": 38,
+        "startChar": 51,
+        "endLine": 38,
+        "endChar": 74
+      },
+      "revId": "f08d1bc70593f8c18c9b8da238ad207855f17967",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
