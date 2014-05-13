@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "8a6a7464_9940a71a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1043015
+      },
+      "writtenOn": "2014-05-13T04:58:06Z",
+      "side": 1,
+      "message": "Thank you for you reply !!\n\n1. I wanted to refer to /dev/input/event_proximity and not /dev/event_proximity. Sorry for mistyping.\n\n2. As I checked code /core/init/devices.c, there are about seven parameters to create /dev/input/\u003cevent\u003e nodes namely, \"Action\", \"Devpath\", \"Subsystem\", \"Firmware\", \"Major\", \"Minor\", \"Partn\", \"Partname\", \"Devname\".\nAll these parameters are set by kernel input susbsytem during input_register_call and userspace (devices.c) just use these paramaters to create /dev/input/\u003cevent,so userspace is really not able to control it.\nFor example:\nMajor \u003d 13 - fixed by kernel input subsytem for all input devices\nMinor \u003d X - this number x is also set by kernel as per boot up sequence, and so userspace does not really know whether this minor is for proximity or accelerometer device ?\nDevname \u003d /input/event\u003cx\u003e - again, as you know, this x is dependent on minor.\nSo, if we wanted to set name using userspace, we cannot do it because we are not able to identify the device in interest.",
+      "parentUuid": "2a698874_0a0d3b53",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "f08d1bc70593f8c18c9b8da238ad207855f17967",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4a64fc99_ab967534",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
