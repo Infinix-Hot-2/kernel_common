@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "2aeee834_e8f30284",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-05-14T03:04:18Z",
+      "side": 1,
+      "message": "devpath is probably enough to associate the device with a specific driver, but I still don\u0027t see the point.  HALs that don\u0027t want to search can probably also find the correct event node through /sys/bus/i2c/...",
+      "parentUuid": "8a6a7464_9940a71a",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "f08d1bc70593f8c18c9b8da238ad207855f17967",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4a64fc99_ab967534",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -96,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "caaaaceb_cc960f36",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-05-14T03:04:18Z",
+      "side": 1,
+      "message": "Input devices can be connected over USB, either inside the device (that\u0027s how its done on most x86 laptops), or added later by the user with an OTG port.",
+      "parentUuid": "8a6a7464_d9b93fdd",
+      "range": {
+        "startLine": 18,
+        "startChar": 33,
+        "endLine": 18,
+        "endChar": 53
+      },
+      "revId": "f08d1bc70593f8c18c9b8da238ad207855f17967",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2a698874_6732f22e",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -131,6 +179,30 @@
       "side": 1,
       "message": "Yes, application developers and specifically HAL developers because HAL interacts with kernel.\nSorry, Can you please explain or elaborate why application should not open device directly ?",
       "parentUuid": "2a698874_6732f22e",
+      "range": {
+        "startLine": 32,
+        "startChar": 14,
+        "endLine": 32,
+        "endChar": 23
+      },
+      "revId": "f08d1bc70593f8c18c9b8da238ad207855f17967",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2aeee834_0803c6a5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-05-14T03:04:18Z",
+      "side": 1,
+      "message": "Application developers must not open devices directly, they must use framework APIs, otherwise they are not portable.  HALs generally open the files once on startup, so the burden of searching doesn\u0027t matter.  Also, as above, they can find the exact name through sysfs.",
+      "parentUuid": "4a64fc99_710e2ac3",
       "range": {
         "startLine": 32,
         "startChar": 14,
