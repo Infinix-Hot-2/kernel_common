@@ -40,6 +40,24 @@
       "revId": "3e192a09e4def4c832a04b44a7e7c185dfe22a34",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dff7d045_51af0470",
+        "filename": "net/ipv4/inet_connection_sock.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-05-16T20:57:31Z",
+      "side": 1,
+      "message": "The matching 3.4 patch used ireq. But not worth the tweak.",
+      "parentUuid": "9f01d8f5_db17b35c",
+      "revId": "3e192a09e4def4c832a04b44a7e7c185dfe22a34",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
