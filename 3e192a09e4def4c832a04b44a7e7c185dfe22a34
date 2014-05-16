@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ff1cc50_a90025cd",
+        "filename": "net/ipv4/inet_connection_sock.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 1037321
+      },
+      "writtenOn": "2014-05-16T20:39:39Z",
+      "side": 1,
+      "message": "ireq?",
+      "range": {
+        "startLine": 457,
+        "startChar": 46,
+        "endLine": 457,
+        "endChar": 59
+      },
+      "revId": "3e192a09e4def4c832a04b44a7e7c185dfe22a34",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
