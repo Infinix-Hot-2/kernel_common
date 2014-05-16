@@ -22,6 +22,24 @@
       "revId": "3e192a09e4def4c832a04b44a7e7c185dfe22a34",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f01d8f5_db17b35c",
+        "filename": "net/ipv4/inet_connection_sock.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2014-05-16T20:49:42Z",
+      "side": 1,
+      "message": "That would be better, yes. Not sure it\u0027s worth fixing, though. This is a cherry-pick from net-next, and that has the same:\n\nhttps://kernel.googlesource.com/pub/scm/linux/kernel/git/davem/net-next/+/84f39b08d7868ce10eeaf640627cb89777f0ae93/net/ipv4/inet_connection_sock.c\n\nThere should be no effect on the generated binary, because inet_rsk is static inline and contains only the statement \"return (struct inet_request_sock *)sk;\". So it\u0027s almost certainly optimized out by the compiler.",
+      "parentUuid": "3ff1cc50_a90025cd",
+      "revId": "3e192a09e4def4c832a04b44a7e7c185dfe22a34",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
