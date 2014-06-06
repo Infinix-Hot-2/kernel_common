@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f26384e_ffc2ea6b",
+        "filename": "drivers/usb/gadget/android.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1003977
+      },
+      "writtenOn": "2014-06-06T19:32:34Z",
+      "side": 1,
+      "message": "Should be static",
+      "revId": "e2331da15e9c47c25ecd11d4c35877c7e2e2771a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
