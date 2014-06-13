@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df8b50a1_6cf5235f",
+        "filename": "drivers/usb/gadget/f_mass_storage.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2944,
+      "author": {
+        "id": 1022308
+      },
+      "writtenOn": "2014-06-13T05:01:03Z",
+      "side": 1,
+      "message": "Won\u0027t be this specific to android gadget driver and would effect if we use other gadget driver ?",
+      "revId": "2a5750fb56b6d708f0aecd29d89f867881289e79",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
