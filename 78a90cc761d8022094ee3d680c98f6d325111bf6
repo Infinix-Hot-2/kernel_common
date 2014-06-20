@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e4db2937_a06c14d9",
+        "filename": "net/ipv4/route.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2377,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-06-20T21:37:19Z",
+      "side": 1,
+      "message": "I\u0027ll just trust you that the ID of the interface is more important than the current userid.",
+      "range": {
+        "startLine": 2377,
+        "startChar": 9,
+        "endLine": 2377,
+        "endChar": 12
+      },
+      "revId": "78a90cc761d8022094ee3d680c98f6d325111bf6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
