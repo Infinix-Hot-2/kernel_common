@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "04df5d24_a1e97891",
+        "filename": "net/ipv4/route.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-06-20T21:46:35Z",
+      "side": 0,
+      "message": "Why remove const? all callees take const.\nAnd elsewhere also.",
+      "range": {
+        "startLine": 552,
+        "startChar": 53,
+        "endLine": 552,
+        "endChar": 58
+      },
+      "revId": "ee82cd53bd2fc69c161d4634fa36c991d5a8f24c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
