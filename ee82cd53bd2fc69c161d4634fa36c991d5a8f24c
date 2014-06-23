@@ -22,6 +22,24 @@
       "revId": "ee82cd53bd2fc69c161d4634fa36c991d5a8f24c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8458ad70_234598d4",
+        "filename": "net/ipv4/route.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2014-06-23T16:00:50Z",
+      "side": 0,
+      "message": "I removed const because sock_i_uid locks the sk-\u003esk_callback_lock, so it modifies sk. Not removing it causes a compiler warning.",
+      "parentUuid": "04df5d24_a1e97891",
+      "revId": "ee82cd53bd2fc69c161d4634fa36c991d5a8f24c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
