@@ -22,6 +22,24 @@
       "revId": "78a90cc761d8022094ee3d680c98f6d325111bf6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a493f168_ab0789e7",
+        "filename": "net/ipv4/route.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2377,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2014-06-24T06:56:28Z",
+      "side": 1,
+      "message": "What we\u0027re doing here is telling userspace what would happen if the given route were looked up (i.e., \"ip -4 route get\").\n\nIf you look at the code below, it does:\n\n    if (iif) {\n        ... ip_route_input() ...\n    } else {\n        ... ip_route_output_key() ...\n    }\n\nSo basically, here \"if (iif)\" means \"is this an input packet?\". If it\u0027s an input packet, it gets routed using ip_route_input, otherwise it gets routed using ip_route_output_key.\n\nFor ip_route_input there\u0027s no socket and no struct flowi4 to use in the lookup, so the UID doesn\u0027t make sense.\n\nIn this case, we set fl4.flowi4_uid to INVALID_UID, so that when we then call rt_fill_info to decide what we tell userspace about the route, the result does not contain a UID.\n\nIn other words, we don\u0027t set UID here because when I do \"ip -4 route get iif eth0 8.8.8.8\" I want to see something like:\n\n    8.8.8.8 from 192.168.9.4 via 172.23.69.254 dev eth0 \n\nand not:\n\n    8.8.8.8 from 192.168.9.4 via 172.23.69.254 dev eth0 uid 12345\n\nWhere 12345 happens to be my current UID.",
+      "parentUuid": "e4db2937_a06c14d9",
+      "revId": "78a90cc761d8022094ee3d680c98f6d325111bf6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
