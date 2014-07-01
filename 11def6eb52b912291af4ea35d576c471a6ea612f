@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "64b2d95d_b1f5e068",
+        "filename": "drivers/input/keyreset.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2014-07-01T21:46:41Z",
+      "side": 1,
+      "message": "what is this needed for?",
+      "revId": "11def6eb52b912291af4ea35d576c471a6ea612f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
