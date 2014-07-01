@@ -1,0 +1,199 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "04f3dd1b_b8c2e9ca",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_rtt.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T23:27:19Z",
+      "side": 1,
+      "message": "Add blank line",
+      "range": {
+        "startLine": 115,
+        "startChar": 0,
+        "endLine": 115,
+        "endChar": 7
+      },
+      "revId": "49cd2aaf345b0b12657ba0994f442eb27d87e09e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04f3dd1b_38d899ac",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_rtt.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T23:27:19Z",
+      "side": 1,
+      "message": "RTT report and RTT result has different distance field - uint32 and int. I would suggest to unify them.",
+      "range": {
+        "startLine": 151,
+        "startChar": 8,
+        "endLine": 151,
+        "endChar": 16
+      },
+      "revId": "49cd2aaf345b0b12657ba0994f442eb27d87e09e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04f3dd1b_f8cc71fe",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_rtt.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T23:27:19Z",
+      "side": 1,
+      "message": "Add tabs",
+      "revId": "49cd2aaf345b0b12657ba0994f442eb27d87e09e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04f3dd1b_58b2c584",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_rtt.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T23:27:19Z",
+      "side": 1,
+      "message": "add tabs",
+      "revId": "49cd2aaf345b0b12657ba0994f442eb27d87e09e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4a77122_6b0b8143",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 719,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T23:27:19Z",
+      "side": 1,
+      "message": "Please add blank line above",
+      "range": {
+        "startLine": 719,
+        "startChar": 0,
+        "endLine": 719,
+        "endChar": 1
+      },
+      "revId": "49cd2aaf345b0b12657ba0994f442eb27d87e09e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4a77122_eb481174",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 793,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T23:27:19Z",
+      "side": 1,
+      "message": "Add blank line above",
+      "range": {
+        "startLine": 793,
+        "startChar": 1,
+        "endLine": 793,
+        "endChar": 7
+      },
+      "revId": "49cd2aaf345b0b12657ba0994f442eb27d87e09e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04f3dd1b_7807c17e",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 861,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T23:27:19Z",
+      "side": 1,
+      "message": "Kind of obsolete - add \"leave\" to previous line",
+      "range": {
+        "startLine": 861,
+        "startChar": 1,
+        "endLine": 861,
+        "endChar": 7
+      },
+      "revId": "49cd2aaf345b0b12657ba0994f442eb27d87e09e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4efa930_526d82d2",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 865,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T23:27:19Z",
+      "side": 1,
+      "message": "No need",
+      "range": {
+        "startLine": 865,
+        "startChar": 2,
+        "endLine": 865,
+        "endChar": 6
+      },
+      "revId": "49cd2aaf345b0b12657ba0994f442eb27d87e09e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04f3dd1b_9823ad0f",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 878,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T23:27:19Z",
+      "side": 1,
+      "message": "Please add blank line above",
+      "range": {
+        "startLine": 878,
+        "startChar": 1,
+        "endLine": 878,
+        "endChar": 18
+      },
+      "revId": "49cd2aaf345b0b12657ba0994f442eb27d87e09e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
