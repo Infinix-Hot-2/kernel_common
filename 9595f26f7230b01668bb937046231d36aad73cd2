@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "c4fc65ef_fc93c943",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_pno.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1410,
+      "author": {
+        "id": 1049528
+      },
+      "writtenOn": "2014-07-01T18:26:36Z",
+      "side": 1,
+      "message": "i can\u0027t think of why i did it now, i guess i will move this down.",
+      "parentUuid": "04f3dd1b_fead8176",
+      "range": {
+        "startLine": 1410,
+        "startChar": 1,
+        "endLine": 1410,
+        "endChar": 5
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "24ee2135_3fe1a7b1",
         "filename": "drivers/net/wireless/bcmdhd/dhd_pno.c",
         "patchSetId": 1
@@ -59,6 +83,30 @@
       "writtenOn": "2014-07-01T16:38:10Z",
       "side": 1,
       "message": "err is Ok in this case. And you are not jumping to exit; Is it intentional?",
+      "range": {
+        "startLine": 2975,
+        "startChar": 2,
+        "endLine": 2975,
+        "endChar": 8
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4efa930_8324e2cf",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_pno.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2975,
+      "author": {
+        "id": 1049528
+      },
+      "writtenOn": "2014-07-01T18:26:36Z",
+      "side": 1,
+      "message": "yes i do not want to do reinitialize prof, when gscan is running this function shouldnt touch anything.",
+      "parentUuid": "24ee2135_3fe1a7b1",
       "range": {
         "startLine": 2975,
         "startChar": 2,
@@ -94,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "c4fc65ef_1cb2f5ea",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_pno.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3274,
+      "author": {
+        "id": 1049528
+      },
+      "writtenOn": "2014-07-01T18:26:36Z",
+      "side": 1,
+      "message": "This is old KitKat code , the old code has a bug the pointer isn\u0027t incremented and also free doesnt happen. this is not gscan related and i just took in the fix for legacy support (gscan doesnt use this, i am hesitant to add code to this)",
+      "parentUuid": "e4efa930_bda3ff8c",
+      "range": {
+        "startLine": 3274,
+        "startChar": 43,
+        "endLine": 3274,
+        "endChar": 44
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e4efa930_7dc21719",
         "filename": "drivers/net/wireless/bcmdhd/dhd_pno.c",
         "patchSetId": 1
@@ -105,6 +177,30 @@
       "writtenOn": "2014-07-01T16:38:10Z",
       "side": 1,
       "message": "And what happens if pno_params_arr will be changed?",
+      "range": {
+        "startLine": 3683,
+        "startChar": 0,
+        "endLine": 3683,
+        "endChar": 2
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "440235bc_9849f549",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_pno.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3683,
+      "author": {
+        "id": 1049528
+      },
+      "writtenOn": "2014-07-01T18:26:36Z",
+      "side": 1,
+      "message": "Its an array inside of a struct, the contents may change and hence the mutex below, but the pointer will not.",
+      "parentUuid": "e4efa930_7dc21719",
       "range": {
         "startLine": 3683,
         "startChar": 0,
@@ -199,6 +295,30 @@
     },
     {
       "key": {
+        "uuid": "440235bc_785341f2",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1049528
+      },
+      "writtenOn": "2014-07-01T18:26:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "24ee2135_9fa8b368",
+      "range": {
+        "startLine": 6,
+        "startChar": 7,
+        "endLine": 6,
+        "endChar": 8
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "04f3dd1b_be72d965",
         "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.h",
         "patchSetId": 1
@@ -210,6 +330,30 @@
       "writtenOn": "2014-07-01T16:38:10Z",
       "side": 1,
       "message": "We need GPL header",
+      "range": {
+        "startLine": 6,
+        "startChar": 7,
+        "endLine": 6,
+        "endChar": 8
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "640d79e9_b9167f1d",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1049528
+      },
+      "writtenOn": "2014-07-01T18:26:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "04f3dd1b_be72d965",
       "range": {
         "startLine": 6,
         "startChar": 7,
