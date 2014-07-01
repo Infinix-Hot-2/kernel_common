@@ -16,6 +16,24 @@
       "revId": "11def6eb52b912291af4ea35d576c471a6ea612f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4fc65ef_df151f11",
+        "filename": "drivers/input/keyreset.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1045980
+      },
+      "writtenOn": "2014-07-01T21:49:47Z",
+      "side": 1,
+      "message": "Leftover from testing. I\u0027ll remove it.",
+      "parentUuid": "64b2d95d_b1f5e068",
+      "revId": "11def6eb52b912291af4ea35d576c471a6ea612f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
