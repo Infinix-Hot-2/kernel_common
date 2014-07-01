@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e4efa930_7dafb782",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T16:38:10Z",
+      "side": 1,
+      "message": "Why not to call:\nnet: wireless: bcmdhd: Add gscan support",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 3
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04f3dd1b_fead8176",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_pno.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1410,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T16:38:10Z",
+      "side": 1,
+      "message": "If you are protecting buffer processing, why not to put this line under mutex lock?",
+      "range": {
+        "startLine": 1410,
+        "startChar": 1,
+        "endLine": 1410,
+        "endChar": 5
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "24ee2135_3fe1a7b1",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_pno.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2975,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T16:38:10Z",
+      "side": 1,
+      "message": "err is Ok in this case. And you are not jumping to exit; Is it intentional?",
+      "range": {
+        "startLine": 2975,
+        "startChar": 2,
+        "endLine": 2975,
+        "endChar": 8
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4efa930_bda3ff8c",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_pno.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3274,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T16:38:10Z",
+      "side": 1,
+      "message": "I remember you added site protection for similar code. why not to use it here as well?",
+      "range": {
+        "startLine": 3274,
+        "startChar": 43,
+        "endLine": 3274,
+        "endChar": 44
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4efa930_7dc21719",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_pno.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3683,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T16:38:10Z",
+      "side": 1,
+      "message": "And what happens if pno_params_arr will be changed?",
+      "range": {
+        "startLine": 3683,
+        "startChar": 0,
+        "endLine": 3683,
+        "endChar": 2
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04f3dd1b_3e67e9a6",
+        "filename": "drivers/net/wireless/bcmdhd/include/wlioctl.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T16:38:10Z",
+      "side": 1,
+      "message": "IF you have #ifdef GSCAN - use it everywhere",
+      "range": {
+        "startLine": 231,
+        "startChar": 0,
+        "endLine": 231,
+        "endChar": 1
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "24ee2135_9fa8b368",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T16:38:10Z",
+      "side": 1,
+      "message": "We need GPL header",
+      "range": {
+        "startLine": 6,
+        "startChar": 7,
+        "endLine": 6,
+        "endChar": 8
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04f3dd1b_be72d965",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T16:38:10Z",
+      "side": 1,
+      "message": "We need GPL header",
+      "range": {
+        "startLine": 6,
+        "startChar": 7,
+        "endLine": 6,
+        "endChar": 8
+      },
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
