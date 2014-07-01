@@ -158,6 +158,24 @@
     },
     {
       "key": {
+        "uuid": "e4efa930_036d7285",
+        "filename": "drivers/net/wireless/bcmdhd/include/wlioctl.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-01T18:24:29Z",
+      "side": 1,
+      "message": "No, it was just a suggestion.",
+      "parentUuid": "c4fc65ef_5c859df4",
+      "revId": "9595f26f7230b01668bb937046231d36aad73cd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "24ee2135_9fa8b368",
         "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
         "patchSetId": 1
