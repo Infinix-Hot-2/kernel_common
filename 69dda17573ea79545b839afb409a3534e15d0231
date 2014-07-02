@@ -22,6 +22,29 @@
       "revId": "69dda17573ea79545b839afb409a3534e15d0231",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04cafddd_9a20bd91",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1048,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-02T22:51:09Z",
+      "side": 1,
+      "message": "32 is used in several places - please replace it with define",
+      "range": {
+        "startLine": 1048,
+        "startChar": 43,
+        "endLine": 1048,
+        "endChar": 45
+      },
+      "revId": "69dda17573ea79545b839afb409a3534e15d0231",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
