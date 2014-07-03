@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e4c6c9d8_9f538b26",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 968,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-03T00:02:08Z",
+      "side": 1,
+      "message": "Please move it under ifdef",
+      "range": {
+        "startLine": 968,
+        "startChar": 0,
+        "endLine": 968,
+        "endChar": 1
+      },
+      "revId": "69bd32dadf79cc685e9a95e1c42357ad1b84586f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04cafddd_d59fa64d",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1019,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-03T00:02:08Z",
+      "side": 1,
+      "message": "Should be %zu",
+      "range": {
+        "startLine": 1019,
+        "startChar": 32,
+        "endLine": 1019,
+        "endChar": 33
+      },
+      "revId": "69bd32dadf79cc685e9a95e1c42357ad1b84586f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84498d4f_183dcd49",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1032,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-03T00:02:08Z",
+      "side": 1,
+      "message": "Please add casting and why ptr++? I don\u0027t see you are using ptr later.",
+      "range": {
+        "startLine": 1032,
+        "startChar": 9,
+        "endLine": 1032,
+        "endChar": 10
+      },
+      "revId": "69bd32dadf79cc685e9a95e1c42357ad1b84586f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84498d4f_58375569",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1037,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-03T00:02:08Z",
+      "side": 1,
+      "message": "Should be %zu",
+      "range": {
+        "startLine": 1037,
+        "startChar": 31,
+        "endLine": 1037,
+        "endChar": 32
+      },
+      "revId": "69bd32dadf79cc685e9a95e1c42357ad1b84586f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84498d4f_383a9152",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgvendor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1046,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-03T00:02:08Z",
+      "side": 1,
+      "message": "Should be %zu",
+      "range": {
+        "startLine": 1046,
+        "startChar": 31,
+        "endLine": 1046,
+        "endChar": 32
+      },
+      "revId": "69bd32dadf79cc685e9a95e1c42357ad1b84586f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
