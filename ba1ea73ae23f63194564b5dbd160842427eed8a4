@@ -45,6 +45,24 @@
       "revId": "ba1ea73ae23f63194564b5dbd160842427eed8a4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7987e429_a9e31d38",
+        "filename": "drivers/net/wireless/bcmdhd/Makefile",
+        "patchSetId": 6
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1021673
+      },
+      "writtenOn": "2014-07-16T02:44:14Z",
+      "side": 1,
+      "message": "Hi Dmitry\nThis define is under CONFIG_BCMDHD_SDIO.\n\nThanks,\nEcco",
+      "parentUuid": "d9c1b053_a380a4ea",
+      "revId": "ba1ea73ae23f63194564b5dbd160842427eed8a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
