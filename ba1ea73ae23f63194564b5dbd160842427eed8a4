@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f9c4b462_e4f0e4ff",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-16T02:08:15Z",
+      "side": 1,
+      "message": "What version it is based on?",
+      "range": {
+        "startLine": 7,
+        "startChar": 41,
+        "endLine": 7,
+        "endChar": 42
+      },
+      "revId": "ba1ea73ae23f63194564b5dbd160842427eed8a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d9c1b053_a380a4ea",
+        "filename": "drivers/net/wireless/bcmdhd/Makefile",
+        "patchSetId": 6
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-16T02:08:15Z",
+      "side": 1,
+      "message": "FYI: it may not work for kernel that is using bcm4356",
+      "range": {
+        "startLine": 132,
+        "startChar": 2,
+        "endLine": 132,
+        "endChar": 11
+      },
+      "revId": "ba1ea73ae23f63194564b5dbd160842427eed8a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
