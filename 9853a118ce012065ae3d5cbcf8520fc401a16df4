@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d91530f5_dbf08476",
+        "filename": "drivers/usb/gadget/f_audio_source.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2014-07-21T23:02:13Z",
+      "side": 1,
+      "message": "Can you remove the trailing white space ?",
+      "range": {
+        "startLine": 27,
+        "startChar": 33,
+        "endLine": 27,
+        "endChar": 34
+      },
+      "revId": "9853a118ce012065ae3d5cbcf8520fc401a16df4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
