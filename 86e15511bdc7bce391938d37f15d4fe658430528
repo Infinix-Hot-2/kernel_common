@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "79b2845d_a5c3d640",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_pno.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-22T20:33:29Z",
+      "side": 1,
+      "message": "They all defined above",
+      "range": {
+        "startLine": 444,
+        "startChar": 0,
+        "endLine": 444,
+        "endChar": 2
+      },
+      "revId": "86e15511bdc7bce391938d37f15d4fe658430528",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "59b7804c_3938b308",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_pno.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 447,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-07-22T20:33:29Z",
+      "side": 1,
+      "message": "Already defined above",
+      "range": {
+        "startLine": 447,
+        "startChar": 0,
+        "endLine": 447,
+        "endChar": 6
+      },
+      "revId": "86e15511bdc7bce391938d37f15d4fe658430528",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
