@@ -45,6 +45,30 @@
       "revId": "86e15511bdc7bce391938d37f15d4fe658430528",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "59b7804c_e42fa2a6",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_pno.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 447,
+      "author": {
+        "id": 1049528
+      },
+      "writtenOn": "2014-07-22T20:37:26Z",
+      "side": 1,
+      "message": "No they are definitions for wrapper functions",
+      "parentUuid": "59b7804c_3938b308",
+      "range": {
+        "startLine": 447,
+        "startChar": 0,
+        "endLine": 447,
+        "endChar": 6
+      },
+      "revId": "86e15511bdc7bce391938d37f15d4fe658430528",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
