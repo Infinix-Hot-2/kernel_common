@@ -22,6 +22,30 @@
       "revId": "a6ddda63735db23d45716785fd9ab85563830ea3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9f95c00_2f121174",
+        "filename": "drivers/usb/gadget/f_audio_source.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1047636
+      },
+      "writtenOn": "2014-07-22T08:13:57Z",
+      "side": 1,
+      "message": "Sorry about that. Removed.",
+      "parentUuid": "b9123c0c_28016fd5",
+      "range": {
+        "startLine": 27,
+        "startChar": 33,
+        "endLine": 27,
+        "endChar": 34
+      },
+      "revId": "a6ddda63735db23d45716785fd9ab85563830ea3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
