@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f974b47c_d2b87c67",
+        "filename": "include/uapi/linux/fs.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-08-06T03:31:49Z",
+      "side": 1,
+      "message": "This change from (\u0027X\u0027, 122) to (\u0027f\u0027, 128) was suggested on linux-fsdevel.",
+      "range": {
+        "startLine": 157,
+        "startChar": 21,
+        "endLine": 157,
+        "endChar": 31
+      },
+      "revId": "687f999e1fbd3b553bccbd7f52996ae56c5e327e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
