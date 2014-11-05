@@ -16,6 +16,24 @@
       "revId": "cdd6e7ca02f6052ad011c8868e7ff399a36009bf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f533de7c_8b8cd591",
+        "filename": "drivers/net/wireless/bcmdhd/bcmsdh_linux.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2014-11-05T01:39:05Z",
+      "side": 1,
+      "message": "https://android-review.googlesource.com/#/c/112825/",
+      "parentUuid": "75028e8e_6900619f",
+      "revId": "cdd6e7ca02f6052ad011c8868e7ff399a36009bf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
