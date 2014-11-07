@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1544f239_5f473b15",
+        "filename": "mm/memcontrol.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 6970,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-11-07T21:31:45Z",
+      "side": 1,
+      "message": "subsys_cgroup_allow_attach?",
+      "range": {
+        "startLine": 6970,
+        "startChar": 17,
+        "endLine": 6970,
+        "endChar": 40
+      },
+      "revId": "ff202d8551920ad51d71e94ce6886fd94d00fa03",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
