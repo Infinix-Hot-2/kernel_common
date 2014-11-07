@@ -46,6 +46,30 @@
       "revId": "ff202d8551920ad51d71e94ce6886fd94d00fa03",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9531c2d3_a75d8aec",
+        "filename": "mm/memcontrol.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 6970,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-11-07T21:37:20Z",
+      "side": 1,
+      "message": "OK, I missed that the stub in linux/cgroup.h was for a different config flag (CONFIG_CGROUPS)",
+      "parentUuid": "b52c067c_cbf0c9f9",
+      "range": {
+        "startLine": 6970,
+        "startChar": 17,
+        "endLine": 6970,
+        "endChar": 40
+      },
+      "revId": "ff202d8551920ad51d71e94ce6886fd94d00fa03",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
