@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "753d2e9e_5da6674e",
+        "filename": "mm/memcontrol.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 6765,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-11-07T19:11:16Z",
+      "side": 1,
+      "message": "Is was about to say \"because this is copy-and-pasted from upstream code that does it this way\", but then I did a git blame and Colin wrote it.\n\nSo now I agree with Mark.  Move this into a helper, and while doing so pull out the capable() check like Andres suggested.",
+      "parentUuid": "35473640_755eda32",
+      "range": {
+        "startLine": 6765,
+        "startChar": 27,
+        "endLine": 6765,
+        "endChar": 49
+      },
+      "revId": "d939850f356e2d86a382dff89bef0f14a6a9e131",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1544f239_2e36c708",
         "filename": "mm/memcontrol.c",
         "patchSetId": 1
