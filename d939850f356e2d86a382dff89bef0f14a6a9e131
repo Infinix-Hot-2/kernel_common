@@ -22,6 +22,30 @@
       "revId": "d939850f356e2d86a382dff89bef0f14a6a9e131",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "35473640_32f8e85a",
+        "filename": "mm/memcontrol.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 6767,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-11-07T18:40:44Z",
+      "side": 1,
+      "message": "IMO copy-and-pasting a small amount of code is slightly preferable to modifying core kernel code.  kernel/sched is high-traffic code and modifying it is likely to create conflicts down the line.  (Unless the plan is to send this upstream?)",
+      "parentUuid": "1544f239_2e36c708",
+      "range": {
+        "startLine": 6767,
+        "startChar": 0,
+        "endLine": 6767,
+        "endChar": 18
+      },
+      "revId": "d939850f356e2d86a382dff89bef0f14a6a9e131",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
