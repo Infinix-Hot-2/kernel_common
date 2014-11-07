@@ -46,6 +46,30 @@
       "revId": "d939850f356e2d86a382dff89bef0f14a6a9e131",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "35473640_7220b038",
+        "filename": "mm/memcontrol.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 6767,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2014-11-07T18:43:38Z",
+      "side": 1,
+      "message": "I don\u0027t think upstream is ready to accept these kinds of patches...",
+      "parentUuid": "35473640_32f8e85a",
+      "range": {
+        "startLine": 6767,
+        "startChar": 0,
+        "endLine": 6767,
+        "endChar": 18
+      },
+      "revId": "d939850f356e2d86a382dff89bef0f14a6a9e131",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
