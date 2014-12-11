@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "04b20612_bb3907f9",
+        "filename": "fs/pstore/Kconfig",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2014-12-11T00:45:44Z",
+      "side": 1,
+      "message": "Is this true? Shouldn\u0027t it be /dev/pmsgX and /sys/fs/pstore/pmsg-ramoops-X  instead?",
+      "range": {
+        "startLine": 28,
+        "startChar": 13,
+        "endLine": 29,
+        "endChar": 60
+      },
+      "revId": "9e01cb7bf0deb50f271c41046bd19e78c68a8af8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4c0926a_5a955549",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2014-12-11T00:45:44Z",
+      "side": 1,
+      "message": "why make it world-writeable?",
+      "range": {
+        "startLine": 73,
+        "startChar": 13,
+        "endLine": 73,
+        "endChar": 14
+      },
+      "revId": "9e01cb7bf0deb50f271c41046bd19e78c68a8af8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "44a87ea2_5d0afb43",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2014-12-11T00:45:44Z",
+      "side": 1,
+      "message": "You need to check IS_ERR",
+      "revId": "9e01cb7bf0deb50f271c41046bd19e78c68a8af8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4c0926a_ba0c7131",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2014-12-11T00:45:44Z",
+      "side": 1,
+      "message": "put the + on the previous line",
+      "range": {
+        "startLine": 146,
+        "startChar": 4,
+        "endLine": 146,
+        "endChar": 6
+      },
+      "revId": "9e01cb7bf0deb50f271c41046bd19e78c68a8af8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
