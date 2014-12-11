@@ -1,0 +1,182 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c4138eda_4c212f38",
+        "filename": "fs/pstore/Kconfig",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-12-11T23:09:49Z",
+      "side": 1,
+      "message": "The ID won\u0027t necessarily be 0, it just happens to be 0 with the ram backend.  pstore backends can (and, in the case of EFI, will) provide basically any unique ID they feel like.",
+      "revId": "51a9f65c86da3bb7aa3a2f1c648f2a8e8a962dfb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4138eda_2c071bba",
+        "filename": "fs/pstore/Kconfig",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-12-11T23:09:49Z",
+      "side": 1,
+      "message": "0",
+      "range": {
+        "startLine": 28,
+        "startChar": 22,
+        "endLine": 28,
+        "endChar": 23
+      },
+      "revId": "51a9f65c86da3bb7aa3a2f1c648f2a8e8a962dfb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4138eda_6cfd1340",
+        "filename": "fs/pstore/Kconfig",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-12-11T23:09:49Z",
+      "side": 1,
+      "message": "can",
+      "range": {
+        "startLine": 29,
+        "startChar": 8,
+        "endLine": 29,
+        "endChar": 12
+      },
+      "revId": "51a9f65c86da3bb7aa3a2f1c648f2a8e8a962dfb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4085aac_6ec50b49",
+        "filename": "fs/pstore/Kconfig",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-12-11T23:09:49Z",
+      "side": 1,
+      "message": "[ID]",
+      "range": {
+        "startLine": 29,
+        "startChar": 59,
+        "endLine": 29,
+        "endChar": 60
+      },
+      "revId": "51a9f65c86da3bb7aa3a2f1c648f2a8e8a962dfb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4138eda_2c7ddb1e",
+        "filename": "fs/pstore/Kconfig",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-12-11T23:09:49Z",
+      "side": 1,
+      "message": "delete",
+      "range": {
+        "startLine": 30,
+        "startChar": 3,
+        "endLine": 30,
+        "endChar": 62
+      },
+      "revId": "51a9f65c86da3bb7aa3a2f1c648f2a8e8a962dfb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4085aac_2e2ef3a9",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-12-11T23:09:49Z",
+      "side": 1,
+      "message": "Why would userspace be writing to this device while an oops is in progress?",
+      "range": {
+        "startLine": 42,
+        "startChar": 7,
+        "endLine": 42,
+        "endChar": 23
+      },
+      "revId": "51a9f65c86da3bb7aa3a2f1c648f2a8e8a962dfb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e40ed2b4_50cc2445",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-12-11T23:09:49Z",
+      "side": 1,
+      "message": "register_chrdev() does all this for you (likewise you can use unregister_chrdev() on teardown)",
+      "range": {
+        "startLine": 81,
+        "startChar": 1,
+        "endLine": 92,
+        "endChar": 2
+      },
+      "revId": "51a9f65c86da3bb7aa3a2f1c648f2a8e8a962dfb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e40ed2b4_70a16831",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-12-11T23:09:49Z",
+      "side": 1,
+      "message": "delete",
+      "range": {
+        "startLine": 119,
+        "startChar": 0,
+        "endLine": 127,
+        "endChar": 6
+      },
+      "revId": "51a9f65c86da3bb7aa3a2f1c648f2a8e8a962dfb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
