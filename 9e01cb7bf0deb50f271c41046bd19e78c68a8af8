@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "44d6be40_0d145163",
+        "filename": "fs/pstore/Kconfig",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-11T16:19:31Z",
+      "side": 1,
+      "message": "\u0027tiz true, I only made one instance. I did not want to be bothered with phase 2 of allowing multiple instances. Given that this could happen on other projects, I decided to start today with numerical instances for that possible future, but restrict the number of instances to one for KISS.",
+      "parentUuid": "04b20612_bb3907f9",
+      "range": {
+        "startLine": 28,
+        "startChar": 13,
+        "endLine": 29,
+        "endChar": 60
+      },
+      "revId": "9e01cb7bf0deb50f271c41046bd19e78c68a8af8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e4c0926a_5a955549",
         "filename": "fs/pstore/pmsg.c",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "64d9026f_2e17076c",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-11T16:19:31Z",
+      "side": 1,
+      "message": "0220 will lead to the least amount of upstream resistance since 0440 is the mode for the sysfs node.\n\nI have waffled here, I just changed it to 0222. If I put this into liblog so that callers add entries, _everyone_ has to be able to write to this thing. But I agree, it may not be a good start for a generic driver.\n\nI can revert back without fear though here, since it is ueventd.rc that will record the 0222 setting it for our more open platform requirements.",
+      "parentUuid": "e4c0926a_5a955549",
+      "range": {
+        "startLine": 73,
+        "startChar": 13,
+        "endLine": 73,
+        "endChar": 14
+      },
+      "revId": "9e01cb7bf0deb50f271c41046bd19e78c68a8af8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "44a87ea2_5d0afb43",
         "filename": "fs/pstore/pmsg.c",
         "patchSetId": 3
@@ -59,6 +107,24 @@
       "writtenOn": "2014-12-11T00:45:44Z",
       "side": 1,
       "message": "You need to check IS_ERR",
+      "revId": "9e01cb7bf0deb50f271c41046bd19e78c68a8af8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "44d6be40_cd73e9d6",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-11T16:19:31Z",
+      "side": 1,
+      "message": "Yup ... missed a spot ...",
+      "parentUuid": "44a87ea2_5d0afb43",
       "revId": "9e01cb7bf0deb50f271c41046bd19e78c68a8af8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
