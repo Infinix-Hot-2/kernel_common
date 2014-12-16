@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "e1ba449b_9e1fad52",
+        "filename": "fs/pstore/Kconfig",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-16T23:41:11Z",
+      "side": 1,
+      "message": "IMHO this is new functionality, if I am pushing this to kernel.org I\u0027d prefer to side with \u0027no surprises\u0027 (However it would simplify deployment in Android requiring no adjustment to defconfig if I chose to not have this line).",
+      "parentUuid": "01ccb852_31cb4881",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e1ba449b_73b1d286",
         "filename": "fs/pstore/Makefile",
         "patchSetId": 5
@@ -105,6 +123,24 @@
     },
     {
       "key": {
+        "uuid": "e1ba449b_fe64a9bb",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-16T23:41:11Z",
+      "side": 1,
+      "message": "It is most certainly not safe, GREAT CATCH!",
+      "parentUuid": "01ccb852_11f3acb0",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "41c2301f_56e36aaf",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 5
@@ -133,6 +169,24 @@
       "writtenOn": "2014-12-16T23:05:56Z",
       "side": 1,
       "message": "This is checking that *not all* of these are NULL, i.e., someone must be using the pstore that we just created.",
+      "parentUuid": "41c2301f_56e36aaf",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "41c2301f_6141fe69",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 477,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-16T23:41:11Z",
+      "side": 1,
+      "message": "This check does not appear to be about mandatory or not, this check is useless and should be removed. In all cases where we fail to request a memory zone, we get an error and they are handled above. This is a can not happen(tm).",
       "parentUuid": "41c2301f_56e36aaf",
       "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
