@@ -137,6 +137,30 @@
       "revId": "fe1f768752910ff74704284caad74c613d18673d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c1154030_42c6087b",
+        "filename": "net/netfilter/xt_socket.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1045980
+      },
+      "writtenOn": "2014-12-16T04:39:11Z",
+      "side": 1,
+      "message": "Moving this down would require a lot of duplicate code. Are there other things that can change other than sk getting set to NULL? If not, we could just have a separate print to indicate that changed.",
+      "parentUuid": "994e5355_51df34f0",
+      "range": {
+        "startLine": 192,
+        "startChar": 1,
+        "endLine": 195,
+        "endChar": 46
+      },
+      "revId": "fe1f768752910ff74704284caad74c613d18673d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
