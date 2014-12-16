@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e1ba449b_f3f86250",
+        "filename": "fs/pstore/Kconfig",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-16T22:40:10Z",
+      "side": 1,
+      "message": "This s not very descriptive.",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "01ccb852_31cb4881",
+        "filename": "fs/pstore/Kconfig",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-16T22:40:10Z",
+      "side": 1,
+      "message": "is this needed?",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e1ba449b_73b1d286",
+        "filename": "fs/pstore/Makefile",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-16T22:40:10Z",
+      "side": 1,
+      "message": "Put this in a spot that keeps alphabetical order",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e1ba449b_d388beb3",
+        "filename": "fs/pstore/inode.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-16T22:40:10Z",
+      "side": 1,
+      "message": "It this guarantied to fit? If not use a safe version.",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "01ccb852_11f3acb0",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-16T22:40:10Z",
+      "side": 1,
+      "message": "I don\u0027t think this is safe to call with a spinlock held.",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "41c2301f_56e36aaf",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 477,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-16T22:40:10Z",
+      "side": 1,
+      "message": "It this new feature mandatory?",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
