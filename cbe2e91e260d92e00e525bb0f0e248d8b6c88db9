@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2420ea81_53000e28",
+        "filename": "net/netfilter/xt_qtaguid.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 2100,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2014-12-16T02:28:46Z",
+      "side": 1,
+      "message": "entry_uid is closer to a uid_int than a kuid_t\n\n\nand this line won\u0027t compile: s/))/)/",
+      "range": {
+        "startLine": 2100,
+        "startChar": 7,
+        "endLine": 2100,
+        "endChar": 23
+      },
+      "revId": "cbe2e91e260d92e00e525bb0f0e248d8b6c88db9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
