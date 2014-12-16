@@ -87,6 +87,24 @@
     },
     {
       "key": {
+        "uuid": "816b48dc_fd035f34",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-12-16T23:05:56Z",
+      "side": 1,
+      "message": "You should also use the __copy_from_user() variant, since you\u0027ve already done the access_ok() check.",
+      "parentUuid": "01ccb852_11f3acb0",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "41c2301f_56e36aaf",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 5
@@ -98,6 +116,24 @@
       "writtenOn": "2014-12-16T22:40:10Z",
       "side": 1,
       "message": "It this new feature mandatory?",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "41c2301f_f6d936af",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 477,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2014-12-16T23:05:56Z",
+      "side": 1,
+      "message": "This is checking that *not all* of these are NULL, i.e., someone must be using the pstore that we just created.",
+      "parentUuid": "41c2301f_56e36aaf",
       "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
