@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "812508f1_365de6f0",
+        "filename": "fs/pstore/inode.c",
+        "patchSetId": 8
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-17T23:40:48Z",
+      "side": 1,
+      "message": "Don\u0027t change the existing code in the same patch. Fix it in a separate patch first.",
+      "revId": "fbb1c6b189da75f1718add5d561baeda664c4fcf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "812508f1_d6028aa7",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 8
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-17T23:40:48Z",
+      "side": 1,
+      "message": "copy from user returns number of bytes not copied.",
+      "revId": "fbb1c6b189da75f1718add5d561baeda664c4fcf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
