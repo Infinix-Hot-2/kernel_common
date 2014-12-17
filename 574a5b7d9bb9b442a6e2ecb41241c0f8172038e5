@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "01ccb852_1f6e531d",
+        "filename": "fs/pstore/Kconfig",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-17T00:56:42Z",
+      "side": 1,
+      "message": "Is the default not n already?",
+      "parentUuid": "e1ba449b_9e1fad52",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e1ba449b_73b1d286",
         "filename": "fs/pstore/Makefile",
         "patchSetId": 5
@@ -188,6 +206,24 @@
       "side": 1,
       "message": "This check does not appear to be about mandatory or not, this check is useless and should be removed. In all cases where we fail to request a memory zone, we get an error and they are handled above. This is a can not happen(tm).",
       "parentUuid": "41c2301f_56e36aaf",
+      "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "01ccb852_ff54a751",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 477,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-17T00:56:42Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "41c2301f_f6d936af",
       "revId": "574a5b7d9bb9b442a6e2ecb41241c0f8172038e5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
