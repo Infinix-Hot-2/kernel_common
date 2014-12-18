@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c1eaa0ee_14b7baf7",
+        "filename": "fs/pstore/inode.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-18T22:37:27Z",
+      "side": 1,
+      "message": "Why is this entry special?",
+      "revId": "b28912f02a94c8fdb9851b5baf1e851e9ba172d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "61d9f46e_f107a2bd",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-18T22:37:27Z",
+      "side": 1,
+      "message": "You should probably use a different name here.",
+      "revId": "b28912f02a94c8fdb9851b5baf1e851e9ba172d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "61d9f46e_11034eae",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 475,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-18T22:37:27Z",
+      "side": 1,
+      "message": "don\u0027t delete unrelated code",
+      "revId": "b28912f02a94c8fdb9851b5baf1e851e9ba172d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
