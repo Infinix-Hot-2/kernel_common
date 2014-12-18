@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "41d1503e_951984eb",
+        "filename": "fs/pstore/inode.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-18T23:20:24Z",
+      "side": 1,
+      "message": "This is one of the few pstore entities that can contain PII because it can be fed by user space where such content resides and could leak out. This is true in the general case, not just for Android.",
+      "parentUuid": "c1eaa0ee_14b7baf7",
+      "revId": "b28912f02a94c8fdb9851b5baf1e851e9ba172d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "61d9f46e_f107a2bd",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 10
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "e10ec4b4_4a96b359",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-18T23:20:24Z",
+      "side": 1,
+      "message": "message_size?",
+      "parentUuid": "61d9f46e_f107a2bd",
+      "revId": "b28912f02a94c8fdb9851b5baf1e851e9ba172d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "61d9f46e_11034eae",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 10
@@ -47,6 +83,24 @@
       "writtenOn": "2014-12-18T22:37:27Z",
       "side": 1,
       "message": "don\u0027t delete unrelated code",
+      "revId": "b28912f02a94c8fdb9851b5baf1e851e9ba172d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "41d1503e_352990f0",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 475,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-18T23:20:24Z",
+      "side": 1,
+      "message": "Will split out individually",
+      "parentUuid": "61d9f46e_11034eae",
       "revId": "b28912f02a94c8fdb9851b5baf1e851e9ba172d8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
