@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "21c29c57_1441946a",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-18T04:48:29Z",
+      "side": 1,
+      "message": "Other drivers return -EFAULT if copy_from_user returns non-0.",
+      "revId": "a6c2f305f002243b05f5c5c9fae6b89866770fbb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
