@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a18bec6e_b626d0da",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-19T19:14:32Z",
+      "side": 1,
+      "message": "NB: this solves a memory leak by incorporating a deeper check, and allows us to revert a broken attempt at solving the leak that was committed privately into the tegra branch:\n\ncommit 159c6ab3aae1212a32c2bd9cd5b9d6309bd0a68d\nAuthor: Ishwarya Balaji Gururajan \u003cigururajan@nvidia.com\u003e\nDate:   Tue May 27 16:00:36 2014 -0700\n\n    pstore: fix memleak in ramoops_pstore_read\n    \n    check for size + ecc_notice_size before kmalloc\n    in ramoops_pstore_read to avoid a memleak\n    \n    Bug 200007988\n    \n    Change-Id: I0e50dcaa229fed29cbd9e8da6d4fb60ce771a7f8\n    Signed-off-by: Ishwarya Balaji Gururajan \u003cigururajan@nvidia.com\u003e\n    Reviewed-on: http://git-master/r/415450\n    Reviewed-by: Thomas Cherry \u003ctcherry@nvidia.com\u003e\n    Reviewed-by: Allen Yu \u003calleny@nvidia.com\u003e",
+      "range": {
+        "startLine": 144,
+        "startChar": 0,
+        "endLine": 144,
+        "endChar": 51
+      },
+      "revId": "d323cf5119700fd29ed40cdba6f9aee2a06cb5d4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
