@@ -16,6 +16,24 @@
       "revId": "17b925823da76c42fc73e31985be4dd02e9bb23b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "01f918d6_a921b9c6",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 11
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-19T17:10:34Z",
+      "side": 1,
+      "message": "When trying to pry out the CL to remove the superfluous checking, git got confused (it dropped the last CL on the set on a rebase run, I must stop using git rebase -i \u0027-p\u0027 as it has done this to me in the past) requiring me to download from Gerrit and redo this CL. I _must_ have selected an earlier download. I have audited and it looks like this was the only one affected.",
+      "parentUuid": "e133247d_22292ef0",
+      "revId": "17b925823da76c42fc73e31985be4dd02e9bb23b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
