@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e133247d_22292ef0",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 11
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-19T02:21:34Z",
+      "side": 1,
+      "message": "why did this code reappear?",
+      "revId": "17b925823da76c42fc73e31985be4dd02e9bb23b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
