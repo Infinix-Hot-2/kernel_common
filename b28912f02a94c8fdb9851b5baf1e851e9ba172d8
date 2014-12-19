@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "6102d48e_2c8cb75a",
+        "filename": "fs/pstore/inode.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-19T15:40:38Z",
+      "side": 1,
+      "message": "Frankly _all_ of pstore on Android should start up with 440, but in the general case I can only make a strong case for pmsg. I will move this out and reintroduction into the followon requirement to introduce xattr DAC for all of the pstore nodes; perhaps this is where we need to place this MAC adjustment for _all_. In the context of that adjustment changing security defaults can carry its own debate ;-\u003e\n\nIn the general sense, trying to bridge worlds, user space does _not_ change any permissions except where there are flaws. I _know_ we do this with our hand-built Android init, policy modules on servers are a different world. The act of changing the security settings on files at run time can be viewed as a security exploit and Drivers are urged to set reasoned default permissions where possible.",
+      "parentUuid": "6102d48e_e917b16f",
+      "revId": "b28912f02a94c8fdb9851b5baf1e851e9ba172d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "61d9f46e_f107a2bd",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 10
