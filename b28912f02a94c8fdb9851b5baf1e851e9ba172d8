@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6102d48e_e917b16f",
+        "filename": "fs/pstore/inode.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-19T02:20:27Z",
+      "side": 1,
+      "message": "User-space has to configure why has access to thins anyway, so I still don\u0027t see why this is special.",
+      "parentUuid": "41d1503e_951984eb",
+      "revId": "b28912f02a94c8fdb9851b5baf1e851e9ba172d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "61d9f46e_f107a2bd",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 10
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "message_size?",
       "parentUuid": "61d9f46e_f107a2bd",
+      "revId": "b28912f02a94c8fdb9851b5baf1e851e9ba172d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "01f918d6_4386a6a7",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2014-12-19T02:20:27Z",
+      "side": 1,
+      "message": "no, msg_size and message_size are the same. What does it refer to? If this only affects the new interface, it should not have a generic name like this.",
+      "parentUuid": "e10ec4b4_4a96b359",
       "revId": "b28912f02a94c8fdb9851b5baf1e851e9ba172d8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
