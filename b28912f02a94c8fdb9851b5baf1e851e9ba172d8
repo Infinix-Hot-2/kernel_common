@@ -126,6 +126,24 @@
     },
     {
       "key": {
+        "uuid": "01f918d6_66b41055",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2014-12-19T15:56:45Z",
+      "side": 1,
+      "message": "Ok, I think I understand. I had problems with pmsg with the overused \u0027p\u0027 in pstore and dropped it to match mem_size and mem_address ;-}",
+      "parentUuid": "01f918d6_4386a6a7",
+      "revId": "b28912f02a94c8fdb9851b5baf1e851e9ba172d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "61d9f46e_11034eae",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 10
