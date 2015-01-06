@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "ce3acdc4_cb934963",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-01-06T16:39:55Z",
+      "side": 1,
+      "message": "pr_err should _not_ have KERN_ERR in the string, superfluous!",
+      "range": {
+        "startLine": 76,
+        "startChar": 2,
+        "endLine": 76,
+        "endChar": 17
+      },
+      "revId": "d323cf5119700fd29ed40cdba6f9aee2a06cb5d4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a18bec6e_b626d0da",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 12
