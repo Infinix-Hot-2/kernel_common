@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e8c1dba_c0fe0076",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 15
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2015-01-13T01:41:54Z",
+      "side": 1,
+      "message": "Is this needed?  If .llseek is left unspecified, the kernel will automatically call a stub that returns -ESPIPE.",
+      "range": {
+        "startLine": 55,
+        "startChar": 1,
+        "endLine": 55,
+        "endChar": 23
+      },
+      "revId": "48df198bfaa1de311705e33a8878e785eb087119",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
