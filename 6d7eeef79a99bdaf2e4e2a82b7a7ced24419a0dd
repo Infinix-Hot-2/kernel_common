@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ecac1df_b5e94a43",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 20
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2015-01-13T23:53:30Z",
+      "side": 1,
+      "message": "Why a spinlock?  This routine can\u0027t be called from an atomic context.",
+      "range": {
+        "startLine": 41,
+        "startChar": 1,
+        "endLine": 41,
+        "endChar": 10
+      },
+      "revId": "6d7eeef79a99bdaf2e4e2a82b7a7ced24419a0dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
