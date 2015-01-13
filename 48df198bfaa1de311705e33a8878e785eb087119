@@ -22,6 +22,30 @@
       "revId": "48df198bfaa1de311705e33a8878e785eb087119",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e75fd75_3b335f13",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 15
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-01-13T18:13:11Z",
+      "side": 1,
+      "message": "Confirmed that noop_llseek allows open(\"/dev/pmsg0\", \"a\").",
+      "parentUuid": "4e8c1dba_c0fe0076",
+      "range": {
+        "startLine": 55,
+        "startChar": 1,
+        "endLine": 55,
+        "endChar": 23
+      },
+      "revId": "48df198bfaa1de311705e33a8878e785eb087119",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
