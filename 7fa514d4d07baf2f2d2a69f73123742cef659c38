@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6b2473a4_d901f730",
+        "filename": "security/selinux/include/initial_sid_to_string.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-01-15T15:20:10Z",
+      "side": 1,
+      "message": "Not sure if there may be compatibility issues here; we haven\u0027t added a new initial SID since circa Linux 2.6.6.   Initial SID support hasn\u0027t yet been converted over to dynamic mapping as we did with classes and permissions. Do you need a new one or could you just use SECINITSID_UNLABELED as the default value?",
+      "revId": "7fa514d4d07baf2f2d2a69f73123742cef659c38",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eb106340_fac5c94d",
         "filename": "security/selinux/include/objsec.h",
         "patchSetId": 1
