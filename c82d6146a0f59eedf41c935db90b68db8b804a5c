@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eb106340_fab709c6",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 451,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2015-01-15T02:02:50Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem right.  How does the file code add the \"path\u003d\" call to the audit message? I thought there was some kind of callback that you could register to add these kinds of messages.\n\nHopefully Stephen knows better...",
+      "revId": "c82d6146a0f59eedf41c935db90b68db8b804a5c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
