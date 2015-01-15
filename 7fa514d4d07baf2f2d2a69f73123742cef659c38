@@ -33,6 +33,40 @@
       "revId": "7fa514d4d07baf2f2d2a69f73123742cef659c38",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b928710_3fc78728",
+        "filename": "security/selinux/ioctlcmd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-01-15T19:49:29Z",
+      "side": 1,
+      "message": "As this code is only called from user context, this can just be spin_lock() and spin_unlock() everywhere IIUC.",
+      "revId": "7fa514d4d07baf2f2d2a69f73123742cef659c38",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b928710_7fe66fc2",
+        "filename": "security/selinux/ioctlcmd.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-01-15T19:49:29Z",
+      "side": 1,
+      "message": "Could avoid need for GFP_ATOMIC by taking the allocation outside the spinlock and then freeing if we happen to find that it is found on the 2nd find.",
+      "revId": "7fa514d4d07baf2f2d2a69f73123742cef659c38",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
