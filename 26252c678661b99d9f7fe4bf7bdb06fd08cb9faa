@@ -16,6 +16,40 @@
       "revId": "26252c678661b99d9f7fe4bf7bdb06fd08cb9faa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ab0aeb11_7b6c1bf8",
+        "filename": "security/selinux/include/security.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-01-15T15:25:50Z",
+      "side": 1,
+      "message": "Just to note:  To use this facility, will need to change POLICYVERS to 30 in external/sepolicy/Android.mk (after updating libsepol and checkpolicy) or override it on the make command-line.  This will then prevent loading of policy on any kernel that does not have this support, so all kernels will need to include this patch.",
+      "revId": "26252c678661b99d9f7fe4bf7bdb06fd08cb9faa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eb106340_5d9caff8",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2179,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-01-15T15:25:50Z",
+      "side": 1,
+      "message": "Might be easier if we can just default to SECINITSID_UNLABELED here.",
+      "revId": "26252c678661b99d9f7fe4bf7bdb06fd08cb9faa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
