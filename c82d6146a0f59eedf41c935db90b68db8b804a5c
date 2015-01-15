@@ -34,6 +34,24 @@
       "revId": "c82d6146a0f59eedf41c935db90b68db8b804a5c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b2473a4_d9d8d782",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 451,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-01-15T15:00:07Z",
+      "side": 1,
+      "message": "This would go in security/lsm_audit.c dump_common_audit_data().  While the ioctl command support is only presently implemented for SELinux, it doesn\u0027t depend on any SELinux-private data structures so it should be taken to the common audit code that was factored out of SELinux for reuse by Smack and others.",
+      "parentUuid": "0b0217f8_cae8fbb7",
+      "revId": "c82d6146a0f59eedf41c935db90b68db8b804a5c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
