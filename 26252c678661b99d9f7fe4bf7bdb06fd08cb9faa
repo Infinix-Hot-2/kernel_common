@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b2473a4_160f3c27",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2015-01-15T01:49:16Z",
+      "side": 1,
+      "message": "This would need to be stripped before upstreaming.",
+      "revId": "26252c678661b99d9f7fe4bf7bdb06fd08cb9faa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
