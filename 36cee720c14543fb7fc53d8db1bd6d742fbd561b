@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "fc9d9026_7e574d9d",
+        "filename": "drivers/usb/gadget/android.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 947,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-02-04T18:34:07Z",
+      "side": 1,
+      "message": "Maybe it will be safer to move it before line #943 to init f-\u003econfig to NULL in any case?",
+      "range": {
+        "startLine": 947,
+        "startChar": 1,
+        "endLine": 947,
+        "endChar": 2
+      },
+      "revId": "36cee720c14543fb7fc53d8db1bd6d742fbd561b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bc6318f1_0c13b707",
         "filename": "drivers/usb/gadget/android.c",
         "patchSetId": 1
