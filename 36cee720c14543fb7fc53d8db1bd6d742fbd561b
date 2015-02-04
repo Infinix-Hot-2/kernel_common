@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bc6318f1_0c13b707",
+        "filename": "drivers/usb/gadget/android.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 961,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-02-04T01:31:27Z",
+      "side": 1,
+      "message": "Suggest: #defines for the constants to increase readability ??",
+      "range": {
+        "startLine": 961,
+        "startChar": 70,
+        "endLine": 961,
+        "endChar": 83
+      },
+      "revId": "36cee720c14543fb7fc53d8db1bd6d742fbd561b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
