@@ -1,0 +1,544 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6bbf18df_77e4b059",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "nit: whitespace needed.",
+      "range": {
+        "startLine": 24,
+        "startChar": 37,
+        "endLine": 24,
+        "endChar": 38
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ebca2890_b3b818c4",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 3131,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "note: this differs from the file_has_perm() indentation of the same code, but that includes spaces and is likely incorrect.",
+      "range": {
+        "startLine": 3131,
+        "startChar": 3,
+        "endLine": 3131,
+        "endChar": 4
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b08ccac_68806392",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "no latest_notif functionality?",
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b205c81_c4e27ed8",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "kernel style guide re brackets here and below",
+      "range": {
+        "startLine": 132,
+        "startChar": 2,
+        "endLine": 132,
+        "endChar": 29
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b6398c4_7d0cef63",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "maybe just \"return node;\"?  The branch here was necessary in the avc code because it kept track of cache misses, which we don\u0027t seem to do here.",
+      "range": {
+        "startLine": 215,
+        "startChar": 1,
+        "endLine": 218,
+        "endChar": 13
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b31d8d0_8737a60b",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "see below comment re kernel brackets.",
+      "range": {
+        "startLine": 328,
+        "startChar": 3,
+        "endLine": 329,
+        "endChar": 13
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b31d8d0_e7d1425a",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "nit - kernel style guide: \"This does not apply if only one branch of a conditional statement is a single\nstatement; in the latter case use braces in both branches\"",
+      "range": {
+        "startLine": 332,
+        "startChar": 1,
+        "endLine": 333,
+        "endChar": 11
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b644c9b_a8d19b5a",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "permission",
+      "range": {
+        "startLine": 392,
+        "startChar": 41,
+        "endLine": 392,
+        "endChar": 42
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b644c9b_88ccd7c1",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "this isn\u0027t quite accurate anymore.",
+      "range": {
+        "startLine": 394,
+        "startChar": 3,
+        "endLine": 394,
+        "endChar": 48
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2b728058_70fb8ecd",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "kernel coding style: \"Don\u0027t put multiple assignments on a single line either.  Kernel coding style is super simple.\"",
+      "range": {
+        "startLine": 406,
+        "startChar": 5,
+        "endLine": 406,
+        "endChar": 21
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b993cf9_02370e0a",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "We could call rcu_read_unlock() here, perhaps?",
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b513ca8_7c7839a8",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "Is there a reason we\u0027re relying on selinux_enabled here rather than calling sel_operation_init() from selinux_init, as is done with avc_init()?",
+      "range": {
+        "startLine": 455,
+        "startChar": 1,
+        "endLine": 456,
+        "endChar": 11
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b644c9b_a852fb53",
+        "filename": "security/selinux/ss/avtab.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "please remove.",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 2
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b585ce4_c7d88033",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 621,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "and operation decision",
+      "range": {
+        "startLine": 621,
+        "startChar": 24,
+        "endLine": 621,
+        "endChar": 25
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6bd55878_67de1291",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 631,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "needed?",
+      "range": {
+        "startLine": 631,
+        "startChar": 1,
+        "endLine": 631,
+        "endChar": 23
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b993cf9_1f7be7a6",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 671,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "This reassigns the operation_decision allowed operation every time new policy concerning it is encountered, rather than combining allowed operations.",
+      "range": {
+        "startLine": 671,
+        "startChar": 6,
+        "endLine": 671,
+        "endChar": 42
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b6398c4_fad1e559",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 677,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "see above.",
+      "range": {
+        "startLine": 677,
+        "startChar": 6,
+        "endLine": 677,
+        "endChar": 44
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b6398c4_1ad7794d",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 683,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "see above.",
+      "range": {
+        "startLine": 683,
+        "startChar": 6,
+        "endLine": 683,
+        "endChar": 43
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eb95c8bd_bef4b50f",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 689,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "Will likely need to add ioctl support here as well.",
+      "range": {
+        "startLine": 689,
+        "startChar": 3,
+        "endLine": 689,
+        "endChar": 56
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b6398c4_1a2cd9b9",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 703,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "Will likely need to add ioctl support here as well.",
+      "range": {
+        "startLine": 703,
+        "startChar": 3,
+        "endLine": 703,
+        "endChar": 45
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eb95c8bd_9e9e19d4",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 723,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "Not needed, I think, as we will never be checking this for ioctl perm.",
+      "range": {
+        "startLine": 708,
+        "startChar": 1,
+        "endLine": 723,
+        "endChar": 2
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eb95c8bd_de7fc1c9",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 731,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "Will likely need to add ioctl support here as well (although I don\u0027t know what this is doing).",
+      "range": {
+        "startLine": 730,
+        "startChar": 1,
+        "endLine": 731,
+        "endChar": 18
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8be9ac2d_e019627b",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1035,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "nit: kernel-style guide",
+      "range": {
+        "startLine": 1035,
+        "startChar": 1,
+        "endLine": 1035,
+        "endChar": 51
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8be9ac2d_60d432f5",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1076,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-02-18T23:13:24Z",
+      "side": 1,
+      "message": "This is weird.",
+      "range": {
+        "startLine": 1076,
+        "startChar": 5,
+        "endLine": 1076,
+        "endChar": 6
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
