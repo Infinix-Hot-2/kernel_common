@@ -65,6 +65,24 @@
     },
     {
       "key": {
+        "uuid": "0b205c81_071f385e",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-19T17:51:20Z",
+      "side": 1,
+      "message": "I think it will need to be added eventually. However I\u0027m reluctant to add code that I can\u0027t test. Is there a way to load new policy during runtime on an Android device?",
+      "parentUuid": "8b08ccac_68806392",
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0b205c81_c4e27ed8",
         "filename": "security/selinux/operations.c",
         "patchSetId": 2
@@ -76,6 +94,30 @@
       "writtenOn": "2015-02-18T23:13:24Z",
       "side": 1,
       "message": "kernel style guide re brackets here and below",
+      "range": {
+        "startLine": 132,
+        "startChar": 2,
+        "endLine": 132,
+        "endChar": 29
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b31d8d0_6a3d17b5",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-19T17:51:20Z",
+      "side": 1,
+      "message": "Ah, I missed that in the coding style. Good catch!\n\nThis does not apply if only one branch of a conditional statement is a single\nstatement; in the latter case use braces in both branches:\n\nif (condition) {\n\tdo_this();\n\tdo_that();\n} else {\n\totherwise();\n}",
+      "parentUuid": "0b205c81_c4e27ed8",
       "range": {
         "startLine": 132,
         "startChar": 2,
@@ -203,6 +245,30 @@
     },
     {
       "key": {
+        "uuid": "6b31d8d0_2ac07f20",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-19T17:51:20Z",
+      "side": 1,
+      "message": "Class is still considered in the same way in the security server.",
+      "parentUuid": "8b644c9b_88ccd7c1",
+      "range": {
+        "startLine": 394,
+        "startChar": 3,
+        "endLine": 394,
+        "endChar": 48
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2b728058_70fb8ecd",
         "filename": "security/selinux/operations.c",
         "patchSetId": 2
@@ -243,6 +309,24 @@
     },
     {
       "key": {
+        "uuid": "48241aa4_f6cba054",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-19T17:51:20Z",
+      "side": 1,
+      "message": "It\u0027s there for a future change. Logic for handling new policy load is going to go here eventually.",
+      "parentUuid": "0b993cf9_02370e0a",
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0b513ca8_7c7839a8",
         "filename": "security/selinux/operations.c",
         "patchSetId": 2
@@ -254,6 +338,30 @@
       "writtenOn": "2015-02-18T23:13:24Z",
       "side": 1,
       "message": "Is there a reason we\u0027re relying on selinux_enabled here rather than calling sel_operation_init() from selinux_init, as is done with avc_init()?",
+      "range": {
+        "startLine": 455,
+        "startChar": 1,
+        "endLine": 456,
+        "endChar": 11
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "48241aa4_b6cf6830",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-19T17:51:20Z",
+      "side": 1,
+      "message": "Not particularly. This is more following precedence from the other caches (netport, netif netnode).",
+      "parentUuid": "0b513ca8_7c7839a8",
       "range": {
         "startLine": 455,
         "startChar": 1,
@@ -358,6 +466,30 @@
     },
     {
       "key": {
+        "uuid": "48525a24_06b39a97",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 671,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-19T17:51:20Z",
+      "side": 1,
+      "message": "The plan was to combine operation ranges in the policy compiler to ensure only one range array, but based on our offline discussion, that may get really messy (due to attributes). Back to the drawing board.",
+      "parentUuid": "0b993cf9_1f7be7a6",
+      "range": {
+        "startLine": 671,
+        "startChar": 6,
+        "endLine": 671,
+        "endChar": 42
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6b6398c4_fad1e559",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 2
@@ -450,6 +582,30 @@
     },
     {
       "key": {
+        "uuid": "48525a24_c6e1024b",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 703,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-19T17:51:20Z",
+      "side": 1,
+      "message": "was not planning on adding constraint support for ranges. This maintains the ability to use constraints to disallow all ioctl access.",
+      "parentUuid": "6b6398c4_1a2cd9b9",
+      "range": {
+        "startLine": 703,
+        "startChar": 3,
+        "endLine": 703,
+        "endChar": 45
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eb95c8bd_9e9e19d4",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 2
@@ -530,6 +686,30 @@
       "writtenOn": "2015-02-18T23:13:24Z",
       "side": 1,
       "message": "This is weird.",
+      "range": {
+        "startLine": 1076,
+        "startChar": 5,
+        "endLine": 1076,
+        "endChar": 6
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "48525a24_465ab270",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1076,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-19T17:51:20Z",
+      "side": 1,
+      "message": "Agreed. Checkout how avd is initialized.\n\n\tavd-\u003eallowed \u003d 0;\n\tavd-\u003eauditallow \u003d 0;\n\tavd-\u003eauditdeny \u003d 0xffffffff;\n\nAn auditdeny permission is \"set\" by zeroing that bit - the opposite of allowed and auditallow.",
+      "parentUuid": "8be9ac2d_60d432f5",
       "range": {
         "startLine": 1076,
         "startChar": 5,
