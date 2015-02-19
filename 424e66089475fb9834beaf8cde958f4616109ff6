@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "08cf8248_2c221319",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 640,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-19T21:27:14Z",
+      "side": 1,
+      "message": "avd is initialized in the calling function - security_compute_operation, od is initialized in operation_has_perm (in operations.c which I forgot to add...oops)",
+      "parentUuid": "08a1425e_5f4fef7e",
+      "revId": "424e66089475fb9834beaf8cde958f4616109ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "68e0feaf_0f338520",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 3
@@ -47,6 +65,24 @@
       "writtenOn": "2015-02-19T21:14:30Z",
       "side": 1,
       "message": "I would prefer to avoid duplication of all of this code from context_struct_compute_av.  Let\u0027s make a common helper for both, which can simply skip the operation processing if not passed a non-NULL od.",
+      "revId": "424e66089475fb9834beaf8cde958f4616109ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "88db7205_53db76f4",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 719,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-19T21:27:14Z",
+      "side": 1,
+      "message": "Will do.",
+      "parentUuid": "68e0feaf_0f338520",
       "revId": "424e66089475fb9834beaf8cde958f4616109ff6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
