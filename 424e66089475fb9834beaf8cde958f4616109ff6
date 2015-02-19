@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "28c2861e_8d830135",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-19T21:14:30Z",
+      "side": 1,
+      "message": "We could avoid the need to store and read this size for every avtab datum by defining a new AVTAB_OPERATION flag in specified, only set when there is an operations array.",
+      "revId": "424e66089475fb9834beaf8cde958f4616109ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "08a1425e_5f4fef7e",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 640,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-19T21:14:30Z",
+      "side": 1,
+      "message": "Return without initialization of avd or od.",
+      "revId": "424e66089475fb9834beaf8cde958f4616109ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "68e0feaf_0f338520",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 719,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-19T21:14:30Z",
+      "side": 1,
+      "message": "I would prefer to avoid duplication of all of this code from context_struct_compute_av.  Let\u0027s make a common helper for both, which can simply skip the operation processing if not passed a non-NULL od.",
+      "revId": "424e66089475fb9834beaf8cde958f4616109ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
