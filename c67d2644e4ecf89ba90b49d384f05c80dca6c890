@@ -190,6 +190,24 @@
     },
     {
       "key": {
+        "uuid": "e8ca2e90_13dd8c68",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T19:26:05Z",
+      "side": 1,
+      "message": "Never mind on flags, only used from selinux_inode_permission().",
+      "parentUuid": "4876da13_e6d29e09",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "887c52f2_e89ef3fc",
         "filename": "security/selinux/operations.c",
         "patchSetId": 4
