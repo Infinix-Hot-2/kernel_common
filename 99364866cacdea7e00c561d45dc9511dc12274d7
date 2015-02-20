@@ -83,6 +83,24 @@
     },
     {
       "key": {
+        "uuid": "288a862f_4dd2b990",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T14:05:38Z",
+      "side": 1,
+      "message": "adb push out/target/product/\u003cboard\u003e/root/sepolicy /data/local/tmp\nadb shell\nsu\nload_policy /data/local/tmp/sepolicy",
+      "parentUuid": "0b205c81_071f385e",
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0b205c81_c4e27ed8",
         "filename": "security/selinux/operations.c",
         "patchSetId": 2
