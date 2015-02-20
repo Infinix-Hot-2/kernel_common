@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "288a862f_0df19120",
+        "filename": "security/selinux/ss/avtab.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T14:05:50Z",
+      "side": 1,
+      "message": "Have a look at commit 782ebb992ec20b5afdd5786ee8c2f1b58b631f24, which previously  reduced memory usage by the avtab and split what was previously stored in a single avtab entry into multiple entries.  We could do the same here, particularly if we introduce an AVTAB_OPERATION specified flag as I suggested, and then we can avoid wasting unused operation fields in both the kernel binary policy file and in the in-memory avtab.  That then raises the question of whether we truly want to unify the FILE__IOCTL check and the operation check as you have done or leave them separate, which would greatly simplify your code and avoid duplication with the AVC and the security server.  Current Nexus 5 -userdebug policy in AOSP has 6674 avtab entries.  How many of those do we truly expect to include ioctl operations?",
+      "revId": "424e66089475fb9834beaf8cde958f4616109ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "08a1425e_5f4fef7e",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 3
@@ -48,6 +65,41 @@
       "side": 1,
       "message": "avd is initialized in the calling function - security_compute_operation, od is initialized in operation_has_perm (in operations.c which I forgot to add...oops)",
       "parentUuid": "08a1425e_5f4fef7e",
+      "revId": "424e66089475fb9834beaf8cde958f4616109ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "288a862f_8dbbc14b",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 640,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T14:05:50Z",
+      "side": 1,
+      "message": "That\u0027s fragile.  Better to perform the initialization in the function and not rely on all callers (present and future) to get it right.  Won\u0027t matter though if you coalesce with context_struct_compute_av since it already does it.",
+      "parentUuid": "08cf8248_2c221319",
+      "revId": "424e66089475fb9834beaf8cde958f4616109ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "288a862f_adb87d4f",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 664,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T14:05:50Z",
+      "side": 1,
+      "message": "Can\u0027t use FILE__IOCTL or other kernel definitions on the policy data structures, as they no longer need to match the policy values (dynamic class/perm mapping support).  security_compute_av() maps the av to the kernel values before returning to the caller.  Besides, we shouldn\u0027t make this logic so ioctl-specific; there is no reason for the security server or AVC (or operations cache) to be ioctl-specific, even if the operations lookup is only used presently by the ioctl hook.",
       "revId": "424e66089475fb9834beaf8cde958f4616109ff6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
