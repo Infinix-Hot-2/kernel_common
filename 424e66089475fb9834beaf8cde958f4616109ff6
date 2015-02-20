@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "a8eaf6ec_f1ea08fa",
+        "filename": "security/selinux/ss/avtab.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T19:39:27Z",
+      "side": 1,
+      "message": "The former.  Just trying to minimize cost on the majority of avtab entries, which I don\u0027t expect will have any operations listed.",
+      "parentUuid": "a8c5967a_02c2d08f",
+      "revId": "424e66089475fb9834beaf8cde958f4616109ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "08a1425e_5f4fef7e",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 3
