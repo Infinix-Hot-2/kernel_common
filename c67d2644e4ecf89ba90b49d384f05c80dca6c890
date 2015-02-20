@@ -1,0 +1,191 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "887c52f2_a8195b20",
+        "filename": "security/selinux/include/security.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:05:17Z",
+      "side": 1,
+      "message": "The meaning of av versus specified is unclear and the usage seems to be mixed.",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4876da13_06d89a2e",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:05:17Z",
+      "side": 1,
+      "message": "Need to set node to NULL here or you\u0027ll return what you just freed.",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "887c52f2_4839bf6c",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:05:17Z",
+      "side": 1,
+      "message": "Would be nicer to read as:\nif (!op-\u003elen)\n    return 1;\n\nfor (i \u003d 0;...)",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "288a862f_10eb6aff",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:05:17Z",
+      "side": 1,
+      "message": "Would prefer that you pass FILE__IOCTL in as a requested vector from the hook functions and use it throughout operations.c rather than hardcoding FILE__IOCTL.",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "887c52f2_8852d7a3",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:05:17Z",
+      "side": 1,
+      "message": "usually the variable comes first, then the constant.",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "887c52f2_a84f9bf8",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:05:17Z",
+      "side": 1,
+      "message": "Is this correct if I have no operation ranges defined?",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "887c52f2_48ae1f2e",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:05:17Z",
+      "side": 1,
+      "message": "I\u0027m not clear that this is correct either.\nDo we truly want to support auditallow/dontaudit at per-ioctl-command granularity?  Or should we just leave those at ioctl permission granularity (i.e. audit all ioctl allows or denies for a given (source, target, class), which will always include the ioctl command value), and only apply the range for allow checking?",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4876da13_e6d29e09",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:05:17Z",
+      "side": 1,
+      "message": "Pass requested\u003d\u003dFILE__IOCTL and flags from caller and propagate to slow_avc_audit().",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "887c52f2_e89ef3fc",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 432,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:05:17Z",
+      "side": 1,
+      "message": "Must support global and per-domain permissive modes.",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "288a862f_70d10e59",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 669,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:05:17Z",
+      "side": 1,
+      "message": "AVTAB_* values are private to the security server, not exposed outside of the ss subdirectory.  So you can\u0027t set them in data structures returned to an external caller like the operations cache.  Interestingly, the operations.c code is using OPERATION_* instead for specified and seeming to assume that the values are the same.",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "887c52f2_0856e7a5",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 1063,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:05:17Z",
+      "side": 1,
+      "message": "Would prefer not to hardcode FILE__IOCTL here.  This is after the map_decision() so it is technically correct but I would prefer that the caller of this function pass in the requested vector (ultimately should originate from the selinux_file_ioctl hook, not even the operations code).",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
