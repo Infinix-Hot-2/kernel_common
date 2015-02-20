@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "4876da13_e6c29eb7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T18:29:43Z",
+      "side": 1,
+      "message": "Since the checkpolicy scanner already accepts 0xhexval for NUMBER and the parser converts with strtoul(yytext,NULL,0), you should just get that for free.  Might want to use hex values in the example since I would expect that to look more normal.",
+      "parentUuid": "4876da13_06aeda7e",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "887c52f2_a8195b20",
         "filename": "security/selinux/include/security.h",
         "patchSetId": 4
