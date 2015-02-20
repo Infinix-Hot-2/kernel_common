@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "887c52f2_6822031a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:22:21Z",
+      "side": 1,
+      "message": "We generally don\u0027t use the term \"patch\" in change descriptions since the description will live in the history forever, long after it ceases to be a patch.\nJust describe what it is that the patch/change does, focusing first on the logical effect and then only secondarily on implementation details (and even then only to the extent necessary to convey what is not obvious from the code).\nI would say something like \"Extend the generic ioctl permission check with support for per-command filtering.\"",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4876da13_06aeda7e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T16:22:21Z",
+      "side": 1,
+      "message": "Haven\u0027t seen your checkpolicy patch but I\u0027ll assume you also support specifying as hex values since that would be more typical.",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "887c52f2_a8195b20",
         "filename": "security/selinux/include/security.h",
         "patchSetId": 4
