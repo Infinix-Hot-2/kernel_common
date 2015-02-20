@@ -737,6 +737,30 @@
       "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "887c52f2_08b267c5",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1076,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-20T15:18:12Z",
+      "side": 1,
+      "message": "auditdeny is the set of permissions that should be audited upon denial (i.e. generate an avc: denied message).  However, unlike auditallow and allow, it defaults to all-permissions-set, and one uses dontaudit rules in policy to turn off specific permissions (originally they were auditdeny rules but people always wrote them as auditdeny foo bar:class ~{perm1 perm2...};, and there was then confusion about how to union them, and it switched to dontaudit rules).  So if there is an auditdeny entry, we intersect with it to remove the permissions that should not be audited upon denial.  But it is still the case that you only audit a permission if it is set.  So I\u0027m unclear on your logic here.",
+      "parentUuid": "48525a24_465ab270",
+      "range": {
+        "startLine": 1076,
+        "startChar": 5,
+        "endLine": 1076,
+        "endChar": 6
+      },
+      "revId": "99364866cacdea7e00c561d45dc9511dc12274d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
