@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "a8c5967a_02c2d08f",
+        "filename": "security/selinux/ss/avtab.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-20T19:36:29Z",
+      "side": 1,
+      "message": "Using the flag to reduce the size of the policy binary is straightforward. It\u0027s not clear to me what you are suggesting for the in-memory avtab. I could use a union for the datum structure.\n\nstruct avtab_datum {\n\tunion {\n\t\tu32 data;\n\t\tstruct operation *ops;\n\t} u;\n}\n\nOr are you suggesting a single range per avtab.\n\n\nstruct avtab_datum {\n\tunion {\n\t\tu32 data;\n\t\tstruct {\n\t\t\tu16 high;\n\t\t\tu16 low;\n\t\t} range;\n\t} u;\n}\n\nThat would provide significant memory reduction, but also the possibility of very long chains in the avtab. Based on the current setup, compile time restrictions on the number of ranges is necessary, so maybe this is not a valid concern.",
+      "parentUuid": "288a862f_0df19120",
+      "revId": "424e66089475fb9834beaf8cde958f4616109ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "08a1425e_5f4fef7e",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 3
