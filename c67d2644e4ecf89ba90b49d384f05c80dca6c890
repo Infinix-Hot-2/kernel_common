@@ -173,6 +173,24 @@
     },
     {
       "key": {
+        "uuid": "a813d6da_89acb903",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-20T23:38:05Z",
+      "side": 1,
+      "message": "auditallow functionality has been tested, auditdeny has not.\n\nI\u0027m reluctant to remove auditallow. I originally implemented this using just allow, but quickly ran into an issue where auditallow of the entire ioctl (gpu) would fill up the log and trigger the watch-dog timer, or if rate-limited would miss commands that were infrequently called. This makes it difficult to create policy using the typical dmesg -\u003e audit2allow method. Relying on actual denials seems fragile. Particularly because device-specific policy doesn\u0027t have the opportunity to mature the way general policy does. And I anticipate this being used to reduce attack surface on device-specific drivers.",
+      "parentUuid": "887c52f2_48ae1f2e",
+      "revId": "c67d2644e4ecf89ba90b49d384f05c80dca6c890",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4876da13_e6d29e09",
         "filename": "security/selinux/operations.c",
         "patchSetId": 4
