@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8258b342_689fc377",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 3177,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-25T21:36:49Z",
+      "side": 1,
+      "message": "The latter half of this function should really be integrated into avc.c with a new avc_has_operation() function.",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c25e2b2b_caa6a3d4",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-25T21:36:49Z",
+      "side": 1,
+      "message": "This should be \u0026\u003d; if the operation is not in range, we do not want to include the permission in the auditdeny vector, i.e. we do not want to audit denials of it.  Don\u0027t confuse the auditdeny vector in the avd with the poorly named auditdeny vector passed down from the hooks to support disabling auditing of access(2) requests without disabling actual open/read/write auditing.",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0233e3f5_afddb569",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-25T21:36:49Z",
+      "side": 1,
+      "message": "This will almost always be non-NULL since it is a union now.  Need to test (cur-\u003ekey.specified \u0026 AVTAB_OP) instead.",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
