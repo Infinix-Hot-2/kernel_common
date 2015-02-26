@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "c2e54b1d_f26688b8",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 616,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-26T19:23:12Z",
+      "side": 1,
+      "message": "The problem with adding/merging the command is that we have a fixed array size for ranges. This creates the possibility of an array size that is larger than the allocated size.",
+      "parentUuid": "42ab1b9e_1e790d57",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "02a1235e_9c8ca54f",
         "filename": "security/selinux/avc.c",
         "patchSetId": 5
@@ -47,6 +65,24 @@
       "writtenOn": "2015-02-26T18:55:11Z",
       "side": 1,
       "message": "Used to have similar logic for the NULL avd, but this was removed by Linus in f01e1af01e1af445fac107e91d62a2d59dd535f633810b.  Should probably avoid doing it for the od as well.",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82efd3fe_f09e8079",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 771,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-26T19:23:12Z",
+      "side": 1,
+      "message": "updated in the next patchset",
+      "parentUuid": "22738725_25ee6e10",
       "revId": "eceb13e1763c85db37c7b507c024213255e30553",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
