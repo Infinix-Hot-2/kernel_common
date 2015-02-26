@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "42ab1b9e_1e790d57",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 616,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-26T18:55:11Z",
+      "side": 1,
+      "message": "This means that in permissive mode, after the first occurrence of an ioctl denial for a given (ssid, tsid, tclass), you won\u0027t audit any further denials even for different ioctl commands.  Don\u0027t you want/need to add/merge the denied command into the existing entry\u0027s od?  Also not fond of hardcoded logic around FILE__IOCTL anywhere outside of the selinux_file_ioctl.  Can\u0027t we just leave it as just a test of node-\u003eae.od?",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "02a1235e_9c8ca54f",
         "filename": "security/selinux/avc.c",
         "patchSetId": 5
@@ -13,6 +30,23 @@
       "writtenOn": "2015-02-25T22:26:51Z",
       "side": 1,
       "message": "need to update documentation.",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "22738725_25ee6e10",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 771,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-26T18:55:11Z",
+      "side": 1,
+      "message": "Used to have similar logic for the NULL avd, but this was removed by Linus in f01e1af01e1af445fac107e91d62a2d59dd535f633810b.  Should probably avoid doing it for the od as well.",
       "revId": "eceb13e1763c85db37c7b507c024213255e30553",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -66,6 +100,23 @@
     },
     {
       "key": {
+        "uuid": "02b5a3f7_dceded13",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 817,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-26T18:55:11Z",
+      "side": 1,
+      "message": "FWIW, this entire function is removed in cb4fbe5703be51f8a2dff4052b1901941ab99e12 (3.12?).",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8258b342_689fc377",
         "filename": "security/selinux/hooks.c",
         "patchSetId": 5
@@ -83,6 +134,91 @@
     },
     {
       "key": {
+        "uuid": "42ab1b9e_9e62bd79",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-26T18:55:11Z",
+      "side": 1,
+      "message": "Unnecessary since the entire od was allocated with kmem_cache_zalloc.",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c2c0eb6a_bae23122",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-26T18:55:11Z",
+      "side": 1,
+      "message": "Ditto.",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c2c0eb6a_9ae76d32",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-26T18:55:11Z",
+      "side": 1,
+      "message": "Ditto",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82d51302_60021289",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-26T18:55:11Z",
+      "side": 1,
+      "message": "Would prefer to avoid hardcoded use of FILE__IOCTL outside of selinux_file_ioctl.  Is this micro-optimization truly worthwhile?",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c282ab18_0ab09bb9",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-26T18:55:11Z",
+      "side": 1,
+      "message": "If you drop the above \"optimization\", then instead of copying specified twice (once in the caller, into operation_specified for passing to avc_denied and once here), you can just do it once.",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c25e2b2b_caa6a3d4",
         "filename": "security/selinux/operations.c",
         "patchSetId": 5
@@ -94,6 +230,24 @@
       "writtenOn": "2015-02-25T21:36:49Z",
       "side": 1,
       "message": "This should be \u0026\u003d; if the operation is not in range, we do not want to include the permission in the auditdeny vector, i.e. we do not want to audit denials of it.  Don\u0027t confuse the auditdeny vector in the avd with the poorly named auditdeny vector passed down from the hooks to support disabling auditing of access(2) requests without disabling actual open/read/write auditing.",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82ba73ec_b846b969",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-26T18:55:11Z",
+      "side": 1,
+      "message": "Sorry, I meant \u0026\u003d ~requested, just like with auditallow.  They are used identically by the AVC, i.e. audited \u003d requested \u0026 X where X \u003d auditallow or auditdeny depending on whether the permission was allowed or denied.",
+      "parentUuid": "c25e2b2b_caa6a3d4",
       "revId": "eceb13e1763c85db37c7b507c024213255e30553",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
