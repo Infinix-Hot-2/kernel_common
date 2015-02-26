@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "82efd3fe_90061499",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 616,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-26T19:44:33Z",
+      "side": 1,
+      "message": "We can at least add/merge until we reach the limit, and return an error to the caller if we hit the limit (although it won\u0027t matter for the only current caller, but if e.g. a dynamic policy engine wanted to add commands dynamically, it would want to know if it wasn\u0027t possible).\nThis is a slow path anyway; permissive mode (global or per-domain) should only be used for development.",
+      "parentUuid": "c2e54b1d_f26688b8",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "02a1235e_9c8ca54f",
         "filename": "security/selinux/avc.c",
         "patchSetId": 5
