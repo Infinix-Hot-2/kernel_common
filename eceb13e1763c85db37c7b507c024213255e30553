@@ -185,6 +185,23 @@
     },
     {
       "key": {
+        "uuid": "82d51302_a00b3a9f",
+        "filename": "security/selinux/operations.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-26T19:02:41Z",
+      "side": 1,
+      "message": "For this and all the below functions, be careful about use of inline.  See commit   a554bea89948dfb6d2f9c4c62ce2b12b2dac18ad",
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "82d51302_60021289",
         "filename": "security/selinux/operations.c",
         "patchSetId": 5
