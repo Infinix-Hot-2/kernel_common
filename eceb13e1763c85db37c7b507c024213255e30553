@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "62b3bffa_57ca2ca7",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 781,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-26T13:54:20Z",
+      "side": 1,
+      "message": "Hmmm...seemingly obsoleted by f01e1af445fac107e91d62a2d59dd535f633810b",
+      "parentUuid": "626bbfdd_b789883e",
+      "range": {
+        "startLine": 781,
+        "startChar": 0,
+        "endLine": 781,
+        "endChar": 22
+      },
+      "revId": "eceb13e1763c85db37c7b507c024213255e30553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8258b342_689fc377",
         "filename": "security/selinux/hooks.c",
         "patchSetId": 5
