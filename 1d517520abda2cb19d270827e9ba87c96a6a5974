@@ -254,6 +254,57 @@
       "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "22c707d7_457f8a8b",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 3113,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:54:10Z",
+      "side": 1,
+      "message": "We should truncate to u16 cmd here.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_dd623b7a",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 3125,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:54:10Z",
+      "side": 1,
+      "message": "So that the audited command value matches what was actually checked.  Also so that if we generate policy from denials, we can just directly use that value.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42ca3bdf_460dd25f",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 3136,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:54:10Z",
+      "side": 1,
+      "message": "No point in calling this here since we don\u0027t use cred below.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
