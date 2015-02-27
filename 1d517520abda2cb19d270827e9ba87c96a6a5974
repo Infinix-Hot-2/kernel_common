@@ -276,6 +276,24 @@
     },
     {
       "key": {
+        "uuid": "e295efbd_3bf43789",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 761,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T18:04:49Z",
+      "side": 1,
+      "message": "-ERANGE is commonly used elsewhere when a buffer is not sufficiently large to hold a result.",
+      "parentUuid": "628adf9e_1fce8368",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62073fcc_5de46ba9",
         "filename": "security/selinux/avc.c",
         "patchSetId": 7
