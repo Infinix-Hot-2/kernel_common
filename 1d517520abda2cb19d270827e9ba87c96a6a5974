@@ -258,6 +258,24 @@
     },
     {
       "key": {
+        "uuid": "628adf9e_1fce8368",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 761,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-27T17:57:30Z",
+      "side": 1,
+      "message": "Should have some code up shortly. Considering the return code when there is no space. The Caller does not presently check the return value, but that could change. Some candidates:  \nENOMEM - /* Out of memory */\nE2BIG  - /* Argument list too long */\nENOSPC - /* No space left on device */\n\nNone of the available options seem great, I\u0027ll choose ENOMEM if there is not a preference.",
+      "parentUuid": "62073fcc_9ddd63e7",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62073fcc_5de46ba9",
         "filename": "security/selinux/avc.c",
         "patchSetId": 7
