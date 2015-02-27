@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "c27b8b5e_22616eed",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:48:13Z",
+      "side": 1,
+      "message": "Actually, since all of the callers negate avc_operation_in_range, it would be:\nif (op-\u003elen \u0026\u0026 !avc_operation_in_range(op, cmd))\nThen we\u0027ll never call the function at all in the common case.",
+      "parentUuid": "62073fcc_7d55efb7",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62073fcc_5d52abd1",
         "filename": "security/selinux/avc.c",
         "patchSetId": 7
