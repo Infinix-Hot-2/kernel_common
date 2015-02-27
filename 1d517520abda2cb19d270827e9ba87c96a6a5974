@@ -305,6 +305,57 @@
       "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42ca3bdf_6629eea9",
+        "filename": "security/selinux/include/security.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:04:03Z",
+      "side": 1,
+      "message": "Prefer putting | or \u0026 at end of line, not beginning.\nAlso, not clear this needs to be split into 3 lines and\nthe indentation looks wrong.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42ca3bdf_467f928b",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:04:03Z",
+      "side": 1,
+      "message": "Need to return an error if (key.specified \u0026 AVTAB_OP) here since it should never happen in these policy versions and if by some random bit flipping it was set, we\u0027d set data here but try to dereference it as ops later.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_7d720f47",
+        "filename": "security/selinux/ss/avtab.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:04:03Z",
+      "side": 1,
+      "message": "Ditto.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
