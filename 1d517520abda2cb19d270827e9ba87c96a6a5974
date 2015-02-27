@@ -1,0 +1,259 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "62073fcc_bd6667b7",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "checked by caller, drop from here.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_dd651bab",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "Since requested is no longer used, this function is now identical to the previous function, just with reverse order of arguments.  So drop one and just call it twice with different argument order.  Arguments can just be src and dst rather than local_od vs od.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_7d55efb7",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "Wondering we should take this test to the callers since it will be the common case, e.g. if (!op-\u003elen || avc_operation_in_range(op, cmd)) ...",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_5d52abd1",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "Prefer \u0026\u0026 and || to be at the end of line rather than at beginning.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "02168300_97fc260e",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "Documentation/CodingStyle says:\n\t/*\n\t * This is the preferred style for multi-line\n\t * comments in the Linux kernel source code.\n\t * Please use it consistently.\n\t *\n\t * Description:  A column of asterisks on the left side,\n\t * with beginning and ending almost-blank lines.\n\t */\n\nAlso, I would typically put this comment within the following { } block above the return statement.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62d57f78_67de1266",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "u16 cmd (already u16 in caller)",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62d57f78_47db0e74",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 327,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "No need for (u16)",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a2dbf7ab_c94b9170",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "I wuold compute audited first, then clear the bit in it.  No point in clearing it in avd because it is just a stack variable in the caller that will never be used again.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82b7d34b_b0ab1870",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "No need for (u16)",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a2dbf7ab_29618ded",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "Ditto.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82b7d34b_90b094db",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "u16 cmd",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_9ddd63e7",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 761,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "I don\u0027t think this is appropriate behavior.  Policy development is commonly done in permissive mode (either global for initial board bringup or per-domain for new services), and if we immediately silence all ioctl denials for a given (ssid, tsid, tclass) after the first one and only log that first cmd, then we\u0027ll have a very painful policy development process if we ever want to develop least privilege ioctl policies.  Our only real options are to either never call avc_update_node() if node-\u003eae.od, i.e. audit all the denials even in permissive mode, or actually add/merge the operation_ranges.  The first option carries the potential cost of flooding the system with repeated ioctl denials; the second option carries a cost of the merge logic but only in permissive and only if denied, so not critical path.  Regardless, I would omit the (perms \u0026 FILE__IOCTL) test here.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_5de46ba9",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 913,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "Why inline?",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42ca3bdf_c6cee2b8",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 929,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "Should we take this inside of avc_decision() since it is repeated by both callers except for clearing the od state?  Is it worth keeping separate?",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82e9932d_432f78b0",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 939,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T15:43:06Z",
+      "side": 1,
+      "message": "No need for parentheses here.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
