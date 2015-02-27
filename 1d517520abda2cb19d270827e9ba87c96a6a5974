@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "32111a43_da2445df",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-27T23:15:28Z",
+      "side": 1,
+      "message": "I\u0027m not sure what you mean. The coding standard says \"Descendants are always substantially shorter than the parent and are placed substantially to the right.\" As-is this seems to fit both those criterion. Is the preference for three tabs instead of two or something different? I have noticed a lot of mixed tabs and spaces in the existing code (e.g. see Dan\u0027s comment on indentation).",
+      "parentUuid": "228c67b9_3d2c2fba",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62073fcc_bd6667b7",
         "filename": "security/selinux/avc.c",
         "patchSetId": 7
@@ -294,6 +312,29 @@
     },
     {
       "key": {
+        "uuid": "12141632_b9f3dfed",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 880,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-27T23:15:28Z",
+      "side": 1,
+      "message": "This is another good example of strange indentation. Three tabs and one space?",
+      "range": {
+        "startLine": 880,
+        "startChar": 3,
+        "endLine": 880,
+        "endChar": 4
+      },
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62073fcc_5de46ba9",
         "filename": "security/selinux/avc.c",
         "patchSetId": 7
@@ -373,6 +414,24 @@
       "writtenOn": "2015-02-27T15:54:10Z",
       "side": 1,
       "message": "So that the audited command value matches what was actually checked.  Also so that if we generate policy from denials, we can just directly use that value.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "32111a43_bd7d0b9d",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 3125,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-02-27T23:15:28Z",
+      "side": 1,
+      "message": "My checkpolicy code currently accepts either.",
+      "parentUuid": "62073fcc_dd623b7a",
       "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
