@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "628adf9e_5ff1eb97",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T17:54:05Z",
+      "side": 1,
+      "message": "merge with prior line",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "228c67b9_3d2c2fba",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T17:54:05Z",
+      "side": 1,
+      "message": "Here and for many of the other functions, the indentation doesn\u0027t look right for the arguments on the second and beyond lines.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62073fcc_bd6667b7",
         "filename": "security/selinux/avc.c",
         "patchSetId": 7
