@@ -356,6 +356,227 @@
       "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_1d4e73ff",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "Too many tabs.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_3d9a570b",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 569,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "Not critical now, but at some point we may want to integrate typebounds support for operations as well.  The typebounds relation can be defined in policy through typebounds statements and establishes a hierarchy among types where child types are limited to a subset of the permissions of the parent type.  So imposing the same kind of restriction for operations would make sense if the type is bounded.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "22c707d7_a59e3e78",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 616,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "Need an empty line between functions.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_9d93a3f2",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 625,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "typically put comments within the { } block they describe",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_1d9793e3",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 636,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "Prefer \u0026\u0026 and || at end of line, not beginning.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42ca3bdf_86ba2ae8",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 640,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "Ditto",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42ca3bdf_c6c4226c",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 645,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "Collapse to else if, reduce indentation.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "22c707d7_25936e71",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 650,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "Comment style.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42ca3bdf_26aa5699",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 657,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "Move to outer else, reduce indentation, make checkpatch happy.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42ca3bdf_66b44ef9",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 671,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "add empty line here",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42ca3bdf_46b15207",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 719,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "Too many tabs.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_1d803393",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 1012,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "@od: operation decisions",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62073fcc_5d7aab04",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 1101,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-02-27T16:17:53Z",
+      "side": 1,
+      "message": "Another future extension is that we\u0027ll likely want to extend the userspace interface for getting access decisions to support these operation decisions as well.",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
