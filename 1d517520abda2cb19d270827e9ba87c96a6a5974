@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "123976d0_d1cf84a5",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 1010099
+      },
+      "writtenOn": "2015-02-28T01:12:09Z",
+      "side": 1,
+      "message": "I would have expected the start of struct operation_decision *local_od to line up with the start of struct operation_decision *od.  Doesn\u0027t have to be exact but it is pretty far off here and elsewhere.  But I\u0027m not a stickler for it; just noting it as other maintainers may complain.",
+      "parentUuid": "32111a43_da2445df",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62073fcc_bd6667b7",
         "filename": "security/selinux/avc.c",
         "patchSetId": 7
@@ -323,6 +341,30 @@
       "writtenOn": "2015-02-27T23:15:28Z",
       "side": 1,
       "message": "This is another good example of strange indentation. Three tabs and one space?",
+      "range": {
+        "startLine": 880,
+        "startChar": 3,
+        "endLine": 880,
+        "endChar": 4
+      },
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "02204381_040c96b6",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 880,
+      "author": {
+        "id": 1010099
+      },
+      "writtenOn": "2015-02-28T01:12:09Z",
+      "side": 1,
+      "message": "Yep, that should be fixed too.",
+      "parentUuid": "12141632_b9f3dfed",
       "range": {
         "startLine": 880,
         "startChar": 3,
