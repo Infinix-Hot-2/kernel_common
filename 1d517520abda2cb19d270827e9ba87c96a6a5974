@@ -480,6 +480,24 @@
     },
     {
       "key": {
+        "uuid": "923e46eb_5d6a3bed",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 3125,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-02T18:39:05Z",
+      "side": 1,
+      "message": "It creates an inconsistency between what is actually checked and what is audited and specified.  What\u0027s the benefit of auditing the full value, and what\u0027s the benefit of accepting the full value in checkpolicy and silently truncating it to u16?",
+      "parentUuid": "32111a43_bd7d0b9d",
+      "revId": "1d517520abda2cb19d270827e9ba87c96a6a5974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "42ca3bdf_460dd25f",
         "filename": "security/selinux/hooks.c",
         "patchSetId": 7
