@@ -84,6 +84,24 @@
       "revId": "9978f675c5968edcba233c5ef2c0f314ab8242af",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "524cce13_1bf49bd4",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 802,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-03T20:31:47Z",
+      "side": 1,
+      "message": "Sorry, should be:\n if (!cmd || !node-\u003eae.od || !(node-\u003eae.od-\u003especified \u0026 OPERATION_ALLOWED))",
+      "parentUuid": "b247caeb_1e5fadf8",
+      "revId": "9978f675c5968edcba233c5ef2c0f314ab8242af",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
