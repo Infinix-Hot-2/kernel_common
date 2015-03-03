@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "12e976fa_71e058c2",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 8
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-03T17:16:03Z",
+      "side": 1,
+      "message": "Hmm...the fix for this didn\u0027t end up in this commit. I\u0027ll upload now.",
+      "parentUuid": "72147288_0776b80b",
+      "revId": "1ef9c830b56263193d5553c95b0f0b0180c73780",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "32c11a6d_7a013931",
         "filename": "security/selinux/avc.c",
         "patchSetId": 8
@@ -64,6 +82,24 @@
       "writtenOn": "2015-03-03T14:02:39Z",
       "side": 1,
       "message": "So, we could end up denying an operation allowed by policy simply because we end up running out of space in the operation_range while merging multiple allow rules written on different attributes associated with the type, right?  And that truncation of the allowed operations would be silent?  Should we at least log if we bump up against the max operation range len during the merge for debugging purposes?  Is checkpolicy/libsepol doing anything to help detect/prevent this from happening?",
+      "revId": "1ef9c830b56263193d5553c95b0f0b0180c73780",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "72ce32a5_94f4e459",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 8
+      },
+      "lineNbr": 622,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-03T17:16:03Z",
+      "side": 1,
+      "message": "Yes, the plan is to add checks in the policy compiler to make sure this doesn\u0027t occur. I\u0027ll add the logging here too.",
+      "parentUuid": "32c11a6d_fa5ae95c",
       "revId": "1ef9c830b56263193d5553c95b0f0b0180c73780",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
