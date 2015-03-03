@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "72147288_0776b80b",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 8
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 1010099
+      },
+      "writtenOn": "2015-03-03T16:29:35Z",
+      "side": 1,
+      "message": "This assumes that dest was allocated with the same specified flags as src.  Is that a safe assumption?  Kernel with this patch crashes in this function on boot.",
+      "revId": "1ef9c830b56263193d5553c95b0f0b0180c73780",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "32c11a6d_7a013931",
         "filename": "security/selinux/avc.c",
         "patchSetId": 8
