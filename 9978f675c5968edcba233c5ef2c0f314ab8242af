@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "524cce13_3bdab767",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-03T20:29:23Z",
+      "side": 1,
+      "message": "Would it make sense to set od-\u003especified \u003d specified; here so that we can later validate what fields were allocated?",
+      "revId": "9978f675c5968edcba233c5ef2c0f314ab8242af",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "524cce13_dbe5d326",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-03T20:29:23Z",
+      "side": 1,
+      "message": "Then we could replace this with BUG_ON(dest-\u003especified !\u003d src-\u003especified);\nOtherwise, even with the other fix, there is still the potential that dest could have a different set of fields allocated than src.",
+      "revId": "9978f675c5968edcba233c5ef2c0f314ab8242af",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b247caeb_9e417d16",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 763,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-03T20:29:23Z",
+      "side": 1,
+      "message": "Here we allocate the node with a caller-provided specified value.",
+      "revId": "9978f675c5968edcba233c5ef2c0f314ab8242af",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d240bed5_5f552bd6",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 797,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-03T20:29:23Z",
+      "side": 1,
+      "message": "Here we populate using whatever specified value was set in the original node.  Potential for a difference to arise?",
+      "revId": "9978f675c5968edcba233c5ef2c0f314ab8242af",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b247caeb_1e5fadf8",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 802,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-03T20:29:23Z",
+      "side": 1,
+      "message": "Replace with:\n if (!cmd || !node-\u003eae.od || (!node-\u003eae.od-\u003especified \u0026 OPERATION_ALLOWED)\nBoth for clarity and to test whether allowed is even allocated.",
+      "revId": "9978f675c5968edcba233c5ef2c0f314ab8242af",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
