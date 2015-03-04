@@ -16,6 +16,24 @@
       "revId": "3133a0bfe2061e122b8b5a6d04d748248d4fb136",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d2051ec4_5a291183",
+        "filename": "security/lsm_audit.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-04T14:22:49Z",
+      "side": 1,
+      "message": "Also, might want to shorten the string to ioctlcmd\u003d.",
+      "parentUuid": "f216a2db_384de993",
+      "revId": "3133a0bfe2061e122b8b5a6d04d748248d4fb136",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
