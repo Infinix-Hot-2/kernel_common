@@ -71,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "32d75a80_0a2f5b8b",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 8
+      },
+      "lineNbr": 569,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-04T14:43:22Z",
+      "side": 1,
+      "message": "Note that avtab_write/avtab_write_item in the kernel do not need to support policyvers \u003c POLICYDB_VERSION_AVTAB, as this is prohibited at the beginning of policydb_write().  This is because /sys/fs/selinux/policy support was added long after that version change and it wasn\u0027t viewed as worthwhile to bring in the legacy support from libsepol.  But you do need to support the before and after cases for your new policy version.",
+      "parentUuid": "d20a7e5c_95c5a4b7",
+      "revId": "1ef9c830b56263193d5553c95b0f0b0180c73780",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "32c11a6d_fa5ae95c",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 8
