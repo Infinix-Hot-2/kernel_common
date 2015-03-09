@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "971718fb_75a6a8be",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 802,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-09T18:05:32Z",
+      "side": 1,
+      "message": "0x0000 is a valid command.\n\nDocumentation/ioctl/ioctl-number.txt\n\nI\u0027m having difficulty finding a driver that actually uses it, but it seems incorrect to include it here.",
+      "parentUuid": "77fc64c5_24c05294",
+      "revId": "ac7ade3d7d5339f7df7b7340a1fcd9266141e46b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "97fd58c2_c8106f86",
         "filename": "security/selinux/ss/avtab.c",
         "patchSetId": 10
