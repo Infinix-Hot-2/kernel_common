@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "57f840fa_1b079b17",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 802,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-09T18:16:27Z",
+      "side": 1,
+      "message": "So then don\u0027t you need another way to skip this logic when called from avc_has_perm_noaudit rather than avc_has_operation?",
+      "parentUuid": "971718fb_75a6a8be",
+      "revId": "ac7ade3d7d5339f7df7b7340a1fcd9266141e46b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "97fd58c2_c8106f86",
         "filename": "security/selinux/ss/avtab.c",
         "patchSetId": 10
