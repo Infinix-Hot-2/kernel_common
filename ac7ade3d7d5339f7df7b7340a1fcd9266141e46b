@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "f7b7744a_702370d6",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 802,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-09T18:28:37Z",
+      "side": 1,
+      "message": "As-is, this would just add command zero to the list of ranges (if specified), which seems harmless for a permissive domain, but certainly not ideal. Originally, this checked if one of the permissions being added was the ioctl permission, so that gated the adding of the command from avc_has_perm_noaudit. I need to think about it some more.",
+      "parentUuid": "57f840fa_1b079b17",
+      "revId": "ac7ade3d7d5339f7df7b7340a1fcd9266141e46b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "97fd58c2_c8106f86",
         "filename": "security/selinux/ss/avtab.c",
         "patchSetId": 10
@@ -117,6 +135,24 @@
       "writtenOn": "2015-03-09T16:31:50Z",
       "side": 1,
       "message": "put_entry",
+      "revId": "ac7ade3d7d5339f7df7b7340a1fcd9266141e46b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "77fd44e8_9cc8c552",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-09T18:28:37Z",
+      "side": 1,
+      "message": "No more late-afternoon commits on Friday. This is embarrassing.",
+      "parentUuid": "77fc64c5_a484425d",
       "revId": "ac7ade3d7d5339f7df7b7340a1fcd9266141e46b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
