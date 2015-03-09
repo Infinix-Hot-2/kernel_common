@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f71694db_382ac978",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-09T16:31:50Z",
+      "side": 1,
+      "message": "Why this approach instead of the one I suggested?  This approach will silently drop fields of src that are not allocated in dst.  The one I suggested will trigger a kernel BUG if they are ever inconsistent.",
+      "revId": "ac7ade3d7d5339f7df7b7340a1fcd9266141e46b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "77fc64c5_24c05294",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 802,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-09T16:31:50Z",
+      "side": 1,
+      "message": "What happened to the !cmd test here?",
+      "revId": "ac7ade3d7d5339f7df7b7340a1fcd9266141e46b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "97fd58c2_c8106f86",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 565,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-09T16:31:50Z",
+      "side": 1,
+      "message": "Wondering if we even need the version check here since AVTAB_OP can\u0027t be set in older versions, as enforced by the reader code.",
+      "revId": "ac7ade3d7d5339f7df7b7340a1fcd9266141e46b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "97fd58c2_08f207eb",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 569,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-09T16:31:50Z",
+      "side": 1,
+      "message": "cpu_to_le16()",
+      "revId": "ac7ade3d7d5339f7df7b7340a1fcd9266141e46b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "77fc64c5_a484425d",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-09T16:31:50Z",
+      "side": 1,
+      "message": "put_entry",
+      "revId": "ac7ade3d7d5339f7df7b7340a1fcd9266141e46b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "77fc64c5_e48a3a6a",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 572,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-09T16:31:50Z",
+      "side": 1,
+      "message": "Don\u0027t think we generally log such errors when generating the policy image.  And could be confusing as same error is using on reading.",
+      "revId": "ac7ade3d7d5339f7df7b7340a1fcd9266141e46b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "77fc64c5_649f6aa9",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-09T16:31:50Z",
+      "side": 1,
+      "message": "Ditto",
+      "revId": "ac7ade3d7d5339f7df7b7340a1fcd9266141e46b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
