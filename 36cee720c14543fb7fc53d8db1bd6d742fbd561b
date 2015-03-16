@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "e60a685c_6fb791eb",
+        "filename": "drivers/usb/gadget/android.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 947,
+      "author": {
+        "id": 1004957
+      },
+      "writtenOn": "2015-03-16T18:07:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fc9d9026_7e574d9d",
+      "range": {
+        "startLine": 947,
+        "startChar": 1,
+        "endLine": 947,
+        "endChar": 2
+      },
+      "revId": "36cee720c14543fb7fc53d8db1bd6d742fbd561b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bc6318f1_0c13b707",
         "filename": "drivers/usb/gadget/android.c",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2015-02-04T01:31:27Z",
       "side": 1,
       "message": "Suggest: #defines for the constants to increase readability ??",
+      "range": {
+        "startLine": 961,
+        "startChar": 70,
+        "endLine": 961,
+        "endChar": 83
+      },
+      "revId": "36cee720c14543fb7fc53d8db1bd6d742fbd561b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8147d63d_80bb0623",
+        "filename": "drivers/usb/gadget/android.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 961,
+      "author": {
+        "id": 1004957
+      },
+      "writtenOn": "2015-03-16T18:07:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bc6318f1_0c13b707",
       "range": {
         "startLine": 961,
         "startChar": 70,
