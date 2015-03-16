@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c61ac4b3_c072c2df",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 491,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2015-03-16T21:44:58Z",
+      "side": 1,
+      "message": "this is an impossible to occur condition, right?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86144c89_58a6cd8c",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 626,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2015-03-16T21:44:58Z",
+      "side": 1,
+      "message": "extract out and make a #define out of this?",
+      "range": {
+        "startLine": 626,
+        "startChar": 18,
+        "endLine": 626,
+        "endChar": 19
+      },
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
