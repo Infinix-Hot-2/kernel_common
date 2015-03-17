@@ -2,6 +2,159 @@
   "comments": [
     {
       "key": {
+        "uuid": "a6da3033_23bbae0a",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "unsigned int",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66e4b8f7_dee8217f",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "Can simplify the if statement and return statements to:\n\nreturn 1U \u0026 (op-\u003eperms[num \u003e\u003e 5] \u003e\u003e (num \u0026 0x1f));\n\nAnd should likely define a macro that can be reused for both perms and type arrays for bit testing and setting, thereby reducing duplication and centralizing the magic constants.",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86e9acd1_a2dedadf",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "Why isn\u0027t this always done, even if we had to set the type bit first?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6da3033_0304f241",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "Should probably be using the Linux kernel list structures and macros, include/linux/list.h.  AVC already converted to use hlists as appropriate for hash chains.  AVC and security server originally predated Linux and thus didn\u0027t use native Linux types and security server policy data structures shared with userspace but for in-kernel structures, should convert over.",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86e9acd1_42d0b6ce",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "sizeof(dest-\u003eallowed-\u003eperms)",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66e4b8f7_be30b597",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "Maybe this belongs in the caller so it is only applied in the proper case?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86e9acd1_e2e8e27e",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "++;",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6da3033_430efa6b",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "Why not insert as the new head?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66e4b8f7_de8ca1cf",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "sizeof(dest-\u003etype)",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c61ac4b3_c072c2df",
         "filename": "security/selinux/avc.c",
         "patchSetId": 12
@@ -13,6 +166,176 @@
       "writtenOn": "2015-03-16T21:44:58Z",
       "side": 1,
       "message": "this is an impossible to occur condition, right?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66e4b8f7_5e5091b5",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 492,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "This kind of test, if necessary/appropriate at all, should be a BUG_ON, i.e. an assertion.",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6da3033_23300e1b",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 797,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "spelling",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86e9acd1_a205facb",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 861,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "Didn\u0027t you say that a cmd\u003d\u003d0 is possible for an ioctl?  If so, you need a separate parameter or other way to determine whether this should be done.",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6da3033_832f22b8",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 977,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "inlined and only called once, and short enough to inline directly?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66e4b8f7_7ecc6d08",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 1000,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "Small function, one caller.  Inline directly?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66e4b8f7_5ec7b1e4",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 1025,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "No callers within this file.  Why inline?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6da3033_c3204ac7",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 1134,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "Should likely introduce a flag or specific parameter to indicate no-cmd.",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86e9acd1_a20c1af0",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 467,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "Not sure we need the version check in the kernel writer code since the policy can only originate from a prior load and the reader code prohibits AVTAB_OP unless the vers \u003e\u003d this version.",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66e4b8f7_5e9ed1e4",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 487,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "ARRAY_SIZE(ops.op.perms)",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6da3033_031b129f",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 569,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "ARRAY_SIZE",
       "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -36,6 +359,98 @@
         "endLine": 626,
         "endChar": 19
       },
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6da3033_235f2e53",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 626,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "ARRAY_SIZE(ops-\u003etype)",
+      "parentUuid": "86144c89_58a6cd8c",
+      "range": {
+        "startLine": 626,
+        "startChar": 18,
+        "endLine": 626,
+        "endChar": 19
+      },
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66e4b8f7_9e9779c4",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 631,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "Use a common macro for getting/setting bits in type and perms arrays.",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86e9acd1_e21622fe",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 661,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "ARRAY_SIZE",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86e9acd1_0214eef3",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 662,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "Do we need this initialization if ops-\u003elen \u003d\u003d 0?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66e4b8f7_de9101cf",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 936,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:06:51Z",
+      "side": 1,
+      "message": "Needed if specified \u003d\u003d 0?",
       "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
