@@ -291,6 +291,40 @@
     },
     {
       "key": {
+        "uuid": "86e9acd1_62793246",
+        "filename": "security/selinux/include/security.h",
+        "patchSetId": 12
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:08:55Z",
+      "side": 1,
+      "message": "This field is never used or set by the security server (ss/*.h), so it doesn\u0027t belong in security.h or as part of this interface.  It belongs in a AVC-private data structure that wraps the operation_decision returned by the security server and adds it to a list.",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66e4b8f7_1e036993",
+        "filename": "security/selinux/include/security.h",
+        "patchSetId": 12
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-17T15:08:55Z",
+      "side": 1,
+      "message": "Ditto.",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "86e9acd1_a20c1af0",
         "filename": "security/selinux/ss/avtab.c",
         "patchSetId": 12
