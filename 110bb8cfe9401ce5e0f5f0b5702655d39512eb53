@@ -291,6 +291,23 @@
     },
     {
       "key": {
+        "uuid": "a6da3033_f14990bd",
+        "filename": "security/selinux/include/security.h",
+        "patchSetId": 12
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-18T12:43:39Z",
+      "side": 1,
+      "message": "Policy version 30 was just allocated upstream for a change in the Xen policy format, but the current definition for SELinux kernel policy is identical to policy 29, so you can still reuse version 30 for your change as long as it lands before we make another release of the selinux userspace (wouldn\u0027t expect one for a while).",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "86e9acd1_62793246",
         "filename": "security/selinux/include/security.h",
         "patchSetId": 12
