@@ -393,6 +393,23 @@
     },
     {
       "key": {
+        "uuid": "c6aba49c_1e7a2db7",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 569,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-18T14:31:32Z",
+      "side": 1,
+      "message": "We should go ahead and pass ops to type_attribute_bounds_av() and adjust it for bounded types, and define and pass a lo_ops struct here to use for masking out operations not allowed to the parent.",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "86144c89_58a6cd8c",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 12
@@ -485,6 +502,23 @@
       "writtenOn": "2015-03-17T15:06:51Z",
       "side": 1,
       "message": "Do we need this initialization if ops-\u003elen \u003d\u003d 0?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86b52cfa_5cfafdb9",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 701,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-18T14:31:32Z",
+      "side": 1,
+      "message": "Should pass ops down to the cond_compute_av and adjust it there as well based on any conditional rules.",
       "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
