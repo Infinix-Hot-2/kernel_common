@@ -556,6 +556,23 @@
       "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6a6b0d3_bde1ffc5",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 948,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-18T14:41:12Z",
+      "side": 1,
+      "message": "Why is this only if AVTAB_OPNUM and not for AVTAB_OPTYPE?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
