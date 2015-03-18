@@ -457,6 +457,23 @@
     },
     {
       "key": {
+        "uuid": "86b52cfa_dc63ad14",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 627,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-18T14:35:45Z",
+      "side": 1,
+      "message": "Not sure if I am just misunderstanding, but this looks wrong.  Setting op-\u003etype[i] from a perms[i] value?  Don\u0027t you just want to set the type value at this point in both cases?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "66e4b8f7_9e9779c4",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 12
