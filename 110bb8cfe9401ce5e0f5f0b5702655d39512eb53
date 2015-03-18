@@ -138,6 +138,24 @@
     },
     {
       "key": {
+        "uuid": "c6d48430_f6456076",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-18T20:41:53Z",
+      "side": 1,
+      "message": "hmm...suggestions? Do I just need due diligence here e.g. check that the operation decision is in fact empty?",
+      "parentUuid": "c6aba49c_fef2e1b3",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a6da3033_430efa6b",
         "filename": "security/selinux/avc.c",
         "patchSetId": 12
@@ -427,6 +445,24 @@
     },
     {
       "key": {
+        "uuid": "e6bd08e7_9192ac23",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 569,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-18T20:41:53Z",
+      "side": 1,
+      "message": "Some name overloading on the word \"type.\" Perhaps I should change to code/function from type/number...\n\nAs-is, we would only be able to consider ioctl command types, not the numbers, as the numbers are looked up later as needed.",
+      "parentUuid": "c6aba49c_1e7a2db7",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "86144c89_58a6cd8c",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 12
@@ -485,6 +521,24 @@
       "writtenOn": "2015-03-18T14:35:45Z",
       "side": 1,
       "message": "Not sure if I am just misunderstanding, but this looks wrong.  Setting op-\u003etype[i] from a perms[i] value?  Don\u0027t you just want to set the type value at this point in both cases?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06f05cdb_301e4890",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 627,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-18T20:41:53Z",
+      "side": 1,
+      "message": "AVTAB_OPTYPE is a way to allow entire types. Since there are 256 of them, using the perms value works nicely.\n\nAVTAB_OPNUM is for allowing permissions within a type.\n\nWould you prefer a separate structure since the type value is unused in this case?",
+      "parentUuid": "86b52cfa_dc63ad14",
       "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -559,6 +613,24 @@
     },
     {
       "key": {
+        "uuid": "06f05cdb_5021ccc7",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 701,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-18T20:41:53Z",
+      "side": 1,
+      "message": "Agreed. My preference would be to limit the scope of this patch and save that as an extension. I\u0027m a bit concerned about how large this is getting.",
+      "parentUuid": "86b52cfa_5cfafdb9",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "66e4b8f7_de9101cf",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 12
@@ -587,6 +659,24 @@
       "writtenOn": "2015-03-18T14:41:12Z",
       "side": 1,
       "message": "Why is this only if AVTAB_OPNUM and not for AVTAB_OPTYPE?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46e6d429_f2f208b4",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 948,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-18T20:41:53Z",
+      "side": 1,
+      "message": "OPTYPE allows an entire type so we care about any specified\u003dOPTYPE that we find, whereas we only care about matching types for specified\u003dOPNUM.",
+      "parentUuid": "a6a6b0d3_bde1ffc5",
       "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
