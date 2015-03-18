@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a6d4f037_90a29a1e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-03-18T22:35:37Z",
+      "side": 1,
+      "message": "fixup! is a git command that gets executed when running git rebase --autosquash. It is not meant to be published that way.",
+      "revId": "deb1413f9e1373230a223a2daa93d2bb6f8193dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
