@@ -174,6 +174,24 @@
     },
     {
       "key": {
+        "uuid": "66de785c_a5d9d2fb",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-19T22:27:33Z",
+      "side": 1,
+      "message": "That would certainly reduce the complexity of the approach.",
+      "parentUuid": "a6a6b0d3_ec635314",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a6da3033_430efa6b",
         "filename": "security/selinux/avc.c",
         "patchSetId": 12
@@ -373,6 +391,24 @@
       "side": 1,
       "message": "commit 21193dcd1f3570ddfd8a04f4465e484c1f94252f removed the conditional use of node if non-NULL.  We should just make avc_insert() and avc_compute_av() void functions as nothing is using the return value and nothing should depend on a successful AVC insertion.  Only the avd (and now ops) structures returned via parameters should be used by callers.",
       "parentUuid": "86b52cfa_d0770c89",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46825452_f2ec68bf",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 1054,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-19T22:27:33Z",
+      "side": 1,
+      "message": "Seems like I should be able to use node (if not NULL) from anywhere within the rcu_lock. Otherwise I will do an unnecessary memcpy of the ops structure which is not needed outside the rcu. Note that I still require the the lock on node in order to retrieve and copy the operation_decision later (avc_operation_lookup) such that it is accessible outside the rcu for auditing. So even if I copy ops, I still need the node locked so my preference is to skip unnecessary copying.",
+      "parentUuid": "86b52cfa_308990f4",
       "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
