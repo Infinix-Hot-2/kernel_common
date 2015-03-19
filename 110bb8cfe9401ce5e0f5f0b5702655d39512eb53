@@ -361,6 +361,24 @@
     },
     {
       "key": {
+        "uuid": "86b52cfa_308990f4",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 1054,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-19T15:36:05Z",
+      "side": 1,
+      "message": "commit 21193dcd1f3570ddfd8a04f4465e484c1f94252f removed the conditional use of node if non-NULL.  We should just make avc_insert() and avc_compute_av() void functions as nothing is using the return value and nothing should depend on a successful AVC insertion.  Only the avd (and now ops) structures returned via parameters should be used by callers.",
+      "parentUuid": "86b52cfa_d0770c89",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a6da3033_c3204ac7",
         "filename": "security/selinux/avc.c",
         "patchSetId": 12
