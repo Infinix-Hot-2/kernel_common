@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "461df4f5_7a7039d7",
+        "filename": "drivers/clk/Kconfig",
+        "patchSetId": 2
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2015-03-19T19:50:37Z",
+      "side": 1,
+      "message": "namespace these in COMMON_CLK_",
+      "range": {
+        "startLine": 137,
+        "startChar": 7,
+        "endLine": 137,
+        "endChar": 28
+      },
+      "revId": "63665a3e36f374c6c15da3ee70b42d5fc6b87e69",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "461df4f5_fa4a0986",
+        "filename": "drivers/clk/clk.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2015-03-19T19:50:37Z",
+      "side": 1,
+      "message": "bool",
+      "range": {
+        "startLine": 120,
+        "startChar": 7,
+        "endLine": 120,
+        "endChar": 10
+      },
+      "revId": "63665a3e36f374c6c15da3ee70b42d5fc6b87e69",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06177cd9_f84a1186",
+        "filename": "drivers/clk/clk.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1144,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2015-03-19T19:50:37Z",
+      "side": 1,
+      "message": "is ktime_get too expensive to use here?",
+      "range": {
+        "startLine": 1144,
+        "startChar": 20,
+        "endLine": 1144,
+        "endChar": 34
+      },
+      "revId": "63665a3e36f374c6c15da3ee70b42d5fc6b87e69",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "461df4f5_9afc2d88",
+        "filename": "include/linux/clk-private.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2015-03-19T19:50:37Z",
+      "side": 1,
+      "message": "keep the includes list sorted",
+      "revId": "63665a3e36f374c6c15da3ee70b42d5fc6b87e69",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
