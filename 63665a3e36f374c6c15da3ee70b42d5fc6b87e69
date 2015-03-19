@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "2620002d_f90d376e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-03-19T19:58:26Z",
+      "side": 1,
+      "message": "Frequency",
+      "range": {
+        "startLine": 20,
+        "startChar": 13,
+        "endLine": 20,
+        "endChar": 22
+      },
+      "revId": "63665a3e36f374c6c15da3ee70b42d5fc6b87e69",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "461df4f5_7a7039d7",
         "filename": "drivers/clk/Kconfig",
         "patchSetId": 2
@@ -82,6 +105,29 @@
       "writtenOn": "2015-03-19T19:50:37Z",
       "side": 1,
       "message": "keep the includes list sorted",
+      "revId": "63665a3e36f374c6c15da3ee70b42d5fc6b87e69",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06177cd9_5859bd17",
+        "filename": "include/linux/clk-private.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-03-19T19:58:26Z",
+      "side": 1,
+      "message": "asm/cputime.h",
+      "range": {
+        "startLine": 17,
+        "startChar": 10,
+        "endLine": 17,
+        "endChar": 31
+      },
       "revId": "63665a3e36f374c6c15da3ee70b42d5fc6b87e69",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
