@@ -71,6 +71,29 @@
     },
     {
       "key": {
+        "uuid": "2620002d_f944570a",
+        "filename": "drivers/clk/clk.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2015-03-19T20:04:53Z",
+      "side": 1,
+      "message": "This is mixing cputime64_t and jiffies (u64).  If you want cputime64_t, use jiffies64_to_cputime64",
+      "range": {
+        "startLine": 207,
+        "startChar": 4,
+        "endLine": 207,
+        "endChar": 38
+      },
+      "revId": "63665a3e36f374c6c15da3ee70b42d5fc6b87e69",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "06177cd9_f84a1186",
         "filename": "drivers/clk/clk.c",
         "patchSetId": 2
@@ -122,6 +145,30 @@
       "writtenOn": "2015-03-19T19:58:26Z",
       "side": 1,
       "message": "asm/cputime.h",
+      "range": {
+        "startLine": 17,
+        "startChar": 10,
+        "endLine": 17,
+        "endChar": 31
+      },
+      "revId": "63665a3e36f374c6c15da3ee70b42d5fc6b87e69",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "461df4f5_dacaa51f",
+        "filename": "include/linux/clk-private.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2015-03-19T20:04:53Z",
+      "side": 1,
+      "message": "Now that you point it out, if all you want is jiffies use linux/jiffies.h",
+      "parentUuid": "06177cd9_5859bd17",
       "range": {
         "startLine": 17,
         "startChar": 10,
