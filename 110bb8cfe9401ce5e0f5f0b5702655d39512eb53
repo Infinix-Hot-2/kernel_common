@@ -415,6 +415,24 @@
     },
     {
       "key": {
+        "uuid": "c675643f_8e137b5a",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 1054,
+      "author": {
+        "id": 1010099
+      },
+      "writtenOn": "2015-03-19T23:19:04Z",
+      "side": 1,
+      "message": "The point is that avc_insert can fail due to transient memory pressure, thereby causing no node to be returned from avc_compute_av, and this condition should not cause a false denial or a false granting.  It should only prevent the result from being cached in the AVC for future lookups, so the next lookup will trigger another avc_compute_av call and at some point the transient memory pressure will likely alleviate and the result will get cached.  For the logic after the avc_compute_av() call, you can only rely on the avd and ops passed back via the arguments to avc_compute_av / security_compute_av.  Note that we do not rely on the node for the av decision, only the avd is referenced after the avc_compute_av call, and this has its own copy of the relevant information.",
+      "parentUuid": "46825452_f2ec68bf",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a6da3033_c3204ac7",
         "filename": "security/selinux/avc.c",
         "patchSetId": 12
