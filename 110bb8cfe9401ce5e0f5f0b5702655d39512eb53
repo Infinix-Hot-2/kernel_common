@@ -242,6 +242,23 @@
     },
     {
       "key": {
+        "uuid": "a6a6b0d3_0c40bff4",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 526,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-19T15:25:59Z",
+      "side": 1,
+      "message": "Maybe we should defer the allocation of the operations until we know the actual length, e.g. during populate.  The only real reason we allocate the node up front is a) that allocation does not have any dependencies, and b) if we reach the threshhold, we run a reclaim scan.  But allocation of the operations could occur during populate.",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a6da3033_23300e1b",
         "filename": "security/selinux/avc.c",
         "patchSetId": 12
@@ -321,6 +338,23 @@
       "writtenOn": "2015-03-17T15:06:51Z",
       "side": 1,
       "message": "No callers within this file.  Why inline?",
+      "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86b52cfa_d0770c89",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 12
+      },
+      "lineNbr": 1054,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-19T15:25:59Z",
+      "side": 1,
+      "message": "node can be NULL here from avc_compute_av().\nWe should only use the avd and ops structures here.\nNot sure even why we are returning node from avc_compute_av() as it wasn\u0027t being used by avc_has_perm; probably legacy.  The AVC is a cache, so it is always ok to not save the entry if we have a memory allocation failure, but we always get a response from the security server.",
       "revId": "110bb8cfe9401ce5e0f5f0b5702655d39512eb53",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
