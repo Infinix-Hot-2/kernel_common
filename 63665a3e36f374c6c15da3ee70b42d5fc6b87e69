@@ -48,6 +48,29 @@
     },
     {
       "key": {
+        "uuid": "2620002d_b9dfbf8d",
+        "filename": "drivers/clk/Kconfig",
+        "patchSetId": 2
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-03-19T20:21:00Z",
+      "side": 1,
+      "message": "You can write more here, give us a more complete description. Not as verbose as you put in your commit message, but put enough here where someone can decide if they want yes or no here when going through the configuration dialogue.\n\nWhat do I get by turning this one, how can I use this accounting to make the world a better place?",
+      "range": {
+        "startLine": 142,
+        "startChar": 0,
+        "endLine": 144,
+        "endChar": 16
+      },
+      "revId": "63665a3e36f374c6c15da3ee70b42d5fc6b87e69",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "461df4f5_fa4a0986",
         "filename": "drivers/clk/clk.c",
         "patchSetId": 2
@@ -87,6 +110,29 @@
         "startChar": 4,
         "endLine": 207,
         "endChar": 38
+      },
+      "revId": "63665a3e36f374c6c15da3ee70b42d5fc6b87e69",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "461df4f5_3a8ac1b1",
+        "filename": "drivers/clk/clk.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 440,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-03-19T20:21:00Z",
+      "side": 1,
+      "message": "continuation character not necessary",
+      "range": {
+        "startLine": 440,
+        "startChar": 56,
+        "endLine": 440,
+        "endChar": 57
       },
       "revId": "63665a3e36f374c6c15da3ee70b42d5fc6b87e69",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
