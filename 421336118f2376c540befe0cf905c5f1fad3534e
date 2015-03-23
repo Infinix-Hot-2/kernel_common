@@ -257,6 +257,24 @@
     },
     {
       "key": {
+        "uuid": "66a67829_11c2ecb1",
+        "filename": "security/selinux/include/security.h",
+        "patchSetId": 13
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T18:35:11Z",
+      "side": 1,
+      "message": "(1 \u0026 (perms[x \u003e\u003e 5] \u003e\u003e (x \u0026 0x1f)))",
+      "parentUuid": "66a67829_b193185c",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "66a67829_911edc62",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 13
