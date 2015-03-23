@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "66a67829_d18ce489",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T18:54:18Z",
+      "side": 1,
+      "message": "Might as well just make this unconditional.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "46d7b47e_4a9953c5",
         "filename": "security/selinux/avc.c",
         "patchSetId": 13
@@ -172,6 +189,24 @@
     },
     {
       "key": {
+        "uuid": "260c80ed_a207649c",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 852,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T18:54:18Z",
+      "side": 1,
+      "message": "Define and use a new event value for this and handle it in the switch statement, e.g. AVC_CALLBACK_ADD_OPERATION.",
+      "parentUuid": "66a67829_11578c2c",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "260c80ed_5f1e23e7",
         "filename": "security/selinux/avc.c",
         "patchSetId": 13
@@ -189,6 +224,24 @@
     },
     {
       "key": {
+        "uuid": "66a67829_31a288ef",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 858,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T18:54:18Z",
+      "side": 1,
+      "message": "Rather than using flags, you could use a different AVC_CALLBACK_* event code when adding commands.",
+      "parentUuid": "260c80ed_5f1e23e7",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "260c80ed_7fe68759",
         "filename": "security/selinux/avc.c",
         "patchSetId": 13
@@ -200,6 +253,23 @@
       "writtenOn": "2015-03-23T16:53:29Z",
       "side": 1,
       "message": "od_local.allowed uninitialized here?",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46d7b47e_6de9d180",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 1037,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T18:54:18Z",
+      "side": 1,
+      "message": "Could take everything from od_local.allowed \u003d \u0026allowed; to here into a noinline helper function and thereby shrink the common case code path and stack.  Case where security_compute_operation() has to be called is a slow(er) path.",
       "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
