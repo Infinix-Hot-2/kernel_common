@@ -242,6 +242,24 @@
     },
     {
       "key": {
+        "uuid": "46d7b47e_4dfded34",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 858,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T18:58:49Z",
+      "side": 1,
+      "message": "Never mind, since it is called from avc_denied() with AVC_CALLBACK_GRANT always and the cmd and flags provided by the caller.",
+      "parentUuid": "66a67829_31a288ef",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "260c80ed_7fe68759",
         "filename": "security/selinux/avc.c",
         "patchSetId": 13
