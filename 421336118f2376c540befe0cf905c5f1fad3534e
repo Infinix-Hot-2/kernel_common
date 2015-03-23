@@ -1,0 +1,344 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "46d7b47e_0a663b51",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "Potentially confusing to use the same field name as above.\nod_head would be more accurate IIUC; this points to the first/head avc_operation_decision_node which in turn contains its own od_list link to the next one, and so on.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "260c80ed_bff13f6a",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "Unnecessary.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46d7b47e_4a9953c5",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "Unnecessary.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46d7b47e_8d340510",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "Just dest-\u003eallowed-\u003eperms, src-\u003eallowed-\u003eperms",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "260c80ed_7fbb2754",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "Unnecessary.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46d7b47e_aa5baf8c",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 512,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "Extra newline",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46d7b47e_8a606b32",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 529,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "Extra newline",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46d7b47e_ea55a756",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 533,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "Unnecessary whitespace change.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "260c80ed_7f9207d4",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 650,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "No need/unsafe to goto found - lock not yet assigned or locked; just return NULL directly.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66a67829_11578c2c",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 852,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "check and handle return value.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "260c80ed_5f1e23e7",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 858,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "Shouldn\u0027t that be !(flags \u0026 AVC_NO_CMD)?  Or alternatively (flags \u0026 AVC_CMD) if using the flag to indicate presence of cmd?",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "260c80ed_7fe68759",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 1033,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "od_local.allowed uninitialized here?",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46d7b47e_ade10918",
+        "filename": "security/selinux/include/avc.h",
+        "patchSetId": 13
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "Seems to be used in the opposite sense in the code.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66a67829_119e6c68",
+        "filename": "security/selinux/include/avc.h",
+        "patchSetId": 13
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "Unused.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66a67829_b193185c",
+        "filename": "security/selinux/include/security.h",
+        "patchSetId": 13
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "More complex than needed since the expression itself will evaluate to 1 or 0 directly.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66a67829_911edc62",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 635,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "Only if ops-\u003elen \u003d\u003d 0, right?  Can be taken under the same conditional as the memset above.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46d7b47e_4d04cd42",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 937,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "For AVTAB_OPTYPE, where do we check that od-\u003etype is set in node-\u003edatum.u.ops-\u003eperms?",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "260c80ed_ff557756",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 960,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "So for any AVTAB_OPTYPE entry that matches on the other key fields, we unconditionally set all bits in op_perms-\u003eperms?  How do we know that this entry was for that ioctl command type?",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66a67829_510e3435",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 962,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "ARRAY_SIZE",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46d7b47e_ed12e18d",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 963,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-23T16:53:29Z",
+      "side": 1,
+      "message": "May be uninitialized here.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
