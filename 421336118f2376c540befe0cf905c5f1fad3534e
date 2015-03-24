@@ -363,6 +363,23 @@
     },
     {
       "key": {
+        "uuid": "a3f6a249_00fc88b2",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 496,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-24T17:31:41Z",
+      "side": 1,
+      "message": "I rely on non-unique entries in the avtab to allow different operation types for a source/target/class/specified set. This would require changing to avtab_insert_nonunique for (specified \u0026 AVTAB_OPNUM). Will allowing non-unique key entries in the avtab break something? The conditional table allows it, and when searching the avtab for entries, the context_struct_compute_av accounts for it using avtab_search_node_next. Can I get your thoughts in this? libsepol requires a similar change.",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "66a67829_911edc62",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 13
