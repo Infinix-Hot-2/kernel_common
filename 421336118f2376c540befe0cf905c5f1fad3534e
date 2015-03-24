@@ -398,6 +398,24 @@
     },
     {
       "key": {
+        "uuid": "a3f6a249_e6dad4ea",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 496,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-24T18:51:25Z",
+      "side": 1,
+      "message": "Ok great. Libsepol will continue to consolidate entries as appropriate, but will no longer enforce the uniqueness of source/target/class/specified entries.",
+      "parentUuid": "a68a309d_26a25cef",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "66a67829_911edc62",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 13
