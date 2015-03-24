@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "267f204e_47804291",
+        "filename": "drivers/staging/android/sync.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2015-03-24T02:37:38Z",
+      "side": 1,
+      "message": "this needs to be list_del_init",
+      "revId": "25d276774b10b35524415591eb01d3304538e7dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "267f204e_4703e2c5",
         "filename": "drivers/staging/android/sync.c",
         "patchSetId": 1
@@ -13,6 +30,23 @@
       "writtenOn": "2015-03-24T02:14:09Z",
       "side": 1,
       "message": "This is unnecessary, just use list_del_init everywhere and then list_empty is valid.  This was done correctly in our original driver, it was broken by the upstream \"android: convert sync to fence api\" patch.",
+      "revId": "25d276774b10b35524415591eb01d3304538e7dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "267f204e_a7558ea9",
+        "filename": "drivers/staging/android/sync.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 437,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2015-03-24T02:37:38Z",
+      "side": 1,
+      "message": "this can stay list_del, because the struct containing the node is about to be freed",
       "revId": "25d276774b10b35524415591eb01d3304538e7dd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
