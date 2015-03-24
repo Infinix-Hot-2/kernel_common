@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "267f204e_4703e2c5",
+        "filename": "drivers/staging/android/sync.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2015-03-24T02:14:09Z",
+      "side": 1,
+      "message": "This is unnecessary, just use list_del_init everywhere and then list_empty is valid.  This was done correctly in our original driver, it was broken by the upstream \"android: convert sync to fence api\" patch.",
+      "revId": "25d276774b10b35524415591eb01d3304538e7dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
