@@ -521,6 +521,24 @@
     },
     {
       "key": {
+        "uuid": "6694b8c1_4ad92b1f",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 960,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-24T20:50:26Z",
+      "side": 1,
+      "message": "You pass in the type (ioctl cmd type) value into security_compute_operation().  You store it in the od-\u003etype field.  You call services_compute_operation_num() on every node that matches on the key (source type, target type, target class) for any AVTAB_OP specifier.  In the AVTAB_OPNUM case, you check that the od-\u003etype matches the node-\u003edatum.u.ops-\u003etype value.  But I don\u0027t see where you check that this node/entry matches the type value if it is an AVTAB_OPTYPE. Don\u0027t you have to check that the bit representing od-\u003etype is set in node-\u003edatum.u.ops-\u003eperms for AVTAB_OPTYPE entries to know if this entry has anything to do with the requested type?",
+      "parentUuid": "a68a309d_91e60cae",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "66a67829_510e3435",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 13
