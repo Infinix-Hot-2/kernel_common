@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c3fb9632_47dd045d",
+        "filename": "drivers/usb/gadget/android.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-03-24T19:33:30Z",
+      "side": 1,
+      "message": "In android-tegra-3.10 there is an f_nvusb.c include here that picks up the exported free_ep_req/alloc_ep_req.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 0
+      },
+      "revId": "3f048135f3028e503d9d6e32b602e362bd9f374f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
