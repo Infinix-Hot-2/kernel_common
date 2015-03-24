@@ -503,6 +503,24 @@
     },
     {
       "key": {
+        "uuid": "a68a309d_91e60cae",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 960,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-24T20:39:07Z",
+      "side": 1,
+      "message": "Where in the kernel code do you check that the ioctl command 0x8B1B cmd matches any of the types set in the AVTAB_OPTYPE datum?",
+      "parentUuid": "c3fb9632_07c49cbd",
+      "revId": "421336118f2376c540befe0cf905c5f1fad3534e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "66a67829_510e3435",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 13
