@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2339d2d0_3a9fc5e0",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 15
+      },
+      "lineNbr": 963,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-25T19:07:56Z",
+      "side": 1,
+      "message": "Oh, it is op_perms that might be uninitialized.  Because you only set it if you match one of the expected specified values, and do not have a general else case to return or BUG if not.",
+      "parentUuid": "2339d2d0_5a5cc9d2",
+      "revId": "6cd003cb6e88014675a9d71d9d284b6ebb33d250",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2339d2d0_da679995",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 15
