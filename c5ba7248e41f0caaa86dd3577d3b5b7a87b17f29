@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "03592e45_48cf5f2e",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 14
+      },
+      "lineNbr": 376,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-25T13:26:15Z",
+      "side": 1,
+      "message": "I see you removed the initialization from the caller, but I don\u0027t think this is preferable - we shouldn\u0027t have side effects on src in this function.",
+      "parentUuid": "4336c6df_f8926924",
+      "revId": "c5ba7248e41f0caaa86dd3577d3b5b7a87b17f29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4336c6df_d88fa5f8",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 14
