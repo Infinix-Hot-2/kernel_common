@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "831efe57_37c6b2ea",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1031448
+      },
+      "writtenOn": "2015-03-26T19:56:39Z",
+      "side": 1,
+      "message": "Doesn\u0027t look like a bug there. The skb already grabbed a reference [see commit: 00028aa37098 (netfilter: xt_socket: use IP early demux)], so no need to take a new one just to put it later since we are in a fastpath.",
+      "parentUuid": "56783d6f_f63d80eb",
+      "range": {
+        "startLine": 9,
+        "startChar": 26,
+        "endLine": 10,
+        "endChar": 30
+      },
+      "revId": "89fb5b7df40a23ad18a15678e220fe156c2ca3f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "36758977_3571b0c6",
         "filename": "net/netfilter/xt_qtaguid.c",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2015-02-12T19:22:20Z",
       "side": 1,
       "message": "Is it guarantied that if the skb-\u003esk don\u0027t match, then the sk from xt_socket_get*_sk() doesn\u0027t need put()\u0027ing ever?\nMaybe have a comment here explaining why this keeps on working and why xt_socket_get*_sk() isn\u0027t the one that needs fixing.",
+      "range": {
+        "startLine": 1608,
+        "startChar": 3,
+        "endLine": 1609,
+        "endChar": 21
+      },
+      "revId": "89fb5b7df40a23ad18a15678e220fe156c2ca3f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e30dfa2c_5a62713b",
+        "filename": "net/netfilter/xt_qtaguid.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1609,
+      "author": {
+        "id": 1031448
+      },
+      "writtenOn": "2015-03-26T19:56:39Z",
+      "side": 1,
+      "message": "commit: 00028aa37098 (netfilter: xt_socket: use IP early demux), and equivalent Android code changes, in xt_socket does guarantee that by design.",
+      "parentUuid": "36758977_3571b0c6",
       "range": {
         "startLine": 1608,
         "startChar": 3,
