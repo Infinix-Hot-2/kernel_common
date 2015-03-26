@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "038e8eef_20da0a9f",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 16
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-26T13:01:14Z",
+      "side": 1,
+      "message": "Should be !avc_operation_has_perm(), same as for auditallow.\nauditdeny is the set of permissions that should be audited when denied, the complement of any dontaudit rules.",
+      "revId": "c5e954dea32d374e00859dad2e764aff7c346543",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "038e8eef_c0355e57",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 16
+      },
+      "lineNbr": 3112,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-26T13:01:14Z",
+      "side": 1,
+      "message": "typo: permission",
+      "revId": "c5e954dea32d374e00859dad2e764aff7c346543",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2339d2d0_ebaccd1a",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 16
+      },
+      "lineNbr": 3113,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-26T13:01:14Z",
+      "side": 1,
+      "message": "missing word: to",
+      "revId": "c5e954dea32d374e00859dad2e764aff7c346543",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4336c6df_ecb067d1",
+        "filename": "security/selinux/ss/conditional.c",
+        "patchSetId": 16
+      },
+      "lineNbr": 633,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-26T13:01:14Z",
+      "side": 1,
+      "message": "We want to call it for any AVTAB_OP value, right?  And in fact, we don\u0027t need this test at all since the key already specifies AVTAB_OP specifier only.  Should only need to test for ENABLED here.",
+      "revId": "c5e954dea32d374e00859dad2e764aff7c346543",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "038e8eef_e0c3c2b5",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 16
+      },
+      "lineNbr": 629,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-26T13:01:14Z",
+      "side": 1,
+      "message": "Or if allowing one or more complete types.",
+      "revId": "c5e954dea32d374e00859dad2e764aff7c346543",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2339d2d0_cb9229d3",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 16
+      },
+      "lineNbr": 632,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-26T13:01:14Z",
+      "side": 1,
+      "message": "Normally I would put this comment within the else { } below.",
+      "revId": "c5e954dea32d374e00859dad2e764aff7c346543",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "038e8eef_00c106ad",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 16
+      },
+      "lineNbr": 941,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-26T13:01:14Z",
+      "side": 1,
+      "message": "else if... since they are mutually exclusive?",
+      "revId": "c5e954dea32d374e00859dad2e764aff7c346543",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2339d2d0_ab8fe5a6",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 16
+      },
+      "lineNbr": 944,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-26T13:01:14Z",
+      "side": 1,
+      "message": "else return or BUG.",
+      "revId": "c5e954dea32d374e00859dad2e764aff7c346543",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
