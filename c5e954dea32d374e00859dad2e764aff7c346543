@@ -155,6 +155,24 @@
     },
     {
       "key": {
+        "uuid": "43d246e8_bb12bb08",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 16
+      },
+      "lineNbr": 966,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-03-26T21:35:35Z",
+      "side": 1,
+      "message": "I account for this in the avc_operation_audit_required code.\n\nI considered doing it the other way (following precedence in the av_decision) but decided against it primarily for simplicity. Unlike AV permissions, only one ioctl command permission will be requested at a time, whether that bit is set or unset for auditdeny doesn\u0027t particularly matter because the auditdeny operation permission is not used directly to modify the av_decision (i.e. they are not bitwise \u0026 or | together), the permission is checked, and based on that decision audited may be modified.\n\naudited \u003d denied \u0026 avd-\u003eauditdeny;\nif (audited \u0026\u0026 od \u0026\u0026 avc_operation_has_perm(od-\u003eauditdeny, cmd))\n\taudited \u0026\u003d ~requested;\n\nLeaving the operation_decision-\u003eauditdeny structure the same as the others simplifies code here and in the policy compiler.",
+      "parentUuid": "2370f2c2_39cfaf5d",
+      "revId": "c5e954dea32d374e00859dad2e764aff7c346543",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2370f2c2_391a4f6e",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 16
