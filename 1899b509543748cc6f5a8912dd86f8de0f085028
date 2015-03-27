@@ -16,6 +16,23 @@
       "revId": "1899b509543748cc6f5a8912dd86f8de0f085028",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "43308612_e22566a5",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 17
+      },
+      "lineNbr": 941,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-27T12:20:25Z",
+      "side": 1,
+      "message": "else if.  Or maybe even just else { } since this is only called if specified \u0026 AVTAB_OP?  Parallels services_compute_operation_type() where you assume that it is only called if one of the AVTAB_OP specifiers is set.",
+      "revId": "1899b509543748cc6f5a8912dd86f8de0f085028",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
