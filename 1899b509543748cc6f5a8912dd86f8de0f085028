@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "03dccefb_b63730ae",
+        "filename": "security/selinux/ss/conditional.c",
+        "patchSetId": 17
+      },
+      "lineNbr": 632,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-27T12:17:36Z",
+      "side": 1,
+      "message": "Don\u0027t need the double parens.",
+      "revId": "1899b509543748cc6f5a8912dd86f8de0f085028",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
