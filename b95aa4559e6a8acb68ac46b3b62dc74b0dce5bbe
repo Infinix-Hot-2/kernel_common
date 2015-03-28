@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a3a94260_14416268",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 18
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-03-28T00:25:59Z",
+      "side": 1,
+      "message": "Keep a single exit point. You should set od to NULL at the top and break here, return od outside the loop.",
+      "revId": "b95aa4559e6a8acb68ac46b3b62dc74b0dce5bbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3b7bab3_0a57fb60",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 18
+      },
+      "lineNbr": 3191,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-03-28T00:25:59Z",
+      "side": 1,
+      "message": "not great... what happens if you have collisions between the command and this overloaded value?",
+      "range": {
+        "startLine": 3191,
+        "startChar": 50,
+        "endLine": 3191,
+        "endChar": 60
+      },
+      "revId": "b95aa4559e6a8acb68ac46b3b62dc74b0dce5bbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3b7bab3_ea4dc7c9",
+        "filename": "security/selinux/include/avc.h",
+        "patchSetId": 18
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-03-28T00:25:59Z",
+      "side": 1,
+      "message": "Ugh, usually you\u0027d want to define these as (1 \u003c\u003c X) - makes it obvious that it\u0027s a bitmask",
+      "revId": "b95aa4559e6a8acb68ac46b3b62dc74b0dce5bbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
