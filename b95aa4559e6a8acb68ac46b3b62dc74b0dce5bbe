@@ -19,6 +19,29 @@
     },
     {
       "key": {
+        "uuid": "63a3ca80_40470f2e",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 18
+      },
+      "lineNbr": 3116,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-03-30T15:26:43Z",
+      "side": 1,
+      "message": "don\u0027t really need this, as it is always FILE__IOCTL",
+      "range": {
+        "startLine": 3116,
+        "startChar": 2,
+        "endLine": 3116,
+        "endChar": 15
+      },
+      "revId": "b95aa4559e6a8acb68ac46b3b62dc74b0dce5bbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e3b7bab3_0a57fb60",
         "filename": "security/selinux/hooks.c",
         "patchSetId": 18
@@ -30,6 +53,30 @@
       "writtenOn": "2015-03-28T00:25:59Z",
       "side": 1,
       "message": "not great... what happens if you have collisions between the command and this overloaded value?",
+      "range": {
+        "startLine": 3191,
+        "startChar": 50,
+        "endLine": 3191,
+        "endChar": 60
+      },
+      "revId": "b95aa4559e6a8acb68ac46b3b62dc74b0dce5bbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8366fe34_3764b2ce",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 18
+      },
+      "lineNbr": 3191,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-03-30T15:26:43Z",
+      "side": 1,
+      "message": "This is explained in the comments above avc_has_operation in avc.c (only interested in magic and command #s).  We should probably be more explicit about this here, or else pass the whole thing in and be explicit elsewhere?",
+      "parentUuid": "e3b7bab3_0a57fb60",
       "range": {
         "startLine": 3191,
         "startChar": 50,
