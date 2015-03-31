@@ -16,6 +16,24 @@
       "revId": "84fcac4ac3569220c67606848cc4ea5d125629aa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "630f4a79_3df3ff72",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 19
+      },
+      "lineNbr": 387,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-31T12:51:36Z",
+      "side": 1,
+      "message": "Hmm..even on the first iteration, would leak dest itself.\navc_insert() only frees the node on error while avc_update_node() calls avc_operation_free() on error.  Should probably do the avc_operation_free() on the error path in this function.",
+      "parentUuid": "630f4a79_6915c13e",
+      "revId": "84fcac4ac3569220c67606848cc4ea5d125629aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
