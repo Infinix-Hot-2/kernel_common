@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "630f4a79_98c041ab",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 20
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-03-31T16:10:38Z",
+      "side": 1,
+      "message": "Did you mean to delete this line?",
+      "revId": "7a2692a82bf407cb56ff994c47f20d87103fab23",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
