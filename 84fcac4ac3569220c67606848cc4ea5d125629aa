@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "630f4a79_6915c13e",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 19
+      },
+      "lineNbr": 387,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2015-03-31T00:24:31Z",
+      "side": 1,
+      "message": "if we\u0027re in the second or greater loop of this list, and we get an allocation error, will we leak memory?",
+      "revId": "84fcac4ac3569220c67606848cc4ea5d125629aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
