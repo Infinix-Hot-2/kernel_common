@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "c34716eb_857281e0",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 23
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-04-06T18:02:30Z",
+      "side": 1,
+      "message": "od-\u003eauditdeny makes surprisingly difficult. Strongly considering changing to dontaudit",
+      "parentUuid": "83519eaa_7c3ef98c",
+      "revId": "8374b4d3a9640067e8585970e94f508977318682",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c34716eb_52c1a49a",
         "filename": "security/selinux/avc.c",
         "patchSetId": 23
@@ -47,6 +65,24 @@
       "writtenOn": "2015-04-06T13:26:38Z",
       "side": 1,
       "message": "Why don\u0027t we want to still do this test up above as before?",
+      "revId": "8374b4d3a9640067e8585970e94f508977318682",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c34716eb_ad776952",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 23
+      },
+      "lineNbr": 1023,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-04-06T18:02:30Z",
+      "side": 1,
+      "message": "The returned operation_decision includes the type. This check is not necessary for the typical allowed lookup where od is found.\n\nstruct operation_decision {\n\tu8 type;\n\tu8 specified;\n\tstruct operation_perm *allowed;\n\tstruct operation_perm *auditallow;\n\tstruct operation_perm *auditdeny;\n};\n\nThis check seems to belong in the slow path. The concern I had with chaining operation_decision is the possibility of a misbehaving application attempting to access a wide range of ungranted ioctl commands and thus creating long chains of operation_decision with no individual permissions granted. This would make ioctl calls take longer for other applications in the same domain, and use up a lot of unecessary kernel memory. This is a mechanism to prohibit that. If the type has not been flagged as a type with permissions, then don\u0027t create an operation_decision, just deny.",
+      "parentUuid": "c34716eb_52c1a49a",
       "revId": "8374b4d3a9640067e8585970e94f508977318682",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
