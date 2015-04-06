@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "83519eaa_5c93fd29",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 23
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-04-06T13:26:38Z",
+      "side": 1,
+      "message": "selinux:",
+      "revId": "8374b4d3a9640067e8585970e94f508977318682",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "83519eaa_7c3ef98c",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 23
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-04-06T13:26:38Z",
+      "side": 1,
+      "message": "Possibly a saner interface would be to pass od and the desired OPERATION_* specifier value to avc_operation_has_perm() and let avc_operation_has_perm() internally test od \u0026\u0026 (od-\u003especified \u0026 specified).  Avoids repeating this test in each caller and risk of failing to check it.  avc_operation_has_perm() could then also select the right field (od-\u003eauditdeny, auditallow or allowed) based on the specified value and reduce risk of mismatch.",
+      "revId": "8374b4d3a9640067e8585970e94f508977318682",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c34716eb_52c1a49a",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 23
+      },
+      "lineNbr": 1023,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-04-06T13:26:38Z",
+      "side": 1,
+      "message": "Why don\u0027t we want to still do this test up above as before?",
+      "revId": "8374b4d3a9640067e8585970e94f508977318682",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "83519eaa_dc638dc6",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 23
+      },
+      "lineNbr": 631,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-04-06T13:26:38Z",
+      "side": 1,
+      "message": "Let\u0027s just take this to the beginning of context_struct_compute_av() and do it once unconditionally.",
+      "revId": "8374b4d3a9640067e8585970e94f508977318682",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
