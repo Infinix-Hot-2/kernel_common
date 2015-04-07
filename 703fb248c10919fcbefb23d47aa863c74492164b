@@ -16,6 +16,24 @@
       "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "832a7e12_489a4fbb",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 1041,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-04-07T17:44:17Z",
+      "side": 1,
+      "message": "My assumption was that I should optimize for the typical cache hit / permission granted state. having that check earlier optimizes for the permission denied state. I would be happy to change it back. The single bit test is certainly cheap.",
+      "parentUuid": "832a7e12_68a06b9f",
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
