@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "832a7e12_9424042e",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 23
+      },
+      "lineNbr": 1023,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-04-07T14:17:41Z",
+      "side": 1,
+      "message": "security_operation_test() is just a bit test so it is cheap.  I thought the purpose was to avoid having to pay the cost of an avc_operation_lookup() if we already know that the type can never appear in it.",
+      "parentUuid": "c34716eb_ad776952",
+      "revId": "8374b4d3a9640067e8585970e94f508977318682",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "83519eaa_dc638dc6",
         "filename": "security/selinux/ss/services.c",
         "patchSetId": 23
