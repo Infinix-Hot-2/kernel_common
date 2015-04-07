@@ -1,0 +1,129 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "63258a42_d607e24d",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 24
+      },
+      "lineNbr": 635,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2015-04-07T16:02:57Z",
+      "side": 1,
+      "message": "move variable declaration into block at line 641. Variable declaration should be as close as practical to variable use.",
+      "revId": "6185db77f8a40f66ec964fb8f5710dcc05e94bd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_1606ba4d",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 24
+      },
+      "lineNbr": 974,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2015-04-07T16:02:57Z",
+      "side": 1,
+      "message": "magic constant? What does \"5\" mean here? Add comment?",
+      "range": {
+        "startLine": 974,
+        "startChar": 24,
+        "endLine": 974,
+        "endChar": 25
+      },
+      "revId": "6185db77f8a40f66ec964fb8f5710dcc05e94bd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a32b0216_180109bd",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 24
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2015-04-07T16:02:57Z",
+      "side": 1,
+      "message": "For consistency, I\u0027d recommend moving the memset to where the other memset operations are at (line 368).",
+      "revId": "6185db77f8a40f66ec964fb8f5710dcc05e94bd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a32b0216_38fe4532",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 24
+      },
+      "lineNbr": 557,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2015-04-07T16:02:57Z",
+      "side": 1,
+      "message": "should be size_t, not int.",
+      "revId": "6185db77f8a40f66ec964fb8f5710dcc05e94bd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_96672a21",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 24
+      },
+      "lineNbr": 624,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2015-04-07T16:02:57Z",
+      "side": 1,
+      "message": "size_t",
+      "revId": "6185db77f8a40f66ec964fb8f5710dcc05e94bd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "832a7e12_7a86f117",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 24
+      },
+      "lineNbr": 939,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2015-04-07T16:02:57Z",
+      "side": 1,
+      "message": "size_t",
+      "revId": "6185db77f8a40f66ec964fb8f5710dcc05e94bd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_766feef5",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 24
+      },
+      "lineNbr": 986,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2015-04-07T16:02:57Z",
+      "side": 1,
+      "message": "size_t",
+      "revId": "6185db77f8a40f66ec964fb8f5710dcc05e94bd2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
