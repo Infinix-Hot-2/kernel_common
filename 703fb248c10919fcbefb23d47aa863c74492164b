@@ -2,6 +2,305 @@
   "comments": [
     {
       "key": {
+        "uuid": "63258a42_819919fa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 25
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "Our standard is to place these two last (Change-Id being last is easier to strip if this goes upstream to kernel.org)",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 52
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_26cffb2e",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "\u003e80 characters",
+      "range": {
+        "startLine": 193,
+        "startChar": 33,
+        "endLine": 193,
+        "endChar": 77
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_a690eb1c",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "what about having a hash-table lookup on od.type?\n\nLots of complaints about the cost of avc_operation_lookup",
+      "range": {
+        "startLine": 232,
+        "startChar": 0,
+        "endLine": 245,
+        "endChar": 1
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_a6db0bef",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "blank line after declarations. To match style in avc_operation_has_perm, you might also merge the initialization below into the declarations.",
+      "range": {
+        "startLine": 269,
+        "startChar": 7,
+        "endLine": 269,
+        "endChar": 8
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_26f85b4a",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "Ditto on blank line after declaration and merging initialization.",
+      "range": {
+        "startLine": 280,
+        "startChar": 30,
+        "endLine": 280,
+        "endChar": 31
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "23e3924b_1bd4b3c1",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "blank line after declarations",
+      "range": {
+        "startLine": 293,
+        "startChar": 44,
+        "endLine": 293,
+        "endChar": 45
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a32b0216_b2c109b0",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "blank line after declaration.",
+      "range": {
+        "startLine": 344,
+        "startChar": 30,
+        "endLine": 344,
+        "endChar": 31
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_066e7f7e",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "This trio (359 and 365 incl) exceed 80 characters, you folded once, fold again :-}",
+      "range": {
+        "startLine": 353,
+        "startChar": 28,
+        "endLine": 353,
+        "endChar": 61
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_86828f9a",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "blank line after declaration.",
+      "range": {
+        "startLine": 377,
+        "startChar": 44,
+        "endLine": 377,
+        "endChar": 45
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "23e3924b_db6d2b83",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "\u003e 80 characters.",
+      "range": {
+        "startLine": 392,
+        "startChar": 50,
+        "endLine": 392,
+        "endChar": 81
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "23e3924b_db56cbb4",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 438,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "blank line after declaration.",
+      "range": {
+        "startLine": 438,
+        "startChar": 20,
+        "endLine": 438,
+        "endChar": 21
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_c6c5e7dd",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 466,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "blank line after declaration",
+      "range": {
+        "startLine": 466,
+        "startChar": 20,
+        "endLine": 466,
+        "endChar": 21
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_a6ad4b16",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 1017,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "blank line after declaration",
+      "range": {
+        "startLine": 1017,
+        "startChar": 27,
+        "endLine": 1017,
+        "endChar": 28
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "832a7e12_68a06b9f",
         "filename": "security/selinux/avc.c",
         "patchSetId": 25
@@ -31,6 +330,351 @@
       "side": 1,
       "message": "My assumption was that I should optimize for the typical cache hit / permission granted state. having that check earlier optimizes for the permission denied state. I would be happy to change it back. The single bit test is certainly cheap.",
       "parentUuid": "832a7e12_68a06b9f",
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_26aa9bfa",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 1048,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "exceeds 80 characters",
+      "range": {
+        "startLine": 1048,
+        "startChar": 18,
+        "endLine": 1048,
+        "endChar": 81
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a32b0216_0d745cff",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 3124,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "unnecessary initialization, unless you want to do (?) :\n\n    if (likely(!IS_PRIVATE(inode)))\n        rc \u003d avc_has_operation(...);\nout:\n    return rc;",
+      "range": {
+        "startLine": 3124,
+        "startChar": 7,
+        "endLine": 3124,
+        "endChar": 11
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_26793bf7",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "What can we do so that we ensure that we do not get buffer overflow? Is there any characteristic that we can use to keep us safe from coding errors below?",
+      "range": {
+        "startLine": 359,
+        "startChar": 14,
+        "endLine": 359,
+        "endChar": 15
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "23e3924b_162beaad",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 555,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "ARRAY_SIZE(cur-\u003edatum.u.ops-\u003eop.perms) ?",
+      "range": {
+        "startLine": 555,
+        "startChar": 14,
+        "endLine": 555,
+        "endChar": 15
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a32b0216_cde2e4c9",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "ARRAY_SIZE(cur-\u003edatum.u.ops-\u003eop.perms) ?",
+      "range": {
+        "startLine": 570,
+        "startChar": 37,
+        "endLine": 570,
+        "endChar": 38
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a32b0216_6dd4f0e5",
+        "filename": "security/selinux/ss/avtab.h",
+        "patchSetId": 25
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "\u003e 80 characters",
+      "range": {
+        "startLine": 66,
+        "startChar": 2,
+        "endLine": 66,
+        "endChar": 70
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "23e3924b_7652363c",
+        "filename": "security/selinux/ss/conditional.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 641,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "\u003e 80 characters, fold sooner",
+      "range": {
+        "startLine": 641,
+        "startChar": 0,
+        "endLine": 641,
+        "endChar": 88
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a32b0216_6de5d0a2",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 939,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "blank line after declaration",
+      "range": {
+        "startLine": 939,
+        "startChar": 15,
+        "endLine": 939,
+        "endChar": 16
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a32b0216_edf7a008",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 981,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "unnecessary initialization",
+      "range": {
+        "startLine": 981,
+        "startChar": 43,
+        "endLine": 981,
+        "endChar": 50
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a32b0216_2dfef8e7",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 981,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "unnecessary initialization",
+      "range": {
+        "startLine": 981,
+        "startChar": 25,
+        "endLine": 981,
+        "endChar": 31
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_01318920",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 986,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "blank line after declaration",
+      "range": {
+        "startLine": 986,
+        "startChar": 18,
+        "endLine": 986,
+        "endChar": 19
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_0118a92e",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 989,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "should I be worried about od-\u003eallowed being initialized? What about auditallow or dontaudit?",
+      "range": {
+        "startLine": 989,
+        "startChar": 8,
+        "endLine": 989,
+        "endChar": 19
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a32b0216_2d5cb8d1",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 1021,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "printk_ratelimited(KERN_WARNING ...)\n\n(or because this may exceeds 80 characters, try pr_warn_ratelimited(\"SELinux: ...) instead?)\n\ndefined in \u003clinux/printk.h\u003e",
+      "range": {
+        "startLine": 1020,
+        "startChar": 2,
+        "endLine": 1021,
+        "endChar": 9
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a32b0216_2dd5986f",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 1068,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "unnecessary initialization",
+      "range": {
+        "startLine": 1068,
+        "startChar": 25,
+        "endLine": 1068,
+        "endChar": 32
+      },
+      "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63258a42_216925a5",
+        "filename": "security/selinux/ss/services.c",
+        "patchSetId": 25
+      },
+      "lineNbr": 1068,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-08T00:31:50Z",
+      "side": 1,
+      "message": "unnecessary initialization",
+      "range": {
+        "startLine": 1068,
+        "startChar": 43,
+        "endLine": 1068,
+        "endChar": 50
+      },
       "revId": "703fb248c10919fcbefb23d47aa863c74492164b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
