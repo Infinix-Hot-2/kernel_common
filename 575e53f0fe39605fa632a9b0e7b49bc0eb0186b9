@@ -22,6 +22,30 @@
       "revId": "575e53f0fe39605fa632a9b0e7b49bc0eb0186b9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e32fba6e_67b71267",
+        "filename": "security/lsm_audit.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-04-10T20:21:12Z",
+      "side": 1,
+      "message": "semicolon is visible for me.",
+      "parentUuid": "23e3924b_d0a50a04",
+      "range": {
+        "startLine": 256,
+        "startChar": 50,
+        "endLine": 256,
+        "endChar": 51
+      },
+      "revId": "575e53f0fe39605fa632a9b0e7b49bc0eb0186b9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
