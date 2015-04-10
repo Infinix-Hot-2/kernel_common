@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "234d525a_08aba9d6",
+        "filename": "drivers/base/power/wakeup.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-10T17:29:42Z",
+      "side": 1,
+      "message": "optional:\n\n#include \u003csys/types.h\u003e\n\n(to make sure bool remains defined regardless of the other include files in this set)",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 1
+      },
+      "revId": "3d1e9c9e4deab7f32f1ee3daf7172c806e59a673",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "234d525a_4883f150",
+        "filename": "drivers/base/power/wakeup.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 666,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-10T17:29:42Z",
+      "side": 1,
+      "message": "optional (not required here in linux coding standards because all vars are initialized and thus _look_ like code)\n\nblank line between vars and code is still preferred for clarity.",
+      "range": {
+        "startLine": 666,
+        "startChar": 20,
+        "endLine": 666,
+        "endChar": 21
+      },
+      "revId": "3d1e9c9e4deab7f32f1ee3daf7172c806e59a673",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e356daec_22309319",
+        "filename": "drivers/base/power/wakeup.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 671,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-10T17:29:42Z",
+      "side": 1,
+      "message": "use scnprintf (for all) as it returns the number of characters that were _actually_ placed into the buffer. snprintf returns the number of characters that would have been placed into the buffer.\n\nIn other words, it acts like:\n\nlen +\u003d min(snprintf(...,max,...),max);\n\nThis will ensure you do not get a pending_wakeup_source + len that is beyond the buffer boundaries, and a max - len that turns into a negative number.",
+      "range": {
+        "startLine": 671,
+        "startChar": 11,
+        "endLine": 671,
+        "endChar": 19
+      },
+      "revId": "3d1e9c9e4deab7f32f1ee3daf7172c806e59a673",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e356daec_e7785df5",
+        "filename": "drivers/base/power/wakeup.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 673,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-10T17:29:42Z",
+      "side": 1,
+      "message": "max - len",
+      "range": {
+        "startLine": 673,
+        "startChar": 48,
+        "endLine": 673,
+        "endChar": 51
+      },
+      "revId": "3d1e9c9e4deab7f32f1ee3daf7172c806e59a673",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "234d525a_b3a772b3",
+        "filename": "drivers/base/power/wakeup.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 684,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-10T17:29:42Z",
+      "side": 1,
+      "message": "len is not used after this point.",
+      "range": {
+        "startLine": 684,
+        "startChar": 2,
+        "endLine": 684,
+        "endChar": 9
+      },
+      "revId": "3d1e9c9e4deab7f32f1ee3daf7172c806e59a673",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
