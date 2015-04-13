@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9033a6f4_33d807f3",
+        "filename": "drivers/base/power/wakeup.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 667,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-04-13T21:23:54Z",
+      "side": 1,
+      "message": "active \u003d false;\n\nI was trying to indicate that we _want_ a blank line between bool active \u003d false; and rcu_read_lock(). I did not mean that initialization was to be removed, I suspect when I used the term optional you saw me as commenting about the initialization when I was talking about it being optional in the coding standard to add a blank line after variable definitions.",
+      "range": {
+        "startLine": 667,
+        "startChar": 12,
+        "endLine": 667,
+        "endChar": 13
+      },
+      "revId": "abe1cdd80b8c4e33c32fc3a14838dd835b630879",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
