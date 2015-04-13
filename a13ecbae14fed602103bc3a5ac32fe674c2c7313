@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "506daeeb_9a7a6db4",
+        "filename": "drivers/cpufreq/cpufreq_interactive.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 1070083
+      },
+      "writtenOn": "2015-04-13T23:55:30Z",
+      "side": 1,
+      "message": "Actually floor_freq is still useful when policy-\u003emin/max is changed in GOV_LIMITS. That could result in a change of target_freq. In that case we probably would still want to react based on previous floor_freq. \n\nLet me think more before re-uploading or abandoning it.",
+      "range": {
+        "startLine": 410,
+        "startChar": 20,
+        "endLine": 410,
+        "endChar": 22
+      },
+      "revId": "a13ecbae14fed602103bc3a5ac32fe674c2c7313",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
