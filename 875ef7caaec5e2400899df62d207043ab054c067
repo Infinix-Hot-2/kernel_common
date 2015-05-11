@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d39c1d0_e0650c91",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux_platdev.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1021673
+      },
+      "writtenOn": "2015-05-11T19:58:59Z",
+      "side": 1,
+      "message": "Please make an alignment",
+      "revId": "875ef7caaec5e2400899df62d207043ab054c067",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
