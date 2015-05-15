@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8dc2ad55_69faed89",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-05-15T17:42:09Z",
+      "side": 1,
+      "message": "Let\u0027s use common convension:\nnet: wireless: bcmdhd: Fix bcm4358 non-static memory mode",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 3
+      },
+      "revId": "f9563389316b7eb1e8ad08f71be87285161d5d34",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4d9a7579_bc042ed2",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_msgbuf.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1886,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-05-15T17:42:09Z",
+      "side": 1,
+      "message": "Why this is related to bcm4358? And why it is ok for bcm4356?",
+      "range": {
+        "startLine": 1886,
+        "startChar": 12,
+        "endLine": 1886,
+        "endChar": 26
+      },
+      "revId": "f9563389316b7eb1e8ad08f71be87285161d5d34",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
