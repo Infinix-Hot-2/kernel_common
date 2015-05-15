@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "eda6c9c2_83eb77a7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-05-15T21:27:18Z",
+      "side": 1,
+      "message": "yes that will work. Usually it is best to use the same prefix as other changes to the file, but this one has a lot of different formats used.",
+      "parentUuid": "eda6c9c2_03fea7aa",
+      "revId": "4d32fe0e87736876ba84bcae6db71da6eb677223",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0da4fdb8_0ba5e77f",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "0da4fdb8_96b81ad9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-05-15T21:27:18Z",
+      "side": 1,
+      "message": "That would be fatal, but those allocations never fail on android.",
+      "parentUuid": "0da4fdb8_2b9b8bbd",
+      "revId": "4d32fe0e87736876ba84bcae6db71da6eb677223",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cd8d8546_ed26e8e4",
         "filename": "drivers/android/binder.c",
         "patchSetId": 1
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "There is no change in behavior here.  The first check is done above in ptr \u003c end, although it could be argued that these checks should also make sure that ptr \u003c\u003d (end - sizeof(uint32_t))",
       "parentUuid": "cd8d8546_ed26e8e4",
+      "revId": "4d32fe0e87736876ba84bcae6db71da6eb677223",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd8d8546_087de22c",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2190,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-05-15T21:27:18Z",
+      "side": 1,
+      "message": "There is a change in behavior since BR_ERROR will now be returned, where in practice it is never returned with the existing driver. Also, with the new code added below you may return BR_ERROR for the same error more than once, since it is only cleared after writing the param.",
+      "parentUuid": "cd8d8546_cd284c03",
       "revId": "4d32fe0e87736876ba84bcae6db71da6eb677223",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
