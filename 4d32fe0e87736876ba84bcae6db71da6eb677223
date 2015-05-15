@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eda6c9c2_03fea7aa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-05-15T21:16:26Z",
+      "side": 1,
+      "message": "e.g. \"android: binder: Fix BR_ERROR ...\"?",
+      "parentUuid": "0da4fdb8_8b99d752",
+      "revId": "4d32fe0e87736876ba84bcae6db71da6eb677223",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0da4fdb8_0ba5e77f",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0da4fdb8_2b9b8bbd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-05-15T21:16:26Z",
+      "side": 1,
+      "message": "IPCThreadState already assumes this with:\ncase BR_ERROR:\n        result \u003d mIn.readInt32()\n\nI\u0027m actually not sure what the practical result of this would be for the one case where BR_ERROR was already being used (in the case of a failed allocation of binder_ref_death struct when processing a BC_CLEAR_DEATH_NOTIFICATION), as an extra, unprovided 4 bytes would be read from the read buffer.",
+      "parentUuid": "0da4fdb8_0ba5e77f",
+      "revId": "4d32fe0e87736876ba84bcae6db71da6eb677223",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cd8d8546_ed26e8e4",
         "filename": "drivers/android/binder.c",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2015-05-15T20:46:18Z",
       "side": 1,
       "message": "This should be checked before writing the first part of BR_ERROR.",
+      "revId": "4d32fe0e87736876ba84bcae6db71da6eb677223",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd8d8546_cd284c03",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2190,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-05-15T21:16:26Z",
+      "side": 1,
+      "message": "There is no change in behavior here.  The first check is done above in ptr \u003c end, although it could be argued that these checks should also make sure that ptr \u003c\u003d (end - sizeof(uint32_t))",
+      "parentUuid": "cd8d8546_ed26e8e4",
       "revId": "4d32fe0e87736876ba84bcae6db71da6eb677223",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
