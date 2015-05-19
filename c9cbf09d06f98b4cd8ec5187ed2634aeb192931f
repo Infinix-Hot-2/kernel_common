@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0d8cfd85_fa099664",
+        "filename": "drivers/net/wireless/bcmdhd/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-05-19T21:42:36Z",
+      "side": 1,
+      "message": "Remove #",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 1
+      },
+      "revId": "c9cbf09d06f98b4cd8ec5187ed2634aeb192931f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2d37016d_ef28003b",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux_platdev.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 637,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-05-19T21:42:36Z",
+      "side": 1,
+      "message": "Why this is the opposite for CONFIG_DTS case?",
+      "range": {
+        "startLine": 637,
+        "startChar": 5,
+        "endLine": 637,
+        "endChar": 7
+      },
+      "revId": "c9cbf09d06f98b4cd8ec5187ed2634aeb192931f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
