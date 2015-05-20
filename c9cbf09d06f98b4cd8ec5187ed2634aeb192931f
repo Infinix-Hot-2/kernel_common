@@ -117,6 +117,30 @@
       "revId": "c9cbf09d06f98b4cd8ec5187ed2634aeb192931f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ed4089d5_e896c74a",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux_platdev.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 637,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-05-20T18:53:32Z",
+      "side": 1,
+      "message": "Yes, We currently set this dhd_download_fw_on_driverload to false when wl_android_init. In CONFIG_DTS case, it seems to be regardless checking here as you said. We will revise code through later CONFIG_DTS modification.",
+      "parentUuid": "adfdb1c1_13190f7a",
+      "range": {
+        "startLine": 637,
+        "startChar": 5,
+        "endLine": 637,
+        "endChar": 7
+      },
+      "revId": "c9cbf09d06f98b4cd8ec5187ed2634aeb192931f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
