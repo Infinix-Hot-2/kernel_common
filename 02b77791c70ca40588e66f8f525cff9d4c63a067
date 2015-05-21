@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6d7ad934_e6d1f6d1",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 691,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-05-21T16:35:28Z",
+      "side": 1,
+      "message": "What about \"pstore\" ? Do we not need it there as well?",
+      "range": {
+        "startLine": 691,
+        "startChar": 31,
+        "endLine": 691,
+        "endChar": 38
+      },
+      "revId": "02b77791c70ca40588e66f8f525cff9d4c63a067",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
