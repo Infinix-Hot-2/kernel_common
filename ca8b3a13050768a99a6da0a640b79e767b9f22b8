@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0d54fde2_fce46ed8",
+        "filename": "drivers/usb/gadget/android.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 999,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-05-28T21:57:34Z",
+      "side": 1,
+      "message": "Do you think it will be Ok to put it under ifdef?\nCONFIG_USB_F_SS_LB",
+      "range": {
+        "startLine": 999,
+        "startChar": 0,
+        "endLine": 999,
+        "endChar": 6
+      },
+      "revId": "ca8b3a13050768a99a6da0a640b79e767b9f22b8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
