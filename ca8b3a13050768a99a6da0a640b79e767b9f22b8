@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "0d54fde2_42bd94c5",
+        "filename": "drivers/usb/gadget/f_loopback.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-05-28T22:56:14Z",
+      "side": 1,
+      "message": "sure",
+      "parentUuid": "0d54fde2_bcf02664",
+      "range": {
+        "startLine": 332,
+        "startChar": 10,
+        "endLine": 332,
+        "endChar": 16
+      },
+      "revId": "ca8b3a13050768a99a6da0a640b79e767b9f22b8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0d54fde2_5c0bbad7",
         "filename": "drivers/usb/gadget/f_loopback.c",
         "patchSetId": 2
@@ -95,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "ed56c9ec_8a378c8e",
+        "filename": "drivers/usb/gadget/f_loopback.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 383,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-05-28T22:56:14Z",
+      "side": 1,
+      "message": "This function is not going to be called unless configfs based driver is used.. If we use configfs based driver we don\u0027t have to merge my patch at all... So, for now including synchronization is almost an overkill...",
+      "parentUuid": "0d54fde2_5c0bbad7",
+      "range": {
+        "startLine": 383,
+        "startChar": 1,
+        "endLine": 383,
+        "endChar": 16
+      },
+      "revId": "ca8b3a13050768a99a6da0a640b79e767b9f22b8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6d1bb95b_2dc87af5",
         "filename": "drivers/usb/gadget/f_loopback.c",
         "patchSetId": 2
@@ -106,6 +154,30 @@
       "writtenOn": "2015-05-28T22:13:03Z",
       "side": 1,
       "message": "Use define?",
+      "range": {
+        "startLine": 446,
+        "startChar": 19,
+        "endLine": 446,
+        "endChar": 21
+      },
+      "revId": "ca8b3a13050768a99a6da0a640b79e767b9f22b8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6d1bb95b_c39897c1",
+        "filename": "drivers/usb/gadget/f_loopback.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 446,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-05-28T22:56:14Z",
+      "side": 1,
+      "message": "Yes... will do",
+      "parentUuid": "6d1bb95b_2dc87af5",
       "range": {
         "startLine": 446,
         "startChar": 19,
