@@ -22,6 +22,30 @@
       "revId": "ca8b3a13050768a99a6da0a640b79e767b9f22b8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0d54fde2_5c401a14",
+        "filename": "drivers/usb/gadget/android.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 999,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-05-28T22:06:56Z",
+      "side": 1,
+      "message": "That\u0027s where we diverge from upstream... We include the \".c\" file into android.c instead of compiling them separately... So, CONFIG_USB_F_SS_LB does not influence this at all... This is similar to how we have dealt with other gadget function drivers. Hopefully, configfs stuff can clear all this up.",
+      "parentUuid": "0d54fde2_fce46ed8",
+      "range": {
+        "startLine": 999,
+        "startChar": 0,
+        "endLine": 999,
+        "endChar": 6
+      },
+      "revId": "ca8b3a13050768a99a6da0a640b79e767b9f22b8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
