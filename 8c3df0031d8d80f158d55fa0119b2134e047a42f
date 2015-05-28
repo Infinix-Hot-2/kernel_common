@@ -16,6 +16,24 @@
       "revId": "8c3df0031d8d80f158d55fa0119b2134e047a42f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ed56c9ec_6a326822",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 2219,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-05-28T22:30:45Z",
+      "side": 1,
+      "message": "Yes, that was stupid.  I think I originally noticed that the binder_stat_br() was separated from the setting of BR_OK across the ptr \u003d\u003d end check and resolved to put them together, which is precisely the error Riley\u0027s patch addresses, but I may have messed it up when transferring from one branch to another.",
+      "parentUuid": "ed56c9ec_562d508e",
+      "revId": "8c3df0031d8d80f158d55fa0119b2134e047a42f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
