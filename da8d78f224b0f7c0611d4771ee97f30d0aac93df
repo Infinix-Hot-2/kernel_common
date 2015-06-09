@@ -22,6 +22,30 @@
       "revId": "da8d78f224b0f7c0611d4771ee97f30d0aac93df",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9fdf8c1_e8044b4f",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 4971,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-06-09T23:42:43Z",
+      "side": 1,
+      "message": "OK. I agree with that.",
+      "parentUuid": "5934fc65_25b938b7",
+      "range": {
+        "startLine": 4971,
+        "startChar": 2,
+        "endLine": 4971,
+        "endChar": 8
+      },
+      "revId": "da8d78f224b0f7c0611d4771ee97f30d0aac93df",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
