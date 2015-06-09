@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5934fc65_25813898",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 4972,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-06-09T23:54:31Z",
+      "side": 1,
+      "message": "should be under } else {",
+      "range": {
+        "startLine": 4972,
+        "startChar": 1,
+        "endLine": 4972,
+        "endChar": 7
+      },
+      "revId": "aee2a538043965493b1c17d3c63810996ab7e1b8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
