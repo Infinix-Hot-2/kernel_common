@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b9a6d8d3_925e2abc",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 4969,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-06-09T21:45:13Z",
+      "side": 1,
+      "message": "Why not to use just \"android,bcmdhd_wlan\" ?",
+      "range": {
+        "startLine": 4969,
+        "startChar": 42,
+        "endLine": 4969,
+        "endChar": 51
+      },
+      "revId": "2d77acd755663c34e1251e17272acf65c88ad37d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39c4a87c_6ece13d4",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 4972,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-06-09T21:45:13Z",
+      "side": 1,
+      "message": "Maybe it will be better to fall through?",
+      "range": {
+        "startLine": 4972,
+        "startChar": 2,
+        "endLine": 4972,
+        "endChar": 8
+      },
+      "revId": "2d77acd755663c34e1251e17272acf65c88ad37d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39c4a87c_0e043784",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 4995,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-06-09T21:45:13Z",
+      "side": 1,
+      "message": "Add blank: if (is_pme) {",
+      "range": {
+        "startLine": 4995,
+        "startChar": 4,
+        "endLine": 4995,
+        "endChar": 5
+      },
+      "revId": "2d77acd755663c34e1251e17272acf65c88ad37d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
