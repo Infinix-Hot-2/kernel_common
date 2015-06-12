@@ -70,6 +70,30 @@
       "revId": "fc7b9cca9ba1dae9ea03f4fc91c83516875ceac5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19d1a48c_a839fb06",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 365,
+      "author": {
+        "id": 1075088
+      },
+      "writtenOn": "2015-06-12T23:55:08Z",
+      "side": 1,
+      "message": "Sorry for my misunderstanding. I will modify it",
+      "parentUuid": "992af412_662df01f",
+      "range": {
+        "startLine": 365,
+        "startChar": 0,
+        "endLine": 365,
+        "endChar": 30
+      },
+      "revId": "fc7b9cca9ba1dae9ea03f4fc91c83516875ceac5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
