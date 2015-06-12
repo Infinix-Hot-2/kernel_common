@@ -46,6 +46,30 @@
       "revId": "fc7b9cca9ba1dae9ea03f4fc91c83516875ceac5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "992af412_662df01f",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 365,
+      "author": {
+        "id": 1037988
+      },
+      "writtenOn": "2015-06-12T23:38:35Z",
+      "side": 1,
+      "message": "I agree with Pat.  This isn\u0027t correct.  With undefined CONFIG_BCMDHD_PCIE your code will look like this:\n\n{\n  extern int msm_pcie_enumerate(u32 rc_idx);\n  printk(\"%s: enter\\n\", __func__);\n  return msm_pcie_enumerate(1);\n  return 0;\n}",
+      "parentUuid": "596b1c6a_1efc9d35",
+      "range": {
+        "startLine": 365,
+        "startChar": 0,
+        "endLine": 365,
+        "endChar": 30
+      },
+      "revId": "fc7b9cca9ba1dae9ea03f4fc91c83516875ceac5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
