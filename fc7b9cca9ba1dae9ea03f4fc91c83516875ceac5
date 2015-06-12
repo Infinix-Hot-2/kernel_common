@@ -22,6 +22,30 @@
       "revId": "fc7b9cca9ba1dae9ea03f4fc91c83516875ceac5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "596b1c6a_1efc9d35",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 365,
+      "author": {
+        "id": 1075088
+      },
+      "writtenOn": "2015-06-12T22:34:35Z",
+      "side": 1,
+      "message": "The return 0 was used for other condition if the Macro is not matched.",
+      "parentUuid": "59e07c3c_18f3129b",
+      "range": {
+        "startLine": 365,
+        "startChar": 0,
+        "endLine": 365,
+        "endChar": 30
+      },
+      "revId": "fc7b9cca9ba1dae9ea03f4fc91c83516875ceac5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
