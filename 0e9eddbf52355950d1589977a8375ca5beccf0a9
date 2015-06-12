@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "190364c0_bea021af",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 1037988
+      },
+      "writtenOn": "2015-06-12T20:45:37Z",
+      "side": 1,
+      "message": "Return value is hard-coded and gives no indication of msm_pcie_enumerate() success or failure.  Should this bubble up the return value or at least take it into account?",
+      "revId": "0e9eddbf52355950d1589977a8375ca5beccf0a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
