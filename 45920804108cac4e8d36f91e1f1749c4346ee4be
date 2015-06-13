@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "19b8c43c_3067281c",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 1021676
+      },
+      "writtenOn": "2015-06-13T00:29:03Z",
+      "side": 1,
+      "message": "How come you removed the gpio_wl_reg_on initial setting?",
+      "revId": "45920804108cac4e8d36f91e1f1749c4346ee4be",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19b8c43c_9057f42a",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 1021676
+      },
+      "writtenOn": "2015-06-13T00:29:03Z",
+      "side": 1,
+      "message": "should include the proper include file instead of declaring it here: include/linux/msm_pcie.h",
+      "range": {
+        "startLine": 362,
+        "startChar": 0,
+        "endLine": 362,
+        "endChar": 43
+      },
+      "revId": "45920804108cac4e8d36f91e1f1749c4346ee4be",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
