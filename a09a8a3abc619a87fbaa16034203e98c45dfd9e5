@@ -16,6 +16,24 @@
       "revId": "a09a8a3abc619a87fbaa16034203e98c45dfd9e5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "597cfc56_eacca960",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 8
+      },
+      "lineNbr": 2189,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-06-16T22:40:40Z",
+      "side": 1,
+      "message": "I\u0027m open to suggestions for this.  We could, for instance, return an error if passed such a buffer, or change it to wait for work before finishing if the buffer doesn\u0027t meet that threshold, or even leave it as is.",
+      "parentUuid": "f95690ec_753b40a7",
+      "revId": "a09a8a3abc619a87fbaa16034203e98c45dfd9e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
