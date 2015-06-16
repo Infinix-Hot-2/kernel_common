@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f95690ec_753b40a7",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 8
+      },
+      "lineNbr": 2189,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-06-16T20:15:54Z",
+      "side": 1,
+      "message": "There is a change in behavior here is the buffer is too small. The old code would block waiting for work, where the new code will return with a just a BR_NOOP in the buffer. This is probably OK, as long as no-one calls this with an 8-byte buffer (which would be too small to get an transaction).",
+      "revId": "a09a8a3abc619a87fbaa16034203e98c45dfd9e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
