@@ -1,0 +1,388 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e67ca0f_a77f1422",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 9,
+        "startChar": 28,
+        "endLine": 9,
+        "endChar": 30
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e6dc2eb_e302e0c6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "no s",
+      "range": {
+        "startLine": 13,
+        "startChar": 46,
+        "endLine": 13,
+        "endChar": 47
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e67ca0f_8750d0ac",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "Missing Change-Id",
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e6dc2eb_c37c7c2f",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1154,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "should probably be called saved_cmdline_len",
+      "range": {
+        "startLine": 1154,
+        "startChar": 16,
+        "endLine": 1154,
+        "endChar": 33
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3e700ec3_8d88f1f9",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1172,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "use *map_cmdline_to_pid instead of unsigned",
+      "range": {
+        "startLine": 1172,
+        "startChar": 57,
+        "endLine": 1172,
+        "endChar": 65
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e67ca0f_075cc0c1",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1175,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "return a meaningful value like ENOMEM",
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9e7adaa8_7de18b48",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1178,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 1178,
+        "startChar": 50,
+        "endLine": 1178,
+        "endChar": 58
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e6dc2eb_c30ebce7",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1190,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 1190,
+        "startChar": 53,
+        "endLine": 1190,
+        "endChar": 59
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9e7adaa8_5d05af81",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1199,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 1199,
+        "startChar": 71,
+        "endLine": 1199,
+        "endChar": 79
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9e7adaa8_bd4163b9",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1213,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "same - make sure to return something somewhat meaningful - probably need an \"err\" variable that will have the error code you want to return",
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e6dc2eb_8ed1cbf9",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1377,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "replace magic constant with a #define",
+      "range": {
+        "startLine": 1377,
+        "startChar": 38,
+        "endLine": 1377,
+        "endChar": 41
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3e700ec3_adfcd536",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1393,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "Why do you need the GFP_ATOMIC - can these run in interrupt context?",
+      "range": {
+        "startLine": 1393,
+        "startChar": 58,
+        "endLine": 1393,
+        "endChar": 68
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e67ca0f_6737bc72",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1393,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "*map_cmdline_to_pid",
+      "range": {
+        "startLine": 1393,
+        "startChar": 47,
+        "endLine": 1393,
+        "endChar": 55
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e67ca0f_2731c47a",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1398,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 1398,
+        "startChar": 40,
+        "endLine": 1398,
+        "endChar": 48
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9e7adaa8_c8d6df6a",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1405,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "why are you using unlikely here and not above? try to stay consistent - and not sure that GFP_ATOMIC is that unlikely to fail",
+      "range": {
+        "startLine": 1405,
+        "startChar": 5,
+        "endLine": 1405,
+        "endChar": 13
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3e700ec3_4dd5f9b0",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1408,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "same - I\u0027m going to stop here for these",
+      "range": {
+        "startLine": 1408,
+        "startChar": 43,
+        "endLine": 1408,
+        "endChar": 48
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e6dc2eb_c3279c67",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1453,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "same here - use a meaningful error code and depending on it, you could decide to abort or retry in your retry loop",
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e67ca0f_e78c2cbc",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1474,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-18T21:27:58Z",
+      "side": 1,
+      "message": "Use a loop instead of a goto label - and goto labels should never be indented",
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
