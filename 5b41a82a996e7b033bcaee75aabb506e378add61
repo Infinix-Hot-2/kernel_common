@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7eca863a_0ee94b77",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 1472,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-19T01:47:30Z",
+      "side": 1,
+      "message": "Could you have reentrancy issues? If so, you should use an atomic",
+      "revId": "5b41a82a996e7b033bcaee75aabb506e378add61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ebe4e91_f204decb",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 1507,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-19T01:47:30Z",
+      "side": 1,
+      "message": "Still not a fan of using a goto... Have you thought about using a do {} while()  and then test outside the loop?",
+      "revId": "5b41a82a996e7b033bcaee75aabb506e378add61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
