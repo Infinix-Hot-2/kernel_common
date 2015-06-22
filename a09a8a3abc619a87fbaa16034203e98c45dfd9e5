@@ -34,6 +34,24 @@
       "revId": "a09a8a3abc619a87fbaa16034203e98c45dfd9e5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e2782f4_90893cab",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 8
+      },
+      "lineNbr": 2189,
+      "author": {
+        "id": 1000322
+      },
+      "writtenOn": "2015-06-22T18:40:57Z",
+      "side": 1,
+      "message": "I\u0027m inclined to say it should return an error if passed a too-small buffer, unless we know of existing clients that depend on the accumulation behavior.",
+      "parentUuid": "597cfc56_eacca960",
+      "revId": "a09a8a3abc619a87fbaa16034203e98c45dfd9e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
