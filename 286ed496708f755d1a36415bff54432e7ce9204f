@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5efea270_66eb3628",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 1394,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-22T15:30:45Z",
+      "side": 1,
+      "message": "The comment is wrong now",
+      "revId": "286ed496708f755d1a36415bff54432e7ce9204f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e67ca0f_85d99367",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 4572,
+      "author": {
+        "id": 1018087
+      },
+      "writtenOn": "2015-06-22T15:30:45Z",
+      "side": 1,
+      "message": "Usually for those, we use a ternary operator: return ret ? ret : cnt;",
+      "revId": "286ed496708f755d1a36415bff54432e7ce9204f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
