@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ef6069f_519874f8",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 648,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-06-22T19:54:33Z",
+      "side": 1,
+      "message": "Let\u0027s set them to NULL, like you did above.",
+      "range": {
+        "startLine": 648,
+        "startChar": 8,
+        "endLine": 648,
+        "endChar": 24
+      },
+      "revId": "5d98144a0b14883743d308b004c4cc554133d674",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
