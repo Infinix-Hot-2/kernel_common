@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "de75323f_ee56bf2f",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 1021673
+      },
+      "writtenOn": "2015-06-24T22:07:15Z",
+      "side": 1,
+      "message": "Please comply with the coding rule.\nwe need to add space between , and next argument",
+      "revId": "ffd5225026fd980e5abaa7cf8726cd361b0c8ce8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7e7a8634_6bf081dc",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 433,
+      "author": {
+        "id": 1021673
+      },
+      "writtenOn": "2015-06-24T22:07:15Z",
+      "side": 1,
+      "message": "locale.customer_locale_rev \u003d bcm_atoi(tok);",
+      "revId": "ffd5225026fd980e5abaa7cf8726cd361b0c8ce8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7e252642_13d48c31",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 439,
+      "author": {
+        "id": 1021673
+      },
+      "writtenOn": "2015-06-24T22:07:15Z",
+      "side": 1,
+      "message": "remove space",
+      "revId": "ffd5225026fd980e5abaa7cf8726cd361b0c8ce8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
