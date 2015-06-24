@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "be707e50_6d91755b",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-06-24T22:23:32Z",
+      "side": 1,
+      "message": "OK. fixed.",
+      "parentUuid": "de75323f_ee56bf2f",
+      "revId": "ffd5225026fd980e5abaa7cf8726cd361b0c8ce8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7e7a8634_6bf081dc",
         "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "7e252642_f3e31019",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 433,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-06-24T22:23:32Z",
+      "side": 1,
+      "message": "OK. fixed",
+      "parentUuid": "7e7a8634_6bf081dc",
+      "revId": "ffd5225026fd980e5abaa7cf8726cd361b0c8ce8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7e252642_13d48c31",
         "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2015-06-24T22:07:15Z",
       "side": 1,
       "message": "remove space",
+      "revId": "ffd5225026fd980e5abaa7cf8726cd361b0c8ce8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7e7a8634_0bed3dff",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 439,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-06-24T22:23:32Z",
+      "side": 1,
+      "message": "OK. fixed.",
+      "parentUuid": "7e252642_13d48c31",
       "revId": "ffd5225026fd980e5abaa7cf8726cd361b0c8ce8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
