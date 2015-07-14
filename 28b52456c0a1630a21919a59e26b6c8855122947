@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "187d22ed_3ce20919",
+        "filename": "drivers/usb/gadget/configfs.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1628,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-07-14T22:11:41Z",
+      "side": 1,
+      "message": "When the gadget_layer gets the first control packet, we infer that the device is \"connected\"... when the host sends the set_configuration request, we move from \"connected\" state to \"configured\"... So the preference would be to report as configured when we are both \"connected\" and \"configured\"",
+      "parentUuid": "b8c33659_b5538061",
+      "range": {
+        "startLine": 1628,
+        "startChar": 11,
+        "endLine": 1628,
+        "endChar": 20
+      },
+      "revId": "28b52456c0a1630a21919a59e26b6c8855122947",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "389d8670_147a7ae6",
         "filename": "drivers/usb/gadget/configfs.c",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "98975254_cc92245e",
+        "filename": "drivers/usb/gadget/configfs.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1702,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-07-14T22:11:41Z",
+      "side": 1,
+      "message": "I am intending to remove the android_device that I created previously:\n\nLine 1692:\nandroid_device \u003d device_create(android_class, NULL,\n\t\t\t\tMKDEV(0, 0), NULL, \"android0\");",
+      "parentUuid": "389d8670_147a7ae6",
+      "range": {
+        "startLine": 1702,
+        "startChar": 3,
+        "endLine": 1702,
+        "endChar": 17
+      },
+      "revId": "28b52456c0a1630a21919a59e26b6c8855122947",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "18a442b9_f3534aae",
         "filename": "drivers/usb/gadget/configfs.c",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2015-07-14T20:20:07Z",
       "side": 1,
       "message": "Do we need to destroy stuff created for Android?",
+      "range": {
+        "startLine": 1722,
+        "startChar": 1,
+        "endLine": 1722,
+        "endChar": 6
+      },
+      "revId": "28b52456c0a1630a21919a59e26b6c8855122947",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "98975254_0c9d0c6b",
+        "filename": "drivers/usb/gadget/configfs.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1722,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-07-14T22:11:41Z",
+      "side": 1,
+      "message": "Probably, I should move Line 1702 to here...",
+      "parentUuid": "18a442b9_f3534aae",
       "range": {
         "startLine": 1722,
         "startChar": 1,
