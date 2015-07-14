@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "58987a8f_517e5e25",
+        "filename": "drivers/usb/gadget/configfs.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 1725,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-07-14T22:51:39Z",
+      "side": 1,
+      "message": "attrs is wrong here.",
+      "range": {
+        "startLine": 1725,
+        "startChar": 17,
+        "endLine": 1725,
+        "endChar": 22
+      },
+      "revId": "530d8cecd24291f997ae6e39e3071ce581a07625",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
