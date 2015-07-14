@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "187d22ed_1c2f05ca",
+        "filename": "drivers/usb/gadget/configfs.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 1616,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-07-14T22:16:59Z",
+      "side": 1,
+      "message": "Can it be NULL?",
+      "range": {
+        "startLine": 1616,
+        "startChar": 21,
+        "endLine": 1616,
+        "endChar": 24
+      },
+      "revId": "93200e405c0c0f0168fa3c0003040d24b1776cbd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "98975254_8cf65c87",
+        "filename": "drivers/usb/gadget/configfs.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 1695,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-07-14T22:16:59Z",
+      "side": 1,
+      "message": "You will crash - android_device-\u003eclass is not defined.",
+      "range": {
+        "startLine": 1695,
+        "startChar": 2,
+        "endLine": 1695,
+        "endChar": 6
+      },
+      "revId": "93200e405c0c0f0168fa3c0003040d24b1776cbd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "98975254_4cfc7469",
+        "filename": "drivers/usb/gadget/configfs.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 1720,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-07-14T22:16:59Z",
+      "side": 1,
+      "message": "Will it destroy all dev files created in 1699-1703?",
+      "range": {
+        "startLine": 1720,
+        "startChar": 1,
+        "endLine": 1720,
+        "endChar": 15
+      },
+      "revId": "93200e405c0c0f0168fa3c0003040d24b1776cbd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
