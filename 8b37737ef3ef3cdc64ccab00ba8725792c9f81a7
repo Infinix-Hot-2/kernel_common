@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "586b1a6a_de9045a5",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 11663,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-07-17T20:45:33Z",
+      "side": 1,
+      "message": "Is it needed?",
+      "range": {
+        "startLine": 11663,
+        "startChar": 5,
+        "endLine": 11663,
+        "endChar": 28
+      },
+      "revId": "8b37737ef3ef3cdc64ccab00ba8725792c9f81a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b8709650_61573e50",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgp2p.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 2664,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-07-17T20:45:33Z",
+      "side": 1,
+      "message": "Add empty line above",
+      "range": {
+        "startLine": 2664,
+        "startChar": 0,
+        "endLine": 2664,
+        "endChar": 3
+      },
+      "revId": "8b37737ef3ef3cdc64ccab00ba8725792c9f81a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
