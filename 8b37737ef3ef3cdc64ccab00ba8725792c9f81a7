@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "38858659_251aa675",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 11663,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-07-17T20:56:42Z",
+      "side": 1,
+      "message": "It\u0027s checking flag with spin_lock.\nSo I think this is needed.",
+      "parentUuid": "586b1a6a_de9045a5",
+      "range": {
+        "startLine": 11663,
+        "startChar": 5,
+        "endLine": 11663,
+        "endChar": 28
+      },
+      "revId": "8b37737ef3ef3cdc64ccab00ba8725792c9f81a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b8709650_61573e50",
         "filename": "drivers/net/wireless/bcmdhd/wl_cfgp2p.c",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2015-07-17T20:45:33Z",
       "side": 1,
       "message": "Add empty line above",
+      "range": {
+        "startLine": 2664,
+        "startChar": 0,
+        "endLine": 2664,
+        "endChar": 3
+      },
+      "revId": "8b37737ef3ef3cdc64ccab00ba8725792c9f81a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "987f5221_00b75677",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgp2p.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 2664,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-07-17T20:56:42Z",
+      "side": 1,
+      "message": "Ok. fixed",
+      "parentUuid": "b8709650_61573e50",
       "range": {
         "startLine": 2664,
         "startChar": 0,
