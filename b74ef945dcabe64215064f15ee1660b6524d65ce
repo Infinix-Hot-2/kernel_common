@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0dbb223c_be63e535",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2015-07-29T01:24:36Z",
+      "side": 1,
+      "message": "Put this line in square brackets after David\u0027s Signed-off-by: and add a second Signed-off-by: after it.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 73
+      },
+      "revId": "b74ef945dcabe64215064f15ee1660b6524d65ce",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad1696fe_8829a713",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2015-07-29T01:24:36Z",
+      "side": 1,
+      "message": "Add a Bug: line and a Change-Id: line at the bottom of the commit description. You can get the change ID for this CL from the gerrit UI.",
+      "revId": "b74ef945dcabe64215064f15ee1660b6524d65ce",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
