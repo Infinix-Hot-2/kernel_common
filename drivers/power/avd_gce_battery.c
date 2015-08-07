@@ -18,6 +18,8 @@
 
 #define AVDGCE_MODEL_NAME	"AVD battery"
 #define AVDGCE_MANUFACTURER	"Google, Inc."
+#define AVDGCE_AC_SUPPLY_NAME	"avd-ac"
+#define AVDGCE_BATTERY_NAME	"avd-battery"
 
 static int battery_status			= POWER_SUPPLY_STATUS_CHARGING;
 static const char *battery_status_str		= "charging";
@@ -35,6 +37,20 @@ static int battery_capacity			= 90;
 static int battery_voltage			= 3300;
 
 static bool avdgce_module_initialized;
+
+static int avdgce_power_get_ac_property(struct power_supply *psy,
+				      enum power_supply_property psp,
+				      union power_supply_propval *val)
+{
+	switch (psp) {
+	case POWER_SUPPLY_PROP_ONLINE:
+		val->intval = 1;  /* online */
+		break;
+	default:
+		return -EINVAL;
+	}
+	return 0;
+}
 
 static int avdgce_power_get_battery_property(struct power_supply *psy,
 					     enum power_supply_property psp,
@@ -93,6 +109,10 @@ static int avdgce_power_get_battery_property(struct power_supply *psy,
 	return 0;
 }
 
+static enum power_supply_property avdgce_power_ac_props[] = {
+	POWER_SUPPLY_PROP_ONLINE,
+};
+
 static enum power_supply_property avdgce_power_battery_props[] = {
 	POWER_SUPPLY_PROP_STATUS,
 	POWER_SUPPLY_PROP_CHARGE_TYPE,
@@ -112,9 +132,26 @@ static enum power_supply_property avdgce_power_battery_props[] = {
 	POWER_SUPPLY_PROP_VOLTAGE_NOW,
 };
 
+static char *avdgce_power_ac_supplied_to[] = {
+	AVDGCE_BATTERY_NAME,
+};
+
+static struct power_supply *avdgce_ac_supply;
+static struct power_supply_desc avdgce_ac_supply_desc = {
+	.name = AVDGCE_AC_SUPPLY_NAME,
+	.type = POWER_SUPPLY_TYPE_MAINS,
+	.properties = avdgce_power_ac_props,
+	.num_properties = ARRAY_SIZE(avdgce_power_ac_props),
+	.get_property = avdgce_power_get_ac_property,
+};
+static struct power_supply_config ac_psy_cfg = {
+	.supplied_to = avdgce_power_ac_supplied_to,
+	.num_supplicants = ARRAY_SIZE(avdgce_power_ac_supplied_to),
+};
+
 static struct power_supply *avdgce_battery_supply;
 static struct power_supply_desc avdgce_battery_supply_desc = {
-	.name = "avd_battery",
+	.name = AVDGCE_BATTERY_NAME,
 	.type = POWER_SUPPLY_TYPE_BATTERY,
 	.properties = avdgce_power_battery_props,
 	.num_properties = ARRAY_SIZE(avdgce_power_battery_props),
@@ -123,11 +160,19 @@ static struct power_supply_desc avdgce_battery_supply_desc = {
 
 static int __init avdgce_power_init(void)
 {
+	avdgce_ac_supply = power_supply_register(NULL,
+		&avdgce_ac_supply_desc, &ac_psy_cfg);
+	if (IS_ERR(avdgce_ac_supply)) {
+		pr_err("%s: registeration of %s failed\n", __func__,
+			avdgce_ac_supply_desc.name);
+		return PTR_ERR(avdgce_ac_supply);
+	}
 	avdgce_battery_supply = power_supply_register(NULL,
 		&avdgce_battery_supply_desc, NULL);
 	if (IS_ERR(avdgce_battery_supply)) {
 		pr_err("%s: registeration of %s failed\n", __func__,
 			avdgce_battery_supply_desc.name);
+		power_supply_unregister(avdgce_ac_supply);
 		return PTR_ERR(avdgce_battery_supply);
 	}
 	avdgce_module_initialized = true;
@@ -137,6 +182,7 @@ static int __init avdgce_power_init(void)
 static void __exit avdgce_power_exit(void)
 {
 	power_supply_unregister(avdgce_battery_supply);
+	power_supply_unregister(avdgce_ac_supply);
 	avdgce_module_initialized = false;
 }
 
