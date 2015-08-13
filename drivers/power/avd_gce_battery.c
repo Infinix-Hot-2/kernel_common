@@ -16,6 +16,8 @@
 #include <linux/delay.h>
 #include <linux/vermagic.h>
 
+#include <linux/power/avd_gce_battery.h>
+#include <linux/power/avd_gce_battery_procfs.h>
 
 #define AVDGCE_MODEL_NAME	"AVD battery"
 #define AVDGCE_MANUFACTURER	"Google, Inc."
@@ -34,7 +36,7 @@ static const char *battery_present_str		= "true";
 static int battery_technology			= POWER_SUPPLY_TECHNOLOGY_LION;
 static const char *battery_technology_str	= "LION";
 
-static int battery_capacity			= 90;
+int avdgce_battery_capacity			= AVDGCE_BATTERY_CAPACITY_DEFAULT;
 static int battery_voltage			= 3300;
 
 static bool avdgce_module_initialized;
@@ -84,7 +86,7 @@ static int avdgce_power_get_battery_property(struct power_supply *psy,
 		break;
 	case POWER_SUPPLY_PROP_CAPACITY:
 	case POWER_SUPPLY_PROP_CHARGE_NOW:
-		val->intval = battery_capacity;
+		val->intval = avdgce_battery_capacity;
 		break;
 	case POWER_SUPPLY_PROP_CHARGE_FULL_DESIGN:
 	case POWER_SUPPLY_PROP_CHARGE_FULL:
@@ -155,10 +157,14 @@ static struct power_supply avdgce_battery_supply = {
 	.get_property = avdgce_power_get_battery_property,
 };
 
-
 static int __init avdgce_power_init(void)
 {
-	int ret = power_supply_register(NULL, &avdgce_ac_supply);
+	int ret = avdgce_power_procfs_init(THIS_MODULE);
+	if (ret) {
+		return ret;
+	}
+
+	ret = power_supply_register(NULL, &avdgce_ac_supply);
 	if (ret) {
 		pr_err("%s: registeration of %s failed\n", __func__,
 			avdgce_ac_supply.name);
@@ -179,6 +185,7 @@ static void __exit avdgce_power_exit(void)
 {
 	power_supply_unregister(&avdgce_battery_supply);
 	power_supply_unregister(&avdgce_ac_supply);
+	avdgce_power_procfs_exit();
 	avdgce_module_initialized = false;
 }
 
@@ -264,7 +271,7 @@ module_param(battery_health, battery_health, 0644);
 MODULE_PARM_DESC(battery_health,
 	"battery health state <good|overheat|dead|overvoltage|failure>");
 
-module_param(battery_capacity, battery_capacity, 0644);
+module_param(avdgce_battery_capacity, battery_capacity, 0644);
 MODULE_PARM_DESC(battery_capacity, "battery capacity (percentage)");
 
 module_param(battery_voltage, battery_voltage, 0644);
