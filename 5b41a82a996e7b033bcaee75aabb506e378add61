@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "3e700ec3_0e529760",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 1488,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "I know you said use a loop, but I don\u0027t agree a loop is suited here. We don\u0027t really want to \"loop\", we just want to recompute a value which is now usable value because we\u0027ve extended. With this current patch, the only way we get to the retry label is if we successfully extend the mappings. \n\nIt\u0027s hard to put a loop in this code without redesigning the function. We only extend in specific cases, and when we do extend, only then do we need to \"retry\".",
+      "revId": "5b41a82a996e7b033bcaee75aabb506e378add61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3ebe4e91_f204decb",
         "filename": "kernel/trace/trace.c",
         "patchSetId": 5
