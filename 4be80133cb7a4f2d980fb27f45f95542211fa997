@@ -88,6 +88,30 @@
     },
     {
       "key": {
+        "uuid": "5e6dc2eb_34357007",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1154,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5e6dc2eb_c37c7c2f",
+      "range": {
+        "startLine": 1154,
+        "startChar": 16,
+        "endLine": 1154,
+        "endChar": 33
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3e700ec3_8d88f1f9",
         "filename": "kernel/trace/trace.c",
         "patchSetId": 2
@@ -99,6 +123,30 @@
       "writtenOn": "2015-06-18T21:27:58Z",
       "side": 1,
       "message": "use *map_cmdline_to_pid instead of unsigned",
+      "range": {
+        "startLine": 1172,
+        "startChar": 57,
+        "endLine": 1172,
+        "endChar": 65
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e6dc2eb_f44e188a",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1172,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e700ec3_8d88f1f9",
       "range": {
         "startLine": 1172,
         "startChar": 57,
@@ -128,6 +176,24 @@
     },
     {
       "key": {
+        "uuid": "7e9c462a_67881d27",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1175,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1e67ca0f_075cc0c1",
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9e7adaa8_7de18b48",
         "filename": "kernel/trace/trace.c",
         "patchSetId": 2
@@ -139,6 +205,30 @@
       "writtenOn": "2015-06-18T21:27:58Z",
       "side": 1,
       "message": "same",
+      "range": {
+        "startLine": 1178,
+        "startChar": 50,
+        "endLine": 1178,
+        "endChar": 58
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e67ca0f_552c9bce",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1178,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9e7adaa8_7de18b48",
       "range": {
         "startLine": 1178,
         "startChar": 50,
@@ -174,6 +264,30 @@
     },
     {
       "key": {
+        "uuid": "3e700ec3_6eef937f",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1190,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5e6dc2eb_c30ebce7",
+      "range": {
+        "startLine": 1190,
+        "startChar": 53,
+        "endLine": 1190,
+        "endChar": 59
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9e7adaa8_5d05af81",
         "filename": "kernel/trace/trace.c",
         "patchSetId": 2
@@ -185,6 +299,30 @@
       "writtenOn": "2015-06-18T21:27:58Z",
       "side": 1,
       "message": "same",
+      "range": {
+        "startLine": 1199,
+        "startChar": 71,
+        "endLine": 1199,
+        "endChar": 79
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e67ca0f_b51ad79c",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1199,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9e7adaa8_5d05af81",
       "range": {
         "startLine": 1199,
         "startChar": 71,
@@ -214,6 +352,24 @@
     },
     {
       "key": {
+        "uuid": "3e700ec3_4eee4f81",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1213,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9e7adaa8_bd4163b9",
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5e6dc2eb_8ed1cbf9",
         "filename": "kernel/trace/trace.c",
         "patchSetId": 2
@@ -225,6 +381,30 @@
       "writtenOn": "2015-06-18T21:27:58Z",
       "side": 1,
       "message": "replace magic constant with a #define",
+      "range": {
+        "startLine": 1377,
+        "startChar": 38,
+        "endLine": 1377,
+        "endChar": 41
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9e7adaa8_aea04bf1",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1377,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5e6dc2eb_8ed1cbf9",
       "range": {
         "startLine": 1377,
         "startChar": 38,
@@ -283,6 +463,54 @@
     },
     {
       "key": {
+        "uuid": "5e6dc2eb_b448a07c",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1393,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1e67ca0f_6737bc72",
+      "range": {
+        "startLine": 1393,
+        "startChar": 47,
+        "endLine": 1393,
+        "endChar": 55
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e67ca0f_cd6269b8",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1393,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "No, these wont run in interrupt context, but we\u0027re holding a spin lock during these allocations. I used GFP_ATOMIC so we wouldn\u0027t get blocked while holding the spin lock. That\u0027s also why I used the unlikely macro so we could get out of the allocations faster and drop the lock. Maybe I should remove the unlikely as you mentioned below, I don\u0027t know the stats regarding how likely GFP_ATOMIC is to fail.",
+      "parentUuid": "3e700ec3_adfcd536",
+      "range": {
+        "startLine": 1393,
+        "startChar": 58,
+        "endLine": 1393,
+        "endChar": 68
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1e67ca0f_2731c47a",
         "filename": "kernel/trace/trace.c",
         "patchSetId": 2
@@ -294,6 +522,30 @@
       "writtenOn": "2015-06-18T21:27:58Z",
       "side": 1,
       "message": "same",
+      "range": {
+        "startLine": 1398,
+        "startChar": 40,
+        "endLine": 1398,
+        "endChar": 48
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7e9c462a_c776d1b7",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1398,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1e67ca0f_2731c47a",
       "range": {
         "startLine": 1398,
         "startChar": 40,
@@ -329,6 +581,30 @@
     },
     {
       "key": {
+        "uuid": "9e7adaa8_2e82fb51",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1405,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9e7adaa8_c8d6df6a",
+      "range": {
+        "startLine": 1405,
+        "startChar": 5,
+        "endLine": 1405,
+        "endChar": 13
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3e700ec3_4dd5f9b0",
         "filename": "kernel/trace/trace.c",
         "patchSetId": 2
@@ -340,6 +616,30 @@
       "writtenOn": "2015-06-18T21:27:58Z",
       "side": 1,
       "message": "same - I\u0027m going to stop here for these",
+      "range": {
+        "startLine": 1408,
+        "startChar": 43,
+        "endLine": 1408,
+        "endChar": 48
+      },
+      "revId": "4be80133cb7a4f2d980fb27f45f95542211fa997",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3e700ec3_ee02c3c6",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1408,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e700ec3_4dd5f9b0",
       "range": {
         "startLine": 1408,
         "startChar": 43,
