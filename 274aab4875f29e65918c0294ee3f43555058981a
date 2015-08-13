@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5efea270_072b4435",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 1152,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "These defines are unused -- remove",
+      "revId": "274aab4875f29e65918c0294ee3f43555058981a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ef6069f_8e1e3bea",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 1416,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "checkpatch error, i\u0027ll fix",
+      "revId": "274aab4875f29e65918c0294ee3f43555058981a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e67ca0f_e07ddddf",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 1503,
+      "author": {
+        "id": 1073601
+      },
+      "writtenOn": "2015-08-13T00:51:09Z",
+      "side": 1,
+      "message": "checkpatch warning here, i\u0027ll remove it.",
+      "revId": "274aab4875f29e65918c0294ee3f43555058981a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
