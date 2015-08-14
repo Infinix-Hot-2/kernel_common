@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8448d1a1_c1a94615",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_pcie.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1523,
+      "author": {
+        "id": 1021676
+      },
+      "writtenOn": "2015-08-14T05:35:37Z",
+      "side": 1,
+      "message": "Please release the wake lock here.",
+      "range": {
+        "startLine": 1523,
+        "startChar": 0,
+        "endLine": 1523,
+        "endChar": 21
+      },
+      "revId": "6d2675fbaa53844735df931a0a695baa921745c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
