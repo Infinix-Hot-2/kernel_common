@@ -22,6 +22,30 @@
       "revId": "c9ef08da55a0309eda7220c861fdd546f1b8d2da",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "98c2f255_1a6a9d98",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-08-18T01:00:33Z",
+      "side": 1,
+      "message": "This returning NULL is for case where dtsi format isn\u0027t correct which \"/\" is not found. So there\u0027s less possibility to do that. And returning NULL meaning don\u0027t overwrite passed-in memory area, so no affect found.",
+      "parentUuid": "389d8670_d49e32b0",
+      "range": {
+        "startLine": 426,
+        "startChar": 9,
+        "endLine": 426,
+        "endChar": 13
+      },
+      "revId": "c9ef08da55a0309eda7220c861fdd546f1b8d2da",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
