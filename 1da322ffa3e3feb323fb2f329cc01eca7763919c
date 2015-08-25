@@ -22,6 +22,30 @@
       "revId": "1da322ffa3e3feb323fb2f329cc01eca7763919c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c42ba915_c87e525c",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 827,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-08-25T04:34:38Z",
+      "side": 1,
+      "message": "Ok. Fixed.",
+      "parentUuid": "048f817d_a72c554b",
+      "range": {
+        "startLine": 827,
+        "startChar": 27,
+        "endLine": 827,
+        "endChar": 31
+      },
+      "revId": "1da322ffa3e3feb323fb2f329cc01eca7763919c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
