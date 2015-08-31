@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6424bead_8dafa160",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 10953,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-08-31T18:25:57Z",
+      "side": 1,
+      "message": "This call will call del_timer_sync() and it is not good to call it in atomic context.",
+      "range": {
+        "startLine": 10953,
+        "startChar": 1,
+        "endLine": 10953,
+        "endChar": 15
+      },
+      "revId": "755fa169f249421ebf3d708f3735799eab365f9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
