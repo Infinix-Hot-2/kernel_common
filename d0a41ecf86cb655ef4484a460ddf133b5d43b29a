@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "045f8228_24920e1a",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 13217,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-01T22:14:36Z",
+      "side": 1,
+      "message": "And another thread changes g_bcm_cfg right after you release spinlock and you end up using stale pointer.",
+      "range": {
+        "startLine": 13215,
+        "startChar": 0,
+        "endLine": 13217,
+        "endChar": 47
+      },
+      "revId": "d0a41ecf86cb655ef4484a460ddf133b5d43b29a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
