@@ -119,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "0484e2ca_78f43e01",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_common.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 1615,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-02T22:40:54Z",
+      "side": 1,
+      "message": "I\u0027d rather we deal with it now and not forget later.",
+      "parentUuid": "c4072a51_a4419a2a",
+      "range": {
+        "startLine": 1613,
+        "startChar": 0,
+        "endLine": 1615,
+        "endChar": 56
+      },
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c4072a51_f0b240c9",
         "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
         "patchSetId": 4
@@ -202,6 +226,24 @@
       "side": 1,
       "message": "Insun,\n\nI believe you want to fetch the cfg pointer in the beginning of this function, before you start freeing associated net devices, and then feed it, instead of netdev, into wl_cfg80211_detach().",
       "parentUuid": "a40a365b_b22a7e11",
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "644d9e85_511ee7a0",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 6883,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-02T22:40:54Z",
+      "side": 1,
+      "message": "DHD_ATTACH_STATE_ADD_IF and DHD_ATTACH_STATE_CFG80211 are bits in dhd-\u003edhd_state. It is possible for them both to be active.",
+      "parentUuid": "84529221_f7413c00",
       "revId": "cad596eee39442696a0886e592df686852b0b72a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
