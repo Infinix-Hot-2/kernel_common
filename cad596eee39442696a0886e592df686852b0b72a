@@ -1,0 +1,112 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "644d9e85_da42f174",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-02T18:21:06Z",
+      "side": 1,
+      "message": "Maybe\n\nnet: wireless: bcmdhd: avoid using global pointer to prevent memory corruption\n\n?",
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8497f201_650575d6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-02T18:21:06Z",
+      "side": 1,
+      "message": "Can you please add a bit more verbose changelog. I also recommend splitting the change a bit so it is easier to review (and maybe identify the offending change if it turns out we introduce a regression).\n\nAny chance why we can\u0027t apply the CLs I posted and then get your stuff peace-meal on top?",
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84529221_d79d23d0",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_common.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 1615,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-02T18:21:06Z",
+      "side": 1,
+      "message": "Would prefer if we plumbed the change event through dhd_linux as dhd_event_ifchange, similar to dhd_event_ifadd and dhd_event_ifdel.",
+      "range": {
+        "startLine": 1613,
+        "startChar": 0,
+        "endLine": 1615,
+        "endChar": 56
+      },
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4072a51_f0b240c9",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 6883,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-02T18:21:06Z",
+      "side": 1,
+      "message": "Are you sure ndev is not freed by now?  We tried to free it a few lines above.",
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84f1b2a4_8e93db1a",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 8638,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-02T18:21:06Z",
+      "side": 1,
+      "message": "Please put an empty line between variables and code please.",
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e486eed4_6037a7c6",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 8651,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-02T18:21:06Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
