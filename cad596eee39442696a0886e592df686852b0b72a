@@ -95,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "c4072a51_a4419a2a",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_common.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 1615,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-02T22:36:07Z",
+      "side": 1,
+      "message": "I think you need to one more wrapper function dealing wl_cfg80211_notify_ifchange internally. right?\nIf so, can we implement it later?",
+      "parentUuid": "84529221_d79d23d0",
+      "range": {
+        "startLine": 1613,
+        "startChar": 0,
+        "endLine": 1615,
+        "endChar": 56
+      },
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c4072a51_f0b240c9",
         "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
         "patchSetId": 4
@@ -142,6 +166,24 @@
       "side": 1,
       "message": "Lines 6843 - 6846 for the primary netdev, others are freed above.",
       "parentUuid": "644d9e85_0e004a74",
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84529221_f7413c00",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 6883,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-02T22:36:07Z",
+      "side": 1,
+      "message": "@Dmitry Torokhov. \nThanks for pointing out. \nwe\u0027re checking dhd_state status based on how much initialization done.\n\nLine 6843-6846 are for case DHD_ATTACH_STATE_ADD_IF. \nand\nLine 6882-6887 are for case DHD_ATTACH_STATE_CFG80211.\n\nOnce dhd_attach finished wl_cfg80211_attach then marked status to DHD_ATTACH_STATE_CFG80211. So I think Line 6843-6846 in not used for cfg80211 driver case.",
+      "parentUuid": "a40a365b_b22a7e11",
       "revId": "cad596eee39442696a0886e592df686852b0b72a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
