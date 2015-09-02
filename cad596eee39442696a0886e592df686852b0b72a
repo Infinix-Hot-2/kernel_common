@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6492fe15_c6049322",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-02T21:55:32Z",
+      "side": 1,
+      "message": "Yes, I will change.",
+      "parentUuid": "644d9e85_da42f174",
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8497f201_650575d6",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-02T18:21:06Z",
       "side": 1,
       "message": "Can you please add a bit more verbose changelog. I also recommend splitting the change a bit so it is easier to review (and maybe identify the offending change if it turns out we introduce a regression).\n\nAny chance why we can\u0027t apply the CLs I posted and then get your stuff peace-meal on top?",
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "644d9e85_ee272e48",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-02T21:55:32Z",
+      "side": 1,
+      "message": "@Dmitry. \nI will consider split CLs but need time to review. \nAnd your change is all imported to this latest updated CL. What I did is removing global pointer usage through whole code. I didn\u0027t do enough testing on changes, but yesterday\u0027s monkey testing 2 hours showed no problems. Can we go with changes?",
+      "parentUuid": "8497f201_650575d6",
       "revId": "cad596eee39442696a0886e592df686852b0b72a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
