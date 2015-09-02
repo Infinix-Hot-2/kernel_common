@@ -250,6 +250,24 @@
     },
     {
       "key": {
+        "uuid": "64159e82_6507a659",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 6883,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-02T23:57:21Z",
+      "side": 1,
+      "message": "@Dmitry Torokhov. \nSorry for late. I tested it, but we don\u0027t enter into dhd_detach or wl_cfg80211_detach because we\u0027re using built-in driver and never call rmmod to remove driver.",
+      "parentUuid": "644d9e85_511ee7a0",
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "84f1b2a4_8e93db1a",
         "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
         "patchSetId": 4
