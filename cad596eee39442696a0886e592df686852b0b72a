@@ -207,6 +207,24 @@
     },
     {
       "key": {
+        "uuid": "e486eed4_be3dd0a9",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 8638,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-02T22:37:37Z",
+      "side": 1,
+      "message": "Yes I will fix it",
+      "parentUuid": "84f1b2a4_8e93db1a",
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e486eed4_6037a7c6",
         "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
         "patchSetId": 4
@@ -218,6 +236,24 @@
       "writtenOn": "2015-09-02T18:21:06Z",
       "side": 1,
       "message": "Same here.",
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8497f201_9b4344dd",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 8651,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-02T22:37:37Z",
+      "side": 1,
+      "message": "Yes I will fix it",
+      "parentUuid": "e486eed4_6037a7c6",
       "revId": "cad596eee39442696a0886e592df686852b0b72a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
