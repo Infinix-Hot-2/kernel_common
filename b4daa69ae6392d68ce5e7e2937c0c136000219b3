@@ -283,6 +283,29 @@
     },
     {
       "key": {
+        "uuid": "04cce27b_760018c8",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 11459,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-03T20:58:19Z",
+      "side": 1,
+      "message": "Ugh, this conditional locking is bad. And you are breaking it with passing non-NULL cfg from outside. You need to split this one into __wl_update_wiphybands() that does bulk of the work and turn wl_update_wiphybands() into a wrapper that does locking.\n\nPlease look if we have similar patterns elsewhere.",
+      "range": {
+        "startLine": 11456,
+        "startChar": 0,
+        "endLine": 11459,
+        "endChar": 2
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "44141a88_ed4edd58",
         "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.h",
         "patchSetId": 5
@@ -300,6 +323,23 @@
         "endLine": 862,
         "endChar": 37
       },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8497f201_4017fc0f",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgp2p.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 2612,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-03T20:58:19Z",
+      "side": 1,
+      "message": "I\u0027d prefer if we normally passed net_device into wl_cfg80211_* fucntions instead of mix of cfg and netdev. The only exception is wl_cfg80211_detach() since by then we do not have netdev available.",
       "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
