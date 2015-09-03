@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "84529221_7a21b336",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_common.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 1615,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-03T00:00:04Z",
+      "side": 1,
+      "message": "Ok. I will implement it.",
+      "parentUuid": "0484e2ca_78f43e01",
+      "range": {
+        "startLine": 1613,
+        "startChar": 0,
+        "endLine": 1615,
+        "endChar": 56
+      },
+      "revId": "cad596eee39442696a0886e592df686852b0b72a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c4072a51_f0b240c9",
         "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
         "patchSetId": 4
