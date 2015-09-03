@@ -46,6 +46,30 @@
       "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0484e2ca_6e61d495",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 4431,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-03T02:53:48Z",
+      "side": 1,
+      "message": "@dimitrysh: can it? It seems that wl_host_event is ultimately being called from dhd_rx_frame(). I\u0027d expect it not race with dhd_detach().",
+      "parentUuid": "6492fe15_6992301b",
+      "range": {
+        "startLine": 4431,
+        "startChar": 1,
+        "endLine": 4431,
+        "endChar": 28
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
