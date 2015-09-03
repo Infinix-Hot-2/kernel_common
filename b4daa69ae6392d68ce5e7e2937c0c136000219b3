@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6492fe15_6992301b",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 4431,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-03T00:46:22Z",
+      "side": 1,
+      "message": "If I understand dtor\u0027s suggestion, he wanted to pass to wl_cfg80211_notify_ifchange CFG and not net_device that can be freed at this moment.",
+      "range": {
+        "startLine": 4431,
+        "startChar": 1,
+        "endLine": 4431,
+        "endChar": 28
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
