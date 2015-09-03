@@ -22,6 +22,30 @@
       "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "64159e82_25064ee7",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 4431,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-03T01:12:32Z",
+      "side": 1,
+      "message": "@Dmitry Shmidt. \nFrom first comment of dtor\u0027s, I think he suggested API like others in dhd_linux.c. \n\n@Dmitry Torokhov.\nCan you confirm this one?",
+      "parentUuid": "6492fe15_6992301b",
+      "range": {
+        "startLine": 4431,
+        "startChar": 1,
+        "endLine": 4431,
+        "endChar": 28
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
