@@ -70,6 +70,191 @@
       "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8497f201_a00e003e",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 4431,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-03T20:26:46Z",
+      "side": 1,
+      "message": "Sorry, I meant to write it in different place",
+      "parentUuid": "0484e2ca_6e61d495",
+      "range": {
+        "startLine": 4431,
+        "startChar": 1,
+        "endLine": 4431,
+        "endChar": 28
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "240f267a_8942bd73",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 6770,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-03T20:26:46Z",
+      "side": 1,
+      "message": "-       struct net_device *ndev;\n+       struct bcm_cfg80211 *cfg \u003d NULL;",
+      "range": {
+        "startLine": 6770,
+        "startChar": 1,
+        "endLine": 6770,
+        "endChar": 7
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "64159e82_ab74cd10",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 6848,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-03T20:26:46Z",
+      "side": 1,
+      "message": "cfg \u003d \u003d wl_get_cfg(ifp-\u003enet);",
+      "range": {
+        "startLine": 6848,
+        "startChar": 23,
+        "endLine": 6848,
+        "endChar": 24
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "240f267a_e93ff1e9",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 6895,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-03T20:26:46Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 6895,
+        "startChar": 2,
+        "endLine": 6895,
+        "endChar": 6
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e486eed4_0f9e0323",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 6896,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-03T20:26:46Z",
+      "side": 1,
+      "message": "cfg",
+      "range": {
+        "startLine": 6896,
+        "startChar": 21,
+        "endLine": 6896,
+        "endChar": 25
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "240f267a_0937ed18",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 10910,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-03T20:26:46Z",
+      "side": 1,
+      "message": "(struct bcm_cfg80211 *cfg)",
+      "range": {
+        "startLine": 10910,
+        "startChar": 24,
+        "endLine": 10910,
+        "endChar": 30
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8497f201_e01ba879",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 10912,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-03T20:26:46Z",
+      "side": 1,
+      "message": "Just if (!cfg) return;",
+      "range": {
+        "startLine": 10912,
+        "startChar": 1,
+        "endLine": 10912,
+        "endChar": 7
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "44141a88_ed4edd58",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 862,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-03T20:26:46Z",
+      "side": 1,
+      "message": "struct bcm_cfg80211 *cfg",
+      "range": {
+        "startLine": 862,
+        "startChar": 31,
+        "endLine": 862,
+        "endChar": 37
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
