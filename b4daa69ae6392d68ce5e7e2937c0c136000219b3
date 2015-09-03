@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "64159e82_4ebe07ec",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 6848,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-03T20:30:46Z",
+      "side": 1,
+      "message": "Or we can just detach cfg80211 here",
+      "parentUuid": "64159e82_ab74cd10",
+      "range": {
+        "startLine": 6848,
+        "startChar": 23,
+        "endLine": 6848,
+        "endChar": 24
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "240f267a_e93ff1e9",
         "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
         "patchSetId": 5
