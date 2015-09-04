@@ -217,6 +217,30 @@
     },
     {
       "key": {
+        "uuid": "44141a88_b9bc2342",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 11453,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-04T19:03:36Z",
+      "side": 1,
+      "message": "@Dmitry Shmidt:\n\nWe are not calling wl_update_wiphybands() with NULL cfg anymore, that was the whole point of this change - to always supply valid cfg pointer instead of relying on the global one.\n\nThe old locking logic was: if wl_update_wiphybands() is called with cfg \u003d\u003d NULL assume external caller and lock the usr_sync mutex and do the work. If cfg !\u003d NULL assume internal caller and assume that mutex is already taken.\n\n@Insun: What I am asking is splitting wl_update_wiphybands() into 2: __wl_update_wiphybands() that does the work itself and does not do any locking. It should be used by the internal to wl_cfg80211.c callers (__wl_cfg80211_up) that have already taken usr_sync mutex.\n\nwl_update_wiphybands() should unconditionally take the lock and call __wl_update_wiphybands() to perform the work:\n\ns32 wl_update_wiphybands(struct bcm_cfg80211 *cfg, bool notify)\n{\n    s32 err;\n\n    mutex_lock(\u0026cfg-\u003eusr_sync);\n    err \u003d __wl_update_wiphybands(cfg, notify);\n    mutex_unlock(\u0026cfg-\u003eusr_sync);\n\n    return err;\n}\n\nThe \"non underscore\" function should be used by external callers.\n\nHope this helps.",
+      "parentUuid": "6492fe15_900ebd3e",
+      "range": {
+        "startLine": 11447,
+        "startChar": 0,
+        "endLine": 11453,
+        "endChar": 2
+      },
+      "revId": "a98c0f4a7ffcf0801a87427976b1f10f54ec0ebb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "84529221_51481526",
         "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.h",
         "patchSetId": 6
