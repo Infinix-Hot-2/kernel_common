@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8497f201_acf6f697",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 11
+      },
+      "lineNbr": 842,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-04T22:21:07Z",
+      "side": 1,
+      "message": "This seems unrelated change, please move to a separate CL.",
+      "range": {
+        "startLine": 837,
+        "startChar": 0,
+        "endLine": 842,
+        "endChar": 0
+      },
+      "revId": "def997c9bff1ae80b2e09d4453523d36deb5ed9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
