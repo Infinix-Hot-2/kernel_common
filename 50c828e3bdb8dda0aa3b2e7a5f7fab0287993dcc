@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "6492fe15_6b5300de",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux_platdev.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T22:26:23Z",
+      "side": 1,
+      "message": "Same. \nDmitry shmidt just checked in. Sync completed.",
+      "parentUuid": "84529221_cabfa796",
+      "revId": "50c828e3bdb8dda0aa3b2e7a5f7fab0287993dcc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6492fe15_eb107016",
         "filename": "drivers/net/wireless/bcmdhd/dhd_linux_platdev.c",
         "patchSetId": 10
@@ -47,6 +65,24 @@
       "writtenOn": "2015-09-04T22:21:07Z",
       "side": 1,
       "message": "This seems unrelated change, please move to separate CL.",
+      "revId": "50c828e3bdb8dda0aa3b2e7a5f7fab0287993dcc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "240f267a_3d62df9e",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux_platdev.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T22:26:23Z",
+      "side": 1,
+      "message": "Same. \nDmitry shmidt just checked in. Sync completed.",
+      "parentUuid": "6492fe15_eb107016",
       "revId": "50c828e3bdb8dda0aa3b2e7a5f7fab0287993dcc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
