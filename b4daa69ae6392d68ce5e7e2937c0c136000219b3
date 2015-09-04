@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "8497f201_c19eae58",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 4431,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T00:00:46Z",
+      "side": 1,
+      "message": "Ok. understood.",
+      "parentUuid": "8497f201_a00e003e",
+      "range": {
+        "startLine": 4431,
+        "startChar": 1,
+        "endLine": 4431,
+        "endChar": 28
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "240f267a_8942bd73",
         "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
         "patchSetId": 5
@@ -108,6 +132,30 @@
       "writtenOn": "2015-09-03T20:26:46Z",
       "side": 1,
       "message": "-       struct net_device *ndev;\n+       struct bcm_cfg80211 *cfg \u003d NULL;",
+      "range": {
+        "startLine": 6770,
+        "startChar": 1,
+        "endLine": 6770,
+        "endChar": 7
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "644d9e85_9d810e38",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 6770,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T00:00:46Z",
+      "side": 1,
+      "message": "Yes changed.",
+      "parentUuid": "240f267a_8942bd73",
       "range": {
         "startLine": 6770,
         "startChar": 1,
@@ -191,6 +239,30 @@
     },
     {
       "key": {
+        "uuid": "644d9e85_7d86524f",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 6848,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T00:00:46Z",
+      "side": 1,
+      "message": "Changed. please confirm latest update.",
+      "parentUuid": "04cce27b_f677c898",
+      "range": {
+        "startLine": 6848,
+        "startChar": 23,
+        "endLine": 6848,
+        "endChar": 24
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "240f267a_e93ff1e9",
         "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
         "patchSetId": 5
@@ -214,6 +286,30 @@
     },
     {
       "key": {
+        "uuid": "e486eed4_f255c85e",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 6895,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T00:00:46Z",
+      "side": 1,
+      "message": "yes. removed",
+      "parentUuid": "240f267a_e93ff1e9",
+      "range": {
+        "startLine": 6895,
+        "startChar": 2,
+        "endLine": 6895,
+        "endChar": 6
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e486eed4_0f9e0323",
         "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
         "patchSetId": 5
@@ -225,6 +321,30 @@
       "writtenOn": "2015-09-03T20:26:46Z",
       "side": 1,
       "message": "cfg",
+      "range": {
+        "startLine": 6896,
+        "startChar": 21,
+        "endLine": 6896,
+        "endChar": 25
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8497f201_418a9e0f",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 6896,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T00:00:46Z",
+      "side": 1,
+      "message": "yes. changed",
+      "parentUuid": "e486eed4_0f9e0323",
       "range": {
         "startLine": 6896,
         "startChar": 21,
@@ -306,6 +426,30 @@
     },
     {
       "key": {
+        "uuid": "644d9e85_1d751e0c",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 11459,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T00:00:46Z",
+      "side": 1,
+      "message": "Yes. agreed. this code exist some reason for long time. \nremoved and changed follow your way. Please confirm",
+      "parentUuid": "04cce27b_760018c8",
+      "range": {
+        "startLine": 11456,
+        "startChar": 0,
+        "endLine": 11459,
+        "endChar": 2
+      },
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "44141a88_ed4edd58",
         "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.h",
         "patchSetId": 5
@@ -340,6 +484,24 @@
       "writtenOn": "2015-09-03T20:58:19Z",
       "side": 1,
       "message": "I\u0027d prefer if we normally passed net_device into wl_cfg80211_* fucntions instead of mix of cfg and netdev. The only exception is wl_cfg80211_detach() since by then we do not have netdev available.",
+      "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "64159e82_d9f92347",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfgp2p.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 2612,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T00:00:46Z",
+      "side": 1,
+      "message": "I would think so, but I\u0027m not sure for p2p case. CFG80211 interface may call this function with diffrent wdev(p2p0). I\u0027m checking it.",
+      "parentUuid": "8497f201_4017fc0f",
       "revId": "b4daa69ae6392d68ce5e7e2937c0c136000219b3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
