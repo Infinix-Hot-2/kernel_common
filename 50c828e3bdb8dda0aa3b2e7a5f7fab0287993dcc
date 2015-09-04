@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "04cce27b_3fdca000",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 4425,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-04T22:21:07Z",
+      "side": 1,
+      "message": "Ah, yes, I forgot to remove this one.",
+      "revId": "50c828e3bdb8dda0aa3b2e7a5f7fab0287993dcc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84529221_cabfa796",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux_platdev.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-04T22:21:07Z",
+      "side": 1,
+      "message": "This seems unrelated change, please move to separate CL.",
+      "revId": "50c828e3bdb8dda0aa3b2e7a5f7fab0287993dcc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6492fe15_eb107016",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_linux_platdev.c",
+        "patchSetId": 10
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-04T22:21:07Z",
+      "side": 1,
+      "message": "This seems unrelated change, please move to separate CL.",
+      "revId": "50c828e3bdb8dda0aa3b2e7a5f7fab0287993dcc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
