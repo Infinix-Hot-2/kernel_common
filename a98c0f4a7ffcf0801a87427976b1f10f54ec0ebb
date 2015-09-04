@@ -169,6 +169,30 @@
     },
     {
       "key": {
+        "uuid": "6492fe15_900ebd3e",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 11453,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-04T18:25:56Z",
+      "side": 1,
+      "message": "@Dmitry, but locking used only in case of cfg \u003d\u003d NULL, and now we are not calling __wl_update_wiphybands() in this case",
+      "parentUuid": "04cce27b_e9428674",
+      "range": {
+        "startLine": 11447,
+        "startChar": 0,
+        "endLine": 11453,
+        "endChar": 2
+      },
+      "revId": "a98c0f4a7ffcf0801a87427976b1f10f54ec0ebb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "84529221_51481526",
         "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.h",
         "patchSetId": 6
