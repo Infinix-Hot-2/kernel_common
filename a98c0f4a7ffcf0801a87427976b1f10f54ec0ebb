@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "44141a88_133276bf",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 11453,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T01:36:18Z",
+      "side": 1,
+      "message": "Once I tried to set locking always, but it failed to power up WiFi. because failed getting usr_sync lock. \n\nIn the original code, it reassign cfg pointer to global one if passed value was NULL. and set mutex for some reason. \n\n\tif (cfg \u003d\u003d NULL) {\n\t\tcfg \u003d g_bcm_cfg;\n\t\tmutex_lock(\u0026cfg-\u003eusr_sync);\n\t\trollback_lock \u003d true;\n\t}\n\nI think we can skip to call __wl_update_wiphybands when cfg\u003d\u003dNULL, then setting mutex is not needed.",
+      "parentUuid": "44141a88_13139668",
+      "range": {
+        "startLine": 11447,
+        "startChar": 0,
+        "endLine": 11453,
+        "endChar": 2
+      },
+      "revId": "a98c0f4a7ffcf0801a87427976b1f10f54ec0ebb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "84529221_51481526",
         "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.h",
         "patchSetId": 6
@@ -36,6 +60,24 @@
       "writtenOn": "2015-09-04T00:35:07Z",
       "side": 1,
       "message": "I do not think you need to export this one.",
+      "revId": "a98c0f4a7ffcf0801a87427976b1f10f54ec0ebb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6492fe15_15185faf",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 914,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T01:36:18Z",
+      "side": 1,
+      "message": "Yes agreed. Fixed.",
+      "parentUuid": "84529221_51481526",
       "revId": "a98c0f4a7ffcf0801a87427976b1f10f54ec0ebb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
