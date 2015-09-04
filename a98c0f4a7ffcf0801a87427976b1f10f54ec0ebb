@@ -105,6 +105,24 @@
       "revId": "a98c0f4a7ffcf0801a87427976b1f10f54ec0ebb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84529221_b41cd700",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 914,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-04T05:11:44Z",
+      "side": 1,
+      "message": "No it is not. You still have __wl_update_wiphybands() as a global function. It should be static to wl_cfg80211.c",
+      "parentUuid": "6492fe15_15185faf",
+      "revId": "a98c0f4a7ffcf0801a87427976b1f10f54ec0ebb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
