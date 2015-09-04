@@ -145,6 +145,30 @@
     },
     {
       "key": {
+        "uuid": "04cce27b_e9428674",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 11453,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-04T17:50:20Z",
+      "side": 1,
+      "message": "We *were* using usr_sync mutex here. If it is not needed/incorrect, please remove it in a separate CL, with explanation why it is not needed and why it is safe to remove it. Or change it for a different mutex if you think that usr_sync is not the rightmutex to use. Again, in a different CL, with detailed explanation.\n\nMoreover, looking at the driver wl_update_wiphybands() is called from dhd_bus_country_set() and dhd_bus_band_set() and I do not see anything that would prevent these 2 from being called simultaneously from different threads. So a mutex is needed there.",
+      "parentUuid": "e486eed4_a3fdb0aa",
+      "range": {
+        "startLine": 11447,
+        "startChar": 0,
+        "endLine": 11453,
+        "endChar": 2
+      },
+      "revId": "a98c0f4a7ffcf0801a87427976b1f10f54ec0ebb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "84529221_51481526",
         "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.h",
         "patchSetId": 6
