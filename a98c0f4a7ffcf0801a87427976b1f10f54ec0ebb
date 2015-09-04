@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "44141a88_fefa01aa",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 11453,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T05:42:31Z",
+      "side": 1,
+      "message": "Yes, your saying correct. If in case cfg\u003d\u003dNULL passing, then there\u0027s nothing that we can do update through wiphybands. I think tt\u0027s better to see with further test result.",
+      "parentUuid": "44141a88_7ed0d131",
+      "range": {
+        "startLine": 11447,
+        "startChar": 0,
+        "endLine": 11453,
+        "endChar": 2
+      },
+      "revId": "a98c0f4a7ffcf0801a87427976b1f10f54ec0ebb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "84529221_51481526",
         "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.h",
         "patchSetId": 6
@@ -120,6 +144,24 @@
       "side": 1,
       "message": "No it is not. You still have __wl_update_wiphybands() as a global function. It should be static to wl_cfg80211.c",
       "parentUuid": "6492fe15_15185faf",
+      "revId": "a98c0f4a7ffcf0801a87427976b1f10f54ec0ebb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "644d9e85_b8c3b8be",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 914,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-04T05:42:31Z",
+      "side": 1,
+      "message": "Oh..Ok. moved to .c file.",
+      "parentUuid": "84529221_b41cd700",
       "revId": "a98c0f4a7ffcf0801a87427976b1f10f54ec0ebb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
