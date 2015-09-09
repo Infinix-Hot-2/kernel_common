@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "244c8613_9e05f989",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_msgbuf.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1371,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-09T18:53:00Z",
+      "side": 1,
+      "message": "Can dhd-\u003ebusstate become \"down\" here?",
+      "revId": "0176c116beeb14294d792135bc67328ad51aa704",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "244c8613_be0a3597",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_msgbuf.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1380,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-09T18:53:00Z",
+      "side": 1,
+      "message": "What about here?",
+      "revId": "0176c116beeb14294d792135bc67328ad51aa704",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "64cf5e9f_af0b0564",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_msgbuf.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1394,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-09T18:53:00Z",
+      "side": 1,
+      "message": "return -ENOMEM ?",
+      "revId": "0176c116beeb14294d792135bc67328ad51aa704",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
