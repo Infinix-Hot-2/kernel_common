@@ -22,6 +22,30 @@
       "revId": "1160b07efa636d7fc4e199f64402e4c43f183c34",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "64cf5e9f_249efc22",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 11034,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-09T17:48:37Z",
+      "side": 1,
+      "message": "@Dmitry Shmidt. \nWe set wakelock for every enqueued event. So I think it\u0027s right to set unlock for every deque event and not counting on semaphore.  Previous mechanism was setting unlock one time after all deque multiple event processing done.\n\nWhat we found that sometimes mismatch count was seen between wl_wakup_event(wake lock) and wl_event_handler(wake unlock). Then leave wake lock count high.",
+      "parentUuid": "24c9e69c_67c07a65",
+      "range": {
+        "startLine": 11034,
+        "startChar": 3,
+        "endLine": 11034,
+        "endChar": 21
+      },
+      "revId": "1160b07efa636d7fc4e199f64402e4c43f183c34",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
