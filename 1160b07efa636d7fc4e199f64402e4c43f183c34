@@ -94,6 +94,30 @@
       "revId": "1160b07efa636d7fc4e199f64402e4c43f183c34",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4bdd6e7_d9cf2690",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 11034,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-10T23:10:55Z",
+      "side": 1,
+      "message": "@Dmitry Shmidt. \nI will get back to you soon after reviewing.",
+      "parentUuid": "24c9e69c_0dfd65a8",
+      "range": {
+        "startLine": 11034,
+        "startChar": 3,
+        "endLine": 11034,
+        "endChar": 21
+      },
+      "revId": "1160b07efa636d7fc4e199f64402e4c43f183c34",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
