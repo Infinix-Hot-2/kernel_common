@@ -22,6 +22,30 @@
       "revId": "d5b609e8a49c81dc949e65a0533187e253984038",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c402caba_3b2c2376",
+        "filename": "drivers/net/wireless/bcmdhd/linux_osl.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1165,
+      "author": {
+        "id": 1049528
+      },
+      "writtenOn": "2015-09-11T19:11:29Z",
+      "side": 1,
+      "message": "We need the static buf to have guaranteed memory for crucial operations. This patch was made a while back. The spinlock here is held for very brief time, i dont want to change the design at this late stage. we are also looping quickly through the 16 such buffers, test_bit will be atomic per instructions, i think here the code wants the full check as protected and since the looping is extremely brief i dont think spinlock is much of an issue here....",
+      "parentUuid": "84a1b20e_8e9ebb9e",
+      "range": {
+        "startLine": 1165,
+        "startChar": 0,
+        "endLine": 1165,
+        "endChar": 40
+      },
+      "revId": "d5b609e8a49c81dc949e65a0533187e253984038",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
