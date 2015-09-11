@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "84a1b20e_8e9ebb9e",
+        "filename": "drivers/net/wireless/bcmdhd/linux_osl.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1165,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-11T19:06:05Z",
+      "side": 1,
+      "message": "Hmm, did gerrit ate my previous reply?\n\nI\u0027d rather we made buf_use a bitmap and used test_set_bit() instead of spinlock here.\n\nBy the way, what is the point of this static buf? Why aren\u0027t we using standard kernel facilities? Ideally this all should go away I think.",
+      "range": {
+        "startLine": 1165,
+        "startChar": 0,
+        "endLine": 1165,
+        "endChar": 40
+      },
+      "revId": "d5b609e8a49c81dc949e65a0533187e253984038",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
