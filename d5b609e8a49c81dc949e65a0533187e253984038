@@ -46,6 +46,30 @@
       "revId": "d5b609e8a49c81dc949e65a0533187e253984038",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6473de94_38cd2546",
+        "filename": "drivers/net/wireless/bcmdhd/linux_osl.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1165,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-12T00:04:13Z",
+      "side": 1,
+      "message": "Ah I see, you want 2 contiguous pages for ioctl data and you are not using scatter-gather... OK, I guess it is fine at this point.",
+      "parentUuid": "c402caba_3b2c2376",
+      "range": {
+        "startLine": 1165,
+        "startChar": 0,
+        "endLine": 1165,
+        "endChar": 40
+      },
+      "revId": "d5b609e8a49c81dc949e65a0533187e253984038",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
