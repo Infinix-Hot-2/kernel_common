@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "648afea0_976b5ce4",
+        "filename": "net/wireless/scan.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 431,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-14T20:35:59Z",
+      "side": 1,
+      "message": "I\u0027d rather see this as:\n\nif (a-\u003echannel !\u003d b-\u003echannel)\n    return a-\u003echannel-\u003ecenter_freq \u003c\u003d b-\u003echannel-\u003ecenter_freq ? -1 : 1;\n\nIf channels are different there is no need yo compare capabilities, or BSS, etc.",
+      "range": {
+        "startLine": 430,
+        "startChar": 0,
+        "endLine": 431,
+        "endChar": 55
+      },
+      "revId": "d7492e48eda9ba07a4359a82dfcdcd9eec082adf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
