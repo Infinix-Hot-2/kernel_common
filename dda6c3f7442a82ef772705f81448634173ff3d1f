@@ -22,6 +22,30 @@
       "revId": "dda6c3f7442a82ef772705f81448634173ff3d1f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c45e4afd_4a8af5a1",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_msgbuf.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1531,
+      "author": {
+        "id": 1076109
+      },
+      "writtenOn": "2015-09-15T23:03:44Z",
+      "side": 1,
+      "message": "In prot_ring_attach(), ring-\u003eringstate allocate is the last process for creating ring pointer.\nIf ring-\u003eringstate is NULL, it means this ring pointer was not created successfully, so we will not update this txflowring at this time when update txflowring queue.",
+      "parentUuid": "8478d270_f307471e",
+      "range": {
+        "startLine": 1531,
+        "startChar": 5,
+        "endLine": 1531,
+        "endChar": 9
+      },
+      "revId": "dda6c3f7442a82ef772705f81448634173ff3d1f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
