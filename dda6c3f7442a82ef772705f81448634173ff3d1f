@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8478d270_f307471e",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_msgbuf.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1531,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-15T18:08:46Z",
+      "side": 1,
+      "message": "It means that prot_ring_attach() failed... How we can be here at all?",
+      "range": {
+        "startLine": 1531,
+        "startChar": 5,
+        "endLine": 1531,
+        "endChar": 9
+      },
+      "revId": "dda6c3f7442a82ef772705f81448634173ff3d1f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
