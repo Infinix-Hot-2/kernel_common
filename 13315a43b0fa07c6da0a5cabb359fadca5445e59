@@ -22,6 +22,30 @@
       "revId": "13315a43b0fa07c6da0a5cabb359fadca5445e59",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a456b6eb_35e7f81a",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 694,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-16T22:05:27Z",
+      "side": 1,
+      "message": "wl_chip should be set in DT entry, this is why I propose to use by default bcm4358, so you will not need to add it.",
+      "parentUuid": "a456b6eb_b5da0853",
+      "range": {
+        "startLine": 694,
+        "startChar": 34,
+        "endLine": 694,
+        "endChar": 41
+      },
+      "revId": "13315a43b0fa07c6da0a5cabb359fadca5445e59",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
