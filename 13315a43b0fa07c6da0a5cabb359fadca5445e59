@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "843d32a1_b83756c7",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 645,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-16T22:09:52Z",
+      "side": 1,
+      "message": "@Dmtiry. \nNeed confirm here.\nThen changing all 4356\u0027s table to 4358\u0027s. Then it will work 4358 as default.",
+      "range": {
+        "startLine": 645,
+        "startChar": 18,
+        "endLine": 645,
+        "endChar": 54
+      },
+      "revId": "13315a43b0fa07c6da0a5cabb359fadca5445e59",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a456b6eb_b5da0853",
         "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
         "patchSetId": 7
