@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "246d66b4_d907d31e",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 645,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-16T22:12:20Z",
+      "side": 1,
+      "message": "Yes, this is the place of default chip.",
+      "parentUuid": "843d32a1_b83756c7",
+      "range": {
+        "startLine": 645,
+        "startChar": 18,
+        "endLine": 645,
+        "endChar": 54
+      },
+      "revId": "13315a43b0fa07c6da0a5cabb359fadca5445e59",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a456b6eb_b5da0853",
         "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
         "patchSetId": 7
