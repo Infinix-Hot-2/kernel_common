@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a456b6eb_b5da0853",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_custom_platdev.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 694,
+      "author": {
+        "id": 1072843
+      },
+      "writtenOn": "2015-09-16T22:03:06Z",
+      "side": 1,
+      "message": "@Dmitry \nWhere did you set this \"wl_chip\" ? I can\u0027t find it in angler.",
+      "range": {
+        "startLine": 694,
+        "startChar": 34,
+        "endLine": 694,
+        "endChar": 41
+      },
+      "revId": "13315a43b0fa07c6da0a5cabb359fadca5445e59",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
