@@ -46,6 +46,29 @@
       "revId": "bb3bcbac28ee1a25fddd7fe9130f08a8dd835cb8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e4d7d85_b4118e19",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_msgbuf.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 3384,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-24T23:06:19Z",
+      "side": 1,
+      "message": "Release it before #3419 then",
+      "range": {
+        "startLine": 3384,
+        "startChar": 1,
+        "endLine": 3384,
+        "endChar": 20
+      },
+      "revId": "bb3bcbac28ee1a25fddd7fe9130f08a8dd835cb8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
