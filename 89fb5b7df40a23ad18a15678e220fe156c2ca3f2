@@ -93,6 +93,30 @@
       "revId": "89fb5b7df40a23ad18a15678e220fe156c2ca3f2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e4d7d85_f4f266d1",
+        "filename": "net/netfilter/xt_qtaguid.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1609,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-09-24T22:18:53Z",
+      "side": 1,
+      "message": "This does not help if we did not increase sk refcount and it was not time wait socket. Callers of qtaguid_find_sk() are dropping sk reference unconditionally if sk is not null.\n\nI believe we already have proper fix in other branch:\n\nhttps://android-review.googlesource.com/#/c/169725/",
+      "parentUuid": "e30dfa2c_5a62713b",
+      "range": {
+        "startLine": 1608,
+        "startChar": 3,
+        "endLine": 1609,
+        "endChar": 21
+      },
+      "revId": "89fb5b7df40a23ad18a15678e220fe156c2ca3f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
