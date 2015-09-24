@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e4d7d85_74de76f9",
+        "filename": "drivers/net/wireless/bcmdhd/dhd_msgbuf.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 3373,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2015-09-24T22:49:00Z",
+      "side": 1,
+      "message": "You are already using GENERAL_LOCK. What data are you protecting with FLOWRING_LOCK?",
+      "range": {
+        "startLine": 3373,
+        "startChar": 1,
+        "endLine": 3373,
+        "endChar": 18
+      },
+      "revId": "bb3bcbac28ee1a25fddd7fe9130f08a8dd835cb8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
