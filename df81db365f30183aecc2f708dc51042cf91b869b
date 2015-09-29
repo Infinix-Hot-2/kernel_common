@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ceae6993_e1cb7c31",
+        "filename": "drivers/md/dm-verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-09-29T12:50:05Z",
+      "side": 1,
+      "message": "Good point. The typedef is not really needed anyway.",
+      "parentUuid": "ee616dea_57da4ea9",
+      "range": {
+        "startLine": 463,
+        "startChar": 0,
+        "endLine": 465,
+        "endChar": 20
+      },
+      "revId": "df81db365f30183aecc2f708dc51042cf91b869b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee616dea_976566a9",
         "filename": "drivers/md/dm-verity.c",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2015-09-28T21:24:31Z",
       "side": 1,
       "message": "int (*verity_bv_block_func) (dm_verity *v, struct dm_verity_io *io, u8 *data, size_t len)",
+      "range": {
+        "startLine": 474,
+        "startChar": 9,
+        "endLine": 474,
+        "endChar": 38
+      },
+      "revId": "df81db365f30183aecc2f708dc51042cf91b869b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec3bd5a_b8bb7545",
+        "filename": "drivers/md/dm-verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 474,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-09-29T12:50:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee616dea_976566a9",
       "range": {
         "startLine": 474,
         "startChar": 9,
