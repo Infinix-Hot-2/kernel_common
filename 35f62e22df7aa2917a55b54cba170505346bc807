@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1548969f_90a662ac",
+        "filename": "ipc/sem.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 427,
+      "author": {
+        "id": 1069543
+      },
+      "writtenOn": "2015-10-01T18:43:26Z",
+      "side": 1,
+      "message": "This is now done twice (here and line 433). Mistake?",
+      "revId": "35f62e22df7aa2917a55b54cba170505346bc807",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
