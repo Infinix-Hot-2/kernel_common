@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "19e61a29_d5780e84",
+        "filename": "security/selinux/avc.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 751,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-10-20T17:42:52Z",
+      "side": 1,
+      "message": "This can stay static; you just need to move avc_xperms_audit() after this function is defined.",
+      "revId": "77b142297a0b2abfbeeace5ea74290b13b72bb9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "59fdf2e7_7f384b95",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 3107,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-10-20T17:42:52Z",
+      "side": 1,
+      "message": "struct selinux_audit_data sad \u003d {0,};",
+      "revId": "77b142297a0b2abfbeeace5ea74290b13b72bb9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d9ef22fe_53ce76b9",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 3112,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-10-20T17:42:52Z",
+      "side": 1,
+      "message": "COMMON_AUDIT_DATA_INIT(\u0026ad, IOCTL_OP);",
+      "revId": "77b142297a0b2abfbeeace5ea74290b13b72bb9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19e61a29_b56d8ac4",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 3114,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-10-20T17:42:52Z",
+      "side": 1,
+      "message": "ad.selinux_audit_data \u003d \u0026sad;",
+      "revId": "77b142297a0b2abfbeeace5ea74290b13b72bb9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9975aa40_b1f9faed",
+        "filename": "security/selinux/include/avc.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2015-10-20T17:42:52Z",
+      "side": 1,
+      "message": "Not needed.",
+      "revId": "77b142297a0b2abfbeeace5ea74290b13b72bb9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
