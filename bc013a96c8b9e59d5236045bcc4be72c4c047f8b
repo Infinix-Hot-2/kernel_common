@@ -1,0 +1,257 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "39f75ee3_468594d1",
+        "filename": "init/do_mounts.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 561,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-20T14:37:24Z",
+      "side": 1,
+      "message": "Not /dev/block/dm-0? Would this conflict with dm devices created later?",
+      "range": {
+        "startLine": 561,
+        "startChar": 27,
+        "endLine": 561,
+        "endChar": 36
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99476aec_3e1b8986",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-20T14:37:24Z",
+      "side": 1,
+      "message": "const?",
+      "range": {
+        "startLine": 46,
+        "startChar": 34,
+        "endLine": 46,
+        "endChar": 38
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d91642dc_38fde9cb",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-20T14:37:24Z",
+      "side": 1,
+      "message": "const?",
+      "range": {
+        "startLine": 144,
+        "startChar": 4,
+        "endLine": 144,
+        "endChar": 8
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "59fc12c5_64d64ad8",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-20T14:37:24Z",
+      "side": 1,
+      "message": "const?",
+      "range": {
+        "startLine": 170,
+        "startChar": 36,
+        "endLine": 170,
+        "endChar": 40
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "595172a7_ffe67bc6",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-20T14:37:24Z",
+      "side": 1,
+      "message": "\u003eVERITY_METADATA_SIZE - header size perhaps?",
+      "range": {
+        "startLine": 344,
+        "startChar": 37,
+        "endLine": 344,
+        "endChar": 57
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39f75ee3_a3431a0a",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-20T14:37:24Z",
+      "side": 1,
+      "message": "If we are in EIO mode, we shouldn\u0027t mount the device if something fails, because the user won\u0027t be warned. For A/B, we should probably try the other partition instead.",
+      "range": {
+        "startLine": 384,
+        "startChar": 3,
+        "endLine": 384,
+        "endChar": 7
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d93d624e_40a8ee4d",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 385,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-20T14:37:24Z",
+      "side": 1,
+      "message": "*disabled",
+      "range": {
+        "startLine": 385,
+        "startChar": 41,
+        "endLine": 385,
+        "endChar": 48
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d91642dc_385ac911",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-20T14:37:24Z",
+      "side": 1,
+      "message": "VERITY_TABLE_ARGS",
+      "range": {
+        "startLine": 408,
+        "startChar": 31,
+        "endLine": 408,
+        "endChar": 33
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f936a66e_612416c4",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 433,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-20T14:37:24Z",
+      "side": 1,
+      "message": "*disabled",
+      "range": {
+        "startLine": 433,
+        "startChar": 58,
+        "endLine": 433,
+        "endChar": 65
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "595892e5_24a8724d",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 555,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-20T14:37:24Z",
+      "side": 1,
+      "message": "const?",
+      "range": {
+        "startLine": 555,
+        "startChar": 49,
+        "endLine": 555,
+        "endChar": 53
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d91642dc_983f55a1",
+        "filename": "init/do_mounts_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-20T14:37:24Z",
+      "side": 1,
+      "message": "const?",
+      "range": {
+        "startLine": 24,
+        "startChar": 24,
+        "endLine": 24,
+        "endChar": 28
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
