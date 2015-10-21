@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b988aea5_dff25b98",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 429,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-21T11:37:42Z",
+      "side": 1,
+      "message": "In fs_mgr_setup_verity, we also mark the underlying device as read-only after dm-verity has been set up. Should we do the same here?",
+      "range": {
+        "startLine": 429,
+        "startChar": 19,
+        "endLine": 429,
+        "endChar": 33
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
