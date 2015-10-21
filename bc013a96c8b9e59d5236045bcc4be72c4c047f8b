@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b9f26ee4_d1a7f728",
+        "filename": "init/do_mounts.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 561,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T03:07:10Z",
+      "side": 1,
+      "message": "name_to_dev_t does not seem to recognize /dev/block/dm-0.. \n/dev/dm-0 follows the convention of \"root\u003d\" kernel commandline parameter.\n\nFrom the kernel commandline documentation:\n\u0027root\u003d...\u0027\n              This argument tells the kernel what device is to be used as\n              the root filesystem while booting.  The default of this\n              setting is determined at compile time, and usually is the\n              value of the root device of the system that the kernel was\n              built on.  To override this value, and select the second\n              floppy drive as the root device, one would use\n              \u0027root\u003d/dev/fd1\u0027.\n\n              The root device can be specified symbolically or numerically.\n              A symbolic specification has the form /dev/XXYN, where XX\n              designates the device type (e.g., \u0027hd\u0027 for ST-506 compatible\n              hard disk, with Y in \u0027a\u0027-\u0027d\u0027; \u0027sd\u0027 for SCSI compatible disk,\n              with Y in \u0027a\u0027-\u0027e\u0027), Y the driver letter or number, and N the\n              number (in decimal) of the partition on this device.\n\n              Note that this has nothing to do with the designation of these\n              devices on your filesystem.  The \u0027/dev/\u0027 part is purely\n              conventional.\n\n              The more awkward and less portable numeric specification of\n              the above possible root devices in major/minor format is also\n              accepted.  (For example, /dev/sda3 is major 8, minor 3, so you\n              could use \u0027root\u003d0x803\u0027 as an alternative.)\n\n\n\nEach of the dm-devices are created with their own indices. dm-\u003cnumber\u003e . number field signifies the order in which they were created. How do you think this conflicts with the dm devices created later ?",
+      "parentUuid": "39f75ee3_468594d1",
+      "range": {
+        "startLine": 561,
+        "startChar": 27,
+        "endLine": 561,
+        "endChar": 36
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "99476aec_3e1b8986",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2015-10-20T14:37:24Z",
       "side": 1,
       "message": "const?",
+      "range": {
+        "startLine": 46,
+        "startChar": 34,
+        "endLine": 46,
+        "endChar": 38
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9ec2e3d_4b9e682f",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T03:07:10Z",
+      "side": 1,
+      "message": "Seems to conflict with __setup macro\u0027s definition..",
+      "parentUuid": "99476aec_3e1b8986",
       "range": {
         "startLine": 46,
         "startChar": 34,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "d90802ae_e313499f",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T03:07:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d91642dc_38fde9cb",
+      "range": {
+        "startLine": 144,
+        "startChar": 4,
+        "endLine": 144,
+        "endChar": 8
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "59fc12c5_64d64ad8",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 1
@@ -82,6 +154,30 @@
       "writtenOn": "2015-10-20T14:37:24Z",
       "side": 1,
       "message": "const?",
+      "range": {
+        "startLine": 170,
+        "startChar": 36,
+        "endLine": 170,
+        "endChar": 40
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39de7e5b_57389f94",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T03:07:10Z",
+      "side": 1,
+      "message": "neither name_to_dev_t nor create_dev(They are already defined) seems to have const flag in their definition. Compiler warnings pop up due to that. Will it make sense if I cast dev_name back to (char *) when I call into dev_name and create_dev.",
+      "parentUuid": "59fc12c5_64d64ad8",
       "range": {
         "startLine": 170,
         "startChar": 36,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "b9ec2e3d_fc22a073",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T03:07:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "595172a7_ffe67bc6",
+      "range": {
+        "startLine": 344,
+        "startChar": 37,
+        "endLine": 344,
+        "endChar": 57
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "39f75ee3_a3431a0a",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 1
@@ -128,6 +248,30 @@
       "writtenOn": "2015-10-20T14:37:24Z",
       "side": 1,
       "message": "If we are in EIO mode, we shouldn\u0027t mount the device if something fails, because the user won\u0027t be warned. For A/B, we should probably try the other partition instead.",
+      "range": {
+        "startLine": 384,
+        "startChar": 3,
+        "endLine": 384,
+        "endChar": 7
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99f3ea1a_13f3fe9d",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T03:07:10Z",
+      "side": 1,
+      "message": "When and how do we go into EIO mode ?\nI was under the notion that the default setting is RESTART. While in RESTART mode if verity fails, we reboot -\u003e display warning to the user -\u003e mount in LOGGING mode.",
+      "parentUuid": "39f75ee3_a3431a0a",
       "range": {
         "startLine": 384,
         "startChar": 3,
@@ -163,6 +307,30 @@
     },
     {
       "key": {
+        "uuid": "99f3ea1a_336f1aea",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 385,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T03:07:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d93d624e_40a8ee4d",
+      "range": {
+        "startLine": 385,
+        "startChar": 41,
+        "endLine": 385,
+        "endChar": 48
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d91642dc_385ac911",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 1
@@ -174,6 +342,30 @@
       "writtenOn": "2015-10-20T14:37:24Z",
       "side": 1,
       "message": "VERITY_TABLE_ARGS",
+      "range": {
+        "startLine": 408,
+        "startChar": 31,
+        "endLine": 408,
+        "endChar": 33
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "791716fc_5bee3be3",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T03:07:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d91642dc_385ac911",
       "range": {
         "startLine": 408,
         "startChar": 31,
@@ -209,6 +401,30 @@
     },
     {
       "key": {
+        "uuid": "b9f26ee4_4e3a46ff",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 433,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T03:07:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f936a66e_612416c4",
+      "range": {
+        "startLine": 433,
+        "startChar": 58,
+        "endLine": 433,
+        "endChar": 65
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "595892e5_24a8724d",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 1
@@ -232,6 +448,30 @@
     },
     {
       "key": {
+        "uuid": "f91146d4_d7c47f2b",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 555,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T03:07:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "595892e5_24a8724d",
+      "range": {
+        "startLine": 555,
+        "startChar": 49,
+        "endLine": 555,
+        "endChar": 53
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d91642dc_983f55a1",
         "filename": "init/do_mounts_verity.c",
         "patchSetId": 1
@@ -243,6 +483,30 @@
       "writtenOn": "2015-10-20T14:37:24Z",
       "side": 1,
       "message": "const?",
+      "range": {
+        "startLine": 24,
+        "startChar": 24,
+        "endLine": 24,
+        "endChar": 28
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99f3ea1a_f3af72b8",
+        "filename": "init/do_mounts_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T03:07:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d91642dc_983f55a1",
       "range": {
         "startLine": 24,
         "startChar": 24,
