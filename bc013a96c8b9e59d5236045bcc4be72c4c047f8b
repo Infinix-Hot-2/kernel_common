@@ -332,6 +332,30 @@
     },
     {
       "key": {
+        "uuid": "f935c6bb_6f69a5e1",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T22:58:45Z",
+      "side": 1,
+      "message": "I see.. thanks.\n\nFor A/B though, I still have one more question.\nAt present, the new bootloader only passes the root device that it thinks the system should boot from. This kernel module is unaware of other alternate options. We have to go back to the bootloader to inform that the root partition failed to mount(and hence unusable). So we may forced to perform kernel_restart even if we are in EIO mode.\n\nSo, I could think of two ways here:\nEither androidboot.veritymode should be mandated..\n(or) we have to perform kernel_restart with an exclusive reason to indicate that mounting root partition through verity failed and the bootloader would take appropriate action depending on the current state of the system.\n\nLet me know your thoughts.",
+      "parentUuid": "b988aea5_3f56e73d",
+      "range": {
+        "startLine": 384,
+        "startChar": 3,
+        "endLine": 384,
+        "endChar": 7
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d93d624e_40a8ee4d",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 1
