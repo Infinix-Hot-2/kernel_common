@@ -22,6 +22,30 @@
       "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "194a9a42_d8a7c528",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 429,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-21T22:58:45Z",
+      "side": 1,
+      "message": "I think we are doing that as well !!\n\nfs_mgr seems to call into fs_mgr_set_blk_ro which makes a BLKROSET ioctl.. drivers/md/md.c seems to service this by calling into set_disk_ro.\n\nIn our kernel module, do_mounts_verity.c directly calls set_disk_ro(line 53). Verity_args.ro argument is hardcoded to 1. So, we always mark this read only as long as we are mounting the blkdevice through dm.\n\nLet me know if this is not suffice or If am missing something",
+      "parentUuid": "b988aea5_dff25b98",
+      "range": {
+        "startLine": 429,
+        "startChar": 19,
+        "endLine": 429,
+        "endChar": 33
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
