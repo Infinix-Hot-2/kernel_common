@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "561ea15a_141a94b3",
+        "filename": "init/do_mounts.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 561,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-21T09:35:52Z",
+      "side": 1,
+      "message": "Ok. I was just curious about the device naming. I think it should be fine.",
+      "parentUuid": "b9f26ee4_d1a7f728",
+      "range": {
+        "startLine": 561,
+        "startChar": 27,
+        "endLine": 561,
+        "endChar": 36
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "99476aec_3e1b8986",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 1
@@ -272,6 +296,30 @@
       "side": 1,
       "message": "When and how do we go into EIO mode ?\nI was under the notion that the default setting is RESTART. While in RESTART mode if verity fails, we reboot -\u003e display warning to the user -\u003e mount in LOGGING mode.",
       "parentUuid": "39f75ee3_a3431a0a",
+      "range": {
+        "startLine": 384,
+        "startChar": 3,
+        "endLine": 384,
+        "endChar": 7
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b988aea5_3f56e73d",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-21T09:35:52Z",
+      "side": 1,
+      "message": "We should default to EIO if there\u0027s no androidboot.veritymode specified on the command line. Some devices may choose not to implement verity modes.",
+      "parentUuid": "99f3ea1a_13f3fe9d",
       "range": {
         "startLine": 384,
         "startChar": 3,
