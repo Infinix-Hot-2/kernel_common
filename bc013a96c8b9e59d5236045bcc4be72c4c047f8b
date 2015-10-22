@@ -356,6 +356,30 @@
     },
     {
       "key": {
+        "uuid": "79739694_7567a89d",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-10-22T09:18:32Z",
+      "side": 1,
+      "message": "Right, if the plan is the use this code only with A/B, leaving out EIO mode should be fine. We should mandate androidboot.veritymode in that case.",
+      "parentUuid": "f935c6bb_6f69a5e1",
+      "range": {
+        "startLine": 384,
+        "startChar": 3,
+        "endLine": 384,
+        "endChar": 7
+      },
+      "revId": "bc013a96c8b9e59d5236045bcc4be72c4c047f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d93d624e_40a8ee4d",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 1
