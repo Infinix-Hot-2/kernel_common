@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "16b509da_7496481b",
+        "filename": "drivers/platform/goldfish/goldfish_pipe.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 1051712
+      },
+      "writtenOn": "2015-10-26T17:40:19Z",
+      "side": 1,
+      "message": "I think changes from gf_write64 to writel are not necessary. They reverted patches from android-3.18. \n\nf4e131d goldfish: pipe: fix warnings for 32bit builds\na99698f goldfish: clean up the pipe driver 64bit ifdefs",
+      "revId": "d57c79d18d5c830d5efe2b87dd43aeb252001b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
