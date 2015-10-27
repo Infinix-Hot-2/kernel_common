@@ -534,6 +534,29 @@
     },
     {
       "key": {
+        "uuid": "964739ec_9e9f3d5c",
+        "filename": "init/do_mounts_android_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-27T20:32:32Z",
+      "side": 1,
+      "message": ";-}\n\n/* Yes, this is freed before exiting init */",
+      "range": {
+        "startLine": 55,
+        "startChar": 7,
+        "endLine": 55,
+        "endChar": 19
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "56e941ce_066ddbed",
         "filename": "init/do_mounts_android_verity.h",
         "patchSetId": 2
@@ -619,6 +642,75 @@
         "startChar": 8,
         "endLine": 7,
         "endChar": 20
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "964739ec_3ed4e91a",
+        "filename": "init/do_mounts_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-27T20:32:32Z",
+      "side": 1,
+      "message": "__init",
+      "range": {
+        "startLine": 24,
+        "startChar": 17,
+        "endLine": 24,
+        "endChar": 24
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f636b56e_61417670",
+        "filename": "init/do_mounts_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-27T20:32:32Z",
+      "side": 1,
+      "message": "__init (?)",
+      "range": {
+        "startLine": 26,
+        "startChar": 30,
+        "endLine": 26,
+        "endChar": 31
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "16342965_e2102669",
+        "filename": "init/do_mounts_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-27T20:32:32Z",
+      "side": 1,
+      "message": "missing closing )",
+      "range": {
+        "startLine": 27,
+        "startChar": 9,
+        "endLine": 27,
+        "endChar": 27
       },
       "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
