@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "76d48537_673e4ef3",
+        "filename": "drivers/platform/goldfish/goldfish_pipe.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 1071636
+      },
+      "writtenOn": "2015-10-27T05:31:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "16b509da_7496481b",
+      "revId": "d57c79d18d5c830d5efe2b87dd43aeb252001b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b6d8bd3b_ae2407c6",
         "filename": "drivers/platform/goldfish/pdev_bus.c",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2015-10-26T17:43:01Z",
       "side": 1,
       "message": "this change also reverted f2dbdf6 from android-3.18\n\nf2dbdf6 goldfish: bus: fix warnings for 32bit builds",
+      "revId": "d57c79d18d5c830d5efe2b87dd43aeb252001b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76d48537_87413a73",
+        "filename": "drivers/platform/goldfish/pdev_bus.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 1071636
+      },
+      "writtenOn": "2015-10-27T05:31:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b6d8bd3b_ae2407c6",
       "revId": "d57c79d18d5c830d5efe2b87dd43aeb252001b20",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
