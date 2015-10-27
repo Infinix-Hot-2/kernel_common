@@ -2,6 +2,213 @@
   "comments": [
     {
       "key": {
+        "uuid": "b6a6fdc1_b20b7e66",
+        "filename": "init/do_mounts.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 561,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "This means that the verity_table cannot contain layered dm targets. E.g.\ndm-0\u003ddm-bootcache\ndm-1\u003ddm-verity\n\nIs there a reason not to leave root\u003d alone (e.g., have the cmdline populate it as root\u003d/dev/dm-0) and add a new commandline flag to pass in anything needed?  If not, it would make sense to have the new root be set by dm_run_setup().\n\n\nI\u0027d prefer not as a magic root\u003d value is harder to debug than having a known one and an explicit parameter that sets up what it points at.",
+      "range": {
+        "startLine": 561,
+        "startChar": 9,
+        "endLine": 561,
+        "endChar": 24
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6f27de4_52879214",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "with this here, why replace root\u003d?\n\nAlso, going down this route makes this patch very specialized.  IMO, it\u0027d be better to break it up into a dm\u003d\"\" style patch then add a new table-type for DM for android-style verity.",
+      "range": {
+        "startLine": 53,
+        "startChar": 9,
+        "endLine": 53,
+        "endChar": 18
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "96c81977_bcd369e5",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "this looks like similar code to kernel/module_signing.c.  Is there a chance (later) to share code so this doesn\u0027t block the on-flash size of the kernel?",
+      "range": {
+        "startLine": 70,
+        "startChar": 44,
+        "endLine": 70,
+        "endChar": 61
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "96c81977_9cd6add6",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "nit: This would give me less of the heebie jeebies if it didn\u0027t rely on type +1 behavior. E.g.,\n   desc \u003d (void *)pks + sizeof(*pks);",
+      "range": {
+        "startLine": 104,
+        "startChar": 30,
+        "endLine": 104,
+        "endChar": 33
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36bdadca_d6c3a2bd",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "does pr_init_info annotate with the calling func or file? If not, it\u0027d be good to note that this is verity_create_dev waiting.",
+      "range": {
+        "startLine": 176,
+        "startChar": 28,
+        "endLine": 176,
+        "endChar": 34
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f69cf575_54416221",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "why is this code cargoculted from  do_mounts.c:prepare_namespace()?",
+      "range": {
+        "startLine": 183,
+        "startChar": 2,
+        "endLine": 183,
+        "endChar": 24
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56c22158_d7a9de52",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "debugging leftoves?",
+      "range": {
+        "startLine": 189,
+        "startChar": 15,
+        "endLine": 189,
+        "endChar": 20
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "968d7947_f4ec10eb",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "Whoa - cool.  Is this safe during early boot? I had assumed you\u0027d  have to just grab the sectors with a bio directly.",
+      "range": {
+        "startLine": 208,
+        "startChar": 0,
+        "endLine": 208,
+        "endChar": 68
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6f27de4_12910a4c",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 325,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "so if the phone is unlocked, it\u0027ll just passthrough? And the kernel parameters are bootloader specific, right?\n\nIn this scenario there are two trusted parties:\n- signed data on disk\n- kernel command line\nwhere the latter has the priority since the disabled bit on disk isn\u0027t a signed bit.\n\nIs this the intention?  If so, why does the kernel have to do all the signing and not leave it in one trusted place -- the bootloader/handoff?\n\nIf it\u0027s because of legacy secure bootloaders, we still expect good signals on locked status?",
+      "range": {
+        "startLine": 325,
+        "startChar": 5,
+        "endLine": 325,
+        "endChar": 16
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b988aea5_dff25b98",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 2
@@ -42,6 +249,236 @@
         "startChar": 19,
         "endLine": 429,
         "endChar": 33
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f69cf575_943aeaac",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "Is there another way to do this without duplicate device waiting, etc?",
+      "range": {
+        "startLine": 457,
+        "startChar": 0,
+        "endLine": 457,
+        "endChar": 63
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76880537_900e7a77",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 458,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "It\u0027s not the rootdev though is it? It\u0027s the metadata device, right?",
+      "range": {
+        "startLine": 458,
+        "startChar": 15,
+        "endLine": 458,
+        "endChar": 21
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "96c81977_7c9b913f",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 468,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "nit: it\u0027d be nice to pass around the struct being used and not assume global access just from style perspective. (Here and elsewhere)",
+      "range": {
+        "startLine": 468,
+        "startChar": 23,
+        "endLine": 468,
+        "endChar": 26
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6a6fdc1_92575a3b",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "any reason to have an else here and not just:\n    if (verity...)\n      goto err_vrity_table;\n    goto err;\n?",
+      "range": {
+        "startLine": 479,
+        "startChar": 2,
+        "endLine": 479,
+        "endChar": 6
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56c22158_576f8eba",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 526,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "would be good to check that this doesn\u0027t wrap (though the result will be checked by dm)",
+      "range": {
+        "startLine": 526,
+        "startChar": 16,
+        "endLine": 526,
+        "endChar": 28
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76880537_b00b7666",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 547,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "out of curiosity, why is vmalloc() being used everywhere here?",
+      "range": {
+        "startLine": 547,
+        "startChar": 16,
+        "endLine": 547,
+        "endChar": 23
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76880537_f0ec1eeb",
+        "filename": "init/do_mounts_android_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "boilerplate?",
+      "range": {
+        "startLine": 1,
+        "startChar": 8,
+        "endLine": 1,
+        "endChar": 20
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "169a6978_d5d0eeda",
+        "filename": "init/do_mounts_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "boilerplate",
+      "range": {
+        "startLine": 1,
+        "startChar": 19,
+        "endLine": 1,
+        "endChar": 31
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f69cf575_b437eec5",
+        "filename": "init/do_mounts_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "is this standard anywhere else?",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 7,
+        "endChar": 20
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "96c81977_bc9c4936",
+        "filename": "init/do_mounts_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-10-27T16:27:02Z",
+      "side": 1,
+      "message": "If you only ever setup one target, you don\u0027t need a lot of the work here.  Of course, if you only setup one target, then this patch set will definitely not be compatible with usage in chrome os :/",
+      "range": {
+        "startLine": 45,
+        "startChar": 5,
+        "endLine": 45,
+        "endChar": 17
       },
       "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
