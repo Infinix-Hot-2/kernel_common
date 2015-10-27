@@ -25,6 +25,52 @@
     },
     {
       "key": {
+        "uuid": "f6b795e1_c2b3d321",
+        "filename": "init/do_mounts.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-27T20:01:28Z",
+      "side": 1,
+      "message": "init __init dm_run_setup(char *rootdev);",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 4
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36e4cdf6_136b576b",
+        "filename": "init/do_mounts.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-27T20:01:28Z",
+      "side": 1,
+      "message": "q: a \u0027static\u0027 defined as __init section is probably meaningless, but it does clearly state to the developers that whatever code it produces could disappear later? Just curious.",
+      "range": {
+        "startLine": 84,
+        "startChar": 7,
+        "endLine": 84,
+        "endChar": 11
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b6f27de4_52879214",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 2
@@ -82,6 +128,30 @@
       "writtenOn": "2015-10-27T16:27:02Z",
       "side": 1,
       "message": "nit: This would give me less of the heebie jeebies if it didn\u0027t rely on type +1 behavior. E.g.,\n   desc \u003d (void *)pks + sizeof(*pks);",
+      "range": {
+        "startLine": 104,
+        "startChar": 30,
+        "endLine": 104,
+        "endChar": 33
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76fd65bf_c5a4dae1",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-27T20:01:28Z",
+      "side": 1,
+      "message": "void * pointer math is defined as illegal in the C specification. You must use u8 *. There can be debate over all styles of pointer math ... :-(\n\n6.2.5-19: The void type comprises an empty set of values; it is an incomplete type that cannot be completed.\nSince void is an incomplete type, it is not an object type. Therefore it is not a valid operand to an addition operation.",
+      "parentUuid": "96c81977_9cd6add6",
       "range": {
         "startLine": 104,
         "startChar": 30,
@@ -348,6 +418,29 @@
     },
     {
       "key": {
+        "uuid": "36f76de3_63b4020b",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 502,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-27T20:01:28Z",
+      "side": 1,
+      "message": "this string should go into the init section ;-}\n\ncan be defined locally within this block:\n\nwhile (i \u003c VERITY_TABLE_ARGS) {\n    static const char delim[] __initconst \u003d \" \";\n\n    verity_table_args[i] \u003d strsep(\u0026table_ptr, delim);",
+      "range": {
+        "startLine": 502,
+        "startChar": 44,
+        "endLine": 502,
+        "endChar": 47
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "56c22158_576f8eba",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 2
@@ -394,6 +487,30 @@
     },
     {
       "key": {
+        "uuid": "d6ae1193_989b0a3f",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 547,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-27T20:01:28Z",
+      "side": 1,
+      "message": "Does not draw from the precious physically contiguous pool of pages from the slab allocator or dma resources. The main advantages of using vmalloc show up when accessing more than a page size though ...\n\nAlso, vmalloc does not incite a kernel panic when starved for memory (but typically you have a fallback plan, like using a smaller buffer, or less functionality).",
+      "parentUuid": "76880537_b00b7666",
+      "range": {
+        "startLine": 547,
+        "startChar": 16,
+        "endLine": 547,
+        "endChar": 23
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "76880537_f0ec1eeb",
         "filename": "init/do_mounts_android_verity.h",
         "patchSetId": 2
@@ -410,6 +527,52 @@
         "startChar": 8,
         "endLine": 1,
         "endChar": 20
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56e941ce_066ddbed",
+        "filename": "init/do_mounts_android_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-27T20:01:28Z",
+      "side": 1,
+      "message": "Beware of holes in structures? __packed to be sure?\n\nmetadata_start \u0027starts\u0027 on a u32 boundary as it stands, can the structure be refactored so that metadata_start and verity_table pointer are guaranteed on a 64-bit boundary?",
+      "range": {
+        "startLine": 56,
+        "startChar": 28,
+        "endLine": 56,
+        "endChar": 29
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6d8bd3b_ded9f455",
+        "filename": "init/do_mounts_android_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-27T20:01:28Z",
+      "side": 1,
+      "message": "starts on a 32-bit boundary.",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 14
       },
       "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
