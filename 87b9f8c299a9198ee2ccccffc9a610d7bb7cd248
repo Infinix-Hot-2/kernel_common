@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "76fd65bf_cbfd0922",
+        "filename": "init/do_mounts.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 561,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-28T09:31:47Z",
+      "side": 1,
+      "message": "I came to know that the policy in Android is to take the best effort to boot the device to UI(Provided that we already have warned the user). With that in mind, I was thinking that the root\u003d can carry the actual device name and if the dm-setup succeeds we would replace the saved_root_name with /dev/dm-0/ as at least in Android the dm-verity device for the root partition is the first dm-device to be set up. I was not aware of the fact that it\u0027s not the case for chrome-os.\n\nsure I can change it to root\u003d/dev/dm-0 and make my verity module take a command line parameter for indicating the actual block device. If dm-setup fails, I can replace the saved root name with block device name.",
+      "parentUuid": "b6a6fdc1_b20b7e66",
+      "range": {
+        "startLine": 561,
+        "startChar": 9,
+        "endLine": 561,
+        "endChar": 24
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f6b795e1_c2b3d321",
         "filename": "init/do_mounts.h",
         "patchSetId": 2
@@ -94,6 +118,30 @@
     },
     {
       "key": {
+        "uuid": "b68efd7e_0f01c586",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-28T09:31:47Z",
+      "side": 1,
+      "message": "I saw one major blocker for adding a custom target.  I have described it in the \"Reply\" section",
+      "parentUuid": "b6f27de4_52879214",
+      "range": {
+        "startLine": 53,
+        "startChar": 9,
+        "endLine": 53,
+        "endChar": 18
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "96c81977_bcd369e5",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 2
@@ -105,6 +153,30 @@
       "writtenOn": "2015-10-27T16:27:02Z",
       "side": 1,
       "message": "this looks like similar code to kernel/module_signing.c.  Is there a chance (later) to share code so this doesn\u0027t block the on-flash size of the kernel?",
+      "range": {
+        "startLine": 70,
+        "startChar": 44,
+        "endLine": 70,
+        "endChar": 61
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b640bdd4_48fed3c8",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-28T09:31:47Z",
+      "side": 1,
+      "message": "I can.. But, I thought that would be the last step, when we are very close to merging this upstream, as It might be hard to merge patches involving module_signing if I refactored the module_sgining code. Until this gets merged upstream, the version here always has the risk of diverging from the one used in module_signing.",
+      "parentUuid": "96c81977_bcd369e5",
       "range": {
         "startLine": 70,
         "startChar": 44,
@@ -256,6 +328,30 @@
     },
     {
       "key": {
+        "uuid": "56fce1c4_8df849e8",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-28T09:31:47Z",
+      "side": 1,
+      "message": "sys_open, sys_read, sys_lseek are used in init/do_mounts_rd.c which is called during init as well. Do you see some problem here ?",
+      "parentUuid": "968d7947_f4ec10eb",
+      "range": {
+        "startLine": 208,
+        "startChar": 0,
+        "endLine": 208,
+        "endChar": 68
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b6f27de4_12910a4c",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 2
@@ -267,6 +363,30 @@
       "writtenOn": "2015-10-27T16:27:02Z",
       "side": 1,
       "message": "so if the phone is unlocked, it\u0027ll just passthrough? And the kernel parameters are bootloader specific, right?\n\nIn this scenario there are two trusted parties:\n- signed data on disk\n- kernel command line\nwhere the latter has the priority since the disabled bit on disk isn\u0027t a signed bit.\n\nIs this the intention?  If so, why does the kernel have to do all the signing and not leave it in one trusted place -- the bootloader/handoff?\n\nIf it\u0027s because of legacy secure bootloaders, we still expect good signals on locked status?",
+      "range": {
+        "startLine": 325,
+        "startChar": 5,
+        "endLine": 325,
+        "endChar": 16
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7642c5df_863850b6",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 325,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-28T09:31:47Z",
+      "side": 1,
+      "message": "The locked status is obtained from androidboot.veritystate. This is something that is mandated in the bootloader requirements and this kernel module is not the primary consumer of that. So we are trusting this signal anyways. http://source.android.com/devices/tech/security/verifiedboot/verified-boot.html has more details.\n\nVerity cannot be disabled on real world user devices.  Real world user devices are always in the locked state. If its unlocked we don\u0027t ensure the integrity of the device. If the magic_number is set to anything other than \"VERITY_METADATA_MAGIC_NUMBER\" in a user build, we know that verity images can no longer be trusted.\n\nThe signed metadata is placed in the same partition as the data blocks, so that we dont have any dependency between creating the verity partition images and the kernel.",
+      "parentUuid": "b6f27de4_12910a4c",
       "range": {
         "startLine": 325,
         "startChar": 5,
@@ -360,6 +480,30 @@
       "writtenOn": "2015-10-27T16:27:02Z",
       "side": 1,
       "message": "It\u0027s not the rootdev though is it? It\u0027s the metadata device, right?",
+      "range": {
+        "startLine": 458,
+        "startChar": 15,
+        "endLine": 458,
+        "endChar": 21
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f636b56e_67bae648",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 458,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-28T09:31:47Z",
+      "side": 1,
+      "message": "It is the rootdev. In Android, we have all the three verity pieces in the same partition. The data blocks, verity hash tree and the signed metadata which is used to setup the partition are all in the same partition.",
+      "parentUuid": "76880537_900e7a77",
       "range": {
         "startLine": 458,
         "startChar": 15,
@@ -649,6 +793,30 @@
     },
     {
       "key": {
+        "uuid": "f636b56e_87b7ea5d",
+        "filename": "init/do_mounts_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-28T09:31:47Z",
+      "side": 1,
+      "message": "This is inspired from the discussion that is happening upstream.\nhttp://www.serverphorums.com/read.php?12,963491\nThe patches mentioned in the email thread have not been merged yet. Using them directly made me hit compilation issues.",
+      "parentUuid": "f69cf575_b437eec5",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 7,
+        "endChar": 20
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "964739ec_3ed4e91a",
         "filename": "init/do_mounts_verity.h",
         "patchSetId": 2
@@ -729,6 +897,30 @@
       "writtenOn": "2015-10-27T16:27:02Z",
       "side": 1,
       "message": "If you only ever setup one target, you don\u0027t need a lot of the work here.  Of course, if you only setup one target, then this patch set will definitely not be compatible with usage in chrome os :/",
+      "range": {
+        "startLine": 45,
+        "startChar": 5,
+        "endLine": 45,
+        "endChar": 17
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "964739ec_6425febf",
+        "filename": "init/do_mounts_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-10-28T09:31:47Z",
+      "side": 1,
+      "message": "Happy to help to find a middle ground between chrome-os and Android.",
+      "parentUuid": "96c81977_bc9c4936",
       "range": {
         "startLine": 45,
         "startChar": 5,
