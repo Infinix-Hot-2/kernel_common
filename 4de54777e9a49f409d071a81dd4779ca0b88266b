@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "96cad9dc_8ce7ebc3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2015-10-28T20:55:53Z",
+      "side": 1,
+      "message": "Drop these, they will mess up your change-id.  You\u0027ll also need to replace the change-id in the commit message with the one gerrit auto-assigned.",
+      "revId": "4de54777e9a49f409d071a81dd4779ca0b88266b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
