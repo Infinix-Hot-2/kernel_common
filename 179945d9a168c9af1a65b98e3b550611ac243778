@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7621e584_286ec37b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-28T21:25:38Z",
+      "side": 1,
+      "message": "compatibility",
+      "range": {
+        "startLine": 21,
+        "startChar": 25,
+        "endLine": 21,
+        "endChar": 37
+      },
+      "revId": "179945d9a168c9af1a65b98e3b550611ac243778",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76c565cc_eb9f655a",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-28T21:25:38Z",
+      "side": 1,
+      "message": "nit: pr_info replace printk(KERN_INFO\n\nOnly a nit, because all the code in this tree is using printk and not the recommended replacements.",
+      "range": {
+        "startLine": 358,
+        "startChar": 2,
+        "endLine": 358,
+        "endChar": 18
+      },
+      "revId": "179945d9a168c9af1a65b98e3b550611ac243778",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6d35d95_cd00bd50",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-28T21:25:38Z",
+      "side": 1,
+      "message": "Yuck, selinux needs a rewrite to support bool?\n\nconditional.h is using a variable name that is a reserved keyword.",
+      "range": {
+        "startLine": 388,
+        "startChar": 1,
+        "endLine": 388,
+        "endChar": 13
+      },
+      "revId": "179945d9a168c9af1a65b98e3b550611ac243778",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56ab01f0_8f17d9cd",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 518,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-28T21:25:38Z",
+      "side": 1,
+      "message": "At least my view in gerrit is truncated and I can not see how these end, these lines are longer than 80 characters.\n\nDoes \u003ctab\u003e \u003cspace\u003e \u003cspace\u003e \u003cspace\u003e \u003cspace\u003e preserve readability/beauty and result in \u003c80 characters?",
+      "range": {
+        "startLine": 517,
+        "startChar": 4,
+        "endLine": 518,
+        "endChar": 49
+      },
+      "revId": "179945d9a168c9af1a65b98e3b550611ac243778",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56c4e1d1_ea2be34c",
+        "filename": "security/selinux/ss/avtab.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 618,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-28T21:25:38Z",
+      "side": 1,
+      "message": "More gerrit side-by-side view truncation because \u003e80 characters? I need to file a bug against gerrit ...",
+      "range": {
+        "startLine": 618,
+        "startChar": 3,
+        "endLine": 618,
+        "endChar": 58
+      },
+      "revId": "179945d9a168c9af1a65b98e3b550611ac243778",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
