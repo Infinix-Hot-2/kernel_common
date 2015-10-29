@@ -68,6 +68,30 @@
       "revId": "f46b160ad9c0376a66d896f03acdf0376b07e2a4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7621e584_19d79bd4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-10-29T17:29:08Z",
+      "side": 1,
+      "message": "This was also added by the maintainer to the upstream commit. Changed my original\n\"security: lsm_audit: add ioctl specific auditing\" to \"security: add ioctl specific auditing to lsm_audit\"",
+      "parentUuid": "56ab01f0_c05d2e0f",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 24
+      },
+      "revId": "f46b160ad9c0376a66d896f03acdf0376b07e2a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
