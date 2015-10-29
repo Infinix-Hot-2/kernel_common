@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "76c565cc_cb11c9d9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-10-29T19:18:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7621e584_286ec37b",
+      "range": {
+        "startLine": 21,
+        "startChar": 25,
+        "endLine": 21,
+        "endChar": 37
+      },
+      "revId": "179945d9a168c9af1a65b98e3b550611ac243778",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "76c565cc_eb9f655a",
         "filename": "security/selinux/ss/avtab.c",
         "patchSetId": 2
