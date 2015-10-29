@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7621e584_8ebb3f1e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-29T14:37:56Z",
+      "side": 1,
+      "message": "Add:\n\n(cherry pick from commit 671a2781ff01abf4fdc8904881fc3abd3a8279af)",
+      "range": {
+        "startLine": 7,
+        "startChar": 49,
+        "endLine": 7,
+        "endChar": 50
+      },
+      "revId": "f46b160ad9c0376a66d896f03acdf0376b07e2a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "96cad9dc_15cdbeba",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-29T14:37:56Z",
+      "side": 1,
+      "message": "These footers need to be at the bottom of the set as they are non-compliant for linux submissions. Also, Gerrit used to have a bug where the Change-Id: had to be the last line, it is now defacto requested to still remain at the bottom for ease of research.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 52
+      },
+      "revId": "f46b160ad9c0376a66d896f03acdf0376b07e2a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56ab01f0_c05d2e0f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-10-29T14:37:56Z",
+      "side": 1,
+      "message": "This _breaks_ the footer and is non-compliant, you can place this after the subject line to indicate the change, but it is generally advised to _keep_ the subject line as-is for ease of research.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 24
+      },
+      "revId": "f46b160ad9c0376a66d896f03acdf0376b07e2a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
