@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "161fca56_7b7d30ff",
+        "filename": "net/core/fib_rules.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1031448
+      },
+      "writtenOn": "2015-11-01T18:45:50Z",
+      "side": 1,
+      "message": "Do not change \"r-\u003efr_net\" in this hunk, hold_net() do not exist anymore. See upstream commit efd7ef1c1929 \"net: Kill hold_net release_net\".",
+      "range": {
+        "startLine": 36,
+        "startChar": 34,
+        "endLine": 36,
+        "endChar": 36
+      },
+      "revId": "0d96288aa55039e75cffe68439b15b75c6d40bda",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
