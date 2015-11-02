@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5625c29e_8b643dcb",
+        "filename": "net/ipv4/tcp.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3244,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2015-11-02T18:36:30Z",
+      "side": 1,
+      "message": "Use of goto here is unwarranted: we do not try to perform error unwinding here. Can we do:\n\n    if (!sock_owned_by_user(sk) {\n         sk-\u003esk_err \u003d ETIMEDOUT;\n         ...\n    }\n\ninstead?",
+      "revId": "c39fd4876d802d6361e530125f6d45811a2adcdd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
