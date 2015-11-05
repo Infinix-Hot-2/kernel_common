@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d320d6e0_88bc77ee",
+        "filename": "Documentation/device-mapper/verity.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-11-05T00:40:07Z",
+      "side": 1,
+      "message": "Bikeshed: I\u0027d be tempted to simplify this to just:\n    fec_device\nsince its non-existence means it is undefined and not enabled.",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 19
+      },
+      "revId": "bc3362afa0a1b2018c1c412c47fa56ee14bd3aa2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5314e687_84bc66ee",
+        "filename": "drivers/md/dm-verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 634,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-11-05T00:40:07Z",
+      "side": 1,
+      "message": "style nit: Kernel/file style encourages merging these ints where possible.\n\n(here and other places too)",
+      "range": {
+        "startLine": 634,
+        "startChar": 6,
+        "endLine": 634,
+        "endChar": 7
+      },
+      "revId": "bc3362afa0a1b2018c1c412c47fa56ee14bd3aa2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
