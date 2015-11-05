@@ -140,6 +140,30 @@
       "revId": "df81db365f30183aecc2f708dc51042cf91b869b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "568ea242_5de34758",
+        "filename": "drivers/md/dm-verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 781,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-11-05T16:06:20Z",
+      "side": 1,
+      "message": "As this is part of initialization, I would accept the slowness of vzalloc dealing with a large allocation of scattered blocks, rather than have this possibly consume a precious contiguous block of very high ranking away from other systems.",
+      "parentUuid": "b69d1e72_b7fff01b",
+      "range": {
+        "startLine": 781,
+        "startChar": 16,
+        "endLine": 781,
+        "endChar": 23
+      },
+      "revId": "df81db365f30183aecc2f708dc51042cf91b869b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
