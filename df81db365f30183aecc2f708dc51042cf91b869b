@@ -116,6 +116,30 @@
       "revId": "df81db365f30183aecc2f708dc51042cf91b869b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b69d1e72_b7fff01b",
+        "filename": "drivers/md/dm-verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 781,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-11-05T01:27:43Z",
+      "side": 1,
+      "message": "It\u0027s because the buffer can be relatively large, up to 1 MiB using the default error correction parameters. I could try kzalloc and fall back to vzalloc if it fails though.",
+      "parentUuid": "f8df777d_22bceeea",
+      "range": {
+        "startLine": 781,
+        "startChar": 16,
+        "endLine": 781,
+        "endChar": 23
+      },
+      "revId": "df81db365f30183aecc2f708dc51042cf91b869b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
