@@ -93,6 +93,29 @@
       "revId": "df81db365f30183aecc2f708dc51042cf91b869b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8df777d_22bceeea",
+        "filename": "drivers/md/dm-verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 781,
+      "author": {
+        "id": 1022354
+      },
+      "writtenOn": "2015-11-05T00:40:07Z",
+      "side": 1,
+      "message": "why use vzalloc here instead of kzalloc?  Is there a specific fear that kzalloc is going to fail to allocate?",
+      "range": {
+        "startLine": 781,
+        "startChar": 16,
+        "endLine": 781,
+        "endChar": 23
+      },
+      "revId": "df81db365f30183aecc2f708dc51042cf91b869b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
