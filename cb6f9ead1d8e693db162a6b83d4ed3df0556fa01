@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b620be2e_adbf75ce",
+        "filename": "include/net/route.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1003284
+      },
+      "writtenOn": "2015-11-07T00:20:53Z",
+      "side": 1,
+      "message": "net/ipv4/igmp.c:igmpv3_newpack() passes in a null sk pointer. The 3.18 version of this code has:\n\n  sk ? sock_i_uid(sk) : GLOBAL_ROOT_UID\n\nThe current version causes a crash in:\n [   26.974082] [\u003c80473dac\u003e] do_raw_read_lock+0x20/0x68\n [   26.979547] [\u003c80a61ff8\u003e] sock_i_uid+0x38/0x70\n [   26.984511] [\u003c80b2581c\u003e] igmpv3_newpack+0xc4/0x2a4",
+      "range": {
+        "startLine": 145,
+        "startChar": 34,
+        "endLine": 145,
+        "endChar": 48
+      },
+      "revId": "cb6f9ead1d8e693db162a6b83d4ed3df0556fa01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
