@@ -164,6 +164,30 @@
       "revId": "df81db365f30183aecc2f708dc51042cf91b869b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6b19e59_518c7457",
+        "filename": "drivers/md/dm-verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 781,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-11-09T22:02:20Z",
+      "side": 1,
+      "message": "Upstream had some concerns about this. They recommend against allocating memory during IO, because that might lead to failures in face of low memory.\n\nI explained how preallocating the buffers for each IO operation would be wasteful considering the buffers can be large and they are only needed if there are errors. The recommendation was to punt error correcting work to a worker thread and use a mempool to allocate memory there.\n\nAny thoughts on this? I think the worker thread approach sounds reasonable, but I also don\u0027t think it\u0027s a huge problem if we fail to correct an error when the device is out of memory.",
+      "parentUuid": "568ea242_5de34758",
+      "range": {
+        "startLine": 781,
+        "startChar": 16,
+        "endLine": 781,
+        "endChar": 23
+      },
+      "revId": "df81db365f30183aecc2f708dc51042cf91b869b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
