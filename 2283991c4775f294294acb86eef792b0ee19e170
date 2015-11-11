@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7b0e2f2a_2bc0919e",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 447,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2015-11-11T22:56:59Z",
+      "side": 1,
+      "message": "Looking at CodingStyle again, this is wrong.  I\u0027ll remove this.",
+      "parentUuid": "b6da7ea7_a8f3ae5a",
+      "range": {
+        "startLine": 447,
+        "startChar": 7,
+        "endLine": 447,
+        "endChar": 13
+      },
+      "revId": "2283991c4775f294294acb86eef792b0ee19e170",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "369daed4_c2f410f6",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2015-11-11T22:48:40Z",
       "side": 1,
       "message": "Why is EINVAL being ignored?",
+      "range": {
+        "startLine": 454,
+        "startChar": 25,
+        "endLine": 454,
+        "endChar": 31
+      },
+      "revId": "2283991c4775f294294acb86eef792b0ee19e170",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5b25eb9e_79d8a3a3",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 454,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2015-11-11T22:56:59Z",
+      "side": 1,
+      "message": "of_property_read_u64 returns -EINVAL when the node doesn\u0027t exist.  These aren\u0027t required properties, and if they don\u0027t exist we want to fall through and use the default size of 0.\n\nWould it be clearer to make this \n\nif (ret \u003d\u003d -EINVAL) {\n\t*val \u003d 0;\n\treturn 0;\n} else if (ret !\u003d 0) {\n\nwhich has the same effect but explicitly fast-exits?",
+      "parentUuid": "369daed4_c2f410f6",
       "range": {
         "startLine": 454,
         "startChar": 25,
