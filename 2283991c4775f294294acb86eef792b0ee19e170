@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "56cb02e2_97240b8d",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 454,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2015-11-11T23:03:37Z",
+      "side": 1,
+      "message": "Actually, since val points inside a kzalloc()ed buffer, we can just return without explicitly setting *val \u003d 0.",
+      "parentUuid": "5b25eb9e_79d8a3a3",
+      "range": {
+        "startLine": 454,
+        "startChar": 25,
+        "endLine": 454,
+        "endChar": 31
+      },
+      "revId": "2283991c4775f294294acb86eef792b0ee19e170",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b6da7ea7_48867283",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 2
