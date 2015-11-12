@@ -22,6 +22,30 @@
       "revId": "d2d4cd092585d69d1b21675598bd8d8cdc519412",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bb3987d2_0059300b",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 550,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2015-11-12T22:07:08Z",
+      "side": 1,
+      "message": "On probe failure, devres allocations are automatically rolled back.",
+      "parentUuid": "5b2a4b7b_d43094e5",
+      "range": {
+        "startLine": 550,
+        "startChar": 3,
+        "endLine": 550,
+        "endChar": 7
+      },
+      "revId": "d2d4cd092585d69d1b21675598bd8d8cdc519412",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
