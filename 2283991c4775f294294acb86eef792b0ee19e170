@@ -161,6 +161,24 @@
     },
     {
       "key": {
+        "uuid": "bb3987d2_c03d68bb",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 543,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2015-11-12T21:52:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b6da7ea7_48867283",
+      "revId": "2283991c4775f294294acb86eef792b0ee19e170",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5b25eb9e_f986f382",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 2
@@ -172,6 +190,24 @@
       "writtenOn": "2015-11-11T22:48:40Z",
       "side": 1,
       "message": "Probably want to set platform_data to NULL here too.",
+      "revId": "2283991c4775f294294acb86eef792b0ee19e170",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "16c50ace_bf7480db",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 663,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2015-11-12T21:52:39Z",
+      "side": 1,
+      "message": "Addressed by moving where the platform_set_drvdata() happens.  On failure the drvdata is never changed, so there\u0027s nothing to roll back.\n\nI also removed the devm_kfree() since devres allocations are automatically rolled back on probe failure.",
+      "parentUuid": "5b25eb9e_f986f382",
       "revId": "2283991c4775f294294acb86eef792b0ee19e170",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
