@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fb75bfb9_c7824ee4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-11-17T23:17:35Z",
+      "side": 1,
+      "message": "ANDROID: exec_domains: ....\n\n(new commit standard in compliance with Chrome commits, ANDROID: header indicates that you will likely not see this upstream).\n\nUPSTREAM: From ToT kernel.org\nBACKPORT: (same, but conflicts resolved)\nFROMLIST: (same, but precedes acceptance into kernel)",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 61
+      },
+      "revId": "ec82ba65ca5da191075eb3246ca90fd6497b9627",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fb75bfb9_4722bee5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-11-17T23:17:35Z",
+      "side": 1,
+      "message": "Android",
+      "range": {
+        "startLine": 9,
+        "startChar": 16,
+        "endLine": 9,
+        "endChar": 23
+      },
+      "revId": "ec82ba65ca5da191075eb3246ca90fd6497b9627",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db847bce_7f3c28a4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-11-17T23:17:35Z",
+      "side": 1,
+      "message": "separate",
+      "range": {
+        "startLine": 9,
+        "startChar": 43,
+        "endLine": 9,
+        "endChar": 52
+      },
+      "revId": "ec82ba65ca5da191075eb3246ca90fd6497b9627",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3b2597a9_84ae4a57",
+        "filename": "kernel/exec_domain.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-11-17T23:17:35Z",
+      "side": 1,
+      "message": "#if 0 \u0026\u0026 defined(CONFIG_MODULES)\n\n(just a nit, git history will always tell us what happened here)",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 5
+      },
+      "revId": "ec82ba65ca5da191075eb3246ca90fd6497b9627",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
