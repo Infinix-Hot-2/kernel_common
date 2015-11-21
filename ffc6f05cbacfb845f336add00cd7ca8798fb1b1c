@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3b167790_6bbbf532",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2447,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-11-21T01:38:45Z",
+      "side": 1,
+      "message": "could send w/BR_REPLY too, but I don\u0027t have a use for that yet.",
+      "range": {
+        "startLine": 2447,
+        "startChar": 6,
+        "endLine": 2447,
+        "endChar": 27
+      },
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5b1b2bb8_4fad65aa",
+        "filename": "include/uapi/linux/android/binder.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-11-21T01:38:45Z",
+      "side": 1,
+      "message": "intention is to use this in servicemanager/binder.c and Parcel.cpp instead of the current hard-coding of 3.",
+      "range": {
+        "startLine": 42,
+        "startChar": 1,
+        "endLine": 42,
+        "endChar": 17
+      },
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
