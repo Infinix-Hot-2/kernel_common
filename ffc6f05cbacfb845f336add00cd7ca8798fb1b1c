@@ -77,6 +77,40 @@
     },
     {
       "key": {
+        "uuid": "db271bf3_84461a34",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2451,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-11-24T01:48:00Z",
+      "side": 1,
+      "message": "why are you using a different copy_to_user function than everything else in this file?",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db271bf3_a42cfe6d",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2453,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-11-24T01:48:00Z",
+      "side": 1,
+      "message": "you may be writing past the end of the buffer here.",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1b153384_9e614d18",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
