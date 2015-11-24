@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "db271bf3_34c67dbf",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2414,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-11-24T22:31:31Z",
+      "side": 1,
+      "message": "why does memcpy and copy_to_user need aligned chunks?",
+      "parentUuid": "3b167790_da54714c",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3b167790_6bbbf532",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
@@ -230,6 +248,24 @@
       "side": 1,
       "message": "I see. It didn\u0027t look to me like we actually used that, so I thought this might be ok. As you mentioned, maintaining that set-up is problematic with the variable-length approach.\n\nI don\u0027t like the idea of setting aside max-length structure in addition to the binder_transaction_data, so I guess we would have to add a struct which specifies strlen and a pointer to the string in the mmap\u0027ed binder_proc-\u003ebuffer?",
       "parentUuid": "5b1b2bb8_8d4ac256",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1b153384_2b545aa7",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2455,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-11-24T22:31:31Z",
+      "side": 1,
+      "message": "You can look at other drivers for how to define a variable size IOC command (e.g. include/uapi/linux/hiddev.h), but it is probably best to add a separate return type for this.",
+      "parentUuid": "fbf69f9c_544fbd12",
       "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
