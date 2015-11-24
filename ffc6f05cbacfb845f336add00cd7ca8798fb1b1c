@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "3b167790_da54714c",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2414,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-11-24T18:05:14Z",
+      "side": 1,
+      "message": "for use in the below memcpy() and copy_to_user(), which needs to copy over aligned chunks.  I could instead copy over the original secctx and then add appropriate padding, but this seemed simpler.",
+      "parentUuid": "3b167790_bfc087ff",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3b167790_6bbbf532",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
@@ -94,6 +112,24 @@
     },
     {
       "key": {
+        "uuid": "fbb05f0b_8f2ba55e",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2451,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-11-24T18:05:14Z",
+      "side": 1,
+      "message": "Hasty port from device-specific kernel in which patch was tested, which used this form.",
+      "parentUuid": "db271bf3_84461a34",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "db271bf3_a42cfe6d",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
@@ -105,6 +141,24 @@
       "writtenOn": "2015-11-24T01:48:00Z",
       "side": 1,
       "message": "you may be writing past the end of the buffer here.",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9b2123e5_a569993e",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2453,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-11-24T18:05:14Z",
+      "side": 1,
+      "message": "Yes, looks like a slightly messy addition above to go along with \"if (end - ptr \u003c sizeof(tr) + 4)\" would be required.",
+      "parentUuid": "db271bf3_a42cfe6d",
       "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -158,6 +212,24 @@
       "side": 1,
       "message": "That is not what I mean. The size of each command is encoded in the opcode. You changed the size of BR_TRANSACTION so that it no longer matches the size encoded in the opcode. If you want to pass more data in BR_TRANSACTION than BR_REPLY, then the opcode could be defined using a struct that contains that new data, but since you are a passing a variable length structure, that does not fit well.",
       "parentUuid": "db271bf3_e4139640",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fbf69f9c_544fbd12",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2455,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-11-24T18:05:14Z",
+      "side": 1,
+      "message": "I see. It didn\u0027t look to me like we actually used that, so I thought this might be ok. As you mentioned, maintaining that set-up is problematic with the variable-length approach.\n\nI don\u0027t like the idea of setting aside max-length structure in addition to the binder_transaction_data, so I guess we would have to add a struct which specifies strlen and a pointer to the string in the mmap\u0027ed binder_proc-\u003ebuffer?",
+      "parentUuid": "5b1b2bb8_8d4ac256",
       "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
