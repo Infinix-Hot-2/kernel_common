@@ -37,6 +37,23 @@
     },
     {
       "key": {
+        "uuid": "3b167790_bfc087ff",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2414,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-11-24T01:43:13Z",
+      "side": 1,
+      "message": "why are you allocating this?",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3b167790_6bbbf532",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
@@ -89,6 +106,24 @@
       "side": 1,
       "message": "Yes.  As described in the bug, I came up with two approaches.  The first would be to add a field to br_transaction_data and pass the u32 sid along with it, but this is an opaque value with meaning only to the kernel and so would also require opening up an API to query this value.  It seemed simpler and more straightforward to just pass the string along with the transaction. I\u0027d appreciate alternative suggestions if you have them, including perhaps a way to make this approach more palatable.",
       "parentUuid": "1b153384_9e614d18",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5b1b2bb8_8d4ac256",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2455,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-11-24T01:43:13Z",
+      "side": 1,
+      "message": "That is not what I mean. The size of each command is encoded in the opcode. You changed the size of BR_TRANSACTION so that it no longer matches the size encoded in the opcode. If you want to pass more data in BR_TRANSACTION than BR_REPLY, then the opcode could be defined using a struct that contains that new data, but since you are a passing a variable length structure, that does not fit well.",
+      "parentUuid": "db271bf3_e4139640",
       "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
