@@ -22,6 +22,30 @@
       "revId": "2cd3b97333737bd85e67b25ea20815cbdb9e8203",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fb921f65_6eadafaa",
+        "filename": "drivers/md/Kconfig",
+        "patchSetId": 5
+      },
+      "lineNbr": 402,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-11-24T17:23:08Z",
+      "side": 1,
+      "message": "Good idea. I believe upstream people are not huge fans of ifdefs sprinkled in the code, so I\u0027ll see if I can move the FEC code to a separate conditionally compiled .c file or if it\u0027s cleaner to just add IS_ENABLED(CONFIG_DM_VERITY_FEC) to verity_fec_is_enabled and let the compiler optimize the code away.",
+      "parentUuid": "3b167790_9a7839d4",
+      "range": {
+        "startLine": 401,
+        "startChar": 0,
+        "endLine": 402,
+        "endChar": 25
+      },
+      "revId": "2cd3b97333737bd85e67b25ea20815cbdb9e8203",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
