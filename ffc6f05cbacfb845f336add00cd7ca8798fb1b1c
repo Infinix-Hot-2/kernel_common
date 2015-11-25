@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "9b2123e5_dd0d7dbe",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2414,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-11-25T23:06:27Z",
+      "side": 1,
+      "message": "in Parcel.cpp, Parcel::read() pads all reads from the bwr.read_buffer with pad_size(), as does bio_alloc() and bio_get() in servicemanager/binder.c, although those latter two are for the br_transaction data rather than the bwr buffer.",
+      "parentUuid": "db271bf3_34c67dbf",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3b167790_6bbbf532",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
@@ -266,6 +284,24 @@
       "side": 1,
       "message": "You can look at other drivers for how to define a variable size IOC command (e.g. include/uapi/linux/hiddev.h), but it is probably best to add a separate return type for this.",
       "parentUuid": "fbf69f9c_544fbd12",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1b153384_5f886c09",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2455,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-11-25T23:06:27Z",
+      "side": 1,
+      "message": "Thanks for the pointer, the  HIDIO[CG|CS]USAGES ioctls correspond, I think, to my suggestion of using a MAX_LEN.\n\nI may be misunderstanding how we\u0027d use a new return type, but the purpose of this patch would be to introduce an access control hook for binder transactions themselves, and so that information would need to be transferred as part of the BR_TRANSACTION payload and processed before the whole BR_TRANSACTION handling code finished.",
+      "parentUuid": "1b153384_2b545aa7",
       "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
