@@ -144,6 +144,24 @@
     },
     {
       "key": {
+        "uuid": "bb2a67bd_a1922939",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2414,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-11-26T01:14:58Z",
+      "side": 1,
+      "message": "It is not just an efficiency issue. You also added new error return path here that is different from everything else in this function. The only direct return paths here is if user space passed a bad buffer pointer.",
+      "parentUuid": "bbc4277e_a2655f24",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3b167790_6bbbf532",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
@@ -374,6 +392,24 @@
       "side": 1,
       "message": "I noticed HIDIOCGNAME \u0026 HIDIOCGPHYS as well, but if we were to use those, we would then have to start using the _IOC_[TYPE|NR|SIZE]  macros in userspace to decode these values to get at their constituent parts, whereas now they are simply used as constants.  I guess this is the fundamental issue; if the size field is supposed to matter, then we should be using it in userspace rather than treating these values as arbitrarily generated constants. \n\nUsing a separate, new return value also breaks the current userspace usage pattern because we would be generating a binder protocol return code which has no meaning on its own, or put another way, how should executeCommand() respond when it receives BR_STRING_LEN not immediately after a BR_TRANSACTION?",
       "parentUuid": "fbb05f0b_5aa2f46a",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1b153384_df861c83",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2455,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2015-11-26T01:14:58Z",
+      "side": 1,
+      "message": "I think someone from the framework team should look at what they prefer. (you could return the string before BR_TRANSACTION if that makes the decoding simpler)",
+      "parentUuid": "bbc4277e_022e4b81",
       "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
