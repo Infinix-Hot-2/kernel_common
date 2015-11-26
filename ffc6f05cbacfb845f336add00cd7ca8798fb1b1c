@@ -162,6 +162,24 @@
     },
     {
       "key": {
+        "uuid": "5b1b2bb8_1da55920",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2414,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-11-26T01:21:44Z",
+      "side": 1,
+      "message": "Got it.  Thank you for pointing that out; will switch in the next patch, again pending further discussion.",
+      "parentUuid": "bb2a67bd_a1922939",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3b167790_6bbbf532",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
@@ -410,6 +428,24 @@
       "side": 1,
       "message": "I think someone from the framework team should look at what they prefer. (you could return the string before BR_TRANSACTION if that makes the decoding simpler)",
       "parentUuid": "bbc4277e_022e4b81",
+      "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1b153384_1fd6f473",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2455,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-11-26T01:21:44Z",
+      "side": 1,
+      "message": "SGTM.  I\u0027ll set something up w/ctate@ and also begin an enquiry w/paul moore when we return next week.  Thanks again for the input.",
+      "parentUuid": "1b153384_df861c83",
       "revId": "ffc6f05cbacfb845f336add00cd7ca8798fb1b1c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
