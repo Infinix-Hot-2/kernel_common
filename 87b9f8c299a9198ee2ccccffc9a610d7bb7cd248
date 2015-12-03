@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "bb1267d6_4f95a1fe",
+        "filename": "init/do_mounts.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 561,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "I opted for the dm_root and dm_root_passthrough approach.. As you suggested the dm_root will point to the minor number of the dm-setup target and dm_root_passthrough flag will allow mounting the root block device even if the dm-setup fails for root..",
+      "parentUuid": "b6051dc5_173e54f1",
+      "range": {
+        "startLine": 561,
+        "startChar": 9,
+        "endLine": 561,
+        "endChar": 24
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f6b795e1_c2b3d321",
         "filename": "init/do_mounts.h",
         "patchSetId": 2
@@ -96,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "9bf043de_76d60847",
+        "filename": "init/do_mounts.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f6b795e1_c2b3d321",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 4
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "36e4cdf6_136b576b",
         "filename": "init/do_mounts.h",
         "patchSetId": 2
@@ -107,6 +155,30 @@
       "writtenOn": "2015-10-27T20:01:28Z",
       "side": 1,
       "message": "q: a \u0027static\u0027 defined as __init section is probably meaningless, but it does clearly state to the developers that whatever code it produces could disappear later? Just curious.",
+      "range": {
+        "startLine": 84,
+        "startChar": 7,
+        "endLine": 84,
+        "endChar": 11
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bbe987fc_17669cfc",
+        "filename": "init/do_mounts.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "changed to __init",
+      "parentUuid": "36e4cdf6_136b576b",
       "range": {
         "startLine": 84,
         "startChar": 7,
@@ -283,6 +355,30 @@
     },
     {
       "key": {
+        "uuid": "9bb8433f_d04dfc17",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "36bdadca_d6c3a2bd",
+      "range": {
+        "startLine": 176,
+        "startChar": 28,
+        "endLine": 176,
+        "endChar": 34
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f69cf575_54416221",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 2
@@ -306,6 +402,30 @@
     },
     {
       "key": {
+        "uuid": "3b18372c_78ea1dca",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "I was trying to be safe here as I wasn\u0027t sure whether root dev initialization had dependency on any of the async tasks.. Is this unnecessary ?",
+      "parentUuid": "f69cf575_54416221",
+      "range": {
+        "startLine": 183,
+        "startChar": 2,
+        "endLine": 183,
+        "endChar": 24
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "56c22158_d7a9de52",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 2
@@ -317,6 +437,30 @@
       "writtenOn": "2015-10-27T16:27:02Z",
       "side": 1,
       "message": "debugging leftoves?",
+      "range": {
+        "startLine": 189,
+        "startChar": 15,
+        "endLine": 189,
+        "endChar": 20
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1b17f3fd_b72202e6",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "This dmesg is to help debugging the case where root device fails to show up .. I have rephrased it to make it more meaningful.",
+      "parentUuid": "56c22158_d7a9de52",
       "range": {
         "startLine": 189,
         "startChar": 15,
@@ -364,6 +508,30 @@
       "side": 1,
       "message": "sys_open, sys_read, sys_lseek are used in init/do_mounts_rd.c which is called during init as well. Do you see some problem here ?",
       "parentUuid": "968d7947_f4ec10eb",
+      "range": {
+        "startLine": 208,
+        "startChar": 0,
+        "endLine": 208,
+        "endChar": 68
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bbb18759_1a8321bc",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "init/init_task.c:       { INIT_THREAD_INFO(init_task) };\nwhich sets the addr_limit to KERNEL_DS.\nThis is most likely the reason why init code is able make calls to \"sys_*\" functions.\n\ninit/do_mounts_rd.c does make direct calls to sys_open, sys_lseek, sys_read... I can switch to the __bread approach, if sys_lseek/sys_read approach is something that is frowned upon.",
+      "parentUuid": "56fce1c4_8df849e8",
       "range": {
         "startLine": 208,
         "startChar": 0,
@@ -493,6 +661,30 @@
     },
     {
       "key": {
+        "uuid": "bbb18759_7a906dff",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "In prepare_namespace we wait for the root device(dm-0).. Here we wait for the actual block device. I tried removing the wait and moving the code around such that we wait only for the actual block device.. But, name_to_dev_t seems to return 0:0 if we remove the wait for the device mapper (dm-0) device.",
+      "parentUuid": "f69cf575_943aeaac",
+      "range": {
+        "startLine": 457,
+        "startChar": 0,
+        "endLine": 457,
+        "endChar": 63
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "76880537_900e7a77",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 2
@@ -586,6 +778,30 @@
     },
     {
       "key": {
+        "uuid": "5b1deb19_fc10e12c",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "fixed !!",
+      "parentUuid": "b6a6fdc1_92575a3b",
+      "range": {
+        "startLine": 479,
+        "startChar": 2,
+        "endLine": 479,
+        "endChar": 6
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "36f76de3_63b4020b",
         "filename": "init/do_mounts_android_verity.c",
         "patchSetId": 2
@@ -597,6 +813,30 @@
       "writtenOn": "2015-10-27T20:01:28Z",
       "side": 1,
       "message": "this string should go into the init section ;-}\n\ncan be defined locally within this block:\n\nwhile (i \u003c VERITY_TABLE_ARGS) {\n    static const char delim[] __initconst \u003d \" \";\n\n    verity_table_args[i] \u003d strsep(\u0026table_ptr, delim);",
+      "range": {
+        "startLine": 502,
+        "startChar": 44,
+        "endLine": 502,
+        "endChar": 47
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1bac5306_72d6d074",
+        "filename": "init/do_mounts_android_verity.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 502,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "36f76de3_63b4020b",
       "range": {
         "startLine": 502,
         "startChar": 44,
@@ -702,6 +942,30 @@
     },
     {
       "key": {
+        "uuid": "fba69f26_6b3a61a4",
+        "filename": "init/do_mounts_android_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "Was using this in one of the previous patch set.. Have removed this and other unused ones as well..",
+      "parentUuid": "76880537_f0ec1eeb",
+      "range": {
+        "startLine": 1,
+        "startChar": 8,
+        "endLine": 1,
+        "endChar": 20
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "964739ec_9e9f3d5c",
         "filename": "init/do_mounts_android_verity.h",
         "patchSetId": 2
@@ -713,6 +977,30 @@
       "writtenOn": "2015-10-27T20:32:32Z",
       "side": 1,
       "message": ";-}\n\n/* Yes, this is freed before exiting init */",
+      "range": {
+        "startLine": 55,
+        "startChar": 7,
+        "endLine": 55,
+        "endChar": 19
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9bb8433f_d034dc8b",
+        "filename": "init/do_mounts_android_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "964739ec_9e9f3d5c",
       "range": {
         "startLine": 55,
         "startChar": 7,
@@ -748,6 +1036,30 @@
     },
     {
       "key": {
+        "uuid": "9b0923b2_2e815369",
+        "filename": "init/do_mounts_android_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "done.. I have realigned the structure..",
+      "parentUuid": "56e941ce_066ddbed",
+      "range": {
+        "startLine": 56,
+        "startChar": 28,
+        "endLine": 56,
+        "endChar": 29
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b6d8bd3b_ded9f455",
         "filename": "init/do_mounts_android_verity.h",
         "patchSetId": 2
@@ -771,6 +1083,30 @@
     },
     {
       "key": {
+        "uuid": "3b18372c_b5f3200d",
+        "filename": "init/do_mounts_android_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "I have marked this as TODO.. I am currently working on the userspace change to fix this..",
+      "parentUuid": "b6d8bd3b_ded9f455",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 14
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "169a6978_d5d0eeda",
         "filename": "init/do_mounts_verity.h",
         "patchSetId": 2
@@ -782,6 +1118,30 @@
       "writtenOn": "2015-10-27T16:27:02Z",
       "side": 1,
       "message": "boilerplate",
+      "range": {
+        "startLine": 1,
+        "startChar": 19,
+        "endLine": 1,
+        "endChar": 31
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dbae3bf9_a1c588b3",
+        "filename": "init/do_mounts_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "Sorry.. Not sure what are you intending.",
+      "parentUuid": "169a6978_d5d0eeda",
       "range": {
         "startLine": 1,
         "startChar": 19,
@@ -864,6 +1224,30 @@
     },
     {
       "key": {
+        "uuid": "9bb8433f_856970ce",
+        "filename": "init/do_mounts_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "964739ec_3ed4e91a",
+      "range": {
+        "startLine": 24,
+        "startChar": 17,
+        "endLine": 24,
+        "endChar": 24
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f636b56e_61417670",
         "filename": "init/do_mounts_verity.h",
         "patchSetId": 2
@@ -887,6 +1271,30 @@
     },
     {
       "key": {
+        "uuid": "5ba24b12_187cca98",
+        "filename": "init/do_mounts_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f636b56e_61417670",
+      "range": {
+        "startLine": 26,
+        "startChar": 30,
+        "endLine": 26,
+        "endChar": 31
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "16342965_e2102669",
         "filename": "init/do_mounts_verity.h",
         "patchSetId": 2
@@ -898,6 +1306,30 @@
       "writtenOn": "2015-10-27T20:32:32Z",
       "side": 1,
       "message": "missing closing )",
+      "range": {
+        "startLine": 27,
+        "startChar": 9,
+        "endLine": 27,
+        "endChar": 27
+      },
+      "revId": "87b9f8c299a9198ee2ccccffc9a610d7bb7cd248",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bbb18759_46131076",
+        "filename": "init/do_mounts_verity.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2015-12-03T02:43:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "16342965_e2102669",
       "range": {
         "startLine": 27,
         "startChar": 9,
