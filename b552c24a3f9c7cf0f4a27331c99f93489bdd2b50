@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a565e697_28392bab",
+        "filename": "drivers/md/dm-verity-target.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1005,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2015-12-16T15:42:07Z",
+      "side": 1,
+      "message": "This was not merged into 3.10, should I worry?",
+      "range": {
+        "startLine": 1005,
+        "startChar": 16,
+        "endLine": 1005,
+        "endChar": 17
+      },
+      "revId": "b552c24a3f9c7cf0f4a27331c99f93489bdd2b50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
