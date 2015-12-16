@@ -22,6 +22,30 @@
       "revId": "b552c24a3f9c7cf0f4a27331c99f93489bdd2b50",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e59a7e77_b55d2ac7",
+        "filename": "drivers/md/dm-verity-target.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1005,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2015-12-16T15:48:30Z",
+      "side": 1,
+      "message": "No, we don\u0027t use this anywhere. I seem to have missed this when backporting upstream changes to 3.10, or it was folded in later.\n\nAnyway, the version number appears to be bumped rather arbitrarily. It was changed now, but not when the previous new features were added. All changes are still backwards compatible, so shouldn\u0027t matter.",
+      "parentUuid": "a565e697_28392bab",
+      "range": {
+        "startLine": 1005,
+        "startChar": 16,
+        "endLine": 1005,
+        "endChar": 17
+      },
+      "revId": "b552c24a3f9c7cf0f4a27331c99f93489bdd2b50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
