@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "05f952fe_7b569f52",
+        "filename": "mm/swapfile.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 604,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2015-12-17T09:19:06Z",
+      "side": 1,
+      "message": "this won\u0027t build with CONFIG_SWAP\u003dy because the declaration in the header is not static; removing static inline should fix this.",
+      "range": {
+        "startLine": 604,
+        "startChar": 0,
+        "endLine": 604,
+        "endChar": 14
+      },
+      "revId": "92a048bdaa013a1d4172ed7a055e7e9a4e8684aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "45398ab3_cdbe29d0",
+        "filename": "mm/swapfile.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 657,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2015-12-17T09:19:06Z",
+      "side": 1,
+      "message": "spin_unlock(\u0026swap_lock);",
+      "range": {
+        "startLine": 657,
+        "startChar": 1,
+        "endLine": 657,
+        "endChar": 23
+      },
+      "revId": "92a048bdaa013a1d4172ed7a055e7e9a4e8684aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
