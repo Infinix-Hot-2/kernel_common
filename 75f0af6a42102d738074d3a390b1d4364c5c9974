@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0af79f9a_9a8791c9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-12-30T03:28:07Z",
+      "side": 1,
+      "message": "UPSTREAM",
+      "revId": "75f0af6a42102d738074d3a390b1d4364c5c9974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a1bbbb8_d53d6667",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2015-12-30T03:28:07Z",
+      "side": 1,
+      "message": "(cherry picked from commit \u003chash number\u003e)",
+      "revId": "75f0af6a42102d738074d3a390b1d4364c5c9974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
