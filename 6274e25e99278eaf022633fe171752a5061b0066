@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8a0b8f60_5e9eb9db",
+        "filename": "arch/arm64/Kconfig",
+        "patchSetId": 3
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2015-12-30T21:29:26Z",
+      "side": 1,
+      "message": "this situation actually shouldn\u0027t happen, since 32-bit mode isn\u0027t supported w/64K pages.  Not sure if it\u0027s worth changing, though (although I did change it in the 3.10 kernel while changing the VA_BITS value).",
+      "range": {
+        "startLine": 111,
+        "startChar": 6,
+        "endLine": 111,
+        "endChar": 35
+      },
+      "revId": "6274e25e99278eaf022633fe171752a5061b0066",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
