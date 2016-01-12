@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "678e9643_519896ed",
+        "filename": "include/linux/fortify_string.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2016-01-12T23:23:56Z",
+      "side": 1,
+      "message": "This doesn\u0027t look right to me, but I don\u0027t understand this code enough to say why...",
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "678e9643_d14e4644",
+        "filename": "lib/memcpy_chk.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2016-01-12T23:23:56Z",
+      "side": 1,
+      "message": "nit: unneeded",
+      "range": {
+        "startLine": 16,
+        "startChar": 35,
+        "endLine": 16,
+        "endChar": 43
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
