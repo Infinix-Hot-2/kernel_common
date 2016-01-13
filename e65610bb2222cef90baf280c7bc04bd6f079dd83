@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "274e5eac_26d11727",
+        "filename": "Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 649,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-13T16:07:10Z",
+      "side": 1,
+      "message": "No need, use CONFIG_FORTIFY_SOURCE directly in source. The KBUILD_FLAGS are for compiler flags, not manifest defines.",
+      "range": {
+        "startLine": 646,
+        "startChar": 0,
+        "endLine": 649,
+        "endChar": 5
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "676db610_80fa975f",
+        "filename": "include/linux/fortify_string.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-13T16:07:10Z",
+      "side": 1,
+      "message": "COFNIG_FORTIFY_SOURCE?",
+      "range": {
+        "startLine": 20,
+        "startChar": 12,
+        "endLine": 20,
+        "endChar": 27
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "678e9643_519896ed",
         "filename": "include/linux/fortify_string.h",
         "patchSetId": 1
@@ -13,6 +59,121 @@
       "writtenOn": "2016-01-12T23:23:56Z",
       "side": 1,
       "message": "This doesn\u0027t look right to me, but I don\u0027t understand this code enough to say why...",
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "678e9643_02187a5f",
+        "filename": "include/linux/fortify_string.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-13T16:07:10Z",
+      "side": 1,
+      "message": "This is defined in asm/string.h. You need to include it here to get it right. You also include this file _before_ the include for asm/string.h in string.h.",
+      "range": {
+        "startLine": 22,
+        "startChar": 8,
+        "endLine": 22,
+        "endChar": 26
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "676db610_20f0e385",
+        "filename": "include/linux/fortify_string.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-13T16:07:10Z",
+      "side": 1,
+      "message": "Although pedantically correct, this is _not_ the definition or prototype of memcpy in the kernel context, and given the short path from this wrapper to a function call, unlikely it will result in more optimal code with the assumption of no aliasing between this and the other pointer.\n\nBut this does leave us with another issue, maybe we _should_ check, and in memcpy_chk(), if the pointers alias (overlap) (here using BUILD_BUG_ON(), runtime check in memcpy_chk())?",
+      "range": {
+        "startLine": 24,
+        "startChar": 20,
+        "endLine": 24,
+        "endChar": 30
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "676db610_a0dcf30a",
+        "filename": "include/linux/fortify_string.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-13T16:07:10Z",
+      "side": 1,
+      "message": "I thought this would not evaluate if performed in an inline? __dest here is evaluated as void *? Please check to make sure the code expected is generated? You may need to make this memcpy a #define with all the complications it induces (memcpy macro in-effect calling memcpy_chk, calling memcpy architecture specific subroutine; then having memcpy architecture specific prototype below).",
+      "range": {
+        "startLine": 27,
+        "startChar": 54,
+        "endLine": 27,
+        "endChar": 87
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e759a674_64c31364",
+        "filename": "include/linux/fortify_string.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-13T16:07:10Z",
+      "side": 1,
+      "message": "I believe memcpy_chk should be inlined above (before memcpy is overridden) instead?",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 6
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "07623a24_ad87d181",
+        "filename": "lib/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-13T16:07:10Z",
+      "side": 1,
+      "message": "lib-$(CONFIG_FORTIFY_SOURCE) +\u003d memcpy_chk.o",
+      "range": {
+        "startLine": 16,
+        "startChar": 14,
+        "endLine": 16,
+        "endChar": 26
+      },
       "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -106,6 +267,76 @@
         "startChar": 35,
         "endLine": 16,
         "endChar": 43
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87562a44_ccdb2b3f",
+        "filename": "lib/memcpy_chk.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-13T16:07:10Z",
+      "side": 1,
+      "message": "Not impressed with a panic, this will just make mtbf a struggle. I\u0027d prefer (read: this is an opinion) a truncated copy and a _strong_ _short_ log message. This should preserve functionality, and would be one of two possible decisions made to mitigate the issue when the source is fixed.\n\nworry: Of course, if the memcpy is copying a string, there may be some acrobatics?",
+      "parentUuid": "678e9643_d14e4644",
+      "range": {
+        "startLine": 16,
+        "startChar": 35,
+        "endLine": 16,
+        "endChar": 43
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "678e9643_82f9ca36",
+        "filename": "lib/memcpy_chk.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-13T16:07:10Z",
+      "side": 1,
+      "message": "For memcpy, do we want to also perform alias checking? Probably too costly ...\n\nThis whole thing is a major cache hit hot spot, it feels like it should be an inline in order to regain some lost performance. You can reference a global ro string for the messaging so no repetition there, as it stands, this _one_ inline check is not that expensive.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 5
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "27673e34_c97201b9",
+        "filename": "security/Kconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-13T16:07:10Z",
+      "side": 1,
+      "message": "CONFIG_FORTIFY_SOURCE?",
+      "range": {
+        "startLine": 123,
+        "startChar": 23,
+        "endLine": 123,
+        "endChar": 38
       },
       "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
