@@ -88,6 +88,30 @@
     },
     {
       "key": {
+        "uuid": "07623a24_5c9a2c89",
+        "filename": "include/linux/fortify_string.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1044551
+      },
+      "writtenOn": "2016-01-14T21:17:22Z",
+      "side": 1,
+      "message": "Agreed. Changed to be less confusing (I was reusing this macro in an evil way)",
+      "parentUuid": "678e9643_02187a5f",
+      "range": {
+        "startLine": 22,
+        "startChar": 8,
+        "endLine": 22,
+        "endChar": 26
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "676db610_20f0e385",
         "filename": "include/linux/fortify_string.h",
         "patchSetId": 1
@@ -99,6 +123,30 @@
       "writtenOn": "2016-01-13T16:07:10Z",
       "side": 1,
       "message": "Although pedantically correct, this is _not_ the definition or prototype of memcpy in the kernel context, and given the short path from this wrapper to a function call, unlikely it will result in more optimal code with the assumption of no aliasing between this and the other pointer.\n\nBut this does leave us with another issue, maybe we _should_ check, and in memcpy_chk(), if the pointers alias (overlap) (here using BUILD_BUG_ON(), runtime check in memcpy_chk())?",
+      "range": {
+        "startLine": 24,
+        "startChar": 20,
+        "endLine": 24,
+        "endChar": 30
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "07495aa4_84c467b9",
+        "filename": "include/linux/fortify_string.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1044551
+      },
+      "writtenOn": "2016-01-14T21:17:22Z",
+      "side": 1,
+      "message": "Removed, and we\u0027ll see if it makes any difference\n\nIt won\u0027t cause a vuln if they overlap, and it will further increase the speed penalty. I\u0027m inclined not to?",
+      "parentUuid": "676db610_20f0e385",
       "range": {
         "startLine": 24,
         "startChar": 20,
@@ -134,6 +182,30 @@
     },
     {
       "key": {
+        "uuid": "4768b202_573e8709",
+        "filename": "include/linux/fortify_string.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1044551
+      },
+      "writtenOn": "2016-01-14T21:17:22Z",
+      "side": 1,
+      "message": "This is how the c runtime libs do it, and I did do some spot checking to make sure the output is correct.",
+      "parentUuid": "676db610_a0dcf30a",
+      "range": {
+        "startLine": 27,
+        "startChar": 54,
+        "endLine": 27,
+        "endChar": 87
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e759a674_64c31364",
         "filename": "include/linux/fortify_string.h",
         "patchSetId": 1
@@ -157,6 +229,30 @@
     },
     {
       "key": {
+        "uuid": "27673e34_5b13543d",
+        "filename": "include/linux/fortify_string.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1044551
+      },
+      "writtenOn": "2016-01-14T21:17:22Z",
+      "side": 1,
+      "message": "Can\u0027t be done with kernel code as is, since the given optimized definitions of memcpy etc are given identical names to the ones here, and memcpy_chk has to call out to memcpy.",
+      "parentUuid": "e759a674_64c31364",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 6
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "07623a24_ad87d181",
         "filename": "lib/Makefile",
         "patchSetId": 1
@@ -168,6 +264,30 @@
       "writtenOn": "2016-01-13T16:07:10Z",
       "side": 1,
       "message": "lib-$(CONFIG_FORTIFY_SOURCE) +\u003d memcpy_chk.o",
+      "range": {
+        "startLine": 16,
+        "startChar": 14,
+        "endLine": 16,
+        "endChar": 26
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "274e5eac_1940bce7",
+        "filename": "lib/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1044551
+      },
+      "writtenOn": "2016-01-14T21:17:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "07623a24_ad87d181",
       "range": {
         "startLine": 16,
         "startChar": 14,
@@ -251,6 +371,30 @@
     },
     {
       "key": {
+        "uuid": "27673e34_7b129037",
+        "filename": "lib/memcpy_chk.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1044551
+      },
+      "writtenOn": "2016-01-14T21:17:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "87562a44_066d04d4",
+      "range": {
+        "startLine": 15,
+        "startChar": 8,
+        "endLine": 15,
+        "endChar": 19
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "678e9643_d14e4644",
         "filename": "lib/memcpy_chk.c",
         "patchSetId": 1
@@ -309,6 +453,30 @@
       "writtenOn": "2016-01-13T16:07:10Z",
       "side": 1,
       "message": "For memcpy, do we want to also perform alias checking? Probably too costly ...\n\nThis whole thing is a major cache hit hot spot, it feels like it should be an inline in order to regain some lost performance. You can reference a global ro string for the messaging so no repetition there, as it stands, this _one_ inline check is not that expensive.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 5
+      },
+      "revId": "e65610bb2222cef90baf280c7bc04bd6f079dd83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c75ca266_4549ad67",
+        "filename": "lib/memcpy_chk.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1044551
+      },
+      "writtenOn": "2016-01-14T21:17:22Z",
+      "side": 1,
+      "message": "It\u0027s not easy to inline because names are the same.",
+      "parentUuid": "678e9643_82f9ca36",
       "range": {
         "startLine": 17,
         "startChar": 0,
