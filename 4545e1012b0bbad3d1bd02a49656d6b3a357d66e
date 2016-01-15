@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "07495aa4_2ded6fab",
+        "filename": "arch/arm/kernel/fiq.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-15T17:16:49Z",
+      "side": 1,
+      "message": "conflict was here, and above because init_FIQ() takes an argument in upstream",
+      "range": {
+        "startLine": 155,
+        "startChar": 0,
+        "endLine": 155,
+        "endChar": 1
+      },
+      "revId": "4545e1012b0bbad3d1bd02a49656d6b3a357d66e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
