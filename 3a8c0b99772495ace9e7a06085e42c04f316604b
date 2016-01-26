@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54c4e260_7e73857b",
+        "filename": "drivers/net/wireless/bcmdhd/wl_cfg80211.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 10002,
+      "author": {
+        "id": 1014961
+      },
+      "writtenOn": "2016-01-26T17:58:31Z",
+      "side": 1,
+      "message": "You\u0027ve removed this declaration for 3.11, is there a conditional for data below?",
+      "range": {
+        "startLine": 10002,
+        "startChar": 30,
+        "endLine": 10002,
+        "endChar": 34
+      },
+      "revId": "3a8c0b99772495ace9e7a06085e42c04f316604b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
