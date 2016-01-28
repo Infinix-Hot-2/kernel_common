@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5418622c_75a18861",
+        "filename": "drivers/mmc/card/Kconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-28T20:55:37Z",
+      "side": 1,
+      "message": "Hmmm, you had some certification tests, what did you call the derated speed after the device was (thermally) aged? I feel like slow is a bit too vague. Scientific terms are always better to suppress passionate responses or FUD.\n\nI have used EOL instead of aged, I understandably get emotional responses when I use that word ;-}",
+      "parentUuid": "f40956de_7dce9388",
+      "range": {
+        "startLine": 77,
+        "startChar": 63,
+        "endLine": 77,
+        "endChar": 67
+      },
+      "revId": "8b988de5742f5706ea2af6586df184f61baad709",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "34176efe_54b56c91",
         "filename": "drivers/mmc/card/block.c",
         "patchSetId": 1
