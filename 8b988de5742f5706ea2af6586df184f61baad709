@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "741d661a_b9bf9bca",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-28T20:51:57Z",
+      "side": 1,
+      "message": "The values were not arbitrary. I need to add comments regarding the selection into the code.\n\nOur devices become completely unusable at 250KB/s, determined experimentally over our dogfood population, any rates lower than this and you might as well walk away from the device. The 32GB SLC eMMC on the N9 can reach this performance level after a year of heavy use, \u003e80% full, and if more than a day has gone by between fstrims.\n\nAny value above 12800 will have no affect given the granularity of jiffies at 100Hz (128KB maximum transfer size per command). Performance group was experimenting with 1KHz, so I viewed 128000 as the maximum useful in all categories of devices, then dropped down to 100000 to round it out.\n\nI could make the MAX_RATELIMIT a mathematical calculations based on maximum transfer size and HZ granularity.\n\nI could also use a higher resolution timer, but for a valid range of 250KB/s to 5MB/s 100Hz works.\n\nI got nervous about 0 for off, since off really is mathematically ∞ or the highest value one can pick.",
+      "parentUuid": "34176efe_54b56c91",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 133,
+        "endChar": 78
+      },
+      "revId": "8b988de5742f5706ea2af6586df184f61baad709",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "14f98afe_9bfc4b5f",
         "filename": "drivers/mmc/card/block.c",
         "patchSetId": 1
@@ -106,6 +130,30 @@
       "side": 1,
       "message": "max_{read,write}_speed?",
       "parentUuid": "54ef8232_7dddf78f",
+      "range": {
+        "startLine": 2460,
+        "startChar": 30,
+        "endLine": 2460,
+        "endChar": 45
+      },
+      "revId": "8b988de5742f5706ea2af6586df184f61baad709",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d40c52f0_d95a5334",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2460,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-01-28T20:51:57Z",
+      "side": 1,
+      "message": "I\u0027ll buy that one.\n\nMight even consider actual_read_speed/actual_write_speed (1 hour or more running average) and uptime_read_speed/uptime_write_speed instrumentation for the future, the names all clearly spell out!",
+      "parentUuid": "34fe8ee6_3c24118b",
       "range": {
         "startLine": 2460,
         "startChar": 30,
