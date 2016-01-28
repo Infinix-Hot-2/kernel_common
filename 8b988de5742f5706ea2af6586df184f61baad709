@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "f40956de_7dce9388",
+        "filename": "drivers/mmc/card/Kconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1037321
+      },
+      "writtenOn": "2016-01-28T20:50:58Z",
+      "side": 1,
+      "message": "maybe \"slow\" is a better term?",
+      "range": {
+        "startLine": 77,
+        "startChar": 63,
+        "endLine": 77,
+        "endChar": 67
+      },
+      "revId": "8b988de5742f5706ea2af6586df184f61baad709",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "34176efe_54b56c91",
         "filename": "drivers/mmc/card/block.c",
         "patchSetId": 1
