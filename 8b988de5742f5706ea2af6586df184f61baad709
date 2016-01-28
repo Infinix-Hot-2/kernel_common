@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "34176efe_54b56c91",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-01-28T20:33:34Z",
+      "side": 1,
+      "message": "[250, 100000] is a fairly arbitrary range.  It seems more sensible to allow the entire range of unsigned int (if a bit overkill).  0 can be used as a flag to disable ratelimiting, since it\u0027s meaningless to limit your throughput to nothing.",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 133,
+        "endChar": 78
+      },
+      "revId": "8b988de5742f5706ea2af6586df184f61baad709",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "14f98afe_9bfc4b5f",
         "filename": "drivers/mmc/card/block.c",
         "patchSetId": 1
@@ -36,6 +59,30 @@
       "writtenOn": "2016-01-28T20:19:57Z",
       "side": 1,
       "message": "wondering out loud. Is ratelimit the best word to describe this? \"ratelimit\" is not an english word (rate limit). \"wr_\" and \"rd_\" prefix may even be viewed as cryptic.\n\nread_rate_limit?\nread_max_speed?\nread_max_rate?",
+      "range": {
+        "startLine": 2460,
+        "startChar": 30,
+        "endLine": 2460,
+        "endChar": 45
+      },
+      "revId": "8b988de5742f5706ea2af6586df184f61baad709",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "34fe8ee6_3c24118b",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2460,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-01-28T20:33:34Z",
+      "side": 1,
+      "message": "max_{read,write}_speed?",
+      "parentUuid": "54ef8232_7dddf78f",
       "range": {
         "startLine": 2460,
         "startChar": 30,
