@@ -120,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "54ef8232_fd774716",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-01-28T21:19:22Z",
+      "side": 1,
+      "message": "250 KB/s is unusable for our use case, but I\u0027m hoping you\u0027re planning on sending this upstream?  Other people may want to crank this even lower for some reason.\n\nIn general I don\u0027t like second-guessing the user for things like this ... if they choose to shoot themselves in the foot with an unreasonably low limit then that\u0027s their call.  (OTOH I suggested 0 as an flag, because that lets the user do anything short of literally making their device unusable.)\n\nFor the upper limit, calculate it at compile-time based on CONFIG_HZ and warn if the user writes a value so high that it has no effect.",
+      "parentUuid": "741d661a_b9bf9bca",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 133,
+        "endChar": 78
+      },
+      "revId": "8b988de5742f5706ea2af6586df184f61baad709",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "14f98afe_9bfc4b5f",
         "filename": "drivers/mmc/card/block.c",
         "patchSetId": 1
