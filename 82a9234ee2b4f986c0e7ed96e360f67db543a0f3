@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d468d2a0_588014e3",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2619,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-02-01T15:31:02Z",
+      "side": 1,
+      "message": "clumsy, but if I rewrite it in scaled manner (initialization loop), impact above.\n\nrewrite required if I push this upstream. rewrite detrimental for continuing maintenance if I do not.\n\nCould have attribute filled out in structure and just copy though instead of all these steps ...",
+      "range": {
+        "startLine": 2588,
+        "startChar": 0,
+        "endLine": 2619,
+        "endChar": 23
+      },
+      "revId": "82a9234ee2b4f986c0e7ed96e360f67db543a0f3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9462dabe_a6de7891",
+        "filename": "drivers/mmc/card/queue.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-02-01T15:31:02Z",
+      "side": 1,
+      "message": "atomic is here to allow sysfs attribute to show percentage used, with accepted race against the single-threaded mmc0blk handler.",
+      "range": {
+        "startLine": 65,
+        "startChar": 1,
+        "endLine": 65,
+        "endChar": 14
+      },
+      "revId": "82a9234ee2b4f986c0e7ed96e360f67db543a0f3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5422228b_1497620b",
+        "filename": "drivers/mmc/card/queue.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-02-01T15:31:02Z",
+      "side": 1,
+      "message": "might be better to call this cache_jiffies",
+      "range": {
+        "startLine": 66,
+        "startChar": 21,
+        "endLine": 66,
+        "endChar": 24
+      },
+      "revId": "82a9234ee2b4f986c0e7ed96e360f67db543a0f3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
