@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "f465d6c4_1a11329f",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1333,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-02-01T22:41:48Z",
+      "side": 1,
+      "message": "else if\n\nIf there are errors, let us not add insult (delay) to injury.",
+      "range": {
+        "startLine": 1333,
+        "startChar": 1,
+        "endLine": 1333,
+        "endChar": 3
+      },
+      "revId": "82a9234ee2b4f986c0e7ed96e360f67db543a0f3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f465d6c4_7a006e4a",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1344,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-02-01T22:41:48Z",
+      "side": 1,
+      "message": "used -\u003d size",
+      "range": {
+        "startLine": 1344,
+        "startChar": 4,
+        "endLine": 1344,
+        "endChar": 15
+      },
+      "revId": "82a9234ee2b4f986c0e7ed96e360f67db543a0f3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d468d2a0_588014e3",
         "filename": "drivers/mmc/card/block.c",
         "patchSetId": 2
