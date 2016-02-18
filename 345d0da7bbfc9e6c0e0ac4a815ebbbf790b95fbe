@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "e2199973_f69f1e27",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-02-18T21:37:56Z",
+      "side": 1,
+      "message": "Agreed, I started with a \u0027reasonable\u0027 limit until we reacted to your previous comment and capped it at INT_MAX ... silly me.",
+      "parentUuid": "fd993cfa_1cdf7552",
+      "range": {
+        "startLine": 331,
+        "startChar": 5,
+        "endLine": 331,
+        "endChar": 12
+      },
+      "revId": "345d0da7bbfc9e6c0e0ac4a815ebbbf790b95fbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3d9034ca_deda6593",
         "filename": "drivers/mmc/card/block.c",
         "patchSetId": 1
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "e2199973_d69c2235",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-02-18T21:37:56Z",
+      "side": 1,
+      "message": "pause for completion ...",
+      "parentUuid": "3d9034ca_deda6593",
+      "range": {
+        "startLine": 482,
+        "startChar": 12,
+        "endLine": 482,
+        "endChar": 38
+      },
+      "revId": "345d0da7bbfc9e6c0e0ac4a815ebbbf790b95fbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3d9034ca_5e64958b",
         "filename": "drivers/mmc/card/block.c",
         "patchSetId": 1
@@ -59,6 +107,30 @@
       "writtenOn": "2016-02-18T19:30:13Z",
       "side": 1,
       "message": "There\u0027s a tiny chance of a race here.  It\u0027s possible waitfor \u003e jiffies but only by a tiny amount; the CPU gets interrupted between the time_is_after_jiffies() and jiffies_to_msecs() call; and after the interrupt waitfor \u003c jiffies.\n\nThe chances are very small, but if you ever do manage to hit it, you\u0027ll end up feeding completely unreasonable values to msleep().",
+      "range": {
+        "startLine": 513,
+        "startChar": 2,
+        "endLine": 515,
+        "endChar": 24
+      },
+      "revId": "345d0da7bbfc9e6c0e0ac4a815ebbbf790b95fbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e200b9f1_fe181d09",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 515,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-02-18T21:37:56Z",
+      "side": 1,
+      "message": "after_jiffies was selected to ensure waitfor \u003e jiffies, a race would result in waitfor \u003d\u003d jiffies at the worst case, which would result with zero msecs, checked below.\n\nI expect you would be satisfied if I used long msecs and checked for a negative value to reduce your concern.",
+      "parentUuid": "3d9034ca_5e64958b",
       "range": {
         "startLine": 513,
         "startChar": 2,
