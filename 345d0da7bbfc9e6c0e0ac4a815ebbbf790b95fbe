@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fd993cfa_1cdf7552",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-02-18T19:30:13Z",
+      "side": 1,
+      "message": "kstrtou() or kstrtoint()?  Seems odd to use kstrtol() but then explicitly constrain the results to 0 \u003c\u003d set \u003c\u003d INT_MAX.",
+      "range": {
+        "startLine": 331,
+        "startChar": 5,
+        "endLine": 331,
+        "endChar": 12
+      },
+      "revId": "345d0da7bbfc9e6c0e0ac4a815ebbbf790b95fbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3d9034ca_deda6593",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-02-18T19:30:13Z",
+      "side": 1,
+      "message": "I\u0027d change the name to something else.  I was confused at first since \"completion\" and \"wait_for_completion\" have very specific meanings in the Linux kernel.",
+      "range": {
+        "startLine": 482,
+        "startChar": 12,
+        "endLine": 482,
+        "endChar": 38
+      },
+      "revId": "345d0da7bbfc9e6c0e0ac4a815ebbbf790b95fbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3d9034ca_5e64958b",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 515,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-02-18T19:30:13Z",
+      "side": 1,
+      "message": "There\u0027s a tiny chance of a race here.  It\u0027s possible waitfor \u003e jiffies but only by a tiny amount; the CPU gets interrupted between the time_is_after_jiffies() and jiffies_to_msecs() call; and after the interrupt waitfor \u003c jiffies.\n\nThe chances are very small, but if you ever do manage to hit it, you\u0027ll end up feeding completely unreasonable values to msleep().",
+      "range": {
+        "startLine": 513,
+        "startChar": 2,
+        "endLine": 515,
+        "endChar": 24
+      },
+      "revId": "345d0da7bbfc9e6c0e0ac4a815ebbbf790b95fbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
