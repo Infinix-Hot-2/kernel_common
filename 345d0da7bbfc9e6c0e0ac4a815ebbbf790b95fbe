@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "e2b0b90b_5b43238b",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-02-19T20:50:45Z",
+      "side": 1,
+      "message": "At the risk of bikeshedding: mmc_blk_simulate_delay?\n\nI\u0027m allergic to the word \"completion\" because struct completion is a widely-used kernel mechanism for signalling that asynchronous work is done.  When I first saw the function prototype I wondered why you were using a completion to implement a delay.",
+      "parentUuid": "e2199973_d69c2235",
+      "range": {
+        "startLine": 482,
+        "startChar": 12,
+        "endLine": 482,
+        "endChar": 38
+      },
+      "revId": "345d0da7bbfc9e6c0e0ac4a815ebbbf790b95fbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3d9034ca_5e64958b",
         "filename": "drivers/mmc/card/block.c",
         "patchSetId": 1
@@ -131,6 +155,30 @@
       "side": 1,
       "message": "after_jiffies was selected to ensure waitfor \u003e jiffies, a race would result in waitfor \u003d\u003d jiffies at the worst case, which would result with zero msecs, checked below.\n\nI expect you would be satisfied if I used long msecs and checked for a negative value to reduce your concern.",
       "parentUuid": "3d9034ca_5e64958b",
+      "range": {
+        "startLine": 513,
+        "startChar": 2,
+        "endLine": 515,
+        "endChar": 24
+      },
+      "revId": "345d0da7bbfc9e6c0e0ac4a815ebbbf790b95fbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62be89e4_57d52cfe",
+        "filename": "drivers/mmc/card/block.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 515,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-02-19T20:50:45Z",
+      "side": 1,
+      "message": "A signed type and negative-value check (preferably with unlikely()) would be fine.",
+      "parentUuid": "e200b9f1_fe181d09",
       "range": {
         "startLine": 513,
         "startChar": 2,
