@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c2c1f56d_906288b5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-02-25T00:00:13Z",
+      "side": 1,
+      "message": "Given that this is to enable A/B, the commit message should probably have a few sentences rationalizing this so that partners can make their choices.",
+      "range": {
+        "startLine": 7,
+        "startChar": 39,
+        "endLine": 7,
+        "endChar": 43
+      },
+      "revId": "a19349557af7fbd817dbbe3b38111d6666fb5cf1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "02e4ed24_81a7de18",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-02-25T00:00:13Z",
+      "side": 1,
+      "message": "As ugly as it is, the \u0027new\u0027 standard for commit messages requires (too strong of a word) this bit of stutter:\n\nANDROID: android: recommended.cfg: Setup verity root for A/B",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 43
+      },
+      "revId": "a19349557af7fbd817dbbe3b38111d6666fb5cf1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
