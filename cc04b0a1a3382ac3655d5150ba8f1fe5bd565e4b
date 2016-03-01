@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a26ec178_15d55763",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1080223
+      },
+      "writtenOn": "2016-03-01T02:21:40Z",
+      "side": 1,
+      "message": "Better yet, could we get rid of this awful interface?\n\nI suppose that will require fixing up the various crappy WiFi drivers...",
+      "range": {
+        "startLine": 9,
+        "startChar": 6,
+        "endLine": 9,
+        "endChar": 23
+      },
+      "revId": "cc04b0a1a3382ac3655d5150ba8f1fe5bd565e4b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
