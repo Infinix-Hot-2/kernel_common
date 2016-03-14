@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "573069cd_3a2b6063",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 535,
+      "author": {
+        "id": 1096846
+      },
+      "writtenOn": "2016-03-14T20:50:15Z",
+      "side": 1,
+      "message": "This is wrong. You only set drvdata later.",
+      "range": {
+        "startLine": 535,
+        "startChar": 39,
+        "endLine": 535,
+        "endChar": 65
+      },
+      "revId": "d2d4cd092585d69d1b21675598bd8d8cdc519412",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5b2a4b7b_d43094e5",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 3
@@ -42,6 +65,29 @@
         "startChar": 3,
         "endLine": 550,
         "endChar": 7
+      },
+      "revId": "d2d4cd092585d69d1b21675598bd8d8cdc519412",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "573069cd_7a35d8b6",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 644,
+      "author": {
+        "id": 1096846
+      },
+      "writtenOn": "2016-03-14T20:50:15Z",
+      "side": 1,
+      "message": "This is superfluous. No one else uses drvdata.",
+      "range": {
+        "startLine": 644,
+        "startChar": 33,
+        "endLine": 644,
+        "endChar": 35
       },
       "revId": "d2d4cd092585d69d1b21675598bd8d8cdc519412",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
