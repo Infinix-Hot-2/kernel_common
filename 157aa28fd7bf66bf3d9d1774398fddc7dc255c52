@@ -91,6 +91,24 @@
     },
     {
       "key": {
+        "uuid": "573069cd_ba9af099",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 557,
+      "author": {
+        "id": 1097723
+      },
+      "writtenOn": "2016-03-14T21:18:24Z",
+      "side": 1,
+      "message": "Nope.",
+      "parentUuid": "573069cd_1a25bc44",
+      "revId": "157aa28fd7bf66bf3d9d1774398fddc7dc255c52",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "573069cd_9a5fecb3",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 1
@@ -138,6 +156,24 @@
       "side": 1,
       "message": "No, just being grumpy ;)",
       "parentUuid": "573069cd_fad2a847",
+      "revId": "157aa28fd7bf66bf3d9d1774398fddc7dc255c52",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "573069cd_5ac1f469",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 589,
+      "author": {
+        "id": 1097723
+      },
+      "writtenOn": "2016-03-14T21:18:24Z",
+      "side": 1,
+      "message": "Not really, it is quite common if/when both platform data and devicetree data are supported.",
+      "parentUuid": "573069cd_9a5fecb3",
       "revId": "157aa28fd7bf66bf3d9d1774398fddc7dc255c52",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
