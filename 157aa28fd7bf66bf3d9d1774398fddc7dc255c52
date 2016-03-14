@@ -127,6 +127,24 @@
     },
     {
       "key": {
+        "uuid": "573069cd_9a6d2c44",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 557,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2016-03-14T21:20:52Z",
+      "side": 1,
+      "message": "@dimitrysh: you are mixing up dev_get_drvdata() and dev_get_platdata(). They are different.",
+      "parentUuid": "573069cd_da86c43e",
+      "revId": "157aa28fd7bf66bf3d9d1774398fddc7dc255c52",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "573069cd_9a5fecb3",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 1
