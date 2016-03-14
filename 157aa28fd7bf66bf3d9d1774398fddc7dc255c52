@@ -145,6 +145,24 @@
     },
     {
       "key": {
+        "uuid": "573069cd_f59e3b7c",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 557,
+      "author": {
+        "id": 1097723
+      },
+      "writtenOn": "2016-03-14T21:21:52Z",
+      "side": 1,
+      "message": "My comment referred to the statement from @Dmitry Shmidt. Brian explained why.",
+      "parentUuid": "573069cd_ba9af099",
+      "revId": "157aa28fd7bf66bf3d9d1774398fddc7dc255c52",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "573069cd_9a5fecb3",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 1
