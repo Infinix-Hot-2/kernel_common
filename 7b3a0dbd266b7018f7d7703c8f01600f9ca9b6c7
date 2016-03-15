@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "97dae1a7_92eb82cc",
+        "filename": "drivers/char/random.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1482,
+      "author": {
+        "id": 1026058
+      },
+      "writtenOn": "2016-03-15T20:22:40Z",
+      "side": 1,
+      "message": "should be get_cycles()",
+      "range": {
+        "startLine": 1482,
+        "startChar": 37,
+        "endLine": 1482,
+        "endChar": 55
+      },
+      "revId": "7b3a0dbd266b7018f7d7703c8f01600f9ca9b6c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
