@@ -22,6 +22,30 @@
       "revId": "b281601ad1925c984f82fa37b2bcd4f20e6b7804",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dcf63e9d_157eb8f0",
+        "filename": "net/wireless/nl80211.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 387,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-03-22T22:59:34Z",
+      "side": 1,
+      "message": "Once you have proper value for index, it will be in proper array offset.",
+      "parentUuid": "dcf63e9d_f2a342c8",
+      "range": {
+        "startLine": 387,
+        "startChar": 1,
+        "endLine": 387,
+        "endChar": 58
+      },
+      "revId": "b281601ad1925c984f82fa37b2bcd4f20e6b7804",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
