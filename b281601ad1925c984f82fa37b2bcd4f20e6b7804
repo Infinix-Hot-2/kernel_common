@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dcf63e9d_f2a342c8",
+        "filename": "net/wireless/nl80211.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 387,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-03-22T20:57:05Z",
+      "side": 1,
+      "message": "Could have initializers for the other intervening numerical attributes, like QOS etc?",
+      "range": {
+        "startLine": 387,
+        "startChar": 1,
+        "endLine": 387,
+        "endChar": 58
+      },
+      "revId": "b281601ad1925c984f82fa37b2bcd4f20e6b7804",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
