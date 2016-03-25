@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3c791a74_df08977c",
+        "filename": "drivers/usb/gadget/functions.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2016-03-25T16:47:05Z",
+      "side": 1,
+      "message": "Maybe we are missing a no-op free function in audio source..\nSeems like functions.c implicitly mandates the existence of a no-op function",
+      "range": {
+        "startLine": 82,
+        "startChar": 1,
+        "endLine": 83,
+        "endChar": 12
+      },
+      "revId": "00129b979db68faa6bc299133940e7d1c52073e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
