@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "71249df3_411ed6ae",
+        "filename": "fs/sdcardfs/main.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1021676
+      },
+      "writtenOn": "2016-03-28T17:10:41Z",
+      "side": 1,
+      "message": "You need to remove this as it is no longer used.",
+      "range": {
+        "startLine": 120,
+        "startChar": 0,
+        "endLine": 120,
+        "endChar": 15
+      },
+      "revId": "d4ecd64643a034f9445d6c7c54d247235200098a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
