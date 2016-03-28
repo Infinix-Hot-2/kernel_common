@@ -46,6 +46,30 @@
       "revId": "e5042f3e33bac41e8729fa23949cfa1053061d70",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "71249df3_4608a77e",
+        "filename": "mm/mmap.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2642,
+      "author": {
+        "id": 1045980
+      },
+      "writtenOn": "2016-03-28T22:28:00Z",
+      "side": 1,
+      "message": "The semaphore is locked before calling into mmap, so we can\u0027t use vm_munmap",
+      "parentUuid": "9c0cc6ef_5ca6311f",
+      "range": {
+        "startLine": 2642,
+        "startChar": 0,
+        "endLine": 2642,
+        "endChar": 13
+      },
+      "revId": "e5042f3e33bac41e8729fa23949cfa1053061d70",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
