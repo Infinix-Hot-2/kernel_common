@@ -70,6 +70,30 @@
       "revId": "e5042f3e33bac41e8729fa23949cfa1053061d70",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "71249df3_e6c0bb68",
+        "filename": "mm/mmap.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2642,
+      "author": {
+        "id": 1097718
+      },
+      "writtenOn": "2016-03-28T23:29:19Z",
+      "side": 1,
+      "message": "That is what I suspected. Is the patch ready to go ? If yes, can someone please give it a +2 ?",
+      "parentUuid": "71249df3_4608a77e",
+      "range": {
+        "startLine": 2642,
+        "startChar": 0,
+        "endLine": 2642,
+        "endChar": 13
+      },
+      "revId": "e5042f3e33bac41e8729fa23949cfa1053061d70",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
