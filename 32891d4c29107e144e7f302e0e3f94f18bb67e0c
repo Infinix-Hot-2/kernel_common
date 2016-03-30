@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "119a81ee_b0f860de",
+        "filename": "drivers/md/dm-verity-fec.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 1058768
+      },
+      "writtenOn": "2016-03-30T22:52:11Z",
+      "side": 1,
+      "message": "Done. I used atomic_t, because this value can be updated by more than one kernel thread at a time.",
+      "parentUuid": "119a81ee_859888a3",
+      "range": {
+        "startLine": 181,
+        "startChar": 2,
+        "endLine": 181,
+        "endChar": 27
+      },
+      "revId": "32891d4c29107e144e7f302e0e3f94f18bb67e0c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "119a81ee_856fa833",
         "filename": "drivers/md/dm-verity-fec.h",
         "patchSetId": 1
