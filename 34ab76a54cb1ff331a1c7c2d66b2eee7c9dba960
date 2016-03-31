@@ -68,6 +68,24 @@
       "revId": "34ab76a54cb1ff331a1c7c2d66b2eee7c9dba960",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "119a81ee_97551344",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 3541,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2016-03-31T18:26:16Z",
+      "side": 1,
+      "message": "Seems like we could use the system class. I\u0027ll put something together. The plan is to get upstream acceptance first, then backport to Android.",
+      "parentUuid": "d13389d5_6a151720",
+      "revId": "34ab76a54cb1ff331a1c7c2d66b2eee7c9dba960",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
