@@ -27,7 +27,11 @@ $(warning LSE atomics not supported by binutils)
 endif
 
 KBUILD_CFLAGS	+= -mgeneral-regs-only $(lseinstr)
+<<<<<<< HEAD   (e7d40d ANDROID: dm verity fec: add sysfs attribute fec/corrected)
 KBUILD_CFLAGS	+= -fno-pic
+=======
+KBUILD_CFLAGS	+= $(call cc-option, -mpc-relative-literal-loads)
+>>>>>>> BRANCH (0d1912 Linux 4.4.6)
 KBUILD_AFLAGS	+= $(lseinstr)
 
 ifeq ($(CONFIG_CPU_BIG_ENDIAN), y)
