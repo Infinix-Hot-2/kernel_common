@@ -33,6 +33,24 @@
       "revId": "34ab76a54cb1ff331a1c7c2d66b2eee7c9dba960",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "119a81ee_fcc9de29",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2016-03-31T17:02:19Z",
+      "side": 1,
+      "message": "sorry, ignore this comment.",
+      "parentUuid": "119a81ee_1cb84aa1",
+      "revId": "34ab76a54cb1ff331a1c7c2d66b2eee7c9dba960",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
