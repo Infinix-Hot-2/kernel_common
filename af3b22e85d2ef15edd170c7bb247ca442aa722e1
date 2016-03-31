@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d13389d5_0a257b85",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 3555,
+      "author": {
+        "id": 1010111
+      },
+      "writtenOn": "2016-03-31T18:44:46Z",
+      "side": 1,
+      "message": "You must be using an interesting compiler to dereference void pointers ;)",
+      "revId": "af3b22e85d2ef15edd170c7bb247ca442aa722e1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
