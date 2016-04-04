@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "2e3f20ea_958daff5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2016-04-04T17:29:24Z",
+      "side": 1,
+      "message": "No, this also checks the init_module path. The following  rule only grants access via the finit_module path:\n\nallow init system_file:system module_load;\n\nIf I want stronger enforcement I can also neverallow access via init_module. Example:\nneverallow domain domain:system module_load;",
+      "parentUuid": "2e3f20ea_152a3fbb",
+      "revId": "7e479e81c649ad76a79df8bd25b482d47eb043a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e3f20ea_5fe066e2",
         "filename": "security/selinux/hooks.c",
         "patchSetId": 6
