@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e3f20ea_1f737e24",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2016-04-04T17:10:17Z",
+      "side": 1,
+      "message": "The LSM hook went in four years ago but remains unused finit_module and init_module use the same hook.\n\ninit_module calls security_kernel_module_from_file(NULL)\nfinit_module calls security_kernel_module_from_file(file)\n\ncap_sys_module grants permission to load kernel modules with no notion of origin. I would say this adds additional scrutiny. The sys_module permission is still be necessary.",
+      "parentUuid": "2e3f20ea_1fc9be73",
+      "revId": "7e479e81c649ad76a79df8bd25b482d47eb043a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e3f20ea_5fe066e2",
         "filename": "security/selinux/hooks.c",
         "patchSetId": 6
