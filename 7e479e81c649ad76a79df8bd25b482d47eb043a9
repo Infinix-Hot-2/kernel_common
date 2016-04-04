@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e3f20ea_1fc9be73",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1013433
+      },
+      "writtenOn": "2016-04-04T02:52:12Z",
+      "side": 1,
+      "message": "So SE Linux never had a check on syscall finit_module(), just init_module()? how does this fit with cap sys_module? Does this just add additional scrutiny to a path being checked or add something brand new?",
+      "revId": "7e479e81c649ad76a79df8bd25b482d47eb043a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e3f20ea_5fe066e2",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 3547,
+      "author": {
+        "id": 1013433
+      },
+      "writtenOn": "2016-04-04T02:52:12Z",
+      "side": 1,
+      "message": "Scrolling up I see the usage of ! instead of \u003d\u003d NULL",
+      "revId": "7e479e81c649ad76a79df8bd25b482d47eb043a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e3f20ea_3fe59af2",
+        "filename": "security/selinux/hooks.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 3548,
+      "author": {
+        "id": 1013433
+      },
+      "writtenOn": "2016-04-04T02:52:12Z",
+      "side": 1,
+      "message": "I would just return on a tail call, but that\u0027s just me.. I see code above that does both (bail early vs goto out)",
+      "revId": "7e479e81c649ad76a79df8bd25b482d47eb043a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
