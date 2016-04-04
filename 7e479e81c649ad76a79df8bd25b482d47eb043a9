@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "2e3f20ea_152a3fbb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1013433
+      },
+      "writtenOn": "2016-04-04T17:17:29Z",
+      "side": 1,
+      "message": "Assuming the loading process has read on the fd being passed during finit_module(), couldn\u0027t the process just read it in and call init_module() and avoid the additional check on the fd? So assuming an attacked service, it doesn\u0027t add anything they cannot already do if they have cap sys_module granted, is that right?\n\nThis would really only scrutinize properly running code, and would at least allow for development auditing of what services are trying to load what and from where.",
+      "parentUuid": "2e3f20ea_1f737e24",
+      "revId": "7e479e81c649ad76a79df8bd25b482d47eb043a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e3f20ea_5fe066e2",
         "filename": "security/selinux/hooks.c",
         "patchSetId": 6
