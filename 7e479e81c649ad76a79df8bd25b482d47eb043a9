@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "2e3f20ea_d0a2a5bd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1013433
+      },
+      "writtenOn": "2016-04-04T17:54:45Z",
+      "side": 1,
+      "message": "Ahh good point.",
+      "parentUuid": "2e3f20ea_958daff5",
+      "revId": "7e479e81c649ad76a79df8bd25b482d47eb043a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e3f20ea_5fe066e2",
         "filename": "security/selinux/hooks.c",
         "patchSetId": 6
