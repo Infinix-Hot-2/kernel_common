@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0bac0e06_fe6d5f05",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-04-14T19:25:13Z",
+      "side": 1,
+      "message": "This may give you problems getting upstream. If you can cite examples of others in /proc (or /sys) doing the same thing, then you may be able to convince. Otherwise it may be better to switch to a more opened permissions (eg: others rw) and allow selinux to gate access with a backup to block non-thread-group members?",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 17
+      },
+      "revId": "b0657a45b1d49d00daa17194669599c96989ad74",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
