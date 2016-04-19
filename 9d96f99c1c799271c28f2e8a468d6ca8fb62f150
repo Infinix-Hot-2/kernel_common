@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e86b402f_4c31d3e3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-04-19T19:49:25Z",
+      "side": 1,
+      "message": "Add a brief message explaining why we\u0027re removing this, e.g.:\n\n\"Drivers should use extcon moving forward.  Documentation/extcon/porting-android-switch-class describes how to port existing switch class drivers to extcon.\"",
+      "revId": "9d96f99c1c799271c28f2e8a468d6ca8fb62f150",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
