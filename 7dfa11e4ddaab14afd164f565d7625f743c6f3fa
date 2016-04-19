@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e86b402f_035b2e03",
+        "filename": "mm/vmscan.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-04-19T17:37:54Z",
+      "side": 1,
+      "message": "No need to assign 0",
+      "range": {
+        "startLine": 230,
+        "startChar": 9,
+        "endLine": 230,
+        "endChar": 10
+      },
+      "revId": "7dfa11e4ddaab14afd164f565d7625f743c6f3fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
