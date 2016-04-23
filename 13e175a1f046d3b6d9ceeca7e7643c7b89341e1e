@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e87a6032_4ebfaa22",
+        "filename": "net/netfilter/xt_qtaguid.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1694,
+      "author": {
+        "id": 1005480
+      },
+      "writtenOn": "2016-04-23T00:50:13Z",
+      "side": 1,
+      "message": "with this new magic does the following comment still apply?",
+      "revId": "13e175a1f046d3b6d9ceeca7e7643c7b89341e1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
