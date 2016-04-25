@@ -16,6 +16,24 @@
       "revId": "13e175a1f046d3b6d9ceeca7e7643c7b89341e1e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8862c5ec_4952c104",
+        "filename": "net/netfilter/xt_qtaguid.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1694,
+      "author": {
+        "id": 1010110
+      },
+      "writtenOn": "2016-04-25T23:51:52Z",
+      "side": 1,
+      "message": "I\u0027m no networking expert, so take my thoughts with a grain of salt...\n\nIt looks like it might still apply, though looking at other examples, it might be able to be improved. I see some other cases using the following helper...\n\n/* This helper checks if a socket is a full socket,\n * ie _not_ a timewait or request socket.\n */\nstatic inline bool sk_fullsock(const struct sock *sk)\n{\n        return (1 \u003c\u003c sk-\u003esk_state) \u0026 ~(TCPF_TIME_WAIT | TCPF_NEW_SYN_RECV);\n}",
+      "parentUuid": "e87a6032_4ebfaa22",
+      "revId": "13e175a1f046d3b6d9ceeca7e7643c7b89341e1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
