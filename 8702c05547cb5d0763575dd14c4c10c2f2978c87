@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e87a6032_4dea4291",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1010110
+      },
+      "writtenOn": "2016-04-25T21:40:08Z",
+      "side": 1,
+      "message": "This bit in the commit message seems confusing, as the patch is reverting the original feature, but the commit message is from the trial patch to fix the issue.",
+      "range": {
+        "startLine": 28,
+        "startChar": 22,
+        "endLine": 29,
+        "endChar": 57
+      },
+      "revId": "8702c05547cb5d0763575dd14c4c10c2f2978c87",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
