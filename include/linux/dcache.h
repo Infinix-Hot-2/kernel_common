@@ -161,8 +161,12 @@ struct dentry_operations {
 	struct vfsmount *(*d_automount)(struct path *);
 	int (*d_manage)(struct dentry *, bool);
 	struct inode *(*d_select_inode)(struct dentry *, unsigned);
+<<<<<<< HEAD   (a4fae4 hikey_defconfig: Enable suspend support)
 	struct dentry *(*d_real)(struct dentry *, struct inode *);
 	void (*d_canonical_path)(const struct dentry *, struct path *);
+=======
+	void (*d_canonical_path)(const struct path *, struct path *);
+>>>>>>> BRANCH (b2cee9 Revert "Recreate asm/mach/mmc.h include file")
 } ____cacheline_aligned;
 
 /*
