@@ -2931,6 +2931,10 @@ static struct si_dpm_quirk si_dpm_quirk_list[] = {
 	{ PCI_VENDOR_ID_ATI, 0x6811, 0x1462, 0x2015, 0, 120000 },
 	{ PCI_VENDOR_ID_ATI, 0x6811, 0x1043, 0x2015, 0, 120000 },
 	{ PCI_VENDOR_ID_ATI, 0x6811, 0x148c, 0x2015, 0, 120000 },
+<<<<<<< HEAD   (4914cd Merge remote-tracking branch 'common/android-4.4' into hikey)
+=======
+	{ PCI_VENDOR_ID_ATI, 0x6810, 0x1682, 0x9275, 0, 120000 },
+>>>>>>> BRANCH (1a1a51 Linux 4.4.9)
 	{ 0, 0, 0, 0 },
 };
 

@@ -148,7 +148,11 @@ static void regulator_lock_supply(struct regulator_dev *rdev)
 {
 	int i;
 
+<<<<<<< HEAD   (4914cd Merge remote-tracking branch 'common/android-4.4' into hikey)
 	for (i = 0; rdev->supply; rdev = rdev_get_supply(rdev), i++)
+=======
+	for (i = 0; rdev; rdev = rdev_get_supply(rdev), i++)
+>>>>>>> BRANCH (1a1a51 Linux 4.4.9)
 		mutex_lock_nested(&rdev->mutex, i);
 }
 

@@ -162,7 +162,10 @@ struct dentry_operations {
 	int (*d_manage)(struct dentry *, bool);
 	struct inode *(*d_select_inode)(struct dentry *, unsigned);
 	struct dentry *(*d_real)(struct dentry *, struct inode *);
+<<<<<<< HEAD   (4914cd Merge remote-tracking branch 'common/android-4.4' into hikey)
 	void (*d_canonical_path)(const struct path *, struct path *);
+=======
+>>>>>>> BRANCH (1a1a51 Linux 4.4.9)
 } ____cacheline_aligned;
 
 /*

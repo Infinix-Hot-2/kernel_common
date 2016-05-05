@@ -212,6 +212,12 @@ static int ccp_sha_export(struct ahash_request *req, void *out)
 	struct ccp_sha_req_ctx *rctx = ahash_request_ctx(req);
 	struct ccp_sha_exp_ctx state;
 
+<<<<<<< HEAD   (4914cd Merge remote-tracking branch 'common/android-4.4' into hikey)
+=======
+	/* Don't let anything leak to 'out' */
+	memset(&state, 0, sizeof(state));
+
+>>>>>>> BRANCH (1a1a51 Linux 4.4.9)
 	state.type = rctx->type;
 	state.msg_bits = rctx->msg_bits;
 	state.first = rctx->first;

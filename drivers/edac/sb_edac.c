@@ -1396,7 +1396,11 @@ static int get_memory_error_data(struct mem_ctl_info *mci,
 	}
 
 	ch_way = TAD_CH(reg) + 1;
+<<<<<<< HEAD   (4914cd Merge remote-tracking branch 'common/android-4.4' into hikey)
 	sck_way = 1 << TAD_SOCK(reg);
+=======
+	sck_way = TAD_SOCK(reg);
+>>>>>>> BRANCH (1a1a51 Linux 4.4.9)
 
 	if (ch_way == 3)
 		idx = addr >> 6;
@@ -1435,7 +1439,7 @@ static int get_memory_error_data(struct mem_ctl_info *mci,
 		switch(ch_way) {
 		case 2:
 		case 4:
-			sck_xch = 1 << sck_way * (ch_way >> 1);
+			sck_xch = (1 << sck_way) * (ch_way >> 1);
 			break;
 		default:
 			sprintf(msg, "Invalid mirror set. Can't decode addr");
@@ -1471,7 +1475,11 @@ static int get_memory_error_data(struct mem_ctl_info *mci,
 
 	ch_addr = addr - offset;
 	ch_addr >>= (6 + shiftup);
+<<<<<<< HEAD   (4914cd Merge remote-tracking branch 'common/android-4.4' into hikey)
 	ch_addr /= ch_way * sck_way;
+=======
+	ch_addr /= sck_xch;
+>>>>>>> BRANCH (1a1a51 Linux 4.4.9)
 	ch_addr <<= (6 + shiftup);
 	ch_addr |= addr & ((1 << (6 + shiftup)) - 1);
 
@@ -2254,7 +2262,7 @@ static int sbridge_mce_check_error(struct notifier_block *nb, unsigned long val,
 
 	mci = get_mci_for_node_id(mce->socketid);
 	if (!mci)
-		return NOTIFY_BAD;
+		return NOTIFY_DONE;
 	pvt = mci->pvt_info;
 
 	/*

@@ -1,6 +1,10 @@
 VERSION = 4
 PATCHLEVEL = 4
+<<<<<<< HEAD   (4914cd Merge remote-tracking branch 'common/android-4.4' into hikey)
 SUBLEVEL = 8
+=======
+SUBLEVEL = 9
+>>>>>>> BRANCH (1a1a51 Linux 4.4.9)
 EXTRAVERSION =
 NAME = Blurry Fish Butt
 

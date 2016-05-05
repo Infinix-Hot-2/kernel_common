@@ -1149,6 +1149,13 @@ static int snapshot_ctr(struct dm_target *ti, unsigned int argc, char **argv)
 		goto bad_cow;
 	}
 
+	cow_dev = dm_get_dev_t(cow_path);
+	if (cow_dev && cow_dev == origin_dev) {
+		ti->error = "COW device cannot be the same as origin device";
+		r = -EINVAL;
+		goto bad_cow;
+	}
+
 	r = dm_get_device(ti, cow_path, dm_table_get_mode(ti->table), &s->cow);
 	if (r) {
 		ti->error = "Cannot get COW device";
