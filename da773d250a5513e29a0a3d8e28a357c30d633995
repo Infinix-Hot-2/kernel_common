@@ -22,6 +22,30 @@
       "revId": "da773d250a5513e29a0a3d8e28a357c30d633995",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad331bd6_aa08efc9",
+        "filename": "net/ipv6/ip6_vti.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 559,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-05-06T20:49:48Z",
+      "side": 1,
+      "message": "The problem is that this is error handler. But sock_i_uid() if skb-\u003esk is NULL will return GLOBAL_ROOT_UID and not INVALID_UID.",
+      "parentUuid": "ce666912_786d21cf",
+      "range": {
+        "startLine": 559,
+        "startChar": 40,
+        "endLine": 559,
+        "endChar": 51
+      },
+      "revId": "da773d250a5513e29a0a3d8e28a357c30d633995",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
