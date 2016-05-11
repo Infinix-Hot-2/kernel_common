@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f2725490_5d956fea",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1231,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-05-11T23:13:14Z",
+      "side": 1,
+      "message": "Move this to the top with all the other globals.",
+      "revId": "607a3bc968d782b8557aca07a9b2356711d01cdd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f2725490_fd6f1bec",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1238,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-05-11T23:13:14Z",
+      "side": 1,
+      "message": "move up, also do you need this function, or can it be a module param like the existing options.",
+      "revId": "607a3bc968d782b8557aca07a9b2356711d01cdd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
