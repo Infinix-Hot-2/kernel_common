@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f2725490_282793bd",
+        "filename": "drivers/staging/android/fiq_debugger/fiq_debugger.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-05-12T00:06:14Z",
+      "side": 1,
+      "message": "fiq_ is not needed in the paramter name, as this disables the entire driver",
+      "range": {
+        "startLine": 132,
+        "startChar": 19,
+        "endLine": 132,
+        "endChar": 23
+      },
+      "revId": "6b0c55ff9d5a07f909010a37df309f1e4ac94cdc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
