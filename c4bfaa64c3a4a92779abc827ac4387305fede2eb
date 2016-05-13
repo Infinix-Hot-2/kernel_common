@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f2725490_4042d452",
+        "filename": "drivers/trusty/trusty-ipc.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1082545
+      },
+      "writtenOn": "2016-05-13T08:58:14Z",
+      "side": 1,
+      "message": "this code will cause \"nested sleeping primitives\" issue which are turning up on systems running the 3.19-rc kernels... because now you\u0027re porting it to 4.4 kernel version. \n\nsee these link for references:\nhttps://lwn.net/Articles/628628/ \nhttps://lists.linuxfoundation.org/pipermail/virtualization/2015-February/029369.html \n\nEventually, we will see the kernel warning log like this: \n --- do not call blocking ops when !TASK_RUNNING; state\u003d1 ....\n\nfor bug fix, refer to :\nhttps://lists.linuxfoundation.org/pipermail/virtualization/2015-February/029392.html\nhttp://article.gmane.org/gmane.linux.kernel.virtualization/24851",
+      "range": {
+        "startLine": 322,
+        "startChar": 4,
+        "endLine": 322,
+        "endChar": 11
+      },
+      "revId": "c4bfaa64c3a4a92779abc827ac4387305fede2eb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
