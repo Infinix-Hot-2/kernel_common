@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f2725490_7307930a",
+        "filename": "kernel/power/wakeup_reason.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-05-16T23:58:10Z",
+      "side": 1,
+      "message": "This should be inside #ifdef IS_ENABLED(CONFIG_SUSPEND_TIME) ... #endif",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 45
+      },
+      "revId": "cec859184f3256622677300353a64a5a13b3d7c8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f2725490_930c2f2f",
+        "filename": "kernel/power/wakeup_reason.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-05-16T23:58:10Z",
+      "side": 1,
+      "message": "Same",
+      "range": {
+        "startLine": 173,
+        "startChar": 0,
+        "endLine": 174,
+        "endChar": 30
+      },
+      "revId": "cec859184f3256622677300353a64a5a13b3d7c8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
