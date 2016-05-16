@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f2725490_f2dc8483",
+        "filename": "kernel/power/wakeup_reason.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1041663
+      },
+      "writtenOn": "2016-05-16T18:32:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f2725490_32e19cad",
+      "range": {
+        "startLine": 193,
+        "startChar": 7,
+        "endLine": 193,
+        "endChar": 19
+      },
+      "revId": "f797b4671b842f70d922c4583f3968b8865c5488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f2725490_f28804da",
         "filename": "kernel/power/wakeup_reason.c",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2016-05-16T18:16:31Z",
       "side": 1,
       "message": "On kernels without CONFIG_SUSPEND_TIME you\u0027ll still make the debugfs entry, it\u0027ll just read from buckets all filled with 0.\n\nI think CONFIG_SUSPEND_TIME needs to depend on CONFIG_DEBUG_FS (since it doesn\u0027t make sense to keep track of these statistics without a consumer).  Then make this #if IS_ENABLED(CONFIG_SUSPEND_TIME).",
+      "range": {
+        "startLine": 212,
+        "startChar": 7,
+        "endLine": 212,
+        "endChar": 22
+      },
+      "revId": "f797b4671b842f70d922c4583f3968b8865c5488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f2725490_d2df8875",
+        "filename": "kernel/power/wakeup_reason.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 1041663
+      },
+      "writtenOn": "2016-05-16T18:32:42Z",
+      "side": 1,
+      "message": "I think the logs in the kernel about amount of time the AP was in suspend is useful even if we do not check the degug file. \n\nAgreed on not having to read null bins if SUSPEND_TIME is not enabled.",
+      "parentUuid": "f2725490_f28804da",
       "range": {
         "startLine": 212,
         "startChar": 7,
