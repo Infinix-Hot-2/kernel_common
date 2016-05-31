@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "39df75f4_d29d226d",
+        "filename": "kernel/power/suspend.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 383,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-05-31T23:04:34Z",
+      "side": 0,
+      "message": "NB: we need to preserve this format as klogd uses them to help synchronize kernel message with user space messages. Appears that show_time does this correctly.",
+      "range": {
+        "startLine": 383,
+        "startChar": 9,
+        "endLine": 383,
+        "endChar": 62
+      },
+      "revId": "ed0b9b4e69b8beaa6bd3da338fa5a31cc0c3db2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}

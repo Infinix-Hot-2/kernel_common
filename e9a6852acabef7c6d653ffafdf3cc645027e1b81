@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "39df75f4_92c0fa41",
+        "filename": "arch/arm/kernel/process.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-05-31T23:04:34Z",
+      "side": 1,
+      "message": "would not hurt to put a more detailed message here, and in the other places where you pass in a NULL, even if smp_send_stop() gives us some logging context.\n\neg: \"Off:\" here and \"Restart:\" below.",
+      "range": {
+        "startLine": 274,
+        "startChar": 11,
+        "endLine": 274,
+        "endChar": 15
+      },
+      "revId": "e9a6852acabef7c6d653ffafdf3cc645027e1b81",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
