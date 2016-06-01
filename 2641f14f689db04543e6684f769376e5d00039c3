@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "39df75f4_e39dfa6c",
+        "filename": "drivers/rtc/rtc-lib.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1071633
+      },
+      "writtenOn": "2016-06-01T01:24:38Z",
+      "side": 1,
+      "message": "rtc_time_to_tm is just a time format transformation function, those function seems to be in rtc-lib but are not strictly related to rtc. I added show_time to rtc.h header to keep the same philosophy.",
+      "parentUuid": "39df75f4_7581c0d8",
+      "range": {
+        "startLine": 93,
+        "startChar": 5,
+        "endLine": 93,
+        "endChar": 14
+      },
+      "revId": "2641f14f689db04543e6684f769376e5d00039c3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "39df75f4_12872a27",
         "filename": "drivers/rtc/rtc-lib.c",
         "patchSetId": 2
@@ -59,6 +83,30 @@
       "writtenOn": "2016-06-01T00:01:46Z",
       "side": 1,
       "message": "The existing implementation logs at INFO and this logs at DEFAULT; is this intended?",
+      "range": {
+        "startLine": 100,
+        "startChar": 1,
+        "endLine": 100,
+        "endChar": 7
+      },
+      "revId": "2641f14f689db04543e6684f769376e5d00039c3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39df75f4_039b5e78",
+        "filename": "drivers/rtc/rtc-lib.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1071633
+      },
+      "writtenOn": "2016-06-01T01:24:38Z",
+      "side": 1,
+      "message": "info is the right level",
+      "parentUuid": "39df75f4_12872a27",
       "range": {
         "startLine": 100,
         "startChar": 1,
