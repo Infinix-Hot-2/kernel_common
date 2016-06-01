@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "39df75f4_756a2003",
+        "filename": "arch/arm/kernel/process.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-06-01T00:01:46Z",
+      "side": 1,
+      "message": "Would a generic reboot notifier work instead of instrumenting every architecture?  (Keep in mind that we support x86 and MIPS too ...)",
+      "range": {
+        "startLine": 274,
+        "startChar": 1,
+        "endLine": 274,
+        "endChar": 10
+      },
+      "revId": "2641f14f689db04543e6684f769376e5d00039c3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39df75f4_7581c0d8",
+        "filename": "drivers/rtc/rtc-lib.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-06-01T00:01:46Z",
+      "side": 1,
+      "message": "rtc_time_show\n\nso it\u0027s clearer which subsystem is actually generating the time",
+      "range": {
+        "startLine": 93,
+        "startChar": 5,
+        "endLine": 93,
+        "endChar": 14
+      },
+      "revId": "2641f14f689db04543e6684f769376e5d00039c3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39df75f4_12872a27",
+        "filename": "drivers/rtc/rtc-lib.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-06-01T00:01:46Z",
+      "side": 1,
+      "message": "The existing implementation logs at INFO and this logs at DEFAULT; is this intended?",
+      "range": {
+        "startLine": 100,
+        "startChar": 1,
+        "endLine": 100,
+        "endChar": 7
+      },
+      "revId": "2641f14f689db04543e6684f769376e5d00039c3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
