@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "39df75f4_f8dfe07a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-06-01T17:45:03Z",
+      "side": 1,
+      "message": "_if_ this ever gets upstreamed, better to have the footer in this order:\n\nSigned-off-by:\nBug:\nChange-Id:\n\nAs it is easier to remove the last two lines to make the commit compliant, than it is to edit them out of the middle.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 52
+      },
+      "revId": "aac47acd7353fa6b29779880e0b9c6f5d2b05955",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39df75f4_1843c407",
+        "filename": "arch/arm64/kernel/traps.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-06-01T17:45:03Z",
+      "side": 1,
+      "message": "As noted before, prefer not to have NULL passed in. fix in arm and arm64 code.\n\nrtc_show_time(\"Internal error:\");",
+      "range": {
+        "startLine": 199,
+        "startChar": 11,
+        "endLine": 199,
+        "endChar": 15
+      },
+      "revId": "aac47acd7353fa6b29779880e0b9c6f5d2b05955",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39df75f4_b845d83a",
+        "filename": "drivers/rtc/rtc-lib.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-06-01T17:45:03Z",
+      "side": 1,
+      "message": "everything in here is rtc_\n\nrtc_show_time() please, or move to another file or library?",
+      "range": {
+        "startLine": 93,
+        "startChar": 5,
+        "endLine": 93,
+        "endChar": 14
+      },
+      "revId": "aac47acd7353fa6b29779880e0b9c6f5d2b05955",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
