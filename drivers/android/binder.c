@@ -145,7 +145,7 @@ enum binder_stat_types {
 
 struct binder_stats {
 	int br[_IOC_NR(BR_FAILED_REPLY) + 1];
-	int bc[_IOC_NR(BC_DEAD_BINDER_DONE) + 1];
+	int bc[_IOC_NR(BC_REPLY_SG) + 1];
 };
 
 /* These are still global, since it's not always easy to get the context */
@@ -313,6 +313,7 @@ struct binder_buffer {
 	struct binder_node *target_node;
 	size_t data_size;
 	size_t offsets_size;
+	size_t sg_buffers_size;
 	uint8_t data[0];
 };
 
@@ -754,7 +755,9 @@ err_no_vma:
 
 static struct binder_buffer *binder_alloc_buf(struct binder_proc *proc,
 					      size_t data_size,
-					      size_t offsets_size, int is_async)
+					      size_t offsets_size,
+					      size_t sg_buffers_size,
+					      int is_async)
 {
 	struct rb_node *n = proc->free_buffers.rb_node;
 	struct binder_buffer *buffer;
@@ -771,9 +774,10 @@ static struct binder_buffer *binder_alloc_buf(struct binder_proc *proc,
 	}
 
 	size = ALIGN(data_size, sizeof(void *)) +
-		ALIGN(offsets_size, sizeof(void *));
+		ALIGN(offsets_size, sizeof(void *)) +
+		ALIGN(sg_buffers_size, sizeof(void *));
 
-	if (size < data_size || size < offsets_size) {
+	if (size < data_size || size < offsets_size || size < sg_buffers_size) {
 		binder_user_error("%d: got transaction with invalid size %zd-%zd\n",
 				proc->pid, data_size, offsets_size);
 		return NULL;
@@ -847,6 +851,7 @@ static struct binder_buffer *binder_alloc_buf(struct binder_proc *proc,
 		      proc->pid, size, buffer);
 	buffer->data_size = data_size;
 	buffer->offsets_size = offsets_size;
+	buffer->sg_buffers_size = sg_buffers_size;
 	buffer->async_transaction = is_async;
 	if (is_async) {
 		proc->free_async_space -= size + sizeof(struct binder_buffer);
@@ -921,7 +926,8 @@ static void binder_free_buf(struct binder_proc *proc,
 	buffer_size = binder_buffer_size(proc, buffer);
 
 	size = ALIGN(buffer->data_size, sizeof(void *)) +
-		ALIGN(buffer->offsets_size, sizeof(void *));
+		ALIGN(buffer->offsets_size, sizeof(void *)) +
+		ALIGN(buffer->sg_buffers_size, sizeof(void *));
 
 	binder_debug(BINDER_DEBUG_BUFFER_ALLOC,
 		     "%d: binder_free_buf %p size %zd buffer_size %zd\n",
@@ -1350,7 +1356,7 @@ static void binder_transaction_buffer_release(struct binder_proc *proc,
 					      struct binder_buffer *buffer,
 					      binder_size_t *failed_at)
 {
-	binder_size_t *offp, *off_end;
+	binder_size_t *offp, *off_start, *off_end;
 	int debug_id = buffer->debug_id;
 
 	binder_debug(BINDER_DEBUG_TRANSACTION,
@@ -1361,7 +1367,7 @@ static void binder_transaction_buffer_release(struct binder_proc *proc,
 	if (buffer->target_node)
 		binder_dec_node(buffer->target_node, 1, 0);
 
-	offp = (binder_size_t *)(buffer->data +
+	off_start = offp = (binder_size_t *)(buffer->data +
 				 ALIGN(buffer->data_size, sizeof(void *)));
 	if (failed_at)
 		off_end = failed_at;
@@ -1436,8 +1442,64 @@ static void binder_transaction_buffer_release(struct binder_proc *proc,
 				     "        fd %d\n", fp->fd);
 			if (failed_at)
 				task_close_fd(proc, fp->fd);
-		} break;
+			break;
+		}
+		case BINDER_TYPE_PTR:
+			/* Nothing to do here, this will get cleaned up when the
+			 * transaction buffer gets freed */
+			break;
+		case BINDER_TYPE_FDA: {
+			struct binder_fd_array_object *fda;
+			struct binder_buffer_object *parent;
+			binder_size_t *parent_off;
+			uint8_t *parent_buffer;
+			int* fd_array;
+			size_t fd_index;
+			if (*offp > buffer->data_size - sizeof(*fda) ||
+			    buffer->data_size < sizeof(*fda)) {
+				pr_err("transaction release %d bad offset %lld, size %zd\n",
+				       debug_id, (u64)*offp, buffer->data_size);
+				continue;
+			}
+			if (!failed_at)
+				continue; /* No work to do */
 
+                        fda = (struct binder_fd_array_object *) hdr;
+			/* Find the parent buffer containing the fd array */
+			parent_off = off_start + fda->parent;
+			if (parent_off < off_start || parent_off >= offp) {
+				pr_err("transaction release %d bad parent offset",
+				       debug_id);
+				continue;
+			}
+			parent = (struct binder_buffer_object *)(buffer->data + *parent_off);
+			/* Verify parent */
+			if (parent->hdr.type != BINDER_TYPE_PTR) {
+				pr_err("transaction release %d bad parent type",
+				       debug_id);
+				continue;
+			}
+			/* Since the parent was already fixed up, convert it
+			 * back to kernel address space to access it
+			 */
+			parent_buffer = (uint8_t *) (parent->buffer - proc->user_buffer_offset);
+			if ((fda->num_fds > BINDER_MAX_FDS_IN_FDA) ||
+			    (sizeof(int) * fda->num_fds > parent->length)) {
+				binder_user_error("transaction release %d invalid number of fds\n",
+					  debug_id);
+				continue;
+			}
+			if (fda->parent_offset > parent->length - sizeof(int) * fda->num_fds) {
+				// No space for all file descriptors here.
+				binder_user_error("transaction release %d invalid parent offset\n",
+					  debug_id);
+				continue;
+			}
+			fd_array = (int*)(parent_buffer + fda->parent_offset);
+			for (fd_index = 0; fd_index < fda->num_fds; fd_index++) {
+				task_close_fd(proc, fd_array[fd_index]);
+			}
+		} break;
 		default:
 			pr_err("transaction release %d bad object type %x\n",
 				debug_id, hdr->type);
@@ -1448,12 +1510,14 @@ static void binder_transaction_buffer_release(struct binder_proc *proc,
 
 static void binder_transaction(struct binder_proc *proc,
 			       struct binder_thread *thread,
-			       struct binder_transaction_data *tr, int reply)
+			       struct binder_transaction_data *tr, int reply,
+			       binder_size_t sg_buffers_size)
 {
 	struct binder_transaction *t;
 	struct binder_work *tcomplete;
-	binder_size_t *offp, *off_end;
+	binder_size_t *offp, *off_end, *off_start;
 	binder_size_t off_min;
+	uint8_t *sg_bufp, *sg_buf_end;
 	struct binder_proc *target_proc;
 	struct binder_thread *target_thread = NULL;
 	struct binder_node *target_node = NULL;
@@ -1589,20 +1653,22 @@ static void binder_transaction(struct binder_proc *proc,
 
 	if (reply)
 		binder_debug(BINDER_DEBUG_TRANSACTION,
-			     "%d:%d BC_REPLY %d -> %d:%d, data %016llx-%016llx size %lld-%lld\n",
+			     "%d:%d BC_REPLY %d -> %d:%d, data %016llx-%016llx size %lld-%lld-%lld\n",
 			     proc->pid, thread->pid, t->debug_id,
 			     target_proc->pid, target_thread->pid,
 			     (u64)tr->data.ptr.buffer,
 			     (u64)tr->data.ptr.offsets,
-			     (u64)tr->data_size, (u64)tr->offsets_size);
+			     (u64)tr->data_size, (u64)tr->offsets_size,
+			     (u64)sg_buffers_size);
 	else
 		binder_debug(BINDER_DEBUG_TRANSACTION,
-			     "%d:%d BC_TRANSACTION %d -> %d - node %d, data %016llx-%016llx size %lld-%lld\n",
+			     "%d:%d BC_TRANSACTION %d -> %d - node %d, data %016llx-%016llx size %lld-%lld-%lld\n",
 			     proc->pid, thread->pid, t->debug_id,
 			     target_proc->pid, target_node->debug_id,
 			     (u64)tr->data.ptr.buffer,
 			     (u64)tr->data.ptr.offsets,
-			     (u64)tr->data_size, (u64)tr->offsets_size);
+			     (u64)tr->data_size, (u64)tr->offsets_size,
+			     (u64)sg_buffers_size);
 
 	if (!reply && !(tr->flags & TF_ONE_WAY))
 		t->from = thread;
@@ -1616,9 +1682,9 @@ static void binder_transaction(struct binder_proc *proc,
 	t->priority = task_nice(current);
 
 	trace_binder_transaction(reply, t, target_node);
-
 	t->buffer = binder_alloc_buf(target_proc, tr->data_size,
-		tr->offsets_size, !reply && (t->flags & TF_ONE_WAY));
+		tr->offsets_size, sg_buffers_size,
+		!reply && (t->flags & TF_ONE_WAY));
 	if (t->buffer == NULL) {
 		return_error = BR_FAILED_REPLY;
 		goto err_binder_alloc_buf_failed;
@@ -1631,7 +1697,7 @@ static void binder_transaction(struct binder_proc *proc,
 	if (target_node)
 		binder_inc_node(context, target_node, 1, 0, NULL);
 
-	offp = (binder_size_t *)(t->buffer->data +
+	offp = off_start = (binder_size_t *)(t->buffer->data +
 				 ALIGN(tr->data_size, sizeof(void *)));
 
 	if (copy_from_user_preempt_disabled(t->buffer->data, (const void __user *)(uintptr_t)
@@ -1655,6 +1721,10 @@ static void binder_transaction(struct binder_proc *proc,
 		goto err_bad_offset;
 	}
 	off_end = (void *)offp + tr->offsets_size;
+	sg_bufp = (uint8_t *)(t->buffer->data +
+			      ALIGN(tr->data_size, sizeof(void *)) +
+			      ALIGN(tr->offsets_size, sizeof(void *)));
+	sg_buf_end = sg_bufp + sg_buffers_size;
 	off_min = 0;
 	for (; offp < off_end; offp++) {
 		struct binder_object_header *hdr;
@@ -1792,7 +1862,6 @@ static void binder_transaction(struct binder_proc *proc,
 					     new_ref->desc, ref->node->debug_id);
 			}
 		} break;
-
 		case BINDER_TYPE_FD: {
 			int target_fd;
 			struct file *file;
@@ -1849,7 +1918,178 @@ static void binder_transaction(struct binder_proc *proc,
 			/* TODO: fput? */
 			fp->fd = target_fd;
 		} break;
+		case BINDER_TYPE_FDA: {
+			binder_size_t fdi;
+			int *fd_array;
+			struct file *file;
+			struct binder_fd_array_object *fda;
+			struct binder_buffer_object *parent;
+			uint8_t *parent_buffer;
+			binder_size_t *parent_off;
+			if (*offp > t->buffer->data_size - sizeof(*fda) ||
+			    t->buffer->data_size < sizeof(*fda)) {
+				binder_user_error("%d:%d got transaction with invalid offset, %lld (min %lld, max %lld)\n",
+					  proc->pid, thread->pid, (u64)*offp,
+					  (u64)off_min,
+					  (u64)(t->buffer->data_size -
+					  sizeof(*fda)));
+				return_error = BR_FAILED_REPLY;
+				goto err_bad_offset;
+			};
+			fda = (struct binder_fd_array_object *) hdr;
+			off_min = *offp + sizeof(struct binder_fd_array_object);
 
+			if (reply) {
+				if (!(in_reply_to->flags & TF_ACCEPT_FDS)) {
+					binder_user_error("%d:%d got reply with fd, but target does not allow fds\n",
+						proc->pid, thread->pid);
+					return_error = BR_FAILED_REPLY;
+					goto err_fd_not_allowed;
+				}
+			} else if (!target_node->accept_fds) {
+				binder_user_error("%d:%d got transaction with fd, but target does not allow fds\n",
+					proc->pid, thread->pid);
+				return_error = BR_FAILED_REPLY;
+				goto err_fd_not_allowed;
+			}
+			parent_off = off_start + fda->parent;
+			if (parent_off < off_start || parent_off >= offp) {
+				binder_user_error("%d:%d got transaction with invalid parent offset\n",
+					  proc->pid, thread->pid);
+				return_error = BR_FAILED_REPLY;
+				goto err_bad_parent;
+			}
+			parent = (struct binder_buffer_object *)
+					(t->buffer->data + *parent_off);
+			/* Verify parent */
+			if (parent->hdr.type != BINDER_TYPE_PTR) {
+				binder_user_error("%d:%d got transaction with invalid parent type\n",
+					  proc->pid, thread->pid);
+				return_error = BR_FAILED_REPLY;
+				goto err_bad_parent;
+			}
+			/* Since the parent was already fixed up, convert it
+			 * back to the kernel address space to access it
+			 */
+			parent_buffer = (uint8_t *)
+					(parent->buffer -
+					 target_proc->user_buffer_offset);
+			if ((fda->num_fds > BINDER_MAX_FDS_IN_FDA) ||
+			    (sizeof(int) * fda->num_fds > parent->length)) {
+				binder_user_error("%d:%d got transaction with invalid number of fds\n",
+					  proc->pid, thread->pid);
+				return_error = BR_FAILED_REPLY;
+				goto err_bad_parent;
+			}
+			if (fda->parent_offset > parent->length -
+					sizeof(int) * fda->num_fds) {
+				/* No space for all file descriptors here. */
+				binder_user_error("%d:%d got transaction with invalid parent offset\n",
+					  proc->pid, thread->pid);
+				return_error = BR_FAILED_REPLY;
+				goto err_bad_parent;
+			}
+			fd_array = (int *)(parent_buffer + fda->parent_offset);
+			for (fdi = 0; fdi < fda->num_fds; fdi++) {
+				int target_fd;
+				int fd = fd_array[fdi];
+				file = fget(fd);
+				if (file == NULL) {
+					binder_user_error("%d:%d got transaction with invalid fd, %d\n",
+						proc->pid, thread->pid, fd);
+					break;
+				}
+				if (security_binder_transfer_file(proc->tsk, target_proc->tsk, file) < 0) {
+					fput(file);
+					break;
+				}
+				target_fd = task_get_unused_fd_flags(target_proc, O_CLOEXEC);
+				if (target_fd < 0) {
+					fput(file);
+					break;
+				}
+				task_fd_install(target_proc, target_fd, file);
+				fd_array[fdi] = target_fd;
+			}
+			if (fdi < fda->num_fds) {
+				/* Failed to allocate fd or security error, free fds installed so far */
+				int num_installed_fds = fdi;
+				for (fdi = 0; fdi < num_installed_fds; fdi++)
+					task_close_fd(target_proc,
+						      fd_array[fdi]);
+				return_error = BR_FAILED_REPLY;
+				goto err_get_unused_fd_failed;
+			}
+		} break;
+		case BINDER_TYPE_PTR: {
+			struct binder_buffer_object *bp;
+			size_t buf_left = sg_buf_end - sg_bufp;
+			if (*offp > t->buffer->data_size - sizeof(*bp) ||
+			    t->buffer->data_size < sizeof(*bp)) {
+				binder_user_error("%d:%d got transaction with invalid offset, %lld (min %lld, max %lld)\n",
+					  proc->pid, thread->pid, (u64)*offp,
+					  (u64)off_min,
+					  (u64)(t->buffer->data_size -
+					  sizeof(*bp)));
+				return_error = BR_FAILED_REPLY;
+				goto err_bad_offset;
+			};
+			bp = (struct binder_buffer_object *)hdr;
+			off_min = *offp + sizeof(struct binder_buffer_object);
+			if (bp->length > buf_left) {
+				binder_user_error("%d:%d got transaction with too large buffer\n",
+					  proc->pid, thread->pid);
+				return_error = BR_FAILED_REPLY;
+				goto err_bad_offset;
+			}
+			if (copy_from_user_preempt_disabled(sg_bufp,
+					   (const void __user *)(uintptr_t)
+					   bp->buffer, bp->length)) {
+				binder_user_error("%d:%d got transaction with invalid offsets ptr\n",
+						proc->pid, thread->pid);
+				return_error = BR_FAILED_REPLY;
+				goto err_copy_data_failed;
+			}
+			/* Fixup buffer pointer to target proc address space */
+			bp->buffer = (uintptr_t)sg_bufp + target_proc->user_buffer_offset;
+			/* Fixup pointer to this buffer in parent buffer if
+			 * needed */
+			if ((bp->flags & BINDER_BUFFER_FLAG_HAS_PARENT) != 0) {
+				struct binder_buffer_object *parent;
+				uint8_t *parent_buffer;
+				binder_size_t *parent_off = off_start + bp->parent;
+				/* Verify parent */
+				if (parent_off < off_start || parent_off >= offp) {
+					binder_user_error("%d:%d got transaction with invalid parent offset\n",
+						  proc->pid, thread->pid);
+					return_error = BR_FAILED_REPLY;
+					goto err_bad_parent;
+				}
+				parent = (struct binder_buffer_object *)(t->buffer->data + *parent_off);
+				/* Verify parent */
+				if (parent->hdr.type != BINDER_TYPE_PTR) {
+					binder_user_error("%d:%d got transaction with invalid parent buffer type\n",
+						proc->pid, thread->pid);
+					return_error = BR_FAILED_REPLY;
+					goto err_bad_parent;
+				}
+				/* Since the parent was already fixed up, convert it
+				 * back to the kernel address space to access it
+				 */
+				parent_buffer = (uint8_t *) (parent->buffer - target_proc->user_buffer_offset);
+				if (bp->parent_offset > parent->length - sizeof(binder_uintptr_t)) {
+					/* No space for a pointer here! */
+					binder_user_error("%d:%d got transaction with invalid parent offset\n",
+						  proc->pid, thread->pid);
+					return_error = BR_FAILED_REPLY;
+					goto err_bad_parent;
+				}
+				*(uintptr_t *)(parent_buffer + bp->parent_offset) =
+					(uintptr_t) sg_bufp + target_proc->user_buffer_offset;
+			}
+			sg_bufp += bp->length;
+
+		} break;
 		default:
 			binder_user_error("%d:%d got transaction with invalid object type, %x\n",
 				proc->pid, thread->pid, hdr->type);
@@ -1895,6 +2135,7 @@ err_binder_get_ref_failed:
 err_binder_new_node_failed:
 err_bad_object_type:
 err_bad_offset:
+err_bad_parent:
 err_copy_data_failed:
 	trace_binder_transaction_failed_buffer_release(t->buffer);
 	binder_transaction_buffer_release(target_proc, t->buffer, offp);
@@ -2112,14 +2353,23 @@ static int binder_thread_write(struct binder_proc *proc,
 			break;
 		}
 
-		case BC_TRANSACTION:
-		case BC_REPLY: {
-			struct binder_transaction_data tr;
-
+		case BC_TRANSACTION_SG:
+		case BC_REPLY_SG: {
+			struct binder_transaction_data_sg tr;
 			if (copy_from_user_preempt_disabled(&tr, ptr, sizeof(tr)))
 				return -EFAULT;
 			ptr += sizeof(tr);
-			binder_transaction(proc, thread, &tr, cmd == BC_REPLY);
+			binder_transaction(proc, thread, &tr.transaction_data,
+					   cmd == BC_REPLY_SG, tr.buffers_size);
+			break;
+		}
+		case BC_TRANSACTION:
+		case BC_REPLY: {
+			struct binder_transaction_data tr;
+			if (copy_from_user_preempt_disabled(&tr, ptr, sizeof(tr)))
+				return -EFAULT;
+			ptr += sizeof(tr);
+			binder_transaction(proc, thread, &tr, cmd == BC_REPLY, 0);
 			break;
 		}
 
@@ -3647,7 +3897,9 @@ static const char * const binder_command_strings[] = {
 	"BC_EXIT_LOOPER",
 	"BC_REQUEST_DEATH_NOTIFICATION",
 	"BC_CLEAR_DEATH_NOTIFICATION",
-	"BC_DEAD_BINDER_DONE"
+	"BC_DEAD_BINDER_DONE",
+	"BC_TRANSACTION_SG",
+	"BC_REPLY_SG"
 };
 
 static const char * const binder_objstat_strings[] = {
