@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bd1efa57_28953353",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-07-01T14:35:35Z",
+      "side": 1,
+      "message": "nits for next time:\n\nI understand that his is an UPSTREAM patch, the following advice is what I give if it is not to make the (edited) path to upstream easier. The advice is pedantic with regards to this patch, but easy enough to comply.\n\nBug: is not an upstream compliant footer, add it to the bottom so that it can be \u0027truncated\u0027 out. As it stands it has been placed into the \u0027middle\u0027 of the commit.\n\nChange-Id: is missing. Also not an upstream compliant footer and is a reason to reject into upstream with checkpatch.pl. Historically it was required specifically by Gerrit to be at the bottom, but that requirement disappeared about 3 years ago allowing for some flexibility. I continue to make it the _bottom_ footer out of habit...\n\nWith a Change-Id in the patch comments, we gain the ability to research it in Gerrit, look back at comments garnered in the CLs during review.",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 52
+      },
+      "revId": "5eb71fd923dc493d4a36f6f09f3066bfe05ee390",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
