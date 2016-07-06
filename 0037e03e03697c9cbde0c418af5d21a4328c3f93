@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1d1aa603_37ce5867",
+        "filename": "kernel/cpuset.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2077,
+      "author": {
+        "id": 1041813
+      },
+      "writtenOn": "2016-07-06T16:55:43Z",
+      "side": 1,
+      "message": "would it be better to use the provided subsys_cgroup_allow_attach here?",
+      "range": {
+        "startLine": 2077,
+        "startChar": 19,
+        "endLine": 2077,
+        "endChar": 38
+      },
+      "revId": "0037e03e03697c9cbde0c418af5d21a4328c3f93",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
