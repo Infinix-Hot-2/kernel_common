@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fddf9221_54430934",
+        "filename": "mm/vmscan.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2016-07-06T18:19:43Z",
+      "side": 1,
+      "message": "It would be better to zero-initialize the struct to avoid future problems like this.",
+      "revId": "b098af81c39cb18d64e4eff693c81f9411265985",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
