@@ -3437,6 +3437,14 @@ find_lively_task_by_vpid(pid_t vpid)
 	if (!task)
 		return ERR_PTR(-ESRCH);
 
+<<<<<<< HEAD   (50bcba drm: Add more debugging for adv7511/hisi_drm mode selection)
+=======
+	/* Reuse ptrace permission checks for now. */
+	err = -EACCES;
+	if (!ptrace_may_access(task, PTRACE_MODE_READ_REALCREDS))
+		goto errout;
+
+>>>>>>> BRANCH (50437c UPSTREAM: cdc_ncm: do not call usbnet_link_change from cdc_n)
 	return task;
 }
 
