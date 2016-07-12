@@ -365,6 +365,7 @@ static inline bool unconditional(const struct arpt_entry *e)
 
 	return e->target_offset == sizeof(struct arpt_entry) &&
 	       memcmp(&e->arp, &uncond, sizeof(uncond)) == 0;
+<<<<<<< HEAD   (2f1f4f Merge tag 'v4.4.15' into android-hikey-linaro-4.4-aosp)
 }
 
 static bool find_jump_target(const struct xt_table_info *t,
@@ -377,6 +378,8 @@ static bool find_jump_target(const struct xt_table_info *t,
 			return true;
 	}
 	return false;
+=======
+>>>>>>> BRANCH (f8a27f UPSTREAM: ppp: take reference on channels netns)
 }
 
 /* Figures out from what hook each rule can be called: returns 0 if
