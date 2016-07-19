@@ -474,6 +474,9 @@ struct rt_rq {
 
 	struct rq *rq;
 	struct task_group *tg;
+
+	unsigned int rt_nr_cfs_throttled;
+	struct list_head cfs_throttled_tasks;
 #endif
 };
 
