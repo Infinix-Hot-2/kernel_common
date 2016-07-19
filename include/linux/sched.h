@@ -1363,6 +1363,8 @@ struct sched_rt_entity {
 	struct rt_rq		*rt_rq;
 	/* rq "owned" by this entity/group: */
 	struct rt_rq		*my_q;
+	int			throttled;
+	struct list_head	cfs_throttled_task;
 #endif
 };
 

@@ -182,6 +182,8 @@ void init_tg_rt_entry(struct task_group *tg, struct rt_rq *rt_rq,
 	rt_se->my_q = rt_rq;
 	rt_se->parent = parent;
 	INIT_LIST_HEAD(&rt_se->run_list);
+	rt_se->throttled = 0;
+	INIT_LIST_HEAD(&rt_se->cfs_throttled_task);
 }
 
 int alloc_rt_sched_group(struct task_group *tg, struct task_group *parent)
@@ -212,6 +214,8 @@ int alloc_rt_sched_group(struct task_group *tg, struct task_group *parent)
 			goto err_free_rq;
 
 		init_rt_rq(rt_rq);
+		INIT_LIST_HEAD(&rt_rq->cfs_throttled_tasks);
+		rt_rq->rt_nr_cfs_throttled = 0;
 		rt_rq->rt_runtime = tg->rt_bandwidth.rt_runtime;
 		init_tg_rt_entry(tg, rt_rq, rt_se, i, parent->rt_se[i]);
 	}
