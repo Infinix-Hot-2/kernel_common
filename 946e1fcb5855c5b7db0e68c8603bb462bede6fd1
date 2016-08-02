@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d4954efc_72869e7a",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2008,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-08-02T22:54:44Z",
+      "side": 1,
+      "message": "I don\u0027t think the driver cares if this is a strong ref or not. If you want to protect a process from itself I can change this to require a strong ref though.",
+      "revId": "946e1fcb5855c5b7db0e68c8603bb462bede6fd1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
