@@ -1,0 +1,159 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d4954efc_52de020e",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-08-02T22:46:23Z",
+      "side": 1,
+      "message": "Not must, but we may want to keep default.\nLike \n  int num_sources \u003d 10;\nAnd not to fail if not found.",
+      "range": {
+        "startLine": 298,
+        "startChar": 48,
+        "endLine": 298,
+        "endChar": 59
+      },
+      "revId": "f95357ad177f3eb0b9681bb63db03cd647b61ec0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4954efc_125cfa80",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 355,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-08-02T22:46:23Z",
+      "side": 1,
+      "message": "What will happen if lenf \u003d\u003d 0?",
+      "range": {
+        "startLine": 355,
+        "startChar": 13,
+        "endLine": 355,
+        "endChar": 17
+      },
+      "revId": "f95357ad177f3eb0b9681bb63db03cd647b61ec0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4954efc_b23f4609",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 401,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-08-02T22:46:23Z",
+      "side": 1,
+      "message": "You can use goto to release mutex instead of writing it 3 times.",
+      "range": {
+        "startLine": 401,
+        "startChar": 2,
+        "endLine": 401,
+        "endChar": 14
+      },
+      "revId": "f95357ad177f3eb0b9681bb63db03cd647b61ec0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4954efc_52512261",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-08-02T22:46:23Z",
+      "side": 1,
+      "message": "Usually in order not to have 3 destroy_workqueue() people are using goto. Probably the only case when it is Ok.",
+      "range": {
+        "startLine": 456,
+        "startChar": 2,
+        "endLine": 456,
+        "endChar": 19
+      },
+      "revId": "f95357ad177f3eb0b9681bb63db03cd647b61ec0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4954efc_b26e66fe",
+        "filename": "include/linux/memory-state-time.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-08-02T22:46:23Z",
+      "side": 1,
+      "message": "I can not find where this is used.",
+      "range": {
+        "startLine": 18,
+        "startChar": 8,
+        "endLine": 18,
+        "endChar": 27
+      },
+      "revId": "f95357ad177f3eb0b9681bb63db03cd647b61ec0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4954efc_f24b8e83",
+        "filename": "include/linux/memory-state-time.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-08-02T22:46:23Z",
+      "side": 1,
+      "message": "You can remove this if you move #22 to #34",
+      "revId": "f95357ad177f3eb0b9681bb63db03cd647b61ec0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4954efc_32325615",
+        "filename": "include/linux/memory-state-time.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-08-02T22:46:23Z",
+      "side": 1,
+      "message": "You can move this below.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 7
+      },
+      "revId": "f95357ad177f3eb0b9681bb63db03cd647b61ec0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
