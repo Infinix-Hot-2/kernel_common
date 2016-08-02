@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d450ee1d_fff47fbf",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 1075444
+      },
+      "writtenOn": "2016-08-02T01:40:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d450ee1d_3f2e9794",
+      "range": {
+        "startLine": 277,
+        "startChar": 6,
+        "endLine": 277,
+        "endChar": 27
+      },
+      "revId": "e2b322c3371980fad65a2b840b27f58148ca47c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d450ee1d_3f17b74a",
         "filename": "drivers/misc/memory_state_time.c",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2016-08-01T21:57:48Z",
       "side": 1,
       "message": "Maybe it makes sense to make it configurable from DT? I mean MAX_NUM_SOURCES.",
+      "range": {
+        "startLine": 280,
+        "startChar": 3,
+        "endLine": 280,
+        "endChar": 9
+      },
+      "revId": "e2b322c3371980fad65a2b840b27f58148ca47c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2f83b188_c7ab5e82",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 1075444
+      },
+      "writtenOn": "2016-08-02T01:40:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d450ee1d_3f17b74a",
       "range": {
         "startLine": 280,
         "startChar": 3,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "d450ee1d_5f9f135b",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 1075444
+      },
+      "writtenOn": "2016-08-02T01:40:40Z",
+      "side": 1,
+      "message": "Done. Yes",
+      "parentUuid": "d450ee1d_dfb9c32e",
+      "range": {
+        "startLine": 308,
+        "startChar": 3,
+        "endLine": 308,
+        "endChar": 9
+      },
+      "revId": "e2b322c3371980fad65a2b840b27f58148ca47c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d450ee1d_9fc34ba1",
         "filename": "drivers/misc/memory_state_time.c",
         "patchSetId": 1
@@ -82,6 +154,30 @@
       "writtenOn": "2016-08-01T21:57:48Z",
       "side": 1,
       "message": "Free \u0027freq_buckets\u0027 ?",
+      "range": {
+        "startLine": 337,
+        "startChar": 3,
+        "endLine": 337,
+        "endChar": 9
+      },
+      "revId": "e2b322c3371980fad65a2b840b27f58148ca47c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d450ee1d_9f846b0a",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 1075444
+      },
+      "writtenOn": "2016-08-02T01:40:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d450ee1d_9fc34ba1",
       "range": {
         "startLine": 337,
         "startChar": 3,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "d450ee1d_3a87c50c",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 1075444
+      },
+      "writtenOn": "2016-08-02T01:40:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d450ee1d_5f0033d2",
+      "range": {
+        "startLine": 353,
+        "startChar": 3,
+        "endLine": 353,
+        "endChar": 9
+      },
+      "revId": "e2b322c3371980fad65a2b840b27f58148ca47c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d450ee1d_1f8f5b7c",
         "filename": "drivers/misc/memory_state_time.c",
         "patchSetId": 1
@@ -128,6 +248,30 @@
       "writtenOn": "2016-08-01T21:57:48Z",
       "side": 1,
       "message": "mutex_unlock ?",
+      "range": {
+        "startLine": 381,
+        "startChar": 2,
+        "endLine": 381,
+        "endChar": 8
+      },
+      "revId": "e2b322c3371980fad65a2b840b27f58148ca47c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d450ee1d_7aa41da4",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 1075444
+      },
+      "writtenOn": "2016-08-02T01:40:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d450ee1d_1f8f5b7c",
       "range": {
         "startLine": 381,
         "startChar": 2,
@@ -163,6 +307,30 @@
     },
     {
       "key": {
+        "uuid": "d450ee1d_3a9ea54e",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1075444
+      },
+      "writtenOn": "2016-08-02T01:40:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d450ee1d_dfa0a3ec",
+      "range": {
+        "startLine": 384,
+        "startChar": 2,
+        "endLine": 384,
+        "endChar": 8
+      },
+      "revId": "e2b322c3371980fad65a2b840b27f58148ca47c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d450ee1d_5f28339f",
         "filename": "drivers/misc/memory_state_time.c",
         "patchSetId": 1
@@ -186,6 +354,30 @@
     },
     {
       "key": {
+        "uuid": "d450ee1d_3ad90525",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 423,
+      "author": {
+        "id": 1075444
+      },
+      "writtenOn": "2016-08-02T01:40:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d450ee1d_5f28339f",
+      "range": {
+        "startLine": 423,
+        "startChar": 2,
+        "endLine": 423,
+        "endChar": 8
+      },
+      "revId": "e2b322c3371980fad65a2b840b27f58148ca47c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d450ee1d_bf45e76f",
         "filename": "drivers/misc/memory_state_time.c",
         "patchSetId": 1
@@ -197,6 +389,30 @@
       "writtenOn": "2016-08-01T21:57:48Z",
       "side": 1,
       "message": "You would need probably to clean memory here as well.",
+      "range": {
+        "startLine": 436,
+        "startChar": 2,
+        "endLine": 436,
+        "endChar": 8
+      },
+      "revId": "e2b322c3371980fad65a2b840b27f58148ca47c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d450ee1d_ba685523",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 1075444
+      },
+      "writtenOn": "2016-08-02T01:40:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d450ee1d_bf45e76f",
       "range": {
         "startLine": 436,
         "startChar": 2,
