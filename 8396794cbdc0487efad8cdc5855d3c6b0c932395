@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d4454ee6_3d9b8fba",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-08-03T22:43:51Z",
+      "side": 1,
+      "message": "\u003e\u003d ?",
+      "range": {
+        "startLine": 119,
+        "startChar": 12,
+        "endLine": 119,
+        "endChar": 13
+      },
+      "revId": "8396794cbdc0487efad8cdc5855d3c6b0c932395",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4454ee6_bd09dfff",
+        "filename": "drivers/misc/memory_state_time.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-08-03T22:43:51Z",
+      "side": 1,
+      "message": "No need to use ret",
+      "range": {
+        "startLine": 298,
+        "startChar": 1,
+        "endLine": 298,
+        "endChar": 4
+      },
+      "revId": "8396794cbdc0487efad8cdc5855d3c6b0c932395",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
