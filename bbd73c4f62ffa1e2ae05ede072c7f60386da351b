@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "345cea04_2cea4ba6",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 1771,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-08-04T23:33:44Z",
+      "side": 1,
+      "message": "there seems to be a lot of return paths where return_error_param is uninitialized.",
+      "revId": "bbd73c4f62ffa1e2ae05ede072c7f60386da351b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
