@@ -1,0 +1,372 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b99e1320_ebc71d10",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "Why not place actual function here? (at least give the optimizer a chance)",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 38
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_8b069977",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2917,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "static const\n\nu_int64_t ?",
+      "range": {
+        "startLine": 2917,
+        "startChar": 0,
+        "endLine": 2917,
+        "endChar": 11
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_0ba0493a",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2941,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "If you move this into include/linux/mmc/host.h you can get away from allocating the bucket arrays as you know the ARRAY_SIZE",
+      "range": {
+        "startLine": 2917,
+        "startChar": 0,
+        "endLine": 2941,
+        "endChar": 2
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_8b6f792f",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2948,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "latency_x_axis_us[0]\n\nWhich leads to replacing this all with:\n\nARRAY_SIZE(latency_x_axis_us)",
+      "range": {
+        "startLine": 2948,
+        "startChar": 54,
+        "endLine": 2948,
+        "endChar": 57
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_eb5ddd7e",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2957,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "I am expecting:\n\ni \u003d\u003d (sizeof(latency_x_axis_us) / sizeof(latency_x_axis_us[0]))\n\nor rather\n\ni \u003d\u003d ARRAY_SIZE(latency_x_axis_us)",
+      "range": {
+        "startLine": 2957,
+        "startChar": 1,
+        "endLine": 2957,
+        "endChar": 38
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_cbe7c1a9",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2972,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "sizeof(host-\u003elatency_y_axis_read[0]) * sizeof(latency_x_axis_us) / sizeof(latency_x_axis_us[0])\n\nor rather\n\nsizeof(host-\u003elatency_y_axis_read[0]) * ARRAY_SIZE(latency_x_axis_us)",
+      "range": {
+        "startLine": 2972,
+        "startChar": 38,
+        "endLine": 2972,
+        "endChar": 63
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_eb515d0b",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2993,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "space prohibited before semicolon by linux coding standard",
+      "range": {
+        "startLine": 2993,
+        "startChar": 12,
+        "endLine": 2993,
+        "endChar": 13
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_4b865178",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2994,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "use ARRAY_SIZE macro ...",
+      "range": {
+        "startLine": 2994,
+        "startChar": 52,
+        "endLine": 2994,
+        "endChar": 55
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_ab5b5527",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3006,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "snprintf is deprecated, use scnprintf to _accurately_ uptick the bytes_written.\n\nsnprintf returns the number of bytes that it wants to write, scnprintf returns the number of bytes that were actually written.\n\nPlease audit all uses.",
+      "range": {
+        "startLine": 3006,
+        "startChar": 2,
+        "endLine": 3006,
+        "endChar": 27
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_8b63f9eb",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3016,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "space prohibited before semicolon by linux coding standard",
+      "range": {
+        "startLine": 3016,
+        "startChar": 12,
+        "endLine": 3016,
+        "endChar": 13
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_6b91cd9d",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3028,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "percent is kind of course, what about permille? (eg \"...%d.%d%%...\", ... permille / 10, permille % 10, ...)",
+      "range": {
+        "startLine": 3028,
+        "startChar": 2,
+        "endLine": 3028,
+        "endChar": 32
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_2b2c25b1",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3052,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "#define",
+      "range": {
+        "startLine": 3052,
+        "startChar": 14,
+        "endLine": 3052,
+        "endChar": 15
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_0b1da964",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3067,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "dev_err(\u0026host-\u003eclass_dev, \"Failed to create....\\n\"); ?",
+      "range": {
+        "startLine": 3066,
+        "startChar": 2,
+        "endLine": 3067,
+        "endChar": 29
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_2b2f4590",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3094,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "If size is known, and we know that it is relatively small in size, we can set the array size statically/compile-time and stay away from memory leaks or race conditions.",
+      "range": {
+        "startLine": 3093,
+        "startChar": 0,
+        "endLine": 3094,
+        "endChar": 35
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_8bb9b992",
+        "filename": "include/linux/mmc/host.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "unsigned?",
+      "range": {
+        "startLine": 381,
+        "startChar": 1,
+        "endLine": 381,
+        "endChar": 4
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_2ba98529",
+        "filename": "include/linux/mmc/host.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-05T20:28:49Z",
+      "side": 1,
+      "message": "Drop axis_ovf_read in favour of a +1 on the sizeof latency_y_axis_read?",
+      "range": {
+        "startLine": 381,
+        "startChar": 1,
+        "endLine": 382,
+        "endChar": 31
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
