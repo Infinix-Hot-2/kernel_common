@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b99e1320_63efb1ee",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b99e1320_ebc71d10",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 38
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b99e1320_8b069977",
         "filename": "drivers/mmc/core/core.c",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2016-08-05T20:28:49Z",
       "side": 1,
       "message": "static const\n\nu_int64_t ?",
+      "range": {
+        "startLine": 2917,
+        "startChar": 0,
+        "endLine": 2917,
+        "endChar": 11
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_e3fae1a6",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2917,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "Done. And moved to the header file, and used ARRAY_SIZE for the 2 Y-axes values, removing the need to kzalloc/kfree those.",
+      "parentUuid": "b99e1320_8b069977",
       "range": {
         "startLine": 2917,
         "startChar": 0,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "b99e1320_83c99d81",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2941,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b99e1320_0ba0493a",
+      "range": {
+        "startLine": 2917,
+        "startChar": 0,
+        "endLine": 2941,
+        "endChar": 2
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b99e1320_8b6f792f",
         "filename": "drivers/mmc/core/core.c",
         "patchSetId": 1
@@ -82,6 +154,30 @@
       "writtenOn": "2016-08-05T20:28:49Z",
       "side": 1,
       "message": "latency_x_axis_us[0]\n\nWhich leads to replacing this all with:\n\nARRAY_SIZE(latency_x_axis_us)",
+      "range": {
+        "startLine": 2948,
+        "startChar": 54,
+        "endLine": 2948,
+        "endChar": 57
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_03dd8d35",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2948,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b99e1320_8b6f792f",
       "range": {
         "startLine": 2948,
         "startChar": 54,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "b99e1320_c3d6c519",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2957,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "bug :(. Thanks for catching this !",
+      "parentUuid": "b99e1320_eb5ddd7e",
+      "range": {
+        "startLine": 2957,
+        "startChar": 1,
+        "endLine": 2957,
+        "endChar": 38
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b99e1320_cbe7c1a9",
         "filename": "drivers/mmc/core/core.c",
         "patchSetId": 1
@@ -128,6 +248,30 @@
       "writtenOn": "2016-08-05T20:28:49Z",
       "side": 1,
       "message": "sizeof(host-\u003elatency_y_axis_read[0]) * sizeof(latency_x_axis_us) / sizeof(latency_x_axis_us[0])\n\nor rather\n\nsizeof(host-\u003elatency_y_axis_read[0]) * ARRAY_SIZE(latency_x_axis_us)",
+      "range": {
+        "startLine": 2972,
+        "startChar": 38,
+        "endLine": 2972,
+        "endChar": 63
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_03a6edc1",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2972,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "replacing that with sizeof(host-\u003elatency_y_axis_read/write), since that y-axis is one element larger than the x-axis table (overflow bucket). And sizeof(arr) gives me the size of the array in bytes.",
+      "parentUuid": "b99e1320_cbe7c1a9",
       "range": {
         "startLine": 2972,
         "startChar": 38,
@@ -163,6 +307,30 @@
     },
     {
       "key": {
+        "uuid": "b99e1320_e3ac219f",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2993,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b99e1320_eb515d0b",
+      "range": {
+        "startLine": 2993,
+        "startChar": 12,
+        "endLine": 2993,
+        "endChar": 13
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b99e1320_4b865178",
         "filename": "drivers/mmc/core/core.c",
         "patchSetId": 1
@@ -174,6 +342,30 @@
       "writtenOn": "2016-08-05T20:28:49Z",
       "side": 1,
       "message": "use ARRAY_SIZE macro ...",
+      "range": {
+        "startLine": 2994,
+        "startChar": 52,
+        "endLine": 2994,
+        "endChar": 55
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_c3afa591",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2994,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b99e1320_4b865178",
       "range": {
         "startLine": 2994,
         "startChar": 52,
@@ -209,6 +401,30 @@
     },
     {
       "key": {
+        "uuid": "b99e1320_06159b96",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3006,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b99e1320_ab5b5527",
+      "range": {
+        "startLine": 3006,
+        "startChar": 2,
+        "endLine": 3006,
+        "endChar": 27
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b99e1320_8b63f9eb",
         "filename": "drivers/mmc/core/core.c",
         "patchSetId": 1
@@ -220,6 +436,30 @@
       "writtenOn": "2016-08-05T20:28:49Z",
       "side": 1,
       "message": "space prohibited before semicolon by linux coding standard",
+      "range": {
+        "startLine": 3016,
+        "startChar": 12,
+        "endLine": 3016,
+        "endChar": 13
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_639a5169",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3016,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b99e1320_8b63f9eb",
       "range": {
         "startLine": 3016,
         "startChar": 12,
@@ -266,6 +506,30 @@
       "writtenOn": "2016-08-05T20:28:49Z",
       "side": 1,
       "message": "#define",
+      "range": {
+        "startLine": 3052,
+        "startChar": 14,
+        "endLine": 3052,
+        "endChar": 15
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_238c4932",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3052,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b99e1320_2b2c25b1",
       "range": {
         "startLine": 3052,
         "startChar": 14,
@@ -347,6 +611,30 @@
     },
     {
       "key": {
+        "uuid": "b99e1320_26ee9788",
+        "filename": "include/linux/mmc/host.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b99e1320_8bb9b992",
+      "range": {
+        "startLine": 381,
+        "startChar": 1,
+        "endLine": 381,
+        "endChar": 4
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b99e1320_2ba98529",
         "filename": "include/linux/mmc/host.h",
         "patchSetId": 1
@@ -358,6 +646,30 @@
       "writtenOn": "2016-08-05T20:28:49Z",
       "side": 1,
       "message": "Drop axis_ovf_read in favour of a +1 on the sizeof latency_y_axis_read?",
+      "range": {
+        "startLine": 381,
+        "startChar": 1,
+        "endLine": 382,
+        "endChar": 31
+      },
+      "revId": "34ac0c280599cbc55af5de4500a290e864df4211",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_c6ea5372",
+        "filename": "include/linux/mmc/host.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-05T23:17:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b99e1320_2ba98529",
       "range": {
         "startLine": 381,
         "startChar": 1,
