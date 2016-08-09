@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b99e1320_ba1624fe",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 1037321
+      },
+      "writtenOn": "2016-08-09T01:26:41Z",
+      "side": 1,
+      "message": "swap those two lines",
+      "range": {
+        "startLine": 583,
+        "startChar": 3,
+        "endLine": 584,
+        "endChar": 37
+      },
+      "revId": "51a3a3a6fe7b57badbce86a792d883e605315098",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
