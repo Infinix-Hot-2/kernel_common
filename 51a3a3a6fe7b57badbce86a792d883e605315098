@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "b99e1320_95d8e120",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-09T15:10:28Z",
+      "side": 1,
+      "message": "KISS? Only do this is _you_ can read it. Optimizer will produce the same code, so this is a maintenance issue only (squashing duplicate code fragments into on).\n\nfor (i \u003d 0; ; i++) {\n    if ((i \u003d\u003d ARRAY_SIZE(latency_x_axis_us) ||\n        (delta_us \u003c (u_int64_t)latency_x_axis_us[i])) {\n            if (read)\n                host-\u003elatency_y_axis_read[i]++;\n            else\n                host-\u003elatency_y_axis_write[i]++;\n            break;\n    }\n}",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 2
+      },
+      "revId": "51a3a3a6fe7b57badbce86a792d883e605315098",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b99e1320_ba1624fe",
         "filename": "drivers/mmc/core/core.c",
         "patchSetId": 2
@@ -18,6 +41,29 @@
         "startChar": 3,
         "endLine": 584,
         "endChar": 37
+      },
+      "revId": "51a3a3a6fe7b57badbce86a792d883e605315098",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b99e1320_f58b65c5",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2937,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-09T15:10:28Z",
+      "side": 1,
+      "message": "If there are any locks in proximity, worth checking out, to take advantage of them? If there is a host lock or some such (?), I do not think there is a burden worth worrying about if you took that same lock to retrieve the values for sysfs.\n\nconfirm mmc_request_done() is called without lock.",
+      "range": {
+        "startLine": 2937,
+        "startChar": 8,
+        "endLine": 2937,
+        "endChar": 39
       },
       "revId": "51a3a3a6fe7b57badbce86a792d883e605315098",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
