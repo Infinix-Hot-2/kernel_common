@@ -68,6 +68,30 @@
       "revId": "51a3a3a6fe7b57badbce86a792d883e605315098",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f9c96b7a_16c99c7f",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2937,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2016-08-09T19:01:47Z",
+      "side": 1,
+      "message": "mmc_request_done() is called outside the host-\u003elock in the drivers I looked at.\n\nI was thinking about making the histogram raw data per-cpu, then aggregating them when printing (by scheduling ourselves on each CPU reading the per-cpu state). This will allow us to this completely lockless and be completely accurate at the same time. I didn\u0027t think this complication was warranted at this point though. I\u0027ve updated the \"lockless\" comment with a mention of this suggestion for now.",
+      "parentUuid": "b99e1320_f58b65c5",
+      "range": {
+        "startLine": 2937,
+        "startChar": 8,
+        "endLine": 2937,
+        "endChar": 39
+      },
+      "revId": "51a3a3a6fe7b57badbce86a792d883e605315098",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
