@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d9002788_941a926e",
+        "filename": "kernel/power/wakeup_reason.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1010110
+      },
+      "writtenOn": "2016-08-10T01:01:06Z",
+      "side": 1,
+      "message": "I think this printk is the only thing missing from upstream. I would prefer you implement it there and submit to lkml (cc me and I\u0027ll queue it).",
+      "range": {
+        "startLine": 202,
+        "startChar": 2,
+        "endLine": 203,
+        "endChar": 41
+      },
+      "revId": "0a06f9af15c22c432285550f4ea445d55155db4d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
