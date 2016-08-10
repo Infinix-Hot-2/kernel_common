@@ -22,6 +22,30 @@
       "revId": "0a06f9af15c22c432285550f4ea445d55155db4d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19d39f97_fb8a9769",
+        "filename": "kernel/power/wakeup_reason.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1041663
+      },
+      "writtenOn": "2016-08-10T19:31:58Z",
+      "side": 1,
+      "message": "Agreed. The code in timekeeping_debug is the same. The only concern is having those prints in the log will appear only with CONFIG_DEBUG_FS. And in the earlier option we could have it enabled without the debug.\n\nNot sure if a print in timekeeping.c would be a better option since having the prints in the dmesg gives us a better understanding of time passed. What are your thoughts on the same?",
+      "parentUuid": "d9002788_941a926e",
+      "range": {
+        "startLine": 202,
+        "startChar": 2,
+        "endLine": 203,
+        "endChar": 41
+      },
+      "revId": "0a06f9af15c22c432285550f4ea445d55155db4d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
