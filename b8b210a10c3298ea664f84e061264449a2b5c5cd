@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5e6b3d9b_a23d84e6",
+        "filename": "fs/sdcardfs/packagelist.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-08-15T20:30:39Z",
+      "side": 1,
+      "message": "const",
+      "revId": "b8b210a10c3298ea664f84e061264449a2b5c5cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e6b3d9b_226b34ed",
+        "filename": "fs/sdcardfs/packagelist.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-08-15T20:30:39Z",
+      "side": 1,
+      "message": "Need an RCU read lock around this loop",
+      "revId": "b8b210a10c3298ea664f84e061264449a2b5c5cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7b3733db_d27b0452",
+        "filename": "fs/sdcardfs/packagelist.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-08-15T20:30:39Z",
+      "side": 1,
+      "message": "The logic to put \"\u003ctruncated\u003e\" at the end of the string is really ugly.  For example it\u0027s permanently reserving the sizeof(errormsg) bytes for the message just in case it\u0027s needed.\n\nI think this is the rare case where snprintf() *actually* returns the value you want -- you want to know if it tried to go past the end of the buffer and got truncated instead.  Based on that you can then tack \"\u003ctruncated\u003e\" on at the end.",
+      "revId": "b8b210a10c3298ea664f84e061264449a2b5c5cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e6b3d9b_624c4c9d",
+        "filename": "fs/sdcardfs/packagelist.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-08-15T20:30:39Z",
+      "side": 1,
+      "message": "Remove the cast.  You\u0027ve changed key\u0027s type to const char *, so now this is actually discarding the constness.",
+      "range": {
+        "startLine": 339,
+        "startChar": 5,
+        "endLine": 339,
+        "endChar": 13
+      },
+      "revId": "b8b210a10c3298ea664f84e061264449a2b5c5cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
