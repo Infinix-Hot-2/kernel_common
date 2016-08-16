@@ -125,9 +125,6 @@ ENTRY(__cpu_suspend_enter)
 ENDPROC(__cpu_suspend_enter)
 	.ltorg
 
-/*
- * x0 must contain the sctlr value retrieved from restored context
- */
 	.pushsection	".idmap.text", "ax"
 ENTRY(cpu_resume_mmu)
 	ldr	x3, =cpu_resume_after_mmu
