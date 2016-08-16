@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "bb11ab9a_f814d9a0",
+        "filename": "fs/sdcardfs/packagelist.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 1045980
+      },
+      "writtenOn": "2016-08-16T23:08:42Z",
+      "side": 1,
+      "message": "I\u0027d prefer to not have the partial line, as it wouldn\u0027t have useful information.",
+      "parentUuid": "7b3733db_d27b0452",
+      "revId": "b8b210a10c3298ea664f84e061264449a2b5c5cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5e6b3d9b_624c4c9d",
         "filename": "fs/sdcardfs/packagelist.c",
         "patchSetId": 1
