@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fb316383_ddeffcad",
+        "filename": "drivers/usb/gadget/f_accessory.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-18T19:46:45Z",
+      "side": 1,
+      "message": "merge into a block comment",
+      "range": {
+        "startLine": 76,
+        "startChar": 1,
+        "endLine": 77,
+        "endChar": 31
+      },
+      "revId": "af29924bb1660695bb88774d48131e7c6f568be3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fb316383_7de588cd",
+        "filename": "drivers/usb/gadget/f_accessory.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-18T19:46:45Z",
+      "side": 1,
+      "message": "merge into a block comment",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 83,
+        "endChar": 4
+      },
+      "revId": "af29924bb1660695bb88774d48131e7c6f568be3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fb316383_5dc3ec34",
+        "filename": "drivers/usb/gadget/f_accessory.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-18T19:46:45Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 259,
+        "startChar": 0,
+        "endLine": 259,
+        "endChar": 23
+      },
+      "revId": "af29924bb1660695bb88774d48131e7c6f568be3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fb316383_5ddc4c0c",
+        "filename": "drivers/usb/gadget/f_accessory.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 753,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-18T19:46:45Z",
+      "side": 1,
+      "message": "exceeds 80 characters, make this a prefix\u0027d block comment",
+      "range": {
+        "startLine": 752,
+        "startChar": 28,
+        "endLine": 753,
+        "endChar": 55
+      },
+      "revId": "af29924bb1660695bb88774d48131e7c6f568be3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fb316383_3d15d09a",
+        "filename": "drivers/usb/gadget/f_accessory.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 983,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-18T19:46:45Z",
+      "side": 1,
+      "message": "no spaces before tabs",
+      "range": {
+        "startLine": 983,
+        "startChar": 17,
+        "endLine": 983,
+        "endChar": 18
+      },
+      "revId": "af29924bb1660695bb88774d48131e7c6f568be3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fb316383_1d71f40f",
+        "filename": "drivers/usb/gadget/f_accessory.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 984,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-18T19:46:45Z",
+      "side": 1,
+      "message": "no spaces before tabs",
+      "range": {
+        "startLine": 984,
+        "startChar": 24,
+        "endLine": 984,
+        "endChar": 25
+      },
+      "revId": "af29924bb1660695bb88774d48131e7c6f568be3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fb316383_bd7560fc",
+        "filename": "drivers/usb/gadget/f_accessory.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 985,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-18T19:46:45Z",
+      "side": 1,
+      "message": "no spaces before tabs",
+      "range": {
+        "startLine": 985,
+        "startChar": 25,
+        "endLine": 985,
+        "endChar": 26
+      },
+      "revId": "af29924bb1660695bb88774d48131e7c6f568be3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
