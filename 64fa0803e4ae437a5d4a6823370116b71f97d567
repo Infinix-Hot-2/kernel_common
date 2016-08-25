@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e5ac6270_1f265b20",
+        "filename": "drivers/mmc/core/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-25T22:52:18Z",
+      "side": 1,
+      "message": "shy away from asm/* directly ... what about using math.h instead?",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 22
+      },
+      "revId": "64fa0803e4ae437a5d4a6823370116b71f97d567",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
