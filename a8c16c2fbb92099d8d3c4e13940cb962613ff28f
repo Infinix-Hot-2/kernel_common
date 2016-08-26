@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "25a4baca_c52f4ea1",
+        "filename": "fs/pstore/ram_core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-26T19:43:38Z",
+      "side": 1,
+      "message": "not necessary, already included in pstore_ram.h",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 25
+      },
+      "revId": "a8c16c2fbb92099d8d3c4e13940cb962613ff28f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25a4baca_8545c656",
+        "filename": "include/linux/pstore.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-26T19:43:38Z",
+      "side": 1,
+      "message": "gerrit is truncating \u0027psi\u0027 content, add a wrap to clarify. This line does not exceed 80 characters.\n\nTHIS signature change may affect out-of-tree implementations of other backing-stores for pstore.",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 59
+      },
+      "revId": "a8c16c2fbb92099d8d3c4e13940cb962613ff28f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
