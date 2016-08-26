@@ -2,6 +2,98 @@
   "comments": [
     {
       "key": {
+        "uuid": "25a4baca_4510de00",
+        "filename": "fs/pstore/ftrace.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-26T20:17:29Z",
+      "side": 1,
+      "message": "upstream has added a new argument here, a bool compressed.",
+      "range": {
+        "startLine": 47,
+        "startChar": 5,
+        "endLine": 47,
+        "endChar": 6
+      },
+      "revId": "a8c16c2fbb92099d8d3c4e13940cb962613ff28f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25a4baca_a539ea84",
+        "filename": "fs/pstore/platform.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-26T20:17:29Z",
+      "side": 1,
+      "message": "upstream adds a zero argument here for bool compressed",
+      "range": {
+        "startLine": 227,
+        "startChar": 36,
+        "endLine": 227,
+        "endChar": 37
+      },
+      "revId": "a8c16c2fbb92099d8d3c4e13940cb962613ff28f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25a4baca_852f0638",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-26T20:17:29Z",
+      "side": 1,
+      "message": "upstream has a bool compressed argument inserted here.",
+      "range": {
+        "startLine": 36,
+        "startChar": 4,
+        "endLine": 36,
+        "endChar": 5
+      },
+      "revId": "a8c16c2fbb92099d8d3c4e13940cb962613ff28f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25a4baca_652c0243",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 411,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-26T20:17:29Z",
+      "side": 1,
+      "message": "Does not exist upstream",
+      "range": {
+        "startLine": 407,
+        "startChar": 0,
+        "endLine": 411,
+        "endChar": 1
+      },
+      "revId": "a8c16c2fbb92099d8d3c4e13940cb962613ff28f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "25a4baca_c52f4ea1",
         "filename": "fs/pstore/ram_core.c",
         "patchSetId": 1
@@ -25,6 +117,29 @@
     },
     {
       "key": {
+        "uuid": "25a4baca_4577be65",
+        "filename": "fs/pstore/ram_core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-26T20:17:29Z",
+      "side": 1,
+      "message": "This showed up because of the back-merge from volantis kernel and is not needed here (or upstream)",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 27
+      },
+      "revId": "a8c16c2fbb92099d8d3c4e13940cb962613ff28f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "25a4baca_8545c656",
         "filename": "include/linux/pstore.h",
         "patchSetId": 1
@@ -41,6 +156,53 @@
         "startChar": 0,
         "endLine": 69,
         "endChar": 59
+      },
+      "revId": "a8c16c2fbb92099d8d3c4e13940cb962613ff28f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25a4baca_059f765f",
+        "filename": "include/linux/pstore.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-26T20:17:29Z",
+      "side": 1,
+      "message": "A wrap also plays into the hands of upstream since the bool compressed arg is added and this reduces the conflict somewhat.",
+      "parentUuid": "25a4baca_8545c656",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 59
+      },
+      "revId": "a8c16c2fbb92099d8d3c4e13940cb962613ff28f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25a4baca_a59d6a64",
+        "filename": "include/linux/pstore_ram.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-26T20:17:29Z",
+      "side": 1,
+      "message": "not in upstream (deprecated) but we have to support in this back-port.",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 60
       },
       "revId": "a8c16c2fbb92099d8d3c4e13940cb962613ff28f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
