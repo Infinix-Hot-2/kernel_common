@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "25a4baca_5457605f",
+        "filename": "fs/pstore/platform.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 1069543
+      },
+      "writtenOn": "2016-08-29T16:24:14Z",
+      "side": 1,
+      "message": "I didn\u0027t see any change to declarations for this in the CL... is the cast needed?",
+      "range": {
+        "startLine": 227,
+        "startChar": 9,
+        "endLine": 227,
+        "endChar": 23
+      },
+      "revId": "f67be0c9a5215678fa02d9a6d63b845ffb76c956",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25a4baca_f4555454",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1069543
+      },
+      "writtenOn": "2016-08-29T16:24:14Z",
+      "side": 1,
+      "message": "In another file, you cast this to a (const void *). Which should it be? void* seems better to me, but what is the type in the write_buf decl?",
+      "range": {
+        "startLine": 35,
+        "startChar": 54,
+        "endLine": 35,
+        "endChar": 68
+      },
+      "revId": "f67be0c9a5215678fa02d9a6d63b845ffb76c956",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "25a4baca_918dfa33",
         "filename": "fs/pstore/ram.c",
         "patchSetId": 2
@@ -42,6 +88,76 @@
         "startChar": 29,
         "endLine": 219,
         "endChar": 39
+      },
+      "revId": "f67be0c9a5215678fa02d9a6d63b845ffb76c956",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25a4baca_94ce082d",
+        "filename": "fs/pstore/ram.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 1069543
+      },
+      "writtenOn": "2016-08-29T16:24:14Z",
+      "side": 1,
+      "message": "Already commented on the \"from_user\" name. Good name for boolean, bad name for enum. For upstream, I like \"int flags\" where COMPRESSED can be OR\u0027d with the buffer source.",
+      "parentUuid": "25a4baca_d4e7f0d7",
+      "range": {
+        "startLine": 219,
+        "startChar": 29,
+        "endLine": 219,
+        "endChar": 39
+      },
+      "revId": "f67be0c9a5215678fa02d9a6d63b845ffb76c956",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25a4baca_546e4031",
+        "filename": "fs/pstore/ram_core.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 1069543
+      },
+      "writtenOn": "2016-08-29T16:24:14Z",
+      "side": 1,
+      "message": "\"from_user\" seems like it would be the right name if this were a boolean...but since it is an enum, something like \"buffer_source\" would be better (really doesn\u0027t make sense that \"from_user\" \u003d \"FROM_KERNEL\", does it?\n\nComment applies to all the \"from_user\" decls below too.",
+      "range": {
+        "startLine": 253,
+        "startChar": 36,
+        "endLine": 253,
+        "endChar": 45
+      },
+      "revId": "f67be0c9a5215678fa02d9a6d63b845ffb76c956",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25a4baca_74694420",
+        "filename": "include/linux/pstore.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1069543
+      },
+      "writtenOn": "2016-08-29T16:24:14Z",
+      "side": 1,
+      "message": "\"buffer_source\" ?",
+      "range": {
+        "startLine": 69,
+        "startChar": 23,
+        "endLine": 69,
+        "endChar": 32
       },
       "revId": "f67be0c9a5215678fa02d9a6d63b845ffb76c956",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
