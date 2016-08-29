@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "25ecba3b_655562f7",
+        "filename": "fs/aio.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 986,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-29T20:52:45Z",
+      "side": 1,
+      "message": "still seems bad to have taken the \u0027spaces\u0027 version of the changes ...",
+      "range": {
+        "startLine": 986,
+        "startChar": 0,
+        "endLine": 986,
+        "endChar": 16
+      },
+      "revId": "5d73d9b40f37460b9f8cb503463641ce18e28eed",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
