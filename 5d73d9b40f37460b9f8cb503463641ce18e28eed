@@ -22,6 +22,30 @@
       "revId": "5d73d9b40f37460b9f8cb503463641ce18e28eed",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25ecba3b_e5397284",
+        "filename": "fs/aio.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 986,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-08-29T21:04:34Z",
+      "side": 1,
+      "message": "Upstream used spaces.  (And tabs vs. spaces on this line is literally the only place we\u0027re diverging from upstream 3.10.y anywhere in this file.)",
+      "parentUuid": "25ecba3b_655562f7",
+      "range": {
+        "startLine": 986,
+        "startChar": 0,
+        "endLine": 986,
+        "endChar": 16
+      },
+      "revId": "5d73d9b40f37460b9f8cb503463641ce18e28eed",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
