@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d13005eb_0f89697b",
+        "filename": "fs/pstore/inode.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-30T20:33:45Z",
+      "side": 1,
+      "message": "scnprintf",
+      "range": {
+        "startLine": 339,
+        "startChar": 2,
+        "endLine": 339,
+        "endChar": 17
+      },
+      "revId": "6715eed1ae97bbe32f6648011c092fdfb13c9872",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
