@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "11fd3d27_3ee0c98a",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-30T23:22:21Z",
+      "side": 1,
+      "message": "over the shoulder review: do not throw away __user tag, and then reinstate it later several layers down. Some arches may even have troubles with this because of the memory segment registers.",
+      "range": {
+        "startLine": 35,
+        "startChar": 54,
+        "endLine": 35,
+        "endChar": 71
+      },
+      "revId": "7c47bcd7764e609c3a2bab1fc1b0f48199f55bce",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "11c7fd2d_6effaf51",
         "filename": "include/linux/pstore.h",
         "patchSetId": 4
