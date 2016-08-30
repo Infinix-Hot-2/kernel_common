@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d13005eb_4f0c1146",
+        "filename": "arch/powerpc/platforms/pseries/nvram.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 492,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-30T20:26:51Z",
+      "side": 1,
+      "message": "upstream has this line right after int rc;",
+      "range": {
+        "startLine": 492,
+        "startChar": 0,
+        "endLine": 492,
+        "endChar": 47
+      },
+      "revId": "fa93c267621eec4359ea1857bc9d6099085f1305",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
