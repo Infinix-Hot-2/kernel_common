@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "11c7fd2d_6effaf51",
+        "filename": "include/linux/pstore.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1069543
+      },
+      "writtenOn": "2016-08-30T23:12:03Z",
+      "side": 1,
+      "message": "PSTORE_FROM_KERNEL isn\u0027t really a flag. How about something like:\n\n  #define PSTORE_FROM_ID 0x02\n  #define IS_PSTORE_FROM_USER(_flag) (_flag \u0026 PSTORE_FROM_ID)\n  #define IS_PSTORE_FROM_KERNEL(_flag) (!IS_PSTORE_FROM_USER(_flag))",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 31
+      },
+      "revId": "7c47bcd7764e609c3a2bab1fc1b0f48199f55bce",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
