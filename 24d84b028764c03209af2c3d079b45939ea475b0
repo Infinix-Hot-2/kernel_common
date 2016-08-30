@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d13005eb_acdf0327",
+        "filename": "fs/pstore/platform.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-30T20:21:44Z",
+      "side": 1,
+      "message": "Ill advised to print to pr_err as console-ramoops will take a hit for the content ...",
+      "range": {
+        "startLine": 268,
+        "startChar": 0,
+        "endLine": 271,
+        "endChar": 46
+      },
+      "revId": "24d84b028764c03209af2c3d079b45939ea475b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
