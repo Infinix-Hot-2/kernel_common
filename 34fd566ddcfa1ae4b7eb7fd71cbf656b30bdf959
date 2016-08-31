@@ -2,6 +2,75 @@
   "comments": [
     {
       "key": {
+        "uuid": "91992d96_e5dc9069",
+        "filename": "fs/pstore/platform.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 1082649
+      },
+      "writtenOn": "2016-08-31T22:43:58Z",
+      "side": 1,
+      "message": "Since this is being generalized, the access_ok() test needs to be moved into this function instead of depending on the caller to do it correctly.",
+      "range": {
+        "startLine": 246,
+        "startChar": 8,
+        "endLine": 246,
+        "endChar": 24
+      },
+      "revId": "34fd566ddcfa1ae4b7eb7fd71cbf656b30bdf959",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f1a989a7_e04c7cc7",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1082649
+      },
+      "writtenOn": "2016-08-31T22:43:58Z",
+      "side": 1,
+      "message": "As mentioned in platform.c, this needs to move into the write_buf_user() implementation.",
+      "range": {
+        "startLine": 32,
+        "startChar": 6,
+        "endLine": 32,
+        "endChar": 15
+      },
+      "revId": "34fd566ddcfa1ae4b7eb7fd71cbf656b30bdf959",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "71c75982_19c36b81",
+        "filename": "fs/pstore/ram_core.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 1082649
+      },
+      "writtenOn": "2016-08-31T22:43:58Z",
+      "side": 1,
+      "message": "This needs to just be copy_from_user() instead of depending on the caller to perform the access_ok() checks.",
+      "range": {
+        "startLine": 264,
+        "startChar": 20,
+        "endLine": 264,
+        "endChar": 36
+      },
+      "revId": "34fd566ddcfa1ae4b7eb7fd71cbf656b30bdf959",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "91992d96_e5b81082",
         "filename": "fs/pstore/ram_core.c",
         "patchSetId": 5
