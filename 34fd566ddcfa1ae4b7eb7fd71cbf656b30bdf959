@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "91992d96_e5b81082",
+        "filename": "fs/pstore/ram_core.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-08-31T22:20:40Z",
+      "side": 1,
+      "message": "You\u0027re doing a __copy_from_user() followed by memcpy() of the same thing?",
+      "range": {
+        "startLine": 266,
+        "startChar": 1,
+        "endLine": 266,
+        "endChar": 40
+      },
+      "revId": "34fd566ddcfa1ae4b7eb7fd71cbf656b30bdf959",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
