@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "11b0ddbd_acdcc732",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-08-31T01:21:50Z",
+      "side": 1,
+      "message": "__user itself doesn\u0027t have any effect at runtime.  It\u0027s ifdef-ed to nothing on a normal kernel build.\n\nIt\u0027s intended for documentation and static analyzers, because it\u0027s very important that all userspace memory accesses from the kernel are properly checked.  (Enough so that some architectures have *other* ways of enforcing that userspace accesses go through the uaccess helpers.)\n\nSo I\u0027m worried by any change that gets rid that documentation, even temporarily.  I can imagine after enough time passing, someone might not be aware that the fifth parameter to write_buf is *sometimes* an unchecked userspace pointer (depending on the contents of a different parameter) and ends up using it in a dangerous context.",
+      "parentUuid": "11fd3d27_3ee0c98a",
+      "range": {
+        "startLine": 35,
+        "startChar": 54,
+        "endLine": 35,
+        "endChar": 71
+      },
+      "revId": "7c47bcd7764e609c3a2bab1fc1b0f48199f55bce",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "11c7fd2d_6effaf51",
         "filename": "include/linux/pstore.h",
         "patchSetId": 4
