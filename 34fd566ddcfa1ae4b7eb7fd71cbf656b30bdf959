@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "f1d26943_952ce4a0",
+        "filename": "fs/pstore/pmsg.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-08-31T22:57:19Z",
+      "side": 1,
+      "message": "I desire to keep this here as it is performed outside of the lock, performing it inside write_buf_user again is low enough of a cost for the generic case ...",
+      "parentUuid": "f1a989a7_e04c7cc7",
+      "range": {
+        "startLine": 32,
+        "startChar": 6,
+        "endLine": 32,
+        "endChar": 15
+      },
+      "revId": "34fd566ddcfa1ae4b7eb7fd71cbf656b30bdf959",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "71c75982_19c36b81",
         "filename": "fs/pstore/ram_core.c",
         "patchSetId": 5
