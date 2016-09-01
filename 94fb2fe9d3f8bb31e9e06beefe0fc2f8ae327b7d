@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b1247148_133c8ccd",
+        "filename": "android/configs/android-base.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-09-01T17:15:24Z",
+      "side": 1,
+      "message": "This is the default when CONFIG_SECCOMP is selected, not required.",
+      "range": {
+        "startLine": 144,
+        "startChar": 0,
+        "endLine": 144,
+        "endChar": 23
+      },
+      "revId": "94fb2fe9d3f8bb31e9e06beefe0fc2f8ae327b7d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
