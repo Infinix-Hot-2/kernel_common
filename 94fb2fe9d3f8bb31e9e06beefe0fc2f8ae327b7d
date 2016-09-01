@@ -22,6 +22,30 @@
       "revId": "94fb2fe9d3f8bb31e9e06beefe0fc2f8ae327b7d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b1247148_336ae881",
+        "filename": "android/configs/android-base.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1031448
+      },
+      "writtenOn": "2016-09-01T17:19:47Z",
+      "side": 1,
+      "message": "Oops. My bad. Didn\u0027t check that part. I\u0027ll amend the change and resubmit.",
+      "parentUuid": "b1247148_133c8ccd",
+      "range": {
+        "startLine": 144,
+        "startChar": 0,
+        "endLine": 144,
+        "endChar": 23
+      },
+      "revId": "94fb2fe9d3f8bb31e9e06beefe0fc2f8ae327b7d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
