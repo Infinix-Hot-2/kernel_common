@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cb277249_c3c9606f",
+        "filename": "kernel/events/core.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 7414,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-09-12T22:58:55Z",
+      "side": 1,
+      "message": "This is the million dollar fix, glad we have the trio now!",
+      "range": {
+        "startLine": 7414,
+        "startChar": 1,
+        "endLine": 7414,
+        "endChar": 17
+      },
+      "revId": "ff10406cb3ffbbddff62f357bd84a0ea39fef029",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
