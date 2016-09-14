@@ -22,6 +22,30 @@
       "revId": "f659c09b2fe12eca83e56adeb145aeb05c553c3b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b0f66e3_792fc7fb",
+        "filename": "include/uapi/linux/inet_diag.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2016-09-14T05:29:53Z",
+      "side": 1,
+      "message": "Good catch. Changed to INET_DIAG_MARK to match existing code. __INET_DIAG_MAX was only introduced in April this year and thus does not exist in this kernel version.",
+      "parentUuid": "6b0f66e3_79aa2775",
+      "range": {
+        "startLine": 130,
+        "startChar": 22,
+        "endLine": 130,
+        "endChar": 40
+      },
+      "revId": "f659c09b2fe12eca83e56adeb145aeb05c553c3b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
