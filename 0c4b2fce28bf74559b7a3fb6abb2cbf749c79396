@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "70d83709_85466405",
+        "filename": "fs/sdcardfs/derived_perm.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1037321
+      },
+      "writtenOn": "2016-09-20T23:38:20Z",
+      "side": 0,
+      "message": "why? don\u0027t we need to protect fix_derived_permission?",
+      "range": {
+        "startLine": 138,
+        "startChar": 1,
+        "endLine": 138,
+        "endChar": 39
+      },
+      "revId": "0c4b2fce28bf74559b7a3fb6abb2cbf749c79396",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70d83709_253bf887",
+        "filename": "fs/sdcardfs/inode.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 505,
+      "author": {
+        "id": 1037321
+      },
+      "writtenOn": "2016-09-20T23:38:20Z",
+      "side": 0,
+      "message": "why?",
+      "range": {
+        "startLine": 505,
+        "startChar": 1,
+        "endLine": 505,
+        "endChar": 43
+      },
+      "revId": "0c4b2fce28bf74559b7a3fb6abb2cbf749c79396",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
