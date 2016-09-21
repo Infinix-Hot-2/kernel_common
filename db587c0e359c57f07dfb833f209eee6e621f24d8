@@ -46,6 +46,23 @@
       "revId": "db587c0e359c57f07dfb833f209eee6e621f24d8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f074270d_a5033e1b",
+        "filename": "init/Kconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 1298,
+      "author": {
+        "id": 1118133
+      },
+      "writtenOn": "2016-09-21T17:34:44Z",
+      "side": 1,
+      "message": "is it more clear to say that without SCHED_DEBUG set this feature can\u0027t be enabled or disabled via sysctl?",
+      "revId": "db587c0e359c57f07dfb833f209eee6e621f24d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
