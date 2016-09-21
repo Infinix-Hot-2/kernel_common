@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "108ffb3e_cec3032a",
+        "filename": "init/Kconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 1297,
+      "author": {
+        "id": 1122323
+      },
+      "writtenOn": "2016-09-21T07:51:39Z",
+      "side": 1,
+      "message": "should be ENERGY_AWARE",
+      "range": {
+        "startLine": 1297,
+        "startChar": 28,
+        "endLine": 1297,
+        "endChar": 40
+      },
+      "revId": "db587c0e359c57f07dfb833f209eee6e621f24d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
