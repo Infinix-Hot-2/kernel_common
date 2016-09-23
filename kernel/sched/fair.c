@@ -5368,6 +5368,16 @@ find_idlest_cpu(struct sched_group *group, struct task_struct *p, int this_cpu)
 	return shallowest_idle_cpu != -1 ? shallowest_idle_cpu : least_loaded_cpu;
 }
 
+static inline
+void set_task_migration_cause(struct task_struct *p, unsigned int cause)
+{
+#ifdef CONFIG_SCHED_DEBUG_EAS_MIGRATION
+	BUG_ON(!(TMC_NONE < cause && cause < TMC_MAX));
+	if (p->migration_cause == TMC_NONE)
+		p->migration_cause = cause;
+#endif
+}
+
 /*
  * Try and locate an idle CPU in the sched_domain.
  */
@@ -5381,14 +5391,18 @@ static int select_idle_sibling(struct task_struct *p, int target)
 	int best_idle_capacity = INT_MAX;
 
 	if (!sysctl_sched_cstate_aware) {
-		if (idle_cpu(target))
+		if (idle_cpu(target)) {
+			set_task_migration_cause(p, TMC_SIS_IDLE);
 			return target;
+		}
 
 		/*
 		 * If the prevous cpu is cache affine and idle, don't be stupid.
 		 */
-		if (i != target && cpus_share_cache(i, target) && idle_cpu(i))
+		if (i != target && cpus_share_cache(i, target) && idle_cpu(i)) {
+			set_task_migration_cause(p, TMC_SIS_CA);
 			return i;
+		}
 	}
 
 	/*
@@ -5411,8 +5425,10 @@ static int select_idle_sibling(struct task_struct *p, int target)
 					if (new_usage > capacity_orig || !idle_cpu(i))
 						goto next;
 
-					if (i == target && new_usage <= capacity_curr_of(target))
+					if (i == target && new_usage <= capacity_curr_of(target)) {
+						set_task_migration_cause(p, TMC_SIS_IDLE_TGT);
 						return target;
+					}
 
 					if (best_idle < 0 || (idle_idx < best_idle_cstate && capacity_orig <= best_idle_capacity)) {
 						best_idle = i;
@@ -5428,16 +5444,20 @@ static int select_idle_sibling(struct task_struct *p, int target)
 
 				target = cpumask_first_and(sched_group_cpus(sg),
 					tsk_cpus_allowed(p));
+				set_task_migration_cause(p, TMC_SIS_IDLE_GRP);
 				goto done;
 			}
 next:
 			sg = sg->next;
 		} while (sg != sd->groups);
 	}
-	if (best_idle > 0)
+	if (best_idle > 0) {
 		target = best_idle;
+		set_task_migration_cause(p, TMC_SIS_BEST_IDLE);
+	}
 
 done:
+	set_task_migration_cause(p, TMC_SIS_DFLT);
 	return target;
 }
 
@@ -5557,14 +5577,18 @@ static int energy_aware_wake_cpu(struct task_struct *p, int target, int sync)
 		int cpu = smp_processor_id();
 		cpumask_t search_cpus;
 		cpumask_and(&search_cpus, tsk_cpus_allowed(p), cpu_online_mask);
-		if (cpumask_test_cpu(cpu, &search_cpus))
+		if (cpumask_test_cpu(cpu, &search_cpus)) {
+			set_task_migration_cause(p, TMC_EAWC_SYNC);
 			return cpu;
+		}
 	}
 
 	sd = rcu_dereference(per_cpu(sd_ea, task_cpu(p)));
 
-	if (!sd)
+	if (!sd) {
+		set_task_migration_cause(p, TMC_EAWC_NO_SD);
 		return target;
+	}
 
 	sg = sd->groups;
 	sg_target = sg;
@@ -5636,8 +5660,10 @@ static int energy_aware_wake_cpu(struct task_struct *p, int target, int sync)
 		int tmp_target = find_best_target(p, boosted, prefer_idle);
 		if (tmp_target >= 0) {
 			target_cpu = tmp_target;
-			if ((boosted || prefer_idle) && idle_cpu(target_cpu))
+			if ((boosted || prefer_idle) && idle_cpu(target_cpu)) {
+				set_task_migration_cause(p, TMC_FBT_DFLT);
 				return target_cpu;
+			}
 		}
 	}
 
@@ -5650,13 +5676,18 @@ static int energy_aware_wake_cpu(struct task_struct *p, int target, int sync)
 		};
 
 		/* Not enough spare capacity on previous cpu */
-		if (cpu_overutilized(task_cpu(p)))
+		if (cpu_overutilized(task_cpu(p))) {
+			set_task_migration_cause(p, TMC_EAWC_INSUF_CAP);
 			return target_cpu;
+		}
 
-		if (energy_diff(&eenv) >= 0)
+		if (energy_diff(&eenv) >= 0) {
+			set_task_migration_cause(p, TMC_EAWC_NO_ES);
 			return task_cpu(p);
+		}
 	}
 
+	set_task_migration_cause(p, TMC_EAWC_DFLT);
 	return target_cpu;
 }
 
@@ -5755,9 +5786,11 @@ select_task_rq_fair(struct task_struct *p, int prev_cpu, int sd_flag, int wake_f
 				sd = tmp;
 		}
 		/* while loop will break here if sd == NULL */
+		set_task_migration_cause(p, TMC_STRF_FIGC);
 	}
 	rcu_read_unlock();
 
+	set_task_migration_cause(p, TMC_STRF_DFLT);
 	return new_cpu;
 }
 
@@ -6542,6 +6575,7 @@ static struct task_struct *detach_one_task(struct lb_env *env)
 		if (!can_migrate_task(p, env))
 			continue;
 
+		set_task_migration_cause(p, TMC_ALB_BASE + env->idle);
 		detach_task(p, env);
 
 		/*
@@ -6609,6 +6643,7 @@ static int detach_tasks(struct lb_env *env)
 		if ((load / 2) > env->imbalance)
 			goto next;
 
+		set_task_migration_cause(p, TMC_PLB_BASE + env->idle);
 		detach_task(p, env);
 		list_add(&p->se.group_node, &env->tasks);
 
@@ -8930,6 +8965,7 @@ static void task_fork_fair(struct task_struct *p)
 
 	se->vruntime -= cfs_rq->min_vruntime;
 
+	set_task_migration_cause(p, TMC_FORK);
 	raw_spin_unlock_irqrestore(&rq->lock, flags);
 }
 

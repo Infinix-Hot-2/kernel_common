@@ -1774,6 +1774,9 @@ struct task_struct {
 	unsigned int	sequential_io;
 	unsigned int	sequential_io_avg;
 #endif
+#ifdef CONFIG_SCHED_DEBUG_EAS_MIGRATION
+	unsigned int migration_cause;
+#endif
 };
 
 /* Future-safe accessor for struct task_struct's cpus_allowed. */

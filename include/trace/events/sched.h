@@ -149,6 +149,66 @@ TRACE_EVENT(sched_switch,
 		__entry->next_comm, __entry->next_pid, __entry->next_prio)
 );
 
+/* TMC ... Task Migration Cause */
+#define TMC_NONE			0
+#define TMC_STRF_AFF		1
+#define TMC_STRF_FIGC		2
+#define TMC_STRF_DFLT		3
+#define TMC_SIS_IDLE		4
+#define TMC_SIS_CA			5
+#define TMC_SIS_IDLE_TGT	6
+#define TMC_SIS_IDLE_GRP	7
+#define TMC_SIS_BEST_IDLE	8
+#define TMC_SIS_DFLT		9
+#define TMC_EAWC_SYNC		10
+#define TMC_EAWC_NO_SD		11
+#define TMC_EAWC_INSUF_CAP	12
+#define TMC_EAWC_NO_ES		13
+#define TMC_EAWC_DFLT		14
+#define TMC_FBT_DFLT		15
+#define TMC_ALB_BASE		16
+#define TMC_ALB_IDLE		TMC_ALB_BASE
+#define TMC_ALB_NOT_IDLE	17
+#define TMC_ALB_NEWLY_IDLE	18
+#define TMC_PLB_BASE		19
+#define TMC_PLB_IDLE		TMC_PLB_BASE
+#define TMC_PLB_NOT_IDLE	20
+#define TMC_PLB_NEWLY_IDLE	21
+#define TMC_FORK			22
+#define TMC_EXEC			23
+#define TMC_AFFINITY		24
+#define TMC_MAX				25
+
+#ifdef CONFIG_SCHED_DEBUG_EAS_MIGRATION
+#define migration_cause_symbolic(cause) \
+	__print_symbolic(cause, \
+		{ TMC_NONE,           "none" }, \
+		{ TMC_STRF_AFF,       "select_task_rq_fair:single_cpu_allowed" }, \
+		{ TMC_STRF_FIGC,      "select_task_rq_fair:find_idlest_group/cpu" }, \
+		{ TMC_STRF_DFLT,      "select_task_rq_fair:default" }, \
+		{ TMC_SIS_IDLE,       "select_idle_sibling:idle-cpu" }, \
+		{ TMC_SIS_CA,         "select_idle_sibling:cache-affine" }, \
+		{ TMC_SIS_DFLT,       "select_idle_sibling:default" }, \
+		{ TMC_SIS_IDLE_TGT,   "select_idle_sibling:idle-cpu-with-enough-capacity" }, \
+		{ TMC_SIS_IDLE_GRP,   "select_idle_sibling:idle-cpu-from-sched-group" }, \
+		{ TMC_SIS_BEST_IDLE,  "select_idle_sibling:best-idle-cpu" }, \
+		{ TMC_EAWC_SYNC,      "energy_aware_wake_cpu:sync" }, \
+		{ TMC_EAWC_NO_SD,     "energy_aware_wake_cpu:no-sched_domain" }, \
+		{ TMC_EAWC_INSUF_CAP, "energy_aware_wake_cpu:insufficient-capacity" }, \
+		{ TMC_EAWC_NO_ES,     "energy_aware_wake_cpu:no-energy-saving" }, \
+		{ TMC_EAWC_DFLT,      "energy_aware_wake_cpu:default" }, \
+		{ TMC_FBT_DFLT,       "find_best_target:default" }, \
+		{ TMC_ALB_IDLE,       "active-load-balance:idle" }, \
+		{ TMC_ALB_NOT_IDLE,   "active-load-balance:not-idle" }, \
+		{ TMC_ALB_NEWLY_IDLE, "active-load-balance:newly-idle" }, \
+		{ TMC_PLB_IDLE,       "periodic-load-balance:idle" }, \
+		{ TMC_PLB_NOT_IDLE,   "periodic-load-balance:not-idle" }, \
+		{ TMC_PLB_NEWLY_IDLE, "periodic-load-balance:newly-idle" }, \
+		{ TMC_FORK,           "fork:fake-migration" }, \
+		{ TMC_EXEC,           "fork-exec:migration" }, \
+		{ TMC_AFFINITY,       "cpu-affinity:changed" })
+#endif /* CONFIG_SCHED_DEBUG_EAS_MIGRATION */
+
 /*
  * Tracepoint for a task being migrated:
  */
@@ -164,6 +224,9 @@ TRACE_EVENT(sched_migrate_task,
 		__field(	int,	prio			)
 		__field(	int,	orig_cpu		)
 		__field(	int,	dest_cpu		)
+#ifdef CONFIG_SCHED_DEBUG_EAS_MIGRATION
+		__field(	int,	cause			)
+#endif
 	),
 
 	TP_fast_assign(
@@ -172,11 +235,22 @@ TRACE_EVENT(sched_migrate_task,
 		__entry->prio		= p->prio;
 		__entry->orig_cpu	= task_cpu(p);
 		__entry->dest_cpu	= dest_cpu;
+#ifdef CONFIG_SCHED_DEBUG_EAS_MIGRATION
+		__entry->cause		= p->migration_cause;
+#endif
 	),
 
-	TP_printk("comm=%s pid=%d prio=%d orig_cpu=%d dest_cpu=%d",
+	TP_printk("comm=%s pid=%d prio=%d orig_cpu=%d dest_cpu=%d"
+#ifdef CONFIG_SCHED_DEBUG_EAS_MIGRATION
+		  " cause=%s"
+#endif
+		  ,
 		  __entry->comm, __entry->pid, __entry->prio,
-		  __entry->orig_cpu, __entry->dest_cpu)
+		  __entry->orig_cpu, __entry->dest_cpu
+#ifdef CONFIG_SCHED_DEBUG_EAS_MIGRATION
+		  , migration_cause_symbolic(__entry->cause)
+#endif
+		 )
 );
 
 /*

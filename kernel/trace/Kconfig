@@ -602,6 +602,15 @@ config RING_BUFFER_STARTUP_TEST
 
 	 If unsure, say N
 
+config SCHED_DEBUG_EAS_MIGRATION
+	bool "Collect EAS scheduler task migration causes"
+	default n
+	help
+	  If you say Y here, the sched_migrate_task trace event will
+	  additionally provide the migration cause.
+
+	  If unsure, say N.
+
 endif # FTRACE
 
 endif # TRACING_SUPPORT
