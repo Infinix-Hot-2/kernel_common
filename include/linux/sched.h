@@ -1899,6 +1899,9 @@ struct task_struct {
 	unsigned long	task_state_change;
 #endif
 	int pagefault_disabled;
+#ifdef CONFIG_SCHED_DEBUG_EAS_MIGRATION
+	unsigned int migration_cause;
+#endif
 /* CPU-specific state of this task */
 	struct thread_struct thread;
 /*

@@ -1250,6 +1250,10 @@ static int __set_cpus_allowed_ptr(struct task_struct *p,
 	if (cpumask_test_cpu(task_cpu(p), new_mask))
 		goto out;
 
+#ifdef CONFIG_SCHED_DEBUG_EAS_MIGRATION
+	p->migration_cause = TMC_AFFINITY;
+#endif
+
 	dest_cpu = cpumask_any_and(cpu_active_mask, new_mask);
 	if (task_running(rq, p) || p->state == TASK_WAKING) {
 		struct migration_arg arg = { p, dest_cpu };
@@ -1315,6 +1319,11 @@ void set_task_cpu(struct task_struct *p, unsigned int new_cpu)
 
 		walt_fixup_busy_time(p, new_cpu);
 	}
+
+#ifdef CONFIG_SCHED_DEBUG_EAS_MIGRATION
+	/* clear any stored migration reason */
+	p->migration_cause = TMC_NONE;
+#endif
 
 	__set_task_cpu(p, new_cpu);
 }
@@ -2071,6 +2080,9 @@ static void try_to_wake_up_local(struct task_struct *p)
 		goto out;
 
 	trace_sched_waking(p);
+#ifdef CONFIG_SCHED_DEBUG_EAS_MIGRATION
+	p->migration_cause = 0;
+#endif
 
 	if (!task_on_rq_queued(p)) {
 		u64 wallclock = walt_ktime_clock();
@@ -2866,6 +2878,9 @@ void sched_exec(void)
 	if (likely(cpu_active(dest_cpu))) {
 		struct migration_arg arg = { p, dest_cpu };
 
+#ifdef CONFIG_SCHED_DEBUG_EAS_MIGRATION
+		p->migration_cause = TMC_EXEC;
+#endif
 		raw_spin_unlock_irqrestore(&p->pi_lock, flags);
 		stop_one_cpu(task_cpu(p), migration_cpu_stop, &arg);
 		return;
