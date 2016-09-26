@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f08d07b7_fe738241",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-09-26T14:25:56Z",
+      "side": 1,
+      "message": "Tried to get this patch from upstream ToT kernel.org (v4.8-rc8), no record. I expect that it resides in an upstream security kernel, please advise.",
+      "range": {
+        "startLine": 19,
+        "startChar": 27,
+        "endLine": 19,
+        "endChar": 67
+      },
+      "revId": "ba44f95ff22308cfe3227ba1804b5e476f60342d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
