@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a56eefe7_1af89d61",
+        "filename": "kernel/audit.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1901,
+      "author": {
+        "id": 1092085
+      },
+      "writtenOn": "2016-09-26T09:51:49Z",
+      "side": 1,
+      "message": "Should not this be \"tgid\u003d\" then?\nJust for my understanding: When namespaces are used, pid may be from a local namespace, while tgid stays global. Is that correct?",
+      "range": {
+        "startLine": 1901,
+        "startChar": 14,
+        "endLine": 1901,
+        "endChar": 17
+      },
+      "revId": "494a59a68340b0244cd6edf7a367e9233b006a3f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e549c77c_274694a9",
+        "filename": "kernel/auditsc.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1990,
+      "author": {
+        "id": 1092085
+      },
+      "writtenOn": "2016-09-26T09:51:49Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 1990,
+        "startChar": 23,
+        "endLine": 1990,
+        "endChar": 26
+      },
+      "revId": "494a59a68340b0244cd6edf7a367e9233b006a3f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2554bf0d_2640d65a",
+        "filename": "kernel/auditsc.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2372,
+      "author": {
+        "id": 1092085
+      },
+      "writtenOn": "2016-09-26T09:51:49Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 2372,
+        "startChar": 24,
+        "endLine": 2372,
+        "endChar": 27
+      },
+      "revId": "494a59a68340b0244cd6edf7a367e9233b006a3f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2554bf0d_0645da6a",
+        "filename": "security/lsm_audit.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1092085
+      },
+      "writtenOn": "2016-09-26T09:51:49Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 223,
+        "startChar": 24,
+        "endLine": 223,
+        "endChar": 27
+      },
+      "revId": "494a59a68340b0244cd6edf7a367e9233b006a3f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
