@@ -1,0 +1,7 @@
+Code-Review+2: Kees Cook <keescook@google.com>
+Verified+1: Sami Tolvanen <samitolvanen@google.com>
+Submitted-by: Sami Tolvanen <samitolvanen@google.com>
+Submitted-at: Thu, 29 Sep 2016 20:01:43 +0000
+Reviewed-on: https://android-review.googlesource.com/281242
+Project: kernel/common
+Branch: refs/heads/android-4.4
