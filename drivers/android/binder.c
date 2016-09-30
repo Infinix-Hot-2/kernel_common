@@ -195,13 +195,30 @@ static struct binder_transaction_log binder_transaction_log;
 static struct binder_transaction_log binder_transaction_log_failed;
 
 struct binder_context {
+	struct miscdevice dev;
 	struct binder_node *binder_context_mgr_node;
 	kuid_t binder_context_mgr_uid;
 };
 
-static struct binder_context global_context = {
-	.binder_context_mgr_node = NULL,
-	.binder_context_mgr_uid = INVALID_UID
+static const struct file_operations binder_fops;
+
+static struct binder_context binder_contexts[] = {
+	{.dev = {
+			.minor = MISC_DYNAMIC_MINOR,
+			.name = "binder",
+			.fops = &binder_fops
+		},
+	 .binder_context_mgr_uid = INVALID_UID
+	},
+#if IS_ENABLED(CONFIG_ANDROID_BINDER_VENDOR_DOMAIN)
+	{.dev = {
+			.minor = MISC_DYNAMIC_MINOR,
+			.name = "hwbinder",
+			.fops = &binder_fops
+		},
+	 .binder_context_mgr_uid = INVALID_UID
+	},
+#endif
 };
 
 static struct binder_transaction_log_entry *binder_transaction_log_add(
@@ -2845,13 +2862,14 @@ out:
 	return ret;
 }
 
-static int binder_ioctl_set_ctx_mgr(struct file *filp)
+static int binder_ioctl_set_ctx_mgr(struct binder_context *context,
+				    struct file *filp)
 {
 	int ret = 0;
 	struct binder_proc *proc = filp->private_data;
 	kuid_t curr_euid = current_euid();
 
-	if (global_context.binder_context_mgr_node != NULL) {
+	if (context->binder_context_mgr_node) {
 		pr_err("BINDER_SET_CONTEXT_MGR already set\n");
 		ret = -EBUSY;
 		goto out;
@@ -2859,27 +2877,27 @@ static int binder_ioctl_set_ctx_mgr(struct file *filp)
 	ret = security_binder_set_context_mgr(proc->tsk);
 	if (ret < 0)
 		goto out;
-	if (uid_valid(global_context.binder_context_mgr_uid)) {
-		if (!uid_eq(global_context.binder_context_mgr_uid, curr_euid)) {
+	if (uid_valid(context->binder_context_mgr_uid)) {
+		if (!uid_eq(context->binder_context_mgr_uid, curr_euid)) {
 			pr_err("BINDER_SET_CONTEXT_MGR bad uid %d != %d\n",
 			       from_kuid(&init_user_ns, curr_euid),
 			       from_kuid(&init_user_ns,
-					global_context.binder_context_mgr_uid));
+					context->binder_context_mgr_uid));
 			ret = -EPERM;
 			goto out;
 		}
 	} else {
-		global_context.binder_context_mgr_uid = curr_euid;
+		context->binder_context_mgr_uid = curr_euid;
 	}
-	global_context.binder_context_mgr_node = binder_new_node(proc, 0, 0);
-	if (global_context.binder_context_mgr_node == NULL) {
+	context->binder_context_mgr_node = binder_new_node(proc, 0, 0);
+	if (!context->binder_context_mgr_node) {
 		ret = -ENOMEM;
 		goto out;
 	}
-	global_context.binder_context_mgr_node->local_weak_refs++;
-	global_context.binder_context_mgr_node->local_strong_refs++;
-	global_context.binder_context_mgr_node->has_strong_ref = 1;
-	global_context.binder_context_mgr_node->has_weak_ref = 1;
+	context->binder_context_mgr_node->local_weak_refs++;
+	context->binder_context_mgr_node->local_strong_refs++;
+	context->binder_context_mgr_node->has_strong_ref = 1;
+	context->binder_context_mgr_node->has_weak_ref = 1;
 out:
 	return ret;
 }
@@ -2888,6 +2906,7 @@ static long binder_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 {
 	int ret;
 	struct binder_proc *proc = filp->private_data;
+	struct binder_context *context = proc->context;
 	struct binder_thread *thread;
 	unsigned int size = _IOC_SIZE(cmd);
 	void __user *ubuf = (void __user *)arg;
@@ -2921,7 +2940,7 @@ static long binder_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 		}
 		break;
 	case BINDER_SET_CONTEXT_MGR:
-		ret = binder_ioctl_set_ctx_mgr(filp);
+		ret = binder_ioctl_set_ctx_mgr(context, filp);
 		if (ret)
 			goto err;
 		break;
@@ -3105,7 +3124,9 @@ err_bad_arg:
 
 static int binder_open(struct inode *nodp, struct file *filp)
 {
+	struct miscdevice *dev;
 	struct binder_proc *proc;
+	int i;
 
 	binder_debug(BINDER_DEBUG_OPEN_CLOSE, "binder_open: %d:%d\n",
 		     current->group_leader->pid, current->pid);
@@ -3115,10 +3136,18 @@ static int binder_open(struct inode *nodp, struct file *filp)
 		return -ENOMEM;
 	get_task_struct(current);
 	proc->tsk = current;
-	proc->context = &global_context;
 	INIT_LIST_HEAD(&proc->todo);
 	init_waitqueue_head(&proc->wait);
 	proc->default_priority = task_nice(current);
+	dev = filp->private_data;
+        for (i = 0; i < ARRAY_SIZE(binder_contexts); i++) {
+		if (!strcmp(binder_contexts[i].dev.name, dev->name)) {
+			proc->context = &binder_contexts[i];
+			break;
+		}
+	}
+	if (proc->context == NULL)
+		return -EINVAL;
 
 	binder_lock(__func__);
 
@@ -3826,12 +3855,6 @@ static const struct file_operations binder_fops = {
 	.release = binder_release,
 };
 
-static struct miscdevice binder_miscdev = {
-	.minor = MISC_DYNAMIC_MINOR,
-	.name = "binder",
-	.fops = &binder_fops
-};
-
 BINDER_DEBUG_ENTRY(state);
 BINDER_DEBUG_ENTRY(stats);
 BINDER_DEBUG_ENTRY(transactions);
@@ -3839,7 +3862,7 @@ BINDER_DEBUG_ENTRY(transaction_log);
 
 static int __init binder_init(void)
 {
-	int ret;
+	int ret, i;
 
 	binder_deferred_workqueue = create_singlethread_workqueue("binder");
 	if (!binder_deferred_workqueue)
@@ -3849,7 +3872,11 @@ static int __init binder_init(void)
 	if (binder_debugfs_dir_entry_root)
 		binder_debugfs_dir_entry_proc = debugfs_create_dir("proc",
 						 binder_debugfs_dir_entry_root);
-	ret = misc_register(&binder_miscdev);
+	for (i = 0; i < ARRAY_SIZE(binder_contexts); i++) {
+		ret = misc_register(&binder_contexts[i].dev);
+		if (ret)
+			break;
+	}
 	if (binder_debugfs_dir_entry_root) {
 		debugfs_create_file("state",
 				    S_IRUGO,
