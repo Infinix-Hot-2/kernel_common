@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c22d9995_b115065b",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-09-30T23:08:27Z",
+      "side": 1,
+      "message": "I don\u0027t think this belongs in the context, the context and miscdevice can both be in a binderdevice.",
+      "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c22d9995_917e8a6e",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2866,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-09-30T23:08:27Z",
+      "side": 1,
+      "message": "see parent patch. This does not need to change.",
+      "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c22d9995_9130caf4",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3142,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-09-30T23:08:27Z",
+      "side": 1,
+      "message": "if you have the miscdevice, you can use containerof to get the device that it contained (which should contain your context).",
+      "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
