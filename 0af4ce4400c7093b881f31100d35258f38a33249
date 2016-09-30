@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c22d9995_863bf285",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1485,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-09-30T22:41:14Z",
+      "side": 1,
+      "message": "Returning a BR_ code from a helper function is problematic as they are not all a single value. It would be better to return a normal error code. The calling function can then set the return code to BR_FAILED_REPLY. Or you can apply the patches that return BR_ERROR first and pass through the error code.",
+      "revId": "0af4ce4400c7093b881f31100d35258f38a33249",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c22d9995_c6bc5ada",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1572,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-09-30T22:41:14Z",
+      "side": 1,
+      "message": "I would leave this out of here and pass in the old fd and return the new fd instead. That way you can use the same code with your new object type.",
+      "range": {
+        "startLine": 1572,
+        "startChar": 31,
+        "endLine": 1572,
+        "endChar": 54
+      },
+      "revId": "0af4ce4400c7093b881f31100d35258f38a33249",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
