@@ -114,6 +114,9 @@ module_param_named(debug_mask, binder_debug_mask, uint, S_IWUSR | S_IRUGO);
 static bool binder_debug_no_lock;
 module_param_named(proc_no_lock, binder_debug_no_lock, bool, S_IWUSR | S_IRUGO);
 
+static char *binder_devices = CONFIG_ANDROID_BINDER_DEVICES;
+module_param_named(devices, binder_devices, charp, 0);
+
 static DECLARE_WAIT_QUEUE_HEAD(binder_user_error_wait);
 static int binder_stop_on_user_error;
 
@@ -214,9 +217,9 @@ struct binder_context {
 	kuid_t binder_context_mgr_uid;
 };
 
-static struct binder_context global_context = {
-	.binder_context_mgr_node = NULL,
-	.binder_context_mgr_uid = INVALID_UID,
+struct binderdevice {
+	struct miscdevice miscdev;
+	struct binder_context context;
 };
 
 struct binder_work {
@@ -3119,6 +3122,7 @@ err_bad_arg:
 
 static int binder_open(struct inode *nodp, struct file *filp)
 {
+	struct binderdevice *binder_dev;
 	struct binder_proc *proc;
 
 	binder_debug(BINDER_DEBUG_OPEN_CLOSE, "binder_open: %d:%d\n",
@@ -3129,10 +3133,12 @@ static int binder_open(struct inode *nodp, struct file *filp)
 		return -ENOMEM;
 	get_task_struct(current);
 	proc->tsk = current;
-	proc->context = &global_context;
 	INIT_LIST_HEAD(&proc->todo);
 	init_waitqueue_head(&proc->wait);
 	proc->default_priority = task_nice(current);
+	binder_dev = container_of(filp->private_data, struct binderdevice,
+				  miscdev);
+	proc->context = &binder_dev->context;
 
 	binder_lock(__func__);
 
@@ -3839,20 +3845,34 @@ static const struct file_operations binder_fops = {
 	.release = binder_release,
 };
 
-static struct miscdevice binder_miscdev = {
-	.minor = MISC_DYNAMIC_MINOR,
-	.name = "binder",
-	.fops = &binder_fops
-};
-
 BINDER_DEBUG_ENTRY(state);
 BINDER_DEBUG_ENTRY(stats);
 BINDER_DEBUG_ENTRY(transactions);
 BINDER_DEBUG_ENTRY(transaction_log);
 
+static int __init init_binder_device(const char *name)
+{
+	struct binderdevice *binder_device;
+
+	binder_device = kzalloc(sizeof(*binder_device), GFP_KERNEL);
+	if (!binder_device)
+		return -ENOMEM;
+
+	binder_device->miscdev.fops = &binder_fops;
+	binder_device->miscdev.minor = MISC_DYNAMIC_MINOR;
+	binder_device->miscdev.name = name;
+
+	binder_device->context.binder_context_mgr_uid = INVALID_UID;
+
+	misc_register(&binder_device->miscdev);
+
+	return 0;
+}
+
 static int __init binder_init(void)
 {
 	int ret;
+	char *device, *devices;
 
 	binder_deferred_workqueue = create_singlethread_workqueue("binder");
 	if (!binder_deferred_workqueue)
@@ -3862,7 +3882,7 @@ static int __init binder_init(void)
 	if (binder_debugfs_dir_entry_root)
 		binder_debugfs_dir_entry_proc = debugfs_create_dir("proc",
 						 binder_debugfs_dir_entry_root);
-	ret = misc_register(&binder_miscdev);
+
 	if (binder_debugfs_dir_entry_root) {
 		debugfs_create_file("state",
 				    S_IRUGO,
@@ -3889,6 +3909,21 @@ static int __init binder_init(void)
 				    binder_debugfs_dir_entry_root,
 				    &binder_transaction_log_failed,
 				    &binder_transaction_log_fops);
+	}
+
+
+	/*
+	 * Copy the module_parameter string, because we don't want to
+	 * tokenize it in-place.
+	 */
+	devices = kzalloc(strlen(binder_devices) + 1, GFP_KERNEL);
+	if (!devices)
+		return -ENOMEM;
+	strcpy(devices, binder_devices);
+	while ((device = strsep(&devices, ","))) {
+		ret = init_binder_device(device);
+		if (ret)
+			break;
 	}
 	return ret;
 }
