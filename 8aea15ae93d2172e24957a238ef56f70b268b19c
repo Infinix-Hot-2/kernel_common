@@ -65,6 +65,30 @@
     },
     {
       "key": {
+        "uuid": "42b1a9f0_864c94c8",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1015,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-03T23:51:28Z",
+      "side": 1,
+      "message": "You need spaces to align with the previous line.",
+      "parentUuid": "42b1a9f0_2ba551b3",
+      "range": {
+        "startLine": 1015,
+        "startChar": 3,
+        "endLine": 1015,
+        "endChar": 7
+      },
+      "revId": "8aea15ae93d2172e24957a238ef56f70b268b19c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "42b1a9f0_9d98637d",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
