@@ -56,6 +56,29 @@
       "revId": "abecc401cb921d50cd10d7d58b1226212ab24565",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42b1a9f0_0b832db5",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 3924,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-10-03T23:01:31Z",
+      "side": 1,
+      "message": "ret \u003d init_binder_device(binder_devices[i]);\n\nshould be good enough if inside init_binder_device you use:\n\nsize_t len \u003d strcspn(binder_devices[i], \", \\t\\r\\n\");\n\n(and not strlen() as I formerly suggested). If array handling also uses other separators (eg: ; or :) then add them to the string. IDK.\n\nsetting a terminating nul in the data just sounds evil, assume it is const char* is a safe assumption.",
+      "range": {
+        "startLine": 3921,
+        "startChar": 0,
+        "endLine": 3924,
+        "endChar": 46
+      },
+      "revId": "abecc401cb921d50cd10d7d58b1226212ab24565",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
