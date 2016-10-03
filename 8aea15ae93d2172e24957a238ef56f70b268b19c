@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "42b1a9f0_7d146f5a",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-03T22:46:44Z",
+      "side": 1,
+      "message": "add ,",
+      "revId": "8aea15ae93d2172e24957a238ef56f70b268b19c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42b1a9f0_5d540bcb",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1015,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-03T22:46:44Z",
+      "side": 1,
+      "message": "why did this change?",
+      "range": {
+        "startLine": 1015,
+        "startChar": 39,
+        "endLine": 1015,
+        "endChar": 40
+      },
+      "revId": "8aea15ae93d2172e24957a238ef56f70b268b19c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42b1a9f0_9d98637d",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1016,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-03T22:46:44Z",
+      "side": 1,
+      "message": "You don\u0027t need to pass proc in, you can use the proc pointer in the node as long as you check for NULL (if the process that set the context manager node dies, it both pointers get set to NULL).",
+      "revId": "8aea15ae93d2172e24957a238ef56f70b268b19c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42b1a9f0_603be886",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1948,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-03T22:46:44Z",
+      "side": 1,
+      "message": "this is not aligned with anything an over 80 chars so you may as well move is left by one.",
+      "revId": "8aea15ae93d2172e24957a238ef56f70b268b19c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
