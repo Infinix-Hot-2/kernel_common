@@ -198,6 +198,30 @@
       "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42b1a9f0_1d72933d",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3879,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-10-03T21:19:03Z",
+      "side": 1,
+      "message": "We need to support parameters, and device tree optionally, IMHO.",
+      "parentUuid": "42d8c93a_9f15b34f",
+      "range": {
+        "startLine": 3875,
+        "startChar": 0,
+        "endLine": 3879,
+        "endChar": 2
+      },
+      "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
