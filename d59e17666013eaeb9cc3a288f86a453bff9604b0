@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a2b6e5e4_1a9b7d6d",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-03T19:37:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c22d9995_b115065b",
+      "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c22d9995_917e8a6e",
         "filename": "drivers/android/binder.c",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2016-09-30T23:08:27Z",
       "side": 1,
       "message": "see parent patch. This does not need to change.",
+      "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a2b6e5e4_fa8c0935",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2866,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-03T19:37:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c22d9995_917e8a6e",
       "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -59,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "a2b6e5e4_fa8249af",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2869,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-03T19:37:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c20e797c_58cb6967",
+      "range": {
+        "startLine": 2869,
+        "startChar": 46,
+        "endLine": 2869,
+        "endChar": 47
+      },
+      "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c22d9995_9130caf4",
         "filename": "drivers/android/binder.c",
         "patchSetId": 1
@@ -76,6 +136,24 @@
     },
     {
       "key": {
+        "uuid": "a2b6e5e4_3aa04191",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3142,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-03T19:37:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c22d9995_9130caf4",
+      "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c20e797c_cc85de0c",
         "filename": "drivers/android/binder.c",
         "patchSetId": 1
@@ -87,6 +165,30 @@
       "writtenOn": "2016-10-03T18:27:30Z",
       "side": 1,
       "message": "You can get/construct this from the module (or [kernel]) command line (eg: [binder.]contexts\u003dbinder,hwbinder) or from a device tree. This will allow you to grow a list of binder contexts as large as you want. A dependent patch from this could make binder,hwbinder the default if nothing specified.",
+      "range": {
+        "startLine": 3875,
+        "startChar": 0,
+        "endLine": 3879,
+        "endChar": 2
+      },
+      "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42d8c93a_9f15b34f",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3879,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-03T19:37:05Z",
+      "side": 1,
+      "message": "I made an attempt with kernel params, but hit a weird bug (or a feature); see comments. If you think this is easier with device-tree, I can try that. I initially didn\u0027t use devicetree because I wasn\u0027t sure all Android vendors are using it.",
+      "parentUuid": "c20e797c_cc85de0c",
       "range": {
         "startLine": 3875,
         "startChar": 0,
