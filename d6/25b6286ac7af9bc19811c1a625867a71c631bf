@@ -1,0 +1,9 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+1: Guenter Roeck <groeck@chromium.org>
+Code-Review+2: Kees Cook <keescook@google.com>
+Verified+1: Guenter Roeck <groeck@chromium.org>
+Submitted-by: Sami Tolvanen <samitolvanen@google.com>
+Submitted-at: Mon, 03 Oct 2016 21:44:18 +0000
+Reviewed-on: https://android-review.googlesource.com/282622
+Project: kernel/common
+Branch: refs/heads/android-4.4
