@@ -22,6 +22,40 @@
       "revId": "abecc401cb921d50cd10d7d58b1226212ab24565",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42b1a9f0_b7f38863",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 3907,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-03T21:36:21Z",
+      "side": 1,
+      "message": "I don\u0027t think you need this. The parameter itself can have a default value.",
+      "revId": "abecc401cb921d50cd10d7d58b1226212ab24565",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42b1a9f0_fd787fb6",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 3920,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-03T21:36:21Z",
+      "side": 1,
+      "message": "I think you also have to lock the parameter if you use charp. If you are scanning for the separator anyway you may just use a single string instead of an array parameter.",
+      "revId": "abecc401cb921d50cd10d7d58b1226212ab24565",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
