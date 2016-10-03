@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a2b6e5e4_bab0d1d8",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1485,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-03T19:38:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c22d9995_863bf285",
+      "revId": "0af4ce4400c7093b881f31100d35258f38a33249",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c22d9995_c6bc5ada",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
@@ -30,6 +48,30 @@
       "writtenOn": "2016-09-30T22:41:14Z",
       "side": 1,
       "message": "I would leave this out of here and pass in the old fd and return the new fd instead. That way you can use the same code with your new object type.",
+      "range": {
+        "startLine": 1572,
+        "startChar": 31,
+        "endLine": 1572,
+        "endChar": 54
+      },
+      "revId": "0af4ce4400c7093b881f31100d35258f38a33249",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a2b6e5e4_dabd85af",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1572,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-03T19:38:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c22d9995_c6bc5ada",
       "range": {
         "startLine": 1572,
         "startChar": 31,
