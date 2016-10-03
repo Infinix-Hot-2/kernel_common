@@ -16,6 +16,24 @@
       "revId": "ebe2bf0b9a2a4e6bc8d8fb84ac04d84a846a339d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a2b6e5e4_3ac5a136",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 781,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-03T19:38:32Z",
+      "side": 1,
+      "message": "I\u0027ve seen checkpatch complain about this, but in this case it didn\u0027t. Fixed it anyway.",
+      "parentUuid": "c22d9995_0c3e0114",
+      "revId": "ebe2bf0b9a2a4e6bc8d8fb84ac04d84a846a339d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
