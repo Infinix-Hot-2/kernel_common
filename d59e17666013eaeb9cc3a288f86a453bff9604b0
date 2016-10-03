@@ -36,6 +36,29 @@
     },
     {
       "key": {
+        "uuid": "c20e797c_58cb6967",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2869,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-10-03T18:27:30Z",
+      "side": 1,
+      "message": "struct binder_context *context \u003d proc-\u003econtext;",
+      "range": {
+        "startLine": 2869,
+        "startChar": 46,
+        "endLine": 2869,
+        "endChar": 47
+      },
+      "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c22d9995_9130caf4",
         "filename": "drivers/android/binder.c",
         "patchSetId": 1
@@ -47,6 +70,29 @@
       "writtenOn": "2016-09-30T23:08:27Z",
       "side": 1,
       "message": "if you have the miscdevice, you can use containerof to get the device that it contained (which should contain your context).",
+      "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c20e797c_cc85de0c",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3879,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-10-03T18:27:30Z",
+      "side": 1,
+      "message": "You can get/construct this from the module (or [kernel]) command line (eg: [binder.]contexts\u003dbinder,hwbinder) or from a device tree. This will allow you to grow a list of binder contexts as large as you want. A dependent patch from this could make binder,hwbinder the default if nothing specified.",
+      "range": {
+        "startLine": 3875,
+        "startChar": 0,
+        "endLine": 3879,
+        "endChar": 2
+      },
       "revId": "d59e17666013eaeb9cc3a288f86a453bff9604b0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
