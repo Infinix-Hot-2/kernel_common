@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "42b1a9f0_3da03791",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 3853,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-10-03T21:19:03Z",
+      "side": 1,
+      "message": "You may have to make a copy, or report\n\n    binder_device-\u003emiscdev.len \u003d strlen(name);\n\nAnd perform strn\u0027s on it after _init parsing?",
+      "range": {
+        "startLine": 3853,
+        "startChar": 1,
+        "endLine": 3853,
+        "endChar": 36
+      },
+      "revId": "abecc401cb921d50cd10d7d58b1226212ab24565",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
