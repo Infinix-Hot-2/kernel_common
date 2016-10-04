@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "42ec493c_e84b07ae",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-04T22:31:25Z",
+      "side": 1,
+      "message": "I would leave hwbinder out for now (or move it to a separate patch).",
+      "revId": "eef010ddddc41d4f4c0c084407a5d0662db8a4c3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42ec493c_88cb5b9c",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-04T22:31:25Z",
+      "side": 1,
+      "message": "You may want to use the _named version here so you don\u0027t need to pass binder twice to get to it (binder.binder_device vs binder.devices)",
+      "revId": "eef010ddddc41d4f4c0c084407a5d0662db8a4c3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
