@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "c24bd9fb_fb768f2f",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-04T09:50:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "42b1a9f0_7d146f5a",
+      "revId": "8aea15ae93d2172e24957a238ef56f70b268b19c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "42b1a9f0_5d540bcb",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
@@ -89,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "c24bd9fb_9b7bcb16",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1015,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-04T09:50:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "42b1a9f0_5d540bcb",
+      "range": {
+        "startLine": 1015,
+        "startChar": 39,
+        "endLine": 1015,
+        "endChar": 40
+      },
+      "revId": "8aea15ae93d2172e24957a238ef56f70b268b19c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "42b1a9f0_9d98637d",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
@@ -106,6 +148,24 @@
     },
     {
       "key": {
+        "uuid": "c24bd9fb_bb8007fd",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1016,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-04T09:50:38Z",
+      "side": 1,
+      "message": "Done; in the new PS, I don\u0027t return -EINVAL if node-\u003eproc \u003d\u003d NULL; the old code also didn\u0027t do that. But, I do wonder if that is a valid scenario.",
+      "parentUuid": "42b1a9f0_9d98637d",
+      "revId": "8aea15ae93d2172e24957a238ef56f70b268b19c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "42b1a9f0_603be886",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
@@ -117,6 +177,24 @@
       "writtenOn": "2016-10-03T22:46:44Z",
       "side": 1,
       "message": "this is not aligned with anything an over 80 chars so you may as well move is left by one.",
+      "revId": "8aea15ae93d2172e24957a238ef56f70b268b19c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c24bd9fb_5b86a318",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1948,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-04T09:50:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "42b1a9f0_603be886",
       "revId": "8aea15ae93d2172e24957a238ef56f70b268b19c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
