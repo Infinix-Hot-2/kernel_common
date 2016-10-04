@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "42b1a9f0_06c16493",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1589,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-04T00:01:32Z",
+      "side": 1,
+      "message": "EBADF?",
+      "range": {
+        "startLine": 1589,
+        "startChar": 9,
+        "endLine": 1589,
+        "endChar": 15
+      },
+      "revId": "901a48c59319318337800aa94d07b37916c1a0c8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42b1a9f0_26f4a8e8",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1600,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-04T00:01:32Z",
+      "side": 1,
+      "message": "target_fd already contains an error code",
+      "range": {
+        "startLine": 1600,
+        "startChar": 9,
+        "endLine": 1600,
+        "endChar": 15
+      },
+      "revId": "901a48c59319318337800aa94d07b37916c1a0c8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e2945d52_fb823baf",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1848,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-04T00:01:32Z",
+      "side": 1,
+      "message": "Don\u0027t use return_error here as it is not the correct type. Do none of the binder tests catch this?",
+      "range": {
+        "startLine": 1848,
+        "startChar": 7,
+        "endLine": 1848,
+        "endChar": 19
+      },
+      "revId": "901a48c59319318337800aa94d07b37916c1a0c8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
