@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "42ec493c_0820eb07",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1015,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-04T22:10:12Z",
+      "side": 1,
+      "message": "I don\u0027t think this is correct. node-\u003eproc is NULL if the owning process is dead. That should not disable this error check.\n\nIf node-\u003eproc is NULL, it cannot be the context manager node, so you can move this inside the check that the node is not the-context-manager-node-with-a-strong-ref.",
+      "revId": "cb07272224911b7e484905b5129530b342365c1d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
