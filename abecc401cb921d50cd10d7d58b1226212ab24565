@@ -95,6 +95,24 @@
     },
     {
       "key": {
+        "uuid": "42ec493c_e88dc78b",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 3920,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-04T22:31:25Z",
+      "side": 1,
+      "message": "The upstream code uses kernel_param_lock, older versions seem to use kparam_block_sysfs_write. If it is not writeable you may not need it though.",
+      "parentUuid": "c24bd9fb_5bb463cc",
+      "revId": "abecc401cb921d50cd10d7d58b1226212ab24565",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "42b1a9f0_0b832db5",
         "filename": "drivers/android/binder.c",
         "patchSetId": 2
