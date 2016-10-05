@@ -114,15 +114,14 @@ SECTIONS
 		*(.got)			/* Global offset table		*/
 	}
 
+	ALIGN_DEBUG_RO_MIN(PAGE_SIZE)
 	_etext = .;			/* End of text section */
 
-	ALIGN_DEBUG_RO_MIN(PAGE_SIZE)
-	RO_DATA(PAGE_SIZE)		/* everything from this point to */
-	EXCEPTION_TABLE(8)		/* _etext will be marked RO NX   */
+	RO_DATA(PAGE_SIZE)		/* everything from this point to     */
+	EXCEPTION_TABLE(8)		/* __init_begin will be marked RO NX */
 	NOTES
 
 	ALIGN_DEBUG_RO_MIN(PAGE_SIZE)
-	_etext = .;			/* End of text and rodata section */
 	__init_begin = .;
 
 	INIT_TEXT_SECTION(8)
