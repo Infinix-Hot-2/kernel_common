@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "42ec493c_34ad469d",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-05T03:43:22Z",
+      "side": 1,
+      "message": "You could also add a kconfig option to select the default value for this parameter.",
+      "parentUuid": "42ec493c_e84b07ae",
+      "revId": "eef010ddddc41d4f4c0c084407a5d0662db8a4c3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "42ec493c_88cb5b9c",
         "filename": "drivers/android/binder.c",
         "patchSetId": 3
