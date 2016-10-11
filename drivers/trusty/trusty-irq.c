@@ -214,7 +214,11 @@ irqreturn_t trusty_irq_handler(int irq, void *data)
 	}
 	spin_unlock(&is->normal_irqs_lock);
 
-	queue_work_on(raw_smp_processor_id(), is->wq, &trusty_irq_work->work);
+	if (trusty_get_api_version(is->trusty_dev) < TRUSTY_API_VERSION_SMP_NOP)
+		queue_work_on(raw_smp_processor_id(),
+			      is->wq, &trusty_irq_work->work);
+	else
+		trusty_enqueue_nop(is->trusty_dev, NULL);
 
 	dev_dbg(is->dev, "%s: irq %d done\n", __func__, irq);
 
