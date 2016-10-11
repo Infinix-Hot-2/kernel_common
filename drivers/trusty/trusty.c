@@ -24,12 +24,24 @@
 #include <linux/trusty/sm_err.h>
 #include <linux/trusty/trusty.h>
 
+struct trusty_state;
+
+struct trusty_work {
+	struct trusty_state *ts;
+	struct work_struct work;
+};
+
 struct trusty_state {
 	struct mutex smc_lock;
 	struct atomic_notifier_head notifier;
 	struct completion cpu_idle_completion;
 	char *version_str;
 	u32 api_version;
+	struct device *dev;
+	struct workqueue_struct *twq;
+	struct trusty_work __percpu *twks;
+	struct list_head nop_queue;
+	spinlock_t nop_lock; /* protects nop_queue */
 };
 
 #ifdef CONFIG_ARM64
@@ -316,9 +328,101 @@ static int trusty_init_api_version(struct trusty_state *s, struct device *dev)
 	return 0;
 }
 
+static bool dequeue_nop(struct trusty_state *s, u32 *args)
+{
+	unsigned long flags;
+	struct trusty_nop *nop = NULL;
+
+	spin_lock_irqsave(&s->nop_lock, flags);
+	if (!list_empty(&s->nop_queue)) {
+		nop = list_first_entry(&s->nop_queue,
+				       struct trusty_nop, node);
+		list_del(&nop->node);
+		nop->queued = false;
+		args[0] = nop->args[0];
+		args[1] = nop->args[1];
+		args[2] = nop->args[2];
+	} else {
+		args[0] = 0;
+		args[1] = 0;
+		args[2] = 0;
+	}
+	spin_unlock_irqrestore(&s->nop_lock, flags);
+	return nop;
+}
+
+static void nop_work_func(struct work_struct *work)
+{
+	int ret;
+	u32 args[3];
+	struct trusty_work *tw = container_of(work, struct trusty_work, work);
+	struct trusty_state *s = tw->ts;
+
+	dev_dbg(s->dev, "%s:\n", __func__);
+
+	dequeue_nop(s, args);
+	for (;;) {
+		dev_dbg(s->dev, "%s: %x %x %x\n",
+			__func__, args[0], args[1], args[2]);
+
+		ret = trusty_std_call32(s->dev, SMC_SC_NOP,
+					args[0], args[1], args[2]);
+		if (ret == SM_ERR_NOP_INTERRUPTED) {
+			dequeue_nop(s, args);  /* process next item or nop */
+		} else if (ret == SM_ERR_NOP_DONE) {
+			if (!dequeue_nop(s, args))
+				break; /* no more work */
+		} else {
+			break;
+		}
+	}
+
+	if (ret != SM_ERR_NOP_DONE)
+		dev_err(s->dev, "%s: SMC_SC_NOP failed %d", __func__, ret);
+
+	dev_dbg(s->dev, "%s: done\n", __func__);
+}
+
+void trusty_enqueue_nop(struct device *dev, struct trusty_nop *nop)
+{
+	struct trusty_state *s = platform_get_drvdata(to_platform_device(dev));
+	struct trusty_work *tw = this_cpu_ptr(s->twks);
+
+	if (nop) {
+		unsigned long flags;
+
+		spin_lock_irqsave(&s->nop_lock, flags);
+		if (!nop->queued) {
+			list_add_tail(&nop->node, &s->nop_queue);
+			nop->queued = true;
+			queue_work(s->twq, &tw->work);
+		}
+		spin_unlock_irqrestore(&s->nop_lock, flags);
+	} else {
+		/* just kick queue */
+		queue_work(s->twq, &tw->work);
+	}
+}
+EXPORT_SYMBOL(trusty_enqueue_nop);
+
+void trusty_dequeue_nop(struct device *dev, struct trusty_nop *nop)
+{
+	unsigned long flags;
+	struct trusty_state *s = platform_get_drvdata(to_platform_device(dev));
+
+	spin_lock_irqsave(&s->nop_lock, flags);
+	if (nop->queued) {
+		list_del(&nop->node);
+		nop->queued = false;
+	}
+	spin_unlock_irqrestore(&s->nop_lock, flags);
+}
+EXPORT_SYMBOL(trusty_dequeue_nop);
+
 static int trusty_probe(struct platform_device *pdev)
 {
 	int ret;
+	unsigned cpu;
 	struct trusty_state *s;
 	struct device_node *node = pdev->dev.of_node;
 
@@ -332,6 +436,10 @@ static int trusty_probe(struct platform_device *pdev)
 		ret = -ENOMEM;
 		goto err_allocate_state;
 	}
+
+	s->dev = &pdev->dev;
+	spin_lock_init(&s->nop_lock);
+	INIT_LIST_HEAD(&s->nop_queue);
 	mutex_init(&s->smc_lock);
 	ATOMIC_INIT_NOTIFIER_HEAD(&s->notifier);
 	init_completion(&s->cpu_idle_completion);
@@ -343,6 +451,27 @@ static int trusty_probe(struct platform_device *pdev)
 	if (ret < 0)
 		goto err_api_version;
 
+	s->twq = alloc_workqueue("trusty-wq", WQ_CPU_INTENSIVE, 0);
+	if (!s->twq) {
+		ret = -ENODEV;
+		dev_err(&pdev->dev, "Failed create trusty-wq\n");
+		goto err_create_twq;
+	}
+
+	s->twks = alloc_percpu(struct trusty_work);
+	if (!s->twks) {
+		ret = -ENOMEM;
+		dev_err(&pdev->dev, "Failed to allocate works\n");
+		goto err_alloc_works;
+	}
+
+	for_each_possible_cpu(cpu) {
+		struct trusty_work *tw = per_cpu_ptr(s->twks, cpu);
+
+		tw->ts = s;
+		INIT_WORK(&tw->work, nop_work_func);
+	}
+
 	ret = of_platform_populate(pdev->dev.of_node, NULL, NULL, &pdev->dev);
 	if (ret < 0) {
 		dev_err(&pdev->dev, "Failed to add children: %d\n", ret);
@@ -352,6 +481,15 @@ static int trusty_probe(struct platform_device *pdev)
 	return 0;
 
 err_add_children:
+	for_each_possible_cpu(cpu) {
+		struct trusty_work *tw = per_cpu_ptr(s->twks, cpu);
+
+		flush_work(&tw->work);
+	}
+	free_percpu(s->twks);
+err_alloc_works:
+	destroy_workqueue(s->twq);
+err_create_twq:
 err_api_version:
 	if (s->version_str) {
 		device_remove_file(&pdev->dev, &dev_attr_trusty_version);
@@ -366,9 +504,19 @@ err_allocate_state:
 
 static int trusty_remove(struct platform_device *pdev)
 {
+	unsigned cpu;
 	struct trusty_state *s = platform_get_drvdata(pdev);
 
 	device_for_each_child(&pdev->dev, NULL, trusty_remove_child);
+
+	for_each_possible_cpu(cpu) {
+		struct trusty_work *tw = per_cpu_ptr(s->twks, cpu);
+
+		flush_work(&tw->work);
+	}
+	free_percpu(s->twks);
+	destroy_workqueue(s->twq);
+
 	mutex_destroy(&s->smc_lock);
 	if (s->version_str) {
 		device_remove_file(&pdev->dev, &dev_attr_trusty_version);
