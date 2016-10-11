@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f7dbc55_e2bdbb82",
+        "filename": "kernel/trace/trace.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 6497,
+      "author": {
+        "id": 1015340
+      },
+      "writtenOn": "2016-10-11T20:11:17Z",
+      "side": 1,
+      "message": "kernel/trace/trace.c:6497:1: warning: data definition has no type or storage class\n tatic __init void create_trace_instances(struct dentry *d_tracer)\n ^\nkernel/trace/trace.c:6497:1: error: type defaults to \u0027int\u0027 in declaration of \u0027tatic\u0027 [-Werror\u003dimplicit-int]\nkernel/trace/trace.c:6497:1: warning: \u0027__cold__\u0027 attribute ignored [-Wattributes]\nkernel/trace/trace.c:6497:1: error: \u0027no_instrument_function\u0027 attribute applies only to functions\nkernel/trace/trace.c:6497:14: error: expected \u0027,\u0027 or \u0027;\u0027 before \u0027void\u0027\n tatic __init void create_trace_instances(struct dentry *d_tracer)",
+      "revId": "b75d5445937b43c27b679fe6be63d8994be81bda",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
