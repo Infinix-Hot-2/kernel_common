@@ -22,6 +22,30 @@
       "revId": "9a898289b6fab7ec16c6888d8698ab31a58e3b8c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f7dbc55_c9154257",
+        "filename": "drivers/platform/goldfish/goldfish_pipe.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 1051712
+      },
+      "writtenOn": "2016-10-11T17:51:09Z",
+      "side": 1,
+      "message": "The fix is included in https://android-review.git.corp.google.com/#/c/286656/. I sent out an email sometime earlier about combining patches so that we will have fewer patches to track and it will be easier for newer kernel support (4.9 is coming) before all goldfish patches are upstreamed. For example, I\u0027m thinking about squashing sync driver patches into one patch, pipe driver v1 bugfixes into one, pipe v2 as a separate one, and potentially combine all misc fixes into one.",
+      "parentUuid": "9f7dbc55_71042226",
+      "range": {
+        "startLine": 311,
+        "startChar": 2,
+        "endLine": 311,
+        "endChar": 16
+      },
+      "revId": "9a898289b6fab7ec16c6888d8698ab31a58e3b8c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
