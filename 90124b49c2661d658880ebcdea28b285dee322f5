@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f7dbc55_b1f6aaec",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1097408
+      },
+      "writtenOn": "2016-10-11T14:26:28Z",
+      "side": 1,
+      "message": "remove ?",
+      "range": {
+        "startLine": 10,
+        "startChar": 14,
+        "endLine": 10,
+        "endChar": 17
+      },
+      "revId": "90124b49c2661d658880ebcdea28b285dee322f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f7dbc55_f10032e0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1097408
+      },
+      "writtenOn": "2016-10-11T14:26:28Z",
+      "side": 1,
+      "message": "fields ?",
+      "range": {
+        "startLine": 10,
+        "startChar": 36,
+        "endLine": 10,
+        "endChar": 42
+      },
+      "revId": "90124b49c2661d658880ebcdea28b285dee322f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f7dbc55_31eb7a07",
+        "filename": "include/trace/events/sched.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1096,
+      "author": {
+        "id": 1097408
+      },
+      "writtenOn": "2016-10-11T14:26:28Z",
+      "side": 1,
+      "message": "removed as well ?",
+      "range": {
+        "startLine": 1096,
+        "startChar": 36,
+        "endLine": 1096,
+        "endChar": 40
+      },
+      "revId": "90124b49c2661d658880ebcdea28b285dee322f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
