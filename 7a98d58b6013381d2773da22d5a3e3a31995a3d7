@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ca192a9_30bdc881",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-12T21:44:25Z",
+      "side": 1,
+      "message": "binder_device would be more consistent with the rest of the struct in this file",
+      "range": {
+        "startLine": 220,
+        "startChar": 7,
+        "endLine": 220,
+        "endChar": 19
+      },
+      "revId": "7a98d58b6013381d2773da22d5a3e3a31995a3d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
