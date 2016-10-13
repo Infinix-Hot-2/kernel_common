@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1cd63a37_dcef25aa",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-13T19:43:32Z",
+      "side": 1,
+      "message": "should this not be \"binder\" to match /dev/binder?",
+      "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1cd63a37_5c0e7598",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 3566,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-13T19:43:32Z",
+      "side": 1,
+      "message": "Why not print this on a separate line?",
+      "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1cd63a37_3c32995e",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 3806,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-13T19:43:32Z",
+      "side": 1,
+      "message": "This loop is here to work around a race in debugfs removing the entry. Your modifications reintroduces the bug it fixed by referencing a possibly freed proc struct before it has been validated.",
+      "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
