@@ -16,6 +16,24 @@
       "revId": "c52be7fe9e77705a504947a55dd26b93e2ed3519",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c193e0f_a0e460cf",
+        "filename": "drivers/trusty/trusty-irq.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 1045553
+      },
+      "writtenOn": "2016-10-13T23:24:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1cd63a37_ff5bf358",
+      "revId": "c52be7fe9e77705a504947a55dd26b93e2ed3519",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
