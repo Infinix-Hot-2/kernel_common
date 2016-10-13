@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ca192a9_f67b3845",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-13T00:33:43Z",
+      "side": 1,
+      "message": "You don\u0027t have a common lock protecting thee anymore.",
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ca192a9_361f801f",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-13T00:33:43Z",
+      "side": 1,
+      "message": "why do you have two of these?",
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ca192a9_96b10cfd",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 3616,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-13T00:33:43Z",
+      "side": 1,
+      "message": "I don\u0027t think you need this. You can get the context from node-\u003eproc before you clear it",
+      "range": {
+        "startLine": 3616,
+        "startChar": 54,
+        "endLine": 3616,
+        "endChar": 61
+      },
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ca192a9_99de9ffd",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 4146,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-13T00:33:43Z",
+      "side": 1,
+      "message": "This does not seem to print the same information as before. It is supposed to print the object stats for a specific process, but it not seems to print global stats.",
+      "range": {
+        "startLine": 4146,
+        "startChar": 44,
+        "endLine": 4146,
+        "endChar": 60
+      },
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
