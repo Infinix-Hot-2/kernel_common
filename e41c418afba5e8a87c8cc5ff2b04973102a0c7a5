@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ca192a9_599437f1",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 3151,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-13T00:33:34Z",
+      "side": 1,
+      "message": "For processes that open both devices, you either need to share this debugfs entry, or create two unique entries.",
+      "revId": "e41c418afba5e8a87c8cc5ff2b04973102a0c7a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
