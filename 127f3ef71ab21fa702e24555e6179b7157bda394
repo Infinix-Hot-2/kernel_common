@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3c193e0f_fa01a56c",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1045553
+      },
+      "writtenOn": "2016-10-13T23:25:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1cd63a37_3c18592f",
+      "range": {
+        "startLine": 41,
+        "startChar": 26,
+        "endLine": 41,
+        "endChar": 29
+      },
+      "revId": "127f3ef71ab21fa702e24555e6179b7157bda394",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1cd63a37_fc42e1f8",
         "filename": "drivers/trusty/trusty.c",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2016-10-13T21:31:33Z",
       "side": 1,
       "message": "?",
+      "range": {
+        "startLine": 42,
+        "startChar": 30,
+        "endLine": 42,
+        "endChar": 34
+      },
+      "revId": "127f3ef71ab21fa702e24555e6179b7157bda394",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c193e0f_9af66974",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1045553
+      },
+      "writtenOn": "2016-10-13T23:25:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1cd63a37_fc42e1f8",
       "range": {
         "startLine": 42,
         "startChar": 30,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "3c193e0f_bafb2d5b",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1045553
+      },
+      "writtenOn": "2016-10-13T23:25:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dc4e620b_5c28ddef",
+      "range": {
+        "startLine": 340,
+        "startChar": 2,
+        "endLine": 340,
+        "endChar": 10
+      },
+      "revId": "127f3ef71ab21fa702e24555e6179b7157bda394",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1cd63a37_2a3487de",
         "filename": "drivers/trusty/trusty.c",
         "patchSetId": 1
@@ -82,6 +154,24 @@
       "writtenOn": "2016-10-13T21:31:33Z",
       "side": 1,
       "message": "Why break here even if there is more work? You don\u0027t return the error to anyone.",
+      "revId": "127f3ef71ab21fa702e24555e6179b7157bda394",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c193e0f_5a11b1b5",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 376,
+      "author": {
+        "id": 1045553
+      },
+      "writtenOn": "2016-10-13T23:25:38Z",
+      "side": 1,
+      "message": "Moving dev_err print here",
+      "parentUuid": "1cd63a37_2a3487de",
       "revId": "127f3ef71ab21fa702e24555e6179b7157bda394",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -105,6 +195,24 @@
     },
     {
       "key": {
+        "uuid": "3c193e0f_7a0ef598",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 395,
+      "author": {
+        "id": 1045553
+      },
+      "writtenOn": "2016-10-13T23:25:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fc45e6e5_3d3aaf1c",
+      "revId": "127f3ef71ab21fa702e24555e6179b7157bda394",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1c49da01_1ed6cdbd",
         "filename": "drivers/trusty/trusty.c",
         "patchSetId": 1
@@ -116,6 +224,24 @@
       "writtenOn": "2016-10-13T21:31:33Z",
       "side": 1,
       "message": "do you need to call this with the lock held? If not move it down end remove the else case",
+      "revId": "127f3ef71ab21fa702e24555e6179b7157bda394",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c193e0f_fd019f6c",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 1045553
+      },
+      "writtenOn": "2016-10-13T23:25:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1c49da01_1ed6cdbd",
       "revId": "127f3ef71ab21fa702e24555e6179b7157bda394",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -139,6 +265,24 @@
     },
     {
       "key": {
+        "uuid": "3c193e0f_c022b412",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 415,
+      "author": {
+        "id": 1045553
+      },
+      "writtenOn": "2016-10-13T23:25:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1c49da01_dee0658f",
+      "revId": "127f3ef71ab21fa702e24555e6179b7157bda394",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1cd63a37_5f6d47f5",
         "filename": "include/linux/trusty/trusty.h",
         "patchSetId": 1
@@ -150,6 +294,30 @@
       "writtenOn": "2016-10-13T21:31:33Z",
       "side": 1,
       "message": "This is not needed. There is no reason for the queued state to be out of sync with the list state.",
+      "range": {
+        "startLine": 75,
+        "startChar": 6,
+        "endLine": 75,
+        "endChar": 12
+      },
+      "revId": "127f3ef71ab21fa702e24555e6179b7157bda394",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c193e0f_2032905e",
+        "filename": "include/linux/trusty/trusty.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1045553
+      },
+      "writtenOn": "2016-10-13T23:25:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1cd63a37_5f6d47f5",
       "range": {
         "startLine": 75,
         "startChar": 6,
