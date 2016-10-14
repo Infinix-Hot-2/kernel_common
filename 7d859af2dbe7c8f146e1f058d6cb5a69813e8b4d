@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3c569eee_2fb329e4",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 1045553
+      },
+      "writtenOn": "2016-10-14T18:20:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3c193e0f_066be418",
+      "revId": "7d859af2dbe7c8f146e1f058d6cb5a69813e8b4d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3c193e0f_86f2945d",
         "filename": "drivers/trusty/trusty.c",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2016-10-14T00:46:02Z",
       "side": 1,
       "message": "assert(version \u003e\u003d..",
+      "revId": "7d859af2dbe7c8f146e1f058d6cb5a69813e8b4d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c569eee_cfcb7d49",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 404,
+      "author": {
+        "id": 1045553
+      },
+      "writtenOn": "2016-10-14T18:20:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3c193e0f_86f2945d",
       "revId": "7d859af2dbe7c8f146e1f058d6cb5a69813e8b4d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
