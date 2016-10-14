@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3c193e0f_066be418",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-14T00:46:02Z",
+      "side": 1,
+      "message": "This will retry the same operation. It would be better to always dequeue the next item. This while loop could be restructured.",
+      "revId": "7d859af2dbe7c8f146e1f058d6cb5a69813e8b4d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c193e0f_86f2945d",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 404,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-14T00:46:02Z",
+      "side": 1,
+      "message": "assert(version \u003e\u003d..",
+      "revId": "7d859af2dbe7c8f146e1f058d6cb5a69813e8b4d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
