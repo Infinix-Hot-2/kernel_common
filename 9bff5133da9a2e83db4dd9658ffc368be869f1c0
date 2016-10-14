@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7cdd769f_a9a3bd08",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-14T20:11:36Z",
+      "side": 1,
+      "message": "I was in doubt about this, but I guess in light of the changes following after this \u0027binder\u0027 makes more sense. Fixed.",
+      "parentUuid": "1cd63a37_dcef25aa",
+      "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1cd63a37_dcb72589",
         "filename": "drivers/android/binder.c",
         "patchSetId": 6
@@ -30,6 +48,30 @@
       "writtenOn": "2016-10-13T19:51:10Z",
       "side": 1,
       "message": "proc? /proc usually refers to procfs",
+      "range": {
+        "startLine": 3159,
+        "startChar": 4,
+        "endLine": 3159,
+        "endChar": 9
+      },
+      "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1ccc7af8_06f2ba5e",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 3159,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-14T20:11:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1cd63a37_dcb72589",
       "range": {
         "startLine": 3159,
         "startChar": 4,
@@ -59,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "1ccc7af8_26f53647",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 3566,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-14T20:11:36Z",
+      "side": 1,
+      "message": "I liked this better, but don\u0027t feel strongly about it. Changed.",
+      "parentUuid": "1cd63a37_5c0e7598",
+      "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1cd63a37_3c32995e",
         "filename": "drivers/android/binder.c",
         "patchSetId": 6
@@ -70,6 +130,24 @@
       "writtenOn": "2016-10-13T19:43:32Z",
       "side": 1,
       "message": "This loop is here to work around a race in debugfs removing the entry. Your modifications reintroduces the bug it fixed by referencing a possibly freed proc struct before it has been validated.",
+      "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fcc886e8_659ba6c5",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 3806,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-14T20:11:36Z",
+      "side": 1,
+      "message": "mmm, so one way to fix it would be to do two loops - one to verify proc is valid, then another to find all procs in binder_proc with the same pid. I think you suggested moving this to a different CL though, so I removed the code from this one.",
+      "parentUuid": "1cd63a37_3c32995e",
       "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
