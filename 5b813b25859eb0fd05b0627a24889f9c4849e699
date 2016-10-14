@@ -50,6 +50,24 @@
       "revId": "5b813b25859eb0fd05b0627a24889f9c4849e699",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c8bb7e0_80ad1688",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-14T22:46:12Z",
+      "side": 1,
+      "message": "remove extra space",
+      "parentUuid": "7c8bb7e0_a0105afe",
+      "revId": "5b813b25859eb0fd05b0627a24889f9c4849e699",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
