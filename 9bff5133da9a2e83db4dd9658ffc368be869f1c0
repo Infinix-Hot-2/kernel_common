@@ -37,6 +37,23 @@
     },
     {
       "key": {
+        "uuid": "fc0247f6_ffb5bb1c",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 3149,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-14T20:49:59Z",
+      "side": 1,
+      "message": "Is this needed. debugfs_create_file should fail if the entry already exists. Is that failure noisy?",
+      "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1cd63a37_dcb72589",
         "filename": "drivers/android/binder.c",
         "patchSetId": 6
@@ -148,6 +165,24 @@
       "side": 1,
       "message": "mmm, so one way to fix it would be to do two loops - one to verify proc is valid, then another to find all procs in binder_proc with the same pid. I think you suggested moving this to a different CL though, so I removed the code from this one.",
       "parentUuid": "1cd63a37_3c32995e",
+      "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc0247f6_3f8e837e",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 3806,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-14T20:49:59Z",
+      "side": 1,
+      "message": "I meant move the all the debugfs related changes to a separate change (before adding the entry that allows more than one). I think it would be easier to just store the pid in the debugfs entry and not the proc pointer since we are scanning anyway now. In the race case it would just not find any matching proc entries.",
+      "parentUuid": "fcc886e8_659ba6c5",
       "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
