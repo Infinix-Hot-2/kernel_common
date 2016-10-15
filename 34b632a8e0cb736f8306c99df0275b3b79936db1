@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7c8bb7e0_696f9d70",
+        "filename": "drivers/trusty/trusty.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-15T00:53:59Z",
+      "side": 1,
+      "message": "remove extra space",
+      "range": {
+        "startLine": 408,
+        "startChar": 26,
+        "endLine": 408,
+        "endChar": 27
+      },
+      "revId": "34b632a8e0cb736f8306c99df0275b3b79936db1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
