@@ -222,6 +222,24 @@
       "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c8bb7e0_9d2a5445",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 3806,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-17T19:41:59Z",
+      "side": 1,
+      "message": "Use (uintptr_t)ptr and (uintptr_t)int instead of (int)ptr and (void *)int to convert. That should not produce a warning.",
+      "parentUuid": "bca52e1d_6bc2619d",
+      "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
