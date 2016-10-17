@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "bc5a8f66_5af19577",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 3149,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-17T13:30:32Z",
+      "side": 1,
+      "message": "No it\u0027s not. Added a comment in the separate change, see  If10c2129536d9f39bae542afd7318ca79af60e3a",
+      "parentUuid": "fc0247f6_ffb5bb1c",
+      "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1cd63a37_dcb72589",
         "filename": "drivers/android/binder.c",
         "patchSetId": 6
@@ -183,6 +201,24 @@
       "side": 1,
       "message": "I meant move the all the debugfs related changes to a separate change (before adding the entry that allows more than one). I think it would be easier to just store the pid in the debugfs entry and not the proc pointer since we are scanning anyway now. In the race case it would just not find any matching proc entries.",
       "parentUuid": "fcc886e8_659ba6c5",
+      "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bca52e1d_6bc2619d",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 3806,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-17T13:30:32Z",
+      "side": 1,
+      "message": "Ok, I moved all debugfs related changes to Change-Id: If10c2129536d9f39bae542afd7318ca79af60e3a . Including the \"context name\", since that was only necessary for debugfs.\n\nAs for storing the pid, it works, but it does create pointer to int conversion warnings. Acceptable?",
+      "parentUuid": "fc0247f6_3f8e837e",
       "revId": "9bff5133da9a2e83db4dd9658ffc368be869f1c0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
