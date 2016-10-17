@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1c6b9b00_fe8b3537",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-17T23:21:20Z",
+      "side": 1,
+      "message": "ERROR: Use 4 digit octal (0777) not decimal permissions\n#54: FILE: drivers/android/binder.c:118:\n+module_param_named(devices, binder_devices, charp, 0);\n\nI would try S_IRUGO though as there is no reason for this to not be readable.",
+      "revId": "28b9f049089d55898e9c5e705a7e32b8d0c63e37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
