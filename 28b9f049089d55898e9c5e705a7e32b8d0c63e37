@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "bcc28f6f_7a693916",
+        "filename": "drivers/android/Kconfig",
+        "patchSetId": 13
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-18T14:48:39Z",
+      "side": 1,
+      "message": "Updated.",
+      "parentUuid": "bcc28f6f_5ad555cd",
+      "range": {
+        "startLine": 29,
+        "startChar": 3,
+        "endLine": 31,
+        "endChar": 63
+      },
+      "revId": "28b9f049089d55898e9c5e705a7e32b8d0c63e37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1c6b9b00_fe8b3537",
         "filename": "drivers/android/binder.c",
         "patchSetId": 13
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "bcc28f6f_7a4db9dd",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-18T14:48:39Z",
+      "side": 1,
+      "message": "Huh, my checkpatch didn\u0027t find this one even with --strict. Anyway, fixed.",
+      "parentUuid": "1c6b9b00_fe8b3537",
+      "revId": "28b9f049089d55898e9c5e705a7e32b8d0c63e37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bcc28f6f_9ae2cdba",
         "filename": "drivers/android/binder.c",
         "patchSetId": 13
@@ -53,6 +95,30 @@
       "writtenOn": "2016-10-18T08:19:47Z",
       "side": 1,
       "message": "No error checking???",
+      "range": {
+        "startLine": 3877,
+        "startChar": 1,
+        "endLine": 3877,
+        "endChar": 14
+      },
+      "revId": "28b9f049089d55898e9c5e705a7e32b8d0c63e37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bcc28f6f_5a4af5c7",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 3877,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-18T14:48:39Z",
+      "side": 1,
+      "message": "Argh, I missed this when splitting up patches a while back. Fixed.",
+      "parentUuid": "bcc28f6f_9ae2cdba",
       "range": {
         "startLine": 3877,
         "startChar": 1,
@@ -88,6 +154,30 @@
     },
     {
       "key": {
+        "uuid": "bcc28f6f_5a667546",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 3930,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-18T14:48:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dcaf43ab_9b940b1e",
+      "range": {
+        "startLine": 3930,
+        "startChar": 10,
+        "endLine": 3930,
+        "endChar": 16
+      },
+      "revId": "28b9f049089d55898e9c5e705a7e32b8d0c63e37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bcc28f6f_7ad81909",
         "filename": "drivers/android/binder.c",
         "patchSetId": 13
@@ -99,6 +189,30 @@
       "writtenOn": "2016-10-18T08:19:47Z",
       "side": 1,
       "message": "if ret, you need to unwind the mess that happened above.",
+      "range": {
+        "startLine": 3938,
+        "startChar": 8,
+        "endLine": 3938,
+        "endChar": 11
+      },
+      "revId": "28b9f049089d55898e9c5e705a7e32b8d0c63e37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bcc28f6f_3a73c108",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 3938,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-18T14:48:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bcc28f6f_7ad81909",
       "range": {
         "startLine": 3938,
         "startChar": 8,
