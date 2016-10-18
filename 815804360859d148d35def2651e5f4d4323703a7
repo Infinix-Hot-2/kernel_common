@@ -79,6 +79,75 @@
       "revId": "815804360859d148d35def2651e5f4d4323703a7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bcc28f6f_faf1c97c",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 4312,
+      "author": {
+        "id": 1125653
+      },
+      "writtenOn": "2016-10-18T08:51:26Z",
+      "side": 1,
+      "message": "using debugfs means you never have to check the return value of the calls, everything will \"just work\".  Right now you are falling into this code path if CONFIG_DEBUGFS is not enabled, which isn\u0027t what I think you mean for it to be doing...\n\nYes, it\u0027s a copy of the original code path, I know, but no need to reproduce the errors of the past when moving things around...",
+      "range": {
+        "startLine": 4312,
+        "startChar": 4,
+        "endLine": 4312,
+        "endChar": 39
+      },
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fcb24710_bc622153",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 4319,
+      "author": {
+        "id": 1125653
+      },
+      "writtenOn": "2016-10-18T08:51:26Z",
+      "side": 1,
+      "message": "now you check the return value, about time :)\n\nWhen is this unregistered?",
+      "range": {
+        "startLine": 4317,
+        "startChar": 1,
+        "endLine": 4319,
+        "endChar": 12
+      },
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bcc28f6f_daf60573",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 4321,
+      "author": {
+        "id": 1125653
+      },
+      "writtenOn": "2016-10-18T08:51:26Z",
+      "side": 1,
+      "message": "again, no need to check.",
+      "range": {
+        "startLine": 4321,
+        "startChar": 5,
+        "endLine": 4321,
+        "endChar": 39
+      },
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
