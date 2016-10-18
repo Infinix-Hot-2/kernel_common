@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "bcc28f6f_5ad555cd",
+        "filename": "drivers/android/Kconfig",
+        "patchSetId": 13
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1125653
+      },
+      "writtenOn": "2016-10-18T08:19:47Z",
+      "side": 1,
+      "message": "This is a string that is somehow parsed by the kernel, yet you do not provide any clue as to the format of what it needs to look like :(",
+      "range": {
+        "startLine": 29,
+        "startChar": 3,
+        "endLine": 31,
+        "endChar": 63
+      },
+      "revId": "28b9f049089d55898e9c5e705a7e32b8d0c63e37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1c6b9b00_fe8b3537",
         "filename": "drivers/android/binder.c",
         "patchSetId": 13
@@ -13,6 +36,75 @@
       "writtenOn": "2016-10-17T23:21:20Z",
       "side": 1,
       "message": "ERROR: Use 4 digit octal (0777) not decimal permissions\n#54: FILE: drivers/android/binder.c:118:\n+module_param_named(devices, binder_devices, charp, 0);\n\nI would try S_IRUGO though as there is no reason for this to not be readable.",
+      "revId": "28b9f049089d55898e9c5e705a7e32b8d0c63e37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bcc28f6f_9ae2cdba",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 3877,
+      "author": {
+        "id": 1125653
+      },
+      "writtenOn": "2016-10-18T08:19:47Z",
+      "side": 1,
+      "message": "No error checking???",
+      "range": {
+        "startLine": 3877,
+        "startChar": 1,
+        "endLine": 3877,
+        "endChar": 14
+      },
+      "revId": "28b9f049089d55898e9c5e705a7e32b8d0c63e37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dcaf43ab_9b940b1e",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 3930,
+      "author": {
+        "id": 1125653
+      },
+      "writtenOn": "2016-10-18T08:19:47Z",
+      "side": 1,
+      "message": "no cleanup of debugfs files?",
+      "range": {
+        "startLine": 3930,
+        "startChar": 10,
+        "endLine": 3930,
+        "endChar": 16
+      },
+      "revId": "28b9f049089d55898e9c5e705a7e32b8d0c63e37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bcc28f6f_7ad81909",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 13
+      },
+      "lineNbr": 3938,
+      "author": {
+        "id": 1125653
+      },
+      "writtenOn": "2016-10-18T08:19:47Z",
+      "side": 1,
+      "message": "if ret, you need to unwind the mess that happened above.",
+      "range": {
+        "startLine": 3938,
+        "startChar": 8,
+        "endLine": 3938,
+        "endChar": 11
+      },
       "revId": "28b9f049089d55898e9c5e705a7e32b8d0c63e37",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
