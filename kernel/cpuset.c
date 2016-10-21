@@ -2095,6 +2095,7 @@ static void cpuset_bind(struct cgroup_subsys_state *root_css)
 	mutex_unlock(&cpuset_mutex);
 }
 
+<<<<<<< HEAD   (b8fa4a Merge tag 'v4.4.26' into android-4.4.y)
 static int cpuset_allow_attach(struct cgroup_taskset *tset)
 {
 	const struct cred *cred = current_cred(), *tcred;
@@ -2126,13 +2127,14 @@ void cpuset_fork(struct task_struct *task, void *priv)
 	task->mems_allowed = current->mems_allowed;
 }
 
+=======
+>>>>>>> BRANCH (4a8b64 UPSTREAM: arm64: kaslr: fix breakage with CONFIG_MODVERSIONS)
 struct cgroup_subsys cpuset_cgrp_subsys = {
 	.css_alloc	= cpuset_css_alloc,
 	.css_online	= cpuset_css_online,
 	.css_offline	= cpuset_css_offline,
 	.css_free	= cpuset_css_free,
 	.can_attach	= cpuset_can_attach,
-	.allow_attach   = cpuset_allow_attach,
 	.cancel_attach	= cpuset_cancel_attach,
 	.attach		= cpuset_attach,
 	.post_attach	= cpuset_post_attach,
