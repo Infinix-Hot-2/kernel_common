@@ -1,0 +1,10 @@
+Verified+1: Dmitry Shmidt <dimitrysh@google.com>
+Autosubmit+1: Dmitry Shmidt <dimitrysh@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+1: Colin Cross <ccross@android.com>
+Code-Review+2: Kees Cook <keescook@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Mon, 24 Oct 2016 19:47:38 +0000
+Reviewed-on: https://android-review.googlesource.com/291725
+Project: kernel/common
+Branch: refs/heads/android-4.4
