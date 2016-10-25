@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "c1cd9c7a_22748ef4",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-25T14:08:48Z",
+      "side": 1,
+      "message": "Fixed.",
+      "parentUuid": "5ca192a9_f67b3845",
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ca192a9_361f801f",
         "filename": "drivers/android/binder.c",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "e191c062_ebc0b1e5",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-25T14:08:48Z",
+      "side": 1,
+      "message": "removed one.",
+      "parentUuid": "5ca192a9_361f801f",
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ca192a9_96b10cfd",
         "filename": "drivers/android/binder.c",
         "patchSetId": 3
@@ -47,6 +83,30 @@
       "writtenOn": "2016-10-13T00:33:43Z",
       "side": 1,
       "message": "I don\u0027t think you need this. You can get the context from node-\u003eproc before you clear it",
+      "range": {
+        "startLine": 3616,
+        "startChar": 54,
+        "endLine": 3616,
+        "endChar": 61
+      },
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c1cd9c7a_427992e9",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 3616,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-25T14:08:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ca192a9_96b10cfd",
       "range": {
         "startLine": 3616,
         "startChar": 54,
@@ -82,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "a1d26816_6128569c",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 4146,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-25T14:08:48Z",
+      "side": 1,
+      "message": "Mmm before it didn\u0027t print the obj_created/obj_deleted stats for processes at all (these are always 0 in struct binder_proc-\u003estats). Fixed.",
+      "parentUuid": "5ca192a9_99de9ffd",
+      "range": {
+        "startLine": 4146,
+        "startChar": 44,
+        "endLine": 4146,
+        "endChar": 60
+      },
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bcc28f6f_faf1c97c",
         "filename": "drivers/android/binder.c",
         "patchSetId": 3
@@ -93,6 +177,30 @@
       "writtenOn": "2016-10-18T08:51:26Z",
       "side": 1,
       "message": "using debugfs means you never have to check the return value of the calls, everything will \"just work\".  Right now you are falling into this code path if CONFIG_DEBUGFS is not enabled, which isn\u0027t what I think you mean for it to be doing...\n\nYes, it\u0027s a copy of the original code path, I know, but no need to reproduce the errors of the past when moving things around...",
+      "range": {
+        "startLine": 4312,
+        "startChar": 4,
+        "endLine": 4312,
+        "endChar": 39
+      },
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0195f44b_cc2eafec",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 4312,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-25T14:08:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bcc28f6f_faf1c97c",
       "range": {
         "startLine": 4312,
         "startChar": 4,
@@ -128,6 +236,30 @@
     },
     {
       "key": {
+        "uuid": "c1cd9c7a_627e96d4",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 4319,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-25T14:08:48Z",
+      "side": 1,
+      "message": "Fixed in new PS.",
+      "parentUuid": "fcb24710_bc622153",
+      "range": {
+        "startLine": 4317,
+        "startChar": 1,
+        "endLine": 4319,
+        "endChar": 12
+      },
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bcc28f6f_daf60573",
         "filename": "drivers/android/binder.c",
         "patchSetId": 3
@@ -139,6 +271,30 @@
       "writtenOn": "2016-10-18T08:51:26Z",
       "side": 1,
       "message": "again, no need to check.",
+      "range": {
+        "startLine": 4321,
+        "startChar": 5,
+        "endLine": 4321,
+        "endChar": 39
+      },
+      "revId": "815804360859d148d35def2651e5f4d4323703a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "817ac4f4_28a2cb36",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 4321,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-25T14:08:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bcc28f6f_daf60573",
       "range": {
         "startLine": 4321,
         "startChar": 5,
