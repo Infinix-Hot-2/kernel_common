@@ -899,7 +899,7 @@ static struct sock *unix_find_other(struct net *net,
 		if (err)
 			goto fail;
 		inode = path.dentry->d_inode;
-		err = inode_permission(inode, MAY_WRITE);
+		err = inode_permission2(path.mnt, inode, MAY_WRITE);
 		if (err)
 			goto put_fail;
 
@@ -959,7 +959,7 @@ static int unix_mknod(const char *sun_path, umode_t mode, struct path *res)
 	 */
 	err = security_path_mknod(&path, dentry, mode, 0);
 	if (!err) {
-		err = vfs_mknod(path.dentry->d_inode, dentry, mode, 0);
+		err = vfs_mknod2(path.mnt, path.dentry->d_inode, dentry, mode, 0);
 		if (!err) {
 			res->mnt = mntget(path.mnt);
 			res->dentry = dget(dentry);
