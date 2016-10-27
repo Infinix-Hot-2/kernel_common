@@ -70,6 +70,24 @@
       "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06318aec_f2ede04d",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 14
+      },
+      "lineNbr": 3959,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-27T21:21:50Z",
+      "side": 1,
+      "message": "misc_deregister would not wait directly fro work to complete, but it may wait for close to finish. In this case I don\u0027t think it will wait though as binder_release just queues more work. I don\u0027t know if this init function is guaranteed to complete before user-space starts.",
+      "parentUuid": "011ed449_04e57622",
+      "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
