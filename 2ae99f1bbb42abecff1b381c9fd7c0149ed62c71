@@ -88,6 +88,24 @@
       "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "011ed449_a45ae209",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 14
+      },
+      "lineNbr": 3959,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-27T21:40:29Z",
+      "side": 1,
+      "message": "I think init is guaranteed to complete, but double checking. Of course if this driver is loaded as a module it\u0027s still a race.\n\nI guess I could just first call destroy_workqueue(), since that appears to wait until all work is done. It just makes this code a bit more ugly.",
+      "parentUuid": "06318aec_f2ede04d",
+      "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
