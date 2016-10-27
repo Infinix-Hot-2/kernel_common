@@ -52,6 +52,24 @@
       "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "011ed449_04e57622",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 14
+      },
+      "lineNbr": 3959,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-27T20:46:30Z",
+      "side": 1,
+      "message": "Mmm I don\u0027t know enough about the kernel init procedure. Can userspace even call open() before all drivers have completed init()? I usually see binder init complete within 3 seconds of kernel start, well before userspace init is even executed. But I\u0027m not sure this is guaranteed.\n\nHow could misc_deregister() wait for work to complete - it doesn\u0027t know about it?",
+      "parentUuid": "06318aec_af081507",
+      "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
