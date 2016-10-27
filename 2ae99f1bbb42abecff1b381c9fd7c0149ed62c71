@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "06318aec_8f71d9fc",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 14
+      },
+      "lineNbr": 3959,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-27T20:23:37Z",
+      "side": 1,
+      "message": "How safe is this before destroying the workqueue?",
+      "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
