@@ -34,6 +34,24 @@
       "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06318aec_af081507",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 14
+      },
+      "lineNbr": 3959,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-27T20:37:33Z",
+      "side": 1,
+      "message": "Once the misc device is posted, someone could theoretically open it and queue work that access the structure you free here. I don\u0027t know if misc_deregister waits for all that work to complete before it returns. If it does, or the remaining work does not access that data you free, then it should be safe as is.",
+      "parentUuid": "011ed449_a4f582d9",
+      "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
