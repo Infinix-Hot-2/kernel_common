@@ -1,0 +1,9 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+2: Rom Lemarchand <romlem@google.com>
+Verified+1: Dmitry Shmidt <dimitrysh@google.com>
+Autosubmit+1: Dmitry Shmidt <dimitrysh@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Thu, 27 Oct 2016 18:22:14 +0000
+Reviewed-on: https://android-review.googlesource.com/295125
+Project: kernel/common
+Branch: refs/heads/android-3.18
