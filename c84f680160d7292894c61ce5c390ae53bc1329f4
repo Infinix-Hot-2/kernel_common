@@ -16,6 +16,24 @@
       "revId": "c84f680160d7292894c61ce5c390ae53bc1329f4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "612f9071_4a8db34a",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 11
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-27T22:21:26Z",
+      "side": 1,
+      "message": "checkpatch didn\u0027t complain. Do you propose I just leave it out?",
+      "parentUuid": "06318aec_2c155320",
+      "revId": "c84f680160d7292894c61ce5c390ae53bc1329f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
