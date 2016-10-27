@@ -106,6 +106,24 @@
       "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06318aec_55d13eb3",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 14
+      },
+      "lineNbr": 3959,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-27T21:45:39Z",
+      "side": 1,
+      "message": "This driver cannot be loaded as a module so I would not worry about that. If you plan to make the param write-able this race would have to be avoided. Another option is to not destroy instances that initialized when another instance fails although that would mean that you have to return success from init even if it was not fully successful.",
+      "parentUuid": "011ed449_a45ae209",
+      "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
