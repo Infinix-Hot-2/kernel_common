@@ -16,6 +16,24 @@
       "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "011ed449_a4f582d9",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 14
+      },
+      "lineNbr": 3959,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-27T20:34:01Z",
+      "side": 1,
+      "message": "mmm the workqueue is not related to binder_device, right? And since this is init(), I\u0027m not sure we could have posted any work to the workqueue yet? I probably miss what you\u0027re trying to say..",
+      "parentUuid": "06318aec_8f71d9fc",
+      "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
