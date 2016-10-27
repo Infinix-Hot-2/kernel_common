@@ -124,6 +124,24 @@
       "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "213cb8a3_7088aeab",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 14
+      },
+      "lineNbr": 3959,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-27T21:53:33Z",
+      "side": 1,
+      "message": "Not planning on making it writable, and I looked at the init code and think we\u0027re safe.\n\ninit/main.c:\n\nkernel_init()\n  --\u003ekernel_init_freeable()\n    --\u003edo_basic_setup()\n      --\u003edo_initcalls()\n  ..start userspace init\n\nthe binder driver is initialized as part of do_initcalls().",
+      "parentUuid": "06318aec_55d13eb3",
+      "revId": "2ae99f1bbb42abecff1b381c9fd7c0149ed62c71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
