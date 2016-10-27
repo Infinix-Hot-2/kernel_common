@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "06318aec_2c155320",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 11
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-27T20:11:28Z",
+      "side": 1,
+      "message": "I\u0027m not sure initializing this to NULL is allowed by the kernel code style.",
+      "revId": "c84f680160d7292894c61ce5c390ae53bc1329f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
