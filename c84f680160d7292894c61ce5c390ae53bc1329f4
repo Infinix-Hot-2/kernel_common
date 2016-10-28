@@ -34,6 +34,24 @@
       "revId": "c84f680160d7292894c61ce5c390ae53bc1329f4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "011ed449_e4ce9a6a",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 11
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2016-10-28T12:18:41Z",
+      "side": 1,
+      "message": "since checkpatch doesn\u0027t complain and I can\u0027t find anything in the official kernel coding style document, leaving this as-is.",
+      "parentUuid": "612f9071_4a8db34a",
+      "revId": "c84f680160d7292894c61ce5c390ae53bc1329f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
