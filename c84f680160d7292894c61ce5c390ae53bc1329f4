@@ -70,6 +70,24 @@
       "revId": "c84f680160d7292894c61ce5c390ae53bc1329f4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e6f55692_6b65c15d",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 11
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1125653
+      },
+      "writtenOn": "2016-10-28T22:00:17Z",
+      "side": 1,
+      "message": "that\u0027s usually for individual variables, not fields in a structure.  But yes, it can be removed, might as well do that just to be kind to others.",
+      "parentUuid": "663c06f3_a88e9fba",
+      "revId": "c84f680160d7292894c61ce5c390ae53bc1329f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
