@@ -52,6 +52,24 @@
       "revId": "c84f680160d7292894c61ce5c390ae53bc1329f4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "663c06f3_a88e9fba",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 11
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2016-10-28T21:54:45Z",
+      "side": 1,
+      "message": "Checkpatch gives me this message for similar code: \"do not initialise globals to 0 or NULL\". You have to ask someone else if initializing members of a struct the same way is acceptable.",
+      "parentUuid": "011ed449_e4ce9a6a",
+      "revId": "c84f680160d7292894c61ce5c390ae53bc1329f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
