@@ -1463,6 +1463,8 @@ static int __sched do_nanosleep(struct hrtimer_sleeper *t, enum hrtimer_mode mod
 {
 	hrtimer_init_sleeper(t, current);
 
+	trace_printk("%s: tsk=%d",
+			__func__, task_pid_nr(t->task));
 	do {
 		set_current_state(TASK_INTERRUPTIBLE);
 		hrtimer_start_expires(&t->timer, mode);

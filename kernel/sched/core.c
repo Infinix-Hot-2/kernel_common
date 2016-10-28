@@ -3526,6 +3526,11 @@ void __setprio_other(struct rq *rq, struct task_struct *p) {
 	prev_class = p->sched_class;
 	queued = task_on_rq_queued(p);
 	running = task_current(rq, p);
+	trace_printk("%s tsk=%d que=%d run=%d thr=%d pr=%d st_pr=%d no_pr=%d rt_pr=%u\n",
+			__func__,
+			task_pid_nr(p), queued, running,
+			p->rt.throttled, p->prio, p->static_prio,
+			p->normal_prio, p->rt_priority);
 	BUG_ON(!p->rt.throttled);
 
 	if (queued)
@@ -3548,6 +3553,11 @@ void __setprio_other(struct rq *rq, struct task_struct *p) {
 		enqueue_task(rq, p, 0);
 
 	check_class_changed(rq, p, prev_class, oldprio);
+	trace_printk("%s tsk=%d que=%d run=%d thr=%d pr=%d st_pr=%d no_pr=%d rt_pr=%u class=%p\n",
+			__func__, task_pid_nr(p), queued, running,
+			p->rt.throttled, p->prio, p->static_prio,
+			p->normal_prio, p->rt_priority,
+			p->sched_class);
 }
 
 void __setprio_fifo(struct rq *rq, struct task_struct *p) {
@@ -3580,6 +3590,10 @@ again:
 	prev_class = p->sched_class;
 	queued = task_on_rq_queued(p);
 	running = task_current(cpu_rq(cpu), p);
+	trace_printk("%s tsk=%d que=%d run=%d thr=%d pr=%d st_pr=%d no_pr=%d rt_pr=%u\n",
+			__func__, task_pid_nr(p), queued, running,
+			p->rt.throttled, p->prio, p->static_prio,
+			p->normal_prio, p->rt_priority);
 	BUG_ON(p->rt.throttled);
 
 	if (queued)
@@ -3596,6 +3610,11 @@ again:
 		enqueue_task(cpu_rq(cpu), p, ENQUEUE_REPLENISH);
 
 	check_class_changed(rq, p, prev_class, oldprio);
+	trace_printk("%s tsk=%d que=%d run=%d thr=%d pr=%d st_pr=%d no_pr=%d rt_pr=%u class=%p\n",
+			__func__, task_pid_nr(p), queued, running,
+			p->rt.throttled, p->prio, p->static_prio,
+			p->normal_prio, p->rt_priority,
+			p->sched_class);
 out:
 	if (cpu != cpu_of(rq))
 		double_unlock_balance(rq, cpu_rq(cpu));
@@ -4046,6 +4065,12 @@ static int __sched_setscheduler(struct task_struct *p,
 	struct rq *rq;
 	int reset_on_fork;
 
+	trace_printk("%s tsk=%d thr=%d cpu=%d pr=%d st_pr=%d no_pr=%d rt_pr=%u new_pr=%d\n",
+			__func__,
+			task_pid_nr(p),
+			p->rt.throttled, task_cpu(p),
+			p->prio, p->static_prio, p->normal_prio,
+			p->rt_priority, newprio);
 	/* may grab non-irq protected spin_locks */
 	BUG_ON(in_interrupt());
 recheck:
@@ -4243,6 +4268,13 @@ change:
 
 	prev_class = p->sched_class;
 	__setscheduler(rq, p, attr, pi);
+	trace_printk("%s tsk=%d thr=%d cpu=%d pr=%d st_pr=%d no_pr=%d rt_pr=%u old=%p new=%p",
+			__func__,
+			task_pid_nr(p),
+			p->rt.throttled, task_cpu(p),
+			p->prio, p->static_prio,
+			p->normal_prio, p->rt_priority,
+			prev_class, p->sched_class);
 
 	if (running)
 		p->sched_class->set_curr_task(rq);
@@ -8219,6 +8251,13 @@ void sched_move_task(struct task_struct *tsk)
 	tg = autogroup_task_group(tsk, tg);
 	tsk->sched_task_group = tg;
 
+	//trace_printk("%s tsk=%d %p\n", __func__, tsk->pid, tsk->sched_class);
+/*
+#ifdef CONFIG_RT_GROUP_SCHED
+	if (tsk->sched_class == &fair_sched_class)
+		tsk->rt.throttled = 0;
+#endif
+*/
 #ifdef CONFIG_FAIR_GROUP_SCHED
 	if (tsk->sched_class->task_move_group)
 		tsk->sched_class->task_move_group(tsk);
