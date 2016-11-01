@@ -1,0 +1,8 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+2: Arve Hjønnevåg <arve@android.com>
+Verified+1: Michael Ryleev <gmar@google.com>
+Submitted-by: Michael Ryleev <gmar@google.com>
+Submitted-at: Tue, 01 Nov 2016 03:30:31 +0000
+Reviewed-on: https://android-review.googlesource.com/289586
+Project: kernel/common
+Branch: refs/heads/android-trusty-4.4
