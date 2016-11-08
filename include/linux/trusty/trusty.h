@@ -85,4 +85,8 @@ static inline void trusty_nop_init(struct trusty_nop *nop,
 void trusty_enqueue_nop(struct device *dev, struct trusty_nop *nop);
 void trusty_dequeue_nop(struct device *dev, struct trusty_nop *nop);
 
+void *trusty_wall_base(struct device *dev);
+void *trusty_wall_per_cpu_item_ptr(struct device *dev, unsigned int cpu,
+				   u32 item_id, size_t exp_sz);
+
 #endif
