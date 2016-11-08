@@ -80,5 +80,19 @@ struct sm_wall_toc {
 	u32 global_num_items;
 };
 
+/* ID's of well known wall objects */
+#define SM_WALL_PER_CPU_SEC_TIMER_ID  1
+
+/**
+ * struct sec_timer_state - structure to hold secute timer state
+ * @tv_ns:      If non-zero this field contains snapshot of timers
+ *              current time (ns). Timer is not set otherwise.
+ * @cv_ns:      next timer event configured (ns)
+ */
+struct sec_timer_state {
+	u64 tv_ns;
+	u64 cv_ns;
+};
+
 #endif /* __LINUX_TRUSTY_SMWALL_H */
 

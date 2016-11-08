@@ -1,0 +1,10 @@
+Trusty backup timer interface
+
+On some platforms Trusty might require additional non-secure timer to properly
+implement deep cpu idle states. Typically, it for platforms that might loose
+the state of local timer.
+
+Required properties:
+- compatible: "android,trusty-timer-v1"
+
+Must be a child of the node that provides the trusty std/fast call interface.
