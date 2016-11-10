@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ab888773_9d172606",
+        "filename": "fs/sdcardfs/inode.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 639,
+      "author": {
+        "id": 1037321
+      },
+      "writtenOn": "2016-11-10T07:45:58Z",
+      "side": 1,
+      "message": "Use a more descriptive message",
+      "range": {
+        "startLine": 639,
+        "startChar": 19,
+        "endLine": 639,
+        "endChar": 38
+      },
+      "revId": "69a4bdc6f70735a8e0e4e896a69e71e9bf58d56f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ab888773_dd34cea9",
+        "filename": "fs/sdcardfs/sdcardfs.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 568,
+      "author": {
+        "id": 1037321
+      },
+      "writtenOn": "2016-11-10T07:45:58Z",
+      "side": 1,
+      "message": "#define",
+      "range": {
+        "startLine": 568,
+        "startChar": 42,
+        "endLine": 568,
+        "endChar": 46
+      },
+      "revId": "69a4bdc6f70735a8e0e4e896a69e71e9bf58d56f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
