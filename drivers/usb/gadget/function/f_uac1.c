@@ -625,6 +625,7 @@ static int f_audio_set_alt(struct usb_function *f, unsigned intf, unsigned alt)
 
 		} else {
 			struct f_audio_buf *copy_buf = audio->copy_buf;
+
 			if (copy_buf) {
 				list_add_tail(&copy_buf->list,
 						&audio->play_queue);

@@ -1117,6 +1117,7 @@ static void ncm_tx_tasklet(unsigned long data)
 static enum hrtimer_restart ncm_tx_timeout(struct hrtimer *data)
 {
 	struct f_ncm *ncm = container_of(data, struct f_ncm, task_timer);
+
 	tasklet_schedule(&ncm->tx_tasklet);
 	return HRTIMER_NORESTART;
 }
@@ -1525,6 +1526,7 @@ static struct usb_function_instance *ncm_alloc_inst(void)
 	opts->net = gether_setup_default();
 	if (IS_ERR(opts->net)) {
 		struct net_device *net = opts->net;
+
 		kfree(opts);
 		return ERR_CAST(net);
 	}

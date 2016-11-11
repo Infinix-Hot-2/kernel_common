@@ -565,6 +565,7 @@ static long ffs_ep0_ioctl(struct file *file, unsigned code, unsigned long value)
 
 	if (code == FUNCTIONFS_INTERFACE_REVMAP) {
 		struct ffs_function *func = ffs->func;
+
 		ret = func ? ffs_func_revmap_intf(func, value) : -ENODEV;
 	} else if (gadget && gadget->ops->ioctl) {
 		ret = gadget->ops->ioctl(gadget, code, value);
@@ -635,6 +636,7 @@ static void ffs_epfile_io_complete(struct usb_ep *_ep, struct usb_request *req)
 	ENTER();
 	if (likely(req->context)) {
 		struct ffs_ep *ep = _ep->driver_data;
+
 		ep->status = req->status ? req->status : req->actual;
 		complete(req->context);
 	}
@@ -1440,6 +1442,7 @@ static void ffs_data_closed(struct ffs_data *ffs)
 static struct ffs_data *ffs_data_new(void)
 {
 	struct ffs_data *ffs = kzalloc(sizeof *ffs, GFP_KERNEL);
+
 	if (unlikely(!ffs))
 		return NULL;
 
@@ -1533,6 +1536,7 @@ static int functionfs_bind(struct ffs_data *ffs, struct usb_composite_dev *cdev)
 		for (; *lang; ++lang) {
 			struct usb_string *str = (*lang)->strings;
 			int id = first_id;
+
 			for (; str->s; ++id, ++str)
 				str->id = id;
 		}
@@ -1763,6 +1767,7 @@ static int __must_check ffs_do_single_desc(char *data, unsigned len,
 
 	case USB_DT_INTERFACE: {
 		struct usb_interface_descriptor *ds = (void *)_ds;
+
 		pr_vdebug("interface descriptor\n");
 		if (length != sizeof *ds)
 			goto inv_length;
@@ -1775,6 +1780,7 @@ static int __must_check ffs_do_single_desc(char *data, unsigned len,
 
 	case USB_DT_ENDPOINT: {
 		struct usb_endpoint_descriptor *ds = (void *)_ds;
+
 		pr_vdebug("endpoint descriptor\n");
 		if (length != USB_DT_ENDPOINT_SIZE &&
 		    length != USB_DT_ENDPOINT_AUDIO_SIZE)
@@ -1796,6 +1802,7 @@ static int __must_check ffs_do_single_desc(char *data, unsigned len,
 
 	case USB_DT_INTERFACE_ASSOCIATION: {
 		struct usb_interface_assoc_descriptor *ds = (void *)_ds;
+
 		pr_vdebug("interface association descriptor\n");
 		if (length != sizeof *ds)
 			goto inv_length;
@@ -2270,6 +2277,7 @@ static int __ffs_data_got_strings(struct ffs_data *ffs,
 	/* Allocate everything in one chunk so there's less maintenance. */
 	{
 		unsigned i = 0;
+
 		vla_group(d);
 		vla_item(d, struct usb_gadget_strings *, stringtabs,
 			lang_count + 1);
@@ -2421,6 +2429,7 @@ static void __ffs_event_add(struct ffs_data *ffs,
 	{
 		u8 *ev  = ffs->ev.types, *out = ev;
 		unsigned n = ffs->ev.count;
+
 		for (; n; --n, ++ev)
 			if ((*ev == rem_type1 || *ev == rem_type2) == neg)
 				*out++ = *ev;
@@ -2440,6 +2449,7 @@ static void ffs_event_add(struct ffs_data *ffs,
 			  enum usb_functionfs_event_type type)
 {
 	unsigned long flags;
+
 	spin_lock_irqsave(&ffs->ev.waitq.lock, flags);
 	__ffs_event_add(ffs, type);
 	spin_unlock_irqrestore(&ffs->ev.waitq.lock, flags);
@@ -2564,6 +2574,7 @@ static int __ffs_func_bind_do_nums(enum ffs_entity_type type, u8 *valuep,
 		idx = *valuep;
 		if (func->interfaces_nums[idx] < 0) {
 			int id = usb_interface_id(func->conf, &func->function);
+
 			if (unlikely(id < 0))
 				return id;
 			func->interfaces_nums[idx] = id;
@@ -2590,6 +2601,7 @@ static int __ffs_func_bind_do_nums(enum ffs_entity_type type, u8 *valuep,
 
 		{
 			struct usb_endpoint_descriptor **descs;
+
 			descs = func->eps[idx].descs;
 			newValue = descs[descs[0] ? 0 : 1]->bEndpointAddress;
 		}

@@ -32,6 +32,7 @@
 static int snd_interval_refine_set(struct snd_interval *i, unsigned int val)
 {
 	struct snd_interval t;
+
 	t.empty = 0;
 	t.min = t.max = val;
 	t.openmin = t.openmax = 0;
@@ -44,8 +45,10 @@ static int _snd_pcm_hw_param_set(struct snd_pcm_hw_params *params,
 				 int dir)
 {
 	int changed;
+
 	if (hw_is_mask(var)) {
 		struct snd_mask *m = hw_param_mask(params, var);
+
 		if (val == 0 && dir < 0) {
 			changed = -EINVAL;
 			snd_mask_none(m);
@@ -59,6 +62,7 @@ static int _snd_pcm_hw_param_set(struct snd_pcm_hw_params *params,
 		}
 	} else if (hw_is_interval(var)) {
 		struct snd_interval *i = hw_param_interval(params, var);
+
 		if (val == 0 && dir < 0) {
 			changed = -EINVAL;
 			snd_interval_none(i);
@@ -66,6 +70,7 @@ static int _snd_pcm_hw_param_set(struct snd_pcm_hw_params *params,
 			changed = snd_interval_refine_set(i, val);
 		else {
 			struct snd_interval t;
+
 			t.openmin = 1;
 			t.openmax = 1;
 			t.empty = 0;
@@ -218,6 +223,7 @@ static int gaudio_open_snd_dev(struct gaudio *card)
 	snd->filp = filp_open(fn_cntl, O_RDWR, 0);
 	if (IS_ERR(snd->filp)) {
 		int ret = PTR_ERR(snd->filp);
+
 		ERROR(card, "unable to open sound control device file: %s\n",
 				fn_cntl);
 		snd->filp = NULL;

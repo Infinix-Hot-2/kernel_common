@@ -2328,6 +2328,7 @@ reset:
 static int fsg_set_alt(struct usb_function *f, unsigned intf, unsigned alt)
 {
 	struct fsg_dev *fsg = fsg_from_func(f);
+
 	fsg->common->new_fsg = fsg;
 	raise_exception(fsg->common, FSG_STATE_CONFIG_CHANGE);
 	return USB_GADGET_DELAYED_STATUS;
@@ -2336,6 +2337,7 @@ static int fsg_set_alt(struct usb_function *f, unsigned intf, unsigned alt)
 static void fsg_disable(struct usb_function *f)
 {
 	struct fsg_dev *fsg = fsg_from_func(f);
+
 	fsg->common->new_fsg = NULL;
 	raise_exception(fsg->common, FSG_STATE_CONFIG_CHANGE);
 }
@@ -2357,6 +2359,7 @@ static void handle_exception(struct fsg_common *common)
 	 */
 	for (;;) {
 		int sig = kernel_dequeue_signal(NULL);
+
 		if (!sig)
 			break;
 		if (sig != SIGUSR1) {
@@ -2380,6 +2383,7 @@ static void handle_exception(struct fsg_common *common)
 		/* Wait until everything is idle */
 		for (;;) {
 			int num_active = 0;
+
 			for (i = 0; i < common->fsg_num_buffers; ++i) {
 				bh = &common->buffhds[i];
 				num_active += bh->inreq_busy + bh->outreq_busy;
@@ -2563,6 +2567,7 @@ static int fsg_main_thread(void *common_)
 		down_write(&common->filesem);
 		for (i = 0; i < ARRAY_SIZE(common->luns); --i) {
 			struct fsg_lun *curlun = common->luns[i];
+
 			if (!curlun || !fsg_lun_is_open(curlun))
 				continue;
 
@@ -2698,6 +2703,7 @@ static void _fsg_common_free_buffers(struct fsg_buffhd *buffhds, unsigned n)
 {
 	if (buffhds) {
 		struct fsg_buffhd *bh = buffhds;
+
 		while (n--) {
 			kfree(bh->buf);
 			++bh;
@@ -3009,6 +3015,7 @@ static void fsg_common_release(struct kref *ref)
 
 	for (i = 0; i < ARRAY_SIZE(common->luns); ++i) {
 		struct fsg_lun *lun = common->luns[i];
+
 		if (!lun)
 			continue;
 		fsg_lun_close(lun);

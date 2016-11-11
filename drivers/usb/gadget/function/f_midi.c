@@ -239,6 +239,7 @@ static void f_midi_handle_out_data(struct usb_ep *ep, struct usb_request *req)
 		if (buf[i] != 0) {
 			int cable = buf[i] >> 4;
 			int length = f_midi_cin_length[buf[i] & 0x0f];
+
 			f_midi_read_data(ep, cable, &buf[i + 1], length);
 		}
 }
@@ -538,6 +539,7 @@ static void f_midi_transmit(struct f_midi *midi, struct usb_request *req)
 
 		while (req->length + 3 < midi->buflen) {
 			uint8_t b;
+
 			if (snd_rawmidi_transmit(substream, &b, 1) != 1) {
 				port->active = 0;
 				break;
@@ -561,6 +563,7 @@ static void f_midi_transmit(struct f_midi *midi, struct usb_request *req)
 static void f_midi_in_tasklet(unsigned long data)
 {
 	struct f_midi *midi = (struct f_midi *) data;
+
 	f_midi_transmit(midi, NULL);
 }
 

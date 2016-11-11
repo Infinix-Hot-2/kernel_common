@@ -1201,6 +1201,7 @@ static ssize_t rndis_proc_write(struct file *file, const char __user *buffer,
 
 	for (i = 0; i < count; i++) {
 		char c;
+
 		if (get_user(c, buffer))
 			return -EFAULT;
 		switch (c) {

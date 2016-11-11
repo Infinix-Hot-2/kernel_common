@@ -875,6 +875,7 @@ static struct usb_function_instance *ecm_alloc_inst(void)
 	opts->net = gether_setup_default();
 	if (IS_ERR(opts->net)) {
 		struct net_device *net = opts->net;
+
 		kfree(opts);
 		return ERR_CAST(net);
 	}
