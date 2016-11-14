@@ -1,0 +1,9 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Verified+1: Kees Cook <keescook@google.com>
+Code-Review+2: Kees Cook <keescook@google.com>
+Autosubmit+1: Kees Cook <keescook@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Mon, 14 Nov 2016 19:24:57 +0000
+Reviewed-on: https://android-review.googlesource.com/302697
+Project: kernel/common
+Branch: refs/heads/android-3.4
