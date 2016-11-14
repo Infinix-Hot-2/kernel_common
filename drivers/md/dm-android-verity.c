@@ -585,6 +585,7 @@ static int verify_verity_signature(char *key_id,
 
 	if (IS_ERR(pks)) {
 		DMERR("hashing failed");
+		pks = NULL;
 		goto error;
 	}
 
