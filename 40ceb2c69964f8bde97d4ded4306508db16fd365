@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "10ad446a_a8701d4b",
+        "filename": "drivers/usb/gadget/function/u_ether.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 749,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2016-11-16T04:24:10Z",
+      "side": 1,
+      "message": "The struct eth_dev seems to be local to this file. Should we instead change it to atomics ?",
+      "range": {
+        "startLine": 749,
+        "startChar": 7,
+        "endLine": 749,
+        "endChar": 20
+      },
+      "revId": "40ceb2c69964f8bde97d4ded4306508db16fd365",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
