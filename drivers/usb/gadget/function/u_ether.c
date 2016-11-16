@@ -741,6 +741,7 @@ static netdev_tx_t eth_start_xmit(struct sk_buff *skb,
 
 	req->length = length;
 
+<<<<<<< HEAD   (557707 Merge tag 'v4.4.30' into android-4.4.y)
 	/* throttle highspeed IRQ rate back slightly */
 	if (gadget_is_dualspeed(dev->gadget) &&
 			 (dev->gadget->speed == USB_SPEED_HIGH)) {
@@ -754,6 +755,15 @@ static netdev_tx_t eth_start_xmit(struct sk_buff *skb,
 	} else {
 		req->no_interrupt = 0;
 	}
+=======
+	/* throttle high/super speed IRQ rate back slightly */
+	if (gadget_is_dualspeed(dev->gadget))
+		req->no_interrupt = (((dev->gadget->speed == USB_SPEED_HIGH ||
+				       dev->gadget->speed == USB_SPEED_SUPER)) &&
+					!list_empty(&dev->tx_reqs))
+			? ((atomic_read(&dev->tx_qlen) % dev->qmult) != 0)
+			: 0;
+>>>>>>> BRANCH (4dab3e Linux 4.4.32)
 
 	retval = usb_ep_queue(in, req, GFP_ATOMIC);
 	switch (retval) {
