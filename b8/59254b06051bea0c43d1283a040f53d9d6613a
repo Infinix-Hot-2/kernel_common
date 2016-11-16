@@ -1,0 +1,9 @@
+Verified+1: Daniel Rosenberg <drosen@google.com>
+Code-Review+2: Mohamad Ayyash <mkayyash@google.com>
+Autosubmit+1: Daniel Rosenberg <drosen@google.com>
+Presubmit-Ready+1: Daniel Rosenberg <drosen@google.com>
+Submitted-by: Daniel Rosenberg <drosen@google.com>
+Submitted-at: Wed, 16 Nov 2016 00:22:49 +0000
+Reviewed-on: https://android-review.googlesource.com/296714
+Project: kernel/common
+Branch: refs/heads/android-3.18
