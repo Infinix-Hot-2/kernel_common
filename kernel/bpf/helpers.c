@@ -10,11 +10,14 @@
  * General Public License for more details.
  */
 #include <linux/bpf.h>
+#include <linux/ktime.h>
 #include <linux/rcupdate.h>
 #include <linux/random.h>
-#include <linux/smp.h>
-#include <linux/ktime.h>
 #include <linux/sched.h>
+#include <linux/skbuff.h>
+#include <linux/smp.h>
+#include <linux/socket.h>
+#include <linux/sock_diag.h>
 #include <linux/uidgid.h>
 
 /* If kernel subsystem is allowing eBPF programs to call this function,
@@ -177,3 +180,46 @@ const struct bpf_func_proto bpf_get_current_comm_proto = {
 	.arg1_type	= ARG_PTR_TO_STACK,
 	.arg2_type	= ARG_CONST_STACK_SIZE,
 };
+
+static u64 bpf_get_current_socket_cookie(u64 r1, u64 r2, u64 r3, u64 r4, u64 r5)
+{
+        struct sk_buff *skb = (struct sk_buff *) (long) r1;
+        struct sock *sk;
+        uint32_t cookie[2];
+        sk = skb->sk;
+        if(sk == NULL) {
+            return 0;
+        }
+        sock_diag_save_cookie(sk, cookie);
+        return (((u64) cookie[1]) << 32)|((u64) cookie[0]);
+}
+
+const struct bpf_func_proto bpf_get_current_socket_cookie_proto = {
+	.func		= bpf_get_current_socket_cookie,
+	.gpl_only	= false,
+	.ret_type	= RET_INTEGER,
+	.arg1_type	= ARG_PTR_TO_CTX,
+};
+
+static u32 bpf_get_socket_uid(u64 r1, u64 r2, u64 r3, u64 r4, u64 r5)
+{
+        struct sk_buff *skb = (struct sk_buff *) (long) r1;
+        struct sock *sk;
+        kuid_t kuid;
+        sk = skb->sk;
+        if(sk == NULL) {
+            return 0;
+        }
+        kuid = sock_net_uid(dev_net(skb->dev), sk);
+        return (u32)kuid.val;
+}
+
+
+
+const struct bpf_func_proto bpf_get_socket_uid_proto = {
+	.func		= bpf_get_socket_uid,
+	.gpl_only	= false,
+	.ret_type	= RET_INTEGER,
+	.arg1_type	= ARG_PTR_TO_CTX,
+};
+

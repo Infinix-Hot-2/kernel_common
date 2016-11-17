@@ -1643,6 +1643,10 @@ sk_filter_func_proto(enum bpf_func_id func_id)
 	case BPF_FUNC_trace_printk:
 		if (capable(CAP_SYS_ADMIN))
 			return bpf_get_trace_printk_proto();
+        case BPF_FUNC_get_socket_uid:
+                return &bpf_get_socket_uid_proto;
+        case BPF_FUNC_get_current_socket_cookie:
+                return &bpf_get_current_socket_cookie_proto;
 	default:
 		return NULL;
 	}
@@ -1746,7 +1750,6 @@ static u32 bpf_net_convert_ctx_access(enum bpf_access_type type, int dst_reg,
 	switch (ctx_off) {
 	case offsetof(struct __sk_buff, len):
 		BUILD_BUG_ON(FIELD_SIZEOF(struct sk_buff, len) != 4);
-
 		*insn++ = BPF_LDX_MEM(BPF_W, dst_reg, src_reg,
 				      offsetof(struct sk_buff, len));
 		break;
@@ -1778,7 +1781,6 @@ static u32 bpf_net_convert_ctx_access(enum bpf_access_type type, int dst_reg,
 
 	case offsetof(struct __sk_buff, ingress_ifindex):
 		BUILD_BUG_ON(FIELD_SIZEOF(struct sk_buff, skb_iif) != 4);
-
 		*insn++ = BPF_LDX_MEM(BPF_W, dst_reg, src_reg,
 				      offsetof(struct sk_buff, skb_iif));
 		break;
