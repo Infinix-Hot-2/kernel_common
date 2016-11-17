@@ -22,6 +22,30 @@
       "revId": "efce9e9bb321ba3c3df627d9527f0aaebf8fea90",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "50b17cf0_0bb40db0",
+        "filename": "drivers/platform/goldfish/goldfish_pipe_v2.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1051712
+      },
+      "writtenOn": "2016-11-17T20:34:33Z",
+      "side": 1,
+      "message": "done. added latest patch and changed compatible string to google,.... Please update emulator : )",
+      "parentUuid": "50b17cf0_9ab6a98b",
+      "range": {
+        "startLine": 145,
+        "startChar": 0,
+        "endLine": 148,
+        "endChar": 22
+      },
+      "revId": "efce9e9bb321ba3c3df627d9527f0aaebf8fea90",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
