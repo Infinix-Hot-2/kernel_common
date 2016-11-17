@@ -16,6 +16,24 @@
       "revId": "65c7f27190cef24f4f98a8ae44e6b4c5c272e931",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "50b17cf0_1af7f9b5",
+        "filename": "drivers/md/dm-android-verity.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 588,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2016-11-17T18:51:00Z",
+      "side": 1,
+      "message": "I looked at the various code paths through we can reach this code and I think it should be fine to add \nretval \u003d PTR_ERR(pks).",
+      "parentUuid": "0b97d3c5_ddefb5de",
+      "revId": "65c7f27190cef24f4f98a8ae44e6b4c5c272e931",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
