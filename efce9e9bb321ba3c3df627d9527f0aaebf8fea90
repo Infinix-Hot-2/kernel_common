@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "50b17cf0_9ab6a98b",
+        "filename": "drivers/platform/goldfish/goldfish_pipe_v2.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1080076
+      },
+      "writtenOn": "2016-11-17T18:12:51Z",
+      "side": 1,
+      "message": "please rebase on top of the latest changes, and, maybe, manually merge them in. This struct is now different, and there some other modifications in b543285",
+      "range": {
+        "startLine": 145,
+        "startChar": 0,
+        "endLine": 148,
+        "endChar": 22
+      },
+      "revId": "efce9e9bb321ba3c3df627d9527f0aaebf8fea90",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
