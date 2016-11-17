@@ -269,6 +269,8 @@ enum bpf_func_id {
 	 * Return: 0 on success
 	 */
 	BPF_FUNC_perf_event_output,
+        BPF_FUNC_get_current_socket_cookie,
+        BPF_FUNC_get_socket_uid,
 	__BPF_FUNC_MAX_ID,
 };
 
