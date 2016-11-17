@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "50b17cf0_fdbddf66",
+        "filename": "drivers/input/keyboard/goldfish_events.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2016-11-17T19:13:03Z",
+      "side": 1,
+      "message": "Same here - let\u0027s do all either \u0027_\u0027 or \u0027-\u0027",
+      "range": {
+        "startLine": 190,
+        "startChar": 11,
+        "endLine": 190,
+        "endChar": 26
+      },
+      "revId": "aec62280ca9d6091b08c979284ae41379549d506",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
