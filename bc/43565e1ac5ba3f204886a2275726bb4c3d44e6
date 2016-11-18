@@ -1,0 +1,11 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+1: Yurii Zubrytskyi <zyy@google.com>
+Code-Review+2: Jin Qian <jinqian@google.com>
+Verified+1: Jin Qian <jinqian@google.com>
+Autosubmit+1: Jin Qian <jinqian@google.com>
+Presubmit-Ready+1: Jin Qian <jinqian@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Fri, 18 Nov 2016 00:01:32 +0000
+Reviewed-on: https://android-review.googlesource.com/286657
+Project: kernel/common
+Branch: refs/heads/android-4.4
