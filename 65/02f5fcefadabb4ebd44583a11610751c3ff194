@@ -1,0 +1,7 @@
+Code-Review+2: Dmitry Shmidt <dimitrysh@google.com>
+Verified+1: Guenter Roeck <groeck@chromium.org>
+Submitted-by: Greg Hackmann <ghackmann@google.com>
+Submitted-at: Fri, 18 Nov 2016 18:24:08 +0000
+Reviewed-on: https://android-review.googlesource.com/305249
+Project: kernel/common
+Branch: refs/heads/android-4.4
