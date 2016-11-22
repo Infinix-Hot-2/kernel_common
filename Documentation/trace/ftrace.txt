@@ -357,6 +357,19 @@ of ftrace. Here is a list of some of the key files:
 		  to correlate events across hypervisor/guest if
 		  tb_offset is known.
 
+	  mono: This uses the fast monotonic clock (CLOCK_MONOTONIC)
+		which is monotonic and is subject to NTP rate adjustments.
+
+	  mono_raw:
+		This is the raw monotonic clock (CLOCK_MONOTONIC_RAW)
+		which is montonic but is not subject to any rate adjustments
+		and ticks at the same rate as the hardware clocksource.
+
+	  boot:
+		This is the boot clock (CLOCK_BOOTTIME) and is based on the
+		fast monotonic clock, but also accounts for time spent in
+		suspend.
+
 	To set a clock, simply echo the clock name into this file.
 
 	  echo global > trace_clock
