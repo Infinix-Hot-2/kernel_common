@@ -872,34 +872,23 @@ void walt_fixup_busy_time(struct task_struct *p, int new_cpu)
 /* Keep track of max/min capacity possible across CPUs "currently" */
 static void __update_min_max_capacity(void)
 {
+	unsigned long flags;
 	int i;
 	int max = 0, min = INT_MAX;
 
+	local_irq_save(flags);
 	for_each_online_cpu(i) {
+		raw_spin_lock(&cpu_rq(i)->lock);
 		if (cpu_rq(i)->capacity > max)
 			max = cpu_rq(i)->capacity;
 		if (cpu_rq(i)->capacity < min)
 			min = cpu_rq(i)->capacity;
+		raw_spin_unlock(&cpu_rq(i)->lock);
 	}
+	local_irq_restore(flags);
 
 	max_capacity = max;
 	min_capacity = min;
-}
-
-static void update_min_max_capacity(void)
-{
-	unsigned long flags;
-	int i;
-
-	local_irq_save(flags);
-	for_each_possible_cpu(i)
-		raw_spin_lock(&cpu_rq(i)->lock);
-
-	__update_min_max_capacity();
-
-	for_each_possible_cpu(i)
-		raw_spin_unlock(&cpu_rq(i)->lock);
-	local_irq_restore(flags);
 }
 
 /*
@@ -989,7 +978,7 @@ static int cpufreq_notifier_policy(struct notifier_block *nb,
 		return 0;
 
 	if (val == CPUFREQ_REMOVE_POLICY || val == CPUFREQ_CREATE_POLICY) {
-		update_min_max_capacity();
+		__update_min_max_capacity();
 		return 0;
 	}
 
