@@ -893,7 +893,7 @@ static void update_min_max_capacity(void)
 
 	local_irq_save(flags);
 	for_each_possible_cpu(i)
-		raw_spin_lock(&cpu_rq(i)->lock);
+		raw_spin_lock_nested(&cpu_rq(i)->lock, i);
 
 	__update_min_max_capacity();
 
