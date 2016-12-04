@@ -32,12 +32,29 @@ DECLARE_HASHTABLE(hash_table, UID_HASH_BITS);
 static DEFINE_MUTEX(uid_lock);
 static struct proc_dir_entry *parent;
 
+struct io_stats {
+	u64 read_bytes;		/* task->ioac.read_bytes */
+	u64 write_bytes;	/* task->ioac.write_bytes - task->ioac.cancelled_write_bytes */
+	u64 rchar;			/* task->ioac.rchar */
+	u64 wchar;			/* task->ioac.wchar */
+};
+
+#define UID_STATE_FOREGROUND	0
+#define UID_STATE_BACKGROUND	1
+#define UID_STATE_BUCKET_SIZE	2
+
+#define UID_STATE_TOTAL_CURR	2
+#define UID_STATE_TOTAL_LAST	3
+#define UID_STATE_SIZE			4
+
 struct uid_entry {
 	uid_t uid;
 	cputime_t utime;
 	cputime_t stime;
 	cputime_t active_utime;
 	cputime_t active_stime;
+	int state;
+	struct io_stats io[UID_STATE_SIZE];
 	struct hlist_node hash;
 };
 
@@ -131,6 +148,92 @@ static const struct file_operations uid_stat_fops = {
 	.release	= single_release,
 };
 
+static void aggregate_task_io_stats(struct uid_entry *uid_entry,
+			struct task_struct *task)
+{
+	struct io_stats *io_curr = &uid_entry->io[UID_STATE_TOTAL_CURR];
+
+	io_curr->read_bytes += task->ioac.read_bytes;
+	io_curr->write_bytes +=
+		task->ioac.write_bytes - task->ioac.cancelled_write_bytes;
+	io_curr->rchar += task->ioac.rchar;
+	io_curr->wchar += task->ioac.wchar;
+}
+
+static void update_bucket_io_stats(struct uid_entry *entry)
+{
+	struct io_stats *io_bucket = &entry->io[uid_entry->state];
+	struct io_stats *io_curr = &entry->io[UID_STATE_TOTAL_CURR];
+	struct io_stats *io_last = &entry->io[UID_STATE_TOTAL_LAST];
+
+	io_bucket->read_bytes += io_curr->read_bytes - io_last->read_bytes;
+	io_bucket->write_bytes += io_curr->write_bytes - io_last->write_bytes;
+	io_bucket->rchar += io_curr->rchar - io_last->rchar;
+	io_bucket->wchar += io_curr->wchar - io_last->wchar;
+
+	io_last->read_bytes = io_curr->read_bytes;
+	io_last->write_bytes = io_curr->write_bytes;
+	io_last->rchar = io_curr->rchar;
+	io_last->wchar = io_curr->wchar;
+}
+
+static int uid_io_stat_show(struct seq_file *m, void *v)
+{
+	struct uid_entry *uid_entry;
+	struct task_struct *task, *temp;
+	unsigned long bkt;
+
+	mutex_lock(&uid_lock);
+
+	hash_for_each(hash_table, bkt, uid_entry, hash)
+		memset(uid_entry->io[UID_STATE_TOTAL_CURR], 0, sizeof(struct io_stats));
+
+	read_lock(&tasklist_lock);
+	do_each_thread(temp, task) {
+		uid_entry = find_or_register_uid(from_kuid_munged(
+			current_user_ns(), task_uid(task)));
+		if (!uid_entry) {
+			read_unlock(&tasklist_lock);
+			mutex_unlock(&uid_lock);
+			pr_err("%s: failed to find the uid_entry for uid %d\n",
+				__func__, from_kuid_munged(current_user_ns(),
+				task_uid(task)));
+			return -ENOMEM;
+		}
+		aggregate_task_io_stats(uid_entry, task);
+	} while_each_thread(temp, task);
+	read_unlock(&tasklist_lock);
+
+	hash_for_each(hash_table, bkt, uid_entry, hash) {
+		update_bucket_io_stats(uid_entry);
+		seq_printf(m, "%d: %llu %llu %llu %llu %llu %llu %llu %llu\n",
+			uid_entry->uid,
+			uid_entry->io[UID_STATE_FOREGROUND].read_bytes,
+			uid_entry->io[UID_STATE_FOREGROUND].write_bytes,
+			uid_entry->io[UID_STATE_FOREGROUND].rchar,
+			uid_entry->io[UID_STATE_FOREGROUND].wchar,
+			uid_entry->io[UID_STATE_BACKGROUND].read_bytes,
+			uid_entry->io[UID_STATE_BACKGROUND].write_bytes,
+			uid_entry->io[UID_STATE_BACKGROUND].rchar,
+			uid_entry->io[UID_STATE_BACKGROUND].wchar);
+	}
+
+	mutex_unlock(&uid_lock);
+	return 0;
+}
+
+static int uid_io_stat_open(struct inode *inode, struct file *file)
+{
+	return single_open(file, uid_io_stat_show, PDE_DATA(inode));
+}
+
+static const struct file_operations uid_io_stat_fops = {
+	.open		= uid_io_stat_open,
+	.read		= seq_read,
+	.llseek		= seq_lseek,
+	.release	= single_release,
+};
+
 static int uid_remove_open(struct inode *inode, struct file *file)
 {
 	return single_open(file, NULL, NULL);
@@ -178,6 +281,95 @@ static ssize_t uid_remove_write(struct file *file,
 	return count;
 }
 
+static const struct file_operations uid_ctrl_fops = {
+	.open		= uid_ctrl_open,
+	.release	= single_release,
+	.write		= uid_ctrl_write,
+};
+
+static int uid_ctrl_open(struct inode *inode, struct file *file)
+{
+	return single_open(file, NULL, NULL);
+}
+
+static int uid_ctrl_cmd_set_state(const char *input)
+{
+	struct uid_entry *uid_entry;
+	char cmd;
+	uid_t uid;
+	int argc;
+
+	argc = sscanf(input, "%c %u %u", &cmd, &uid, &state);
+	if (argc != 3)
+		return -EINVAL;
+
+	if (state != UID_STATE_BACKGROUND &&
+		state != UID_STATE_FOREGROUND)
+		return -EINVAL;
+
+	mutex_lock(&uid_lock);
+
+	uid_entry = find_or_register_uid(uid);
+	if (!uid_entry) {
+		mutex_unlock(&uid_lock);
+		pr_err("%s: failed to find the uid_entry for uid %d\n",
+			__func__, uid);
+		return -EINVAL;
+	}
+
+	if (uid_entry->state == state)
+		return 0;
+
+	read_lock(&tasklist_lock);
+	do_each_thread(temp, task) {
+		uid_entry = find_or_register_uid(from_kuid_munged(
+			current_user_ns(), task_uid(task)));
+		if (!uid_entry) {
+			pr_err("%s: failed to find the uid_entry for uid %d\n",
+				__func__, from_kuid_munged(current_user_ns(),
+				task_uid(task)));
+			continue;
+		}
+		aggregate_task_io_stats(uid_entry, task);
+	} while_each_thread(temp, task);
+	read_unlock(&tasklist_lock);
+
+	update_bucket_io_stats(uid_entry);
+
+	uid_entry->state = state;
+
+	mutex_unlock(&uid_lock);
+	return 0;
+}
+
+static ssize_t uid_ctrl_write(struct file *file,
+			const char __user *buffer, size_t count, loff_t *ppos)
+{
+	char cmd, input[128];
+	int ret;
+
+	if (count >= sizeof(input))
+		return -EINVAL;
+
+	if (copy_from_user(input, buffer, count))
+		return -EFAULT;
+
+	input[count] = '\0';
+
+	cmd = input[0];
+	switch (cmd) {
+	case 's':
+		ret = uid_ctrl_cmd_set_state(input);
+	default:
+		return -EINVAL;
+	}
+
+	if (!ret)
+		return count;
+
+	return ret;
+}
+
 static const struct file_operations uid_remove_fops = {
 	.open		= uid_remove_open,
 	.release	= single_release,
@@ -207,6 +399,9 @@ static int process_notifier(struct notifier_block *self,
 	uid_entry->utime += utime;
 	uid_entry->stime += stime;
 
+	aggregate_task_io_stats(uid_entry, task);
+	update_bucket_io_stats(uid_entry);
+
 exit:
 	mutex_unlock(&uid_lock);
 	return NOTIFY_OK;
@@ -229,7 +424,13 @@ static int __init proc_uid_cputime_init(void)
 	proc_create_data("remove_uid_range", S_IWUGO, parent, &uid_remove_fops,
 					NULL);
 
+	proc_create_data("uid_ctrl", S_IWUGO, parent, &uid_ctrl_fops,
+					NULL);
+
 	proc_create_data("show_uid_stat", S_IRUGO, parent, &uid_stat_fops,
+					NULL);
+
+	proc_create_data("show_uid_io_stat", S_IRUGO, parent, &uid_io_stat_fops,
 					NULL);
 
 	profile_event_register(PROFILE_TASK_EXIT, &process_notifier_block);
