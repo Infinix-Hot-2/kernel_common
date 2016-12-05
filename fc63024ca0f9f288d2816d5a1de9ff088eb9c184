@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8decbb0b_690aa002",
+        "filename": "fs/gfs2/acl.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-12-05T16:58:15Z",
+      "side": 1,
+      "message": "posix_acl_release is not called with \u0027original\u0027 acl inside posix_acl_update_mode(). This is a leak.",
+      "range": {
+        "startLine": 273,
+        "startChar": 3,
+        "endLine": 273,
+        "endChar": 20
+      },
+      "revId": "fc63024ca0f9f288d2816d5a1de9ff088eb9c184",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8decbb0b_4907dcf8",
+        "filename": "fs/jfs/xattr.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 697,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2016-12-05T16:58:15Z",
+      "side": 1,
+      "message": "posix_acl_release(acl) is not called with original acl if rc \u003d\u003d 0. This is an acl leak.",
+      "range": {
+        "startLine": 697,
+        "startChar": 3,
+        "endLine": 697,
+        "endChar": 26
+      },
+      "revId": "fc63024ca0f9f288d2816d5a1de9ff088eb9c184",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
