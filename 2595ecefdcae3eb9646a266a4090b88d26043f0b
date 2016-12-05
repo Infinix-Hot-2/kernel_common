@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8decbb0b_3f34ca98",
+        "filename": "include/linux/posix_acl.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1051712
+      },
+      "writtenOn": "2016-12-05T19:10:05Z",
+      "side": 1,
+      "message": "bool?",
+      "range": {
+        "startLine": 94,
+        "startChar": 29,
+        "endLine": 94,
+        "endChar": 32
+      },
+      "revId": "2595ecefdcae3eb9646a266a4090b88d26043f0b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
