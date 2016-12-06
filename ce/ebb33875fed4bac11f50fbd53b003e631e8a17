@@ -1,0 +1,11 @@
+Code-Review+1: Shawn C <citypw@gmail.com>
+Code-Review+2: Kees Cook <keescook@google.com>
+Code-Review+1: David Brown <david.brown@linaro.org>
+Autosubmit+1: Kees Cook <keescook@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Verified+1: Kees Cook <keescook@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Tue, 06 Dec 2016 20:37:27 +0000
+Reviewed-on: https://android-review.googlesource.com/297757
+Project: kernel/common
+Branch: refs/heads/android-3.10
