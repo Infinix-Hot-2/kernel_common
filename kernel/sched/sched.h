@@ -475,7 +475,6 @@ struct rt_rq {
 	struct rq *rq;
 	struct task_group *tg;
 
-	unsigned int rt_nr_cfs_throttled;
 	struct list_head cfs_throttled_tasks;
 #endif
 };
@@ -790,6 +789,9 @@ static inline void rq_clock_skip_update(struct rq *rq, bool skip)
 	else
 		rq->clock_skip_update &= ~RQCF_REQ_SKIP;
 }
+
+void __setprio_other(struct rq *rq, struct task_struct *p);
+void __setprio_fifo(struct rq *rq, struct task_struct *p);
 
 #ifdef CONFIG_NUMA
 enum numa_topology_type {
