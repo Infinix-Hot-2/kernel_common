@@ -6083,14 +6083,12 @@ static void task_dead_fair(struct task_struct *p)
 
 		lockdep_assert_held(&rq_of_rt_rq(rt_rq)->lock);
 		list_del_init(&rt_se->cfs_throttled_task);
-		rt_rq->rt_nr_cfs_throttled--;
 		rt_se->throttled = 0;
 		trace_printk("%s tsk=%d thr=%d cpu=%d rt_nr_cfs_thr=%d rt_se=%p --> DEAD\n",
 				__func__,
 				task_pid_nr(p),
 				p->rt.throttled, task_cpu(p),
-				rt_rq->rt_nr_cfs_throttled, rt_se);
-		BUG_ON(rt_rq->rt_nr_cfs_throttled < 0);
+				!list_empty(&rt_rq->cfs_throttled_tasks), rt_se);
 	}
 }
 #else
@@ -9364,11 +9362,9 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
 				__func__,
 				task_pid_nr(p),
 				p->rt.throttled, task_cpu(p),
-				rt_rq->rt_nr_cfs_throttled, rt_se);
+				!list_empty(&rt_rq->cfs_throttled_tasks), rt_se);
 		list_del_init(&rt_se->cfs_throttled_task);
-		rt_rq->rt_nr_cfs_throttled--;
 		rt_se->throttled = 0;
-		BUG_ON(rt_rq->rt_nr_cfs_throttled < 0);
 	}
 
 	trace_printk("%s tsk=%d cpu=%d\n",
