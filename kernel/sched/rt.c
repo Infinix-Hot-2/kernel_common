@@ -105,6 +105,8 @@ void init_rt_rq(struct rt_rq *rt_rq)
 	rt_rq->rt_throttled = 0;
 	rt_rq->rt_runtime = 0;
 	raw_spin_lock_init(&rt_rq->rt_runtime_lock);
+
+	INIT_LIST_HEAD(&rt_rq->cfs_throttled_tasks);
 }
 
 #ifdef CONFIG_RT_GROUP_SCHED
@@ -215,8 +217,6 @@ int alloc_rt_sched_group(struct task_group *tg, struct task_group *parent)
 			goto err_free_rq;
 
 		init_rt_rq(rt_rq);
-		INIT_LIST_HEAD(&rt_rq->cfs_throttled_tasks);
-		rt_rq->rt_nr_cfs_throttled = 0;
 		rt_rq->rt_runtime = tg->rt_bandwidth.rt_runtime;
 		init_tg_rt_entry(tg, rt_rq, rt_se, i, parent->rt_se[i]);
 	}
@@ -537,11 +537,10 @@ static void cfs_throttle_rt_tasks(struct rt_rq *rt_rq)
 			rt_se->throttled = 1;
 			list_add(&rt_se->cfs_throttled_task,
 				 &rt_rq->cfs_throttled_tasks);
-			rt_rq->rt_nr_cfs_throttled++;
 			trace_printk("%s [queued] tsk=%d thr=%d cpu=%d rt_nr_cfs_thr=%d rt_se=%p --> SCHED_OTHER (%p)\n",
 					__func__, task_pid_nr(p),
 					p->rt.throttled, task_cpu(p),
-					rt_rq->rt_nr_cfs_throttled , rt_se, &fair_sched_class);
+					!list_empty(&rt_rq->cfs_throttled_tasks), rt_se, &fair_sched_class);
 			__setprio_other(rq, p);
 		}
 		idx = find_next_bit(array->bitmap, MAX_RT_PRIO, idx + 1);
@@ -563,14 +562,12 @@ static void cfs_unthrottle_rt_tasks(struct rt_rq *rt_rq)
 
 		p = rt_task_of(rt_se);
 		list_del_init(&rt_se->cfs_throttled_task);
-		rt_rq->rt_nr_cfs_throttled--;
 		rt_se->throttled = 0;
 		trace_printk("%s tsk=%d thr=%d cpu=%d rt_nr_cfs_thr=%d rt_se=%p --> SCHED_FIFO (%p)\n",
 				__func__,
 				task_pid_nr(p),
 				p->rt.throttled, task_cpu(p),
-				rt_rq->rt_nr_cfs_throttled, rt_se, &rt_sched_class);
-		BUG_ON(rt_rq->rt_nr_cfs_throttled < 0);
+				!list_empty(&rt_rq->cfs_throttled_tasks), rt_se, &rt_sched_class);
 		__setprio_fifo(rq, p);
 	}
 }
@@ -585,8 +582,7 @@ static void sched_rt_rq_enqueue(struct rt_rq *rt_rq)
 
 	rt_se = rt_rq->tg->rt_se[cpu];
 
-	if (rt_rq->rt_nr_cfs_throttled)
-		cfs_unthrottle_rt_tasks(rt_rq);
+	cfs_unthrottle_rt_tasks(rt_rq);
 
 	if (rt_rq->rt_nr_running) {
 		if (!rt_se)
@@ -955,7 +951,7 @@ static int do_sched_rt_period_timer(struct rt_bandwidth *rt_b, int overrun)
 					rq_clock_skip_update(rq, false);
 			}
 			if (rt_rq->rt_time || rt_rq->rt_nr_running ||
-				rt_rq->rt_nr_cfs_throttled)
+				!list_empty(&rt_rq->cfs_throttled_tasks))
 				idle = 0;
 			raw_spin_unlock(&rt_rq->rt_runtime_lock);
 		} else if (rt_rq->rt_nr_running) {
@@ -1318,12 +1314,11 @@ static void __enqueue_rt_entity(struct sched_rt_entity *rt_se, int flags)
 		rt_se->throttled = 1;
 		list_add(&rt_se->cfs_throttled_task,
 			 &rt_rq->cfs_throttled_tasks);
-		rt_rq->rt_nr_cfs_throttled++;
 		trace_printk("[wakeup] tsk=%d que=%d thr=%d cpu=%d rt_nr_cfs_thr=%d rt_se=%p --> SCHED_OTHER (%p)\n",
 				task_pid_nr(p),
 				task_on_rq_queued(p),
 				p->rt.throttled, task_cpu(p),
-				rt_rq->rt_nr_cfs_throttled , rt_se, &fair_sched_class);
+				!list_empty(&rt_rq->cfs_throttled_tasks), rt_se, &fair_sched_class);
 
 		p->sched_class = &fair_sched_class;
 		p->prio = DEFAULT_PRIO;
