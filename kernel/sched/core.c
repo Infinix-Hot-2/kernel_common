@@ -3531,13 +3531,13 @@ void __setprio_other(struct rq *rq, struct task_struct *p) {
 			task_pid_nr(p), queued, running,
 			p->rt.throttled, p->prio, p->static_prio,
 			p->normal_prio, p->rt_priority);
-	BUG_ON(!p->rt.throttled);
 
 	if (queued)
 		dequeue_task(rq, p, 0);
 	if (running)
 		put_prev_task(rq, p);
 
+	p->rt.throttled = 1;
 	p->sched_class = &fair_sched_class;
 	p->prio = DEFAULT_PRIO;
 	/*
@@ -3594,13 +3594,13 @@ again:
 			__func__, task_pid_nr(p), queued, running,
 			p->rt.throttled, p->prio, p->static_prio,
 			p->normal_prio, p->rt_priority);
-	BUG_ON(p->rt.throttled);
 
 	if (queued)
 		dequeue_task(cpu_rq(cpu), p, 0);
 	if (running)
 		put_prev_task(cpu_rq(cpu), p);
 
+	p->rt.throttled = 0;
 	p->sched_class = &rt_sched_class;
 	p->prio = (MAX_RT_PRIO - 1) - p->rt_priority;
 
