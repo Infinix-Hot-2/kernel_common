@@ -534,7 +534,6 @@ static void cfs_throttle_rt_tasks(struct rt_rq *rt_rq)
 				continue;
 			}
 
-			rt_se->throttled = 1;
 			list_add(&rt_se->cfs_throttled_task,
 				 &rt_rq->cfs_throttled_tasks);
 			trace_printk("%s [queued] tsk=%d thr=%d cpu=%d rt_nr_cfs_thr=%d rt_se=%p --> SCHED_OTHER (%p)\n",
@@ -562,7 +561,6 @@ static void cfs_unthrottle_rt_tasks(struct rt_rq *rt_rq)
 
 		p = rt_task_of(rt_se);
 		list_del_init(&rt_se->cfs_throttled_task);
-		rt_se->throttled = 0;
 		trace_printk("%s tsk=%d thr=%d cpu=%d rt_nr_cfs_thr=%d rt_se=%p --> SCHED_FIFO (%p)\n",
 				__func__,
 				task_pid_nr(p),
@@ -1729,6 +1727,8 @@ static void put_prev_task_rt(struct rq *rq, struct task_struct *p)
 {
 	update_curr_rt(rq);
 
+	if (rt_throttled(p))
+			p->sched_class->put_prev_task(rq, p);
 	/*
 	 * The previous task needs to be made eligible for pushing
 	 * if it is still active
