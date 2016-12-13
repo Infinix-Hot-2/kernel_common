@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa632f25_4f454e66",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2299,
+      "author": {
+        "id": 1069543
+      },
+      "writtenOn": "2016-12-13T18:16:08Z",
+      "side": 1,
+      "message": "I get a crash because of this.\n\nCan you post your performance results and the commands used to get them? I ran binderThroughputTest several ways and don\u0027t see any measurable benefit.",
+      "revId": "af0017e02c1cb1701b63a2253722b6433437191a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
