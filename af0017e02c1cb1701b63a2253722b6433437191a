@@ -16,6 +16,24 @@
       "revId": "af0017e02c1cb1701b63a2253722b6433437191a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7aed7f06_50a1cc79",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2299,
+      "author": {
+        "id": 1112683
+      },
+      "writtenOn": "2016-12-14T02:59:32Z",
+      "side": 1,
+      "message": "Hi Todd,\n\nI have added more performance in commit message  and fix crash.  More detailed results, see https://code.google.com/p/android/issues/detail?id\u003d229703. thanks very much.",
+      "parentUuid": "fa632f25_4f454e66",
+      "revId": "af0017e02c1cb1701b63a2253722b6433437191a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
