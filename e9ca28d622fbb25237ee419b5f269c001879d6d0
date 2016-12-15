@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba845725_58e7b4f5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1069543
+      },
+      "writtenOn": "2016-12-15T17:18:53Z",
+      "side": 1,
+      "message": "Fix the trailing whitespace (here and below)",
+      "revId": "e9ca28d622fbb25237ee419b5f269c001879d6d0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
