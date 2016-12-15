@@ -16,6 +16,24 @@
       "revId": "93e7bba20db933261dcfae9e4de863890490c8eb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba845725_861e2623",
+        "filename": "kernel/sched/core.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1029,
+      "author": {
+        "id": 1118133
+      },
+      "writtenOn": "2016-12-15T21:37:55Z",
+      "side": 1,
+      "message": "fixed in new review\nhttps://android-review.googlesource.com/#/c/314541/",
+      "parentUuid": "da182b71_13450cb5",
+      "revId": "93e7bba20db933261dcfae9e4de863890490c8eb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
