@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a5c9f05_78afa1c6",
+        "filename": "net/ipv4/udp.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 1008,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2016-12-19T15:25:43Z",
+      "side": 1,
+      "message": "Oops. Didn\u0027t notice this because the subsequent commit in the stack cleaned it up. Done.",
+      "range": {
+        "startLine": 1008,
+        "startChar": 0,
+        "endLine": 1008,
+        "endChar": 12
+      },
+      "revId": "c396852c932ee6b96d2047c4fbd7e2f4863eac4a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
