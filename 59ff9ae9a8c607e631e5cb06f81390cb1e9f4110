@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a5c9f05_58b2dd2d",
+        "filename": "net/ipv4/syncookies.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2016-12-20T01:27:40Z",
+      "side": 1,
+      "message": "This is correct. The null check was removed in:\n\ncommit 461b74c391c4ec9c766794e158508c357d8952e6\nAuthor: Cong Wang \u003ccwang@twopensource.com\u003e\nDate:   Wed Oct 15 14:33:22 2014 -0700\n\n    ipv4: clean up cookie_v4_check()\n\nbut the forward port of the UID routing code from 3.10 in ba3d8d3f9f6 put it back.",
+      "range": {
+        "startLine": 339,
+        "startChar": 6,
+        "endLine": 339,
+        "endChar": 27
+      },
+      "revId": "59ff9ae9a8c607e631e5cb06f81390cb1e9f4110",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
