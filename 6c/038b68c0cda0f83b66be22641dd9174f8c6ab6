@@ -1,0 +1,12 @@
+Verified+1: Rom Lemarchand <romlem@google.com>
+Code-Review+2: Rom Lemarchand <romlem@google.com>
+Code-Review+1: Mukesh Agrawal <quiche@google.com>
+Code-Review+1: Kumar Anand <kumaranand@google.com>
+Code-Review+2: Greg Hackmann <ghackmann@google.com>
+Autosubmit+1: Rom Lemarchand <romlem@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Tue, 20 Dec 2016 23:07:44 +0000
+Reviewed-on: https://android-review.googlesource.com/248573
+Project: kernel/common
+Branch: refs/heads/android-3.18
