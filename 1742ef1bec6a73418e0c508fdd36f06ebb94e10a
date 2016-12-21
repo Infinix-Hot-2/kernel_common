@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d7c9e645_668a613d",
+        "filename": "include/net/sock.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1696,
+      "author": {
+        "id": 1121773
+      },
+      "writtenOn": "2016-12-21T19:24:28Z",
+      "side": 1,
+      "message": "Are the following three functions supposed to be included here?",
+      "revId": "1742ef1bec6a73418e0c508fdd36f06ebb94e10a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
