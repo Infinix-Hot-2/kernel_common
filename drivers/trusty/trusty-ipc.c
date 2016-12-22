@@ -46,6 +46,8 @@
 #define TIPC_ANY_ADDR			0xFFFFFFFF
 
 #define TIPC_MIN_LOCAL_ADDR		1024
+#define TIPC_MAX_LOCAL_ADDR		0x7FFFFFFF
+
 
 #define TIPC_IOC_MAGIC			'r'
 #define TIPC_IOC_CONNECT		_IOW(TIPC_IOC_MAGIC, 0x80, char *)
@@ -387,9 +389,10 @@ static int vds_add_channel(struct tipc_virtio_dev *vds,
 
 	mutex_lock(&vds->lock);
 	if (vds->state == VDS_ONLINE) {
-		ret = idr_alloc(&vds->addr_idr, chan,
-				TIPC_MIN_LOCAL_ADDR, TIPC_ANY_ADDR - 1,
-				GFP_KERNEL);
+		ret = idr_alloc_cyclic(&vds->addr_idr, chan,
+				       TIPC_MIN_LOCAL_ADDR,
+				       TIPC_MAX_LOCAL_ADDR,
+				       GFP_KERNEL);
 		if (ret > 0) {
 			chan->local = ret;
 			kref_get(&chan->refcount);
