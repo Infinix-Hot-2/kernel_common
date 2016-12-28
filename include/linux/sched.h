@@ -1350,6 +1350,8 @@ struct sched_entity {
 #endif
 };
 
+#define RT_THROTTLE_SWITCH	0x01
+
 struct sched_rt_entity {
 	struct list_head run_list;
 	unsigned long timeout;
@@ -1364,6 +1366,7 @@ struct sched_rt_entity {
 	/* rq "owned" by this entity/group: */
 	struct rt_rq		*my_q;
 	int			throttled;
+	int			cfs_throttle_flags;
 	struct list_head	cfs_throttled_task;
 #endif
 };

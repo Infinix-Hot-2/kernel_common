@@ -186,6 +186,7 @@ void init_tg_rt_entry(struct task_group *tg, struct rt_rq *rt_rq,
 	rt_se->parent = parent;
 	INIT_LIST_HEAD(&rt_se->run_list);
 	rt_se->throttled = 0;
+	rt_se->cfs_throttle_flags = 0;
 	INIT_LIST_HEAD(&rt_se->cfs_throttled_task);
 }
 
@@ -522,6 +523,14 @@ static void cfs_throttle_rt_tasks(struct rt_rq *rt_rq)
 			 * wakeup time eventually.
 			 */
 			if (p->state != TASK_RUNNING)
+				continue;
+
+			/**
+			 * Don't enqueue in fair if we get here due to a switch
+			 * from userspace.  Must not enqueue task in the middle
+			 * of switching it.
+			 */
+			if (rt_se->cfs_throttle_flags & RT_THROTTLE_SWITCH)
 				continue;
 
 			list_add(&rt_se->cfs_throttled_task,
@@ -1287,8 +1296,9 @@ static void __enqueue_rt_entity(struct sched_rt_entity *rt_se, int flags)
 	 * Do the transition towards OTHER now.
 	 */
 	if (!group_rq && rt_rq->rt_throttled &&
-	    !rt_se->throttled   &&
-	    flags != ENQUEUE_REPLENISH) {
+			!rt_se->throttled &&
+			!(rt_se->cfs_throttle_flags & RT_THROTTLE_SWITCH) &&
+			flags != ENQUEUE_REPLENISH) {
 		struct task_struct *p;
 		struct rq *rq;
 

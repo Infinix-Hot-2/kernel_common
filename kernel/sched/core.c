@@ -4064,6 +4064,7 @@ static int __sched_setscheduler(struct task_struct *p,
 	const struct sched_class *prev_class;
 	struct rq *rq;
 	int reset_on_fork;
+	struct sched_rt_entity *rt_se = &p->rt;
 
 	trace_printk("%s tsk=%d thr=%d cpu=%d pr=%d st_pr=%d no_pr=%d rt_pr=%u new_pr=%d\n",
 			__func__,
@@ -4259,6 +4260,7 @@ change:
 		}
 	}
 
+	rt_se->cfs_throttle_flags |= RT_THROTTLE_SWITCH;
 	queued = task_on_rq_queued(p);
 	running = task_current(rq, p);
 	if (queued)
@@ -4291,6 +4293,7 @@ change:
 	}
 
 	check_class_changed(rq, p, prev_class, oldprio);
+	rt_se->cfs_throttle_flags &= ~(RT_THROTTLE_SWITCH);
 	preempt_disable(); /* avoid rq from going away on us */
 	task_rq_unlock(rq, p, &flags);
 
