@@ -125,23 +125,6 @@ static inline struct task_struct *rt_task_of(struct sched_rt_entity *rt_se)
 	return container_of(rt_se, struct task_struct, rt);
 }
 
-static inline struct rq *rq_of_rt_rq(struct rt_rq *rt_rq)
-{
-	return rt_rq->rq;
-}
-
-static inline struct rt_rq *rt_rq_of_se(struct sched_rt_entity *rt_se)
-{
-	return rt_se->rt_rq;
-}
-
-static inline struct rq *rq_of_rt_se(struct sched_rt_entity *rt_se)
-{
-	struct rt_rq *rt_rq = rt_se->rt_rq;
-
-	return rt_rq->rq;
-}
-
 void free_rt_sched_group(struct task_group *tg)
 {
 	int i;
@@ -186,6 +169,7 @@ void init_tg_rt_entry(struct task_group *tg, struct rt_rq *rt_rq,
 	rt_se->parent = parent;
 	INIT_LIST_HEAD(&rt_se->run_list);
 	rt_se->throttled = 0;
+	rt_se->cfs_throttle_rt_rq = NULL;
 	rt_se->cfs_throttle_flags = 0;
 	INIT_LIST_HEAD(&rt_se->cfs_throttled_task);
 }
@@ -239,23 +223,11 @@ static inline struct task_struct *rt_task_of(struct sched_rt_entity *rt_se)
 	return container_of(rt_se, struct task_struct, rt);
 }
 
-static inline struct rq *rq_of_rt_rq(struct rt_rq *rt_rq)
-{
-	return container_of(rt_rq, struct rq, rt);
-}
-
 static inline struct rq *rq_of_rt_se(struct sched_rt_entity *rt_se)
 {
 	struct task_struct *p = rt_task_of(rt_se);
 
 	return task_rq(p);
-}
-
-static inline struct rt_rq *rt_rq_of_se(struct sched_rt_entity *rt_se)
-{
-	struct rq *rq = rq_of_rt_se(rt_se);
-
-	return &rq->rt;
 }
 
 void free_rt_sched_group(struct task_group *tg) { }
@@ -1310,6 +1282,8 @@ static void __enqueue_rt_entity(struct sched_rt_entity *rt_se, int flags)
 		lockdep_assert_held(&rq->lock);
 
 		rt_se->throttled = 1;
+		rt_se->cfs_throttle_rt_rq = rt_rq;
+
 		list_add(&rt_se->cfs_throttled_task,
 			 &rt_rq->cfs_throttled_tasks);
 		trace_printk("[wakeup] tsk=%d que=%d thr=%d cpu=%d rt_nr_cfs_thr=%d rt_se=%p --> SCHED_OTHER (%p)\n",

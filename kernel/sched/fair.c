@@ -6046,30 +6046,6 @@ static void migrate_task_rq_fair(struct task_struct *p)
 	p->se.exec_start = 0;
 }
 
-#ifdef CONFIG_RT_GROUP_SCHED
-static inline struct rq *rq_of_rt_rq(struct rt_rq *rt_rq)
-{
-	return rt_rq->rq;
-}
-
-static inline struct rt_rq *rt_rq_of_se(struct sched_rt_entity *rt_se)
-{
-	return rt_se->rt_rq;
-}
-#else
-static inline struct rq *rq_of_rt_rq(struct rt_rq *rt_rq)
-{
-	return container_of(rt_rq, struct rq, rt);
-}
-
-static inline struct rt_rq *rt_rq_of_se(struct sched_rt_entity *rt_se)
-{
-	struct rq *rq = rq_of_rt_se(rt_se);
-
-	return &rq->rt;
-}
-#endif /* CONFIG_RT_GROUP_SCHED */
-
 static void task_dead_fair(struct task_struct *p)
 {
 	remove_entity_load_avg(&p->se);
@@ -6079,9 +6055,8 @@ static void task_dead_fair(struct task_struct *p)
 	 */
 	if (p->rt.throttled) {
 		struct sched_rt_entity *rt_se = &p->rt;
-		struct rt_rq *rt_rq = rt_rq_of_se(rt_se);
+		struct rt_rq *rt_rq = rt_se->cfs_throttle_rt_rq;
 
-		lockdep_assert_held(&rq_of_rt_rq(rt_rq)->lock);
 		list_del_init(&rt_se->cfs_throttled_task);
 		rt_se->throttled = 0;
 		trace_printk("%s tsk=%d thr=%d cpu=%d rt_nr_cfs_thr=%d rt_se=%p --> DEAD\n",
@@ -9355,9 +9330,11 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
 {
 	if (!rt_prio(p->normal_prio) && rt_throttled(p)) {
 		struct sched_rt_entity *rt_se = &p->rt;
-		struct rt_rq *rt_rq = rt_rq_of_se(rt_se);
+		struct rt_rq *rt_rq = rt_se->cfs_throttle_rt_rq;
 
-		lockdep_assert_held(&rq_of_rt_rq(rt_rq)->lock);
+		if (cpu_rq(task_cpu(p)) != rq_of_rt_rq(rt_rq))
+			double_lock_balance(cpu_rq(task_cpu(p)), rq_of_rt_rq(rt_rq));
+
 		trace_printk("%s tsk=%d thr=%d cpu=%d rt_nr_cfs_thr=%d rt_se=%p --> REAL_OTHER",
 				__func__,
 				task_pid_nr(p),
@@ -9365,6 +9342,10 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
 				!list_empty(&rt_rq->cfs_throttled_tasks), rt_se);
 		list_del_init(&rt_se->cfs_throttled_task);
 		rt_se->throttled = 0;
+		rt_se->cfs_throttle_rt_rq = NULL;
+		if (cpu_rq(task_cpu(p)) != rq_of_rt_rq(rt_rq))
+			double_unlock_balance(cpu_rq(task_cpu(p)), rq_of_rt_rq(rt_rq));
+
 	}
 
 	trace_printk("%s tsk=%d cpu=%d\n",
