@@ -123,9 +123,10 @@ struct tipc_virtio_dev {
 	struct virtqueue *txvq;
 	uint msg_buf_cnt;
 	uint msg_buf_max_cnt;
-	size_t msg_buf_max_sz;
+	size_t msg_buf_sz;
 	uint free_msg_buf_cnt;
 	struct list_head free_buf_list;
+	struct list_head stashed_buf_list;
 	wait_queue_head_t sendq;
 	struct idr addr_idr;
 	enum tipc_device_state state;
@@ -246,7 +247,7 @@ static void _free_chan(struct kref *kref)
 
 static struct tipc_msg_buf *vds_alloc_msg_buf(struct tipc_virtio_dev *vds)
 {
-	return _alloc_msg_buf(vds->msg_buf_max_sz);
+	return _alloc_msg_buf(vds->msg_buf_sz);
 }
 
 static void vds_free_msg_buf(struct tipc_virtio_dev *vds,
@@ -258,29 +259,64 @@ static void vds_free_msg_buf(struct tipc_virtio_dev *vds,
 static bool _put_txbuf_locked(struct tipc_virtio_dev *vds,
 			      struct tipc_msg_buf *mb)
 {
+	if (mb->buf_sz > vds->msg_buf_sz) {
+		_free_msg_buf(mb);
+
+		if (list_empty(&vds->stashed_buf_list)) {
+			vds->msg_buf_cnt--;
+			return true;
+		}
+
+		/* take buf out of stashed list and put it on free list */
+		mb = list_first_entry(&vds->stashed_buf_list,
+				      struct tipc_msg_buf, node);
+		list_del(&mb->node);
+	}
 	list_add_tail(&mb->node, &vds->free_buf_list);
 	return vds->free_msg_buf_cnt++ == 0;
 }
 
-static struct tipc_msg_buf *_get_txbuf_locked(struct tipc_virtio_dev *vds)
+static struct tipc_msg_buf *_get_txbuf_locked(struct tipc_virtio_dev *vds,
+					      size_t sz)
 {
 	struct tipc_msg_buf *mb;
 
 	if (vds->state != VDS_ONLINE)
 		return  ERR_PTR(-ENODEV);
 
+	if (sz < vds->msg_buf_sz)
+		sz = vds->msg_buf_sz;
+
 	if (vds->free_msg_buf_cnt) {
-		/* take it out of free list */
+		/* peek head of free list */
 		mb = list_first_entry(&vds->free_buf_list,
 				      struct tipc_msg_buf, node);
-		list_del(&mb->node);
+
+		if (sz > vds->msg_buf_sz) {
+			struct tipc_msg_buf *newmb;
+
+			/* allocate new one */
+			newmb = _alloc_msg_buf(sz);
+			if (!newmb)
+				return ERR_PTR(-ENOMEM);
+
+			/* remove from free list and put it on shashed list */
+			list_del(&mb->node);
+			list_add_tail(&mb->node, &vds->stashed_buf_list);
+
+			/* return a new one to caller */
+			mb = newmb;
+		} else {
+			/* take it out of free list */
+			list_del(&mb->node);
+		}
 		vds->free_msg_buf_cnt--;
 	} else {
 		if (vds->msg_buf_cnt >= vds->msg_buf_max_cnt)
 			return ERR_PTR(-EAGAIN);
 
 		/* try to allocate it */
-		mb = _alloc_msg_buf(vds->msg_buf_max_sz);
+		mb = _alloc_msg_buf(sz);
 		if (!mb)
 			return ERR_PTR(-ENOMEM);
 
@@ -289,31 +325,40 @@ static struct tipc_msg_buf *_get_txbuf_locked(struct tipc_virtio_dev *vds)
 	return mb;
 }
 
-static struct tipc_msg_buf *_vds_get_txbuf(struct tipc_virtio_dev *vds)
+static struct tipc_msg_buf *_vds_get_txbuf(struct tipc_virtio_dev *vds,
+					   size_t sz)
 {
 	struct tipc_msg_buf *mb;
 
 	mutex_lock(&vds->lock);
-	mb = _get_txbuf_locked(vds);
+	mb = _get_txbuf_locked(vds, sz);
 	mutex_unlock(&vds->lock);
 
 	return mb;
 }
 
+static void vds_put_txbuf_locked(struct tipc_virtio_dev *vds,
+				 struct tipc_msg_buf *mb)
+{
+	if (_put_txbuf_locked(vds, mb))
+		wake_up(&vds->sendq);
+}
+
 static void vds_put_txbuf(struct tipc_virtio_dev *vds, struct tipc_msg_buf *mb)
 {
 	mutex_lock(&vds->lock);
-	_put_txbuf_locked(vds, mb);
-	wake_up_interruptible(&vds->sendq);
+	vds_put_txbuf_locked(vds, mb);
 	mutex_unlock(&vds->lock);
 }
 
 static struct tipc_msg_buf *vds_get_txbuf(struct tipc_virtio_dev *vds,
-					  long timeout)
+					  size_t sz, long timeout,
+					  bool intr)
 {
 	struct tipc_msg_buf *mb;
+	unsigned int mode = intr ? TASK_INTERRUPTIBLE : TASK_UNINTERRUPTIBLE;
 
-	mb = _vds_get_txbuf(vds);
+	mb = _vds_get_txbuf(vds, sz);
 
 	if ((PTR_ERR(mb) == -EAGAIN) && timeout) {
 		DEFINE_WAIT_FUNC(wait, woken_wake_function);
@@ -321,19 +366,20 @@ static struct tipc_msg_buf *vds_get_txbuf(struct tipc_virtio_dev *vds,
 		timeout = msecs_to_jiffies(timeout);
 		add_wait_queue(&vds->sendq, &wait);
 		for (;;) {
-			timeout = wait_woken(&wait, TASK_INTERRUPTIBLE,
-					     timeout);
+			timeout = wait_woken(&wait, mode, timeout);
 			if (!timeout) {
 				mb = ERR_PTR(-ETIMEDOUT);
 				break;
 			}
 
-			if (signal_pending(current)) {
-				mb = ERR_PTR(-ERESTARTSYS);
-				break;
+			if (intr) {
+				if (signal_pending(current)) {
+					mb = ERR_PTR(-ERESTARTSYS);
+					break;
+				}
 			}
 
-			mb = _vds_get_txbuf(vds);
+			mb = _vds_get_txbuf(vds, sz);
 			if (PTR_ERR(mb) != -EAGAIN)
 				break;
 		}
@@ -524,7 +570,9 @@ EXPORT_SYMBOL(tipc_chan_put_rxbuf);
 struct tipc_msg_buf *tipc_chan_get_txbuf_timeout(struct tipc_chan *chan,
 						 long timeout)
 {
-	return vds_get_txbuf(chan->vds, timeout);
+	struct tipc_virtio_dev *vds = chan->vds;
+
+	return vds_get_txbuf(vds, vds->msg_buf_sz, timeout, true);
 }
 EXPORT_SYMBOL(tipc_chan_get_txbuf_timeout);
 
@@ -574,7 +622,7 @@ int tipc_chan_connect(struct tipc_chan *chan, const char *name)
 	struct tipc_conn_req_body *body;
 	struct tipc_msg_buf *txbuf;
 
-	txbuf = vds_get_txbuf(chan->vds, TXBUF_TIMEOUT);
+	txbuf = tipc_chan_get_txbuf_timeout(chan, TXBUF_TIMEOUT);
 	if (IS_ERR(txbuf))
 		return PTR_ERR(txbuf);
 
@@ -644,7 +692,8 @@ int tipc_chan_shutdown(struct tipc_chan *chan)
 	struct tipc_msg_buf *txbuf = NULL;
 
 	/* get tx buffer */
-	txbuf = vds_get_txbuf(chan->vds, TXBUF_TIMEOUT);
+	txbuf = vds_get_txbuf(chan->vds, chan->vds->msg_buf_sz,
+			      TXBUF_TIMEOUT, false);
 	if (IS_ERR(txbuf))
 		return PTR_ERR(txbuf);
 
@@ -1263,7 +1312,7 @@ static void _go_offline(struct tipc_virtio_dev *vds)
 	mutex_unlock(&vds->lock);
 
 	/* wakeup all waiters */
-	wake_up_interruptible_all(&vds->sendq);
+	wake_up_all(&vds->sendq);
 
 	/* shutdown all channels */
 	while ((chan = vds_lookup_channel(vds, TIPC_ANY_ADDR))) {
@@ -1487,7 +1536,7 @@ static void _txvq_cb(struct virtqueue *txvq)
 
 	if (need_wakeup) {
 		/* wake up potential senders waiting for a tx buffer */
-		wake_up_interruptible_all(&vds->sendq);
+		wake_up_all(&vds->sendq);
 	}
 }
 
@@ -1512,6 +1561,7 @@ static int tipc_virtio_probe(struct virtio_device *vdev)
 	kref_init(&vds->refcount);
 	init_waitqueue_head(&vds->sendq);
 	INIT_LIST_HEAD(&vds->free_buf_list);
+	INIT_LIST_HEAD(&vds->stashed_buf_list);
 	idr_init(&vds->addr_idr);
 
 	/* set default max message size and alignment */
@@ -1535,7 +1585,7 @@ static int tipc_virtio_probe(struct virtio_device *vdev)
 	vds->txvq = vqs[1];
 
 	/* save max buffer size and count */
-	vds->msg_buf_max_sz = config.msg_buf_max_size;
+	vds->msg_buf_sz = config.msg_buf_max_size;
 	vds->msg_buf_max_cnt = virtqueue_get_vring_size(vds->txvq);
 
 	/* set up the receive buffers */
@@ -1543,7 +1593,7 @@ static int tipc_virtio_probe(struct virtio_device *vdev)
 		struct scatterlist sg;
 		struct tipc_msg_buf *rxbuf;
 
-		rxbuf = _alloc_msg_buf(vds->msg_buf_max_sz);
+		rxbuf = _alloc_msg_buf(vds->msg_buf_sz);
 		if (!rxbuf) {
 			dev_err(&vdev->dev, "failed to allocate rx buffer\n");
 			err = -ENOMEM;
@@ -1586,6 +1636,7 @@ static void tipc_virtio_remove(struct virtio_device *vdev)
 	_cleanup_vq(vds->rxvq);
 	_cleanup_vq(vds->txvq);
 	_free_msg_buf_list(&vds->free_buf_list);
+	_free_msg_buf_list(&vds->stashed_buf_list);
 
 	vdev->config->del_vqs(vds->vdev);
 
