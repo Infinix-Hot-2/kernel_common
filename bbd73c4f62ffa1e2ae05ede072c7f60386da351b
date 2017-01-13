@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "c3bbe9cf_6ee2f315",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 1758,
+      "author": {
+        "id": 1069543
+      },
+      "writtenOn": "2017-01-13T23:06:15Z",
+      "side": 1,
+      "message": "Add a field to the log entry for the return_error and/or return_error_param",
+      "revId": "bbd73c4f62ffa1e2ae05ede072c7f60386da351b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "345cea04_2cea4ba6",
         "filename": "drivers/android/binder.c",
         "patchSetId": 9
