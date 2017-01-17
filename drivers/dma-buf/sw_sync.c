@@ -18,7 +18,8 @@
 #include <linux/fs.h>
 #include <linux/uaccess.h>
 #include <linux/slab.h>
-#include <linux/sync_file.h>
+#include <linux/sw_sync.h>
+#include <linux/export.h>
 
 #include "sync_debug.h"
 
@@ -77,14 +78,7 @@ static inline struct sync_pt *fence_to_sync_pt(struct fence *fence)
 	return container_of(fence, struct sync_pt, base);
 }
 
-/**
- * sync_timeline_create() - creates a sync object
- * @name:	sync_timeline name
- *
- * Creates a new sync_timeline. Returns the sync_timeline object or NULL in
- * case of error.
- */
-struct sync_timeline *sync_timeline_create(const char *name)
+struct sync_timeline *sw_sync_timeline_create(const char *name)
 {
 	struct sync_timeline *obj;
 
@@ -104,8 +98,9 @@ struct sync_timeline *sync_timeline_create(const char *name)
 
 	return obj;
 }
+EXPORT_SYMBOL(sw_sync_timeline_create);
 
-static void sync_timeline_free(struct kref *kref)
+static void sw_sync_timeline_free(struct kref *kref)
 {
 	struct sync_timeline *obj =
 		container_of(kref, struct sync_timeline, kref);
@@ -115,25 +110,18 @@ static void sync_timeline_free(struct kref *kref)
 	kfree(obj);
 }
 
-static void sync_timeline_get(struct sync_timeline *obj)
+static void sw_sync_timeline_get(struct sync_timeline *obj)
 {
 	kref_get(&obj->kref);
 }
 
-static void sync_timeline_put(struct sync_timeline *obj)
+void sw_sync_timeline_put(struct sync_timeline *obj)
 {
-	kref_put(&obj->kref, sync_timeline_free);
+	kref_put(&obj->kref, sw_sync_timeline_free);
 }
+EXPORT_SYMBOL(sw_sync_timeline_put);
 
-/**
- * sync_timeline_signal() - signal a status change on a sync_timeline
- * @obj:	sync_timeline to signal
- * @inc:	num to increment on timeline->value
- *
- * A sync implementation should call this any time one of it's fences
- * has signaled or has an error condition.
- */
-static void sync_timeline_signal(struct sync_timeline *obj, unsigned int inc)
+void sw_sync_timeline_inc(struct sync_timeline *obj, unsigned int inc)
 {
 	unsigned long flags;
 	struct sync_pt *pt, *next;
@@ -152,40 +140,28 @@ static void sync_timeline_signal(struct sync_timeline *obj, unsigned int inc)
 
 	spin_unlock_irqrestore(&obj->child_list_lock, flags);
 }
+EXPORT_SYMBOL(sw_sync_timeline_inc);
 
-/**
- * sync_pt_create() - creates a sync pt
- * @parent:	fence's parent sync_timeline
- * @size:	size to allocate for this pt
- * @inc:	value of the fence
- *
- * Creates a new sync_pt as a child of @parent.  @size bytes will be
- * allocated allowing for implementation specific data to be kept after
- * the generic sync_timeline struct. Returns the sync_pt object or
- * NULL in case of error.
- */
-static struct sync_pt *sync_pt_create(struct sync_timeline *obj, int size,
-			     unsigned int value)
+struct fence *sw_sync_fence_create(struct sync_timeline *obj,
+				   unsigned int value)
 {
 	unsigned long flags;
 	struct sync_pt *pt;
 
-	if (size < sizeof(*pt))
-		return NULL;
-
-	pt = kzalloc(size, GFP_KERNEL);
+	pt = kzalloc(sizeof(*pt), GFP_KERNEL);
 	if (!pt)
 		return NULL;
 
 	spin_lock_irqsave(&obj->child_list_lock, flags);
-	sync_timeline_get(obj);
+	sw_sync_timeline_get(obj);
 	fence_init(&pt->base, &timeline_fence_ops, &obj->child_list_lock,
 		   obj->context, value);
 	list_add_tail(&pt->child_list, &obj->child_list_head);
 	INIT_LIST_HEAD(&pt->active_list);
 	spin_unlock_irqrestore(&obj->child_list_lock, flags);
-	return pt;
+	return &pt->base;
 }
+EXPORT_SYMBOL(sw_sync_fence_create);
 
 static const char *timeline_fence_get_driver_name(struct fence *fence)
 {
@@ -211,7 +187,7 @@ static void timeline_fence_release(struct fence *fence)
 		list_del(&pt->active_list);
 	spin_unlock_irqrestore(fence->lock, flags);
 
-	sync_timeline_put(parent);
+	sw_sync_timeline_put(parent);
 	fence_free(fence);
 }
 
@@ -281,7 +257,7 @@ static int sw_sync_debugfs_open(struct inode *inode, struct file *file)
 
 	get_task_comm(task_comm, current);
 
-	obj = sync_timeline_create(task_comm);
+	obj = sw_sync_timeline_create(task_comm);
 	if (!obj)
 		return -ENOMEM;
 
@@ -296,7 +272,7 @@ static int sw_sync_debugfs_release(struct inode *inode, struct file *file)
 
 	smp_wmb();
 
-	sync_timeline_put(obj);
+	sw_sync_timeline_put(obj);
 	return 0;
 }
 
@@ -305,7 +281,7 @@ static long sw_sync_ioctl_create_fence(struct sync_timeline *obj,
 {
 	int fd = get_unused_fd_flags(O_CLOEXEC);
 	int err;
-	struct sync_pt *pt;
+	struct fence *fence;
 	struct sync_file *sync_file;
 	struct sw_sync_create_fence_data data;
 
@@ -317,15 +293,15 @@ static long sw_sync_ioctl_create_fence(struct sync_timeline *obj,
 		goto err;
 	}
 
-	pt = sync_pt_create(obj, sizeof(*pt), data.value);
-	if (!pt) {
+	fence = sw_sync_fence_create(obj, data.value);
+	if (!fence) {
 		err = -ENOMEM;
 		goto err;
 	}
 
-	sync_file = sync_file_create(&pt->base);
+	sync_file = sync_file_create(fence);
 	if (!sync_file) {
-		fence_put(&pt->base);
+		fence_put(fence);
 		err = -ENOMEM;
 		goto err;
 	}
@@ -353,7 +329,7 @@ static long sw_sync_ioctl_inc(struct sync_timeline *obj, unsigned long arg)
 	if (copy_from_user(&value, (void __user *)arg, sizeof(value)))
 		return -EFAULT;
 
-	sync_timeline_signal(obj, value);
+	sw_sync_timeline_inc(obj, value);
 
 	return 0;
 }
