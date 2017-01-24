@@ -227,6 +227,10 @@ static int verity_handle_err(struct dm_verity *v, enum verity_block_type type,
 	snprintf(verity_env, DM_VERITY_ENV_LENGTH, "%s=%d,%llu",
 		DM_VERITY_ENV_VAR_NAME, type, block);
 
+#ifdef CONFIG_DM_VERITY_AVB
+	dm_verity_avb_error_handler();
+#endif
+
 	kobject_uevent_env(&disk_to_dev(dm_disk(md))->kobj, KOBJ_CHANGE, envp);
 
 out:
