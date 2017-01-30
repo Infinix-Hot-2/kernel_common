@@ -1,0 +1,85 @@
+/*
+ *  lowmemorykiller_stats
+ *
+ *  Copyright (C) 2017 Sony Mobile Communications Inc.
+ *
+ *  Author: Peter Enderborg <peter.enderborg@sonymobile.com>
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License version 2 as
+ *  published by the Free Software Foundation.
+ */
+/* This code is bookkeeping of statistical information
+ * from lowmemorykiller and provide a node in proc "/proc/lmkstats".
+ */
+
+#include <linux/proc_fs.h>
+#include <linux/seq_file.h>
+#include "lowmemorykiller_stats.h"
+
+struct lmk_stats {
+	atomic_long_t scans; /* counter as in shrinker scans */
+	atomic_long_t kills; /* the number of sigkills sent */
+	atomic_long_t waste; /* the numer of extensive calls that did
+			      * not lead to anything
+			      */
+	atomic_long_t timeout; /* counter for shrinker calls that needed
+				* to be cancelled due to pending kills
+				*/
+	atomic_long_t count; /* number of shrinker count calls */
+	atomic_long_t unknown; /* internal */
+} st;
+
+void lmk_inc_stats(int key)
+{
+	switch (key) {
+	case LMK_SCAN:
+		atomic_long_inc(&st.scans);
+		break;
+	case LMK_KILL:
+		atomic_long_inc(&st.kills);
+		break;
+	case LMK_WASTE:
+		atomic_long_inc(&st.waste);
+		break;
+	case LMK_TIMEOUT:
+		atomic_long_inc(&st.timeout);
+		break;
+	case LMK_COUNT:
+		atomic_long_inc(&st.count);
+		break;
+	default:
+		atomic_long_inc(&st.unknown);
+		break;
+	}
+}
+
+static int lmk_proc_show(struct seq_file *m, void *v)
+{
+	seq_printf(m, "kill: %ld\n", atomic_long_read(&st.kills));
+	seq_printf(m, "scan: %ld\n", atomic_long_read(&st.scans));
+	seq_printf(m, "waste: %ld\n", atomic_long_read(&st.waste));
+	seq_printf(m, "timeout: %ld\n", atomic_long_read(&st.timeout));
+	seq_printf(m, "count: %ld\n", atomic_long_read(&st.count));
+	seq_printf(m, "unknown: %ld (internal)\n",
+		   atomic_long_read(&st.unknown));
+
+	return 0;
+}
+
+static int lmk_proc_open(struct inode *inode, struct file *file)
+{
+	return single_open(file, lmk_proc_show, PDE_DATA(inode));
+}
+
+static const struct file_operations lmk_proc_fops = {
+	.open		= lmk_proc_open,
+	.read		= seq_read,
+	.release	= single_release
+};
+
+int __init init_procfs_lmk(void)
+{
+	proc_create_data("lmkstats", 0, NULL, &lmk_proc_fops, NULL);
+	return 0;
+}
