@@ -195,13 +195,13 @@ static struct ion_buffer *ion_buffer_create(struct ion_heap *heap,
 
 	if (ret) {
 		if (!(heap->flags & ION_HEAP_FLAG_DEFER_FREE))
-			goto err2;
+			goto err_free_buffer;
 
 		ion_heap_freelist_drain(heap, 0);
 		ret = heap->ops->allocate(heap, buffer, len, align,
 					  flags);
 		if (ret)
-			goto err2;
+			goto err_free_buffer;
 	}
 
 	buffer->dev = dev;
@@ -212,9 +212,8 @@ static struct ion_buffer *ion_buffer_create(struct ion_heap *heap,
 			"heap->ops->map_dma should return ERR_PTR on error"))
 		table = ERR_PTR(-EINVAL);
 	if (IS_ERR(table)) {
-		heap->ops->free(buffer);
-		kfree(buffer);
-		return ERR_PTR(PTR_ERR(table));
+		ret = PTR_ERR(table);
+		goto err_heap_free;
 	}
 	buffer->sg_table = table;
 	if (ion_buffer_fault_user_mappings(buffer)) {
@@ -225,7 +224,7 @@ static struct ion_buffer *ion_buffer_create(struct ion_heap *heap,
 		buffer->pages = vmalloc(sizeof(struct page *) * num_pages);
 		if (!buffer->pages) {
 			ret = -ENOMEM;
-			goto err1;
+			goto err_heap_unmap_dma;
 		}
 
 		for_each_sg(table->sgl, sg, table->nents, i) {
@@ -234,9 +233,6 @@ static struct ion_buffer *ion_buffer_create(struct ion_heap *heap,
 			for (j = 0; j < sg->length / PAGE_SIZE; j++)
 				buffer->pages[k++] = page++;
 		}
-
-		if (ret)
-			goto err;
 	}
 
 	buffer->dev = dev;
@@ -258,13 +254,11 @@ static struct ion_buffer *ion_buffer_create(struct ion_heap *heap,
 	mutex_unlock(&dev->buffer_lock);
 	return buffer;
 
-err:
+err_heap_unmap_dma:
 	heap->ops->unmap_dma(heap, buffer);
+err_heap_free:
 	heap->ops->free(buffer);
-err1:
-	if (buffer->pages)
-		vfree(buffer->pages);
-err2:
+err_free_buffer:
 	kfree(buffer);
 	return ERR_PTR(ret);
 }
