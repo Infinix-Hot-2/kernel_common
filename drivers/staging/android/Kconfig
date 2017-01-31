@@ -30,6 +30,7 @@ config ANDROID_TIMED_GPIO
 
 config ANDROID_LOW_MEMORY_KILLER
 	bool "Android Low Memory Killer"
+	select OOM_SCORE_NOTIFIER
 	---help---
 	  Registers processes to be killed when low memory conditions, this is useful
 	  as there is no particular swap space on android.
