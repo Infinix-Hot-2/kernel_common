@@ -44,12 +44,6 @@ static DEFINE_HASHTABLE(ext_to_groupid, 8);
 
 static struct kmem_cache *hashtable_entry_cachep;
 
-static void inline qstr_init(struct qstr *q, const char *name) {
-	q->name = name;
-	q->len = strlen(q->name);
-	q->hash = full_name_hash(q->name, q->len);
-}
-
 static inline int qstr_copy(const struct qstr *src, struct qstr *dest) {
 	dest->name = kstrdup(src->name, GFP_KERNEL);
 	dest->hash_len = src->hash_len;
@@ -57,7 +51,7 @@ static inline int qstr_copy(const struct qstr *src, struct qstr *dest) {
 }
 
 
-static appid_t __get_appid(const struct qstr *key)
+appid_t get_appid(const struct qstr *key)
 {
 	struct hashtable_entry *hash_cur;
 	unsigned int hash = key->hash;
@@ -65,7 +59,7 @@ static appid_t __get_appid(const struct qstr *key)
 
 	rcu_read_lock();
 	hash_for_each_possible_rcu(package_to_appid, hash_cur, hlist, hash) {
-		if (!strcasecmp(key->name, hash_cur->key.name)) {
+		if (qstr_eq(key, &hash_cur->key)) {
 			ret_id = atomic_read(&hash_cur->value);
 			rcu_read_unlock();
 			return ret_id;
@@ -75,14 +69,7 @@ static appid_t __get_appid(const struct qstr *key)
 	return 0;
 }
 
-appid_t get_appid(const char *key)
-{
-	struct qstr q;
-	qstr_init(&q, key);
-	return __get_appid(&q);
-}
-
-static appid_t __get_ext_gid(const struct qstr *key)
+appid_t get_ext_gid(const struct qstr *key)
 {
 	struct hashtable_entry *hash_cur;
 	unsigned int hash = key->hash;
@@ -90,7 +77,7 @@ static appid_t __get_ext_gid(const struct qstr *key)
 
 	rcu_read_lock();
 	hash_for_each_possible_rcu(ext_to_groupid, hash_cur, hlist, hash) {
-		if (!strcasecmp(key->name, hash_cur->key.name)) {
+		if (qstr_eq(key, &hash_cur->key)) {
 			ret_id = atomic_read(&hash_cur->value);
 			rcu_read_unlock();
 			return ret_id;
@@ -100,14 +87,7 @@ static appid_t __get_ext_gid(const struct qstr *key)
 	return 0;
 }
 
-appid_t get_ext_gid(const char *key)
-{
-	struct qstr q;
-	qstr_init(&q, key);
-	return __get_ext_gid(&q);
-}
-
-static appid_t __is_excluded(const struct qstr *app_name, userid_t user)
+appid_t is_excluded(const struct qstr *app_name, userid_t user)
 {
 	struct hashtable_entry *hash_cur;
 	unsigned int hash = app_name->hash;
@@ -115,7 +95,7 @@ static appid_t __is_excluded(const struct qstr *app_name, userid_t user)
 	rcu_read_lock();
 	hash_for_each_possible_rcu(package_to_userid, hash_cur, hlist, hash) {
 		if (atomic_read(&hash_cur->value) == user &&
-				!strcasecmp(app_name->name, hash_cur->key.name)) {
+				qstr_eq(app_name, &hash_cur->key)) {
 			rcu_read_unlock();
 			return 1;
 		}
@@ -124,24 +104,19 @@ static appid_t __is_excluded(const struct qstr *app_name, userid_t user)
 	return 0;
 }
 
-appid_t is_excluded(const char *app_name, userid_t user)
-{
-	struct qstr q;
-	qstr_init(&q, app_name);
-	return __is_excluded(&q, user);
-}
-
-
 /* Kernel has already enforced everything we returned through
  * derive_permissions_locked(), so this is used to lock down access
  * even further, such as enforcing that apps hold sdcard_rw. */
-int check_caller_access_to_name(struct inode *parent_node, const char* name) {
+int check_caller_access_to_name(struct inode *parent_node, const struct qstr *name) {
+	struct qstr q_autorun = QSTR_LITERAL("autorun.inf");
+	struct qstr q__android_secure = QSTR_LITERAL(".android_secure");
+	struct qstr q_android_secure = QSTR_LITERAL("android_secure");
 
 	/* Always block security-sensitive files at root */
 	if (parent_node && SDCARDFS_I(parent_node)->perm == PERM_ROOT) {
-		if (!strcasecmp(name, "autorun.inf")
-			|| !strcasecmp(name, ".android_secure")
-			|| !strcasecmp(name, "android_secure")) {
+		if (qstr_eq(name, &q_autorun)
+			|| qstr_eq(name, &q__android_secure)
+			|| qstr_eq(name, &q_android_secure)) {
 			return 0;
 		}
 	}
@@ -193,7 +168,7 @@ static int insert_packagelist_appid_entry_locked(const struct qstr *key, appid_t
 	unsigned int hash = key->hash;
 
 	hash_for_each_possible_rcu(package_to_appid, hash_cur, hlist, hash) {
-		if (!strcasecmp(key->name, hash_cur->key.name)) {
+		if (qstr_eq(key, &hash_cur->key)) {
 			atomic_set(&hash_cur->value, value);
 			return 0;
 		}
@@ -213,7 +188,7 @@ static int insert_ext_gid_entry_locked(const struct qstr *key, appid_t value)
 
 	/* An extension can only belong to one gid */
 	hash_for_each_possible_rcu(ext_to_groupid, hash_cur, hlist, hash) {
-		if (!strcasecmp(key->name, hash_cur->key.name))
+		if (qstr_eq(key, &hash_cur->key))
 			return -EINVAL;
 	}
 	new_entry = alloc_hashtable_entry(key, value);
@@ -232,7 +207,7 @@ static int insert_userid_exclude_entry_locked(const struct qstr *key, userid_t v
 	/* Only insert if not already present */
 	hash_for_each_possible_rcu(package_to_userid, hash_cur, hlist, hash) {
 		if (atomic_read(&hash_cur->value) == value &&
-				!strcasecmp(key->name, hash_cur->key.name))
+				qstr_eq(key, &hash_cur->key))
 			return 0;
 	}
 	new_entry = alloc_hashtable_entry(key, value);
@@ -336,13 +311,13 @@ static void remove_packagelist_entry_locked(const struct qstr *key)
 	HLIST_HEAD(free_list);
 
 	hash_for_each_possible_rcu(package_to_userid, hash_cur, hlist, hash) {
-		if (!strcasecmp(key->name, hash_cur->key.name)) {
+		if (qstr_eq(key, &hash_cur->key)) {
 			hash_del_rcu(&hash_cur->hlist);
 			hlist_add_head(&hash_cur->dlist, &free_list);
 		}
 	}
 	hash_for_each_possible_rcu(package_to_appid, hash_cur, hlist, hash) {
-		if (!strcasecmp(key->name, hash_cur->key.name)) {
+		if (qstr_eq(key, &hash_cur->key)) {
 			hash_del_rcu(&hash_cur->hlist);
 			hlist_add_head(&hash_cur->dlist, &free_list);
 			break;
@@ -368,7 +343,7 @@ static void remove_ext_gid_entry_locked(const struct qstr *key, gid_t group)
 	unsigned int hash = key->hash;
 
 	hash_for_each_possible_rcu(ext_to_groupid, hash_cur, hlist, hash) {
-		if (!strcasecmp(key->name, hash_cur->key.name) && atomic_read(&hash_cur->value) == group) {
+		if (qstr_eq(key, &hash_cur->key) && atomic_read(&hash_cur->value) == group) {
 			hash_del_rcu(&hash_cur->hlist);
 			synchronize_rcu();
 			free_hashtable_entry(hash_cur);
@@ -419,7 +394,7 @@ static void remove_userid_exclude_entry_locked(const struct qstr *key, userid_t 
 	unsigned int hash = key->hash;
 
 	hash_for_each_possible_rcu(package_to_userid, hash_cur, hlist, hash) {
-		if (!strcasecmp(key->name, hash_cur->key.name) &&
+		if (qstr_eq(key, &hash_cur->key) &&
 				atomic_read(&hash_cur->value) == userid) {
 			hash_del_rcu(&hash_cur->hlist);
 			synchronize_rcu();
@@ -478,7 +453,7 @@ struct package_details_attribute package_details_attr_##_name = __CONFIGFS_ATTR(
 static ssize_t package_details_appid_show(struct package_details *package_details,
 				      char *page)
 {
-	return scnprintf(page, PAGE_SIZE, "%u\n", __get_appid(&package_details->name));
+	return scnprintf(page, PAGE_SIZE, "%u\n", get_appid(&package_details->name));
 }
 
 static ssize_t package_details_appid_store(struct package_details *package_details,
@@ -508,7 +483,7 @@ static ssize_t package_details_excluded_userids_show(struct package_details *pac
 
 	rcu_read_lock();
 	hash_for_each_possible_rcu(package_to_userid, hash_cur, hlist, hash) {
-		if (!strcasecmp(package_details->name.name, hash_cur->key.name))
+		if (qstr_eq(&package_details->name, &hash_cur->key))
 			count += scnprintf(page + count, PAGE_SIZE - count,
 					"%d ", atomic_read(&hash_cur->value));
 	}
@@ -758,7 +733,7 @@ static ssize_t packages_list_show(struct packages *packages,
 					hash_cur_app->key.name, atomic_read(&hash_cur_app->value));
 		hash = hash_cur_app->key.hash;
 		hash_for_each_possible_rcu(package_to_userid, hash_cur_user, hlist, hash) {
-			if (!strcasecmp(hash_cur_app->key.name, hash_cur_user->key.name)) {
+			if (qstr_eq(&hash_cur_app->key, &hash_cur_user->key)) {
 				written += scnprintf(page + count + written - 1,
 					PAGE_SIZE - sizeof(errormsg) - count - written + 1,
 					" %d\n", atomic_read(&hash_cur_user->value)) - 1;
