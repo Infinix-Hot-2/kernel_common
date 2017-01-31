@@ -42,13 +42,16 @@
 #include <linux/rcupdate.h>
 #include <linux/profile.h>
 #include <linux/notifier.h>
+#include <linux/slab.h>
+#include <linux/oom_score_notifier.h>
 
 #define CREATE_TRACE_POINTS
 #include "trace/lowmemorykiller.h"
 
+#include "lowmemorykiller.h"
 #include "lowmemorykiller_stats.h"
+#include "lowmemorykiller_tasks.h"
 
-static uint32_t lowmem_debug_level = 1;
 static short lowmem_adj[6] = {
 	0,
 	1,
@@ -63,145 +66,216 @@ static int lowmem_minfree[6] = {
 	16 * 1024,	/* 64MB */
 };
 static int lowmem_minfree_size = 4;
+u32 lowmem_debug_level = 1;
 
-static unsigned long lowmem_deathpending_timeout;
-
-#define lowmem_print(level, x...)			\
-	do {						\
-		if (lowmem_debug_level >= (level))	\
-			pr_info(x);			\
-	} while (0)
-
-static unsigned long lowmem_count(struct shrinker *s,
-				  struct shrink_control *sc)
-{
-	lmk_inc_stats(LMK_COUNT);
-	return global_page_state(NR_ACTIVE_ANON) +
-		global_page_state(NR_ACTIVE_FILE) +
-		global_page_state(NR_INACTIVE_ANON) +
-		global_page_state(NR_INACTIVE_FILE);
-}
-
-static unsigned long lowmem_scan(struct shrinker *s, struct shrink_control *sc)
-{
-	struct task_struct *tsk;
-	struct task_struct *selected = NULL;
-	unsigned long rem = 0;
-	int tasksize;
-	int i;
-	short min_score_adj = OOM_SCORE_ADJ_MAX + 1;
-	int minfree = 0;
-	int selected_tasksize = 0;
+struct calculated_params {
+	long selected_tasksize;
+	long minfree;
+	int other_file;
+	int other_free;
+	int dynamic_max_queue_len;
 	short selected_oom_score_adj;
-	int array_size = ARRAY_SIZE(lowmem_adj);
-	int other_free = global_page_state(NR_FREE_PAGES) - totalreserve_pages;
-	int other_file = global_page_state(NR_FILE_PAGES) -
-						global_page_state(NR_SHMEM) -
-						total_swapcache_pages();
+	short min_score_adj;
+};
 
-	lmk_inc_stats(LMK_SCAN);
+static int kill_needed(int level, struct shrink_control *sc,
+		       struct calculated_params *cp)
+{
+	int i;
+	struct sysinfo si;
+	int array_size = ARRAY_SIZE(lowmem_adj);
+
+	cp->other_free = global_page_state(NR_FREE_PAGES) - totalreserve_pages;
+	cp->other_file = global_page_state(NR_FILE_PAGES) -
+		global_page_state(NR_SHMEM) -
+		global_page_state(NR_UNEVICTABLE) -
+		total_swapcache_pages();
+
+	cp->minfree = 0;
+	cp->min_score_adj = OOM_SCORE_ADJ_MAX;
+	si_swapinfo(&si);
+	cp->other_free += si.freeswap;
 	if (lowmem_adj_size < array_size)
 		array_size = lowmem_adj_size;
 	if (lowmem_minfree_size < array_size)
 		array_size = lowmem_minfree_size;
 	for (i = 0; i < array_size; i++) {
-		minfree = lowmem_minfree[i];
-		if (other_free < minfree && other_file < minfree) {
-			min_score_adj = lowmem_adj[i];
+		cp->minfree = lowmem_minfree[i];
+		if (cp->other_free < cp->minfree &&
+		    cp->other_file < cp->minfree) {
+			cp->min_score_adj = lowmem_adj[i];
 			break;
 		}
 	}
+	if (sc->nr_to_scan > 0)
+		lowmem_print(3, "lowmem_shrink %lu, %x, ofree %d %d, ma %hd\n",
+			     sc->nr_to_scan, sc->gfp_mask, cp->other_free,
+			     cp->other_file, cp->min_score_adj);
+	cp->dynamic_max_queue_len = array_size - i + 1;
+	cp->selected_oom_score_adj = level;
+	if (level >= cp->min_score_adj)
+		return 1;
 
-	lowmem_print(3, "lowmem_scan %lu, %x, ofree %d %d, ma %hd\n",
-			sc->nr_to_scan, sc->gfp_mask, other_free,
-			other_file, min_score_adj);
+	return 0;
+}
 
-	if (min_score_adj == OOM_SCORE_ADJ_MAX + 1) {
-		lowmem_print(5, "lowmem_scan %lu, %x, return 0\n",
-			     sc->nr_to_scan, sc->gfp_mask);
-		return 0;
+static void print_obituary(struct task_struct *doomed,
+			   struct calculated_params *cp,
+			   struct shrink_control *sc) {
+	long cache_size = cp->other_file * (long)(PAGE_SIZE / 1024);
+	long cache_limit = cp->minfree * (long)(PAGE_SIZE / 1024);
+	long free = cp->other_free * (long)(PAGE_SIZE / 1024);
+
+	lowmem_print(1, "Killing '%s' (%d), adj %hd,\n"
+		     "   to free %ldkB on behalf of '%s' (%d) because\n"
+		     "   cache %ldkB is below limit %ldkB for oom_score_adj %hd\n"
+		     "   Free memory is %ldkB above reserved.\n"
+		     "   Free CMA is %ldkB\n"
+		     "   Total reserve is %ldkB\n"
+		     "   Total free pages is %ldkB\n"
+		     "   Total file cache is %ldkB\n"
+		     "   Slab Reclaimable is %ldkB\n"
+		     "   Slab UnReclaimable is %ldkB\n"
+		     "   Total Slab is %ldkB\n"
+		     "   GFP mask is 0x%x\n"
+		     "   queue len is %d of max %d\n",
+		     doomed->comm, doomed->pid,
+		     cp->selected_oom_score_adj,
+		     cp->selected_tasksize * (long)(PAGE_SIZE / 1024),
+		     current->comm, current->pid,
+		     cache_size, cache_limit,
+		     cp->min_score_adj,
+		     free,
+		     global_page_state(NR_FREE_CMA_PAGES) *
+		     (long)(PAGE_SIZE / 1024),
+		     totalreserve_pages * (long)(PAGE_SIZE / 1024),
+		     global_page_state(NR_FREE_PAGES) *
+		     (long)(PAGE_SIZE / 1024),
+		     global_page_state(NR_FILE_PAGES) *
+		     (long)(PAGE_SIZE / 1024),
+		     global_page_state(NR_SLAB_RECLAIMABLE) *
+		     (long)(PAGE_SIZE / 1024),
+		     global_page_state(NR_SLAB_UNRECLAIMABLE) *
+		     (long)(PAGE_SIZE / 1024),
+		     global_page_state(NR_SLAB_RECLAIMABLE) *
+		     (long)(PAGE_SIZE / 1024) +
+		     global_page_state(NR_SLAB_UNRECLAIMABLE) *
+		     (long)(PAGE_SIZE / 1024),
+		     sc->gfp_mask,
+		     death_pending_len,
+		     cp->dynamic_max_queue_len);
+}
+
+static unsigned long lowmem_count(struct shrinker *s,
+				  struct shrink_control *sc)
+{
+	struct lmk_rb_watch *lrw;
+	struct calculated_params cp;
+	short score;
+
+	lmk_inc_stats(LMK_COUNT);
+	cp.selected_tasksize = 0;
+	spin_lock(&lmk_task_lock);
+	lrw = __lmk_first();
+	if (lrw && lrw->tsk->mm) {
+		int rss = get_mm_rss(lrw->tsk->mm);
+
+		score = lrw->tsk->signal->oom_score_adj;
+		spin_unlock(&lmk_task_lock);
+		if (kill_needed(score, sc, &cp))
+			if (death_pending_len < cp.dynamic_max_queue_len)
+				cp.selected_tasksize = rss;
+
+	} else {
+		spin_unlock(&lmk_task_lock);
 	}
 
-	selected_oom_score_adj = min_score_adj;
+	return cp.selected_tasksize;
+}
 
-	rcu_read_lock();
-	for_each_process(tsk) {
-		struct task_struct *p;
-		short oom_score_adj;
+static unsigned long lowmem_scan(struct shrinker *s, struct shrink_control *sc)
+{
+	struct task_struct *selected = NULL;
+	unsigned long nr_to_scan = sc->nr_to_scan;
+	struct lmk_rb_watch *lrw;
+	int do_kill;
+	struct calculated_params cp;
 
-		if (tsk->flags & PF_KTHREAD)
-			continue;
+	lmk_inc_stats(LMK_SCAN);
 
-		p = find_lock_task_mm(tsk);
-		if (!p)
-			continue;
+	cp.selected_tasksize = 0;
+	spin_lock(&lmk_task_lock);
 
-		if (test_tsk_thread_flag(p, TIF_MEMDIE) &&
-		    time_before_eq(jiffies, lowmem_deathpending_timeout)) {
-			task_unlock(p);
-			lmk_inc_stats(LMK_TIMEOUT);
-			rcu_read_unlock();
-			return 0;
+	lrw = __lmk_first();
+	if (lrw) {
+		if (lrw->tsk->mm) {
+			cp.selected_tasksize = get_mm_rss(lrw->tsk->mm);
+		} else {
+			lowmem_print(1, "pid:%d no mem\n", lrw->tsk->pid);
+			lmk_inc_stats(LMK_ERROR);
+			goto unlock_out;
 		}
-		oom_score_adj = p->signal->oom_score_adj;
-		if (oom_score_adj < min_score_adj) {
-			task_unlock(p);
-			continue;
+
+		do_kill = kill_needed(lrw->key, sc, &cp);
+
+		if (death_pending_len >= cp.dynamic_max_queue_len) {
+			lmk_inc_stats(LMK_BUSY);
+			goto unlock_out;
 		}
-		tasksize = get_mm_rss(p->mm);
-		task_unlock(p);
-		if (tasksize <= 0)
-			continue;
-		if (selected) {
-			if (oom_score_adj < selected_oom_score_adj)
-				continue;
-			if (oom_score_adj == selected_oom_score_adj &&
-			    tasksize <= selected_tasksize)
-				continue;
+
+		if (do_kill) {
+			struct lmk_death_pending_entry *ldpt;
+
+			selected = lrw->tsk;
+
+			/* there is a chance that task is locked,
+			 * and the case where it locked in oom_score_adj_write
+			 * we might have deadlock. There is no macro for it
+			 *  and this is the only place there is a try on
+			 * the task_lock.
+			 */
+			if (!spin_trylock(&selected->alloc_lock)) {
+				lmk_inc_stats(LMK_ERROR);
+				lowmem_print(1, "Failed to lock task.\n");
+				lmk_inc_stats(LMK_BUSY);
+				cp.selected_tasksize = 0;
+				goto unlock_out;
+			}
+
+			/* move to kill pending set */
+			ldpt = kmem_cache_alloc(lmk_dp_cache, GFP_ATOMIC);
+			ldpt->tsk = selected;
+
+			__lmk_death_pending_add(ldpt);
+			if (!__lmk_task_remove(selected, lrw->key))
+				WARN_ON(1);
+
+			spin_unlock(&lmk_task_lock);
+
+			set_tsk_thread_flag(selected, TIF_MEMDIE);
+			send_sig(SIGKILL, selected, 0);
+
+			print_obituary(selected, &cp, sc);
+
+			task_unlock(selected);
+			lmk_inc_stats(LMK_KILL);
+			goto out;
+		} else {
+			lmk_inc_stats(LMK_WASTE);
 		}
-		selected = p;
-		selected_tasksize = tasksize;
-		selected_oom_score_adj = oom_score_adj;
-		lowmem_print(2, "select '%s' (%d), adj %hd, size %d, to kill\n",
-			     p->comm, p->pid, oom_score_adj, tasksize);
+	} else {
+		lmk_inc_stats(LMK_NO_KILL);
 	}
-	if (selected) {
-		long cache_size = other_file * (long)(PAGE_SIZE / 1024);
-		long cache_limit = minfree * (long)(PAGE_SIZE / 1024);
-		long free = other_free * (long)(PAGE_SIZE / 1024);
+unlock_out:
+	cp.selected_tasksize = SHRINK_STOP;
+	spin_unlock(&lmk_task_lock);
+out:
+	if (cp.selected_tasksize == 0)
+		lowmem_print(2, "list empty nothing to free\n");
+	lowmem_print(4, "lowmem_shrink %lu, %x, return %ld\n",
+		     nr_to_scan, sc->gfp_mask, cp.selected_tasksize);
 
-		task_lock(selected);
-		send_sig(SIGKILL, selected, 0);
-		/*
-		 * FIXME: lowmemorykiller shouldn't abuse global OOM killer
-		 * infrastructure. There is no real reason why the selected
-		 * task should have access to the memory reserves.
-		 */
-		if (selected->mm)
-			mark_oom_victim(selected);
-		task_unlock(selected);
-		trace_lowmemory_kill(selected, cache_size, cache_limit, free);
-		lowmem_print(1, "Killing '%s' (%d), adj %hd,\n" \
-			        "   to free %ldkB on behalf of '%s' (%d) because\n" \
-			        "   cache %ldkB is below limit %ldkB for oom_score_adj %hd\n" \
-			        "   Free memory is %ldkB above reserved\n",
-			     selected->comm, selected->pid,
-			     selected_oom_score_adj,
-			     selected_tasksize * (long)(PAGE_SIZE / 1024),
-			     current->comm, current->pid,
-			     cache_size, cache_limit,
-			     min_score_adj,
-			     free);
-		lowmem_deathpending_timeout = jiffies + HZ;
-		rem += selected_tasksize;
-		lmk_inc_stats(LMK_KILL);
-	} else
-		lmk_inc_stats(LMK_WASTE);
-
-	lowmem_print(4, "lowmem_scan %lu, %x, return %lu\n",
-		     sc->nr_to_scan, sc->gfp_mask, rem);
-	rcu_read_unlock();
-	return rem;
+	return cp.selected_tasksize;
 }
 
 static struct shrinker lowmem_shrinker = {
@@ -212,6 +286,9 @@ static struct shrinker lowmem_shrinker = {
 
 static int __init lowmem_init(void)
 {
+	lmk_dp_cache = KMEM_CACHE(lmk_death_pending_entry, 0);
+	lmk_task_cache = KMEM_CACHE(lmk_rb_watch, 0);
+	oom_score_notifier_register(&lmk_oom_score_nb);
 	register_shrinker(&lowmem_shrinker);
 	init_procfs_lmk();
 	return 0;

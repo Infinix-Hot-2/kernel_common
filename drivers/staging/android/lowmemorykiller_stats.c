@@ -15,7 +15,9 @@
 
 #include <linux/proc_fs.h>
 #include <linux/seq_file.h>
+#include "lowmemorykiller.h"
 #include "lowmemorykiller_stats.h"
+#include "lowmemorykiller_tasks.h"
 
 struct lmk_stats {
 	atomic_long_t scans; /* counter as in shrinker scans */
@@ -27,6 +29,10 @@ struct lmk_stats {
 				* to be cancelled due to pending kills
 				*/
 	atomic_long_t count; /* number of shrinker count calls */
+	atomic_long_t scan_busy; /* mutex held */
+	atomic_long_t no_kill; /* mutex held */
+	atomic_long_t busy;
+	atomic_long_t error;
 	atomic_long_t unknown; /* internal */
 } st;
 
@@ -48,6 +54,15 @@ void lmk_inc_stats(int key)
 	case LMK_COUNT:
 		atomic_long_inc(&st.count);
 		break;
+	case LMK_BUSY:
+		atomic_long_inc(&st.busy);
+		break;
+	case LMK_ERROR:
+		atomic_long_inc(&st.error);
+		break;
+	case LMK_NO_KILL:
+		atomic_long_inc(&st.no_kill);
+		break;
 	default:
 		atomic_long_inc(&st.unknown);
 		break;
@@ -61,6 +76,10 @@ static int lmk_proc_show(struct seq_file *m, void *v)
 	seq_printf(m, "waste: %ld\n", atomic_long_read(&st.waste));
 	seq_printf(m, "timeout: %ld\n", atomic_long_read(&st.timeout));
 	seq_printf(m, "count: %ld\n", atomic_long_read(&st.count));
+	seq_printf(m, "busy: %ld\n", atomic_long_read(&st.busy));
+	seq_printf(m, "error: %ld\n", atomic_long_read(&st.error));
+	seq_printf(m, "no kill: %ld\n", atomic_long_read(&st.no_kill));
+	seq_printf(m, "queue: %d\n", death_pending_len);
 	seq_printf(m, "unknown: %ld (internal)\n",
 		   atomic_long_read(&st.unknown));
 
@@ -80,6 +99,11 @@ static const struct file_operations lmk_proc_fops = {
 
 int __init init_procfs_lmk(void)
 {
-	proc_create_data("lmkstats", 0, NULL, &lmk_proc_fops, NULL);
+	proc_create_data(LMK_PROCFS_NAME, 0, NULL, &lmk_proc_fops, NULL);
 	return 0;
+}
+
+void exit_procfs_lmk(void)
+{
+	remove_proc_entry(LMK_PROCFS_NAME, NULL);
 }
