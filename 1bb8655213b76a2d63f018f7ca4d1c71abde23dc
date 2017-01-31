@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "945a71eb_8a0a7c81",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2017-01-31T15:41:53Z",
+      "side": 1,
+      "message": "Upstream patches usually need some tags to identify which parts of the kernel they apply to. Perhaps:\n\n    net: core: Add a BPF helper function to retrieve socket UID.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 49
+      },
+      "revId": "1bb8655213b76a2d63f018f7ca4d1c71abde23dc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "434a1b66_80e3d8ea",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2017-01-31T15:41:53Z",
+      "side": 1,
+      "message": "I think this text is superfluous; what it describes is essentially the current kernel definition of the \"UID of a socket\". Maybe remove it?",
+      "range": {
+        "startLine": 9,
+        "startChar": 52,
+        "endLine": 11,
+        "endChar": 56
+      },
+      "revId": "1bb8655213b76a2d63f018f7ca4d1c71abde23dc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "43c9d7df_ca3ee3ee",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2017-01-31T15:41:53Z",
+      "side": 1,
+      "message": "Suggest adding something here to explain why we need this. For example:\n\n    This is useful to perform per-UID accounting of network traffic.",
+      "revId": "1bb8655213b76a2d63f018f7ca4d1c71abde23dc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "114c859f_6662fae2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2017-01-31T15:41:53Z",
+      "side": 1,
+      "message": "Upstream doesn\u0027t like Change-Ids, so remember to strip them when sending a patch for submission.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 52
+      },
+      "revId": "1bb8655213b76a2d63f018f7ca4d1c71abde23dc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2556ab7f_98ac7c3a",
+        "filename": "net/core/filter.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2553,
+      "author": {
+        "id": 1000835
+      },
+      "writtenOn": "2017-01-31T15:41:53Z",
+      "side": 1,
+      "message": "0 is GLOBAL_ROOT_UID, which is incorrect for packets in a namespace. I think you can just delete this check, since sock_net_uid does it for you. So this function could be just:\n\n    kuid_t uid \u003d sock_net_uid(dev_net(skb-\u003edev), sk);\n\n    return (u32) uid.val;",
+      "range": {
+        "startLine": 2552,
+        "startChar": 0,
+        "endLine": 2553,
+        "endChar": 11
+      },
+      "revId": "1bb8655213b76a2d63f018f7ca4d1c71abde23dc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
