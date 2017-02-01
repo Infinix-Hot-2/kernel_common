@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff3770d0_fd146afb",
+        "filename": "fs/sdcardfs/packagelist.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2017-02-01T20:53:46Z",
+      "side": 1,
+      "message": "nit: inconsistent (and I believe discouraged) use of \"type* name\".",
+      "range": {
+        "startLine": 225,
+        "startChar": 7,
+        "endLine": 225,
+        "endChar": 12
+      },
+      "revId": "c278fc7b65bde077e3fc1ecbf89bc82fa879bc6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c1d1cb30_0740f9b4",
+        "filename": "fs/sdcardfs/packagelist.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2017-02-01T20:53:46Z",
+      "side": 1,
+      "message": "nit: pr_info() preferred",
+      "range": {
+        "startLine": 264,
+        "startChar": 1,
+        "endLine": 264,
+        "endChar": 17
+      },
+      "revId": "c278fc7b65bde077e3fc1ecbf89bc82fa879bc6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f2cfbedc_d1bd0eb5",
+        "filename": "fs/sdcardfs/packagelist.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 314,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2017-02-01T20:53:46Z",
+      "side": 1,
+      "message": "kfree(package_details) first",
+      "range": {
+        "startLine": 314,
+        "startChar": 2,
+        "endLine": 314,
+        "endChar": 8
+      },
+      "revId": "c278fc7b65bde077e3fc1ecbf89bc82fa879bc6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
