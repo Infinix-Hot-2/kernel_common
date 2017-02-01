@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f490294b_786befc5",
+        "filename": "fs/sdcardfs/packagelist.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2017-02-01T21:06:37Z",
+      "side": 1,
+      "message": "return type is int/bool?",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 6
+      },
+      "revId": "372bb4fa15040050994fc0b09767f382bce8af5b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ebecd63_0dd4bec9",
+        "filename": "fs/sdcardfs/packagelist.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2017-02-01T21:06:37Z",
+      "side": 1,
+      "message": "Function name too generic, add sdcardfs_ prefix?",
+      "range": {
+        "startLine": 74,
+        "startChar": 8,
+        "endLine": 74,
+        "endChar": 19
+      },
+      "revId": "372bb4fa15040050994fc0b09767f382bce8af5b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4cd3da09_daf74456",
+        "filename": "fs/sdcardfs/packagelist.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 513,
+      "author": {
+        "id": 1004277
+      },
+      "writtenOn": "2017-02-01T21:06:37Z",
+      "side": 1,
+      "message": "Heh there it is",
+      "range": {
+        "startLine": 513,
+        "startChar": 2,
+        "endLine": 513,
+        "endChar": 25
+      },
+      "revId": "372bb4fa15040050994fc0b09767f382bce8af5b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
