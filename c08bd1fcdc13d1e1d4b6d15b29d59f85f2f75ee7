@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "7cacd29f_9a714ccf",
+        "filename": "arch/x86/configs/i386_ranchu_defconfig",
+        "patchSetId": 2
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1082465
+      },
+      "writtenOn": "2017-02-02T00:14:22Z",
+      "side": 1,
+      "message": "Done",
+      "revId": "c08bd1fcdc13d1e1d4b6d15b29d59f85f2f75ee7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "44577b5e_b6f9a259",
         "filename": "drivers/staging/goldfish/Makefile",
         "patchSetId": 2
@@ -30,6 +47,29 @@
       "writtenOn": "2017-02-01T19:27:55Z",
       "side": 1,
       "message": "remove this line by enabling CONFIG_SYNC_FILE\u003dy in defconfig and make GOLDFISH_SYNC depends on SYNC_FILE in Kconfig.",
+      "range": {
+        "startLine": 11,
+        "startChar": 31,
+        "endLine": 11,
+        "endChar": 56
+      },
+      "revId": "c08bd1fcdc13d1e1d4b6d15b29d59f85f2f75ee7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "33076bc3_84bc2131",
+        "filename": "drivers/staging/goldfish/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1082465
+      },
+      "writtenOn": "2017-02-02T00:14:22Z",
+      "side": 1,
+      "message": "Done",
       "range": {
         "startLine": 11,
         "startChar": 31,
