@@ -62,14 +62,13 @@ static inline struct sync_pt *goldfish_sync_fence_to_sync_pt(struct fence *fence
 }
 
 /**
- * goldfish_sync_timeline_create_internal() - creates a sync object
+ * goldfish_sync_timeline_alloc() - creates a sync object
  * @name:	sync_timeline name
  *
  * Creates a new sync_timeline. Returns the sync_timeline object or NULL in
  * case of error.
  */
-struct goldfish_sync_timeline
-*goldfish_sync_timeline_create_internal(const char *name)
+struct goldfish_sync_timeline *goldfish_sync_timeline_alloc(const char *name)
 {
 	struct goldfish_sync_timeline *obj;
 
@@ -87,6 +86,7 @@ struct goldfish_sync_timeline
 
 	return obj;
 }
+EXPORT_SYMBOL(goldfish_sync_timeline_alloc);
 
 static void goldfish_sync_timeline_free_internal(struct kref *kref)
 {
@@ -102,22 +102,23 @@ static void goldfish_sync_timeline_get_internal(
 	kref_get(&obj->kref);
 }
 
-void goldfish_sync_timeline_put_internal(struct goldfish_sync_timeline *obj)
+void goldfish_sync_timeline_put(struct goldfish_sync_timeline *obj)
 {
 	kref_put(&obj->kref, goldfish_sync_timeline_free_internal);
 }
+EXPORT_SYMBOL(goldfish_sync_timeline_put);
 
 /**
- * goldfish_sync_timeline_signal() -
- * signal a status change on a goldfish_sync_timeline
+ * goldfish_sync_timeline_signal() - signals a status change on a
+ *      goldfish_sync_timeline
  * @obj:	sync_timeline to signal
  * @inc:	num to increment on timeline->value
  *
  * A sync implementation should call this any time one of it's fences
  * has signaled or has an error condition.
  */
-void goldfish_sync_timeline_signal_internal(struct goldfish_sync_timeline *obj,
-											unsigned int inc)
+void goldfish_sync_timeline_signal(struct goldfish_sync_timeline *obj,
+				   unsigned int inc)
 {
 	unsigned long flags;
 	struct sync_pt *pt, *next;
@@ -134,9 +135,10 @@ void goldfish_sync_timeline_signal_internal(struct goldfish_sync_timeline *obj,
 
 	spin_unlock_irqrestore(&obj->child_list_lock, flags);
 }
+EXPORT_SYMBOL(goldfish_sync_timeline_signal);
 
 /**
- * goldfish_sync_pt_create_internal() - creates a sync pt
+ * goldfish_sync_pt_create() - creates a sync pt
  * @parent:	fence's parent sync_timeline
  * @size:	size to allocate for this pt
  * @inc:	value of the fence
@@ -146,9 +148,8 @@ void goldfish_sync_timeline_signal_internal(struct goldfish_sync_timeline *obj,
  * the generic sync_timeline struct. Returns the sync_pt object or
  * NULL in case of error.
  */
-struct sync_pt *goldfish_sync_pt_create_internal(
-					struct goldfish_sync_timeline *obj, int size,
-				 	unsigned int value)
+struct sync_pt *goldfish_sync_pt_create(struct goldfish_sync_timeline *obj,
+					int size, unsigned int value)
 {
 	unsigned long flags;
 	struct sync_pt *pt;
@@ -169,6 +170,7 @@ struct sync_pt *goldfish_sync_pt_create_internal(
 	spin_unlock_irqrestore(&obj->child_list_lock, flags);
 	return pt;
 }
+EXPORT_SYMBOL(goldfish_sync_pt_create);
 
 static const char *goldfish_sync_timeline_fence_get_driver_name(
 						struct fence *fence)
@@ -196,7 +198,7 @@ static void goldfish_sync_timeline_fence_release(struct fence *fence)
 		list_del(&pt->active_list);
 	spin_unlock_irqrestore(fence->lock, flags);
 
-	goldfish_sync_timeline_put_internal(parent);
+	goldfish_sync_timeline_put(parent);
 	fence_free(fence);
 }
 

@@ -229,7 +229,7 @@ static void delete_timeline_obj(struct kref* kref) {
 	struct goldfish_sync_timeline_obj* obj =
 		container_of(kref, struct goldfish_sync_timeline_obj, kref);
 
-	goldfish_sync_timeline_put_internal(obj->sync_tl);
+	goldfish_sync_timeline_put(obj->sync_tl);
 	obj->sync_tl = NULL;
 	kfree(obj);
 }
@@ -255,7 +255,7 @@ goldfish_sync_timeline_create(void)
 
 	gensym(timeline_name);
 
-	res_sync_tl = goldfish_sync_timeline_create_internal(timeline_name);
+	res_sync_tl = goldfish_sync_timeline_alloc(timeline_name);
 	if (!res_sync_tl) {
 		ERR("Failed to create goldfish_sw_sync timeline.");
 		return NULL;
@@ -289,8 +289,7 @@ goldfish_sync_fence_create(struct goldfish_sync_timeline_obj *obj,
 
 	tl = obj->sync_tl;
 
-	syncpt = goldfish_sync_pt_create_internal(
-				tl, sizeof(struct sync_pt) + 4, val);
+	syncpt = goldfish_sync_pt_create(tl, sizeof(struct sync_pt) + 4, val);
 	if (!syncpt) {
 		ERR("could not create sync point! "
 			"goldfish_sync_timeline=0x%p val=%d",
@@ -341,7 +340,7 @@ goldfish_sync_timeline_inc(struct goldfish_sync_timeline_obj *obj, uint32_t inc)
 	if (!obj) return;
 
 	DPRINT("timeline_obj=0x%p", obj);
-	goldfish_sync_timeline_signal_internal(obj->sync_tl, inc);
+	goldfish_sync_timeline_signal(obj->sync_tl, inc);
 	DPRINT("incremented timeline. increment max_time");
 	obj->current_time += inc;
 
