@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f919b00d_2f95a775",
+        "filename": "drivers/staging/android/lowmemorykiller.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 1070654
+      },
+      "writtenOn": "2017-02-08T07:44:41Z",
+      "side": 1,
+      "message": "Oops. There is a rebase error here, some init stuff missing.",
+      "revId": "da03af001d4b3f68fbb5c88677c4feecafb1909e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
