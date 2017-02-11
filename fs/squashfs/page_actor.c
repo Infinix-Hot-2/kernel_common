@@ -85,8 +85,9 @@ void squashfs_bh_to_actor(struct buffer_head **bh, int nr_buffers,
 			while (pgoff < PAGE_SIZE && bytes < length) {
 				avail = min_t(int, blksz - offset,
 						PAGE_SIZE - pgoff);
-				memcpy(kaddr + pgoff, bh[b]->b_data + offset,
-				       avail);
+				if (bh[i])
+					memcpy(kaddr + pgoff, bh[b]->b_data + offset,
+					       avail);
 				pgoff += avail;
 				bytes += avail;
 				offset = (offset + avail) % blksz;
