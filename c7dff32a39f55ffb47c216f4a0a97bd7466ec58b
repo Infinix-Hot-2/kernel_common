@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "26c1b90f_91d103a9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2017-02-13T18:22:20Z",
+      "side": 1,
+      "message": "What do the null entries mean?",
+      "range": {
+        "startLine": 10,
+        "startChar": 52,
+        "endLine": 10,
+        "endChar": 64
+      },
+      "revId": "c7dff32a39f55ffb47c216f4a0a97bd7466ec58b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d76fa68b_8903180f",
+        "filename": "fs/squashfs/page_actor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2017-02-13T18:22:20Z",
+      "side": 1,
+      "message": "Do we want to memset(kaddr + pgoff, 0, avail) rather than leaving it with possible internal data exposure?",
+      "range": {
+        "startLine": 89,
+        "startChar": 5,
+        "endLine": 90,
+        "endChar": 19
+      },
+      "revId": "c7dff32a39f55ffb47c216f4a0a97bd7466ec58b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9c928f4_1c3478a6",
+        "filename": "fs/squashfs/page_actor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2017-02-13T18:22:20Z",
+      "side": 1,
+      "message": "Do we want to null out bh[b] to mark it as no longer available once it is \u0027put\u0027, or are we done with the array after this call?",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 96,
+        "endChar": 20
+      },
+      "revId": "c7dff32a39f55ffb47c216f4a0a97bd7466ec58b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
