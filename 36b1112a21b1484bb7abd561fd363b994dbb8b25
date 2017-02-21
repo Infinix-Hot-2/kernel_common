@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e48d5e54_a111afbe",
+        "filename": "Documentation/devicetree/bindings/staging/nanohub.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1087673
+      },
+      "writtenOn": "2017-02-21T22:16:09Z",
+      "side": 1,
+      "message": "Needs all the other properties described.",
+      "revId": "36b1112a21b1484bb7abd561fd363b994dbb8b25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "37876219_4f88eec8",
+        "filename": "Documentation/devicetree/bindings/staging/nanohub.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1087673
+      },
+      "writtenOn": "2017-02-21T22:16:09Z",
+      "side": 1,
+      "message": "Needs a vendor prefix and probably a more specific compatible string (I assume there is more than 1 combination of chip and firmware).",
+      "revId": "36b1112a21b1484bb7abd561fd363b994dbb8b25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2df38067_0995a260",
+        "filename": "Documentation/devicetree/bindings/staging/nanohub.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1087673
+      },
+      "writtenOn": "2017-02-21T22:16:09Z",
+      "side": 1,
+      "message": "In general, \"sensorhub\" is not a vendor prefix and should be \"google\". \"-gpios\" is preferred over \"-gpio\".\n\nThis in particular should be just \"reset-gpios\" as that\u0027s the standard name for reset lines.",
+      "revId": "36b1112a21b1484bb7abd561fd363b994dbb8b25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9d5f7baf_aa7ea80b",
+        "filename": "Documentation/devicetree/bindings/staging/nanohub.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1087673
+      },
+      "writtenOn": "2017-02-21T22:16:09Z",
+      "side": 1,
+      "message": "Should be wakeup irq. See wakeup sources binding.",
+      "revId": "36b1112a21b1484bb7abd561fd363b994dbb8b25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b2b5a765_095a18ed",
+        "filename": "Documentation/devicetree/bindings/staging/nanohub.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1087673
+      },
+      "writtenOn": "2017-02-21T22:16:09Z",
+      "side": 1,
+      "message": "Already listed as an interrupt, so this should not be needed.\n\nOr is there some control of the interrupt line needed?",
+      "revId": "36b1112a21b1484bb7abd561fd363b994dbb8b25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "317c556a_caeda546",
+        "filename": "Documentation/devicetree/bindings/staging/nanohub.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1087673
+      },
+      "writtenOn": "2017-02-21T22:16:09Z",
+      "side": 1,
+      "message": "There\u0027s already a standard way to CS on GPIOs.",
+      "revId": "36b1112a21b1484bb7abd561fd363b994dbb8b25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e2ee0405_625fcd92",
+        "filename": "Documentation/devicetree/bindings/staging/nanohub.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1087673
+      },
+      "writtenOn": "2017-02-21T22:16:09Z",
+      "side": 1,
+      "message": "What are all these addresses for?",
+      "revId": "36b1112a21b1484bb7abd561fd363b994dbb8b25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4a5bfac_012fd0fb",
+        "filename": "include/linux/platform_data/nanohub.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1087673
+      },
+      "writtenOn": "2017-02-21T22:16:09Z",
+      "side": 1,
+      "message": "DT should always be used, so this should be removed or made private.",
+      "revId": "36b1112a21b1484bb7abd561fd363b994dbb8b25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
