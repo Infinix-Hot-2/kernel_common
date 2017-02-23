@@ -592,8 +592,14 @@ CPU_LE(	movk	x0, #0x30d0, lsl #16	)	// Clear EE and E0E on LE systems
 	b.lt	4f				// Skip if no PMU present
 	mrs	x0, pmcr_el0			// Disable debug access traps
 	ubfx	x0, x0, #11, #5			// to EL2 and allow access to
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 	msr	mdcr_el2, x0			// all PMU counters from EL1
 4:
+=======
+4:
+	csel	x0, xzr, x0, lt			// all PMU counters from EL1
+	msr	mdcr_el2, x0			// (if they exist)
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 
 	/* Stage-2 translation */
 	msr	vttbr_el2, xzr

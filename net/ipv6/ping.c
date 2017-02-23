@@ -152,8 +152,20 @@ int ping_v6_sendmsg(struct sock *sk, struct msghdr *msg, size_t len)
 	rt = (struct rt6_info *) dst;
 
 	np = inet6_sk(sk);
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 	if (!np)
 		return -EBADF;
+=======
+	if (!np) {
+		err = -EBADF;
+		goto dst_err_out;
+	}
+
+	if (!fl6.flowi6_oif && ipv6_addr_is_multicast(&fl6.daddr))
+		fl6.flowi6_oif = np->mcast_oif;
+	else if (!fl6.flowi6_oif)
+		fl6.flowi6_oif = np->ucast_oif;
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 
 	pfh.icmph.type = user_icmph.icmp6_type;
 	pfh.icmph.code = user_icmph.icmp6_code;
@@ -182,6 +194,9 @@ int ping_v6_sendmsg(struct sock *sk, struct msghdr *msg, size_t len)
 						 len);
 	}
 	release_sock(sk);
+
+dst_err_out:
+	dst_release(dst);
 
 	if (err)
 		return err;

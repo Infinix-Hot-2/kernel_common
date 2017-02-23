@@ -301,9 +301,11 @@ retry:
 		res = -ENOKEY;
 		goto out;
 	}
+	down_read(&keyring_key->sem);
 	ukp = user_key_payload(keyring_key);
 	if (ukp->datalen != sizeof(struct ext4_encryption_key)) {
 		res = -EINVAL;
+		up_read(&keyring_key->sem);
 		goto out;
 	}
 	master_key = (struct ext4_encryption_key *)ukp->data;
@@ -314,9 +316,16 @@ retry:
 			    "ext4: key size incorrect: %d\n",
 			    master_key->size);
 		res = -ENOKEY;
+		up_read(&keyring_key->sem);
 		goto out;
 	}
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 	res = ext4_derive_key(&ctx, master_key->raw, raw_key);
+=======
+	res = ext4_derive_key_aes(ctx.nonce, master_key->raw,
+				  raw_key);
+	up_read(&keyring_key->sem);
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 	if (res)
 		goto out;
 got_key:

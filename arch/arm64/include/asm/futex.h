@@ -117,6 +117,7 @@ futex_atomic_cmpxchg_inatomic(u32 *uval, u32 __user *uaddr,
 
 	uaccess_enable();
 	asm volatile("// futex_atomic_cmpxchg_inatomic\n"
+ALTERNATIVE("nop", SET_PSTATE_PAN(0), ARM64_HAS_PAN, CONFIG_ARM64_PAN)
 "	prfm	pstl1strm, %2\n"
 "1:	ldxr	%w1, %2\n"
 "	sub	%w3, %w1, %w4\n"
@@ -129,8 +130,16 @@ futex_atomic_cmpxchg_inatomic(u32 *uval, u32 __user *uaddr,
 "4:	mov	%w0, %w6\n"
 "	b	3b\n"
 "	.popsection\n"
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 	_ASM_EXTABLE(1b, 4b)
 	_ASM_EXTABLE(2b, 4b)
+=======
+"	.pushsection __ex_table,\"a\"\n"
+"	.align	3\n"
+"	.quad	1b, 4b, 2b, 4b\n"
+"	.popsection\n"
+ALTERNATIVE("nop", SET_PSTATE_PAN(1), ARM64_HAS_PAN, CONFIG_ARM64_PAN)
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 	: "+r" (ret), "=&r" (val), "+Q" (*uaddr), "=&r" (tmp)
 	: "r" (oldval), "r" (newval), "Ir" (-EFAULT)
 	: "memory");

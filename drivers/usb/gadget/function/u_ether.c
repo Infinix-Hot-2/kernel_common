@@ -741,6 +741,7 @@ static netdev_tx_t eth_start_xmit(struct sk_buff *skb,
 
 	req->length = length;
 
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 	/* throttle highspeed IRQ rate back slightly */
 	if (gadget_is_dualspeed(dev->gadget) &&
 			 (dev->gadget->speed == USB_SPEED_HIGH)) {
@@ -755,6 +756,8 @@ static netdev_tx_t eth_start_xmit(struct sk_buff *skb,
 		req->no_interrupt = 0;
 	}
 
+=======
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 	retval = usb_ep_queue(in, req, GFP_ATOMIC);
 	switch (retval) {
 	default:

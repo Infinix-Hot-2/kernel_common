@@ -31,8 +31,12 @@ $(warning LSE atomics not supported by binutils)
 endif
 
 KBUILD_CFLAGS	+= -mgeneral-regs-only $(lseinstr)
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 KBUILD_CFLAGS	+= -fno-pic
 KBUILD_CFLAGS	+= -fno-asynchronous-unwind-tables
+=======
+KBUILD_CFLAGS	+= $(call cc-option, -mpc-relative-literal-loads)
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 KBUILD_AFLAGS	+= $(lseinstr)
 
 ifeq ($(CONFIG_CPU_BIG_ENDIAN), y)

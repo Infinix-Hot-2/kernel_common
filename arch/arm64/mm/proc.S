@@ -26,6 +26,11 @@
 #include <asm/pgtable.h>
 #include <asm/cpufeature.h>
 #include <asm/alternative.h>
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
+=======
+
+#include "proc-macros.S"
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 
 #ifdef CONFIG_ARM64_64K_PAGES
 #define TCR_TG_FLAGS	TCR_TG0_64K | TCR_TG1_64K
@@ -136,8 +141,21 @@ ENTRY(cpu_do_switch_mm)
 	bfi	x0, x1, #48, #16		// set the ASID
 	msr	ttbr0_el1, x0			// set TTBR0
 	isb
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 	post_ttbr0_update_workaround
+=======
+alternative_if_not ARM64_WORKAROUND_CAVIUM_27456
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 	ret
+	nop
+	nop
+	nop
+alternative_else
+	ic	iallu
+	dsb	nsh
+	isb
+	ret
+alternative_endif
 ENDPROC(cpu_do_switch_mm)
 
 	.pushsection ".idmap.text", "ax"
@@ -182,6 +200,11 @@ ENTRY(__cpu_setup)
 	msr	cpacr_el1, x0			// Enable FP/ASIMD
 	mov	x0, #1 << 12			// Reset mdscr_el1 and disable
 	msr	mdscr_el1, x0			// access to the DCC from EL0
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
+=======
+	isb					// Unmask debug exceptions now,
+	enable_dbg				// since this is per-cpu
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 	reset_pmuserenr_el0 x0			// Disable PMU access from EL0
 	/*
 	 * Memory region attributes for LPAE:

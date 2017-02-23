@@ -283,7 +283,10 @@ static int v9fs_xattr_set_acl(const struct xattr_handler *handler,
 	case ACL_TYPE_ACCESS:
 		if (acl) {
 			struct iattr iattr;
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 			struct posix_acl *old_acl = acl;
+=======
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 
 			retval = posix_acl_update_mode(inode, &iattr.ia_mode, &acl);
 			if (retval)
@@ -294,7 +297,10 @@ static int v9fs_xattr_set_acl(const struct xattr_handler *handler,
 				 * by the mode bits. So don't
 				 * update ACL.
 				 */
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 				posix_acl_release(old_acl);
+=======
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 				value = NULL;
 				size = 0;
 			}

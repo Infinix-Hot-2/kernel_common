@@ -27,9 +27,13 @@
 #include <asm/cpufeature.h>
 #include <asm/errno.h>
 #include <asm/esr.h>
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 #include <asm/irq.h>
 #include <asm/memory.h>
 #include <asm/ptrace.h>
+=======
+#include <asm/memory.h>
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 #include <asm/thread_info.h>
 #include <asm/uaccess.h>
 #include <asm/unistd.h>
@@ -106,7 +110,10 @@
 	str	x20, [sp, #S_ORIG_ADDR_LIMIT]
 	mov	x20, #TASK_SIZE_64
 	str	x20, [tsk, #TI_ADDR_LIMIT]
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 	ALTERNATIVE(nop, SET_PSTATE_UAO(0), ARM64_HAS_UAO, CONFIG_ARM64_UAO)
+=======
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 	.endif /* \el == 0 */
 	mrs	x22, elr_el1
 	mrs	x23, spsr_el1
@@ -168,8 +175,11 @@ alternative_else_nop_endif
 	/* Restore the task's original addr_limit. */
 	ldr	x20, [sp, #S_ORIG_ADDR_LIMIT]
 	str	x20, [tsk, #TI_ADDR_LIMIT]
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 
 	/* No need to restore UAO, it will be restored from SPSR_EL1 */
+=======
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 	.endif
 
 	ldp	x21, x22, [sp, #S_PC]		// load ELR, SPSR
@@ -678,7 +688,7 @@ el0_inv:
 	mov	x0, sp
 	mov	x1, #BAD_SYNC
 	mov	x2, x25
-	bl	bad_mode
+	bl	bad_el0_sync
 	b	ret_to_user
 ENDPROC(el0_sync)
 

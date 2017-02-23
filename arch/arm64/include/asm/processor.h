@@ -190,7 +190,11 @@ static inline void spin_lock_prefetch(const void *ptr)
 
 #endif
 
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 void cpu_enable_pan(void *__unused);
 void cpu_enable_uao(void *__unused);
+=======
+int cpu_enable_pan(void *__unused);
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 
 #endif /* __ASM_PROCESSOR_H */

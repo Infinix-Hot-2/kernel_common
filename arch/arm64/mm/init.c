@@ -397,7 +397,11 @@ void __init mem_init(void)
 #ifdef CONFIG_SPARSEMEM_VMEMMAP
 		  MLG(VMEMMAP_START,
 		      VMEMMAP_START + VMEMMAP_SIZE),
+<<<<<<< HEAD   (880c68 ANDROID: sdcardfs: Don't bother deleting freelist)
 		  MLM((unsigned long)phys_to_page(memblock_start_of_DRAM()),
+=======
+		  MLM((unsigned long)virt_to_page(PAGE_OFFSET),
+>>>>>>> BRANCH (6c1ed7 Linux 4.4.46)
 		      (unsigned long)virt_to_page(high_memory)),
 #endif
 		  MLK(FIXADDR_START, FIXADDR_TOP),
