@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "d9aa2d43_6537839c",
+        "filename": "fs/squashfs/page_actor.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1094098
+      },
+      "writtenOn": "2017-02-24T17:55:47Z",
+      "side": 1,
+      "message": "In that case, would we want to also change line 122?",
+      "parentUuid": "d76fa68b_8903180f",
+      "range": {
+        "startLine": 89,
+        "startChar": 5,
+        "endLine": 90,
+        "endChar": 19
+      },
+      "revId": "c7dff32a39f55ffb47c216f4a0a97bd7466ec58b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b9c928f4_1c3478a6",
         "filename": "fs/squashfs/page_actor.c",
         "patchSetId": 2
