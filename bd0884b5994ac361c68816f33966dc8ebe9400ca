@@ -22,6 +22,30 @@
       "revId": "bd0884b5994ac361c68816f33966dc8ebe9400ca",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "432bb9bb_095e5aa8",
+        "filename": "drivers/staging/android/lowmemorykiller.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1070654
+      },
+      "writtenOn": "2017-02-27T08:14:11Z",
+      "side": 1,
+      "message": "This is a move from lowmemorykiller.c to share it with the submodules.",
+      "parentUuid": "20b6caf7_af672387",
+      "range": {
+        "startLine": 9,
+        "startChar": 8,
+        "endLine": 9,
+        "endChar": 20
+      },
+      "revId": "bd0884b5994ac361c68816f33966dc8ebe9400ca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
