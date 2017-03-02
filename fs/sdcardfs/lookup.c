@@ -206,6 +206,27 @@ out:
 	return err;
 }
 
+struct sdcardfs_name_data {
+	struct dir_context ctx;
+	const struct qstr *to_find;
+	struct qstr found;
+};
+
+static int sdcardfs_name_match(void *__buf, const char *name, int namelen,
+		loff_t offset, u64 ino, unsigned int d_type)
+{
+	struct sdcardfs_name_data *buf = (struct sdcardfs_name_data *) __buf;
+	struct qstr candidate = QSTR_INIT(name, namelen);
+
+	if (qstr_case_eq(buf->to_find, &candidate)) {
+		buf->found.name = kstrndup(candidate.name, namelen, GFP_KERNEL);
+		if (!IS_ERR(buf->found.name))
+			buf->found.len = namelen;
+		return 1;
+	}
+	return 0;
+}
+
 /*
  * Main driver function for sdcardfs's lookup.
  *
@@ -242,27 +263,34 @@ static struct dentry *__sdcardfs_lookup(struct dentry *dentry,
 				&lower_path);
 	/* check for other cases */
 	if (err == -ENOENT) {
-		struct dentry *child;
-		struct dentry *match = NULL;
-		mutex_lock(&lower_dir_dentry->d_inode->i_mutex);
-		spin_lock(&lower_dir_dentry->d_lock);
-		list_for_each_entry(child, &lower_dir_dentry->d_subdirs, d_child) {
-			if (child && child->d_inode) {
-				if (qstr_case_eq(&child->d_name, name)) {
-					match = dget(child);
-					break;
-				}
-			}
-		}
-		spin_unlock(&lower_dir_dentry->d_lock);
-		mutex_unlock(&lower_dir_dentry->d_inode->i_mutex);
-		if (match) {
+		struct file *file;
+		const struct cred *cred = current_cred();
+
+		struct sdcardfs_name_data buffer = {
+			.ctx.actor = sdcardfs_name_match,
+			.to_find = name,
+			.found = QSTR_INIT("", 0),
+		};
+
+		file = dentry_open(lower_parent_path, O_RDONLY, cred);
+		err = iterate_dir(file, &buffer.ctx);
+		fput(file);
+		if (err)
+			goto out;
+
+		if (buffer.found.len) {
 			err = vfs_path_lookup(lower_dir_dentry,
 						lower_dir_mnt,
-						match->d_name.name, 0,
+						buffer.found.name, 0,
 						&lower_path);
-			dput(match);
+			kfree(buffer.found.name);
+		} else {
+			if (IS_ERR(buffer.found.name))
+				err = PTR_ERR(buffer.found.name);
+			else
+				err = -ENOENT;
 		}
+
 	}
 
 	/* no error: handle positive dentries */
