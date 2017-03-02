@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b8d6d57_0d9d8fc6",
+        "filename": "fs/sdcardfs/lookup.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 1133869
+      },
+      "writtenOn": "2017-03-02T01:51:33Z",
+      "side": 1,
+      "message": "I think we can use __getname() --\u003e PATH_MAX in order to allocate memory from names_cachep to make full use of the name cache?",
+      "range": {
+        "startLine": 222,
+        "startChar": 0,
+        "endLine": 222,
+        "endChar": 66
+      },
+      "revId": "d8f1820825e36540ce56b264168f43420d023536",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1639bc26_c4ae7636",
+        "filename": "fs/sdcardfs/lookup.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 1133869
+      },
+      "writtenOn": "2017-03-02T01:51:33Z",
+      "side": 1,
+      "message": "found.len should be equal to to_find.len I think...\nso only char * instead of qstr?",
+      "range": {
+        "startLine": 224,
+        "startChar": 0,
+        "endLine": 224,
+        "endChar": 28
+      },
+      "revId": "d8f1820825e36540ce56b264168f43420d023536",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b3d15be_b9bdc323",
+        "filename": "fs/sdcardfs/lookup.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1133869
+      },
+      "writtenOn": "2017-03-02T01:51:33Z",
+      "side": 1,
+      "message": "maybe we need handle some error?",
+      "range": {
+        "startLine": 275,
+        "startChar": 0,
+        "endLine": 275,
+        "endChar": 56
+      },
+      "revId": "d8f1820825e36540ce56b264168f43420d023536",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
