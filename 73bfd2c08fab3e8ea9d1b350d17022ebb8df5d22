@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "603eef72_92eb77c0",
+        "filename": "kernel/sched/fair.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 6060,
+      "author": {
+        "id": 1124848
+      },
+      "writtenOn": "2017-03-02T18:52:18Z",
+      "side": 1,
+      "message": "Don\u0027t we need to acquire cfs_throttle_rt_rq\u0027s lock here before list maniplulation?",
+      "range": {
+        "startLine": 6060,
+        "startChar": 0,
+        "endLine": 6060,
+        "endChar": 44
+      },
+      "revId": "73bfd2c08fab3e8ea9d1b350d17022ebb8df5d22",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a097345_ca3dd84c",
+        "filename": "kernel/sched/fair.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 9348,
+      "author": {
+        "id": 1124848
+      },
+      "writtenOn": "2017-03-02T18:52:18Z",
+      "side": 1,
+      "message": "+1",
+      "revId": "73bfd2c08fab3e8ea9d1b350d17022ebb8df5d22",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
