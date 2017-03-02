@@ -264,37 +264,33 @@ static int needs_fixup(perm_t perm) {
 void fixup_perms_recursive(struct dentry *dentry, struct limit_search *limit) {
 	struct dentry *child;
 	struct sdcardfs_inode_info *info;
-	if (!dget(dentry))
-		return;
+
+	spin_lock_nested(&dentry->d_lock, DENTRY_D_LOCK_NESTED);
 	if (!dentry->d_inode) {
-		dput(dentry);
+		spin_unlock(&dentry->d_lock);
 		return;
 	}
 	info = SDCARDFS_I(dentry->d_inode);
 
 	if (needs_fixup(info->perm)) {
-		spin_lock(&dentry->d_lock);
 		list_for_each_entry(child, &dentry->d_subdirs, d_child) {
-			dget(child);
+			spin_lock_nested(&child->d_lock, DENTRY_D_LOCK_NESTED);
 			if (!(limit->flags & BY_NAME) || !strncasecmp(child->d_name.name, limit->name, limit->length)) {
 				if (child->d_inode) {
 					get_derived_permission(dentry, child);
 					fixup_tmp_permissions(child->d_inode);
-					dput(child);
+					spin_unlock(&child->d_lock);
 					break;
 				}
 			}
-			dput(child);
+			spin_unlock(&child->d_lock);
 		}
-		spin_unlock(&dentry->d_lock);
 	} else 	if (descendant_may_need_fixup(info, limit)) {
-		spin_lock(&dentry->d_lock);
 		list_for_each_entry(child, &dentry->d_subdirs, d_child) {
 				fixup_perms_recursive(child, limit);
 		}
-		spin_unlock(&dentry->d_lock);
 	}
-	dput(dentry);
+	spin_unlock(&dentry->d_lock);
 }
 
 void drop_recursive(struct dentry *parent) {
