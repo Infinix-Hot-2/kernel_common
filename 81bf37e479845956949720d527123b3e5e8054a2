@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8956e1a9_731f02c1",
+        "filename": "fs/sdcardfs/lookup.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1051712
+      },
+      "writtenOn": "2017-03-03T20:09:24Z",
+      "side": 1,
+      "message": "is path_max already checked by caller?",
+      "range": {
+        "startLine": 223,
+        "startChar": 26,
+        "endLine": 223,
+        "endChar": 33
+      },
+      "revId": "81bf37e479845956949720d527123b3e5e8054a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
