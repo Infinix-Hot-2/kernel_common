@@ -22,6 +22,30 @@
       "revId": "81bf37e479845956949720d527123b3e5e8054a2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ed0bc98d_d893ad2a",
+        "filename": "fs/sdcardfs/lookup.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1045980
+      },
+      "writtenOn": "2017-03-03T21:02:48Z",
+      "side": 1,
+      "message": "It\u0027s not explicitly checked, although the strings we get here should actually be bellow NAME_MAX, as we\u0027re only getting one component here. I\u0027ll add a check anyways.",
+      "parentUuid": "8956e1a9_731f02c1",
+      "range": {
+        "startLine": 223,
+        "startChar": 26,
+        "endLine": 223,
+        "endChar": 33
+      },
+      "revId": "81bf37e479845956949720d527123b3e5e8054a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
