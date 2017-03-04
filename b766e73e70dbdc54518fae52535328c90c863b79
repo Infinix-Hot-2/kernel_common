@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "079e1d21_7f362b9b",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 15
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2017-03-04T00:18:56Z",
+      "side": 1,
+      "message": "This is a debugging counter. It would be better to keep it global.",
+      "revId": "b766e73e70dbdc54518fae52535328c90c863b79",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "087adf9c_b7cd1f6a",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 15
+      },
+      "lineNbr": 4495,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2017-03-04T00:18:56Z",
+      "side": 1,
+      "message": "where is this initialized?",
+      "revId": "b766e73e70dbdc54518fae52535328c90c863b79",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
