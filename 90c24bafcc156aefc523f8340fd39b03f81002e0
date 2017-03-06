@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6a7b81e6_f2a1dcb0",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 16
+      },
+      "lineNbr": 1033,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2017-03-06T23:28:39Z",
+      "side": 1,
+      "message": "I think you need atomic_inc_return here.",
+      "revId": "90c24bafcc156aefc523f8340fd39b03f81002e0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
