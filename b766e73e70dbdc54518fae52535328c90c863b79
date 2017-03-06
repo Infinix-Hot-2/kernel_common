@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "739288d5_cad333fb",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 15
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2017-03-06T09:09:07Z",
+      "side": 1,
+      "message": "ok, done.",
+      "parentUuid": "079e1d21_7f362b9b",
+      "revId": "b766e73e70dbdc54518fae52535328c90c863b79",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "087adf9c_b7cd1f6a",
         "filename": "drivers/android/binder.c",
         "patchSetId": 15
@@ -48,6 +66,24 @@
       "side": 1,
       "message": "assigned on 4457",
       "parentUuid": "087adf9c_b7cd1f6a",
+      "revId": "b766e73e70dbdc54518fae52535328c90c863b79",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "098ed2fc_78541f09",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 15
+      },
+      "lineNbr": 4495,
+      "author": {
+        "id": 1013030
+      },
+      "writtenOn": "2017-03-06T09:09:07Z",
+      "side": 1,
+      "message": "I added the initialization.",
+      "parentUuid": "5a10b3c8_c9bd3e55",
       "revId": "b766e73e70dbdc54518fae52535328c90c863b79",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
