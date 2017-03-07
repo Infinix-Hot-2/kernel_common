@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ec863a81_4de37b45",
+        "filename": "fs/sdcardfs/lookup.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 1105434
+      },
+      "writtenOn": "2017-03-07T23:12:57Z",
+      "side": 1,
+      "message": "If __getname()-\u003ekmem_cache_alloc() fails, we\u0027d call kmem_cache_free() with a NULL pointer. Should we check for (buffer.name !\u003d NULL) before calling __putname() below in the put_name: label ?",
+      "range": {
+        "startLine": 280,
+        "startChar": 3,
+        "endLine": 280,
+        "endChar": 16
+      },
+      "revId": "5edb617913a7f76fc4c199d5f98a1e574b87df56",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
