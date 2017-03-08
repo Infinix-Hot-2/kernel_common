@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b077fbb_8f12d7cb",
+        "filename": "drivers/staging/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 2087,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2017-03-08T18:26:19Z",
+      "side": 1,
+      "message": "node is not defined here (!).",
+      "range": {
+        "startLine": 2087,
+        "startChar": 4,
+        "endLine": 2087,
+        "endChar": 8
+      },
+      "revId": "c3a82870c4322395b0c716e5bcb8eba26ceffd0f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d6750500_09d342e1",
+        "filename": "drivers/staging/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 2091,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2017-03-08T18:26:19Z",
+      "side": 1,
+      "message": "not defined here ...",
+      "range": {
+        "startLine": 2091,
+        "startChar": 10,
+        "endLine": 2091,
+        "endChar": 36
+      },
+      "revId": "c3a82870c4322395b0c716e5bcb8eba26ceffd0f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f0f7a388_5eb1f071",
+        "filename": "drivers/staging/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 2107,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2017-03-08T18:26:19Z",
+      "side": 1,
+      "message": "not defined here either.",
+      "range": {
+        "startLine": 2107,
+        "startChar": 9,
+        "endLine": 2107,
+        "endChar": 43
+      },
+      "revId": "c3a82870c4322395b0c716e5bcb8eba26ceffd0f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d22a801f_614bed56",
+        "filename": "drivers/staging/android/binder.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 3252,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2017-03-08T18:26:19Z",
+      "side": 1,
+      "message": "Marlin already has this change in it.",
+      "range": {
+        "startLine": 3250,
+        "startChar": 0,
+        "endLine": 3252,
+        "endChar": 11
+      },
+      "revId": "c3a82870c4322395b0c716e5bcb8eba26ceffd0f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
