@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b523aab7_951998a5",
+        "filename": "drivers/misc/uid_sys_stats.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 350,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2017-03-14T19:37:13Z",
+      "side": 1,
+      "message": "You should squash it with previous patch",
+      "range": {
+        "startLine": 350,
+        "startChar": 9,
+        "endLine": 350,
+        "endChar": 14
+      },
+      "revId": "6569e68d322c489b7b5c55d2a6b5af04a3f5728d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
