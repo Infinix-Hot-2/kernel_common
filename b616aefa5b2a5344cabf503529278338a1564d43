@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c6eff498_f10fec4d",
+        "filename": "drivers/misc/uid_cputime.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2017-03-14T19:34:04Z",
+      "side": 1,
+      "message": "Is it Ok to have same number as UID_STATE_BUCKET_SIZE?",
+      "range": {
+        "startLine": 48,
+        "startChar": 29,
+        "endLine": 48,
+        "endChar": 30
+      },
+      "revId": "b616aefa5b2a5344cabf503529278338a1564d43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a191172f_9d32bcc7",
+        "filename": "drivers/misc/uid_cputime.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 437,
+      "author": {
+        "id": 1000414
+      },
+      "writtenOn": "2017-03-14T19:34:04Z",
+      "side": 1,
+      "message": "proc_parent?",
+      "range": {
+        "startLine": 437,
+        "startChar": 6,
+        "endLine": 437,
+        "endChar": 15
+      },
+      "revId": "b616aefa5b2a5344cabf503529278338a1564d43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
