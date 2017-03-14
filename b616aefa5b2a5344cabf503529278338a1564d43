@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d8bdad9d_9eb73dff",
+        "filename": "drivers/misc/uid_cputime.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1051712
+      },
+      "writtenOn": "2017-03-14T19:52:39Z",
+      "side": 1,
+      "message": "yes, first two (0 and 1) store fg/bg io stats. next two (2 and 3) store current/last io stats. It\u0027s computed by io[fg or bg] \u003d io[current] - io[last].",
+      "parentUuid": "c6eff498_f10fec4d",
+      "range": {
+        "startLine": 48,
+        "startChar": 29,
+        "endLine": 48,
+        "endChar": 30
+      },
+      "revId": "b616aefa5b2a5344cabf503529278338a1564d43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a191172f_9d32bcc7",
         "filename": "drivers/misc/uid_cputime.c",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2017-03-14T19:34:04Z",
       "side": 1,
       "message": "proc_parent?",
+      "range": {
+        "startLine": 437,
+        "startChar": 6,
+        "endLine": 437,
+        "endChar": 15
+      },
+      "revId": "b616aefa5b2a5344cabf503529278338a1564d43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04ee9536_e0751223",
+        "filename": "drivers/misc/uid_cputime.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 437,
+      "author": {
+        "id": 1051712
+      },
+      "writtenOn": "2017-03-14T19:52:39Z",
+      "side": 1,
+      "message": "oops. will fix.",
+      "parentUuid": "a191172f_9d32bcc7",
       "range": {
         "startLine": 437,
         "startChar": 6,
