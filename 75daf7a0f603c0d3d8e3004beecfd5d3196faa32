@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "877f13cd_87ef2a48",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1076784
+      },
+      "writtenOn": "2017-03-15T21:48:50Z",
+      "side": 1,
+      "message": "It sounds PM notifier block is not the best way of handling this. Instead of adding a flag (and still having timestamp being potentially wrong and being dependent on some other driver) why can\u0027t we convert to proper suspend/resume callbacks?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 55
+      },
+      "revId": "75daf7a0f603c0d3d8e3004beecfd5d3196faa32",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
