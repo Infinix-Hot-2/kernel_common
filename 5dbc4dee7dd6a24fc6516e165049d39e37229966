@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ac15664e_cbdbe911",
+        "filename": "arch/arm64/kernel/ptrace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 629,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2017-03-17T21:50:05Z",
+      "side": 1,
+      "message": "upstream does a memcpy to kbuf if it is set ...",
+      "range": {
+        "startLine": 629,
+        "startChar": 5,
+        "endLine": 629,
+        "endChar": 15
+      },
+      "revId": "5dbc4dee7dd6a24fc6516e165049d39e37229966",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "802b2d69_a358ed78",
+        "filename": "arch/arm64/kernel/ptrace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 663,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2017-03-17T21:50:05Z",
+      "side": 1,
+      "message": "upstream does:\n\nif (ret) {\n    ret \u003d -EFAULT;\n    break;\n}",
+      "range": {
+        "startLine": 662,
+        "startChar": 0,
+        "endLine": 663,
+        "endChar": 9
+      },
+      "revId": "5dbc4dee7dd6a24fc6516e165049d39e37229966",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5dcee200_978f55a5",
+        "filename": "arch/arm64/kernel/ptrace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 674,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2017-03-17T21:50:05Z",
+      "side": 1,
+      "message": "ditto on kbuf \u0026 memcpy",
+      "range": {
+        "startLine": 674,
+        "startChar": 5,
+        "endLine": 674,
+        "endChar": 21
+      },
+      "revId": "5dbc4dee7dd6a24fc6516e165049d39e37229966",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c34fe72b_3fab59b9",
+        "filename": "arch/arm64/kernel/ptrace.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 697,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2017-03-17T21:50:05Z",
+      "side": 1,
+      "message": "ditto for ret \u003d -EFAULT; ?",
+      "range": {
+        "startLine": 696,
+        "startChar": 0,
+        "endLine": 697,
+        "endChar": 14
+      },
+      "revId": "5dbc4dee7dd6a24fc6516e165049d39e37229966",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
