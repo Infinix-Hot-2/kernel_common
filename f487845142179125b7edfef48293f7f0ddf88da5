@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a84e4baf_f23bf184",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 637,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2017-03-17T22:31:05Z",
+      "side": 1,
+      "message": "I don\u0027t think int is the correct type to use here. The size limit in mmap should prevent overflows, but if that limit is ever removed this could overflow.",
+      "range": {
+        "startLine": 637,
+        "startChar": 2,
+        "endLine": 637,
+        "endChar": 5
+      },
+      "revId": "f487845142179125b7edfef48293f7f0ddf88da5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd0fa547_30b7faeb",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 676,
+      "author": {
+        "id": 1000205
+      },
+      "writtenOn": "2017-03-17T22:31:05Z",
+      "side": 1,
+      "message": "see above",
+      "range": {
+        "startLine": 676,
+        "startChar": 2,
+        "endLine": 676,
+        "endChar": 5
+      },
+      "revId": "f487845142179125b7edfef48293f7f0ddf88da5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
