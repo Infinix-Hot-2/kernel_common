@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "966dbeb0_344d4e64",
+        "filename": "drivers/android/binder.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 637,
+      "author": {
+        "id": 1069543
+      },
+      "writtenOn": "2017-03-18T00:17:30Z",
+      "side": 1,
+      "message": "If it does get large enough to overflow an int, the alloc.pages[] array would be need to be refactored pretty significantly (mmap\u0027ing 2^31 pages). I\u0027ll change to the appropriate type.",
+      "parentUuid": "a84e4baf_f23bf184",
+      "range": {
+        "startLine": 637,
+        "startChar": 2,
+        "endLine": 637,
+        "endChar": 5
+      },
+      "revId": "f487845142179125b7edfef48293f7f0ddf88da5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cd0fa547_30b7faeb",
         "filename": "drivers/android/binder.c",
         "patchSetId": 1
