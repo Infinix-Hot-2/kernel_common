@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "acbd3337_d7653114",
+        "filename": "drivers/staging/android/Kconfig",
+        "patchSetId": 3
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1032276
+      },
+      "writtenOn": "2017-03-20T14:23:09Z",
+      "side": 1,
+      "message": "No need to state default n as that is the default if unspecified.",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 16
+      },
+      "revId": "aece808fa9a564a0d58769415e5191d26985b34d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
