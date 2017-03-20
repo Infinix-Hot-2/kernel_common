@@ -3627,8 +3627,12 @@ static int ext4_block_truncate_page(handle_t *handle,
 	unsigned blocksize;
 	struct inode *inode = mapping->host;
 
+<<<<<<< HEAD   (f8ec91 dm: flush queued bios when process blocks to avoid deadlock )
 	/* If we are processing an encrypted inode during orphan list
 	 * handling */
+=======
+	/* If we are processing an encrypted inode during orphan list handling */
+>>>>>>> BRANCH (28ec98 Linux 4.4.55)
 	if (ext4_encrypted_inode(inode) && !ext4_has_encryption_key(inode))
 		return 0;
 
