@@ -3879,8 +3879,12 @@ static int ext4_block_truncate_page(handle_t *handle,
 	unsigned blocksize;
 	struct inode *inode = mapping->host;
 
+<<<<<<< HEAD   (9ead93 rc: raw decoder for keymap protocol is not loaded on registe)
 	/* If we are processing an encrypted inode during orphan list
 	 * handling */
+=======
+	/* If we are processing an encrypted inode during orphan list handling */
+>>>>>>> BRANCH (8a1622 Linux 4.9.16)
 	if (ext4_encrypted_inode(inode) && !fscrypt_has_encryption_key(inode))
 		return 0;
 
