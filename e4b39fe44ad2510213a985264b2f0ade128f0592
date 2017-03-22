@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5cc1c461_2ed30332",
+        "filename": "drivers/usb/phy/class-dual-role.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 507,
+      "author": {
+        "id": 1042384
+      },
+      "writtenOn": "2017-03-22T19:06:52Z",
+      "side": 1,
+      "message": "Say the userspace/init changes the ownership of the nodes from root to system, does executing this call changes the node ownership back to root ?",
+      "range": {
+        "startLine": 507,
+        "startChar": 1,
+        "endLine": 507,
+        "endChar": 65
+      },
+      "revId": "e4b39fe44ad2510213a985264b2f0ade128f0592",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
