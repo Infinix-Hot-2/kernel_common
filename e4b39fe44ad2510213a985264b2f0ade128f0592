@@ -22,6 +22,30 @@
       "revId": "e4b39fe44ad2510213a985264b2f0ade128f0592",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d1512b1b_b7a92065",
+        "filename": "drivers/usb/phy/class-dual-role.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 507,
+      "author": {
+        "id": 1030767
+      },
+      "writtenOn": "2017-03-22T19:30:37Z",
+      "side": 1,
+      "message": "That\u0027s a great question. I just checked, and unfortunately it does go back to root. This sysfs_update_group() call is nothing more than remove/re-add. Do you have any suggestions on how to preserve ownership while updating permissions dynamically in this case?",
+      "parentUuid": "5cc1c461_2ed30332",
+      "range": {
+        "startLine": 507,
+        "startChar": 1,
+        "endLine": 507,
+        "endChar": 65
+      },
+      "revId": "e4b39fe44ad2510213a985264b2f0ade128f0592",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
