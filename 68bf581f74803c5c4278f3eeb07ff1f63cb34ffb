@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "31c8dfab_13fa87c7",
+        "filename": "net/netfilter/xt_qtaguid.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1989,
+      "author": {
+        "id": 1051712
+      },
+      "writtenOn": "2017-03-23T22:46:20Z",
+      "side": 1,
+      "message": "how about acquire/release the lock around this and drop sock_tag_list_lock inside the function? Might want to rename the function to prdebug_full_state_locked.",
+      "revId": "68bf581f74803c5c4278f3eeb07ff1f63cb34ffb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
