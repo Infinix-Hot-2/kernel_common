@@ -59,6 +59,29 @@
 #include <asm/psci.h>
 #include <asm/efi.h>
 
+<<<<<<< HEAD   (cce6ae Merge 3.18.1 into android-3.18)
+=======
+unsigned int processor_id;
+EXPORT_SYMBOL(processor_id);
+
+unsigned long elf_hwcap __read_mostly;
+EXPORT_SYMBOL_GPL(elf_hwcap);
+
+#ifdef CONFIG_COMPAT
+#define COMPAT_ELF_HWCAP_DEFAULT	\
+				(COMPAT_HWCAP_HALF|COMPAT_HWCAP_THUMB|\
+				 COMPAT_HWCAP_FAST_MULT|COMPAT_HWCAP_EDSP|\
+				 COMPAT_HWCAP_TLS|COMPAT_HWCAP_VFP|\
+				 COMPAT_HWCAP_VFPv3|COMPAT_HWCAP_VFPv4|\
+				 COMPAT_HWCAP_NEON|COMPAT_HWCAP_IDIV|\
+				 COMPAT_HWCAP_LPAE)
+unsigned int compat_elf_hwcap __read_mostly = COMPAT_ELF_HWCAP_DEFAULT;
+unsigned int compat_elf_hwcap2 __read_mostly;
+#endif
+
+static const char *cpu_name;
+static const char *machine_name;
+>>>>>>> BRANCH (e609d3 Linux 3.18.2)
 phys_addr_t __fdt_pointer __initdata;
 
 /*
